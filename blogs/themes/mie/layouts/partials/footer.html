@@ -1,0 +1,21 @@
+<div style="height:35px;"></div>
+<div style="
+    color: #fdfdfd; 
+    height:35px; 
+    background-color:#999; 
+    bottom:0px; 
+    text-align:center; 
+    width:100%">
+    <p style="margin:10px; ">© {{.Site.Title}} 2022
+
+    {{/* 作者信息 */}}
+    {{- with .Site.Params.author -}}
+        &nbsp;{{safeHTML .}}
+    {{- end -}}
+
+    {{/* ICP 备案 */}}
+    {{- with .Site.Params.icp -}}
+        &nbsp;&nbsp;|&nbsp;&nbsp;{{ . | safeHTML}}
+    {{- end -}}
+    </p>
+</div>

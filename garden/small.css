@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+html {
+    overflow: hidden;
+}
+#wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+}
+#header {
+    background-color: aliceblue;
+    padding: 2rem;
+    font-size: 4rem;
+    font-family: "Kristen ITC";
+    position: fixed;
+    width: 100%;
+}
+#mainbody {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 20rem;
+    background-color: rgb(205, 205, 255);
+
+}
+#footer {
+    text-align: center;
+    flex: 0 0 100%;
+    bottom: 0;
+    width: 100%;
+    background-color: aliceblue;
+    color: #acacac
+}
+#goat {
+    background-image: url(./assets/goat.gif);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-size: cover;
+    z-index: 2;
+    overflow: hidden;
+}
+#grass {
+    background-image: url(./assets/grass.png);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-size: cover;
+    z-index: 1;
+}
+#score {
+    font-family: "Kristen ITC";
+    color: azure;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    z-index: 3;
+}
+.list {
+    display: flex;
+    width: 80%;
+    height: 50%;
+    margin: auto auto;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    flex: 0 0 80%;
+    border: 5px solid rgb(169, 183, 245);
+    border-radius: 0.3rem;             /* 圆角矩形 */
+    background-color: aliceblue;
+    padding: 0.5rem 1.5rem;
+    font-family: fantasy;
+    font-size: 2rem;
+}
+.list a:hover{
+    box-shadow: 0px 0px 1rem 1rem aliceblue;
+    z-index: 100;
+}
+.noselect {
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+#storydiv {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    margin: auto auto;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+#story {
+    padding: 3rem;
+    position: absolute;
+    border: 1px solid #acacac;
+    height: auto;
+    width: auto;
+    text-align: left;
+    font-size: 3.5rem;
+    font-family: "YouYuan";
+    line-height: 5rem;
+    margin: auto;
+}
+#MC {
+    visibility: hidden;
+    color: #eee;
+    font-size: 7rem;
+    font-family: "YouYuan";
+}
+#tree {
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+.star {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    background-color: rgb(236, 234, 167);
+    z-index: 99;
+    margin-top: 25rem;
+    margin-bottom: 2.5rem;
+    clip-path: polygon(50% 0, 81% 95%, 0% 33.75%, 100% 33.75%,
+    19% 95%);
+}
+#tree li {
+    position: absolute;
+    top: 26.5rem;
+    width: 0.3rem;
+    background: linear-gradient(rgba(46,204,113,0), rgba(46,204,113,.3));
+    transform-origin: 50% 0;
+    animation: swing 4s ease-in-out infinite;
+    height: calc(var(--i)*0.5rem);
+    animation-delay: calc(var(--i)*-0.23s);
+}
+@keyframes swing{
+    0%,
+    100%{
+        transform: rotate(-23deg);
+    }
+    5%,45% {
+        opacity: 0.25;
+    }
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(23deg);
+    }
+}
+#tree li::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: 1px;
+    width: 0.4rem;
+    height: 0.4rem;
+}
+#tree li:nth-child(4n)::before{
+    background-color: #d8334a;
+}
+#tree li:nth-child(4n+1)::before{
+    background-color: #ffce54;
+}
+#tree li:nth-child(4n+2)::before{
+    background-color: #2ecc71;
+}
+#tree li:nth-child(4n+3)::before {
+    background-color: #5d9cec;
+}
