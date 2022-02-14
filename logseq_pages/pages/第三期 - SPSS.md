@@ -1,0 +1,29 @@
+public:: true
+
+- ## 是什么？
+	- 统计工具
+	- 把比如问卷调查的结果输入SPSS，就可以进行数据分析，生成图标
+	- ![image.png](../assets/image_1644772496365_0.png)
+- ## 视图
+	- 两个视图，在左下角可以切换
+		- **Variables View**：设置问卷里的变量，比如调查ID，姓名等
+		- **Data View**：问卷回收之后，把数据填在这里
+- ## 变量视图
+	- 一个变量有很多属性，比如：
+		- **Name**, 比如 年龄, 性别
+		- **Type**, 比如String(字符串), Numeric
+		- **Value**
+			- 选项，比如性别的选项可以有男和女
+			- Type设置成 Numeric, Value可以设置数字对应的选项，比如1对应男，2对应女
+		- **Missing**, 缺省值，如果这一栏没有被填写，默认的值
+		- **Measure**
+			- Scale，数值范围
+			- Ordinal，有排序的词
+			- Normal，正常词
+- ## Analyze - Descriptive statistic
+	- Termology
+		- Mean 平均数
+		- Median 中位数
+		- Mode 众数
+		- STD 标准差
+	- **实践摸索**
