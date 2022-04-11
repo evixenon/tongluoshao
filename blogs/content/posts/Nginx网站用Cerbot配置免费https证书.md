@@ -72,6 +72,15 @@ Certbot 会在证书过期前自动更新，所以除非更改配置，我们不
 <br>
 <br>
 
+## 子域名的证书配置
+
+在 nginx 下的 Certbot 可以很方便地为子域名配置证书，命令：
+>certbot --nginx
+
+certbot 能自动识别已经挂上 80 端的子域名，根据提示选择要配置的子域名即可。
+
 参考:
 
 [快速搭建https网站: Hugo + Nginx + Let's Encrypt (certbot)](https://zhuanlan.zhihu.com/p/365910957)
+
+[User Guide - Certbot 1.23.0 documentation](https://eff-certbot.readthedocs.io/en/stable/using.html#certbot-commands)
