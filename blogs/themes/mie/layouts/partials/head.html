@@ -1,14 +1,20 @@
 <head>
     <meta charset="utf-8">
     
-    <!--Load style.css-->
+    <!-- Load style.css -->
     {{- with $res := resources.Get "css/styles.css" | resources.Minify -}}
         <link rel="stylesheet" href="{{ $res.RelPermalink }}">
     {{- end -}}
     
-    <!--Load response.js-->
+    <!-- Load response.js -->
     {{- with $res := resources.Get "js/response.js" | resources.Minify -}}
         <script src="{{ $res.RelPermalink }}"></script>
+    {{- end -}}
+
+    <!-- Code highlight -->
+    {{- with $res := resources.Get "js/highlight.min.js" -}}
+        <script src="{{ $res.RelPermalink }}"></script>
+        <script>hljs.highlightAll();</script>
     {{- end -}}
 
     <title>

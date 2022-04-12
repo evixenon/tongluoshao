@@ -28,7 +28,7 @@ series: "Hugo主题"
 `baseof.html` 是 Hugo 页面的基础，所有页面默认按照这个模板来渲染。官方教程中提供了一个简单的[示例](https://gohugo.io/templates/base/#define-the-base-template).
 
 默认的 baseof.html :
-```
+<pre><code class="language-html">
 <!DOCTYPE html>
 <html>
 {{- partial "head.html" . -}}
@@ -42,7 +42,7 @@ series: "Hugo主题"
 </body>
 
 </html>
-```
+</code></pre>
 
 Hugo 使用 Go 模板语法。`{{}}` 内的内容就是 Go 语言。
 
