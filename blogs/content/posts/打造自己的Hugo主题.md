@@ -5,7 +5,7 @@ draft: true
 series: "Hugo主题"
 ---
 
-# 一个最低限度的 Hugo 主题
+## 一个最低限度的 Hugo 主题
 
 参考 [Mike Dane](https://www.mikedane.com/) 的 [ga-hugo-theme](https://github.com/giraffeacademy/ga-hugo-theme). 这里展示了一个拥有基本功能的主题。Mike Dane 的 Hugo 系列教程也是极好的。
 
@@ -20,7 +20,7 @@ series: "Hugo主题"
 主题已经可以使用了，但目前还是一片空白，因为主题文件里什么都没有。  
 
 
-# header, footer 和 baseof
+## header, footer 和 baseof
 
 其实也不是完全空白。`/layouts/_default/baseof.html` 是有内容的：
 
@@ -100,11 +100,9 @@ PS：这时候如果 /layout 文件夹里有空的 index.html 的话，打开 13
 主题01.JPG
 嗯，没什么问题，只差内容把页面撑开了。
 
-
-
 <br>
 
-## 将脚注信息设置成自定义属性
+### 将脚注信息设置成自定义属性
 
 每个网站的作者和备案号各不相同，所以当然要做成可修改的啦。在`config.toml`里加一些属性：
 ```
@@ -137,21 +135,21 @@ PS：这时候如果 /layout 文件夹里有空的 index.html 的话，打开 13
 </div>
 ```
 
-`with...end`函数可以理解为，如果这个参数存在，就执行中间的代码，如果没有就忽略这段代码。参数在上面的第一个 with...end 块中是 `.Site.Params.author`。
+- `with...end`函数可以理解为，如果这个参数存在，就执行中间的代码，如果没有就忽略这段代码。参数在上面的第一个 with...end 块中是 `.Site.Params.author`。
 
-`.` 在 Hugo 模板语法中是上下文(context)的意思。`.`是个一当前变量
+- `.` 在 Hugo 模板语法中是上下文(context)的意思。`.`是个一当前变量
 
-`|` 是管道符，表示将前一部分的内容当作后一部分的参数。这和 bash, shell 中管道符是相似的。上面的代码中，`{{safeHTML .}}` 和 `{{ . | safeHTML}}` 在同一语境中的含义是一样的。如果 `|` 前一部分是函数，那就表示将前一个函数的结果当成后一个函数的参数的。
+- `|` 是管道符，表示将前一部分的内容当作后一部分的参数。这和 bash, shell 中管道符是相似的。上面的代码中，`{{safeHTML .}}` 和 `{{ . | safeHTML}}` 在同一语境中的含义是一样的。如果 `|` 前一部分是函数，那就表示将前一个函数的结果当成后一个函数的参数的。
 
-`safeHTML` 是一个函数，经过它处理后的内容不会对 html 内容产生影响。举例来说，safeHTML 中如果放了 html 标签，就不会被转义出来。
+- `safeHTML` 是一个函数，经过它处理后的内容不会对 html 内容产生影响。举例来说，safeHTML 中如果放了 html 标签，就不会被转义出来。
 
 上面的解释记不住看不懂也不要紧，见得多就会熟悉。我在写主题的时候，通常都是先观摩别人的写法，辅以 Hugo 文档，就基本能写出自己想要的效果。重要的是想用的时候能找到就行了。
 
-以上内容都可以在 Hugo 文档的函数和变量部分找到准确的解释和部分示例。顺便给个文档直通车：[with](https://gohugo.io/functions/with/), [.](https://gohugo.io/templates/introduction/#variables) , [|](https://gohugo.io/templates/introduction/#pipes) , [safeHTML](https://gohugo.io/functions/safehtml/).
+以上内容都可以在 Hugo 文档的函数和变量部分找到准确的解释和部分示例。顺便给个文档直通车：[`with`](https://gohugo.io/functions/with/), [`.`](https://gohugo.io/templates/introduction/#variables) , [`|`](https://gohugo.io/templates/introduction/#pipes) , [`safeHTML`](https://gohugo.io/functions/safehtml/).
 
 <br>
 
-# main block, single 模板 和 list 模板
+## main block, single 模板 和 list 模板
 
 先讲一下前面跳过的 `block`。
 
