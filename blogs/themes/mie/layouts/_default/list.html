@@ -1,8 +1,8 @@
 {{ define "main" }}
 {{ .Content }}
     {{range .Pages}}
-    <div style="border: 2px solid aliceblue; width: 98%; margin: auto; margin-top: 10px;">
-        <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
+    <div class="article-block">
+        <h2><a class="article-title" href="{{.Permalink}}">{{.Title}}</a></h2>
         {{if gt .WordCount 50}}
             <p>词数：{{.WordCount}}</p>
         {{end}}

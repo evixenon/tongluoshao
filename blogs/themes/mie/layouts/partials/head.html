@@ -1,8 +1,16 @@
 <head>
     <meta charset="utf-8">
-    {{- with $css := resources.Get "css/styles.css" | resources.Minify -}}
-        <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    
+    <!--Load style.css-->
+    {{- with $res := resources.Get "css/styles.css" | resources.Minify -}}
+        <link rel="stylesheet" href="{{ $res.RelPermalink }}">
     {{- end -}}
+    
+    <!--Load response.js-->
+    {{- with $res := resources.Get "js/response.js" | resources.Minify -}}
+        <script src="{{ $res.RelPermalink }}"></script>
+    {{- end -}}
+
     <title>
         {{ .Title}}
     </title>

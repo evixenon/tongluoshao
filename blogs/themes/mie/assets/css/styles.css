@@ -1,6 +1,105 @@
+/* {
+  margin: 0;
+  padding: 0;  
+}
+*/
+
+/*
+    Pre-defined tags
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  color:rgb(44, 44, 44);
+}
+
+h1, h2, h3 {
+  margin: 1.3rem 0;
+  padding: 0.3rem 0.3rem;
+}
+
+h4, h5 {
+  margin: 1.5rem 0;
+  padding: 0.2rem 0;
+}
+
+p {
+  margin: 1rem 0;
+  padding: 0.1rem 0;
+}
+
+
+blockquote {
+  position: relative;
+  background-color: rgba(244, 244, 244, 0.932);
+  margin: 1rem;
+  padding: 0.8rem 0.3rem 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+blockquote::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 0.4rem;
+  width: 4px;
+  height: 80%;
+  background-color: #97bddf;
+  border-radius: 2px;
+}
+
+blockquote p {
+  margin: 0;
+  color:rgb(56, 56, 56);
+}
+
 code {
   background-color: #f5f5f5;
   color: #da1039;
+  padding: .15rem .2rem;
+  margin: .1rem .1rem;
+  font-size: .875rem;
   font-family: monospace;
-  border-radius: 4px;
+  border-radius: 6px;
+}
+
+/*
+  Self-defined tags
+*/
+
+.article-title {
+  background-color: aliceblue;
+}
+
+.article-block {
+  border: 2px solid aliceblue; width: 98%; margin: auto; margin-top: 10px;
+}
+
+.noselect {
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.site-title {
+    background-color: aliceblue;
+    padding: .3rem 0;
+    font-size: 1.3rem;
+    font-family: 'Kristen ITC'; 
+}
+
+.site-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.siteTitle a::after {
+  color: black;
+}
+
+.wrap {
+  margin: .5rem;
 }
