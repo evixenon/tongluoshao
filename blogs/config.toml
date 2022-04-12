@@ -8,5 +8,6 @@ title = 'TONGLUOSHAO'
     # ICP 备案
     icp = '粤 ICP 备2022002978号-1'
 
-[markup.goldmark.renderer]
-    unsafe = true
+[markup]
+    [markup.goldmark.renderer]
+        unsafe = false

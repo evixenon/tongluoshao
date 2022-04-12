@@ -17,9 +17,8 @@ series: "Hugo主题"
 这时会在 themes 文件夹下创建一个新文件夹，同时应用根目录出现一个 `config.toml`, 在其中加上：
 > theme = 'THEMENAME'
 
-主题已经可以使用了，但目前还是一片空白，因为主题文件里什么都没有。
+主题已经可以使用了，但目前还是一片空白，因为主题文件里什么都没有。  
 
-<br>
 
 # header, footer 和 baseof
 
@@ -28,11 +27,11 @@ series: "Hugo主题"
 `baseof.html` 是 Hugo 页面的基础，所有页面默认按照这个模板来渲染。官方教程中提供了一个简单的[示例](https://gohugo.io/templates/base/#define-the-base-template).
 
 默认的 baseof.html :
-<pre><code class="language-html">
+
+```
 <!DOCTYPE html>
 <html>
 {{- partial "head.html" . -}}
-
 <body>
     {{- partial "header.html" . -}}
     <div id="content">
@@ -40,9 +39,8 @@ series: "Hugo主题"
     </div>
     {{- partial "footer.html" . -}}
 </body>
-
 </html>
-</code></pre>
+```
 
 Hugo 使用 Go 模板语法。`{{}}` 内的内容就是 Go 语言。
 
@@ -92,7 +90,7 @@ Hugo 使用 Go 模板语法。`{{}}` 内的内容就是 Go 语言。
     bottom:0px; 
     text-align:center; 
     width:100%">
-    <p style="margin:10px; ">© 2022 evixenon&nbsp;&nbsp|&nbsp;&nbsp;粤 ICP 备2022002978号-1;</p>
+    <p style="margin:10px; ">© 2022 evixenon<br>&nbsp|&nbsp;&nbsp;粤 ICP 备2022002978号-1;</p>
 </div>
 ```
 
@@ -128,12 +126,12 @@ PS：这时候如果 /layout 文件夹里有空的 index.html 的话，打开 13
 
     {{/* 作者信息 */}}
     {{- with .Site.Params.author -}}
-        &nbsp;{{safeHTML .}}
+        <br>{{safeHTML .}}
     {{- end -}}
 
     {{/* ICP 备案 */}}
     {{- with .Site.Params.icp -}}
-        &nbsp;&nbsp;|&nbsp;&nbsp;{{ . | safeHTML}}
+        <br>&nbsp;|&nbsp;&nbsp;{{ . | safeHTML}}
     {{- end -}}
     </p>
 </div>
@@ -191,9 +189,7 @@ PS：这时候如果 /layout 文件夹里有空的 index.html 的话，打开 13
 {{ end }}
 ```
 
-前面说过 `.` 在 Hugo 模板中是上下文的意思。在一个 single 页面里，`.Title` 指的是这篇文章的标题( list 页面会是站点标题，你可以试一下)。而 single 页面的 `.Content` 就是这篇文章的具体内容啦。这样一个单篇文章页面的模板就做好了，当然，是最简单版本。
-
-<br>
+前面说过 `.` 在 Hugo 模板中是上下文的意思。在一个 single 页面里，`.Title` 指的是这篇文章的标题( list 页面会是站点标题，你可以试一下)。而 single 页面的 `.Content` 就是这篇文章的具体内容啦。这样一个单篇文章页面的模板就做好了，当然，是最简单版本。  
 
 而 `list.html` 就要复杂一点了，一个 category 分类页面需要展示所有该分类的文章，一个 tag 分类需要展示该 tag 下的所有文章。我们可以这样写 `list.html` ：
 
