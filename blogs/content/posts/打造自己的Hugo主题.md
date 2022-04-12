@@ -2,7 +2,7 @@
 title: "打造自己的Hugo主题"
 date: 2022-01-10T14:55:01+01:00
 draft: true
-series: "一个网站的诞生"
+series: "Hugo主题"
 ---
 
 # 一个最低限度的 Hugo 主题
@@ -233,5 +233,19 @@ PS：这时候如果 /layout 文件夹里有空的 index.html 的话，打开 13
 这段代码的意思是，如果该文章的词数超过 50 词，就显示词数。 `.WordCount` 是一个 Page 变量，更多这样的变量还可以在 [Page 变量的文档](https://gohugo.io/variables/page/) 中找到。
 
 <br>
+
+## CSS 的引入
+
+Hugo 主题中的 CSS 不能直接使用，需要将`.css`文件放在主题的`assets`目录下，也就是`[主题名]/assets`，没有就自己新建。
+
+在`head.html`中引入`assets/css/styles.css`：
+
+```
+{{- with $css := resources.Get "css/styles.css" | resources.Minify -}}
+        <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{- end -}}
+``` 
+
+如果使用`SASS/SCSS`, 则需要先转换为CSS. Hugo 提供了对应的函数，详参[链接](https://gohugo.io/hugo-pipes/scss-sass/)。
 
 做到这里，一个主题的基本功能就成型了(虽然差点CSS)。看到这里，你应该能做出一个简单的主题了。后面的文章开始讲一些不一样的功能实现。
