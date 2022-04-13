@@ -29,7 +29,8 @@ a:visited:hover {
   text-decoration: none;
   color: black;
 }
-.site-title a:hover {
+
+.site-title a:hover, .site-title a:visited:hover {
   color: black;
 }
 
