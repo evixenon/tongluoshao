@@ -8,30 +8,16 @@ body {
   color:rgb(44, 44, 44);
 }
 
-a {
+a, a:hover {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: none;
+#content a:hover, #content a:visited:hover {
   color: #888;
 }
 
 a:visited {
   color: rgb(0, 102, 204);
-}
-
-a:visited:hover {
-  color: #888;
-}
-
-.site-title a {
-  text-decoration: none;
-  color: black;
-}
-
-.site-title a:hover, .site-title a:visited:hover {
-  color: black;
 }
 
 .single-article h1, .single-article h2, .single-article h3 {
