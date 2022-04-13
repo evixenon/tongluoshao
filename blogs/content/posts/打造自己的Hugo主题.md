@@ -228,7 +228,7 @@ PS：这时候如果 /layout 文件夹里有空的 index.html 的话，打开 13
 
 <br>
 
-## CSS 的引入
+## CSS, JavaScript 的引入
 
 Hugo 主题中的 CSS 不能直接使用，需要将`.css`文件放在主题的`assets`目录下，也就是`[主题名]/assets`，没有就自己新建。
 
@@ -240,8 +240,15 @@ Hugo 主题中的 CSS 不能直接使用，需要将`.css`文件放在主题的`
 {{- end -}}
 ``` 
 
-`.js`文件的引入也是类似的。
-
 如果使用`SASS/SCSS`, 则需要先转换为CSS. Hugo 提供了对应的函数，详参[链接](https://gohugo.io/hugo-pipes/scss-sass/)。
 
-做到这里，一个主题的基本功能就成型了(虽然差点CSS)。看到这里，你应该能做出一个简单的主题了。后面的文章开始讲一些不一样的功能实现。
+
+`.js`文件的引入也是类似的。
+
+```
+{{- with $js := resources.Get "js/highlight.min.js" -}}
+    <script src="{{ $js.RelPermalink }}"></script>
+{{- end -}}
+```
+
+至此，一个基础的主题就成型了。后面的文章开始讲一些不一样的功能实现。
