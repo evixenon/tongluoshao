@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on </title>
+    <link>https://tongluoshao.space/tags/NLP/</link>
+    <description>Recent content in NLP on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/NLP/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NLTK</title>
+      <link>https://tongluoshao.space/permanent/NLTK/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/NLTK/</guid>
+      <description>https://www.nltk.org/book/
+Introduction natural language toolkit, python 库
+help 1 2 nltk.help.upenn_tagset(&amp;#39;DT&amp;#39;) nltk.help.brown_tagset(&amp;#39;DT&amp;#39;) 大类:预处理 根据两个任务拆分 syntax analyse parser 的简要说明 Syntax Analyse with formal Grammar 根据输入的语法规则, 分析给定句子的结构</description>
+    </item>
+    
+    <item>
+      <title>Tagsets</title>
+      <link>https://tongluoshao.space/permanent/Tagsets/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Tagsets/</guid>
+      <description>![[attachments/Pasted image 20230202172000.png]]
+Universal Dependencies 总览 ![[attachments/Pasted image 20230204180121.png|L|400]] ![[attachments/Pasted image 20230207205920.png|L|400]]</description>
+    </item>
+    
+    <item>
+      <title>自然语言处理</title>
+      <link>https://tongluoshao.space/permanent/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/</guid>
+      <description>[[project/lmu - Syntax of natural language(Germany)|lmu - Syntax of natural language(Germany)]]
+techs: [[permanent/NLTK|NLTK]]
+[[permanent/spaCy|spaCy]]
+[[permanent/Standford Parser|Standford Parser]]
+[[permanent/Tagsets|Tagsets]]</description>
+    </item>
+    
+  </channel>
+</rss>

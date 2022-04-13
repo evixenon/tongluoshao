@@ -1,0 +1,11263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta
+    name="description"
+    content="Einleitung [[permanent/1988 Internet Wurm]] [[permanent/2003 SQL Slammer]] [[permanent/2009~ Stuxnet]] [[permanent/蠕虫和蓝宝石的对比]]
+[[permanent/C2 C&amp;C]]
+[[permanent/TTP(Tastics,Techniques and Procedures)#TTP]]
+Zutrittkonstroll Verfahrensschritten:
+Authentisierung, 提供 Attribute 的真实证明 Authentifizierung, 证明的检查 Autorisierung, Attribute 是否有足够获取所要求的权利."
+  />
+  <meta property="og:title" content="lmu - IT Security">
+  <meta property="og:description" content="Einleitung [[permanent/1988 Internet Wurm]] [[permanent/2003 SQL Slammer]] [[permanent/2009~ Stuxnet]] [[permanent/蠕虫和蓝宝石的对比]]
+[[permanent/C2 C&amp;C]]
+[[permanent/TTP(Tastics,Techniques and Procedures)#TTP]]
+Zutrittkonstroll Verfahrensschritten:
+Authentisierung, 提供 Attribute 的真实证明 Authentifizierung, 证明的检查 Autorisierung, Attribute 是否有足够获取所要求的权利.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tongluoshao.space/icon.png">
+  <meta property="og:url" content="https://tongluoshao.space/permanent/lmu-IT-Security/">
+  <meta property="og:width" content="200">
+  <meta property="og:height" content="200">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="lmu - IT Security" />
+  <meta name="twitter:description" content="Einleitung [[permanent/1988 Internet Wurm]] [[permanent/2003 SQL Slammer]] [[permanent/2009~ Stuxnet]] [[permanent/蠕虫和蓝宝石的对比]]
+[[permanent/C2 C&amp;C]]
+[[permanent/TTP(Tastics,Techniques and Procedures)#TTP]]
+Zutrittkonstroll Verfahrensschritten:
+Authentisierung, 提供 Attribute 的真实证明 Authentifizierung, 证明的检查 Autorisierung, Attribute 是否有足够获取所要求的权利." />
+  <meta name="twitter:image" content="https://tongluoshao.space/icon.png">
+  
+    
+  
+    
+  
+
+  <title>
+    lmu - IT Security
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  
+  
+  
+  
+  
+  <link rel="shortcut icon" type="image/png"  href="https://tongluoshao.space//icon.png" />
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <link href="https://tongluoshao.space/styles.88d22826d3297025a3c1bf2a6aca5260.min.css" rel="stylesheet" />
+
+  
+  <link href="https://tongluoshao.space/styles/_light_syntax.248971f6ab797c4cf9beb228933f8362.min.css" rel="stylesheet" id="theme-link">
+
+   
+  
+  
+  
+  
+  <script src="https://tongluoshao.space/js/darkmode.10faa94087fa948a1002c0b385498593.min.js"></script>
+  
+  
+  
+  <script src="https://tongluoshao.space/js/util.00639692264b21bc3ee219733d38a8be.min.js"></script>
+  
+  
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+
+  
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.2.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.2.1"></script>
+  
+  <script defer src="https://tongluoshao.space/js/popover.aa9bc99c7c38d3ae9538f218f1416adb.min.js"></script>
+
+  
+  
+  
+  <script defer src="https://tongluoshao.space/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+  
+
+  
+  
+  <script defer src="https://tongluoshao.space/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+  
+
+  
+  
+  <script defer src="https://tongluoshao.space/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+  
+
+  
+   
+  <script>
+    const SEARCH_ENABLED =  false 
+    const LATEX_ENABLED =  true 
+    const PRODUCTION =  true 
+    const BASE_URL = "https://tongluoshao.space/"
+    const fetchData = Promise.all([
+          fetch("https:\/\/tongluoshao.space\/indices\/linkIndex.baf7c7849c087b9283697bcbc5da2fac.min.json")
+            .then(data => data.json())
+            .then(data => ({
+              index: data.index,
+              links: data.links,
+            })),
+          fetch("https:\/\/tongluoshao.space\/indices\/contentIndex.8c470189cd6cd213e6847cb1682b866b.min.json")
+            .then(data => data.json()),
+        ])
+        .then(([{index, links}, content]) => ({
+          index,
+          links,
+          content,
+        }))
+
+      const render = () => {
+      
+
+      const siteBaseURL = new URL(BASE_URL);
+      const pathBase = siteBaseURL.pathname;
+      const pathWindow = window.location.pathname;
+      const isHome = pathBase == pathWindow;
+
+      addCopyButtons();
+      
+
+      addTitleToCodeBlocks();
+      
+
+      addCollapsibleCallouts();
+      
+
+      
+      initPopover(
+        "https://tongluoshao.space",
+         true 
+      )
+      
+
+      
+      const footer = document.getElementById("footer")
+      if (footer) {
+        const container = document.getElementById("graph-container")
+        
+        if (!container) return requestAnimationFrame(render)
+        
+        container.textContent = ""
+
+        const drawGlobal = isHome &&  false ;
+        drawGraph(
+            "https://tongluoshao.space",
+            drawGlobal,
+            [{"/moc":"#4388cc"}],
+            drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+          );
+
+        }
+      
+
+      
+        var els = document.getElementsByClassName("mermaid");
+        if (els.length > 0) {
+          import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+            (obj) => {
+              
+              
+              obj.default.init();
+            }
+          )
+        }
+      
+      
+      
+      function clickHandler(evt) {
+        const target = evt.target 
+        const classNames = target.className.split(" ")
+        const broken = classNames.includes("broken")
+        const internal = classNames.includes("internal-link")
+        plausible("Link Click", {
+          props: {
+            href: target.href,
+            broken,
+            internal,
+            graph: false,
+          }
+        })
+      }
+
+      const links = document.querySelectorAll("a")
+      for (link of links) {
+        if (link.className.includes("root-title")) {
+          link.addEventListener('click', clickHandler, {once: true})
+        }
+      }
+    }
+
+    const init = (doc = document) => {
+      
+      addCopyButtons();
+      
+
+      addTitleToCodeBlocks();
+      renderMathInElement(doc.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+        ],
+        macros: {
+          '’': "'"
+        },
+        throwOnError : false
+      });
+      
+    };
+  </script>
+  
+  
+  <script type="module">
+    import { attachSPARouting } from "https:\/\/tongluoshao.space\/js\/router.d6fe6bd821db9ea97f9aeefae814d8e7.min.js"
+    attachSPARouting(init, render)
+  </script>
+  
+  
+  <script defer data-domain="tongluoshao.space" src="https://plausible.io/js/script.js"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+</head>
+
+
+<body>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="https://tongluoshao.space/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+
+
+
+<div class="singlePage">
+    
+    <header>
+    
+    
+  <div id="site-title" class="noselect">
+      <a href="https://tongluoshao.space/"><h1>TONGLUOSHAO</h1></a>
+  </div>
+    <div class="spacer"></div>
+    <div id="search-icon">
+      <p>Search</p>
+      <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+    </div>
+    <div class='darkmode'>
+    <input class='toggle' id='darkmode-toggle' type='checkbox' tabindex="-1">
+    <label id="toggle-label-light" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <title>Light Mode</title>
+            <path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </svg>
+    </label>
+    <label id="toggle-label-dark" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xml:space="preserve">
+            <title>Dark Mode</title>
+            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+</header>
+
+
+    <article>
+      <div id="content">
+        <h1>lmu - IT Security</h1>
+        <p class="meta">
+          Last updated 
+Jun 16, 2023
+
+ 
+            
+
+        </p>
+        <ul class="tags">
+            
+        </ul>
+        
+
+
+        
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+  
+  
+  
+
+
+
+
+
+
+<a href="#einleitung"><h2 id="einleitung"><span class="hanchor" ariaLabel="Anchor"># </span>Einleitung</h2></a>
+<p><a href="/permanent/1988-Internet-Wurm" rel="noopener" class="internal-link" data-src="/permanent/1988-Internet-Wurm">1988 Internet Wurm</a>
+<a href="/permanent/2003-SQL-Slammer" rel="noopener" class="internal-link" data-src="/permanent/2003-SQL-Slammer">2003 SQL Slammer</a>
+<a href="/permanent/2009~-Stuxnet" rel="noopener" class="internal-link" data-src="/permanent/2009~-Stuxnet">2009~ Stuxnet</a>
+<a href="/permanent/%E8%A0%95%E8%99%AB%E5%92%8C%E8%93%9D%E5%AE%9D%E7%9F%B3%E7%9A%84%E5%AF%B9%E6%AF%94" rel="noopener" class="internal-link" data-src="/permanent/%E8%A0%95%E8%99%AB%E5%92%8C%E8%93%9D%E5%AE%9D%E7%9F%B3%E7%9A%84%E5%AF%B9%E6%AF%94">蠕虫和蓝宝石的对比</a></p>
+<p><a href="/permanent/C2-CC" rel="noopener" class="internal-link" data-src="/permanent/C2-CC">C2 C&amp;C</a></p>
+<p><a href="/permanent/TTPTasticsTechniques-and-Procedures#ttp" rel="noopener" class="internal-link" data-src="/permanent/TTPTasticsTechniques-and-Procedures">TTP(Tastics,Techniques and Procedures)</a></p>
+<a href="#zutrittkonstroll"><h3 id="zutrittkonstroll"><span class="hanchor" ariaLabel="Anchor"># </span>Zutrittkonstroll</h3></a>
+<p>Verfahrensschritten:</p>
+<ol>
+<li><strong>Authentisierung</strong>, 提供 Attribute 的真实证明</li>
+<li><strong>Authentifizierung</strong>, 证明的检查</li>
+<li><strong>Autorisierung</strong>, Attribute 是否有足够获取所要求的权利. Vergabe / Spezifikation von Berechtigungen</li>
+</ol>
+<p>Hilfsmittel</p>
+<ul>
+<li>Personenvereinzelung 人员分离</li>
+<li>Lesegeräte für Ausweise</li>
+</ul>
+<a href="#grundlagen"><h2 id="grundlagen"><span class="hanchor" ariaLabel="Anchor"># </span>Grundlagen</h2></a>
+<p><a href="/permanent/2020-SolarWinds" rel="noopener" class="internal-link" data-src="/permanent/2020-SolarWinds">2020 SolarWinds</a>
+<a href="/permanent/Bell-LaPadula-%E6%A8%A1%E5%9E%8B" rel="noopener" class="internal-link" data-src="/permanent/Bell-LaPadula-%E6%A8%A1%E5%9E%8B">Bell LaPadula 模型</a></p>
+<a href="#goals-of-it-security"><h3 id="goals-of-it-security"><span class="hanchor" ariaLabel="Anchor"># </span>Goals of IT Security</h3></a>
+<ul>
+<li><strong>C</strong>onfidentiality</li>
+<li><strong>I</strong>ntegrity</li>
+<li><strong>A</strong>vailability</li>
+</ul>
+<a href="#confidentiality"><h4 id="confidentiality"><span class="hanchor" ariaLabel="Anchor"># </span>Confidentiality</h4></a>
+<p><strong>Vertraulichkeit</strong> ist gewährleistet, wenn geschützt Daten nur von Berechtigten genutzt werden können.</p>
+<p>bezüglich:
+Transport/Speicherung/Verarbeitung von Datn</p>
+<p>Maßnahme:
+Verschlüsselung, &hellip;</p>
+<p>verletzt:
+geschützte Daten von unautorisierten Subjekten eingesehen werden können</p>
+<a href="#integrity"><h4 id="integrity"><span class="hanchor" ariaLabel="Anchor"># </span>Integrity</h4></a>
+<p><strong>Integrität</strong> ist gewährleistet, wenn geschützt Daten nicht unautorisiert und unbemerkt modifiziert werden können.
+受保护的数据不能在未经授权和不被注意的情况下被修改
+Integre IT-Dienste haben keine (versteckte) Schadfunktionalität.</p>
+<p>bezüglich:
+Transport/Speicherung/Verarbeitung von Datn</p>
+<p>Maßnahme:
+Kryptographische Prüfsummen</p>
+<p>verletzt:
+geschützte Daten von unautorisierten Subjekten unbemerkt verändert werden können</p>
+<p>e.g. 中间人攻击, 邮件篡改</p>
+<a href="#availability"><h4 id="availability"><span class="hanchor" ariaLabel="Anchor"># </span>Availability</h4></a>
+<p>Verfügbarkeit ist gewährleistet, wenn autorisierter Subjekte störungsfrei ihre Berechtigungen wahrnehmen könnon.</p>
+<p>bezieht sich:
+nicht nur Daten, sondern auch Dienste und IT-Infrastrukturen</p>
+<p>typische Maßnahme:
+Redundanz(e.g. Backup), Overprovisioning(e.g. mehr als genug Server)</p>
+<p>verletzt:
+wenn ein Angreifer die Dienst- und Datennutzung durch legitime Anwender einschränkt.</p>
+<p>e.g DDoS,</p>
+<a href="#verbindlichkeit"><h4 id="verbindlichkeit"><span class="hanchor" ariaLabel="Anchor"># </span>Verbindlichkeit*</h4></a>
+<p>(german literature, top-level)</p>
+<ul>
+<li>Authentizität</li>
+<li>Beherrschebarkeit</li>
+<li>Revisionsfähigkeit</li>
+</ul>
+<a href="#authentizität"><h4 id="authentizität"><span class="hanchor" ariaLabel="Anchor"># </span>Authentizität*</h4></a>
+<ul>
+<li>Eigenschaft der Echtheit, Überprüfbarkeit und Vertrauenswürdigkeit -&gt; Auhentifikation des Datenursprungs</li>
+<li>Digital signature</li>
+</ul>
+<a href="#systematik-zur-einordnung-von-sicherheitsmaßnahmen-系统分类"><h3 id="systematik-zur-einordnung-von-sicherheitsmaßnahmen-系统分类"><span class="hanchor" ariaLabel="Anchor"># </span>Systematik zur Einordnung von Sicherheitsmaßnahmen 系统分类</h3></a>
+<p>zwei Dimensionen:</p>
+<ul>
+<li><strong>Lebenszyklus</strong> potentialle erfolgreicher Angriffe</li>
+<li>zwischen tech. und organ.</li>
+</ul>
+<p><img src="/attachments/Pasted image 20221103205238.png" width="auto" /></p>
+<a href="#lebenzyklus"><h4 id="lebenzyklus"><span class="hanchor" ariaLabel="Anchor"># </span>Lebenzyklus</h4></a>
+<a href="#prävention"><h5 id="prävention"><span class="hanchor" ariaLabel="Anchor"># </span>Prävention</h5></a>
+<p>Die Kombination aller in einem Szenario eingesetzten präventiven Maßnahmen dient der Erhaltung von CIS</p>
+<a href="#detektion"><h5 id="detektion"><span class="hanchor" ariaLabel="Anchor"># </span>Detektion</h5></a>
+<p>dient dem Erkennen von unwünschten Sicherheitsereignissen</p>
+<a href="#reaktion"><h5 id="reaktion"><span class="hanchor" ariaLabel="Anchor"># </span>Reaktion</h5></a>
+<p>dient der Wiederherstellung des Soll-Zustands</p>
+<a href="#maßnamenauswahl"><h4 id="maßnamenauswahl"><span class="hanchor" ariaLabel="Anchor"># </span>Maßnamenauswahl</h4></a>
+<ul>
+<li>szenarienspezifisch</li>
+<li>Risikogetriebenes Vorgehensmodell</li>
+</ul>
+<p>frage:</p>
+<ul>
+<li>welche? wann?</li>
+<li>lohnt sich der?</li>
+</ul>
+<a href="#isoiec-2700027001"><h4 id="isoiec-2700027001"><span class="hanchor" ariaLabel="Anchor"># </span>ISO/IEC 27000/27001</h4></a>
+<p>idea ISO/IEC27000: 信息安全管理的质量衡量标准</p>
+<ul>
+<li>Standards, Richtlinien, Prozesse, Verfahren und Maßnahmen, die dazu dienen,</li>
+<li>IS in einer Organisation dauerhaft zu
+<ul>
+<li>definieren/plan</li>
+<li>steuern</li>
+<li>aufrecht zu erhalten/do</li>
+<li>zu kontrollieren/check</li>
+<li>kontinuierlich zu verbessern/act</li>
+</ul>
+</li>
+</ul>
+<a href="#isms"><h5 id="isms"><span class="hanchor" ariaLabel="Anchor"># </span>ISMS</h5></a>
+<p>致力达成信息安全的以下目标的系统
+- 建立
+- 实施
+- 运营
+- 监管
+- 检查
+- 维护
+- 改进</p>
+<a href="#leitlinie"><h5 id="leitlinie"><span class="hanchor" ariaLabel="Anchor"># </span>Leitlinie</h5></a>
+<p>最高准则 Oberste Richtlinie, 规定 ISMS 的总体目标和所包含的 Richtlinie</p>
+<a href="#richtlinie"><h5 id="richtlinie"><span class="hanchor" ariaLabel="Anchor"># </span>Richtlinie</h5></a>
+<p>包含该组织的强制性规范 verpflichtende Vorgabe</p>
+<a href="#asset"><h5 id="asset"><span class="hanchor" ariaLabel="Anchor"># </span>Asset</h5></a>
+<p>属于该机构的有价值的东西</p>
+<a href="#risiko"><h5 id="risiko"><span class="hanchor" ariaLabel="Anchor"># </span>Risiko</h5></a>
+<p>可能导致异常状态或威胁安全目标的事件</p>
+<a href="#prozess"><h5 id="prozess"><span class="hanchor" ariaLabel="Anchor"># </span>Prozess</h5></a>
+<p>将输入转化为输出的相互作用的活动的总和 Sammlung</p>
+<a href="#verfahren"><h5 id="verfahren"><span class="hanchor" ariaLabel="Anchor"># </span>Verfahren</h5></a>
+<p>描述包括 organ. 和 tech. 的活动的 Ablauf</p>
+<p>ISO/IEC 27001标准规定了所谓信息安全管理系统（ISMS）的最低要求。
+Information Security Management Systems
+PDCA, plan, do, check, act</p>
+<a href="#din-isoiec-27001"><h5 id="din-isoiec-27001"><span class="hanchor" ariaLabel="Anchor"># </span>DIN ISO/IEC 27001</h5></a>
+<p>2008~ auch DIN ISO/IEC 27001</p>
+<ul>
+<li>基于 PDCA 设计, 实施, 监管, 改进 ISMS</li>
+<li>Risikomanagement, Dokumentation und Aufgabenverteilung 的最低要求</li>
+<li>control objectives/ controls</li>
+</ul>
+<p><img src="/attachments/Pasted image 20221103213352.png" width="auto" />
+<img src="/attachments/Pasted image 20221103213404.png" width="auto" /></p>
+<a href="#grundlagen-des-risikomanagements"><h4 id="grundlagen-des-risikomanagements"><span class="hanchor" ariaLabel="Anchor"># </span>Grundlagen des Risikomanagements</h4></a>
+<ul>
+<li>Risikoanalyse</li>
+<li>Risikobewertung
+<ul>
+<li>Eintrittswahrscheinlichkeit</li>
+<li>Auswirkung/Schadenshöhe</li>
+</ul>
+</li>
+<li>Risikobehandlung
+<ul>
+<li>Verminderung/Reduzierung(Ergrifen von Maßnahmen)</li>
+<li>Vermeidung(Unterlassen risikobehafteter Aktivitäten))</li>
+<li>Transfer/Teilen(Versicherung)
+<img src="/attachments/Pasted image 20221103213701.png" width="auto" /></li>
+</ul>
+</li>
+</ul>
+<a href="#审查的类型checkreview"><h4 id="审查的类型checkreview"><span class="hanchor" ariaLabel="Anchor"># </span>审查的类型(check/review)</h4></a>
+<a href="#internal-audits"><h5 id="internal-audits"><span class="hanchor" ariaLabel="Anchor"># </span>internal audits</h5></a>
+<p>由内部的独立人员审查, 确定合规性, 目标的实现, 措施的有效性</p>
+<a href="#external-audits"><h5 id="external-audits"><span class="hanchor" ariaLabel="Anchor"># </span>external audits</h5></a>
+<p>有外部独立组织审查</p>
+<a href="#management-review"><h5 id="management-review"><span class="hanchor" ariaLabel="Anchor"># </span>management review</h5></a>
+<p>高层管理人员审查报告</p>
+<a href="#security--safety"><h3 id="security--safety"><span class="hanchor" ariaLabel="Anchor"># </span>Security &amp; Safety</h3></a>
+<a href="#security"><h5 id="security"><span class="hanchor" ariaLabel="Anchor"># </span>Security</h5></a>
+<ul>
+<li>Zugangskontrollen</li>
+<li>Verschlüsselung</li>
+</ul>
+<a href="#safety"><h5 id="safety"><span class="hanchor" ariaLabel="Anchor"># </span>Safety</h5></a>
+<p>更多是物理性的</p>
+<ul>
+<li>Glatteiwarnung 黑冰警告</li>
+<li>Brandmeldeanlage 火灾警报系统</li>
+</ul>
+<a href="#technische-schwachstellen-und-angriffe"><h2 id="technische-schwachstellen-und-angriffe"><span class="hanchor" ariaLabel="Anchor"># </span>Technische Schwachstellen und Angriffe</h2></a>
+<p><a href="/permanent/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%95%8C%E5%BC%A0%E4%B8%89" rel="noopener" class="internal-link" data-src="/permanent/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%95%8C%E5%BC%A0%E4%B8%89">网络安全界张三</a>
+<a href="/permanent/Security-Code-Review-101" rel="noopener" class="internal-link" data-src="/permanent/Security-Code-Review-101">Security Code Review 101</a></p>
+<a href="#technische-angriffsvarianten"><h3 id="technische-angriffsvarianten"><span class="hanchor" ariaLabel="Anchor"># </span>Technische Angriffsvarianten</h3></a>
+<a href="#angriffsarten"><h4 id="angriffsarten"><span class="hanchor" ariaLabel="Anchor"># </span>Angriffsarten</h4></a>
+<ul>
+<li>Auswirkung auf (C/I/A)</li>
+<li>Eigenschaft
+<ul>
+<li>Ziel</li>
+<li>active?passive?</li>
+<li>direct?</li>
+</ul>
+</li>
+<li>trivial/aufwendig</li>
+</ul>
+<a href="#dos-ddos"><h4 id="dos-ddos"><span class="hanchor" ariaLabel="Anchor"># </span>DOS, DDOS</h4></a>
+<p><a class="internal-link broken">DOS, DDOS</a></p>
+<a href="#schadsoftware-恶意软件"><h3 id="schadsoftware-恶意软件"><span class="hanchor" ariaLabel="Anchor"># </span>Schadsoftware 恶意软件</h3></a>
+<p>Viren, Würmer, Trojanische Pferde</p>
+<a href="#病毒-virus"><h4 id="病毒-virus"><span class="hanchor" ariaLabel="Anchor"># </span>病毒 Virus</h4></a>
+<p>de. Viren
+指令序列, 需要寄主程序(Wirtsprogramm), 无法自己运行
+Selbstreplikation: 自我复制, 自行感染其他程序</p>
+<a href="#病毒的结构"><h5 id="病毒的结构"><span class="hanchor" ariaLabel="Anchor"># </span>病毒的结构</h5></a>
+<p><img src="/attachments/Pasted image 20221112144606.png" width="700x300" /></p>
+<a href="#病毒的感染"><h5 id="病毒的感染"><span class="hanchor" ariaLabel="Anchor"># </span>病毒的感染</h5></a>
+<ul>
+<li>在程序末尾添加病毒代码</li>
+<li>将 OEP 修改为 病毒代码的开始点</li>
+<li>病毒代码的结束 RET 到程序原本的入口点</li>
+</ul>
+<a href="#蠕虫-worm"><h4 id="蠕虫-worm"><span class="hanchor" ariaLabel="Anchor"># </span>蠕虫 Worm</h4></a>
+<p>不需要寄主程序的有害程序
+<a class="internal-link broken">蠕虫</a></p>
+<p><a class="internal-link broken">蠕虫</a></p>
+<p><a class="internal-link broken">蠕虫</a></p>
+<a href="#特洛伊木马"><h4 id="特洛伊木马"><span class="hanchor" ariaLabel="Anchor"># </span>特洛伊木马</h4></a>
+<p>实际功能与应有功能不一致的程序, 隐藏有恶意程序</p>
+<p>e.g. <a href="/permanent/Staatstrojaner" rel="noopener" class="internal-link" data-src="/permanent/Staatstrojaner">Staatstrojaner</a></p>
+<a href="#backdoor-后门"><h4 id="backdoor-后门"><span class="hanchor" ariaLabel="Anchor"># </span>Backdoor 后门</h4></a>
+<p>攻击者可以随时控制被安装后门的系统</p>
+<a href="#mobile-code"><h4 id="mobile-code"><span class="hanchor" ariaLabel="Anchor"># </span>Mobile Code</h4></a>
+<p>在远程计算机上生成, 并嵌入到如网页, 邮件或文件中, 在 Client 本地执行</p>
+<a href="#对恶意软件的保护和应对措施"><h4 id="对恶意软件的保护和应对措施"><span class="hanchor" ariaLabel="Anchor"># </span>对恶意软件的保护和应对措施</h4></a>
+<p>de. Schutz- und Gegenmaßnahmen</p>
+<ul>
+<li>反病毒软件, 不要安装未知来源的软件</li>
+<li>定期备份</li>
+<li>禁用宏, 或者用沙盒运行</li>
+</ul>
+<p>服务器端:</p>
+<ul>
+<li>包括上面的</li>
+<li>添加 Integrity-Checker(Host Intrusion Detection System)</li>
+<li>谨慎授权写入 (<a href="/permanent/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%9A%84%E5%8E%9F%E5%88%99#need-to-know-%e5%8e%9f%e5%88%99" rel="noopener" class="internal-link" data-src="/permanent/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%9A%84%E5%8E%9F%E5%88%99">Need-to-Know Prinzip</a>)</li>
+<li>疫苗: 病毒签名黑名单</li>
+</ul>
+<a href="#ransomware"><h4 id="ransomware"><span class="hanchor" ariaLabel="Anchor"># </span>Ransomware</h4></a>
+<p>加密勒索软件 de. Krypto-Erpressungstrojaner</p>
+<p>对策:</p>
+<ul>
+<li>关闭 445/139 和 3389</li>
+<li>备份, 并物理隔断</li>
+<li>只打开邮件信任源的附件</li>
+</ul>
+<p>复原:</p>
+<ul>
+<li>导入备份 Einspielen von Backups</li>
+</ul>
+<a href="#关于-ntp-的攻击"><h4 id="关于-ntp-的攻击"><span class="hanchor" ariaLabel="Anchor"># </span>关于 NTP 的攻击</h4></a>
+<p><a href="/permanent/NTP-%E5%8D%8F%E8%AE%AE#%e5%85%b3%e4%ba%8e-ntp-%e7%9a%84%e6%94%bb%e5%87%bb" rel="noopener" class="internal-link" data-src="/permanent/NTP-%E5%8D%8F%E8%AE%AE">NTP 协议</a></p>
+<a href="#反病毒手段的分类"><h4 id="反病毒手段的分类"><span class="hanchor" ariaLabel="Anchor"># </span>反病毒手段的分类</h4></a>
+<a href="#signaturbasierte-erkennung"><h5 id="signaturbasierte-erkennung"><span class="hanchor" ariaLabel="Anchor"># </span>Signaturbasierte Erkennung</h5></a>
+<ul>
+<li>根据病毒数据库来检测是否有发现已知的病毒(通过Opcodes)</li>
+<li>优点: 低 FP; 稳定测出已知病毒</li>
+<li>确定: 只能检测已知病毒；需要频繁更新</li>
+</ul>
+<a href="#heuristischeanomalie-basierte-erkennung"><h5 id="heuristischeanomalie-basierte-erkennung"><span class="hanchor" ariaLabel="Anchor"># </span>Heuristische/Anomalie-basierte Erkennung</h5></a>
+<ul>
+<li>监视系统运行, 检测异常状况, 发现异常时警报</li>
+<li>优点: 能检测出最新的威胁</li>
+<li>缺点: 可能会有高 FP</li>
+</ul>
+<a href="#emulations-basierte-erkennung"><h5 id="emulations-basierte-erkennung"><span class="hanchor" ariaLabel="Anchor"># </span>Emulations-basierte Erkennung</h5></a>
+<ul>
+<li>沙箱运行并观察代码</li>
+<li>优点: 能检测出最新的威胁；受保护的系统与可能的病毒隔离</li>
+<li>缺点: 病毒很容易发现是虚拟机并隐藏自己；高资源消耗</li>
+</ul>
+<a href="#病毒的对抗手段过杀"><h4 id="病毒的对抗手段过杀"><span class="hanchor" ariaLabel="Anchor"># </span>病毒的对抗手段(过杀)</h4></a>
+<p>你看, 很多都是对抗病毒数据库的</p>
+<a href="#garbage-instructions"><h5 id="garbage-instructions"><span class="hanchor" ariaLabel="Anchor"># </span>Garbage instructions</h5></a>
+<ul>
+<li>e.g. NOP</li>
+<li>没有实际用处, 但会增加大小 -&gt; 对抗 signatur-basierter Detektion</li>
+</ul>
+<a href="#instruction-reordering"><h5 id="instruction-reordering"><span class="hanchor" ariaLabel="Anchor"># </span>Instruction reordering</h5></a>
+<ul>
+<li>对抗 signatur-basierter Detektion</li>
+<li>随机改变指令的顺序, 通过 label 和 跳转指令 来保证运行</li>
+<li>改变 Opcode</li>
+</ul>
+<a href="#interchangeable-instructions"><h5 id="interchangeable-instructions"><span class="hanchor" ariaLabel="Anchor"># </span>Interchangeable instructions</h5></a>
+<ul>
+<li>以不同的代码实现同样的功能(变形病毒)</li>
+<li>改变 Opcode</li>
+</ul>
+<a href="#变形病毒-metamorphic-virus"><h6 id="变形病毒-metamorphic-virus"><span class="hanchor" ariaLabel="Anchor"># </span>变形病毒 Metamorphic Virus</h6></a>
+<p>变形病毒是一种可以凭借转换、编辑和重写自身代码的能力变换形态的病毒。</p>
+<a href="#e-mail-securityspam"><h3 id="e-mail-securityspam"><span class="hanchor" ariaLabel="Anchor"># </span>E-Mail Security(spam)</h3></a>
+<a href="#spam"><h5 id="spam"><span class="hanchor" ariaLabel="Anchor"># </span>SPAM</h5></a>
+<p>unsolicited commercial emails, UCE
+unerwünschte Werbemails</p>
+<a href="#phishing"><h5 id="phishing"><span class="hanchor" ariaLabel="Anchor"># </span>Phishing</h5></a>
+<p>钓鱼页面, 通过模仿正规网站的页面, 让人误以为在正规网站中输入信息</p>
+<a href="#spamfilter-常规防御措施"><h4 id="spamfilter-常规防御措施"><span class="hanchor" ariaLabel="Anchor"># </span>Spamfilter (常规防御措施)</h4></a>
+<p>分类:</p>
+<ul>
+<li>blacklist/whitelist</li>
+<li>rergelbasiert</li>
+<li>Filtersoftware lernt aus Beispielen</li>
+</ul>
+<p>+ 易实现
+- 需长期维护
+- 依赖于神经训练或模型
+- FP(HAM误认为是SPAM)的必须极少</p>
+<a href="#greylist"><h5 id="greylist"><span class="hanchor" ariaLabel="Anchor"># </span>Greylist</h5></a>
+<p>收到陌生(发件人,邮箱地址,收件人)的邮件时, 第一次拒绝并给出提示过段时间再次尝试(并将该陌生元组加入已知列表)
+收到已知列表的测通过</p>
+<a href="#spam-过滤手段"><h4 id="spam-过滤手段"><span class="hanchor" ariaLabel="Anchor"># </span>SPAM 过滤手段</h4></a>
+<a href="#dns-basierte-blacklist"><h5 id="dns-basierte-blacklist"><span class="hanchor" ariaLabel="Anchor"># </span>DNS-basierte Blacklist</h5></a>
+<ul>
+<li>问一下 DNS, 这个邮件的发送地址在不在 Spamlist 上</li>
+<li><a href="/permanent/dig#spamlist-%e6%9f%a5%e8%af%a2" rel="noopener" class="internal-link" data-src="/permanent/dig">dig</a>(dig +short 2.0.0.127.zen.spamhaus.org)</li>
+</ul>
+<a href="#rhsbl-right-hand-side-blacklists"><h5 id="rhsbl-right-hand-side-blacklists"><span class="hanchor" ariaLabel="Anchor"># </span>RHSBL Right Hand Side Blacklists</h5></a>
+<ul>
+<li>DNS Blacklist 的变种, 检查邮件地址的域名部分(@domain.name)</li>
+<li>比 URI DNSBL 效果差一点, 因为 SPAM 可以伪造发送地址</li>
+</ul>
+<a href="#naive-bayes-classification"><h5 id="naive-bayes-classification"><span class="hanchor" ariaLabel="Anchor"># </span>Naive Bayes Classification</h5></a>
+<ul>
+<li>首先是大数据, 邮件如果含有某关键字, 有多大可能是 SPAM</li>
+<li>分析收入邮件的全部 token, 通过 简单贝叶斯 计算邮件是 SPAM 的概率</li>
+<li>需要额外处理</li>
+</ul>
+<a href="#systemnahe-angriffe"><h3 id="systemnahe-angriffe"><span class="hanchor" ariaLabel="Anchor"># </span>Systemnahe Angriffe</h3></a>
+<a href="#buffer-overflows"><h4 id="buffer-overflows"><span class="hanchor" ariaLabel="Anchor"># </span>Buffer Overflows</h4></a>
+<p><a class="internal-link broken">Buffer Overflows</a></p>
+<p><a class="internal-link broken">Buffer Overflows</a></p>
+<p><a class="internal-link broken">Buffer Overflows</a></p>
+<p><a class="internal-link broken">Buffer Overflows</a></p>
+<a href="#accountpassword-cracking"><h4 id="accountpassword-cracking"><span class="hanchor" ariaLabel="Anchor"># </span>Account/Password Cracking</h4></a>
+<p>也就是破解用户名和口令</p>
+<ul>
+<li>Brute Force</li>
+<li>字典攻击 Dictionary Attack</li>
+<li>Social Engineering</li>
+<li>撞哈希/破解加密算法</li>
+<li>撞库</li>
+</ul>
+<p>字典攻击的对抗方式: 加盐
+<a class="internal-link broken">加盐</a></p>
+<a href="#back-door-trap-door"><h4 id="back-door-trap-door"><span class="hanchor" ariaLabel="Anchor"># </span>Back Door, Trap Door</h4></a>
+<p>目的: 留通道和留权限</p>
+<ul>
+<li>隐藏 SUID/SGID</li>
+<li>隐藏的联网服务, 会在特定时间在特定端口打开任务行</li>
+<li><code>.rhosts</code>(root)或<code>authorized_keys</code>(ssh)文件里留痕迹</li>
+</ul>
+<a href="#rootkits"><h4 id="rootkits"><span class="hanchor" ariaLabel="Anchor"># </span>Rootkits</h4></a>
+<p><a class="internal-link broken">Rootkit</a></p>
+<p><a class="internal-link broken">Rootkit</a></p>
+<p><a class="internal-link broken">Rootkit</a></p>
+<a href="#adobe-flash"><h4 id="adobe-flash"><span class="hanchor" ariaLabel="Anchor"># </span>Adobe Flash</h4></a>
+<p>Flash 已于 2020 年末结束服务</p>
+<a href="#事件-einfallstor-adobe-flash"><h5 id="事件-einfallstor-adobe-flash"><span class="hanchor" ariaLabel="Anchor"># </span>事件: Einfallstor Adobe Flash</h5></a>
+<p>起因经过</p>
+<ul>
+<li>RSA Security公司除其他外，还生产在全球广泛使用的认证令牌（RSA SecurID）。</li>
+<li>针对RSA员工的鱼叉式网络钓鱼攻击：Excel附件 &ldquo;2011 Recruitment Plan.xls&rdquo;，估计是用Excel 2007打开。</li>
+<li>嵌入式SWF文件利用了Adobe Flash Player的漏洞。</li>
+<li>恶意代码（对 &ldquo;poison ivy &ldquo;的修改）监视员工的计算机，并将密码传送给攻击者，以及其他事项。
+后果</li>
+<li>SecurID的来源和种子被刺探出来了</li>
+<li>美国国防公司洛克希德-马丁公司（Lockheed Martin）被黑客使用 &ldquo;仿冒的 &ldquo;SecurID令牌；其他许多公司也受到影响。</li>
+<li>约有4000万个SecurID代币被交换</li>
+</ul>
+<a href="#web-攻击"><h3 id="web-攻击"><span class="hanchor" ariaLabel="Anchor"># </span>Web 攻击</h3></a>
+<a href="#xss"><h4 id="xss"><span class="hanchor" ariaLabel="Anchor"># </span>XSS</h4></a>
+<p><a class="internal-link broken">XSS</a></p>
+<p><a class="internal-link broken">XSS</a></p>
+<p>事件: Angriff auf Issue Tracking System von Apache(见 Script Kapital 3)</p>
+<a href="#sql-注入"><h4 id="sql-注入"><span class="hanchor" ariaLabel="Anchor"># </span>SQL 注入</h4></a>
+<p>emm, 没讲什么, 就是你知道那个</p>
+<a href="#access-token-manipulation"><h4 id="access-token-manipulation"><span class="hanchor" ariaLabel="Anchor"># </span>Access Token Manipulation</h4></a>
+<p><a class="internal-link broken">Access Token Manipulation</a></p>
+<p><a class="internal-link broken">Access Token Manipulation</a></p>
+<p><a class="internal-link broken">Access Token Manipulation</a></p>
+<a href="#csrf"><h4 id="csrf"><span class="hanchor" ariaLabel="Anchor"># </span>CSRF</h4></a>
+<p><a class="internal-link broken">CSRF</a></p>
+<p><a class="internal-link broken">CSRF</a></p>
+<a href="#基于网络的攻击"><h3 id="基于网络的攻击"><span class="hanchor" ariaLabel="Anchor"># </span>基于网络的攻击</h3></a>
+<a href="#sniffing-嗅探"><h4 id="sniffing-嗅探"><span class="hanchor" ariaLabel="Anchor"># </span>Sniffing 嗅探</h4></a>
+<p>监视网络流量</p>
+<p><strong>LAN</strong>
+(Wireless) Local Area Network</p>
+<ul>
+<li>无线使用以太网而不是交换机</li>
+<li>原则上, 网卡(Netzwerk-Karten) 可以监听所有流量, 但网卡只传递给计算机的数据包 -&gt; 在 Promiscuous Mode 下会将所有数据包都交给 OS 执行</li>
+</ul>
+<p><strong>WAN</strong>
+Wide Area Network</p>
+<ul>
+<li>每台交换计算机都可以读取信息(如路由器的镜像端口 Mirror Port)</li>
+<li>线路窃听 Anzapfen</li>
+</ul>
+<a href="#port-scanning-端口扫描"><h4 id="port-scanning-端口扫描"><span class="hanchor" ariaLabel="Anchor"># </span>Port Scanning 端口扫描</h4></a>
+<p>寻找远端计算机上开放的端口, 试图建立连接</p>
+<ul>
+<li>e.g. nmap</li>
+<li>有针对性地搜索具有已知弱点的服务端口</li>
+<li>端口扫描常被视为攻击, 因为是隐密进行的</li>
+</ul>
+<a href="#schwachstellenbewertung"><h3 id="schwachstellenbewertung"><span class="hanchor" ariaLabel="Anchor"># </span>Schwachstellenbewertung</h3></a>
+<ul>
+<li>漏洞评估 Vulnerability Assessment</li>
+<li>目标: 确定优先级</li>
+<li>涉及开发者和运维者两个角色</li>
+<li>量化评估 (缺点: 客观性, 统一性)</li>
+</ul>
+<a href="#cvss"><h4 id="cvss"><span class="hanchor" ariaLabel="Anchor"># </span>CVSS</h4></a>
+<p><a class="internal-link broken">CVSS</a></p>
+<p><a class="internal-link broken">CVSS</a></p>
+<p><a class="internal-link broken">CVSS</a>
+<a class="internal-link broken">CVSS</a></p>
+<a href="#zero-day-exploits"><h4 id="zero-day-exploits"><span class="hanchor" ariaLabel="Anchor"># </span>Zero Day Exploits</h4></a>
+<p>0day 漏洞指的是漏洞发现的当天, 相关的恶意程序就已出现并对漏洞进行攻击, 还没有相关报告评估和防御措施</p>
+<hr>
+<a href="#endpoint-security"><h3 id="endpoint-security"><span class="hanchor" ariaLabel="Anchor"># </span>Endpoint Security</h3></a>
+<p>= Endpoint Protection System</p>
+<a href="#endpoint-security-的组成"><h4 id="endpoint-security-的组成"><span class="hanchor" ariaLabel="Anchor"># </span>Endpoint Security 的组成</h4></a>
+<ul>
+<li>中央管理
+<ul>
+<li>Server/Client Model</li>
+<li>Reports &amp; Alerts</li>
+<li>本地网络知识共享</li>
+</ul>
+</li>
+<li>连接 <a href="/permanent/SIEM" rel="noopener" class="internal-link" data-src="/permanent/SIEM">SIEM</a> 系统</li>
+<li>外设(Peripheral devices)安全策略(USB-mouse:yes, USB-stick:no)</li>
+<li>高级永久线程检测</li>
+<li>反病毒, 反恶意软件</li>
+<li>Data loss &amp; leak Prevention</li>
+<li>Host Intrusion Prevention</li>
+<li>lokal/personal firewall</li>
+<li>White- &amp; Blacklists (软件或网页)</li>
+<li>Logging &amp; Monitoring</li>
+<li>Deployment of patches</li>
+</ul>
+<a href="#endpoint-security-和-antivirus-的区别"><h4 id="endpoint-security-和-antivirus-的区别"><span class="hanchor" ariaLabel="Anchor"># </span>Endpoint Security 和 Antivirus 的区别</h4></a>
+<ul>
+<li>包含关系, A &lt; ES</li>
+<li>目标是整个网络和终端的保护,</li>
+<li>终端设备的安全管理(monitoring, patching, local knowledge sharing)</li>
+</ul>
+<a href="#epp-edr-xdr"><h4 id="epp-edr-xdr"><span class="hanchor" ariaLabel="Anchor"># </span>EPP, EDR, XDR</h4></a>
+<p><a class="internal-link broken">EPP, EDR, XDR</a></p>
+<p><a class="internal-link broken">EPP, EDR, XDR</a></p>
+<p><a class="internal-link broken">EPP, EDR, XDR</a></p>
+<a href="#siem"><h3 id="siem"><span class="hanchor" ariaLabel="Anchor"># </span>SIEM</h3></a>
+<ul>
+<li>简介</li>
+<li>目标</li>
+<li>优缺点</li>
+<li>困难</li>
+<li>信息源</li>
+<li>与 IDS/IPS 系统的区别</li>
+</ul>
+<p><a class="internal-link broken">SIEM</a></p>
+<p><a class="internal-link broken">SIEM</a></p>
+<p><a class="internal-link broken">SIEM</a></p>
+<p><a class="internal-link broken">SIEM</a></p>
+<p><a class="internal-link broken">SIEM</a></p>
+<p><a class="internal-link broken">SIEM</a></p>
+<a href="#ttp"><h3 id="ttp"><span class="hanchor" ariaLabel="Anchor"># </span>TTP</h3></a>
+<p><a class="internal-link broken">TTP(Tastics,Techniques and Procedures)</a></p>
+<p><a href="/permanent/TTPTasticsTechniques-and-Procedures#ttp-%e5%85%b7%e4%bd%93%e5%ae%9e%e4%be%8b" rel="noopener" class="internal-link" data-src="/permanent/TTPTasticsTechniques-and-Procedures">TTP(Tastics,Techniques and Procedures)</a></p>
+<a href="#mitre-attck"><h3 id="mitre-attck"><span class="hanchor" ariaLabel="Anchor"># </span>MITRE ATT&amp;CK</h3></a>
+<p><a class="internal-link broken">MITRE ATT&amp;CK</a></p>
+<a href="#案例-在外网部署加密矿机"><h3 id="案例-在外网部署加密矿机"><span class="hanchor" ariaLabel="Anchor"># </span>案例: 在外网部署加密矿机</h3></a>
+<p><img src="/attachments/Pasted image 20230114002200.png" width="auto" /></p>
+<a href="#social-engineering"><h2 id="social-engineering"><span class="hanchor" ariaLabel="Anchor"># </span>Social Engineering</h2></a>
+<a href="#社会工程学界定"><h3 id="社会工程学界定"><span class="hanchor" ariaLabel="Anchor"># </span>社会工程学界定</h3></a>
+<p>相对于技术性的攻击, 社会工程学针对的不是技术系统而是其用户.</p>
+<ul>
+<li>利用人的特征或感受上的弱点, 例如恐惧(威胁), 好奇/贪婪(钓鱼)</li>
+</ul>
+<p>谈到安全, 人们总是注重技术而忽略了人为因素</p>
+<a href="#攻击者角度"><h3 id="攻击者角度"><span class="hanchor" ariaLabel="Anchor"># </span>攻击者角度</h3></a>
+<a href="#社会工程学的分类"><h4 id="社会工程学的分类"><span class="hanchor" ariaLabel="Anchor"># </span>社会工程学的分类</h4></a>
+<p><strong>根本分类: 主动 vs. 被动</strong></p>
+<a href="#主动攻击"><h5 id="主动攻击"><span class="hanchor" ariaLabel="Anchor"># </span>主动攻击</h5></a>
+<ul>
+<li>pretexting 伪装(假冒身份骗取信息)</li>
+<li>phishing 网络钓鱼</li>
+</ul>
+<a href="#被动攻击不与受害者互动"><h5 id="被动攻击不与受害者互动"><span class="hanchor" ariaLabel="Anchor"># </span>被动攻击(不与受害者互动)</h5></a>
+<ul>
+<li>窃听(belauschen)</li>
+<li>shoulder surfing 偷窥</li>
+<li>dumpster diving 翻丢弃物</li>
+<li>baiting 引诱(留下准备好的 U 盘)</li>
+</ul>
+<p><strong>既定类别</strong></p>
+<ul>
+<li>Human-based (无技术)</li>
+<li>Computer-based (有技术)</li>
+<li>Reverse Social Engineering (受害者协助)</li>
+</ul>
+<a href="#human-based-social-engineering"><h5 id="human-based-social-engineering"><span class="hanchor" ariaLabel="Anchor"># </span>Human-based Social Engineering</h5></a>
+<ul>
+<li>Dumpster Diving</li>
+<li>Shoulder Surfing</li>
+<li>Tailgating 尾随(例如在有安全锁的门)</li>
+<li>Badge Surveilance (自行打印员工凭证)</li>
+<li>Pretexting 伪装</li>
+<li>Quid pro quo 交换条件</li>
+<li>People Watching 看人下菜碟</li>
+<li>Diversion Theft 分流盗窃/转移盗窃</li>
+</ul>
+<a href="#computer-based-social-engineering"><h5 id="computer-based-social-engineering"><span class="hanchor" ariaLabel="Anchor"># </span>Computer-based Social Engineering</h5></a>
+<ul>
+<li><a href="/permanent/Phishing" rel="noopener" class="internal-link" data-src="/permanent/Phishing">Phishing</a>
+<ul>
+<li><a href="/permanent/Phishing#clone-phishing" rel="noopener" class="internal-link" data-src="/permanent/Phishing">Clone Phishing</a> (重复真实邮件)</li>
+<li><a href="/permanent/Phishing#spear-phishing" rel="noopener" class="internal-link" data-src="/permanent/Phishing">Spear Phishing</a> (有针对性的)</li>
+<li><a href="/permanent/Phishing#whaling" rel="noopener" class="internal-link" data-src="/permanent/Phishing">Whaling</a> (叉大鱼)</li>
+<li>CEO Fraud (冒名诈骗)</li>
+<li>Vishing (Voice Phishing, 目标: 受害者给攻击者打电话)</li>
+<li>Evil Twins (恶意/流氓 Wifi 接入点)</li>
+</ul>
+</li>
+<li>Baiting 利用诱饵</li>
+<li>Forensic analysis</li>
+<li>Electronic badges</li>
+</ul>
+<a href="#成功的社会工程师的典型特征"><h4 id="成功的社会工程师的典型特征"><span class="hanchor" ariaLabel="Anchor"># </span>成功的社会工程师的典型特征</h4></a>
+<p>能与人很好地沟通</p>
+<ul>
+<li>无害的对话&ndash;攻击没有被注意到</li>
+<li>掌握了受害者及其环境的技术术语</li>
+<li>可靠地获得信任或被定位为权威 &quot; 是病人的行为者</li>
+</ul>
+<p>假装的人必须显得真实。</p>
+<ul>
+<li>年轻人很少能通过大公司的CEO。</li>
+<li>任何声称在慕尼黑出生或学习的人都应该理解/说巴伐利亚语或能够描述日常的大学生活。</li>
+<li>侦察和建立信任可能需要时间。</li>
+<li>灵活性和适应性强，良好的事实记忆</li>
+</ul>
+<p>他们对自己不太擅长</p>
+<ul>
+<li>垃圾箱潜水不一定好玩。</li>
+<li>伪装成清洁人员意味着相应的活动。</li>
+</ul>
+<a href="#一些案例"><h4 id="一些案例"><span class="hanchor" ariaLabel="Anchor"># </span>一些案例</h4></a>
+<p><strong>Robin Sage</strong>
+伪造的人物获取机密?</p>
+<p><strong>电子生日贺卡</strong>
+两名员工在 FB 上提到老板的生日. 攻击者冒充其中一人发电子贺卡, 实际上是恶意软件钓鱼. 计算机完全受损.</p>
+<p><strong>Emily Williams</strong>
+伪造简历得到录用, 个人社交网页指向电子贺卡, 实际上是恶意软件</p>
+<p><strong>银行员工的 USB</strong>
+20 个装了恶意软件的 USB &ldquo;丢失&rdquo; 在路上, 15 个被捡走了</p>
+<a href="#kevin-mitnick"><h4 id="kevin-mitnick"><span class="hanchor" ariaLabel="Anchor"># </span>Kevin Mitnick</h4></a>
+<ul>
+<li>书籍: The Art of Deception, 传记: Ghost in the Wires</li>
+<li>以前是美国最受欢迎的社会工程师 !</li>
+<li>&ldquo;最喜欢的武器：电话；经常冒充高级警官！&quot;。</li>
+<li>作为一项运动的黑客攻击:
+<ul>
+<li>没有金钱上的动机；（大部分）不显眼地从事副业.</li>
+<li>复制内部文件，电子邮件，源代码，&hellip; 只是为了好玩</li>
+</ul>
+</li>
+<li>团队合作和黑客战争:
+<ul>
+<li>米特尼克经常求助于友好黑客的漏洞和工具</li>
+<li>竞争和虚假的朋友最终导致了他的被捕</li>
+</ul>
+</li>
+</ul>
+<a href="#使用者角度"><h3 id="使用者角度"><span class="hanchor" ariaLabel="Anchor"># </span>使用者角度</h3></a>
+<a href="#se-攻击故事的典型特征"><h4 id="se-攻击故事的典型特征"><span class="hanchor" ariaLabel="Anchor"># </span>SE 攻击故事的典型特征</h4></a>
+<ul>
+<li>制造紧迫感</li>
+<li>制造压力</li>
+<li>威胁消极后果</li>
+<li>要求绕过程序或例外</li>
+<li>要求许多/高权限</li>
+<li>非常好奇地询问</li>
+<li>使用不必要的专业术语</li>
+<li>给予模糊的信息</li>
+<li>&ldquo;好得不能再好&rdquo;</li>
+<li>语气不寻常</li>
+</ul>
+<a href="#反制措施"><h4 id="反制措施"><span class="hanchor" ariaLabel="Anchor"># </span>反制措施</h4></a>
+<a href="#技术上的"><h5 id="技术上的"><span class="hanchor" ariaLabel="Anchor"># </span>技术上的&hellip;</h5></a>
+<p>一些通用的:</p>
+<ul>
+<li>按规定办事, 避免例外和捷径</li>
+<li>识别不寻常的请求</li>
+<li>记录和报告可疑事件</li>
+</ul>
+<p>Pretexting</p>
+<ul>
+<li>适度的不信任和谨慎</li>
+<li>结束通话并回电/更换频道</li>
+<li>咨询其他人</li>
+</ul>
+<p>Dumpster Diving</p>
+<ul>
+<li>粉碎机</li>
+</ul>
+<p>Shoulder Surfing</p>
+<ul>
+<li>如果你的工作需要, 搞个防窥屏/膜</li>
+</ul>
+<p>Tailgating</p>
+<ul>
+<li>安保措施/隔离系统</li>
+<li>记得随手关门</li>
+</ul>
+<p>Baiting</p>
+<ul>
+<li>限制系统</li>
+</ul>
+<a href="#公司组织上的"><h5 id="公司组织上的"><span class="hanchor" ariaLabel="Anchor"># </span>(公司)组织上的</h5></a>
+<p>像所有与IT安全有关的事情一样，这也是一个预算问题：</p>
+<ul>
+<li>培训的人员和时间要求</li>
+<li>意识防止损害，但不产生利润 &quot; 组织的边界条件。</li>
+<li>必须确定保护目标和培训重点</li>
+<li>内容、教学和媒体准备需要一个跨学科的团队</li>
+<li>连续性和成功监测 &quot; 不同方法的结合。</li>
+<li>面对面的活动与基于计算机的培训</li>
+<li>海报、传单、通讯、内联网网站、&hellip;</li>
+<li>鸣谢、参与证书、比赛</li>
+</ul>
+<a href="#penetration-test"><h3 id="penetration-test"><span class="hanchor" ariaLabel="Anchor"># </span>Penetration Test</h3></a>
+<p>渗透测试（一般）即服务：</p>
+<ul>
+<li>目标
+<ul>
+<li>白帽黑客在恶意攻击者得逞之前</li>
+<li>识别并报告以前未知的安全漏洞</li>
+</ul>
+</li>
+<li>风险
+<ul>
+<li>并不保证漏洞都被发现</li>
+<li>测试会增加系统(在正常运行时的)负荷</li>
+</ul>
+</li>
+<li>Penetration tester 应具备的专业能力
+<ul>
+<li>OS, DB, 网络协议等</li>
+</ul>
+</li>
+<li>调查内容
+<ul>
+<li>内部开发/专用软件</li>
+<li>IT 服务的组成/配置</li>
+<li>物理安全</li>
+</ul>
+</li>
+<li>根据提供的文件（例如源文本）：黑盒与白盒测试</li>
+</ul>
+<p>社会工程渗透测试作为对外部各方的命令：</p>
+<ul>
+<li>组织内部通常不具备专业知识和常规</li>
+<li>“新面孔”对攻击很重要与个人接触。</li>
+<li>从“外部攻击者”（不是：“内部攻击者”）的角度关注。</li>
+<li>与 Vulnerability Scan (仅能扫描已知漏洞)不同</li>
+</ul>
+<a href="#渗透测试的分类"><h4 id="渗透测试的分类"><span class="hanchor" ariaLabel="Anchor"># </span>渗透测试的分类</h4></a>
+<p><img src="/attachments/Pasted image 20230124185254.png" width="500" /></p>
+<a href="#渗透测试流程"><h4 id="渗透测试流程"><span class="hanchor" ariaLabel="Anchor"># </span>渗透测试流程</h4></a>
+<ol>
+<li>计划和目标设定(与客户一起)</li>
+<li>信息获取和侦查</li>
+<li>&ldquo;场景&rdquo; 要执行的攻击的规范</li>
+<li>隐蔽地执行攻击</li>
+<li>结果报告和客户建议</li>
+</ol>
+<p><img src="/attachments/Pasted image 20230124183235.png" width="500" /></p>
+<a href="#planung-1-vorbereitung"><h5 id="planung-1-vorbereitung"><span class="hanchor" ariaLabel="Anchor"># </span>Planung/ 1. Vorbereitung</h5></a>
+<p>测试范围的定义</p>
+<ul>
+<li>预算, 道德限制, 目标</li>
+<li>时间和范围(如仅在白天, 不在某特定日子)</li>
+<li>工具选择(电话, 电子邮件, 锁具), 测试方法选择
+合同规定</li>
+<li>紧急联系人(比如解除安全警报)</li>
+<li>假的凭证, 账号</li>
+<li>成功证明</li>
+<li>报告方式</li>
+</ul>
+<a href="#informationsakquise"><h5 id="informationsakquise"><span class="hanchor" ariaLabel="Anchor"># </span>Informationsakquise</h5></a>
+<p>通过互联网（OSINT）：</p>
+<ul>
+<li>组织结构图</li>
+<li>年度报告、招聘广告、公司历史和使命宣言</li>
+<li>工作人员姓名及电子邮件地址和电话号码</li>
+<li>当前的项目、产品、新闻发布、客户、服务提供商</li>
+<li>术语（技术术语、缩写&hellip;&hellip;）</li>
+<li>在讨论/支持网络论坛上发帖，并附上公司电子邮件地址</li>
+<li>如果适用，工作人员的社交网络资料</li>
+</ul>
+<p>现场：</p>
+<ul>
+<li>工作人员：典型的着装、工作和休息时间、身份证、通讯/吸烟区、送货/来访者交通、&hellip;</li>
+<li>建筑物：房间平面图、监控区域（摄像头/保安）、门禁系统、值班和轮班表、功能室（打印机/邮件/服务器室、仓库&hellip;&hellip;）、厕所、纸桶。</li>
+</ul>
+<a href="#2-informationsbeschaffung"><h5 id="2-informationsbeschaffung"><span class="hanchor" ariaLabel="Anchor"># </span>2. Informationsbeschaffung</h5></a>
+<ul>
+<li>评估已知信息</li>
+<li>执行 I-Modul</li>
+<li>漏洞研究</li>
+</ul>
+<a href="#3-risikoanalyse"><h5 id="3-risikoanalyse"><span class="hanchor" ariaLabel="Anchor"># </span>3. Risikoanalyse</h5></a>
+<ul>
+<li>评估威胁(Bedrohungen)</li>
+<li>评估攻击成功的花费</li>
+<li>定义优先级(Prioritäten)</li>
+<li>Systeme/Module einschränken</li>
+</ul>
+<a href="#攻击概念"><h5 id="攻击概念"><span class="hanchor" ariaLabel="Anchor"># </span>攻击概念</h5></a>
+<p>哪些攻击是有希望的？</p>
+<ul>
+<li>界定团队中的角色/责任</li>
+<li>拟定 &ldquo;脚本&rdquo;/人员描述 &quot;
+确定顺序和时间表</li>
+</ul>
+<p>在与客户的互动中：</p>
+<ul>
+<li>已批准选定的方案</li>
+<li>定义终止标准</li>
+<li>检查合同和法律许可</li>
+<li>如有必要，让第三方参与进来（如保安公司、楼房业主)</li>
+</ul>
+<p>采购道具/准备材料。</p>
+<ul>
+<li>制服</li>
+<li>徽章、文件</li>
+</ul>
+<a href="#4-aktive-eindringversuche"><h5 id="4-aktive-eindringversuche"><span class="hanchor" ariaLabel="Anchor"># </span>4. Aktive Eindringversuche</h5></a>
+<ul>
+<li>执行 E-Module</li>
+</ul>
+<a href="#执行攻击"><h5 id="执行攻击"><span class="hanchor" ariaLabel="Anchor"># </span>执行攻击</h5></a>
+<p>通过电子邮件。发送并等待;-)</p>
+<p>通过电话：做笔记，避免当地的干扰</p>
+<p>在现场：</p>
+<ul>
+<li>通常是团队合作（两个人，一个人当瞭望员）</li>
+<li>合理利用等待时间</li>
+</ul>
+<p>重要的是：不要做任何你不允许做的事情! !</p>
+<ul>
+<li>遵守法律
+<ul>
+<li>例如，使用警察制服或伪造官方照片的身份证，几乎在任何地方都是不允许的!</li>
+<li>每个国家的相关法律可能有所不同</li>
+</ul>
+</li>
+<li>恪守合同约定</li>
+<li>尽可能地坚持计划，但不要超过约定的测试。</li>
+</ul>
+<a href="#5-abchlussanalyse"><h5 id="5-abchlussanalyse"><span class="hanchor" ariaLabel="Anchor"># </span>5. Abchlussanalyse</h5></a>
+<ul>
+<li>收集结果</li>
+<li>评价结果</li>
+<li>列出风险</li>
+<li>协商建议的改进</li>
+<li>定制改进计划</li>
+</ul>
+<a href="#berichtswesen"><h5 id="berichtswesen"><span class="hanchor" ariaLabel="Anchor"># </span>Berichtswesen</h5></a>
+<p>不太令人兴奋，但对客户来说是最重要的</p>
+<p>书面的和/或作为演示/讨论
+结构类似于技术性的五项测试报告</p>
+<ul>
+<li>描述方法和场景（攻击计划）</li>
+<li>记录执行情况和结果，必要时附上证据</li>
+<li>指出行动方案，必要时提出建议</li>
+</ul>
+<p>如果可能，不要指责个人</p>
+<p>指出遗留问题，例如：</p>
+<ul>
+<li>打开但不再上锁的锁，如橱柜上的锁</li>
+<li>有贴纸作为存在证据的设备</li>
+<li>攻击期间带来的设备（WLAN接入点、键盘记录器&hellip;）。</li>
+</ul>
+<a href="#来吧-怎样不会被攻击"><h3 id="来吧-怎样不会被攻击"><span class="hanchor" ariaLabel="Anchor"># </span>来吧, 怎样不会被攻击</h3></a>
+<p>认识不足的主要问题:
+“这只会发生在其他人身上。”
+“为什么有人要关心我和我的数据？”
+“反正你也无能为力。”</p>
+<p>注意那些要求各种权限的应用</p>
+<p>精心设计的社会工程学攻击总是会成功的 :)</p>
+<a href="#rechtliche-regelungen"><h2 id="rechtliche-regelungen"><span class="hanchor" ariaLabel="Anchor"># </span>Rechtliche Regelungen</h2></a>
+<a href="#总结"><h4 id="总结"><span class="hanchor" ariaLabel="Anchor"># </span>总结</h4></a>
+<ul>
+<li>有关IT安全的立法越来越复杂
+<ul>
+<li>对计算机科学家很重要的基本知识</li>
+<li>根据活动情况：专业的法律支持是必不可少的</li>
+</ul>
+</li>
+<li>目标部分冲突，例如
+<ul>
+<li>储存尽可能多的信息，以便能够澄清事件 VS. 数据保护意义上的数据规避</li>
+</ul>
+</li>
+<li>法律与正义。
+<ul>
+<li>新法律生效前的期限，等待期</li>
+<li>说客的影响 &quot; 执行和控制方面的不足</li>
+<li>法律的确定性与法院的意外裁决</li>
+</ul>
+</li>
+</ul>
+<a href="#问题"><h3 id="问题"><span class="hanchor" ariaLabel="Anchor"># </span>问题</h3></a>
+<p>U6</p>
+<a href="#welche-grundsa-tze-fu-r-die-verarbeitung-personenbezogener-daten-schreibt-die-dsgvo-vor"><h5 id="welche-grundsa-tze-fu-r-die-verarbeitung-personenbezogener-daten-schreibt-die-dsgvo-vor"><span class="hanchor" ariaLabel="Anchor"># </span>Welche Grundsä tze fü r die Verarbeitung personenbezogener Daten schreibt die DSGVO vor</h5></a>
+<ul>
+<li>Verbot mit Erlaubnisvorbehalt</li>
+<li>Datenvermeidung und Dartenversparsamkeit</li>
+<li>Zweikbindung</li>
+<li>Transparent</li>
+</ul>
+<a href="#was-ist-eine-verarbeitungstatigkeit-und-zu-was-sind-organisationen-diesbezuglich-verpflichtet"><h5 id="was-ist-eine-verarbeitungstatigkeit-und-zu-was-sind-organisationen-diesbezuglich-verpflichtet"><span class="hanchor" ariaLabel="Anchor"># </span>Was ist eine Verarbeitungstätigkeit und zu was sind Organisationen diesbezüglich verpflichtet?</h5></a>
+<ul>
+<li>Mit oder ohne Hilfsmittel ausgeführter Vorgang im Zusammenhang mit personenbezogenen Daten</li>
+<li>Führen eines Verzeichnisses der Verarbeitungstätigkeiten (VVT) gemäß Art. 30 DSGVO</li>
+</ul>
+<a href="#was-ist-eine-datenschutzfolgenabschatzung-und-wann-ist-sie-erforderlich"><h5 id="was-ist-eine-datenschutzfolgenabschatzung-und-wann-ist-sie-erforderlich"><span class="hanchor" ariaLabel="Anchor"># </span>Was ist eine Datenschutzfolgenabschätzung und wann ist sie erforderlich?</h5></a>
+<a href="#passiert-eine-datenpanne---was-ist-dann-zu-tun-lassen-sich-existierende-prozesse-in-der-organisation-hier-nutzen"><h5 id="passiert-eine-datenpanne---was-ist-dann-zu-tun-lassen-sich-existierende-prozesse-in-der-organisation-hier-nutzen"><span class="hanchor" ariaLabel="Anchor"># </span>Passiert eine Datenpanne - was ist dann zu tun? Lassen sich existierende Prozesse in der Organisation hier nutzen?</h5></a>
+<a href="#strafgesetzbuchstgb"><h3 id="strafgesetzbuchstgb"><span class="hanchor" ariaLabel="Anchor"># </span>Strafgesetzbuch(StGB)</h3></a>
+<a href="#总览"><h5 id="总览"><span class="hanchor" ariaLabel="Anchor"># </span>总览</h5></a>
+<ul>
+<li>Antragsdelikt: Tat wird nur auf Antrag (Anzeige) i.d.R. durch den „Verletzten“ (§ 77) verfolgt<br>
+(§ 202a, 202b, 303a, 303b)</li>
+<li>Offizialdelikt: Tat wird „von Amts wegen“ (Staatsanwaltschaft) verfolgt (§ 202c</li>
+<li>§ 202a: Ausspähen von Daten 窥视数据</li>
+<li>§ 202b: Abfangen von Daten  拦截数据</li>
+<li>§ 202c: Vorbereiten des Ausspähens und Abfangens von Daten</li>
+<li>§ 202d: Datenhehlerei  数据盗窃</li>
+<li>§ 205b: Strafantrag  刑事申诉</li>
+<li>§ 303a: Datenveränderung  数据更改</li>
+<li>§ 303b: Computersabotage  破坏计算机的行为</li>
+<li>§ 303c: Strafantrag 刑事申诉</li>
+</ul>
+<a href="#-202a-ausspähen-von-daten-窥视数据"><h5 id="-202a-ausspähen-von-daten-窥视数据"><span class="hanchor" ariaLabel="Anchor"># </span>§ 202a: Ausspähen von Daten 窥视数据</h5></a>
+<blockquote>
+<p>(1) Wer unbefugt sich oder einem anderen Zugang zu Daten, die nicht für ihn bestimmt und die gegen unberechtigten Zugang besonders gesichert sind, unter Überwindung der Zugangssicherung verschafft, wird mit Freiheitsstrafe bis zu drei Jahren oder mit Geldstrafe bestraft.</p>
+<p>(2) Daten im Sinne des Absatzes 1 sind nur solche, die elektronisch, magnetisch oder sonst nicht unmittelbar wahrnehmbar gespeichert sind oder übermittelt werden.</p>
+</blockquote>
+<ol>
+<li>任何人在未经授权的情况下，让自己或他人访问不是为他或她准备的数据，而且这些 数据被特别保护以防止未经授权的访问。 通过克服访问安全问题。 将被处以三年以下监禁或罚款。</li>
+<li>第1款意义上的数据仅指那些以电子、磁力或其他不可直接感知的方式存储或传输的数据</li>
+</ol>
+<a href="#-202b-abfangen-von-daten--拦截数据"><h5 id="-202b-abfangen-von-daten--拦截数据"><span class="hanchor" ariaLabel="Anchor"># </span>§ 202b: Abfangen von Daten  拦截数据</h5></a>
+<blockquote>
+<p>Wer unbefugt sich oder einem anderen unter Anwendung von technischen Mitteln nicht für ihn bestimmte Daten (§ 202a Abs. 2) aus einer nichtöffentlichen Datenübermittlung oder aus der elektromagnetischen Abstrahlung einer Datenverarbeitungsanlage verschafft, wird mit Freiheitsstrafe bis zu zwei Jahren oder mit Geldstrafe bestraft, wenn die Tat nicht in anderen Vorschriften mit schwererer Strafe bedroht ist.</p>
+</blockquote>
+<ul>
+<li>任何人，通过使用技术手段，未经授权地 (第202a条第2款)从非公开数据传输或从数据处理系统的电磁辐射中获得的信息， 应被处以不超过两年的监禁或罚款。</li>
+<li>如果根据其他规定，该罪行不应受到更严厉的惩罚.</li>
+</ul>
+<a href="#-202c-vorbereiten-des-ausspähens-und-abfangens-von-datenhackerparagraph"><h5 id="-202c-vorbereiten-des-ausspähens-und-abfangens-von-datenhackerparagraph"><span class="hanchor" ariaLabel="Anchor"># </span>§ 202c: Vorbereiten des Ausspähens und Abfangens von Daten(&ldquo;Hackerparagraph&rdquo;)</h5></a>
+<blockquote>
+<p>(1) Wer eine Straftat nach § 202a oder § 202b vorbereitet, indem er</p>
+<ol>
+<li>Passwörter oder sonstige Sicherungscodes, die den Zugang zu Daten (§ 202a Abs. 2) ermöglichen, oder</li>
+<li>Computerprogramme, deren Zweck die Begehung einer solchen Tat ist,<br>
+herstellt, sich oder einem anderen verschafft, verkauft, einem anderen überlässt, verbreitet oder sonst zugänglich macht, wird mit Freiheitsstrafe bis zu zwei Jahr oder mit Geldstrafe bestraft.</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>§ 149 Abs. 2 und 3 gilt entsprechend.<br>
+(Vorbereitung der Fälschung von Geld und Wertzeichen; längere Haftstrafen)<br>
+Offizialdelikt</p>
+</blockquote>
+<ol>
+<li>任何准备实施第202a条或第202b条规定的犯罪的人, 通过生产、为自己或他人获得、销售、给予他人、分发或以其他方式提供:
+<ol>
+<li>允许访问数据的密码或其他安全代码（第202a（2）条），或</li>
+<li>其目的是实施这种犯罪的计算机程序。
+应处以不超过两 年的监禁或罚款。</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>
+<p>§ 第149条第（2）和（3）款应比照适用</p>
+</li>
+<li>
+<p>官方罪行</p>
+</li>
+<li>
+<p>技术安全专家对此类工具的良性使用不在 202c 的范围内, 只有计算机犯罪的准备行为才会受到处罚</p>
+</li>
+</ul>
+<p><a href="#%e5%a6%82%e4%bd%95%e8%af%84%e4%bc%b0%e4%b8%80%e4%b8%aa%e9%bb%91%e5%ae%a2%e5%b7%a5%e5%85%b7%e6%98%af%e5%90%a6%e8%af%a5%e5%8f%97%e5%88%b0%e6%b3%95%e5%be%8b%e6%83%a9%e7%bd%9a" rel="noopener" class="internal-link" data-src=""></a></p>
+<a href="#-202d-datenhehlerei--数据盗窃"><h5 id="-202d-datenhehlerei--数据盗窃"><span class="hanchor" ariaLabel="Anchor"># </span>§ 202d: Datenhehlerei  数据盗窃</h5></a>
+<blockquote>
+<p>Wer Daten (§ 202a Absatz 2), die nicht allgemein zugänglich sind und die ein anderer durch eine rechtswidrige Tat erlangt hat, sich oder einem anderen verschafft, einem anderen überlässt, verbreitet oder sonst zugänglich macht, um sich oder einen Dritten zu bereichern oder einen anderen zu schädigen, wird mit Freiheitsstrafe bis zu drei Jahren oder mit Geldstrafe bestraft.</p>
+<p>Die Strafe darf nicht schwerer sein als die für die Vortat angedrohte Strafe.</p>
+<p>Absatz 1 gilt nicht für Handlungen, die ausschließlich der Erfüllung rechtmäßiger dienstlicher oder beruflicher Pflichten dienen.</p>
+</blockquote>
+<ul>
+<li>任何人如果获得一般人无法获得的数据(第202a(2)条)，并且是由另一个人通过非法行为获得的，或将其提供给另一个人，传播或以其他方式使其获得，以使自己或第三人致富 或伤害他人，应被判处不超过三年的监禁或罚款。</li>
+<li>惩罚不得超过对上游犯罪威胁的惩罚。</li>
+<li>第1款不应适用于仅为履行合法的官方或专业职责而实施的行为</li>
+</ul>
+<a href="#-205-strafantrag--刑事申诉"><h5 id="-205-strafantrag--刑事申诉"><span class="hanchor" ariaLabel="Anchor"># </span>§ 205: Strafantrag  刑事申诉</h5></a>
+<blockquote>
+<p>In den Fällen des § 201 Abs. 1 und 2 und der §§ 202, 203 und 204 wird die Tat nur auf Antrag verfolgt. Dies gilt auch in den Fällen der §§ 201a, 202a, 202b und 202d, es sei denn, dass die Strafverfolgungsbehörde wegen des besonderen öffentlichen Interesses an der Strafverfolgung ein Einschreiten von Amts wegen für geboten hält.</p>
+</blockquote>
+<ul>
+<li>在第201(1)和(2)条以及第202、203和204条的情况下，只有在申请的情况下才可以起诉该 罪行。这也应适用于第201a、202a、202b和202d条的情况，除非检察机关认为由于起诉的特殊公共利益而有必要依职权进行干预</li>
+<li>§ 该清单中缺少第202c条；即202c条是一种官方罪行 Offizialdelikt</li>
+<li>&ldquo;特殊公共利益 Besonderes öffentliches Interesse&quot;由检方 Staatsanwaltschaft 决定。</li>
+</ul>
+<a href="#案例-lilith-wittmann-和-cdu-connect-app"><h5 id="案例-lilith-wittmann-和-cdu-connect-app"><span class="hanchor" ariaLabel="Anchor"># </span>案例: Lilith Wittmann 和 CDU Connect App</h5></a>
+<ul>
+<li>所有帮助者的所有数据最终都在一个数据库中</li>
+<li>数据库可以通过GET调用的 &ldquo;补充 &ldquo;读出</li>
+<li>例如https://cdu.kampagnen</li>
+<li>dialog.de/api/campaigns/38?include=visits</li>
+<li>可以读出18500个活动帮助者和1350个支持者的数据</li>
+<li>负责任的披露（向当局和开发人员提供信息，有机会修复漏洞）。</li>
+<li>向基民盟总部电话报告</li>
+<li>几乎没有兴趣：&ldquo;不知道，写邮件吧&rdquo;</li>
+<li>向CERT Bund、BSI和国家数据保护专员报告该漏洞（11.05.21）</li>
+<li>12.05.21：应用程序被下线</li>
+<li>基社盟和奥地利人民党的应用程序有同样的漏洞（12.05.21）
+与联邦经理Stefan Hennewig的对话</li>
+<li>提供在安全部门为党工作的机会</li>
+<li>Wittmann拒绝，不想限制她的公民社会承诺</li>
+<li>Union Betriebs GmbH的律师向BKA投诉（04.06.21）</li>
+<li>BKA宣布自己没有责任，并建议根据《刑法》第202b条（截取数据）向LKA报告</li>
+<li>根据《刑法》第202a/b/c条报告（01. 07.21）</li>
+<li>3.8.21 警方与 &ldquo;被告 &ldquo;Wittmann联系</li>
+<li>150页调查文件</li>
+<li>10.08.21 CDU撤回投诉</li>
+<li>17.08.21 对发现更多漏洞但发表《全面披露》的人进一步投诉</li>
+<li>25.08.21 对Lilith Wittmann的诉讼被中止；部分原因。- 由于安全漏洞，没有必要克服访问保护&ndash;数据没有公布。</li>
+</ul>
+<a href="#-303a-datenveränderung--数据更改"><h5 id="-303a-datenveränderung--数据更改"><span class="hanchor" ariaLabel="Anchor"># </span>§ 303a: Datenveränderung  数据更改</h5></a>
+<blockquote>
+<p>(2) Wer rechtswidrig Daten (§ 202a Abs. 2)<br>
+(3) löscht, unterdrückt, unbrauchbar macht oder verändert,<br>
+wird mit Freiheitsstrafe bis zu zwei Jahren oder mit Geldstrafe bestraft.<br>
+(4) Der Versuch ist strafbar.<br>
+(5) Für die Vorbereitung einer Straftat nach Absatz 1 gilt §202c entsprechend.</p>
+</blockquote>
+<ol start="2">
+<li>非法收集数据的人（第202a条第2款）。</li>
+<li>删除、压制、使之无法使用或修改。 将被处以两年以下的监禁或罚款。</li>
+<li>这种企图是要受到惩罚的。</li>
+<li>以下内容适用于第1款所述犯罪的准备工作 相应地，§202c。</li>
+</ol>
+<a href="#-303b-computersabotage--破坏计算机的行为"><h5 id="-303b-computersabotage--破坏计算机的行为"><span class="hanchor" ariaLabel="Anchor"># </span>§ 303b: Computersabotage  破坏计算机的行为</h5></a>
+<blockquote>
+<p>(1) Wer eine Datenverarbeitung, die für einen anderen von wesentlicher Bedeutung ist, dadurch erheblich stört, dass er</p>
+<ol>
+<li>eine Tat nach § 303a Abs. 1 begeht,</li>
+<li>Daten (§ 202a Abs. 2) in der Absicht, einem anderen Nachteil zuzufügen, eingibt oder übermittelt oder</li>
+<li>eine Datenverarbeitungsanlage oder einen Datenträger zerstört, beschädigt,<br>
+unbrauchbar macht, beseitigt oder verändert, wird mit Freiheitsstrafe bis zu drei Jahren oder mit Geldstrafe bestraft.<br>
+(2) Handelt es sich um eine Datenverarbeitung, die für einen fremden Betrieb, ein fremdes Unternehmen oder eine Behörde von wesentlicher Bedeutung ist, ist die Strafe Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe</li>
+</ol>
+</blockquote>
+<ol>
+<li>任何通过以下方式严重干扰对他人具有重大意义的数据处理操作的人
+<ol>
+<li>犯了第303a（1）条规定的罪行。</li>
+<li>输入或传输数据（第202a(2)条），意图对他人造成不利，或</li>
+<li>毁坏、损害、使其无法使用、移除或改变数据处理系统或数据载体。 将被处以三年以下监禁或罚款。</li>
+</ol>
+</li>
+<li>如果数据处理对另一个公司、企业或当局具有至关重要的
+意义，则将被处以五年以下的监禁或罚款</li>
+</ol>
+<blockquote>
+<p>(1) Der Versuch ist strafbar.<br>
+(2) In besonders schweren Fällen des Absatzes 2 ist die Strafe Freiheitsstrafe von sechs Monaten bis zu zehn Jahren. Ein besonders schwerer Fall liegt in der Regel vor, wenn der Täter</p>
+<ol>
+<li>einen Vermögensverlust großen Ausmaßes herbeiführt,</li>
+<li>gewerbsmäßig oder als Mitglied einer Bande handelt, die sich zur fortgesetzten Begehung von Computersabotage verbunden hat,</li>
+<li>durch die Tat die Versorgung der Bevölkerung mit lebenswichtigen Gütern oder Dienstleistungen oder die Sicherheit der Bundesrepublik Deutschland beeinträchtigt.<br>
+(3) Für die Vorbereitung einer Straftat nach Absatz 1 gilt § 202c entsprechend</li>
+</ol>
+</blockquote>
+<ol>
+<li>这种企图是要受到惩罚的。</li>
+<li>在第2款规定的特别严重的情况下，将被处以6个月至10年的 监禁。通常情况下，如果犯罪人出现以下情况，则被视为存 在特别严重的情况
+<ol>
+<li>造成大规模的资产损失。</li>
+<li>商业行为或作为一个团伙的成员，联合起来持续进行计算机破坏。</li>
+<li>该行为损害了对民众的基本商品或服务的供应或德意志联邦共和国的安全。</li>
+</ol>
+</li>
+<li>以下内容适用于第1款所述犯罪的准备工作§ 202c条。</li>
+</ol>
+<a href="#-303c-strafantrag-刑事申诉"><h5 id="-303c-strafantrag-刑事申诉"><span class="hanchor" ariaLabel="Anchor"># </span>§ 303c: Strafantrag 刑事申诉</h5></a>
+<blockquote>
+<p>In den Fällen der §§ 303, 303a Abs. 1 und 2 sowie § 303b Abs. 1 bis 3 wird die Tat nur auf Antrag verfolgt, es sei denn, dass die Strafverfolgungsbehörde wegen des besonderen öffentlichen Interesses an der Strafverfolgung ein Einschreiten von Amts wegen für geboten hält.</p>
+</blockquote>
+<p>对于第303条、第303a(1)和(2)条以及第303b(1)至(3)条的情况，除非检察机关认为由于 起诉的特殊公共利益而有必要依职权进行干预，否则只能根据申请对犯罪进行起诉</p>
+<a href="#如何评估一个黑客工具是否该受到法律惩罚"><h5 id="如何评估一个黑客工具是否该受到法律惩罚"><span class="hanchor" ariaLabel="Anchor"># </span>如何评估一个黑客工具是否该受到法律惩罚</h5></a>
+<p>来自 BITKOM-Leitfaden, dreistufige Bewertungsschema
+3个阶段的评估计划</p>
+<ol>
+<li>评估软件的功能 功能适合于实施犯罪（关键） 功能不适合于实施犯罪（非关键
+<img src="/attachments/Pasted image 20230118225703.png" width="400" /></li>
+<li>确定软件的主要目的
+<img src="/attachments/Pasted image 20230118225731.png" width="400" /></li>
+<li>确定行为人的意图, whitelist:
+<ul>
+<li>Beauftragung durch den Angegriffenen (Pentest)</li>
+<li>Erfüllung Geschäftszweck / Arbeitsmittel (Sicherheitsberater)</li>
+<li>Aufdecken Sicherheitslücken (Responsible disclosure)</li>
+<li>Austausch der Ergebnisse unter Sicherheitsexpert:innen</li>
+</ul>
+</li>
+</ol>
+<a href="#datenschutzeu-dgsvo-baydsg"><h3 id="datenschutzeu-dgsvo-baydsg"><span class="hanchor" ariaLabel="Anchor"># </span>Datenschutz(EU-DGSVO, BayDSG)</h3></a>
+<a href="#信息自决权"><h5 id="信息自决权"><span class="hanchor" ariaLabel="Anchor"># </span>信息自决权</h5></a>
+<ul>
+<li>(隐含的）自行决定披露和使用个人数据的基本权利.</li>
+<li>如果有可能从数据中得出关于个人的结论，则存在个人可参考性。
+<ul>
+<li>姓名、入学编号、电子邮件地址、账户号码、&hellip;</li>
+<li>IP地址？</li>
+</ul>
+</li>
+<li>术语起源核心思想：那些不知道或无法影响收集到关于他们的什么信息以及如何处理这些信息的人 ，出于谨慎而调整自己的行为——个人的行动自由受到限制。</li>
+</ul>
+<a href="#数据保护立法"><h5 id="数据保护立法"><span class="hanchor" ariaLabel="Anchor"># </span>数据保护立法</h5></a>
+<ul>
+<li>Europäische Datenschutzgrundverordnung (EU-DSGV)</li>
+<li>Bundesdatenschutzgesetz (BDSG)</li>
+<li>Bayerisches Datenschutzgesetz (BayDSG)</li>
+<li>Regelungen auch in anderen Gesetzen, im Umfeld von IT-Diensten besonders relevant z.B.
+<ul>
+<li>Telekommunikationsgesetz (TKG)</li>
+<li>Telemediengesetz (TMG)</li>
+</ul>
+</li>
+</ul>
+<p>基本原则:</p>
+<ul>
+<li>Verbot mit Erlaubnisvorbehalt
+<ul>
+<li>法律允许适当的收集, 处理, 使用</li>
+<li>知情同意</li>
+</ul>
+</li>
+<li>数据规避和数据经济(必要性原则 Erfordernisprizip)</li>
+<li>目的导向</li>
+<li>数据透明(was, von wem, wozu, wie lange)</li>
+</ul>
+<a href="#个人数据如何在网上传播"><h5 id="个人数据如何在网上传播"><span class="hanchor" ariaLabel="Anchor"># </span>个人数据如何在网上传播?</h5></a>
+<ul>
+<li>有意识: 个人主页, 社交媒体..</li>
+<li>无意识: 服务个性化, 邮件发送到带有网络档案的分发列表</li>
+<li>周围的人/组织</li>
+</ul>
+<p><strong>潜在危险</strong></p>
+<ul>
+<li>将不同来源的数据连接起来</li>
+<li>画像剖析及其商业用途</li>
+<li>没有「被遗忘的权利」</li>
+</ul>
+<a href="#谁会拥有个人数据"><h5 id="谁会拥有个人数据"><span class="hanchor" ariaLabel="Anchor"># </span>谁会拥有个人数据</h5></a>
+<ul>
+<li>政府设施, 公共设施</li>
+<li>公司
+<ul>
+<li>保险, 银行</li>
+<li>电信公司</li>
+<li>交通公司</li>
+<li>零售页(会员卡)</li>
+<li>互联网服务提供者</li>
+</ul>
+</li>
+</ul>
+<a href="#it-sicherheitsgesetz"><h3 id="it-sicherheitsgesetz"><span class="hanchor" ariaLabel="Anchor"># </span>IT Sicherheitsgesetz</h3></a>
+<p>..</p>
+<a href="#kryptographie"><h2 id="kryptographie"><span class="hanchor" ariaLabel="Anchor"># </span>Kryptographie</h2></a>
+<a href="#术语"><h3 id="术语"><span class="hanchor" ariaLabel="Anchor"># </span>术语</h3></a>
+<a href="#cryptography"><h5 id="cryptography"><span class="hanchor" ariaLabel="Anchor"># </span>Cryptography</h5></a>
+<ul>
+<li>加密解密技术</li>
+</ul>
+<a href="#cryptoanalyse"><h5 id="cryptoanalyse"><span class="hanchor" ariaLabel="Anchor"># </span>Cryptoanalyse</h5></a>
+<ul>
+<li>没有密钥进行解密的技术</li>
+</ul>
+<a href="#cryptology"><h5 id="cryptology"><span class="hanchor" ariaLabel="Anchor"># </span>Cryptology</h5></a>
+<ul>
+<li>= Cryptography + Cryptoanalyse</li>
+</ul>
+<a href="#cryptography-protocol"><h5 id="cryptography-protocol"><span class="hanchor" ariaLabel="Anchor"># </span>Cryptography Protocol</h5></a>
+<ul>
+<li>加密解密使用的协议</li>
+</ul>
+<a href="#过程用语"><h5 id="过程用语"><span class="hanchor" ariaLabel="Anchor"># </span>过程用语</h5></a>
+<ul>
+<li>plaintext 明文 Klartext</li>
+<li>ciphertext 密文 Geheimtext</li>
+<li>encryption 加密 Verschlüsselung, Chiffrierung</li>
+<li>decryption 解密 Entschlüsselung, Dechiffrierung</li>
+<li>Cryptographic Algorithm/Cipher 密码算法 Chiffriersystem</li>
+</ul>
+<a href="#steganography"><h5 id="steganography"><span class="hanchor" ariaLabel="Anchor"># </span>Steganography</h5></a>
+<ul>
+<li>隐写术</li>
+</ul>
+<a href="#semagramme"><h5 id="semagramme"><span class="hanchor" ariaLabel="Anchor"># </span>Semagramme</h5></a>
+<ul>
+<li>linguistic steganography</li>
+<li>隐藏在文字作品或图像的细节中的信息</li>
+</ul>
+<a href="#maskingopen-code"><h5 id="maskingopen-code"><span class="hanchor" ariaLabel="Anchor"># </span>Masking(open code)</h5></a>
+<ul>
+<li>公开信息中的部分内容有事先商定的含义</li>
+<li>如日本天气预报中的「東の風、雨」(higashi no kaze, ame)重复两次意为「与美国的战争」</li>
+</ul>
+<a href="#jargon-millieu-code"><h5 id="jargon-millieu-code"><span class="hanchor" ariaLabel="Anchor"># </span>Jargon, Millieu-Code</h5></a>
+<ul>
+<li>行话, 黑话</li>
+<li>比如 &ldquo;Schnee&rdquo; 代表 &ldquo;Kokain&rdquo;</li>
+<li>用得多容易被识别, 同义替换会破坏原义</li>
+</ul>
+<a href="#confusion"><h5 id="confusion"><span class="hanchor" ariaLabel="Anchor"># </span>Confusion</h5></a>
+<ul>
+<li>1949 Shannon</li>
+<li>(好的密码算法)明文和密文之间的联系越少越好</li>
+</ul>
+<a href="#diffusion"><h5 id="diffusion"><span class="hanchor" ariaLabel="Anchor"># </span>Diffusion</h5></a>
+<ul>
+<li>1949 Shannon</li>
+<li>(好的密码算法) 明文的细微差别 应该导致 较大的密文差别</li>
+</ul>
+<a href="#differential-analyse"><h5 id="differential-analyse"><span class="hanchor" ariaLabel="Anchor"># </span>Differential Analyse</h5></a>
+<ul>
+<li>差分密码分析</li>
+</ul>
+<a href="#课程-notation"><h5 id="课程-notation"><span class="hanchor" ariaLabel="Anchor"># </span>课程 notation</h5></a>
+<p><img src="/attachments/Pasted image 20230221175833.png" width="L" /></p>
+<a href="#工具"><h3 id="工具"><span class="hanchor" ariaLabel="Anchor"># </span>工具</h3></a>
+<p><a href="/permanent/%E5%AF%86%E7%A0%81%E5%AD%A6#%e5%b7%a5%e5%85%b7%e7%ab%99" rel="noopener" class="internal-link" data-src="/permanent/%E5%AF%86%E7%A0%81%E5%AD%A6">密码学</a></p>
+<a href="#misc"><h3 id="misc"><span class="hanchor" ariaLabel="Anchor"># </span>MISC</h3></a>
+<a href="#图片隐写"><h4 id="图片隐写"><span class="hanchor" ariaLabel="Anchor"># </span>图片隐写</h4></a>
+<ul>
+<li>把信息写入色彩通道里最不明显的末位
+<img src="/attachments/Pasted image 20230220110026.png" width="L" /></li>
+</ul>
+<p>识别:</p>
+<ul>
+<li>放大后+对比度增加</li>
+<li><img src="/attachments/Pasted image 20230220110255.png" width="L" /></li>
+</ul>
+<a href="#plausible-deniability"><h4 id="plausible-deniability"><span class="hanchor" ariaLabel="Anchor"># </span>Plausible Deniability</h4></a>
+<ul>
+<li>可推诿性?</li>
+<li>如果你有一样加密的东西(被发现了), 有时候可能会被强制要求交出密码</li>
+<li>解决办法是, 第一层加密下隐藏第二层加密, 并让这个第二层加密不被发现</li>
+<li>用 TrueCrypt/VeraCrypt</li>
+<li>避免对第二层加密的引用(win:最近使用过的文件)</li>
+</ul>
+<a href="#隐蔽的渠道"><h4 id="隐蔽的渠道"><span class="hanchor" ariaLabel="Anchor"># </span>隐蔽的渠道</h4></a>
+<ul>
+<li>通过不可察觉的渠道/媒介进行信息传输</li>
+<li>e.g.
+<ul>
+<li>数据在数据包头而不是在TCP有效载荷中（如TCP SeqNr.)</li>
+<li>人为延迟传输数据包</li>
+<li>不是内容，但文件的名称和大小是相关的</li>
+<li>大海捞针: 大量无效信息, 只有指定部分是有效的</li>
+</ul>
+</li>
+<li>特征
+<ul>
+<li>可检测性: 只有指定接受者能识别</li>
+<li>不可辨别性: 监控/审查员应该不能识别出当前是否正在传输隐藏数据</li>
+<li>带宽：每单位时间内可隐蔽传输的数据长度</li>
+</ul>
+</li>
+</ul>
+<a href="#skytale栅栏密码"><h4 id="skytale栅栏密码"><span class="hanchor" ariaLabel="Anchor"># </span>Skytale/栅栏密码</h4></a>
+<a href="#excel-解锁宏"><h4 id="excel-解锁宏"><span class="hanchor" ariaLabel="Anchor"># </span>Excel 解锁宏</h4></a>
+<ul>
+<li>新的MS Office文件格式基本上是基于开放的OpenXML，它基于XML并使用zip压缩。 因此，人们可以简单地用包装程序解开文件（或者用Windows中集成的zip程序将文件扩展名改为.zip）。 这样就得到了一个目录树，其中只有/xl/vbaProject.bin（宏）和/xl/worksheets/sheetXXX.xml（单个电子表格）是感兴趣的。 在二进制文件中可以找到代码部分 \verb|CMG=|, \verb|DPB=| 和 \verb|GC=|。如果你把 \verb|DPB=| 改为 \verb|DPx=| ，你在下次启动时就会得到一个错误信息，但再次保存就会杀死密码。</li>
+<li>XML片段<code>&lt;c r=&quot;A1&quot; s=&quot;3&quot;&gt;&lt;f&gt;SUM(C1:C6)/20&lt;/f&gt;&lt;v&gt;2.25&lt;/v&gt;&lt;/c&gt;</code>直接给出公式（未加密）。如果你想完全删除密码保护，只需删除&lt;sheetProtection &hellip;/&gt;。</li>
+</ul>
+<a href="#cryptographical-system"><h3 id="cryptographical-system"><span class="hanchor" ariaLabel="Anchor"># </span>Cryptographical System</h3></a>
+<a href="#cryptosystem"><h4 id="cryptosystem"><span class="hanchor" ariaLabel="Anchor"># </span>Cryptosystem</h4></a>
+<p><a class="internal-link broken">Cryptography</a></p>
+<a href="#区块密码与流密码"><h4 id="区块密码与流密码"><span class="hanchor" ariaLabel="Anchor"># </span>区块密码与流密码</h4></a>
+<ul>
+<li>Blockchiffren
+<ul>
+<li>将长度为 m 的密码分成 长度为 n 的 r 个块</li>
+<li>最后一块可能后 padding</li>
+</ul>
+</li>
+<li>Stromchiffren
+<ul>
+<li>通信双方使用同一种子初始化的伪随机数生成器</li>
+</ul>
+</li>
+</ul>
+<a href="#对称密码"><h3 id="对称密码"><span class="hanchor" ariaLabel="Anchor"># </span>对称密码</h3></a>
+<a href="#对称密码算法"><h4 id="对称密码算法"><span class="hanchor" ariaLabel="Anchor"># </span>对称密码算法</h4></a>
+<p><a class="internal-link broken">对称密码</a></p>
+<a href="#permutation"><h4 id="permutation"><span class="hanchor" ariaLabel="Anchor"># </span>Permutation</h4></a>
+<ul>
+<li>位移, 如恺撒密码
+<img src="/attachments/Pasted image 20230220114608.png" width="auto" /></li>
+</ul>
+<a href="#substitution"><h4 id="substitution"><span class="hanchor" ariaLabel="Anchor"># </span>Substitution</h4></a>
+<ul>
+<li>类似坐标的密码, 可以在维度上变化,
+<img src="/attachments/Pasted image 20230220114547.png" width="L" /></li>
+</ul>
+<a href="#one-time-pad"><h4 id="one-time-pad"><span class="hanchor" ariaLabel="Anchor"># </span>One-Time-Pad</h4></a>
+<ul>
+<li>一次性密码本</li>
+<li>加密: c = XOR(m, k)</li>
+<li>解密: m = XOR(c, k)</li>
+<li>只要密钥不泄漏, 就是牢不可破的</li>
+</ul>
+<a href="#des"><h4 id="des"><span class="hanchor" ariaLabel="Anchor"># </span>DES</h4></a>
+<p><a href="/permanent/DES" rel="noopener" class="internal-link" data-src="/permanent/DES">DES</a></p>
+<a href="#aes"><h4 id="aes"><span class="hanchor" ariaLabel="Anchor"># </span>AES</h4></a>
+<p><a href="/permanent/AES" rel="noopener" class="internal-link" data-src="/permanent/AES">AES</a></p>
+<a href="#分组方式"><h3 id="分组方式"><span class="hanchor" ariaLabel="Anchor"># </span>分组方式</h3></a>
+<a href="#ecb"><h5 id="ecb"><span class="hanchor" ariaLabel="Anchor"># </span>ECB</h5></a>
+<p><a class="internal-link broken">Cryptography</a></p>
+<a href="#cbc"><h5 id="cbc"><span class="hanchor" ariaLabel="Anchor"># </span>CBC</h5></a>
+<p><a class="internal-link broken">Cryptography</a></p>
+<a href="#非对称密码"><h3 id="非对称密码"><span class="hanchor" ariaLabel="Anchor"># </span>非对称密码</h3></a>
+<a href="#非对称密码算法"><h4 id="非对称密码算法"><span class="hanchor" ariaLabel="Anchor"># </span>非对称密码算法</h4></a>
+<p><a class="internal-link broken">非对称密码</a></p>
+<a href="#rsa"><h4 id="rsa"><span class="hanchor" ariaLabel="Anchor"># </span>RSA</h4></a>
+<p><a href="/permanent/RSA" rel="noopener" class="internal-link" data-src="/permanent/RSA">RSA</a></p>
+<a href="#hybrid"><h3 id="hybrid"><span class="hanchor" ariaLabel="Anchor"># </span>Hybrid</h3></a>
+<ul>
+<li>SSL/TLS, PGP, SSH 等实际上是使用 hybrid 方法来加密的</li>
+<li>非对称方法交换对称方法的密钥</li>
+<li>对称方法加密内容</li>
+</ul>
+<a href="#密码分析密码破解"><h3 id="密码分析密码破解"><span class="hanchor" ariaLabel="Anchor"># </span>密码分析/密码破解</h3></a>
+<a href="#bruteforce"><h4 id="bruteforce"><span class="hanchor" ariaLabel="Anchor"># </span>Bruteforce</h4></a>
+<ul>
+<li>128 bit -&gt; 3.4e+38 种密码可能(如果计算机每秒尝试30亿次, 1000台电脑最多需要尝试3.6e+18年)</li>
+<li>256 bit -&gt; 配置同上, 1.2e+57年</li>
+</ul>
+<a href="#撞库"><h4 id="撞库"><span class="hanchor" ariaLabel="Anchor"># </span>撞库</h4></a>
+<ul>
+<li>所以要<a href="/permanent/%E5%8A%A0%E7%9B%90" rel="noopener" class="internal-link" data-src="/permanent/%E5%8A%A0%E7%9B%90">加盐</a>啊喂</li>
+</ul>
+<a href="#密钥安全性破解难度"><h3 id="密钥安全性破解难度"><span class="hanchor" ariaLabel="Anchor"># </span>密钥安全性/破解难度</h3></a>
+<a href="#密钥长度"><h4 id="密钥长度"><span class="hanchor" ariaLabel="Anchor"># </span>密钥长度</h4></a>
+<p><img src="/attachments/Pasted image 20230221180935.png" width="auto" /></p>
+<p><img src="/attachments/Pasted image 20230221181022.png" width="L" /></p>
+<p>symmetric vs. asymmetric 同等安全性需要的 bits
+<img src="/attachments/Pasted image 20230221181936.png" width="L" /></p>
+<a href="#电子签名"><h3 id="电子签名"><span class="hanchor" ariaLabel="Anchor"># </span>电子签名</h3></a>
+<p><a class="internal-link broken">电子签名</a></p>
+<a href="#quantensichere-kryptographie"><h3 id="quantensichere-kryptographie"><span class="hanchor" ariaLabel="Anchor"># </span>quantensichere Kryptographie</h3></a>
+<a href="#quantencomputing"><h4 id="quantencomputing"><span class="hanchor" ariaLabel="Anchor"># </span>Quantencomputing</h4></a>
+<p><a class="internal-link broken">量子计算</a></p>
+<a href="#moscas-inequality"><h4 id="moscas-inequality"><span class="hanchor" ariaLabel="Anchor"># </span>Mosca&rsquo;s inequality</h4></a>
+<p><img src="/attachments/Pasted image 20230222165355.png" width="L" /></p>
+<a href="#post-quanten-security"><h4 id="post-quanten-security"><span class="hanchor" ariaLabel="Anchor"># </span>Post Quanten Security</h4></a>
+<p><img src="/attachments/Pasted image 20230222165806.png" width="L" /></p>
+<a href="#量子计算带来的密码威胁"><h4 id="量子计算带来的密码威胁"><span class="hanchor" ariaLabel="Anchor"># </span>量子计算带来的密码威胁</h4></a>
+<ul>
+<li>枚举的时间直接取 sqrt()
+<ul>
+<li>AES-256: safe</li>
+<li>Tripple-DES: unsafe</li>
+</ul>
+</li>
+<li>寻找 n 的因数: 𝑂($(\log 𝑛)^3$)
+<ul>
+<li>大部分 非对称算法(RSA, ECDSA, EdDSA) 在量子比特数量到一定程度后不再安全</li>
+</ul>
+</li>
+<li>大多数
+<ul>
+<li>加密哈希函数（如SHA2，SHA3，BLAKE2），</li>
+<li>MAC算法（如HMAC和CMAK）和</li>
+<li>密钥衍生函数（bcrypt，Scrypt，Argon2）
+是（基本上）量子安全的。-&gt; 只受到轻微影响。256bits的还能保留128bits程度的安全性</li>
+</ul>
+</li>
+</ul>
+<a href="#crypto-hash-function"><h2 id="crypto-hash-function"><span class="hanchor" ariaLabel="Anchor"># </span>(crypto) HASH Function</h2></a>
+<a href="#哈希函数散列函数"><h3 id="哈希函数散列函数"><span class="hanchor" ariaLabel="Anchor"># </span>哈希函数/散列函数</h3></a>
+<a href="#哈希函数的特点"><h4 id="哈希函数的特点"><span class="hanchor" ariaLabel="Anchor"># </span>哈希函数的特点</h4></a>
+<ul>
+<li>任意长的输入, 计算都得到固长的 散列值</li>
+<li>单向函数, 非单射(x 能确定 y, 反过来不能) =&gt; 可能存在 collision</li>
+<li>compression function G, 密文分组+padding, IV
+<ul>
+<li><img src="/attachments/Pasted image 20230222140636.png" width="L" /></li>
+</ul>
+</li>
+</ul>
+<p>G 可以用比如 DES, 这样散列值就是 64bit (和 DES密钥长度一样)</p>
+<ul>
+<li><img src="/attachments/Pasted image 20230222140902.png" width="L" /></li>
+</ul>
+<a href="#抗碰撞性"><h4 id="抗碰撞性"><span class="hanchor" ariaLabel="Anchor"># </span>抗碰撞性</h4></a>
+<p>Eine (Einweg-)Funktion wird als kollisionsresistent bezeichnet, wenn es „schwer“ ist, verschiedene Eingaben zu finden, die auf denselben Wert abgebildet werden</p>
+<a href="#强哈希函数弱哈希函数"><h4 id="强哈希函数弱哈希函数"><span class="hanchor" ariaLabel="Anchor"># </span>强哈希函数/弱哈希函数</h4></a>
+<ul>
+<li>弱: 给定一个 m, 基本上不可能找的一个(有意义的) m&rsquo; 和它散列值相同
+<ul>
+<li>为什么说有意义呢, 因为 md5 构造碰撞是做得到的, 只不过是一堆乱码</li>
+</ul>
+</li>
+<li>强: 基本上不可能找到一对 m 和 m&rsquo;, 散列值相同</li>
+</ul>
+<p>帮助理解:</p>
+<ul>
+<li>找 253 个人, 才有 50%+ 概率有人和你同生日</li>
+<li>找 23 个人, 就能有 50%+ 概率有两个人同生日</li>
+<li>对于长度为 k bits 的信息 m, $2^{k/2}$ 个信息里可能有撞哈希的</li>
+</ul>
+<a href="#密码学中哈希函数的应用"><h4 id="密码学中哈希函数的应用"><span class="hanchor" ariaLabel="Anchor"># </span>密码学中哈希函数的应用</h4></a>
+<ul>
+<li>文件或信息的完整性检查</li>
+<li>密码文件中密码的混淆</li>
+<li>作为数字签名的数据基础</li>
+<li>作为伪随机数生成器</li>
+</ul>
+<a href="#md5"><h3 id="md5"><span class="hanchor" ariaLabel="Anchor"># </span>MD5</h3></a>
+<a href="#md5-算法"><h4 id="md5-算法"><span class="hanchor" ariaLabel="Anchor"># </span>MD5 算法</h4></a>
+<ul>
+<li>src: 
+<a href="https://www.bilibili.com/video/BV1u44y1z7t1/?spm_id_from=333.337.search-card.all.click&amp;vd_source=92451653bea4ed324c9bfc0287256aa5" rel="noopener">掌芝士 md5</a></li>
+<li>128 bit 散列值, 512 bits 块</li>
+<li>补位: 512*n + 448
+<ul>
+<li>如果源文件刚好满足, 也要补512</li>
+<li>448 = 512 - 64, 64 用来记录原始数据长度</li>
+</ul>
+</li>
+<li>每次处理 512 bits 中的 32 bits</li>
+<li>IV: 4*4字节(称为ABCD), 也就是一共 128 bit
+<ul>
+<li>对每一个 32 bits, 要经过4轮函数</li>
+<li><img src="/attachments/Pasted image 20230222155453.png" width="auto" /></li>
+</ul>
+</li>
+<li>四个函数, 通过位移, 异或改变 A 的值
+<ul>
+<li>s, ac 是固定值, x 是当前处理的 32 bit</li>
+<li><img src="/attachments/Pasted image 20230222154835.png" width="L" /></li>
+<li><img src="/attachments/Pasted image 20230222155302.png" width="L" /></li>
+</ul>
+</li>
+<li>Merkle-Damgard 结构</li>
+</ul>
+<a href="#md5-的安全性"><h4 id="md5-的安全性"><span class="hanchor" ariaLabel="Anchor"># </span>MD5 的安全性</h4></a>
+<ul>
+<li>对4轮函数的一轮可以做到差分密码分析</li>
+<li>1993伪撞库: 可以找到散列值相同但没有意义的序列</li>
+<li>2004撞库: 一个多小时可以找到同散列值</li>
+</ul>
+<p>=&gt; MD5 不再安全(SHA-1也不安全)</p>
+<ul>
+<li>用这些替代: SHA-256, Whirlpool, SHA-3</li>
+<li>仅在同时使用多种散列算法时有意义</li>
+</ul>
+<a href="#sha-3"><h3 id="sha-3"><span class="hanchor" ariaLabel="Anchor"># </span>SHA-3</h3></a>
+<ul>
+<li>
+<p>又是 NIST, 这次他们来找 SHA-2 的升级, Keccak 赢了</p>
+</li>
+<li>
+<p>SHA3-256: r=1152, c=448, Ausgabe abgeschnitten nach 256 Bits</p>
+</li>
+<li>
+<p>SHA3-512: r=576, c=1024, Ausgabe abgeschnitten nach 512 Bits</p>
+</li>
+<li>
+<p>r 关系到速度, c 关系到安全性</p>
+</li>
+<li>
+<p>collision-resistent</p>
+</li>
+</ul>
+<p><img src="/attachments/Pasted image 20230222162046.png" width="L" /></p>
+<a href="#keccak-f"><h4 id="keccak-f"><span class="hanchor" ariaLabel="Anchor"># </span>Keccak-f</h4></a>
+<p>固定常数</p>
+<ul>
+<li>Breite b = r + c = 25 * 2$^l$, w = 2$^l$</li>
+<li>nr = 12 + 2$^l$</li>
+</ul>
+<p>变换</p>
+<ul>
+<li><img src="/attachments/Pasted image 20230222162430.png" width="L" /></li>
+<li><img src="/attachments/Pasted image 20230222162451.png" width="L" /></li>
+</ul>
+<a href="#评价"><h4 id="评价"><span class="hanchor" ariaLabel="Anchor"># </span>评价</h4></a>
+<ul>
+<li>可变的长度, 适合做流密码</li>
+</ul>
+<a href="#安全技术"><h2 id="安全技术"><span class="hanchor" ariaLabel="Anchor"># </span>安全技术</h2></a>
+<a href="#对-c-i-的保护"><h3 id="对-c-i-的保护"><span class="hanchor" ariaLabel="Anchor"># </span>对 C, I 的保护</h3></a>
+<ul>
+<li>Confidentiality: 加密 Verschlüsselung</li>
+<li>Integrity: hash, (如果有) sequence nr</li>
+</ul>
+<a href="#authentisierung"><h3 id="authentisierung"><span class="hanchor" ariaLabel="Anchor"># </span>Authentisierung</h3></a>
+<a href="#authentisierung-认证了什么"><h4 id="authentisierung-认证了什么"><span class="hanchor" ariaLabel="Anchor"># </span>Authentisierung 认证了什么</h4></a>
+<ul>
+<li>数据来源的认证</li>
+<li>用户认证</li>
+<li>通过实体认证: 单方/多方(如实体token+密码)</li>
+</ul>
+<a href="#authentisierung-以什么认证"><h4 id="authentisierung-以什么认证"><span class="hanchor" ariaLabel="Anchor"># </span>Authentisierung 以什么认证</h4></a>
+<ul>
+<li>Wissen
+<ul>
+<li>pw, PIN, &hellip;</li>
+</ul>
+</li>
+<li>Besitz
+<ul>
+<li>smartcard, token, token-App</li>
+</ul>
+</li>
+<li>Eigenschaft
+<ul>
+<li>Biometrie
+<ul>
+<li>fingerabdruck</li>
+<li>iris</li>
+<li>Stimmerkennung</li>
+<li>Gesichtserkennung</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#一次性密码"><h3 id="一次性密码"><span class="hanchor" ariaLabel="Anchor"># </span>一次性密码</h3></a>
+<a href="#skey"><h4 id="skey"><span class="hanchor" ariaLabel="Anchor"># </span>S/Key</h4></a>
+<p><img src="/attachments/Pasted image 20230223164617.png" width="L" /></p>
+<p><img src="/attachments/Pasted image 20230223164653.png" width="L" /></p>
+<ul>
+<li>好的 hash 能提供保护, 否则容易遭到中间人攻击</li>
+<li>会遭到重放攻击</li>
+<li>被 OTP 取代</li>
+</ul>
+<a href="#otpone-time-password-system"><h4 id="otpone-time-password-system"><span class="hanchor" ariaLabel="Anchor"># </span>OTP(One Time Password system)</h4></a>
+<ul>
+<li>RFC 2289, S/Key 的继承者</li>
+<li>避免重放攻击: 每个登录者必须要自己的 OTP</li>
+<li>支持不同的 hash 函数, MD4, MD5, SHA&hellip;</li>
+<li>推荐使用 <a href="#ipsec" rel="noopener" class="internal-link" data-src=""></a></li>
+</ul>
+<a href="#skey-和-otp-的攻击"><h4 id="skey-和-otp-的攻击"><span class="hanchor" ariaLabel="Anchor"># </span>S/Key 和 OTP 的攻击</h4></a>
+<ul>
+<li>所有内容纯文本传输</li>
+<li>攻击者冒充认证服务器/中间人攻击是可能的</li>
+<li>所以建议用 IPSec 对服务器进行验证</li>
+</ul>
+<a href="#totp"><h4 id="totp"><span class="hanchor" ariaLabel="Anchor"># </span>TOTP</h4></a>
+<ul>
+<li>time-based OTP</li>
+<li>RFC 6238</li>
+<li>HOTP(基于 HMAC 的 OTP[RFC 4226]) 的进一步发展
+<ul>
+<li>HOTP(K,C) = HMAC-SHA1(K,C), key K, counter C</li>
+</ul>
+</li>
+<li>TOTP(K) = HOTP(K, C$_T$)
+<ul>
+<li>$C_T = \lfloor \frac{T - T_0}{T_X} \rfloor$</li>
+<li>$T_0$ unix 时间 in sec, 默认 0</li>
+<li>$T$ 现在的时间, 即 1970.1.1 以来的秒数</li>
+</ul>
+</li>
+</ul>
+<a href="#smartcard"><h3 id="smartcard"><span class="hanchor" ariaLabel="Anchor"># </span>Smartcard</h3></a>
+<ul>
+<li>属于通过实体认证
+<img src="/attachments/Pasted image 20230223172300.png" width="L" /></li>
+</ul>
+<a href="#分类"><h4 id="分类"><span class="hanchor" ariaLabel="Anchor"># </span>分类</h4></a>
+<ul>
+<li>Speicherkarten</li>
+<li>Prozessor-Karten</li>
+<li>Kontaktlose Karten</li>
+</ul>
+<a href="#secureid-token"><h4 id="secureid-token"><span class="hanchor" ariaLabel="Anchor"># </span>SecureID token</h4></a>
+<ul>
+<li>每分钟产生一个新号码，只能由中央认证服务器预测</li>
+<li>这个6到8位数的号码必须与用户密码一起输入（双因素认证）</li>
+<li>通常是基于时间的随机数</li>
+</ul>
+<p><img src="/attachments/Pasted image 20230223173025.png" width="L" /></p>
+<a href="#biometry"><h3 id="biometry"><span class="hanchor" ariaLabel="Anchor"># </span>Biometry</h3></a>
+<ul>
+<li>fingerabdruck</li>
+<li>iris</li>
+<li>Stimmerkennung</li>
+<li>Gesichtserkennung</li>
+</ul>
+<a href="#生成认证-大致流程"><h4 id="生成认证-大致流程"><span class="hanchor" ariaLabel="Anchor"># </span>生成/认证 大致流程</h4></a>
+<p><img src="/attachments/Pasted image 20230223173139.png" width="L" /></p>
+<a href="#指纹"><h4 id="指纹"><span class="hanchor" ariaLabel="Anchor"># </span>指纹</h4></a>
+<a href="#取指纹算法"><h5 id="取指纹算法"><span class="hanchor" ariaLabel="Anchor"># </span>取指纹算法</h5></a>
+<ul>
+<li>定位</li>
+<li>纹路方向 ridge</li>
+<li>提取出微小的特征
+<img src="/attachments/Pasted image 20230223173709.png" width="L" /></li>
+</ul>
+<a href="#对指纹认证的攻击"><h5 id="对指纹认证的攻击"><span class="hanchor" ariaLabel="Anchor"># </span>对指纹认证的攻击</h5></a>
+<ul>
+<li>Lichtreflexion 比如用玻璃反光之前的指纹痕迹</li>
+<li>比如指纹模具</li>
+<li>大多数传感器80%符合就能过</li>
+</ul>
+<a href="#指纹扫描"><h5 id="指纹扫描"><span class="hanchor" ariaLabel="Anchor"># </span>指纹扫描</h5></a>
+<ul>
+<li>Puls</li>
+<li>Tiefenmuster</li>
+<li>Wärmebild</li>
+<li>&hellip;</li>
+</ul>
+<a href="#datensprung"><h3 id="datensprung"><span class="hanchor" ariaLabel="Anchor"># </span>Datensprung</h3></a>
+<ul>
+<li>对数据来源的认证</li>
+</ul>
+<a href="#认证数据来源的几种方式"><h4 id="认证数据来源的几种方式"><span class="hanchor" ariaLabel="Anchor"># </span>认证数据来源的几种方式</h4></a>
+<ul>
+<li>加密信息(即知道密钥可解)</li>
+<li><a href="/permanent/%E7%94%B5%E5%AD%90%E7%AD%BE%E5%90%8D" rel="noopener" class="internal-link" data-src="/permanent/%E7%94%B5%E5%AD%90%E7%AD%BE%E5%90%8D">Digital Signature</a></li>
+<li>Message Authentication Code(MAC) = hash func + 共同密钥</li>
+<li>Hashed MAC</li>
+<li>以上方案的组合</li>
+</ul>
+<a href="#可能的问题"><h4 id="可能的问题"><span class="hanchor" ariaLabel="Anchor"># </span>可能的问题</h4></a>
+<ul>
+<li>sym 加密的消息传递
+<ul>
+<li>否认</li>
+</ul>
+</li>
+<li>asym 加密的消息传递
+<ul>
+<li>否认</li>
+<li>数据源未认证</li>
+</ul>
+</li>
+<li>数字签名
+<ul>
+<li>接收方无法认证</li>
+<li>无法加密</li>
+</ul>
+</li>
+<li>非对称加密 + 数字签名
+<ul>
+<li><img src="/attachments/Pasted image 20230223182526.png" width="L" /></li>
+<li>上述问题都解决了, 但不能确认 I (上面那些也不能)</li>
+</ul>
+</li>
+<li>还有各种各样加 hash 的, 还是有问题</li>
+</ul>
+<a href="#mac-hmac"><h4 id="mac-hmac"><span class="hanchor" ariaLabel="Anchor"># </span>MAC, HMAC</h4></a>
+<ul>
+<li>(Hashed) Message Authentication Code</li>
+</ul>
+<a href="#message-authentication-code"><h5 id="message-authentication-code"><span class="hanchor" ariaLabel="Anchor"># </span>Message Authentication Code</h5></a>
+<ul>
+<li>用于对消息 M 的加密</li>
+<li>MAC(M) = A(K, M)
+<ul>
+<li>A 特定算法</li>
+<li>K 密钥</li>
+</ul>
+</li>
+<li>e.g.
+<ul>
+<li><img src="/attachments/Pasted image 20230224112639.png" width="L" /></li>
+</ul>
+</li>
+<li>Brute Force 攻击 是有可能的</li>
+<li>如果使用 Merkle-Damgard 结构的 hash 函数, 则 Length Extension Attack 是有可能的</li>
+</ul>
+<a href="#hashed-mac"><h5 id="hashed-mac"><span class="hanchor" ariaLabel="Anchor"># </span>hashed MAC</h5></a>
+<ul>
+<li>MAC, der nicht symm. Verschlüsselung, sondern kryptographische Hash- Funktion zur Kompression verwendet 使用 hash func 代替 sym. 加密</li>
+<li>$HMAC(m) = H\left[(K^+ \oplus opad) || H[(K^+ \oplus ipad)||m]\right]$
+<ul>
+<li>$S_i$ := $K^+ \oplus ipad$ , $S_o$ = $K^+ \oplus opad$</li>
+<li>b = $S_i$ 的长度</li>
+<li>$K^+$ := 长度为 b 的密钥 k</li>
+</ul>
+</li>
+</ul>
+<a href="#needham-schroeder"><h4 id="needham-schroeder"><span class="hanchor" ariaLabel="Anchor"># </span>Needham-Schroeder</h4></a>
+<ul>
+<li>1979, 引入 Trusted Third Party(TTP)</li>
+<li>不能防御重放攻击(=&gt; Kerberos)</li>
+<li>第三方 Trent 与每个通信伙伴共享密钥</li>
+<li>$E_A$ 指 Alice 与 Trent 的对称密钥
+<img src="/attachments/Pasted image 20230224115447.png" width="auto" /></li>
+</ul>
+<a href="#kerberos"><h4 id="kerberos"><span class="hanchor" ariaLabel="Anchor"># </span>Kerberos</h4></a>
+<p><a href="/permanent/Kerberos" rel="noopener" class="internal-link" data-src="/permanent/Kerberos">Kerberos</a></p>
+<a href="#autorisierung-und-zugriffkontrolle"><h3 id="autorisierung-und-zugriffkontrolle"><span class="hanchor" ariaLabel="Anchor"># </span>Autorisierung und Zugriffkontrolle</h3></a>
+<ul>
+<li>Autorisierung: 权限的分配/指定</li>
+<li>Zugriffskontrolle: 这些权限的执行</li>
+</ul>
+<a href="#分类-1"><h4 id="分类-1"><span class="hanchor" ariaLabel="Anchor"># </span>分类</h4></a>
+<a href="#dac-discretionary-access-control"><h5 id="dac-discretionary-access-control"><span class="hanchor" ariaLabel="Anchor"># </span>DAC (Discretionary Access Control)</h5></a>
+<ul>
+<li>基于所有者原则</li>
+<li>所有者指定其对象的权限</li>
+<li>根据对象分配访问权限</li>
+</ul>
+<a href="#mac-mandatory-access-control"><h5 id="mac-mandatory-access-control"><span class="hanchor" ariaLabel="Anchor"># </span>MAC (Mandatory Access Control)</h5></a>
+<ul>
+<li>基于规则的权利说明</li>
+<li>系统全局</li>
+<li>例如Bell-LaPadula；规则通过安全等级(非机密、机密、秘密、最高机密)指定</li>
+</ul>
+<a href="#rbacrole-based-access-control"><h5 id="rbacrole-based-access-control"><span class="hanchor" ariaLabel="Anchor"># </span>RBAC（Role-Based Access Control）</h5></a>
+<ul>
+<li>主体和任务的分离</li>
+<li>授权不再与主体相关，而是与特定的任务相关</li>
+<li>主体通过角色成员资格获得授权
+<img src="/attachments/Pasted image 20230224154751.png" width="L" /></li>
+</ul>
+<a href="#referenzmonitor"><h4 id="referenzmonitor"><span class="hanchor" ariaLabel="Anchor"># </span>Referenzmonitor</h4></a>
+<ul>
+<li>用于访问控制的系统, 也称为 Access Control Monitor</li>
+<li>需要做到:
+<ul>
+<li>必须通过 Referenzmonitor 访问对象</li>
+<li>Referenzmonitor 必须能够识别访问主体</li>
+<li>Referenzmonitor 可以随时中断访问</li>
+</ul>
+</li>
+</ul>
+<a href="#identification"><h3 id="identification"><span class="hanchor" ariaLabel="Anchor"># </span>Identification</h3></a>
+<ul>
+<li>现实世界的实体和数字ID的联系</li>
+<li>两个步骤
+<ol>
+<li>Personalisation: 确认现实中的身份, 并给实体分配 ID</li>
+<li>Identification: 识别, 将数字ID与只有该实体知道的信息(如密码)连接</li>
+</ol>
+</li>
+<li>问题: 伪装攻击</li>
+</ul>
+<a href="#certification-authority"><h4 id="certification-authority"><span class="hanchor" ariaLabel="Anchor"># </span>Certification Authority</h4></a>
+<ul>
+<li>是一个受信任的第三方 TTP</li>
+<li>颁发数字签名(Digital Signature), 效果类似于公证(Notar)</li>
+<li>CA的用户组:
+<ul>
+<li>一个领域中的所有用户都 &ldquo;信任 &ldquo;该 CA，即CA的 &ldquo;声明 &ldquo;被所有用户接受为有效、正确和真实</li>
+</ul>
+</li>
+</ul>
+<a href="#aufgabenspektrum-einer-ca"><h5 id="aufgabenspektrum-einer-ca"><span class="hanchor" ariaLabel="Anchor"># </span>Aufgabenspektrum einer CA</h5></a>
+<ul>
+<li>Certificate Issuance</li>
+<li>Certificate Update</li>
+<li>Certificate Revocation</li>
+<li>Certificate Repository</li>
+<li>Key Generation</li>
+<li>Notarization</li>
+<li>Certificate History</li>
+<li>Cross-Certificate</li>
+<li>Attribute Certificate</li>
+</ul>
+<a href="#用户认证的流程"><h4 id="用户认证的流程"><span class="hanchor" ariaLabel="Anchor"># </span>用户认证的流程</h4></a>
+<ol>
+<li>生成密钥, 密钥只由认证方保管</li>
+<li>Personalisation, 请求证书</li>
+<li>生成所需的证书</li>
+<li>颁布证书</li>
+</ol>
+<a href="#x509v3"><h4 id="x509v3"><span class="hanchor" ariaLabel="Anchor"># </span>X.509v3</h4></a>
+<ul>
+<li>证书
+<img src="/attachments/Pasted image 20230224164548.png" width="L" /></li>
+</ul>
+<a href="#证书的撤销"><h4 id="证书的撤销"><span class="hanchor" ariaLabel="Anchor"># </span>证书的撤销</h4></a>
+<ul>
+<li><em>Certificate Revocation Lists (CRLs)</em>: 一个列表, 记录证书的有效期和证书的ID</li>
+<li>Zertifikat widerrufen:
+<ul>
+<li>openssl ca -config openssl.cnf -revoke client-cert.pem</li>
+</ul>
+</li>
+<li>Revocation List erzeugen:
+<ul>
+<li>openssl ca -config openssl.cnf -gencrl -out crl.pem</li>
+</ul>
+</li>
+</ul>
+<a href="#online-certificate-status-protocol-ocsp"><h4 id="online-certificate-status-protocol-ocsp"><span class="hanchor" ariaLabel="Anchor"># </span>Online Certificate Status Protocol (OCSP)</h4></a>
+<ul>
+<li>协议</li>
+<li>使用户能随时向 OCSP 服务器请求证书</li>
+<li>OCSP 服务器是由 <a href="#certification-authority" rel="noopener" class="internal-link" data-src=""></a> 运营的</li>
+<li>流程
+<ul>
+<li>请求证书</li>
+<li>验证证书
+<ul>
+<li>&ldquo;good&rdquo; 在有效期内</li>
+<li>&ldquo;revoked&rdquo; 过期或被撤回</li>
+<li>&ldquo;unknown&rdquo;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#oidc"><h4 id="oidc"><span class="hanchor" ariaLabel="Anchor"># </span>OIDC</h4></a>
+<ul>
+<li>Open ID Connect</li>
+<li>集中存储不同服务的 ID 信息</li>
+</ul>
+<p>目标/解决的问题</p>
+<ul>
+<li>对于开发者来说
+<ul>
+<li>用户认证，无需存储和管理密码/访问数据(责任！加密，泄漏&hellip;&hellip;)</li>
+<li>不同级别的认证</li>
+</ul>
+</li>
+<li>对于用户
+<ul>
+<li>&ldquo;不要在这样的网站上有其他账户&hellip;&hellip;&rdquo;</li>
+<li>没有必要相信任何蹩脚的网络应用&hellip;</li>
+<li>所使用的身份供应商的认证安全（2FA/MFA，无密码，&hellip;&hellip;），而不是应用程序的认证安全(&ldquo;转义&rdquo;)</li>
+</ul>
+</li>
+</ul>
+<p>流程</p>
+<ul>
+<li><img src="/attachments/Pasted image 20230225153435.png" width="L" /></li>
+<li>Relying Party: 需要认证/需要使用 OIDC 服务的依赖方(你的应用)</li>
+<li>OIDC Provider (OP) / Identity Provider (IdP): 为信赖方提供认证和授权. 可以使用一个OP或IdP，或者自己提供IdP</li>
+</ul>
+<p>OIDC token 的传递</p>
+<ul>
+<li>生成 JWT 
+<a href="https://jwt.io/" rel="noopener">https://jwt.io/</a> + base64加密</li>
+</ul>
+<a href="#jwt"><h5 id="jwt"><span class="hanchor" ariaLabel="Anchor"># </span>JWT</h5></a>
+<p><img src="/attachments/Pasted image 20230225155435.png" width="L" /></p>
+<a href="#netzsicherheit-schicht-2"><h2 id="netzsicherheit-schicht-2"><span class="hanchor" ariaLabel="Anchor"># </span>Netzsicherheit-Schicht 2</h2></a>
+<a href="#visualisierung-von-netzen"><h3 id="visualisierung-von-netzen"><span class="hanchor" ariaLabel="Anchor"># </span>Visualisierung von Netzen</h3></a>
+<a href="#virtual-private-network-vpn"><h4 id="virtual-private-network-vpn"><span class="hanchor" ariaLabel="Anchor"># </span>Virtual (Private) Network (VPN)</h4></a>
+<ul>
+<li>通过各种技术将(距离比较远的)多个终端连接到一个逻辑上的网络</li>
+<li>Layer 1:
+<ul>
+<li>Virtual Private Wire Service(VPWS): 供应商提供点对点的连接</li>
+<li>Virtual Private Line Service(VPLS): 供应商提供点对多点的连接</li>
+</ul>
+</li>
+<li>Layer 2:
+<ul>
+<li>VLAN: 同一物理链路上的多LAN广播域, 使用 IEEE 802.1Q 标准</li>
+<li>Virtual Private LAN Services(缩写又是VPLS): 连接物理上分隔的 LAN</li>
+<li><a href="#point-to-point-tunneling-protocolpptp" rel="noopener" class="internal-link" data-src=""></a></li>
+<li>Layer2 Tunneling Protocol</li>
+</ul>
+</li>
+<li>Layer 3
+<ul>
+<li>IPSec</li>
+<li>SSL/TLS</li>
+<li>OpenVPN</li>
+</ul>
+</li>
+</ul>
+<a href="#layer-2-的任务"><h4 id="layer-2-的任务"><span class="hanchor" ariaLabel="Anchor"># </span>Layer 2 的任务</h4></a>
+<ul>
+<li>Frames 的无差错传输</li>
+<li>流量控制</li>
+<li>共用传输介质的多媒体访问
+<ul>
+<li>Ethernet: CSMA/CD (IEEE 802.3)</li>
+<li>WLAN: CSMA/CA (IEEE 802.11)</li>
+</ul>
+</li>
+</ul>
+<a href="#vlan"><h4 id="vlan"><span class="hanchor" ariaLabel="Anchor"># </span>VLAN</h4></a>
+<ul>
+<li>跨多个交换机的局域网</li>
+<li>允许根据业务或者安全需求, 将 IT-System 分组或隔离</li>
+<li>现代大学网络的标配</li>
+</ul>
+<a href="#vlan-技术"><h5 id="vlan-技术"><span class="hanchor" ariaLabel="Anchor"># </span>VLAN 技术</h5></a>
+<ul>
+<li>IEEE 802.1Q</li>
+<li>在 ethernet frame 的基础上, 拓展了 TAG
+<ul>
+<li><img src="/attachments/Pasted image 20230225095949.png" width="L" /></li>
+<li><img src="/attachments/Pasted image 20230225203726.png" width="L" /></li>
+<li>TPID(Tag Protocol Identifier), PRI(Priority), CFI(Canonical Format Identifier), VLAN ID</li>
+</ul>
+</li>
+</ul>
+<a href="#point-to-point-protocolppp"><h3 id="point-to-point-protocolppp"><span class="hanchor" ariaLabel="Anchor"># </span>Point-to-Point Protocol(PPP)</h3></a>
+<ul>
+<li>为了拨号而发展的</li>
+<li>RFC 1661, 1662, 1663, 2153
+<ul>
+<li>Frame Format: Delimeter(分隔符号) + checksum</li>
+<li>Link Control Protocol(LCP) for
+<ul>
+<li>Verbindungsauf-/abbau</li>
+<li>test</li>
+<li>Aushandlen von configuration</li>
+</ul>
+</li>
+<li>Network Control Protocol(NCP) for
+<ul>
+<li>支持的第三层协议（如IP、IPX、Appletalk&hellip;&hellip;）的配置协商，通过PPP链接可能有不同的第三层协议</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>每个 partner 都能请求 配置 的 LCP Aushandlung 的 认证, 认证协议:
+<ul>
+<li>Password Authentication Protocol (<a href="#pap" rel="noopener" class="internal-link" data-src=""></a>)</li>
+<li>Challenge-Handshake Authentication Protocol (<a href="#chap" rel="noopener" class="internal-link" data-src=""></a>)</li>
+<li>Extensible Authentication Protocol (<a href="#eap" rel="noopener" class="internal-link" data-src=""></a>)</li>
+</ul>
+</li>
+</ul>
+<a href="#pap"><h4 id="pap"><span class="hanchor" ariaLabel="Anchor"># </span>PAP</h4></a>
+<ul>
+<li>Password Authentication Protocol</li>
+<li>RFC 1334</li>
+<li>不安全的协议, 认证实体知道所有 ID 和 密码, 客户端以明文发送 ID 和密码</li>
+<li>RFC 1334: 应该优先使用更安全的方法(比如CHAP)</li>
+</ul>
+<a href="#chap"><h4 id="chap"><span class="hanchor" ariaLabel="Anchor"># </span>CHAP</h4></a>
+<ul>
+<li>Challenge-Handshake Authentication Protocol</li>
+<li>RFC 1334, RFC 1994</li>
+<li>通过 3-way-handshake 定义认证
+<ul>
+<li><img src="/attachments/Pasted image 20230225104030.png" width="L" /></li>
+</ul>
+</li>
+<li>安全风险: PAP 回退
+<ul>
+<li>用户不知道区别, 只要它能工作</li>
+<li>中间人攻击: 伪装成仅 PAP 服务器, 接受明文密码</li>
+</ul>
+</li>
+</ul>
+<a href="#eap"><h4 id="eap"><span class="hanchor" ariaLabel="Anchor"># </span>EAP</h4></a>
+<ul>
+<li>Extensible Authentication Protocol</li>
+<li>RFC 3748, RFC 5247</li>
+<li>是一个认证框架, 提供了通用方法, 支持大约40种协商技术
+<ul>
+<li>EAP-MD5 (=CHAP)</li>
+<li>EAP-OTP (One-Time-Password)</li>
+<li>EAP-GTC (Generic Token Card)</li>
+<li>EAP-TLS</li>
+<li>EAP-SIM (全球通信系统GSM(Global System for Mobile Communication) 的用户验证模块SIM(Subscriber Identity Model))</li>
+</ul>
+</li>
+</ul>
+<a href="#point-to-point-tunneling-protocolpptp"><h3 id="point-to-point-tunneling-protocolpptp"><span class="hanchor" ariaLabel="Anchor"># </span>Point-to-Point Tunneling Protocol(PPTP)</h3></a>
+<ul>
+<li>PPP 需要物理连接, 而 PPTP 就是想做一个在互联网上用的 PPP</li>
+<li>自 WIN95 以来最易于配置的 VPN协议</li>
+<li>Client 与 Remote Access Server(RAS) 自愿连接 (Voluntary Tunneling)</li>
+<li>使用 Generic Router Encapsulation Protocol (GRE) 传输 PPP PDU
+<ul>
+<li>PPP Protocol Data Unit (PPP PDU)</li>
+<li>GRE 是个 Layer 4 协议</li>
+</ul>
+</li>
+<li>微软开发, RFC2637, 作为 RAS 的一部分</li>
+<li>微软改进: PPTP v2 und MS-CHAPv2</li>
+</ul>
+<a href="#ms-chapv2"><h5 id="ms-chapv2"><span class="hanchor" ariaLabel="Anchor"># </span>MS-CHAPv2</h5></a>
+<p><img src="/attachments/Pasted image 20230225132253.png" width="L" /></p>
+<ul>
+<li>依赖好的用户密码</li>
+<li>没有对攻击做综合防御措施</li>
+<li>有更好的选择(但微软没用)</li>
+<li>因为向下兼容, 可能被恶意软件强制回滚v1来攻击</li>
+</ul>
+<a href="#ieee-8021x"><h3 id="ieee-8021x"><span class="hanchor" ariaLabel="Anchor"># </span>IEEE 802.1x</h3></a>
+<p><a class="internal-link broken">IEEE 802.1X</a></p>
+<p><a class="internal-link broken">IEEE 802.1X</a></p>
+<p><a class="internal-link broken">IEEE 802.1X</a></p>
+<a href="#wlan"><h3 id="wlan"><span class="hanchor" ariaLabel="Anchor"># </span>WLAN</h3></a>
+<a href="#ieee"><h4 id="ieee"><span class="hanchor" ariaLabel="Anchor"># </span>IEEE</h4></a>
+<p><a class="internal-link broken">WiFi 技术</a></p>
+<a href="#fachbegriff"><h4 id="fachbegriff"><span class="hanchor" ariaLabel="Anchor"># </span>Fachbegriff</h4></a>
+<ul>
+<li>Dualband-AP: 指 2.4GHz 和 5GHz 双频</li>
+<li>Access Point(AS): WLAN 入口点</li>
+<li>Station(STA): 有 WLAN配置 的设备</li>
+<li>Basic Service Set(BSS): 一组同频段的 STA</li>
+<li>Extended Service Set(ESS):
+<ul>
+<li>多个 BSS 组成的逻辑网络</li>
+<li>通过 SSID 识别</li>
+</ul>
+</li>
+<li>Portal: 与其他网络的接口</li>
+</ul>
+<a href="#infrastructure-mode"><h5 id="infrastructure-mode"><span class="hanchor" ariaLabel="Anchor"># </span>Infrastructure Mode</h5></a>
+<ul>
+<li>AP, STA, BSS, ESS</li>
+<li>ESS 通过 DSS(Distribution System) 搭建</li>
+<li><img src="/attachments/Pasted image 20230225202140.png" width="L" /></li>
+</ul>
+<a href="#ad-hoc-mode"><h5 id="ad-hoc-mode"><span class="hanchor" ariaLabel="Anchor"># </span>Ad-Hoc Mode</h5></a>
+<ul>
+<li>不需要 AP</li>
+<li>所有 STA 权力平等</li>
+<li>以 BSS 为基础, BSS 之间不能通信</li>
+<li><img src="/attachments/Pasted image 20230225202410.png" width="L" /></li>
+</ul>
+<a href="#wlan-安全技术"><h4 id="wlan-安全技术"><span class="hanchor" ariaLabel="Anchor"># </span>WLAN 安全技术</h4></a>
+<p>安全要求:</p>
+<ul>
+<li>参与者的认证</li>
+<li>网络的访问控制(Autorisierung)</li>
+<li>数据的 Confidentiality, Integrity
+具体技术:</li>
+<li>Wired Equivalent Privacy(<a href="#wep" rel="noopener" class="internal-link" data-src=""></a>)</li>
+<li>WiFi Protected Access(<a href="#wpa" rel="noopener" class="internal-link" data-src=""></a>)</li>
+<li>WiFi Protected Access 2(<a href="#wpa2" rel="noopener" class="internal-link" data-src=""></a>)</li>
+<li>IEEE 802.11i</li>
+<li>WiFi Protected Access 3(<a href="#wpa3" rel="noopener" class="internal-link" data-src=""></a>)</li>
+</ul>
+<a href="#wep"><h4 id="wep"><span class="hanchor" ariaLabel="Anchor"># </span>WEP</h4></a>
+<p>加密</p>
+<ul>
+<li>PRNG Pseudo Random Number Generator
+<img src="/attachments/Pasted image 20230227125701.png" width="L" /></li>
+</ul>
+<p>解密
+<img src="/attachments/Pasted image 20230227125735.png" width="L" /></p>
+<p>安全问题</p>
+<ul>
+<li>CRC32 在现在看来不能保证 <a href="#integrity" rel="noopener" class="internal-link" data-src=""></a></li>
+<li>可能的攻击: Traffic Injection, &ldquo;Breaking 104-bit WEP in less than 60 seconds&rdquo;</li>
+<li><strong>不安全, 不要用</strong></li>
+</ul>
+<a href="#wpa"><h4 id="wpa"><span class="hanchor" ariaLabel="Anchor"># </span>WPA</h4></a>
+<ul>
+<li>使用了 TKIP</li>
+<li>密钥层次高-&gt;低: PMK, PTK, TK
+<ul>
+<li>Pairwise Muster Key</li>
+<li>Pairwise Transient Key</li>
+<li>Temporal Key</li>
+<li>通过上层密钥计算得到下一层密钥, 如果上层被攻破, 那下几层都被攻破了</li>
+</ul>
+</li>
+<li>还有一个 Pre-share Key, 也就是显示中的 wifi密码</li>
+<li><img src="/attachments/Pasted image 20230227130319.png" width="L" /></li>
+<li><img src="/attachments/Pasted image 20230227130430.png" width="L" /></li>
+<li>别用, <strong>不安全</strong>!</li>
+</ul>
+<a href="#wpa2"><h4 id="wpa2"><span class="hanchor" ariaLabel="Anchor"># </span>WPA2</h4></a>
+<ul>
+<li>CCMP 取代 TKIP</li>
+<li>AES 取代 RC4</li>
+<li>目前是安全的, 在设备上强制标注(和WiFi标签一起)</li>
+</ul>
+<a href="#wpa3"><h4 id="wpa3"><span class="hanchor" ariaLabel="Anchor"># </span>WPA3</h4></a>
+<ul>
+<li>2018, 作为 WPA2 的补充</li>
+</ul>
+<a href="#netzsicherheit-schicht-3"><h2 id="netzsicherheit-schicht-3"><span class="hanchor" ariaLabel="Anchor"># </span>Netzsicherheit-Schicht 3</h2></a>
+<a href="#ipsec"><h3 id="ipsec"><span class="hanchor" ariaLabel="Anchor"># </span>IPSec</h3></a>
+<ul>
+<li>在 IP 和 TCP 包之间起作用</li>
+<li>作用
+<ul>
+<li>验证 <a href="#integrity" rel="noopener" class="internal-link" data-src=""></a></li>
+<li>认证</li>
+<li>预防重放攻击</li>
+</ul>
+</li>
+</ul>
+<a href="#transport-mode--tunnel-mode"><h4 id="transport-mode--tunnel-mode"><span class="hanchor" ariaLabel="Anchor"># </span>Transport Mode / Tunnel Mode</h4></a>
+<ul>
+<li>AH 和 ESP 都有两种模式</li>
+<li>如果需要通过 Gateway, 用 Tunnel 模式
+<ul>
+<li><img src="/attachments/Pasted image 20230227131501.png" width="L" /></li>
+</ul>
+</li>
+</ul>
+<a href="#ip-authentication-header"><h4 id="ip-authentication-header"><span class="hanchor" ariaLabel="Anchor"># </span>IP Authentication Header</h4></a>
+<ul>
+<li><img src="/attachments/Pasted image 20230227131820.png" width="L" /></li>
+</ul>
+<a href="#ip-encapsulating-security-payload"><h4 id="ip-encapsulating-security-payload"><span class="hanchor" ariaLabel="Anchor"># </span>IP Encapsulating Security Payload</h4></a>
+<ul>
+<li><img src="/attachments/Pasted image 20230227131910.png" width="L" /></li>
+</ul>
+<a href="#ikev2"><h3 id="ikev2"><span class="hanchor" ariaLabel="Anchor"># </span>IKEv2</h3></a>
+<p>目标</p>
+<ul>
+<li>产生IPSec所需的密钥材料</li>
+<li>在IKE中已经对另一方进行了认证(不仅仅是在IPSec中)</li>
+</ul>
+<a href="#diffie-hellman-密钥交换"><h4 id="diffie-hellman-密钥交换"><span class="hanchor" ariaLabel="Anchor"># </span>Diffie-Hellman 密钥交换</h4></a>
+<ul>
+<li>一种安全的, 通过不可信通道交换密钥的方式</li>
+</ul>
+<ol>
+<li>选择质数 p(通常在几百以上), 质数 g(primitive Wurzel g (mod p)), 这两个是公开的</li>
+<li><img src="/attachments/Pasted image 20230227144404.png" width="L" /></li>
+</ol>
+<a href="#ike_init"><h4 id="ike_init"><span class="hanchor" ariaLabel="Anchor"># </span>IKE_INIT</h4></a>
+<ul>
+<li>用来建立一个双向的 IKE SA</li>
+<li><img src="/attachments/Pasted image 20230227144722.png" width="L" /></li>
+</ul>
+<a href="#ike_auth"><h4 id="ike_auth"><span class="hanchor" ariaLabel="Anchor"># </span>IKE_AUTH</h4></a>
+<ul>
+<li>认证, 并建立第一个 IPSec SA</li>
+<li><img src="/attachments/Pasted image 20230227144947.png" width="L" /></li>
+<li><img src="/attachments/Pasted image 20230227145136.png" width="L" /></li>
+</ul>
+<a href="#ike_child_sa"><h4 id="ike_child_sa"><span class="hanchor" ariaLabel="Anchor"># </span>IKE_CHILD_SA</h4></a>
+<ul>
+<li>接下来的 IPSec SA</li>
+<li>rekey</li>
+<li><img src="/attachments/Pasted image 20230227145016.png" width="L" /></li>
+</ul>
+
+
+      </div>
+    </article>
+    
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      <li>
+        <a href="/permanent/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6/" data-ctx="Identification" data-src="/permanent/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6" class="internal-link">数字证书</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/permanent/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" data-ctx="lmu - IT Security" data-src="/permanent/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" class="internal-link">网络安全</a>
+      </li>
+      
+      
+      
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="https://tongluoshao.space/js/graph.6579af7b10c818dbd2ca038702db0224.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        <p style="margin:10px; ">
+        
+        
+        Made by evixenon using <a href="https://github.com/jackyzha0/quartz">Quartz</a>, © 2023
+
+        &nbsp;|&nbsp;粤 ICP 备2022002978号-1</p>
+
+        <ul>
+            
+            <li><a href="https://tongluoshao.space/">Home</a></li>
+            <li><a href="https://github.com/evixenon">GitHub</a></li><li><a href="https://space.bilibili.com/8557634">Bilibili</a></li></ul>
+    </footer>
+</div>
+
+
+</div>
+</body>
+</html>

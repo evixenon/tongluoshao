@@ -8,12 +8,11 @@ body {
   color:rgb(44, 44, 44);
 }
 
-a {
+a, a:hover {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: none;
+#content a:hover, #content a:visited:hover {
   color: #888;
 }
 

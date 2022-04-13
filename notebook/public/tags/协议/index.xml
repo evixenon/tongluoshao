@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>协议 on </title>
+    <link>https://tongluoshao.space/tags/%E5%8D%8F%E8%AE%AE/</link>
+    <description>Recent content in 协议 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/%E5%8D%8F%E8%AE%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ICMP 协议</title>
+      <link>https://tongluoshao.space/permanent/ICMP-%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/ICMP-%E5%8D%8F%E8%AE%AE/</guid>
+      <description>Internet Control Messege Protocol 网络层(3/7) 用于在IP主机和路由器间的传递控制消息，控制消息是指如某节点通不通的关于网络本身的消息。</description>
+    </item>
+    
+    <item>
+      <title>IEEE 802.1X</title>
+      <link>https://tongluoshao.space/permanent/IEEE-802.1X/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/IEEE-802.1X/</guid>
+      <description>局域网部分 IEEE 802.1X 家族 802.1Q Virtual Bridged LANs (VLAN) 802.3 CSMA/CD (Ethernet) 802.5 Token Ring 802.6 Metropolitan Area Network 802.</description>
+    </item>
+    
+    <item>
+      <title>IPv4</title>
+      <link>https://tongluoshao.space/permanent/IPv4/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/IPv4/</guid>
+      <description>IPv4 Header ![[Pasted image 20230227131607.png|L|500]] </description>
+    </item>
+    
+    <item>
+      <title>Kerberos</title>
+      <link>https://tongluoshao.space/permanent/Kerberos/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Kerberos/</guid>
+      <description>src: Kerberos - 知乎, lmu - IT Security
+Kerberos 以 Needham-Schroeder 为基础的可信第三方协议 TTP: 由 Kerberos 服务器 和 票据授权服务器组成 为 TCP/IP 网络设计 使用对称加密 发生在一个 Kerberos 域中 缺点: 单点故障: 需要服务器保持可用; 需要时间同步 RFC 4120 名词解释 Principal：大致可以认为是 Kerberos 世界的用户名，用于标识身份 AS（Authentication Server）= 认证服务器 KDC（Key Distribution Center）= 密钥分发中心 TGT（Ticket Granting Ticket）= 票据授权票据，票据的票据 TGS（Ticket Granting Server）= 票据授权服务器 SS（Service Server）= 特定服务提供端 !</description>
+    </item>
+    
+    <item>
+      <title>NTP 协议</title>
+      <link>https://tongluoshao.space/permanent/NTP-%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/NTP-%E5%8D%8F%E8%AE%AE/</guid>
+      <description>Network Time Protocol
+网络时间协议（NTP）用于通过通信网络同步时钟。它是少数几个仍被广泛使用的不安全和未经认证的互联网协议之一。
+关于 NTP 的攻击 Delay/Replay Man in the middle IP-Spoofing -&amp;gt; [[permanent/NTP 协议#NTP Amplification|NTP Amplification]] 为什么要同步通信时间?
+Timestamp Log 分析 网络监视 Netzmonitoring, 寻找错误, 分析事件联系等等 如果时间同步系统受到攻击……</description>
+    </item>
+    
+    <item>
+      <title>Unicode</title>
+      <link>https://tongluoshao.space/permanent/Unicode/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Unicode/</guid>
+      <description>字符编码
+你倒是写点什么啊 </description>
+    </item>
+    
+    <item>
+      <title>TCP</title>
+      <link>https://tongluoshao.space/permanent/TCP/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/TCP/</guid>
+      <description>TCP Header ![[Pasted image 20230227131720.png|L|500]] </description>
+    </item>
+    
+    <item>
+      <title>邮件系统协议简述</title>
+      <link>https://tongluoshao.space/permanent/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%8D%8F%E8%AE%AE%E7%AE%80%E8%BF%B0/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%8D%8F%E8%AE%AE%E7%AE%80%E8%BF%B0/</guid>
+      <description>SMTP SMTP全称是Simple Mail Transfer Protocol,直译过来就是简单邮件传输协议, 由RFC5321定义.主要的工作就是把邮件信息从发件人的邮件服务器中传送到接收人的邮件服务器中,偶尔我们使用MUA来发送邮件的话,也承载传输用户邮件到发件服务器的功能, 因而也称作推协议,顺带提一下,SMTP协议的出现是比HTTP还早的,最早在1982年中发布第一版的RFC.
+因而因为提出的年代久远,所以在当时有许多问题都考虑不全面并且也有这许多的限制,例如SMTP要求信息内容需要是7位的ASCII来承载,因而我们在发送以及接受的时候,都需要将其编码解码.
+另外,SMTP还存在一个问题就是没有对发送方进行一个身份验证,虽然在早期的互联网环境没有很大问题,但是在垃圾邮件满天飞的今天,这却是一个明显的短板.因而衍生出了SPF, DKIM, DMARC等一系列用来验证发件人身份的方法.
+POP3 POP3,Post Office Protocol Version 3,直译就是邮局协议第三版,由RFC1939进行定义.这个协议的主要服务于用户管理邮件服务器上面的电子邮件.具体过程是:当外来邮件发送到收件人的邮件服务器上时,收件人可以使用邮件客户端连接邮件服务器,把未阅读的邮件服务器以及部分信息拉取回本地进行处理.在拉取的过程中,我们可以选择拉取完删除以及拉取完不删除两种方式,不过现在默认一般都是拉取完不删除,方便我们在其他的地方也能对邮件进行阅读以及管理.
+IMAP IMAP, Internet Message Access Protocol, 直译过来就是网络信息访问协议,可能和现在主流的翻译不太一致,不过能理解其意思就好.</description>
+    </item>
+    
+  </channel>
+</rss>

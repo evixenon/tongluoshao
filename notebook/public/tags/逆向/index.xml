@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>逆向 on </title>
+    <link>https://tongluoshao.space/tags/%E9%80%86%E5%90%91/</link>
+    <description>Recent content in 逆向 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/%E9%80%86%E5%90%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JVM, Dalvik, Art</title>
+      <link>https://tongluoshao.space/permanent/JVM-Dalvik-Art/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/JVM-Dalvik-Art/</guid>
+      <description> JVM Java 的虚拟机, 用来运行 Java 字节码 Dalvik 专为 Android 设计的 Java 虚拟机, 有专属的文件后缀 .dex Art Android runtime, Dalvik 的升级版, 本质上与 Dalvik 无异 </description>
+    </item>
+    
+    <item>
+      <title>会飞的丑小鸭 - 教我兄弟学安卓逆向</title>
+      <link>https://tongluoshao.space/project/%E4%BC%9A%E9%A3%9E%E7%9A%84%E4%B8%91%E5%B0%8F%E9%B8%AD-%E6%95%99%E6%88%91%E5%85%84%E5%BC%9F%E5%AD%A6%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/%E4%BC%9A%E9%A3%9E%E7%9A%84%E4%B8%91%E5%B0%8F%E9%B8%AD-%E6%95%99%E6%88%91%E5%85%84%E5%BC%9F%E5%AD%A6%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/</guid>
+      <description>系列目录: https://www.52pojie.cn/thread-742703-1-1.html
+一、安卓正向编程 01编写第一个 app
+1 2 3 4 5 6 7 8 9 EditText Name; Name = (EditText) findViewById(R.id.Text_Name); Button Login; .</description>
+    </item>
+    
+    <item>
+      <title>宵夜97 - 太吾绘卷 Mod 制作</title>
+      <link>https://tongluoshao.space/permanent/%E5%AE%B5%E5%A4%9C97-%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7-Mod-%E5%88%B6%E4%BD%9C/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AE%B5%E5%A4%9C97-%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7-Mod-%E5%88%B6%E4%BD%9C/</guid>
+      <description>视频链接
+https://www.bilibili.com/video/BV1Fd4y1z7jV/?spm_id_from=333.999.0.0&amp;vd_source=92451653bea4ed324c9bfc0287256aa5
+灰机wiki - 太吾 Mod 制作
+主要相关 managed-AC, managed-TaiWuModLib, backend-GameData
+Mod 的文件夹结构 mod名文件夹 - Config.lua - Settings.lua - Plugins - xxx.</description>
+    </item>
+    
+    <item>
+      <title>控制流混淆</title>
+      <link>https://tongluoshao.space/permanent/%E6%8E%A7%E5%88%B6%E6%B5%81%E6%B7%B7%E6%B7%86/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%8E%A7%E5%88%B6%E6%B5%81%E6%B7%B7%E6%B7%86/</guid>
+      <description>有些软件可以在打包的时候使用控制流混淆, 混淆后的代码可读性变得非常差</description>
+    </item>
+    
+    <item>
+      <title>正己 - 安卓逆向这档事</title>
+      <link>https://tongluoshao.space/project/%E6%AD%A3%E5%B7%B1-%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E8%BF%99%E6%A1%A3%E4%BA%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/%E6%AD%A3%E5%B7%B1-%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E8%BF%99%E6%A1%A3%E4%BA%8B/</guid>
+      <description>一、模拟器环境安装 src 《安卓逆向这档事》一、模拟器环境搭建
+三个文件 雷电模拟器9 Magisk LSPosed 本地文件在d/52 安装雷电模拟器 在雷电多开器里新建一个并启动, 小磁盘模式可开
+模拟器的准备 给模拟器root, 重启 -&amp;gt;模拟器软件设置-其他设置 打开共享文件夹, 把网盘里的 LSPosed 压缩包放进去 -&amp;gt;模拟器右侧更多-共享文件夹 如果是最新版本雷电, 要打开磁盘写入 -&amp;gt;模拟器软件设置-性能设置 安装 Magisk Delta 把文件拖进模拟器界面, 安装完打开 永久允许root 安装-请求访问存储-允许, 然后什么都不要做, 后台关掉软件 重新打开-安装 下一步-安装到磁盘(这个是模拟器的特殊选项) 显示 all done 就算安装成功, 重启模拟器 设置 Magisk 设置里打开 Zygisk</description>
+    </item>
+    
+    <item>
+      <title>脱壳</title>
+      <link>https://tongluoshao.space/permanent/%E8%84%B1%E5%A3%B3/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%84%B1%E5%A3%B3/</guid>
+      <description>找OEP 通用方法汇总 0、 概述 OEP通常在基址附近，经过较大的跳转来到 1、单步法 一步一步跟踪，规则： 向上 jxx 不让实现，直接f4运行到 jxx 的下一行 如果跳转的下一行是 call 或者还是jxx(无论是向上还是向下), 则运行到再下一行 如果跑飞，在跑飞的地方不要f8，f7进去 其他一步一步往下，向下跳转也继续f8, 看到popad通常离OEP不远了 2、ESP突变 ESP突变指关键句如(push)的下一句只有ESP一个寄存器变红(发生变化)</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta
+    name="description"
+    content="Java 入门须知 编译 1 javac app.java 注释 1 2 3 4 5 6 7 8 9 // single line comment /* multi-line comment */ /** * doc comment */ 大小写 类名大小写不敏感(这是操作系统决定的) java 是 case-sensitive, 即方法, 包名等都大小写敏感"
+  />
+  <meta property="og:title" content="Java 基础">
+  <meta property="og:description" content="Java 入门须知 编译 1 javac app.java 注释 1 2 3 4 5 6 7 8 9 // single line comment /* multi-line comment */ /** * doc comment */ 大小写 类名大小写不敏感(这是操作系统决定的) java 是 case-sensitive, 即方法, 包名等都大小写敏感">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tongluoshao.space/icon.png">
+  <meta property="og:url" content="https://tongluoshao.space/permanent/Java-%E5%9F%BA%E7%A1%80/">
+  <meta property="og:width" content="200">
+  <meta property="og:height" content="200">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Java 基础" />
+  <meta name="twitter:description" content="Java 入门须知 编译 1 javac app.java 注释 1 2 3 4 5 6 7 8 9 // single line comment /* multi-line comment */ /** * doc comment */ 大小写 类名大小写不敏感(这是操作系统决定的) java 是 case-sensitive, 即方法, 包名等都大小写敏感" />
+  <meta name="twitter:image" content="https://tongluoshao.space/icon.png">
+  
+    
+  
+    
+  
+
+  <title>
+    Java 基础
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  
+  
+  
+  
+  
+  <link rel="shortcut icon" type="image/png"  href="https://tongluoshao.space//icon.png" />
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <link href="https://tongluoshao.space/styles.88d22826d3297025a3c1bf2a6aca5260.min.css" rel="stylesheet" />
+
+  
+  <link href="https://tongluoshao.space/styles/_light_syntax.248971f6ab797c4cf9beb228933f8362.min.css" rel="stylesheet" id="theme-link">
+
+   
+  
+  
+  
+  
+  <script src="https://tongluoshao.space/js/darkmode.10faa94087fa948a1002c0b385498593.min.js"></script>
+  
+  
+  
+  <script src="https://tongluoshao.space/js/util.00639692264b21bc3ee219733d38a8be.min.js"></script>
+  
+  
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+
+  
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.2.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.2.1"></script>
+  
+  <script defer src="https://tongluoshao.space/js/popover.aa9bc99c7c38d3ae9538f218f1416adb.min.js"></script>
+
+  
+  
+  
+  <script defer src="https://tongluoshao.space/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+  
+
+  
+  
+  <script defer src="https://tongluoshao.space/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+  
+
+  
+  
+  <script defer src="https://tongluoshao.space/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+  
+
+  
+   
+  <script>
+    const SEARCH_ENABLED =  false 
+    const LATEX_ENABLED =  true 
+    const PRODUCTION =  true 
+    const BASE_URL = "https://tongluoshao.space/"
+    const fetchData = Promise.all([
+          fetch("https:\/\/tongluoshao.space\/indices\/linkIndex.baf7c7849c087b9283697bcbc5da2fac.min.json")
+            .then(data => data.json())
+            .then(data => ({
+              index: data.index,
+              links: data.links,
+            })),
+          fetch("https:\/\/tongluoshao.space\/indices\/contentIndex.8c470189cd6cd213e6847cb1682b866b.min.json")
+            .then(data => data.json()),
+        ])
+        .then(([{index, links}, content]) => ({
+          index,
+          links,
+          content,
+        }))
+
+      const render = () => {
+      
+
+      const siteBaseURL = new URL(BASE_URL);
+      const pathBase = siteBaseURL.pathname;
+      const pathWindow = window.location.pathname;
+      const isHome = pathBase == pathWindow;
+
+      addCopyButtons();
+      
+
+      addTitleToCodeBlocks();
+      
+
+      addCollapsibleCallouts();
+      
+
+      
+      initPopover(
+        "https://tongluoshao.space",
+         true 
+      )
+      
+
+      
+      const footer = document.getElementById("footer")
+      if (footer) {
+        const container = document.getElementById("graph-container")
+        
+        if (!container) return requestAnimationFrame(render)
+        
+        container.textContent = ""
+
+        const drawGlobal = isHome &&  false ;
+        drawGraph(
+            "https://tongluoshao.space",
+            drawGlobal,
+            [{"/moc":"#4388cc"}],
+            drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+          );
+
+        }
+      
+
+      
+        var els = document.getElementsByClassName("mermaid");
+        if (els.length > 0) {
+          import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+            (obj) => {
+              
+              
+              obj.default.init();
+            }
+          )
+        }
+      
+      
+      
+      function clickHandler(evt) {
+        const target = evt.target 
+        const classNames = target.className.split(" ")
+        const broken = classNames.includes("broken")
+        const internal = classNames.includes("internal-link")
+        plausible("Link Click", {
+          props: {
+            href: target.href,
+            broken,
+            internal,
+            graph: false,
+          }
+        })
+      }
+
+      const links = document.querySelectorAll("a")
+      for (link of links) {
+        if (link.className.includes("root-title")) {
+          link.addEventListener('click', clickHandler, {once: true})
+        }
+      }
+    }
+
+    const init = (doc = document) => {
+      
+      addCopyButtons();
+      
+
+      addTitleToCodeBlocks();
+      renderMathInElement(doc.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+        ],
+        macros: {
+          '’': "'"
+        },
+        throwOnError : false
+      });
+      
+    };
+  </script>
+  
+  
+  <script type="module">
+    import { attachSPARouting } from "https:\/\/tongluoshao.space\/js\/router.d6fe6bd821db9ea97f9aeefae814d8e7.min.js"
+    attachSPARouting(init, render)
+  </script>
+  
+  
+  <script defer data-domain="tongluoshao.space" src="https://plausible.io/js/script.js"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+</head>
+
+
+<body>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="https://tongluoshao.space/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+
+
+
+<div class="singlePage">
+    
+    <header>
+    
+    
+  <div id="site-title" class="noselect">
+      <a href="https://tongluoshao.space/"><h1>TONGLUOSHAO</h1></a>
+  </div>
+    <div class="spacer"></div>
+    <div id="search-icon">
+      <p>Search</p>
+      <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+    </div>
+    <div class='darkmode'>
+    <input class='toggle' id='darkmode-toggle' type='checkbox' tabindex="-1">
+    <label id="toggle-label-light" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <title>Light Mode</title>
+            <path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </svg>
+    </label>
+    <label id="toggle-label-dark" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xml:space="preserve">
+            <title>Dark Mode</title>
+            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+</header>
+
+
+    <article>
+      <div id="content">
+        <h1>Java 基础</h1>
+        <p class="meta">
+          Last updated 
+Jun 14, 2023
+
+ 
+            
+
+        </p>
+        <ul class="tags">
+            
+            <li><a href="https://tongluoshao.space/tags/Java/">
+            
+              Java
+            
+              </a>
+            </li>
+            
+        </ul>
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+      
+      
+    
+    
+  
+  
+  
+  
+
+
+
+
+
+
+<a href="#java-入门须知"><h2 id="java-入门须知"><span class="hanchor" ariaLabel="Anchor"># </span>Java 入门须知</h2></a>
+<a href="#编译"><h5 id="编译"><span class="hanchor" ariaLabel="Anchor"># </span>编译</h5></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">javac app.java
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#注释"><h5 id="注释"><span class="hanchor" ariaLabel="Anchor"># </span>注释</h5></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// single line comment
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* 
+</span></span></span><span class="line"><span class="cl"><span class="cm">    multi-line comment
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** 
+</span></span></span><span class="line"><span class="cl"><span class="cm">*   doc comment 
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#大小写"><h5 id="大小写"><span class="hanchor" ariaLabel="Anchor"># </span>大小写</h5></a>
+<p>类名大小写不敏感(这是操作系统决定的)
+java 是 case-sensitive, 即方法, 包名等都大小写敏感</p>
+<a href="#java类-入口函数"><h5 id="java类-入口函数"><span class="hanchor" ariaLabel="Anchor"># </span>Java类 入口函数</h5></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#access-modifier"><h5 id="access-modifier"><span class="hanchor" ariaLabel="Anchor"># </span>Access Modifier</h5></a>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>within class</th>
+<th>within package</th>
+<th>outside package by subclass only</th>
+<th>outside package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>private</td>
+<td>Y</td>
+<td>N</td>
+<td>N</td>
+<td>N</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Y</td>
+<td>Y</td>
+<td>N</td>
+<td>N</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>N</td>
+</tr>
+<tr>
+<td>public</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<a href="#java-keyword"><h5 id="java-keyword"><span class="hanchor" ariaLabel="Anchor"># </span>Java keyword</h5></a>
+<p>abstract assert
+boolean	break byte
+case catch char class const continue
+default do double else enum extends
+final finally float for
+goto
+if implements import instanceof int interface
+long
+native new
+package private protected public
+return
+short static strictfp super switch synchronized
+this throw throws transient try
+void volatile
+while</p>
+<a href="#变量"><h2 id="变量"><span class="hanchor" ariaLabel="Anchor"># </span>变量</h2></a>
+<a href="#变量-1"><h4 id="变量-1"><span class="hanchor" ariaLabel="Anchor"># </span>变量</h4></a>
+<p>变量其实是一块预留空间的名字, 变量的类型则指示了预留空间的大小以及解析方式</p>
+<a href="#变量类型"><h4 id="变量类型"><span class="hanchor" ariaLabel="Anchor"># </span>变量类型</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Guru99</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="c1">//static variable  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="mi">99</span><span class="o">;</span> <span class="c1">//instance variable  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">void</span> <span class="nf">method</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">90</span><span class="o">;</span> <span class="c1">//local variable  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#本地变量-local-variable"><h5 id="本地变量-local-variable"><span class="hanchor" ariaLabel="Anchor"># </span>本地变量 Local Variable</h5></a>
+<p>在<code>域</code>范围有效的变量, 如在方法中声明的变量只在方法中有效
+本地变量不能是 static 的</p>
+<a href="#对象变量-instance-variable"><h5 id="对象变量-instance-variable"><span class="hanchor" ariaLabel="Anchor"># </span>对象变量 Instance Variable</h5></a>
+<p>没有用 <code>static</code> 关键字定义, 且不是在方法内部声明的变量. 是对象特有的</p>
+<a href="#静态变量-static-variable"><h5 id="静态变量-static-variable"><span class="hanchor" ariaLabel="Anchor"># </span>静态变量 Static Variable</h5></a>
+<p>用 <code>static</code> 关键字定义, 在类被加载时初始化一次
+静态变量是该类的所有对象共享的</p>
+<a href="#casting"><h4 id="casting"><span class="hanchor" ariaLabel="Anchor"># </span>Casting</h4></a>
+<p>向上直接兼容
+向下会舍弃部分</p>
+<a href="#数据类型"><h2 id="数据类型"><span class="hanchor" ariaLabel="Anchor"># </span>数据类型</h2></a>
+<a href="#原始数据类型-primitive-data-type"><h3 id="原始数据类型-primitive-data-type"><span class="hanchor" ariaLabel="Anchor"># </span>原始数据类型 Primitive Data Type</h3></a>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Default Value</th>
+<th>Default Size(Byte)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>short</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>int</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>long</td>
+<td>0L</td>
+<td>8</td>
+</tr>
+<tr>
+<td>float</td>
+<td>0.0f</td>
+<td>4</td>
+</tr>
+<tr>
+<td>double</td>
+<td>0.0d</td>
+<td>8</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>false</td>
+<td>1 bit</td>
+</tr>
+<tr>
+<td>char</td>
+<td>&lsquo;\u0000&rsquo;</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>以上除了 <code>boolean</code>, 都属于Numeric</li>
+<li>all nemeric data types are signed</li>
+<li>standardized: 在所有平台上数据类型的大小是一致的</li>
+<li>char 是 2 Bytes, 因为使用了 Unicode, 范围是 \u0000 到 \uffff</li>
+</ul>
+<a href="#非原始数据类型-non-primitive-data-type"><h3 id="非原始数据类型-non-primitive-data-type"><span class="hanchor" ariaLabel="Anchor"># </span>非原始数据类型 Non-primitive Data Type</h3></a>
+<p>string
+array
+etc</p>
+<a href="#流程控制"><h2 id="流程控制"><span class="hanchor" ariaLabel="Anchor"># </span>流程控制</h2></a>
+<a href="#condition"><h3 id="condition"><span class="hanchor" ariaLabel="Anchor"># </span>Condition</h3></a>
+<a href="#if--else-if--else"><h4 id="if--else-if--else"><span class="hanchor" ariaLabel="Anchor"># </span>if &hellip; else if &hellip; else</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">if</span> <span class="o">(</span><span class="n">con1</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// do somethin
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">con2</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#switch"><h4 id="switch"><span class="hanchor" ariaLabel="Anchor"># </span>switch</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">switch</span><span class="o">(</span><span class="n">expr</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="n">val1</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">break</span><span class="o">;</span> 
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="n">val2</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">break</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">default</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">break</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#break-语句的作用"><h5 id="break-语句的作用"><span class="hanchor" ariaLabel="Anchor"># </span>break 语句的作用</h5></a>
+<p>如果没有 break 语句, 程序会继续执行下一条 case
+break 并不是必须的.</p>
+<a href="#loop"><h3 id="loop"><span class="hanchor" ariaLabel="Anchor"># </span>Loop</h3></a>
+<a href="#for"><h4 id="for"><span class="hanchor" ariaLabel="Anchor"># </span>for</h4></a>
+<p>两种语法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 2 for each
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">:</span><span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#while"><h4 id="while"><span class="hanchor" ariaLabel="Anchor"># </span>while</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">while</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#do--while"><h4 id="do--while"><span class="hanchor" ariaLabel="Anchor"># </span>do &hellip; while</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">do</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// something 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span> <span class="k">while</span> <span class="o">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>和 <a href="#while" rel="noopener" class="internal-link" data-src=""></a> 的区别在于 do block 内的代码必定执行一次</p>
+<a href="#function"><h2 id="function"><span class="hanchor" ariaLabel="Anchor"># </span>Function</h2></a>
+<p>好像没啥说的?</p>
+<a href="#exception-handling"><h2 id="exception-handling"><span class="hanchor" ariaLabel="Anchor"># </span>Exception Handling</h2></a>
+<a href="#exception-hierarchy"><h3 id="exception-hierarchy"><span class="hanchor" ariaLabel="Anchor"># </span>Exception Hierarchy</h3></a>
+<ul>
+<li>Object
+<ul>
+<li>Throwable
+<ul>
+<li>Exception</li>
+<li>Error</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#exception"><h3 id="exception"><span class="hanchor" ariaLabel="Anchor"># </span>Exception</h3></a>
+<p>Exceptions are unwanted events that interupts the normal flow of program, but within control.
+e.g.</p>
+<ul>
+<li>invalid user input</li>
+<li>loss of network connection</li>
+<li>unavailable file</li>
+</ul>
+<a href="#error"><h3 id="error"><span class="hanchor" ariaLabel="Anchor"># </span>Error</h3></a>
+<p>Errors are irrecoverable conditions that the program cannot handle.
+e.g.</p>
+<ul>
+<li>JVM out of memory</li>
+<li>memory leaking</li>
+<li>stack overflow</li>
+<li>library incompatibility</li>
+<li>infinite recursion</li>
+</ul>
+<a href="#types-of-exceptions"><h3 id="types-of-exceptions"><span class="hanchor" ariaLabel="Anchor"># </span>Types of Exceptions</h3></a>
+<ul>
+<li>User-Defined Exception</li>
+<li>Built-in Exception
+<ul>
+<li>Checked Exception
+<ul>
+<li>ClassNotFoundException</li>
+<li>InterruptedException</li>
+<li>IOException</li>
+<li>InstantiationException</li>
+<li>SQLException</li>
+<li>FileNotFoundException</li>
+</ul>
+</li>
+<li>Unchecked Exception
+<ul>
+<li>ArithmeticException</li>
+<li>ClassCastException</li>
+<li>NullPointerException</li>
+<li>ArrayIndexOutOfBoundsException</li>
+<li>ArrayStoreException</li>
+<li>IllegalThreadStateException</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Checked Exceptions</strong>
+在编译时可以被编译器发现的</p>
+<p><strong>Unchecked Exceptions</strong>
+只有在运行中才会被发现的</p>
+<a href="#try--catch--finally"><h3 id="try--catch--finally"><span class="hanchor" ariaLabel="Anchor"># </span>try &hellip; catch &hellip; finally</h3></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">try</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">ArithmeticException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>  <span class="c1">// Out: by zero
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#throw-throws"><h3 id="throw-throws"><span class="hanchor" ariaLabel="Anchor"># </span>throw, throws</h3></a>
+<p><code>throws</code> 在方法的头部声明(可能出现的)异常, 以便将异常传递到方法外处理</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">returnType</span> <span class="nf">method_name</span><span class="o">(</span><span class="n">paramList</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="mi">1</span><span class="o">,</span><span class="n">Exception2</span><span class="o">,</span> <span class="o">...</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>throw</code> 直接手动抛出一个异常, 后接 Throwable 对象</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalArgumentException</span><span class="o">(</span><span class="s">&#34;用户名长度必须大于 8 位！&#34;</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用的对比</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_throws</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">FileInputStream</span> <span class="n">fis</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="s">&#34;a.txt&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">test_throw</span><span class="o">(</span><span class="n">String</span> <span class="n">username</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">boolean</span> <span class="n">res</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="o">(</span><span class="n">username</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalArgumentException</span><span class="o">(</span><span class="s">&#34;用户名长度不足8位.&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">		<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">res</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">		<span class="o">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">res</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// throws
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">try</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">test_throws</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>  <span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="c1">// throw
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;请输入用户名：&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">String</span> <span class="n">username</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">		<span class="k">try</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="kt">boolean</span> <span class="n">con</span> <span class="o">=</span> <span class="n">test_throw</span><span class="o">(</span><span class="n">username</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IllegalArgumentException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>  <span class="c1">// Out: java.lang.IllegalArgumentException: 用户名长度不足8位.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="o">}</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#重写方法时异常声明的限制"><h3 id="重写方法时异常声明的限制"><span class="hanchor" ariaLabel="Anchor"># </span>重写方法时异常声明的限制</h3></a>
+<p>如果父类方法声明了异常, 那么子类方法重写时只能声明该异常本身或其子类.</p>
+<a href="#package"><h2 id="package"><span class="hanchor" ariaLabel="Anchor"># </span>Package</h2></a>
+<a href="#java-package-的作用"><h3 id="java-package-的作用"><span class="hanchor" ariaLabel="Anchor"># </span>Java Package 的作用</h3></a>
+<ul>
+<li>数据封装: 包相当于把一些类封装(encapsulate)到一起</li>
+<li>建立命名空间</li>
+<li>access controll</li>
+</ul>
+<a href="#包"><h3 id="包"><span class="hanchor" ariaLabel="Anchor"># </span>包</h3></a>
+<p>包名和文件路径相关, 比如说 包<code>college.staff.cse</code> 在 /college/staff/cse, 将一个 .java 文件放在目录下, 并在开头使用 <code>package</code>关键字, 就会划入包</p>
+<p>命名大约就是 单位.领域.子领域, 如 college.tech.cse, college.art.history</p>
+<p>如果有同名类, 需要用全称(带包名的类名)</p>
+<a href="#import"><h3 id="import"><span class="hanchor" ariaLabel="Anchor"># </span>import</h3></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">java.util.vector</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span> <span class="c1">// 引入所有类, 但子包的不会
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#import-static"><h3 id="import-static"><span class="hanchor" ariaLabel="Anchor"># </span>import static</h3></a>
+<p>Java 5+
+通过 <code>import static</code> 语法引入的类, 其字段和方法会在引入时被隐性 static 声明</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Note static keyword after import.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kn">import static</span> <span class="nn">java.lang.System.*</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">StaticImportDemo</span>
+</span></span><span class="line"><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="err">   </span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span>
+</span></span><span class="line"><span class="cl"><span class="err">   </span><span class="o">{</span><span class="err">      </span>
+</span></span><span class="line"><span class="cl"><span class="err">        </span><span class="c1">// We don&#39;t need to use &#39;System.out&#39; 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">        </span><span class="c1">// as imported using static.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">        </span><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;GeeksforGeeks&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="err">   </span><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#重名冲突"><h3 id="重名冲突"><span class="hanchor" ariaLabel="Anchor"># </span>重名冲突</h3></a>
+<p>如果有两个 *引入 引发了重名冲突, 如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 两者都包含 Date 类
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">java.sql.*</span><span class="o">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>则用非*的引入其中一个重名(Date)</p>
+<a href="#classpath"><h3 id="classpath"><span class="hanchor" ariaLabel="Anchor"># </span>CLASSPATH</h3></a>
+<p>可以在使用每些shell的时候使用<strong>临时</strong> CLASSPATH</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&gt; SET CLASSPATH=.;c:\javaproject\classes;d:\tomcat\lib\servlet-api.jar
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>or</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&gt; java –classpath c:\javaproject\classes com.abc.project1.subproject2.MyClass3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果希望<strong>永久</strong>引入, 也就是说在以后也能 import 一个 .jar 包或者 .class 文件, copy the jar file in the jre/lib/ext</p>
+<a href="#java-项目包管理示例"><h3 id="java-项目包管理示例"><span class="hanchor" ariaLabel="Anchor"># </span>Java 项目包管理示例</h3></a>
+<p><a class="internal-link broken">260</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">package_one.ClassTwo</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">package_name.ClassOne</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Testing</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="err">    </span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl"><span class="err">        </span><span class="n">ClassTwo</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ClassTwo</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="err">        </span><span class="n">ClassOne</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ClassOne</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="err">        </span><span class="n">a</span><span class="o">.</span><span class="na">methodClassTwo</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="err">        </span><span class="n">b</span><span class="o">.</span><span class="na">methodClassOne</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="err">    </span><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#java-oop"><h2 id="java-oop"><span class="hanchor" ariaLabel="Anchor"># </span>Java OOP</h2></a>
+<a href="#class"><h3 id="class"><span class="hanchor" ariaLabel="Anchor"># </span>Class</h3></a>
+<p>类就是类啊, 类名应和文件名同名, 后缀 .java 是源文件, .class 是类文件也就是编译后的文件.
+一个类可以有:</p>
+<ul>
+<li>成员变量</li>
+<li>方法</li>
+<li>constructor</li>
+<li>子类</li>
+</ul>
+<a href="#constructor"><h4 id="constructor"><span class="hanchor" ariaLabel="Anchor"># </span>constructor</h4></a>
+<p>与类同名的方法, 可以多个, 可以省略不写, 不能用 static/final 修饰
+构造器省略, 则 JVM 会自动创建一个无参的构造函数</p>
+<a href="#interfaces"><h3 id="interfaces"><span class="hanchor" ariaLabel="Anchor"># </span>Interfaces</h3></a>
+<a href="#创建-interface"><h4 id="创建-interface"><span class="hanchor" ariaLabel="Anchor"># </span>创建 interface</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// A simple interface
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">interface</span> <span class="nc">In1</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="err">    </span><span class="c1">// public, static and final  // 实现了此接口的类可以直接使用a
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kd">final</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="err">    </span><span class="c1">// public and abstract
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">    </span><span class="kt">void</span> <span class="nf">display</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#implements"><h4 id="implements"><span class="hanchor" ariaLabel="Anchor"># </span>implements</h4></a>
+<p>必须实现</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">TestClas</span> <span class="kd">implements</span> <span class="n">In1</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="nf">display</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// some codes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#object"><h3 id="object"><span class="hanchor" ariaLabel="Anchor"># </span>Object</h3></a>
+<p>Object, 有 State, 有 Behavior, 有 Identity
+在 Java 中, 所有类都是 Object 的子类</p>
+<a href="#inheritance"><h3 id="inheritance"><span class="hanchor" ariaLabel="Anchor"># </span>Inheritance</h3></a>
+<p>在 Java 中, 一个类不能继承多个类(类似的功能只能通过接口实现)
+建议在 <code>is-a</code> 关系时才使用继承</p>
+<a href="#extends"><h4 id="extends"><span class="hanchor" ariaLabel="Anchor"># </span>extends</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">subclass</span> <span class="kd">extends</span> <span class="n">baseclass</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#override-重写"><h4 id="override-重写"><span class="hanchor" ariaLabel="Anchor"># </span>override 重写</h4></a>
+<p>子类可以重写父类的方法.
+如果子类调用一个方法, 会先检查子类是否有该方法或重写了该方法, 然后检查父类中时候实现了该方法.</p>
+<p>想要重写方法, 在子类被重写的方法前添加 <code>@Override</code> 关键字</p>
+<a href="#polymorphism"><h3 id="polymorphism"><span class="hanchor" ariaLabel="Anchor"># </span>Polymorphism</h3></a>
+<a href="#runtime-polymorphismdynamic-method-dispatch"><h4 id="runtime-polymorphismdynamic-method-dispatch"><span class="hanchor" ariaLabel="Anchor"># </span>Runtime polymorphism/Dynamic Method Dispatch</h4></a>
+<p>指调用方法时的<a href="/permanent/%E5%A4%9A%E6%80%81" rel="noopener" class="internal-link" data-src="/permanent/%E5%A4%9A%E6%80%81">多态</a>, 也就是在运行时, 才根据变量的内容决定调用哪个函数
+Rule: Runtime polymorphism can&rsquo;t be achieved by data members.</p>
+<p><strong>Upcasting</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Animal</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="o">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#abstraction"><h3 id="abstraction"><span class="hanchor" ariaLabel="Anchor"># </span>Abstraction</h3></a>
+<a href="#abstraction-in-oop"><h4 id="abstraction-in-oop"><span class="hanchor" ariaLabel="Anchor"># </span>Abstraction in OOP</h4></a>
+<a href="#data-abstraction"><h5 id="data-abstraction"><span class="hanchor" ariaLabel="Anchor"># </span>Data Abstraction</h5></a>
+<p>使用复杂的数据结构通常会隐藏其内部细节</p>
+<a href="#control-abstraction"><h5 id="control-abstraction"><span class="hanchor" ariaLabel="Anchor"># </span>Control Abstraction</h5></a>
+<p>控制抽象收集了作为应用程序一部分的所有控制语句，并将它们作为一个单元公开。当我们必须使用这个控制单元执行一个工作功能时，就会用到这个功能。 控制抽象构成了结构化编程的主要单元，使用控制抽象我们可以在复杂的框架中定义简单的功能。</p>
+<a href="#java-abstraction-class"><h4 id="java-abstraction-class"><span class="hanchor" ariaLabel="Anchor"># </span>Java Abstraction Class</h4></a>
+<p>Java 抽象类类似于父类和接口的结合
+抽象方法<strong>不能</strong>有 <code>abstract</code> 以外的限定修饰词, 如 <code>abstract static</code>
+抽象类<strong>可以 implements 接口且不实现接口</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="c1">//abstract class
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Car</span><span class="o">{</span><span class="err"> </span>
+</span></span><span class="line"><span class="cl"><span class="err">    </span><span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">accelerate</span><span class="o">();</span><span class="err"> </span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span><span class="err"> </span>
+</span></span><span class="line"><span class="cl"><span class="c1">//concrete class
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">class</span> <span class="nc">Suzuki</span> <span class="kd">extends</span> <span class="n">Car</span><span class="o">{</span><span class="err"> </span>
+</span></span><span class="line"><span class="cl"><span class="err">    </span><span class="kt">void</span> <span class="nf">accelerate</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl"><span class="err">        </span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="err">`</span><span class="s">&#34;Suzuki::accelerate&#34;</span><span class="err">`</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="err">    </span><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Main</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="err">    </span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]){</span><span class="err"> </span>
+</span></span><span class="line"><span class="cl"><span class="err">        </span><span class="n">Car</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Suzuki</span><span class="o">();</span><span class="err">   </span> <span class="c1">//Car object =&gt;contents of Suzuki
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">        </span><span class="n">obj</span><span class="o">.</span><span class="na">accelerate</span><span class="o">();</span><span class="err">         </span> <span class="c1">//call the method 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">    </span><span class="o">}</span><span class="err">  </span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#encapsulation"><h3 id="encapsulation"><span class="hanchor" ariaLabel="Anchor"># </span>Encapsulation</h3></a>
+<a href="#java-encapsulation"><h4 id="java-encapsulation"><span class="hanchor" ariaLabel="Anchor"># </span>Java Encapsulation</h4></a>
+<p>指的是把数据(字段和方法)封装在一个单独的类里, 外部类不能随意修改
+涉及到 private, get/set 方法</p>
+<a href="#file-io"><h2 id="file-io"><span class="hanchor" ariaLabel="Anchor"># </span>File, I/O</h2></a>
+<blockquote>
+<p>src: 
+<a href="https://www.marcobehler.com/guides/java-files#_writing_reading_files" rel="noopener">Java&rsquo;s File API</a></p>
+</blockquote>
+<p>Java 有两个 File API,
+java.io.File(Java 1.0+)
+java.nio.file.Path, java.nio.file.Files(Java 1.7+ 以下使用的版本)</p>
+<a href="#获取文件路径"><h4 id="获取文件路径"><span class="hanchor" ariaLabel="Anchor"># </span>获取文件路径</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="c1">// Java &lt; 11
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Path</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&#34;c:/dev/readme.txt&#34;</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="c1">// Java 11+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Path</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;c:/dev/readme.txt&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;c:&#34;</span><span class="o">,</span> <span class="s">&#34;dev&#34;</span><span class="o">,</span> <span class="s">&#34;readme.txt&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;c:&#34;</span><span class="o">,</span> <span class="s">&#34;dev&#34;</span><span class="o">).</span><span class="na">resolve</span><span class="o">(</span><span class="s">&#34;readme.txt&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="k">new</span> <span class="n">URI</span><span class="o">(</span><span class="s">&#34;file:///c:/dev/readme.txt&#34;</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#检查文件是否存在"><h4 id="检查文件是否存在"><span class="hanchor" ariaLabel="Anchor"># </span>检查文件是否存在</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="kt">boolean</span> <span class="n">file_exists</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">exists</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#文件属性"><h4 id="文件属性"><span class="hanchor" ariaLabel="Anchor"># </span>文件属性</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="n">FileTime</span> <span class="n">lastModifiedTime</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">getLastModifiedTime</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">UserPrincipal</span> <span class="n">owner</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">getOwner</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#创建文件或文件夹"><h4 id="创建文件或文件夹"><span class="hanchor" ariaLabel="Anchor"># </span>创建文件或文件夹</h4></a>
+<p><strong>临时</strong>, 但他们不会自己删除, 要记得手动删除</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="c1">// 在Temp文件夹创建带固定前缀的临时文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Path</span> <span class="n">tempFile1</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">createTempFile</span><span class="o">(</span><span class="s">&#34;prefixOrNull&#34;</span><span class="o">,</span> <span class="s">&#34;.txt&#34;</span><span class="o">);</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 在指定路径创建临时文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Path</span> <span class="n">tempFile2</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">createTempFile</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">getParent</span><span class="o">(),</span> <span class="s">&#34;prefix&#34;</span><span class="o">,</span> <span class="s">&#34;.jpg&#34;</span><span class="o">);</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 在Temp文件夹创建临时目录
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Path</span> <span class="n">tempDir</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">createTempDirectory</span><span class="o">(</span><span class="s">&#34;prefix&#34;</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>一般</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="n">Path</span> <span class="n">newDir</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">createDirectory</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">getParent</span><span class="o">().</span><span class="na">resolve</span><span class="o">(</span><span class="s">&#34;newDir&#34;</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl"><span class="n">Path</span> <span class="n">tempFile1</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">createFile</span><span class="o">(</span><span class="n">newDir</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="s">&#34;newFile.txt&#34;</span><span class="o">));</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#查看-posix-权限unix"><h4 id="查看-posix-权限unix"><span class="hanchor" ariaLabel="Anchor"># </span>查看 Posix 权限(Unix)</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="n">Path</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&#34;c:\\dev\\licenses\\windows\\readme.txt&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Set</span><span class="o">&lt;</span><span class="n">PosixFilePermission</span><span class="o">&gt;</span> <span class="n">permissions</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">getPosixFilePermissions</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;permissions = &#34;</span> <span class="o">+</span> <span class="n">permissions</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">UnsupportedOperationException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Looks like you&#39;re not running on a posix file system&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#文件写入"><h4 id="文件写入"><span class="hanchor" ariaLabel="Anchor"># </span>文件写入</h4></a>
+<a href="#写入字符串"><h5 id="写入字符串"><span class="hanchor" ariaLabel="Anchor"># </span>写入字符串</h5></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="n">Path</span> <span class="n">utf8File</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">createTempFile</span><span class="o">(</span><span class="s">&#34;utf8&#34;</span><span class="o">,</span> <span class="s">&#34;.txt&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">Files</span><span class="o">.</span><span class="na">writeString</span><span class="o">(</span><span class="n">utf8File</span><span class="o">,</span> <span class="s">&#34;A String üü&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Path</span> <span class="n">iso88591</span> <span class="o">=</span> <span class="n">File</span><span class="o">.</span><span class="na">createTempFile</span><span class="o">(</span><span class="s">&#34;iso88591&#34;</span><span class="o">,</span> <span class="s">&#34;.txt&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">Files</span><span class="o">.</span><span class="na">writeString</span><span class="o">(</span><span class="n">iso88591</span><span class="o">,</span> <span class="s">&#34;A String üü&#34;</span><span class="o">,</span> <span class="n">StandardCharsets</span><span class="o">.</span><span class="na">ISO_8859_1</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#写入字节"><h5 id="写入字节"><span class="hanchor" ariaLabel="Anchor"># </span>写入字节</h5></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="n">Files</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">anotherIso88591File</span><span class="o">,</span> <span class="s">&#34;this is my string ää öö üü&#34;</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(</span><span class="n">StandardCharsets</span><span class="o">.</span><span class="na">ISO_8859_1</span><span class="o">));</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#写入时的选项"><h5 id="写入时的选项"><span class="hanchor" ariaLabel="Anchor"># </span>写入时的选项</h5></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="n">Files</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">filename</span><span class="o">,</span> <span class="s">&#34;string&#34;</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(),</span> <span class="n">StandardOpenOption</span><span class="o">.</span><span class="na">CREATE</span><span class="o">,</span> <span class="n">StandardOpenOption</span><span class="o">.</span><span class="na">TRUNCATE_EXISTING</span><span class="o">,</span> <span class="n">StandardOpenOption</span><span class="o">.</span><span class="na">WRITE</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>默认是不存在则创建, 存在则在截断(truncated)
+
+<a href="https://docs.oracle.com/javase/7/docs/api/java/nio/file/StandardOpenOption.html" rel="noopener">其他选项</a></p>
+<a href="#writer-和-outputstream"><h5 id="writer-和-outputstream"><span class="hanchor" ariaLabel="Anchor"># </span>Writer 和 OutputStream</h5></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="k">try</span> <span class="o">(</span><span class="n">BufferedWriter</span> <span class="n">bufferedWriter</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">newBufferedWriter</span><span class="o">(</span><span class="n">utfFile</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// handle reader
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="o">(</span><span class="n">OutputStream</span> <span class="n">os</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">newOutputStream</span><span class="o">(</span><span class="n">utfFile</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// handle outputstream
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#文件读取"><h4 id="文件读取"><span class="hanchor" ariaLabel="Anchor"># </span>文件读取</h4></a>
+<a href="#读取字符串"><h5 id="读取字符串"><span class="hanchor" ariaLabel="Anchor"># </span>读取字符串</h5></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">readString</span><span class="o">(</span><span class="n">utfFile</span><span class="o">);</span> <span class="c1">// utf8
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">s</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">readString</span><span class="o">(</span><span class="n">utfFile</span><span class="o">,</span> <span class="n">StandardCharsets</span><span class="o">.</span><span class="na">ISO_8859_1</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#读取字节"><h5 id="读取字节"><span class="hanchor" ariaLabel="Anchor"># </span>读取字节</h5></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="n">Files</span><span class="o">.</span><span class="na">readAllBytes</span><span class="o">(</span><span class="n">utfFile</span><span class="o">),</span> <span class="n">StandardCharsets</span><span class="o">.</span><span class="na">UTF_8</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#reader-and-inputstream"><h5 id="reader-and-inputstream"><span class="hanchor" ariaLabel="Anchor"># </span>Reader and InputStream</h5></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="k">try</span> <span class="o">(</span><span class="n">BufferedReader</span> <span class="n">bufferedReader</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">newBufferedReader</span><span class="o">(</span><span class="n">utfFile</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// handle reader
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="o">(</span><span class="n">InputStream</span> <span class="n">is</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">newInputStream</span><span class="o">(</span><span class="n">utfFiles</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// handle inputstream
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#移动-删除--list-文件"><h4 id="移动-删除--list-文件"><span class="hanchor" ariaLabel="Anchor"># </span>移动, 删除,  list 文件</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="c1">// 移动 test.jpg → c:\temp\test.jpg
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Files</span><span class="o">.</span><span class="na">move</span><span class="o">(</span><span class="n">filepath</span><span class="o">,</span> <span class="n">Path</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">target_path_string</span><span class="o">).</span><span class="na">resolve</span><span class="o">(</span><span class="n">filepath</span><span class="o">.</span><span class="na">getFileName</span><span class="o">().</span><span class="na">toString</span><span class="o">())[,</span><span class="n">options</span><span class="o">]);</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// StandardCopyOption.REPLACE_EXISTING
+</span></span></span><span class="line"><span class="cl"><span class="c1">// catch (FileAlreadyExistsException e)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  
+</span></span><span class="line"><span class="cl"><span class="c1">// 删除 空dir
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 删除 非空文件夹, 思路是用 Files.walk(dir) 遍历
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">try</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Files</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">DirectoryNotEmptyException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// list files
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 同级同目录下
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">try</span> <span class="o">(</span><span class="n">var</span> <span class="n">files</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">list</span><span class="o">(</span><span class="n">temDir</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">files</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 指定文件类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">try</span> <span class="o">(</span><span class="n">var</span> <span class="n">files</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">newDirectoryStream</span><span class="o">(</span><span class="n">tmpDir</span><span class="o">,</span> <span class="s">&#34;.txt&#34;</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">files</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// -r
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">try</span> <span class="o">(</span><span class="n">var</span> <span class="n">files</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">walk</span><span class="o">(</span><span class="n">tmpDir</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">files</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+      </div>
+    </article>
+    
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      <li>
+        <a href="/permanent/%E5%A4%9A%E6%80%81/" data-ctx="Polymorphism" data-src="/permanent/%E5%A4%9A%E6%80%81" class="internal-link">多态</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/permanent/Java/" data-ctx="Java 基础" data-src="/permanent/Java" class="internal-link">Java</a>
+      </li>
+      
+      
+      
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="https://tongluoshao.space/js/graph.6579af7b10c818dbd2ca038702db0224.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        <p style="margin:10px; ">
+        
+        
+        Made by evixenon using <a href="https://github.com/jackyzha0/quartz">Quartz</a>, © 2023
+
+        &nbsp;|&nbsp;粤 ICP 备2022002978号-1</p>
+
+        <ul>
+            
+            <li><a href="https://tongluoshao.space/">Home</a></li>
+            <li><a href="https://github.com/evixenon">GitHub</a></li><li><a href="https://space.bilibili.com/8557634">Bilibili</a></li></ul>
+    </footer>
+</div>
+
+
+</div>
+</body>
+</html>

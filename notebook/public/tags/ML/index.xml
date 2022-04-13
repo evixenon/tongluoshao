@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ML on </title>
+    <link>https://tongluoshao.space/tags/ML/</link>
+    <description>Recent content in ML on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/ML/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clustering</title>
+      <link>https://tongluoshao.space/permanent/Clustering/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Clustering/</guid>
+      <description>Clustering 聚类
+聚类算法 K-Mean 很常见的聚类算法 输入 n 维向量的点集 输出 每个点的类标签 算法 确定初始的类中心点 $\mu_1, \ &amp;hellip;, \ \mu_k$ (e.g. 随机) 计算点集中的每个点与哪个中心最近, 则这个点标上此类的标签 重新计算类中心点, 使该类所有点到该点的总距离最小 重复2,3步, 直到无变化或到达精度要求 DBSCAN 基于密度的聚类算法 动画: DBSCAN - bilibili 概念 核心点 core point/core object: 辐射半径内至少有 n 个其他点 非核心点 辐射半径: 一个自定义的半径 离群点: 辐射半径内一个其他点都没有 输入 辐射半径 n: 成为核心点需要周围有 n 个点 输出 每个点的簇 算法 找到所有核心点 从任意一个核心点开始, 将其与其半径内的所有核心点加入第一个簇 重复2直到对所有核心点处理完成 将所有核心点周围的非核心点加入该簇(没说冲突怎么处理) 剩下的点是离群点 </description>
+    </item>
+    
+    <item>
+      <title>Data Mining</title>
+      <link>https://tongluoshao.space/permanent/Data-Mining/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Data-Mining/</guid>
+      <description>tasks of data mining supervised: Classification Regression unsupervised: [[permanent/Clustering]] Outlier Detection techniques [[permanent/KDD]]</description>
+    </item>
+    
+    <item>
+      <title>GPT</title>
+      <link>https://tongluoshao.space/permanent/GPT/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/GPT/</guid>
+      <description> Generative Pre-trained Transformer </description>
+    </item>
+    
+    <item>
+      <title>KDD</title>
+      <link>https://tongluoshao.space/permanent/KDD/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/KDD/</guid>
+      <description>Knowledge Discovery in Databases 是指从数据库的大量数据中发现有用知识的技术 一种[[permanent/Data Mining|数据挖掘]]技术 主要过程: 数据准备和选择 数据清洗 纳入数据集的先验知识 转译为精确结果 </description>
+    </item>
+    
+    <item>
+      <title>LLM</title>
+      <link>https://tongluoshao.space/permanent/LLM/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/LLM/</guid>
+      <description>large language model 目的: 让机器学习到最符合人类说话逻辑的表达 方法: likelihood + 大力出奇迹 什么叫大: 训练参数超过10亿我们通常就叫大模型 底层基础设施 -&amp;gt; 框架 -&amp;gt; 大模型 (Prompt engineering) -&amp;gt; 应用</description>
+    </item>
+    
+    <item>
+      <title>NLTK</title>
+      <link>https://tongluoshao.space/permanent/NLTK/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/NLTK/</guid>
+      <description>https://www.nltk.org/book/
+Introduction natural language toolkit, python 库
+help 1 2 nltk.help.upenn_tagset(&amp;#39;DT&amp;#39;) nltk.help.brown_tagset(&amp;#39;DT&amp;#39;) 大类:预处理 根据两个任务拆分 syntax analyse parser 的简要说明 Syntax Analyse with formal Grammar 根据输入的语法规则, 分析给定句子的结构</description>
+    </item>
+    
+    <item>
+      <title>知识增强大模型</title>
+      <link>https://tongluoshao.space/permanent/%E7%9F%A5%E8%AF%86%E5%A2%9E%E5%BC%BA%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%9F%A5%E8%AF%86%E5%A2%9E%E5%BC%BA%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid>
+      <description>大规模预训练模型 简称大模型, 主要类型有:
+NLP语言处理大模型: 处理文本内容, 如 ChatGPT, 百度文心一言 计算机视觉大模型: 主要处理图像内容, 如购物软件的搜图 跨模态大模型: 多模态, 如 AI作画 科学计算大模型: 能够更好地发现规律, 如蛋白质形态预测 知识增强大模型 整合了知识图谱的大模型, 对歧义内容的处理能力更强</description>
+    </item>
+    
+  </channel>
+</rss>

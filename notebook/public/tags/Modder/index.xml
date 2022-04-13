@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modder on </title>
+    <link>https://tongluoshao.space/tags/Modder/</link>
+    <description>Recent content in Modder on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/Modder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HarmonyPatch</title>
+      <link>https://tongluoshao.space/permanent/HarmonyPatch/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/HarmonyPatch/</guid>
+      <description>官方文档
+Prefix 主要用于跳过原函数, 修改传入值 prefix 中的参数还可以传递给 postfix 使用时需要额外定义一个形参 ref 原函数返回类型 __result , 用来接受返回值. 而 prefix 函数 return 一个 布尔值(true 表示执行完 prefix 后继续执行原函数, false 表示跳过原函数)</description>
+    </item>
+    
+    <item>
+      <title>宵夜97 - 太吾绘卷 Mod 制作</title>
+      <link>https://tongluoshao.space/permanent/%E5%AE%B5%E5%A4%9C97-%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7-Mod-%E5%88%B6%E4%BD%9C/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AE%B5%E5%A4%9C97-%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7-Mod-%E5%88%B6%E4%BD%9C/</guid>
+      <description>视频链接
+https://www.bilibili.com/video/BV1Fd4y1z7jV/?spm_id_from=333.999.0.0&amp;vd_source=92451653bea4ed324c9bfc0287256aa5
+灰机wiki - 太吾 Mod 制作
+主要相关 managed-AC, managed-TaiWuModLib, backend-GameData
+Mod 的文件夹结构 mod名文件夹 - Config.lua - Settings.lua - Plugins - xxx.</description>
+    </item>
+    
+  </channel>
+</rss>

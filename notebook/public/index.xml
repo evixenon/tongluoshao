@@ -1,0 +1,3221 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>_index on </title>
+    <link>https://tongluoshao.space/</link>
+    <description>Recent content in _index on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Access Token Manipulation</title>
+      <link>https://tongluoshao.space/permanent/Access-Token-Manipulation/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Access-Token-Manipulation/</guid>
+      <description>Access Token Manipulation 通过操纵访问令牌(Access Token), 以另一个用户/系统进行交互, 绕过访问控制验证, 以此获得未经授权的访问能力
+Access Token Manipulation 分类 Token Impersonation/Theft Create Process with Token Make and Impersonate Token Parent PID Spoofing SID-History Injection 防御措施 检测</description>
+    </item>
+    
+    <item>
+      <title>ANSI</title>
+      <link>https://tongluoshao.space/permanent/ANSI/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/ANSI/</guid>
+      <description>American National Standards Institute 美国国家标准化组织</description>
+    </item>
+    
+    <item>
+      <title>ASCII</title>
+      <link>https://tongluoshao.space/permanent/ASCII/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/ASCII/</guid>
+      <description>128 个编码, 用 8 bits 存储 现在已是 [[permanent/Unicode]] 的一部分 ASCII 表 Bin(二进制) Oct(八进制) Dec(十进制) Hex(十六进制) 缩写/字符 解释 0000 0000 00 0 0x00 NUL(null) 空字符 0000 0001 01 1 0x01 SOH(start of headline) 标题开始 0000 0010 02 2 0x02 STX (start of text) 正文开始 0000 0011 03 3 0x03 ETX (end of text) 正文结束 0000 0100 04 4 0x04 EOT (end of transmission) 传输结束 0000 0101 05 5 0x05 ENQ (enquiry) 请求 0000 0110 06 6 0x06 ACK (acknowledge) 收到通知 0000 0111 07 7 0x07 BEL (bell) 响铃 0000 1000 010 8 0x08 BS (backspace) 退格 0000 1001 011 9 0x09 HT (horizontal tab) 水平制表符 0000 1010 012 10 0x0A LF (NL line feed, new line) 换行键 0000 1011 013 11 0x0B VT (vertical tab) 垂直制表符 0000 1100 014 12 0x0C FF (NP form feed, new page) 换页键 0000 1101 015 13 0x0D CR (carriage return) 回车键 0000 1110 016 14 0x0E SO (shift out) 不用切换 0000 1111 017 15 0x0F SI (shift in) 启用切换 0001 0000 020 16 0x10 DLE (data link escape) 数据链路转义 0001 0001 021 17 0x11 DC1 (device control 1) 设备控制1 0001 0010 022 18 0x12 DC2 (device control 2) 设备控制2 0001 0011 023 19 0x13 DC3 (device control 3) 设备控制3 0001 0100 024 20 0x14 DC4 (device control 4) 设备控制4 0001 0101 025 21 0x15 NAK (negative acknowledge) 拒绝接收 0001 0110 026 22 0x16 SYN (synchronous idle) 同步空闲 0001 0111 027 23 0x17 ETB (end of trans.</description>
+    </item>
+    
+    <item>
+      <title>B 树</title>
+      <link>https://tongluoshao.space/permanent/B-%E6%A0%91/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/B-%E6%A0%91/</guid>
+      <description>B 树 数据在硬盘上存储在硬盘块(如4kb block) 每一个非叶子节点都有指针 =&amp;gt; 很贵 在内部可以用二分法快速查找 ![[attachments/Pasted image 20221219143812.png|600]] B 树的阶 m 每个节点最多有 2m key 每个非根节点最少有 m key, 根节点最少 1 key 一个节点如果有 k key, 就有 k+1 子节点 所有叶子节点在同一层级 max height: $h \leq \lfloor \log_{m+1}(\frac{n+1}{2}) \rfloor + 1$ (n=#key)</description>
+    </item>
+    
+    <item>
+      <title>B&#43; 树</title>
+      <link>https://tongluoshao.space/permanent/B&#43;-%E6%A0%91/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/B&#43;-%E6%A0%91/</guid>
+      <description>B+ 树 内部节点不保存数据, 只保存值, 所有的数据只保存在叶子节点 数据磁盘块之间加入了连接 在 B 树的基础上:
+分离 Directory 和 Datei 在有序作业时提升了效率 有序作业(de. sequentielle Verarbeitung) e.g. “Nenne mir alle Studierenden, deren Nachname im Bereich [Be &amp;hellip; Brz] liegt.</description>
+    </item>
+    
+    <item>
+      <title>bat 创建防火墙入站规则</title>
+      <link>https://tongluoshao.space/permanent/bat-%E5%88%9B%E5%BB%BA%E9%98%B2%E7%81%AB%E5%A2%99%E5%85%A5%E7%AB%99%E8%A7%84%E5%88%99/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/bat-%E5%88%9B%E5%BB%BA%E9%98%B2%E7%81%AB%E5%A2%99%E5%85%A5%E7%AB%99%E8%A7%84%E5%88%99/</guid>
+      <description>教程来源
+1 2 3 4 5 6 7 8 9 10 11 12 13 @echo off netsh advfirewall firewall show rule name=rdp4413 &amp;gt;nul echo .</description>
+    </item>
+    
+    <item>
+      <title>Buffer Overflows</title>
+      <link>https://tongluoshao.space/permanent/Buffer-Overflows/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Buffer-Overflows/</guid>
+      <description>Buffer Overflows 目的
+程序崩溃 Absturz 损毁数据 操纵程序运行时的环境, 尤其是返回地址 stack smashing 1) to write/over-allocate too much data in a given part of the stack, thereby overwriting another part of the stack, and</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://tongluoshao.space/permanent/C&#43;&#43;/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/C&#43;&#43;/</guid>
+      <description>磨刀 VScode环境配置官方文档
+基础 [[permanent/C++基础|C++基础]]</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;基础</title>
+      <link>https://tongluoshao.space/permanent/C&#43;&#43;%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/C&#43;&#43;%E5%9F%BA%E7%A1%80/</guid>
+      <description>你可以看看你 D:\编程\洛谷书练习 的代码和注释</description>
+    </item>
+    
+    <item>
+      <title>C2 C&amp;C</title>
+      <link>https://tongluoshao.space/permanent/C2-CC/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/C2-CC/</guid>
+      <description> command and control infrastructure a set of tools to maintain communications with the compromised(attacked) devices (following the initial explotation) </description>
+    </item>
+    
+    <item>
+      <title>Clustering</title>
+      <link>https://tongluoshao.space/permanent/Clustering/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Clustering/</guid>
+      <description>Clustering 聚类
+聚类算法 K-Mean 很常见的聚类算法 输入 n 维向量的点集 输出 每个点的类标签 算法 确定初始的类中心点 $\mu_1, \ &amp;hellip;, \ \mu_k$ (e.g. 随机) 计算点集中的每个点与哪个中心最近, 则这个点标上此类的标签 重新计算类中心点, 使该类所有点到该点的总距离最小 重复2,3步, 直到无变化或到达精度要求 DBSCAN 基于密度的聚类算法 动画: DBSCAN - bilibili 概念 核心点 core point/core object: 辐射半径内至少有 n 个其他点 非核心点 辐射半径: 一个自定义的半径 离群点: 辐射半径内一个其他点都没有 输入 辐射半径 n: 成为核心点需要周围有 n 个点 输出 每个点的簇 算法 找到所有核心点 从任意一个核心点开始, 将其与其半径内的所有核心点加入第一个簇 重复2直到对所有核心点处理完成 将所有核心点周围的非核心点加入该簇(没说冲突怎么处理) 剩下的点是离群点 </description>
+    </item>
+    
+    <item>
+      <title>CRC 卡片</title>
+      <link>https://tongluoshao.space/permanent/CRC-%E5%8D%A1%E7%89%87/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/CRC-%E5%8D%A1%E7%89%87/</guid>
+      <description> class, resonsibility, collaberation cards 软件结构设计的一种方式 ![[attachments/Pasted image 20230219152252.png|L|300]] ![[attachments/Pasted image 20230219152444.png|L|300]] </description>
+    </item>
+    
+    <item>
+      <title>CSRF</title>
+      <link>https://tongluoshao.space/permanent/CSRF/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/CSRF/</guid>
+      <description>CSRF cross-site request forgery 跨站请求伪造 具有此漏洞的程序允许攻击者以受害者的权限执行操作
+CSRF 攻击流程 要求: 受害者在 Web 服务器上有一个活动会话 攻击者诱使受害者点击特定链接, 这个链接被修改过, 会触发特定操作. 比如表面上是正常页面, 实际发起一个修改密码的请求 Web 服务器会执行请求, 因为该请求是合法用户发起的 !</description>
+    </item>
+    
+    <item>
+      <title>CVE</title>
+      <link>https://tongluoshao.space/permanent/CVE/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/CVE/</guid>
+      <description>Common Vulnerability and Exposures</description>
+    </item>
+    
+    <item>
+      <title>CVSS</title>
+      <link>https://tongluoshao.space/permanent/CVSS/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/CVSS/</guid>
+      <description>CVSS Common Vulnerability Scoring System v3
+是可免费商用的漏洞威胁度评估标准, 量化范围[0. 10] 由 CMU(NIST) 建立, 现在由 FIRST(Forum of Incident Response and Security Teams) 维护, v3 是目前事实上(de-facto)的标准 Input 预先准备好的问题和选项</description>
+    </item>
+    
+    <item>
+      <title>Dafny</title>
+      <link>https://tongluoshao.space/permanent/Dafny/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Dafny/</guid>
+      <description>属于 [[project/lmu - FSV1|lmu - FSV1]]
+method验证框架 method关键字 函数名(变量名: 变量类型)
+returns关键字(可无) requires关键字(可无) ensures关键字(可无) assert关键字
+1 2 3 4 5 6 7 8 9 10 method abs(i: int) returns (j: int) requires true ensures j == i || j == -i { if i &amp;lt; 0 { j := -i; } else { j := i; } assert j &amp;gt;= 0; } 函数头拓展操作 1 2 3 4 5 6 7 8 9 10 11 method toInt(b: bool) returns (i: int) ensures b ==&amp;gt; i == 1 // !</description>
+    </item>
+    
+    <item>
+      <title>Data Mining</title>
+      <link>https://tongluoshao.space/permanent/Data-Mining/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Data-Mining/</guid>
+      <description>tasks of data mining supervised: Classification Regression unsupervised: [[permanent/Clustering]] Outlier Detection techniques [[permanent/KDD]]</description>
+    </item>
+    
+    <item>
+      <title>dig</title>
+      <link>https://tongluoshao.space/permanent/dig/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/dig/</guid>
+      <description>dig Domain Information Groper 域信息搜索器
+安装 下载地址 可能需翻墙 win 最高支持到 9.16.30 下载地址
+命令 spamlist 查询 dig +short 2.0.0.127.zen.spamhaus.org 127.0.0.4 127.0.0.10 127.</description>
+    </item>
+    
+    <item>
+      <title>DNS</title>
+      <link>https://tongluoshao.space/permanent/DNS/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/DNS/</guid>
+      <description>Domain Name System</description>
+    </item>
+    
+    <item>
+      <title>DOS, DDOS</title>
+      <link>https://tongluoshao.space/permanent/DOS-DDOS/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/DOS-DDOS/</guid>
+      <description>DOS, DDOS Denial of Service Distributed Denial of Service
+(D)DOS 常见原因 超负荷 (de. Überlastung) 引导 Exception 引导死机(代码的漏洞或协议的漏洞) (D)DOS 常见类型 请求受限的或不可同时使用的资源 (beschränkte/unteilbare) 更改或毁坏配置 物理毁坏 (D)DOS 例子 邮件轰炸 内存溢出 e.</description>
+    </item>
+    
+    <item>
+      <title>DRM</title>
+      <link>https://tongluoshao.space/permanent/DRM/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/DRM/</guid>
+      <description>Digital Rights Management 数字版权管理</description>
+    </item>
+    
+    <item>
+      <title>Dropper</title>
+      <link>https://tongluoshao.space/permanent/Dropper/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Dropper/</guid>
+      <description>Dropper 一种木马, 功能是将嵌入的恶意软件下载到受害者的计算机上, payload 通常是加密存储的
+多阶段 Dropper 为了规避反恶意软件的检测, 附带了更多的伪装, 比如下载器功能, 在受害机器 active 时才下载 payload. 比如 dropper 通过 SFTP 加载又一个 dropper.</description>
+    </item>
+    
+    <item>
+      <title>EPP, EDR, XDR</title>
+      <link>https://tongluoshao.space/permanent/EPP-EDR-XDR/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/EPP-EDR-XDR/</guid>
+      <description>EPP, EDR, XDR Endpoint Protection Platform 终端防护平台 Endpoint Detection &amp;amp; Respense 终端检测和响应 Extended Endpoint Detection &amp;amp; Reaction 可以理解为新一代终端安全解决方案(之前是传统杀毒软件)
+EPP 预防已知威胁 EDR 解决未知威胁 XDR 防止域内传播 EDR EDR 的任务和目标</description>
+    </item>
+    
+    <item>
+      <title>Feature Branch Workflow</title>
+      <link>https://tongluoshao.space/permanent/Feature-Branch-Workflow/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Feature-Branch-Workflow/</guid>
+      <description>是 Git 的一种工作流.
+Benifits pull requests isolated experiments efficient collaboration </description>
+    </item>
+    
+    <item>
+      <title>Feistel 密码结构</title>
+      <link>https://tongluoshao.space/permanent/Feistel-%E5%AF%86%E7%A0%81%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Feistel-%E5%AF%86%E7%A0%81%E7%BB%93%E6%9E%84/</guid>
+      <description>Feistel 密码结构，在密码学研究中，Feistel 密码结构是用于 分组密码 中的一种对称结构.
+特点 将输入分成两个部分 n 轮迭代 通过 Permutation, Substitution 实现 高 diffusion 函数 f 不一定可逆 </description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://tongluoshao.space/permanent/Git/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Git/</guid>
+      <description>Git 概念 HEAD 指向当前签出的分支
+3-Way-Merge 在目标分支上创建一个新的提交, 包括源分支和目标分支的修改.
+Fast-Forward-Merge 只有当源分支和目标分支在历史中在同一路径时才可用, 会将目标分支推到源分支
+Rebase 变基. 将源分支的 commit 路程在目标分支里也复制一遍. 例如, 在 feature 执行 git rebase origin, 就会将 feature 的历史复制到 origin.</description>
+    </item>
+    
+    <item>
+      <title>Gitflow Workflow</title>
+      <link>https://tongluoshao.space/permanent/Gitflow-Workflow/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Gitflow-Workflow/</guid>
+      <description>是 Git 的一种工作流.
+git branching model 现在受欢迎程度下降, 取而代之的是 [[permanent/Trunk-based Workflow|Trunk-based Workflow]] 更多分支, 分支的生命周期更长, 更大的 commit src: Gitflow Workflow|Atlassian
+Gitflow 为每一个 feature 创建分支, 直到 feature 完成才将分支合并到主干(导致容易偏离) 有独立的分支来管理 releases 也有 [[permanent/Feature Branch Workflow#Benifits|Feature Branch Workflow 的好处]] Get started 安装 download and install gitflow</description>
+    </item>
+    
+    <item>
+      <title>Github 加速</title>
+      <link>https://tongluoshao.space/permanent/Github-%E5%8A%A0%E9%80%9F/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Github-%E5%8A%A0%E9%80%9F/</guid>
+      <description>查ip github.com assets-cdn.github.com github.global.ssl.fastly.net https://www.ipaddress.com/ 查ip
+改hosts c/win/sys32/drivers/etc/hosts
+刷新dns缓存 ipconfig /flushdns
+22.10.1
+140.82.113.4 github.com
+185.199.108.153 assets-cdn.github.com
+151.101.1.194 github.global.ssl.fastly.net</description>
+    </item>
+    
+    <item>
+      <title>Gitlab Workflow</title>
+      <link>https://tongluoshao.space/permanent/Gitlab-Workflow/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Gitlab-Workflow/</guid>
+      <description>流程 提出了 issue 建立 branch 开发, 测试 提出合并请求 合并 review 合并到主干 build ![[Pasted image 20221212230701.png|500]]</description>
+    </item>
+    
+    <item>
+      <title>gmail-set-auto-forward</title>
+      <link>https://tongluoshao.space/project/gmail-set-auto-forward/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/gmail-set-auto-forward/</guid>
+      <description>这是一次探索, 后来因设置完转发邮箱需要去转发邮箱点击链接确认而不了了之.
+Google API 官方API quickstart
+一个 Google API 的教程
+selenium 模拟谷歌邮箱登录
+读取已打开的浏览器 url
+selenium设置代理
+打开新页面的N种方法
+pyHook 安装:
+下载 swig 解压 swig 并将根目录添加到环境变量 VS 安装工具, 在生成工具的单个组建里找到并安装 1 MSVC v140 - VS 2015 C++ 生成工具 pip install PyHook3 </description>
+    </item>
+    
+    <item>
+      <title>GPT</title>
+      <link>https://tongluoshao.space/permanent/GPT/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/GPT/</guid>
+      <description> Generative Pre-trained Transformer </description>
+    </item>
+    
+    <item>
+      <title>Gradle</title>
+      <link>https://tongluoshao.space/permanent/Gradle/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Gradle/</guid>
+      <description>是 [[permanent/Java|Java]] 的 Build 工具.
+docs.gradle.org
+Gradle 概念 Wrapper, GradleUserHome, Daemon: 来自Gradle开发团队的Gradle入门教程 P1前22分钟
+Gradle Build Phases Initialization Configuration 会把 build.gradle 从上到下执行(当成 groovy) Execution Gradle Wrapper .</description>
+    </item>
+    
+    <item>
+      <title>HarmonyPatch</title>
+      <link>https://tongluoshao.space/permanent/HarmonyPatch/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/HarmonyPatch/</guid>
+      <description>官方文档
+Prefix 主要用于跳过原函数, 修改传入值 prefix 中的参数还可以传递给 postfix 使用时需要额外定义一个形参 ref 原函数返回类型 __result , 用来接受返回值. 而 prefix 函数 return 一个 布尔值(true 表示执行完 prefix 后继续执行原函数, false 表示跳过原函数)</description>
+    </item>
+    
+    <item>
+      <title>ICMP 协议</title>
+      <link>https://tongluoshao.space/permanent/ICMP-%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/ICMP-%E5%8D%8F%E8%AE%AE/</guid>
+      <description>Internet Control Messege Protocol 网络层(3/7) 用于在IP主机和路由器间的传递控制消息，控制消息是指如某节点通不通的关于网络本身的消息。</description>
+    </item>
+    
+    <item>
+      <title>IEEE 802.1X</title>
+      <link>https://tongluoshao.space/permanent/IEEE-802.1X/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/IEEE-802.1X/</guid>
+      <description>局域网部分 IEEE 802.1X 家族 802.1Q Virtual Bridged LANs (VLAN) 802.3 CSMA/CD (Ethernet) 802.5 Token Ring 802.6 Metropolitan Area Network 802.</description>
+    </item>
+    
+    <item>
+      <title>Internet Service Provider(ISP)</title>
+      <link>https://tongluoshao.space/permanent/Internet-Service-ProviderISP/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Internet-Service-ProviderISP/</guid>
+      <description>因特网服务供应商, 包括骨干网(国际因特网服务供应商) 和 供应商网络(国内或地域性因特网服务供应商)</description>
+    </item>
+    
+    <item>
+      <title>IPv4</title>
+      <link>https://tongluoshao.space/permanent/IPv4/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/IPv4/</guid>
+      <description>IPv4 Header ![[Pasted image 20230227131607.png|L|500]] </description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://tongluoshao.space/permanent/Java/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java/</guid>
+      <description>Java 原理 [[permanent/JVM, Dalvik, Art|JVM, Dalvik, Art]]
+[[permanent/Java 的工作方式|Java 的工作方式]]
+Java 语法 [[permanent/Java 基础|Java 基础]]
+[[permanent/Java 库|Java 库]]
+[[permanent/Java 细节|Java 细节]]</description>
+    </item>
+    
+    <item>
+      <title>Java Best-Practices</title>
+      <link>https://tongluoshao.space/permanent/Java-Best-Practices/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-Best-Practices/</guid>
+      <description>default in switch branch each switch statement needs a default</description>
+    </item>
+    
+    <item>
+      <title>Java checkstyle</title>
+      <link>https://tongluoshao.space/permanent/Java-checkstyle/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-checkstyle/</guid>
+      <description>一种检查 Java 源代码风格的方法, 通常应该检查:
+命名规范 类设计(e.g. 耦合和内聚) [[permanent/Java Best-Practices|Java Best-Practices]] division by 0 未使用的变量/包 每个方法有且只有一个任务吗 google_checks google_checks.xml 似乎只能检查代码, 注释和文档中不恰当的空格
+java -jar .</description>
+    </item>
+    
+    <item>
+      <title>Java 代码传统</title>
+      <link>https://tongluoshao.space/permanent/Java-%E4%BB%A3%E7%A0%81%E4%BC%A0%E7%BB%9F/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-%E4%BB%A3%E7%A0%81%E4%BC%A0%E7%BB%9F/</guid>
+      <description>https://google.github.io/styleguide/javaguide.html
+命名 括号, 缩进, 空格 空格 括号外的关键字与括号之间应该留有空格, 如:
+1 2 3 4 5 6 7 try { if (true) { // .</description>
+    </item>
+    
+    <item>
+      <title>Java 库</title>
+      <link>https://tongluoshao.space/permanent/Java-%E5%BA%93/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-%E5%BA%93/</guid>
+      <description>[[permanent/Mockito|Mockito]]
+[[permanent/JUnit|JUnit]]</description>
+    </item>
+    
+    <item>
+      <title>Java 的工作方式</title>
+      <link>https://tongluoshao.space/permanent/Java-%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F/</guid>
+      <description>Java 的工作方式
+源代码-&amp;gt;编译器-&amp;gt;输出-&amp;gt;JVM .java -&amp;gt; 编译器 -&amp;gt; .class 编译器产出字节码, JVM可以读取与执行字节码. </description>
+    </item>
+    
+    <item>
+      <title>Java 细节</title>
+      <link>https://tongluoshao.space/permanent/Java-%E7%BB%86%E8%8A%82/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-%E7%BB%86%E8%8A%82/</guid>
+      <description>List&amp;lt;&amp;gt; 和 [] String[] 是数组，定长，不可变
+List&amp;lt;String&amp;gt; 是泛型 ，非定长，可变
+极限值 Integer.MAX_VALUE = 2147483647 Double.NEGATIVE_INFINITIVy Double.NaN
+剩余参数 1 2 3 4 5 private void check(double a, double b, double c, double.</description>
+    </item>
+    
+    <item>
+      <title>js调用mermaid</title>
+      <link>https://tongluoshao.space/permanent/js%E8%B0%83%E7%94%A8mermaid/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/js%E8%B0%83%E7%94%A8mermaid/</guid>
+      <description>https://mermaid-js.github.io/mermaid/#/n00b-gettingStarted</description>
+    </item>
+    
+    <item>
+      <title>JUnit</title>
+      <link>https://tongluoshao.space/permanent/JUnit/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/JUnit/</guid>
+      <description>IntelliJ 中的 Junit 首先, 2017以上版本的 IntelliJ 是默认支持 JUnit 的, 且自带 只要写一个带 @Test 的方法, 再写一个 assert 就会自动导入需要的包
+JUnit 命名风格 测试类的命名是 被测试的类名Test 测试方法的命名是 test被测试方法名_描述</description>
+    </item>
+    
+    <item>
+      <title>Jupyter Notebook</title>
+      <link>https://tongluoshao.space/permanent/Jupyter-Notebook/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Jupyter-Notebook/</guid>
+      <description>WIN 安装 已安装 python
+先更新 pip
+python -m pip install &amp;ndash;upgrade pip
+安装
+1 2 3 pip install jupyterlab pip install notebook pip install voila 快捷键 在 notebook 中点击键盘图标查看 有点像 vim 和 原生快捷键的混合体</description>
+    </item>
+    
+    <item>
+      <title>JVM, Dalvik, Art</title>
+      <link>https://tongluoshao.space/permanent/JVM-Dalvik-Art/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/JVM-Dalvik-Art/</guid>
+      <description> JVM Java 的虚拟机, 用来运行 Java 字节码 Dalvik 专为 Android 设计的 Java 虚拟机, 有专属的文件后缀 .dex Art Android runtime, Dalvik 的升级版, 本质上与 Dalvik 无异 </description>
+    </item>
+    
+    <item>
+      <title>KDD</title>
+      <link>https://tongluoshao.space/permanent/KDD/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/KDD/</guid>
+      <description>Knowledge Discovery in Databases 是指从数据库的大量数据中发现有用知识的技术 一种[[permanent/Data Mining|数据挖掘]]技术 主要过程: 数据准备和选择 数据清洗 纳入数据集的先验知识 转译为精确结果 </description>
+    </item>
+    
+    <item>
+      <title>Kerberos</title>
+      <link>https://tongluoshao.space/permanent/Kerberos/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Kerberos/</guid>
+      <description>src: Kerberos - 知乎, lmu - IT Security
+Kerberos 以 Needham-Schroeder 为基础的可信第三方协议 TTP: 由 Kerberos 服务器 和 票据授权服务器组成 为 TCP/IP 网络设计 使用对称加密 发生在一个 Kerberos 域中 缺点: 单点故障: 需要服务器保持可用; 需要时间同步 RFC 4120 名词解释 Principal：大致可以认为是 Kerberos 世界的用户名，用于标识身份 AS（Authentication Server）= 认证服务器 KDC（Key Distribution Center）= 密钥分发中心 TGT（Ticket Granting Ticket）= 票据授权票据，票据的票据 TGS（Ticket Granting Server）= 票据授权服务器 SS（Service Server）= 特定服务提供端 !</description>
+    </item>
+    
+    <item>
+      <title>LaTeX</title>
+      <link>https://tongluoshao.space/permanent/LaTeX/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/LaTeX/</guid>
+      <description>![[symbols_1638700519189_0 1.pdf]]
+underset $A \oplus B = \underset{b\in B}{\cup} A_b$ $\neg \wedge \vee \ \forall \ \exists$ $\bowtie$ $\mathrm{d}$x $\newcommand*{\dif}{\mathop{}!\mathrm{d}}$x</description>
+    </item>
+    
+    <item>
+      <title>LLM</title>
+      <link>https://tongluoshao.space/permanent/LLM/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/LLM/</guid>
+      <description>large language model 目的: 让机器学习到最符合人类说话逻辑的表达 方法: likelihood + 大力出奇迹 什么叫大: 训练参数超过10亿我们通常就叫大模型 底层基础设施 -&amp;gt; 框架 -&amp;gt; 大模型 (Prompt engineering) -&amp;gt; 应用</description>
+    </item>
+    
+    <item>
+      <title>lmu - Database system</title>
+      <link>https://tongluoshao.space/project/lmu-Database-system/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/lmu-Database-system/</guid>
+      <description>dbs
+Organization jede Woche Übungsblatt Tut ab 3. Woche Einführung Arbeitsspeicher?
+主内存, 电脑上内存条那个 persistent speichern müssen Arbeitsspeicher nicht gross genug Virtueller Speicher?</description>
+    </item>
+    
+    <item>
+      <title>lmu - FSV1</title>
+      <link>https://tongluoshao.space/project/lmu-FSV1/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/lmu-FSV1/</guid>
+      <description>[[permanent/Dafny|Dafny]]</description>
+    </item>
+    
+    <item>
+      <title>lmu - IT Security</title>
+      <link>https://tongluoshao.space/permanent/lmu-IT-Security/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/lmu-IT-Security/</guid>
+      <description>Einleitung [[permanent/1988 Internet Wurm]] [[permanent/2003 SQL Slammer]] [[permanent/2009~ Stuxnet]] [[permanent/蠕虫和蓝宝石的对比]]
+[[permanent/C2 C&amp;amp;C]]
+[[permanent/TTP(Tastics,Techniques and Procedures)#TTP]]
+Zutrittkonstroll Verfahrensschritten:
+Authentisierung, 提供 Attribute 的真实证明 Authentifizierung, 证明的检查 Autorisierung, Attribute 是否有足够获取所要求的权利.</description>
+    </item>
+    
+    <item>
+      <title>lmu - Software Engineering</title>
+      <link>https://tongluoshao.space/project/lmu-Software-Engineering/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/lmu-Software-Engineering/</guid>
+      <description>swt
+Organization GMT+2 Vorlesung Mittwoch 9:15-11:45 Tutorium Mittwoch 18:15-19:45
+Zentralübung auf: Mitt, ab: Mitt, unbenotet Individuelles Feedback durch studentische Tutoren Lösungsvorschläge von uns, nach der R¨uckgabe der Korrekturen.</description>
+    </item>
+    
+    <item>
+      <title>lmu - Syntax of natural language(Germany)</title>
+      <link>https://tongluoshao.space/project/lmu-Syntax-of-natural-languageGermany/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/lmu-Syntax-of-natural-languageGermany/</guid>
+      <description>Introduction 使用: [[permanent/Jupyter Notebook]]
+Programmsysteme 具体的使用方法都会放在各自页面
+[[permanent/NLTK]] [[permanent/spaCy]] [[permanent/Standford Parser]] Grammatikformalismus CFGs 组成结构 语法结构可以用树的节点表示出来 PCFG(优势: 多 position 词歧义分辨) FCFG(优势: 屈折) Dependcy grammar 描述 tokens 间的关系 语法结构可以用树的边表示出来 Chunk Parser 部分语法分析 扁平结构(flache), 非层次型结构 CFGs -&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>LOIC</title>
+      <link>https://tongluoshao.space/permanent/LOIC/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/LOIC/</guid>
+      <description>Low Orbit Ion Cannon
+开源 网络压力测试应用 TCP/UDP 泛洪攻击 </description>
+    </item>
+    
+    <item>
+      <title>LoRA 模型</title>
+      <link>https://tongluoshao.space/permanent/LoRA-%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/LoRA-%E6%A8%A1%E5%9E%8B/</guid>
+      <description> 在 Stable Diffusion 中常见的模型类型 LoRA是一种用于大语言模型的低秩逼近（Low-Rank Approximation）技术，可以减少参数量和计算量，提高训练效率和生成质量。推荐的模型;koreanDollLikeness_v10。 </description>
+    </item>
+    
+    <item>
+      <title>Mathematical English</title>
+      <link>https://tongluoshao.space/permanent/Mathematical-English/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Mathematical-English/</guid>
+      <description>目录
+Arithmatic 2 Integers 2 Fractions(=Rational Numbebr) 2 Real Numbers 3 Complex Numbers 3 Basic arithmetic operations 3 Exponentiation, Roots 3 Divisibility 3 Division with remainder 4 Euclid&amp;rsquo;s algorithm 4 Algebra 6 Algebraic Expressions 6 Indices 6 Matrices 7 Inequalities 7 Polynomial equations 7 Congruences 9 Geometry 10 Euler&amp;rsquo;s Formula 12 Linear Algebra 14 Mathematical arguments 15 Set theory 15 Logic 16 Basic arguments 16 Functions 19 Formulas/Formulae 19 Intervals 19 Derivatives 19 Integrals 20 Differential equations 21 Greek 23 Sequences, Series 24 Convergence criteria 24 Prime Numbers 27 Questions About Prime Numbers 27 Probability and Randomness 29 !</description>
+    </item>
+    
+    <item>
+      <title>Mirai Botnet</title>
+      <link>https://tongluoshao.space/permanent/Mirai-Botnet/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Mirai-Botnet/</guid>
+      <description>物联网僵尸网络
+物联网设备通常有足够的带宽，但没有足够的防护措施 物联网设备搜索: shodan.io
+应对措施
+用 IDS 过滤 Mirai 代码 修补漏洞 </description>
+    </item>
+    
+    <item>
+      <title>MITRE ATT&amp;CK</title>
+      <link>https://tongluoshao.space/permanent/MITRE-ATTCK/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/MITRE-ATTCK/</guid>
+      <description>MITRE ATT&amp;amp;CK MITRE ATT&amp;amp;CK is a knowledge base of
+adversary tactics techniques common knowledge 3 Metrics
+Enterprise Mobile pre-ATT&amp;amp;CK 用于&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Mock</title>
+      <link>https://tongluoshao.space/permanent/Mock/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Mock/</guid>
+      <description>开发中的软件还不能够使用时, 创建出的能够测试的最小软件. 例如说你开发的类需要依赖别人的类, 但别人还没完成工作
+如何开始测试 从完全不依赖于其他模块的模块开始, 到需要依赖所有模块的模块结束
+工具 因为手动创建 Mock 可能因为人为的失误导致不正确的结果, 因此借助工具可能是更好的选择
+Java Mock Mockito JMock EasyMock </description>
+    </item>
+    
+    <item>
+      <title>Mockito</title>
+      <link>https://tongluoshao.space/permanent/Mockito/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Mockito/</guid>
+      <description>Get started 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 //You can mock concrete classes, not just interfaces LinkedList mockedList = mock(LinkedList.</description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://tongluoshao.space/permanent/MySQL/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/MySQL/</guid>
+      <description>使用 [[permanent/SQL|SQL]] 语言
+安装和初配置 官网下载链接 MySQL安装 | 菜鸟教程
+ZIP 包解压的安装方式 在 官网下载对应版本的 ZIP 包, 解压到想放的位置 在根目录创建 my.ini, 内容如下: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ### my.</description>
+    </item>
+    
+    <item>
+      <title>NLTK</title>
+      <link>https://tongluoshao.space/permanent/NLTK/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/NLTK/</guid>
+      <description>https://www.nltk.org/book/
+Introduction natural language toolkit, python 库
+help 1 2 nltk.help.upenn_tagset(&amp;#39;DT&amp;#39;) nltk.help.brown_tagset(&amp;#39;DT&amp;#39;) 大类:预处理 根据两个任务拆分 syntax analyse parser 的简要说明 Syntax Analyse with formal Grammar 根据输入的语法规则, 分析给定句子的结构</description>
+    </item>
+    
+    <item>
+      <title>NTP 协议</title>
+      <link>https://tongluoshao.space/permanent/NTP-%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/NTP-%E5%8D%8F%E8%AE%AE/</guid>
+      <description>Network Time Protocol
+网络时间协议（NTP）用于通过通信网络同步时钟。它是少数几个仍被广泛使用的不安全和未经认证的互联网协议之一。
+关于 NTP 的攻击 Delay/Replay Man in the middle IP-Spoofing -&amp;gt; [[permanent/NTP 协议#NTP Amplification|NTP Amplification]] 为什么要同步通信时间?
+Timestamp Log 分析 网络监视 Netzmonitoring, 寻找错误, 分析事件联系等等 如果时间同步系统受到攻击……</description>
+    </item>
+    
+    <item>
+      <title>Obsidian</title>
+      <link>https://tongluoshao.space/permanent/Obsidian/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Obsidian/</guid>
+      <description>[[permanent/Obsidian 探索|Obsidian 探索]]
+[[permanent/小鹤音形和 Obsidian vim 的适性|小鹤音形和 Obsidian vim 的适性]]
+[[permanent/Ob发布到Hugo的尝试|Ob发布到Hugo的尝试]]</description>
+    </item>
+    
+    <item>
+      <title>Obsidian 探索</title>
+      <link>https://tongluoshao.space/permanent/Obsidian-%E6%8E%A2%E7%B4%A2/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Obsidian-%E6%8E%A2%E7%B4%A2/</guid>
+      <description>代码块缩进 方法是开头的 三```点 也跟着层级缩进, 整个代码块都缩进, 最后结束的三点改成4点或者其他会被隐藏的字符(也要缩进). 这样可以在阅读和编辑两种模式中都正常显示. e.g. [[permanent/MySQL#ZIP 包解压的安装方式|ZIP 包解压的安装方式]]
+插件修改 Enhanced-Editing 给格式刷加上了涂黑和挖空(Bt主题限定) 在 html格式刷 加上 View onload 可以用 addCommand 加快捷键 方法是本来就写好的, 在 MyPlugins 类, XX格式刷() 和 转换XX() </description>
+    </item>
+    
+    <item>
+      <title>P4G</title>
+      <link>https://tongluoshao.space/permanent/P4G/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/P4G/</guid>
+      <description>commu 狐狸
+{魔术师}阳介 一四六日4 {女教皇}雪子 一二三四1 {战车}千枝 一二四六2 {皇帝}完二 三四六日3 {恋爱}理世 五六日5 {命运}直斗 全天/不定期7 {正义}菜菜子 1.23有一次 月亮 三四五 太阳 一二四 安亲班 一五六</description>
+    </item>
+    
+    <item>
+      <title>Phishing</title>
+      <link>https://tongluoshao.space/permanent/Phishing/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Phishing/</guid>
+      <description>Phishing clone phishing (重复真实邮件) spear phishing (有针对性的) whaling (叉大鱼) CEO Fraud (冒名诈骗) Vishing (Voice Phishing, 目标: 受害者给攻击者打电话) Evil Twins (恶意/流氓 Wifi 接入点) Clone Phishing 克隆真实存在的邮件, 通过例如在附件中的恶意软件钓鱼</description>
+    </item>
+    
+    <item>
+      <title>POC</title>
+      <link>https://tongluoshao.space/permanent/POC/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/POC/</guid>
+      <description>Proof of Concept 使用 POC 证明某个漏洞的可利用性</description>
+    </item>
+    
+    <item>
+      <title>PotPlayer 电视源</title>
+      <link>https://tongluoshao.space/permanent/PotPlayer-%E7%94%B5%E8%A7%86%E6%BA%90/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/PotPlayer-%E7%94%B5%E8%A7%86%E6%BA%90/</guid>
+      <description>教程: 电脑上收看传统电视频道：potplayer + iptv 源 - 知乎
+源地址 iptv-org/iptv: Collection of publicly available IPTV channels from all over the world</description>
+    </item>
+    
+    <item>
+      <title>PPS</title>
+      <link>https://tongluoshao.space/permanent/PPS/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/PPS/</guid>
+      <description>PPS 全称 Programmable Power Supply, 可编程电源 可以理解对为 PD3.0 协议的补丁, 旨在为当前的快速充电解决方案提供统一的规范. 支持 PPS 自动支持 QC3.0, QC4.0, VOOC, SCP, FCP, PE2.0, PE3.0</description>
+    </item>
+    
+    <item>
+      <title>pyinstaller</title>
+      <link>https://tongluoshao.space/permanent/pyinstaller/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/pyinstaller/</guid>
+      <description>参数 常用参数 含义
+-i 或 -icon 生成icon
+-F 创建一个绑定的可执行文件
+-w 使用窗口，无控制台
+-C 使用控制台，无窗口
+-D 创建一个包含可执行文件的单文件夹包(默认情况下)
+-n 文件名</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://tongluoshao.space/permanent/Python/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Python/</guid>
+      <description>[[permanent/python unrar库|python unrar库]]
+[[permanent/python pandas库|python pandas库]]
+[[permanent/python tkinter库|python tkinter库]]
+[[permanent/pyinstaller|pyinstaller]]</description>
+    </item>
+    
+    <item>
+      <title>python pandas库</title>
+      <link>https://tongluoshao.space/permanent/python-pandas%E5%BA%93/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/python-pandas%E5%BA%93/</guid>
+      <description>读写 Dataframe 1 2 3 4 5 6 7 8 9 10 from pandas import DataFrame data = { &amp;#39;name&amp;#39;: [&amp;#39;zs&amp;#39;, &amp;#39;ls&amp;#39;, &amp;#39;ww&amp;#39;], &amp;#39;age&amp;#39;: [11, 12, 13], &amp;#39;gender&amp;#39;: [&amp;#39;man&amp;#39;, &amp;#39;man&amp;#39;, &amp;#39;woman&amp;#39;]} df = DataFrame(data) # 保存为 xlsx 格式 df.</description>
+    </item>
+    
+    <item>
+      <title>python string库</title>
+      <link>https://tongluoshao.space/permanent/python-string%E5%BA%93/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/python-string%E5%BA%93/</guid>
+      <description> 1 2 3 s = string.ascii_letters s1 = string.ascii_uppercase s2 = string.ascii_lowercase </description>
+    </item>
+    
+    <item>
+      <title>python tkinter库</title>
+      <link>https://tongluoshao.space/permanent/python-tkinter%E5%BA%93/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/python-tkinter%E5%BA%93/</guid>
+      <description>框架 简版
+1 2 3 from tkinter import * root = Tk() tk.mainloop() 应用 ![[attachments/Pasted image 20230526214024.png]]
+浏览文件 1 2 3 4 5 6 7 8 9 10 from tkinter import filedialog # 浏览本地文件 def get_local_file(): file_path=filedialog.</description>
+    </item>
+    
+    <item>
+      <title>python unrar库</title>
+      <link>https://tongluoshao.space/permanent/python-unrar%E5%BA%93/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/python-unrar%E5%BA%93/</guid>
+      <description>https://rarfile.readthedocs.io/api.html#rarfile-class
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 from unrar import rarfile rf = rarfile.</description>
+    </item>
+    
+    <item>
+      <title>Raid 阵列</title>
+      <link>https://tongluoshao.space/permanent/Raid-%E9%98%B5%E5%88%97/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Raid-%E9%98%B5%E5%88%97/</guid>
+      <description>src: bili - 啃芝士
+如果不充分了解RAID，就不要去玩RAID，组建RAID的时候，会自动抹掉你硬盘的全部分区和数据
+另外，如果intel快速存储技术允许你在进入系统之后组建RAID，但是好像是硬盘需要把AHCI改成RAID工作模式，修改工作模式貌似需要重装系统。。。需要注意这一点
+Raid 0 使用 n 块硬盘, 写入文件时将文件分为 n 份
+优点是快, 用几块硬盘组就会快几倍
+缺点是只要坏了一块就全玩完
+Raid 1 使用 n 块硬盘, 每一份都完整地存储在每一块硬盘上</description>
+    </item>
+    
+    <item>
+      <title>return-to-libc</title>
+      <link>https://tongluoshao.space/permanent/return-to-libc/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/return-to-libc/</guid>
+      <description>return-to-libc 一种类似[[permanent/Buffer Overflows|缓冲区溢出]]的攻击, 通过覆盖返回地址到 libc, 以便从 libc 调用(例如系统)函数 会绕过 NX位(no-execute), 将 Stack 标记为不可执行</description>
+    </item>
+    
+    <item>
+      <title>Rootkit</title>
+      <link>https://tongluoshao.space/permanent/Rootkit/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Rootkit/</guid>
+      <description>Rootkit = root + kit 不会自动传播, 也不会造成大范围攻击, 只是对系统的隐蔽通道
+通常带有 [[permanent/Dropper|Dropper]], 即释放或下载另一个恶意软件的木马
+Rootkit 的历史和典型案例 第一代 Rootkits 第一代 rootkits 其实是内置 backdoor 的 UNIX 系统程序</description>
+    </item>
+    
+    <item>
+      <title>SaaS</title>
+      <link>https://tongluoshao.space/permanent/SaaS/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/SaaS/</guid>
+      <description>Software as a Service 「软件即服务」有别于通常的「软件即工具/商品」, 比如微信是一个社交工具, 但微信并不会让你成为社交达人. 所谓软件即服务, 就是这个软件本身能够完成一项任务, 比如系统的安全维护(当然,可能涉及到软件背后的团队支持)</description>
+    </item>
+    
+    <item>
+      <title>Security Code Review 101</title>
+      <link>https://tongluoshao.space/permanent/Security-Code-Review-101/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Security-Code-Review-101/</guid>
+      <description>应用程序的许多漏洞可以追溯到编程时的粗心大意。代码审查（独立进行，部分自动进行）的目的是在编程时就已经改进安全方面。使用OWASP安全编码道场来识别输入验证、内存操作等方面的典型错误，并改进你自己的编程风格! https://owasp.org/SecureCodingDojo/codereview101/
+一些好的习惯:
+验证输入的时候用字符白名单 Parameterized Statements: 用设置参数的方式代替字符串连接组成 statement. 输入时也限制长度: fgets 代替 gets 用到 buffer 时指定统一的长度 off-by-one: C 涉及内存读写的时候用 &amp;lt; 而不是 &amp;lt;= (留出一个结束符)?</description>
+    </item>
+    
+    <item>
+      <title>shodan.io</title>
+      <link>https://tongluoshao.space/permanent/shodan.io/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/shodan.io/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Smali</title>
+      <link>https://tongluoshao.space/permanent/Smali/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Smali/</guid>
+      <description>![[attachments/Smali语法查询_1.0.0.apk]] smali 是 Dalvik 的寄存器语言, 由 .dex 反编译而来
+关键字 .xxx 如 .class, 类名 数据类型 单个大写字母 如 Z 代表 boolean 出现在方法头的行尾表示返回类型 </description>
+    </item>
+    
+    <item>
+      <title>spaCy</title>
+      <link>https://tongluoshao.space/permanent/spaCy/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/spaCy/</guid>
+      <description>Introduction deep-learning-based NLP system learn and summerize the syntax model from Corpus, 安装 1 2 3 4 // 安装 pip install spacy // 下载模块 python -m spacy download en_core_web_sm 基本用法 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 1.</description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://tongluoshao.space/permanent/SQL/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/SQL/</guid>
+      <description>SQL 是使用 [[permanent/ANSI|ANSI]] 标准的一种计算机语言, 除了必须符合标准的部分, 在不同版本的 SQL 中也有不同的方言.
+SQL 简介 SQL是什么 SQL: Structured Query Language 结构性查询语言。 SQL是由国际标准化组织ISO制定的标准，对DBMS的统一操作方式。 SQL存储结构 DATABASE数据库 -&amp;gt; TABLE表 -&amp;gt; COLUMN列 一个系统中有若干个数据库，一个数据库有若干张表，每一张表有若干行若干列 下面是一张表的例子： name/varchar gender/char(10) age/int zhangsan male 22 lisi female 33 - 每列的数据类型相同，每一行称为一条记录 SQL语法标准 以分号结尾，可以单行或多行 空格和换行不会当作输入 不区分大小写（通常大写关键字） SQL语句分类 数据定义语言DDL Data Definition Language 用来操作数据库对象的结构：库、表、列 数据操作语言DML Data Manipulation Language 用来操作数据库记录：增、删、改（会修改记录的操作） 数据控制语言DCL Data Control Language 用来定义和访问权限和安全级别，如用户创建和授权 数据查询语言 Data Query Language 用来查询记录（不会修改记录） SQL 数据类型 数据类型兼容 SQL 支持 compatible range:</description>
+    </item>
+    
+    <item>
+      <title>Staatstrojaner</title>
+      <link>https://tongluoshao.space/permanent/Staatstrojaner/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Staatstrojaner/</guid>
+      <description>国家的特洛伊木马, 安装在需要监控者的终端设备上 据说联邦刑事警察局买了 mfc42ul.dll
+功能
+截图 窃听 Skype, VoIP 与 C&amp;amp;C 服务器通话 分析
+软件到 C&amp;amp;C 单向加密, 使用 AES-ECB cmd 1, cmd 10, cmd 11, cmd 15: &amp;ndash; cmd 2: 客户端重新连接并尝试发送数据（与cmd 13类似） cmd 3: 低质量的屏幕截图 cmd 4: 注册一个内核模式的驱动程序</description>
+    </item>
+    
+    <item>
+      <title>Standford Parser</title>
+      <link>https://tongluoshao.space/permanent/Standford-Parser/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Standford-Parser/</guid>
+      <description>简介 learn from corpus CFG with weighting 语言学分析 </description>
+    </item>
+    
+    <item>
+      <title>Tagsets</title>
+      <link>https://tongluoshao.space/permanent/Tagsets/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Tagsets/</guid>
+      <description>![[attachments/Pasted image 20230202172000.png]]
+Universal Dependencies 总览 ![[attachments/Pasted image 20230204180121.png|L|400]] ![[attachments/Pasted image 20230207205920.png|L|400]]</description>
+    </item>
+    
+    <item>
+      <title>TCPIP 五层模型</title>
+      <link>https://tongluoshao.space/permanent/TCPIP-%E4%BA%94%E5%B1%82%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/TCPIP-%E4%BA%94%E5%B1%82%E6%A8%A1%E5%9E%8B/</guid>
+      <description>![[attachments/Pasted image 20230316194705.png|L|400]] ![[attachments/Pasted image 20230316194758.png|L|500]] 协议分层的原则 每一层都能完成双向且对立的操作(如加密/解密, 发送/接收) 在同一层的通信对象物(or: 数据单元)是相同的(如数据链路层是帧, 传输层是段Segment) 应用层 解决问题: 已建立连接, 如何通信 应用层协议: [[permanent/邮件系统协议简述|邮件协议]], HTTP, FTP, SSH, DNS等 应用层有两种连接模式 Client/Server 模式 P2P(point2point) 模式 传输层 解决问题: 两个不同终端上的进程如远程通信 通常通过对进程绑定端口转化为两个端口的通信 传输层协议: TCP, UDP 网络层 解决问题: 将数据包(IP Datagram, 数据报)通过最优线路传输给已知 IP 地址的终端(路由) 网络层协议: IPv4, IPv6 数据链路层 解决问题: 数据帧 frame 的在节点 node(路由,终端)之间的无差错传输 连接节点的不是 WAN 就是 LAN WAN 技术包括: 拨号上网 有线电视网络 手机网络 卫星网络 LAN 技术包括: 有线 LAN WLAN Bluetooth 调制解调器 把数字信号调制成模拟信号, 把模拟信号解调成数字信号</description>
+    </item>
+    
+    <item>
+      <title>TODO</title>
+      <link>https://tongluoshao.space/permanent/TODO/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/TODO/</guid>
+      <description>顺便是个 Dataview 示范
+1 2 3 TASK WHERE !completed GROUP BY file.link </description>
+    </item>
+    
+    <item>
+      <title>Trunk-based Workflow</title>
+      <link>https://tongluoshao.space/permanent/Trunk-based-Workflow/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Trunk-based-Workflow/</guid>
+      <description> 是个啥啊 Best Practice for DevOps, continuous software development </description>
+    </item>
+    
+    <item>
+      <title>TTP(Tastics,Techniques and Procedures)</title>
+      <link>https://tongluoshao.space/permanent/TTPTasticsTechniques-and-Procedures/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/TTPTasticsTechniques-and-Procedures/</guid>
+      <description>TTP Tastics, Techniques, Procedures patterns of activities or methods of attackers(a special threat actor or a group of threat actors) 描述网络攻击的模板 Tactics !</description>
+    </item>
+    
+    <item>
+      <title>TTP(Trusted Third Party)</title>
+      <link>https://tongluoshao.space/permanent/TTPTrusted-Third-Party/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/TTPTrusted-Third-Party/</guid>
+      <description>可信赖的第三方</description>
+    </item>
+    
+    <item>
+      <title>UML 图</title>
+      <link>https://tongluoshao.space/permanent/UML-%E5%9B%BE/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/UML-%E5%9B%BE/</guid>
+      <description>UML 在线画图工具: https://www.processon.com/ 每个图用在什么流程 Stage Structure Behavior Requirement Use-case Activity Analyse Sequence Design Class State, Communication Implementation Class Diagram 一个简单说明 [[02-Tutorial-annotated.</description>
+    </item>
+    
+    <item>
+      <title>Unicode</title>
+      <link>https://tongluoshao.space/permanent/Unicode/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Unicode/</guid>
+      <description>字符编码
+你倒是写点什么啊 </description>
+    </item>
+    
+    <item>
+      <title>vbh - Scientific Writing</title>
+      <link>https://tongluoshao.space/project/vbh-Scientific-Writing/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/vbh-Scientific-Writing/</guid>
+      <description>Introduction boh science and language competency common structure of scientific method questiono hypothesis experiments data result conclusion(discussion) ==Process== preparation literature search &amp;amp; manage planning writing expression content(of the research) visuals bibliography, citation publishing submission oral presentaion poster presentation peer-reviewing ==ects== Receive a &amp;ldquo;Schein&amp;rdquo; (including ECTS) from the Ludwig-Maximilians-Universität München: If you enroll in any university of Bavaria and you want to receive a &amp;ldquo;Schein&amp;rdquo;, please submit an essay of your own scientific work at the end of the course to scientificwritingmunich@gmail.</description>
+    </item>
+    
+    <item>
+      <title>Version Controll System(VCS)</title>
+      <link>https://tongluoshao.space/permanent/Version-Controll-SystemVCS/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Version-Controll-SystemVCS/</guid>
+      <description>Subversion(SVN), 集中式版本控制 CVS, 并发式管理控制 [[permanent/Git|Git]], Mercurial, 去中心化版本控制
+VCS 的任务 提供团队的共同数据存储 分工的可能性 跟踪开发历史 创建一致的, 可操作的软件版本 Release 发布管理 准备使用 VCS 选择和部署版本控制系统 定义存储方案, 即文件夹结构, 命名管理和存储文件格式的规范 定义工作流程, 包括 checkout 和 commit, 评论的规则, 以及创建分支或将分支整合到主线的程序 </description>
+    </item>
+    
+    <item>
+      <title>VIM</title>
+      <link>https://tongluoshao.space/permanent/VIM/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/VIM/</guid>
+      <description>VIM 使用 VIM 设置 [[permanent/VIM 界面设置|VIM 界面设置]]
+VIM 在其他地方 [[permanent/小鹤音形和 Obsidian vim 的适性|小鹤音形和 Obsidian vim 的适性]]</description>
+    </item>
+    
+    <item>
+      <title>VIM 界面设置</title>
+      <link>https://tongluoshao.space/permanent/VIM-%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/VIM-%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE/</guid>
+      <description>颜色 set guifont=consolas:h16
+colorscheme molokai set termguicolors
+下载的配色文件放在vim90/colors 第二句是真彩色
+备份文件 set undodir=$TEMP\vimfiles\undo_temp set backupdir=$TEMP\vimfiles\backup_temp
+备份文件地址, 必须是已经存在的文件夹 可以用环境变量
+窗口 set lines=35 columns=118</description>
+    </item>
+    
+    <item>
+      <title>Web 开发</title>
+      <link>https://tongluoshao.space/permanent/Web-%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Web-%E5%BC%80%E5%8F%91/</guid>
+      <description>[[permanent/js调用mermaid|js调用mermaid]]</description>
+    </item>
+    
+    <item>
+      <title>WiFi 技术</title>
+      <link>https://tongluoshao.space/permanent/WiFi-%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/WiFi-%E6%8A%80%E6%9C%AF/</guid>
+      <description>WiFi 的 5G 指的是 Hz, 与手机的代数 Generation 区分
+第一代 802.11a
+第四代 802.11n 同时运行在 2.4GHz 和 5GHz
+第五代 802.11ac 真5G 穿透性更差, 抗干扰能力更强</description>
+    </item>
+    
+    <item>
+      <title>XSS</title>
+      <link>https://tongluoshao.space/permanent/XSS/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/XSS/</guid>
+      <description>XSS Cross Site Scripting 让软件执行恶意代码
+典型的XSS目标
+将敏感数据，如cookies，传输给攻击者。 Mallet可以用这个来冒充Bob（身份盗窃，冒充攻击) Dangerous HTML element attributes: innerHTML, src, onLoad, onClick, etc...
+Dangerous functions: eval, setTimeout, setInterval</description>
+    </item>
+    
+    <item>
+      <title>2009~ Stuxnet</title>
+      <link>https://tongluoshao.space/permanent/2009~-Stuxnet/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/2009~-Stuxnet/</guid>
+      <description> 事件经过和分析
+针对可编程工业控制系统(programmable logic device controller, PLCs), 如西门子程序 替换中央DLL, s7otbxdx.dll 目标疑似伊朗的核设施 Suche nach WinCC oder Siemens Step7 Software in Registry </description>
+    </item>
+    
+    <item>
+      <title>AES</title>
+      <link>https://tongluoshao.space/permanent/AES/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/AES/</guid>
+      <description>AES Advanced Encryption Standard 1997 年美国商务部公开招标的算法, Rijndael 中标 diffusion 也比较高 AES 算法 可变块长度 32*$N_b$ bits, 可变密钥长度 32*$N_k$ bits, $N_k$ 和 $N_b$ 4, 6, 8 轮数推导出: $N_r$ = max($N_b$, $N_k$) + 6 总体流程 !</description>
+    </item>
+    
+    <item>
+      <title>Bell LaPadula 模型</title>
+      <link>https://tongluoshao.space/permanent/Bell-LaPadula-%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Bell-LaPadula-%E6%A8%A1%E5%9E%8B/</guid>
+      <description> 又名多层安全模型 主体(用户)对客体(数据)的访问规则 Simple security property 简单安全规则 no read up 主体对于比自己安全级别高的客体不可读 Star property 星属性安全规则 no write down 主体对于比自己安全级别低的客体不可写 Strong star property 强星属性安全规则 主体可以对与自己安全级别相同的客体可读可写 </description>
+    </item>
+    
+    <item>
+      <title>chrome复制各种链接到剪贴板</title>
+      <link>https://tongluoshao.space/permanent/chrome%E5%A4%8D%E5%88%B6%E5%90%84%E7%A7%8D%E9%93%BE%E6%8E%A5%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/chrome%E5%A4%8D%E5%88%B6%E5%90%84%E7%A7%8D%E9%93%BE%E6%8E%A5%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF/</guid>
+      <description>这个 chrome 插件很好用: 复制链接到剪贴板
+下面是自带的各种格式的演示
+HTML(text/plain) 扩展程序
+1 &amp;lt;a href=&amp;#34;chrome://extensions/&amp;#34;&amp;gt;扩展程序&amp;lt;/a&amp;gt; Markdown 扩展程序
+1 [扩展程序](chrome://extensions/) BBCode(text) [url=chrome://extensions/]扩展程序[/url]
+BBCode(url) [url]chrome://extensions/[/url]
+Textfile &amp;ldquo;扩展程序&amp;rdquo;:chrome://extensions/</description>
+    </item>
+    
+    <item>
+      <title>CPU</title>
+      <link>https://tongluoshao.space/permanent/CPU/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/CPU/</guid>
+      <description>算术逻辑单元 ALU Arithmetic and Logic Unit 对数据进行算术或逻辑运算 控制单元 Control Unit 对存储器, ALU 和输入输出子系统进行控制 寄存器 数据寄存器 R 保存输入输出数据和运算结果
+指令寄存器 IR 存储整条指令(e.g. add M R2)</description>
+    </item>
+    
+    <item>
+      <title>Cryptoanalyse</title>
+      <link>https://tongluoshao.space/permanent/Cryptoanalyse/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Cryptoanalyse/</guid>
+      <description>密码破译技术 Bruteforce 128 bit -&amp;gt; 3.4e+38 种密码可能(如果计算机每秒尝试30亿次, 1000台电脑最多需要尝试3.6e+18年) 256 bit -&amp;gt; 配置同上, 1.2e+57年 撞库 先 MD5散列时代 的攻击技术 所以要[[permanent/加盐|加盐]]啊喂 彩虹表 [[permanent/彩虹表|彩虹表]] 后 MD5散列时代 的爆破用表 对抗密码破译 加盐 [[permanent/加盐|加盐]] 预防撞库攻击, 安全地存储用户密码 </description>
+    </item>
+    
+    <item>
+      <title>Cryptography</title>
+      <link>https://tongluoshao.space/permanent/Cryptography/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Cryptography/</guid>
+      <description>密码系统 Cryptosystem $$ S = (M,K,C,e,d)$$
+Message 明文 Key 密钥 Cipher 密文 encrypt function $e = M \times K \rightarrow C$ decrypt function $d = C \times K \rightarrow M$ 密码分类 [[permanent/对称密码|对称密码]] 与 [[permanent/非对称密码|非对称密码]] 区块密码 与 流密码 密码结构 [[permanent/Feistel 密码结构|Feistel 密码结构]]</description>
+    </item>
+    
+    <item>
+      <title>DES</title>
+      <link>https://tongluoshao.space/permanent/DES/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/DES/</guid>
+      <description>Data Encryption Standard 历史 1977NBS(前NIST), 第一个广泛使用的标准化加密方法 2002年被 AES 取代 98年 EFF 耗资 250k 美金, 搞了个 Deep Crack 针对, 直接给干碎了 特点 substitution, permutaion, modolo 2</description>
+    </item>
+    
+    <item>
+      <title>F1 Metrics</title>
+      <link>https://tongluoshao.space/permanent/F1-Metrics/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/F1-Metrics/</guid>
+      <description>F1 Metrics TP = true positive, 实为 pos, 预测为 pos TN = true negative, 实为 neg, 预测为 neg FP = false positive, 实为 neg, 预测为 pos FN = false positive, 实为 pos, 预测为 neg</description>
+    </item>
+    
+    <item>
+      <title>lmu - Betriebsystem</title>
+      <link>https://tongluoshao.space/project/lmu-Betriebsystem/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/lmu-Betriebsystem/</guid>
+      <description>K1 Das Betribssystem 1.1 Einordnung des Machinensprache 机器语言的分类/编排 Logische Hierarchie in einem Rechner ![[attachments/image_1638879655684_0.png]]
+BS: Anwendungsprogramme, Systemprogramme, Betriebssystem RA: Machinensprache, Mikroprogrammierung, Physikalische Geräte Mikroprogrammierung: 微指令集，对硬件解释机器语言 1.</description>
+    </item>
+    
+    <item>
+      <title>Petri-Netze</title>
+      <link>https://tongluoshao.space/permanent/Petri-Netze/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Petri-Netze/</guid>
+      <description>属于 [[project/lmu - Betriebsystem|lmu - Betriebsystem]]
+Petri-Netze components Petrinetze $$Y = (S,T,F,K,W,M_0)$$ Stellen S statische Objekte Transitionen T Aktionen Kanten F S &amp;ndash;&amp;gt; T oder T &amp;ndash;&amp;gt; S Kapizität K einer Stelle 某个Stelle的最大Mark数 Kantengewicht W einer Kante 链出减少，链入增加 Marken M 资源 ·x, x·, -x, x- Sei $$ x \in S \bigcup T$$ ·x:= $${y \in S \bigcup T : (y, x) \in F }$$ Vorbereich einer Stelle/Transition x 链入x的Stelle/Transitionen x· := $${ y \in S \bigcup T : (x, y) \in F}$$ Nachbereich einer Stelle/Transition x x链出的Stelle/Transitionen -x:= $${(y,x) \in (S \times T) \bigcup ( T \times S) : (y,x) \in F}$$ Menge aller Eingangskanten von x 链入x的Kanten x- := $${(x,y) \in (S \times T) \bigcup ( T \times S) : (x,y) \in F}$$ Menge aller Ausganskanten von x 链出x的Kanten Markierung Markierung可以理解为状态，下标从0开始 形如: $$M = {0,0,1,0}$$ $$M_1 = {1, 0, 0, 1 }$$ 注：这个Petri-Netze有4个Stellen, 在M状态时S2有一个Mark, （转换到）M1状态时S0, S3有一个Mark Aktivierte Transitionen (在M状态下)可以执行的Transition。 collapsed:: true 条件： 其Vorbereich有足够的Marken 其Nachbereich有足够的空余容量 Folgemarkierung $M^{&amp;rsquo;}$: 即经过一次T后（计算得到）的下一个Markierung Erreichbarkeitsgraph Die Erreichbarkeitsmenge $E_Y$ zu dem Petri-Netze Y enthält die Anfangsmarkeirung $M_0$: $$E_Y = E_Y (M_0) := { M^{&amp;rsquo;}: \exists n \in \mathbb{N_0}, t_1,&amp;hellip;,t_n \in T^* : M_0 \xrightarrow{t_1,&amp;hellip;,t_n} M^{&amp;rsquo;} }$$ 就是从M出发能到的所有Markierung Deadlock/Verleimmungen Teilweise Verklemmung Min.</description>
+    </item>
+    
+    <item>
+      <title>RSA</title>
+      <link>https://tongluoshao.space/permanent/RSA/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/RSA/</guid>
+      <description>RSA 1978, 命名是三个人名的开头字母 基于质因数分解 RSA 密钥生成 随机选择两个差不多大的质数 p, q n = pq, $\Phi(n) = (p-1)(q-1)$ 选择一个与 p, q 互质的 e, 1 &amp;lt; e &amp;lt; $\Phi(n)$, 常选 e = 65537 d = e$^{-1}$ mod $\Phi(n)$, 逆元, 就是 d 要达到这个效果 扩展欧几里得算法求逆元: d * m - k * Phi(n) = 1, k 正数 !</description>
+    </item>
+    
+    <item>
+      <title>SIEM</title>
+      <link>https://tongluoshao.space/permanent/SIEM/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/SIEM/</guid>
+      <description>SIEM Security Information and Event Management SIEM 是系统安全管理的一种方案, 整合了 SIM(Security Information Management) 和 SEM(Security Event Management).
+SIEM
+从网络设备(Router, Switcher), 服务器, 域管理者, 应用(防火墙, IDS/IDP系统)等地方收集警告, 通知, 日志 集中, 即时地收集, 关联和评价安全信息数据 各系统上的软件代理收集数据, 如有必要, 进行标准化/统一化/预处理并发给 SIEM 处理(一些变体没有代理, 直接发给 SIEM) SIEM 结合了分布式检测能力</description>
+    </item>
+    
+    <item>
+      <title>STAR 模型</title>
+      <link>https://tongluoshao.space/permanent/STAR-%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/STAR-%E6%A8%A1%E5%9E%8B/</guid>
+      <description>说明 用于(如在简历中)描述自己的项目经验 微软建议 src: 《剑指Offer》 STAR 模型 Situation 项目背景
+Task 自己完成的任务
+Action 为了完成任务做了哪些工作
+Result 自己的贡献 最好能用数字描述出来
+STAR 模型应用示例 Winforms是微软.NET中的一个成熟的UI平台（Situation）。本人的工作是在添加少量新功能之外主要负责维护已有的功能（Task）。新的功能主要是让Winforms的控件的风格和Vista、Windows 7的风格保持一致。在维护方面，对于较难的问题我用WinDbg等工具进行调试（Action）。在过去两年中我总共修改了超过200个Bug（Result）。</description>
+    </item>
+    
+    <item>
+      <title>TCP</title>
+      <link>https://tongluoshao.space/permanent/TCP/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/TCP/</guid>
+      <description>TCP Header ![[Pasted image 20230227131720.png|L|500]] </description>
+    </item>
+    
+    <item>
+      <title>三角函数</title>
+      <link>https://tongluoshao.space/permanent/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/</guid>
+      <description>三角函数公式 公式
+定义/关系公式 csc 正割， sec 余割
+倒数关系 $\tan x \cot x = 1$ $\sin x \csc x = 1$ $\cos x \sec x = 1$ 平方关系 $\cos^2 x + \sin^2 x = 1$ $1 + \cot^2 x = \csc^2 x$ $1 + \tan^2 x = \sec^2 x$ 六边形关系 来自 !</description>
+    </item>
+    
+    <item>
+      <title>主存储器技术</title>
+      <link>https://tongluoshao.space/permanent/%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8%E6%8A%80%E6%9C%AF/</guid>
+      <description>(场效应Feldeffekt）晶体管：电子开关或放大器（用弱电压Spannung可以控制更高的电压）。
+源极Source和漏极Drain之间的区域通常是不导电的 - 通过在体部Bulk和栅极Gate之间施加电压，电子迁移到这个区域，它就会变成导电的leitend（&amp;ldquo;闭合开关geschlossener Schalter&amp;rdquo;）。
+![[attachments/Pasted image 20221021184556.png]]</description>
+    </item>
+    
+    <item>
+      <title>人工智能</title>
+      <link>https://tongluoshao.space/permanent/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</guid>
+      <description>[[project/飞桨AI - 大模型应用开发技巧与实战|飞桨AI - 大模型应用开发技巧与实战]]
+[[permanent/知识增强大模型|知识增强大模型]]</description>
+    </item>
+    
+    <item>
+      <title>从原子运动的角度看气液固三相变化</title>
+      <link>https://tongluoshao.space/permanent/%E4%BB%8E%E5%8E%9F%E5%AD%90%E8%BF%90%E5%8A%A8%E7%9A%84%E8%A7%92%E5%BA%A6%E7%9C%8B%E6%B0%94%E6%B6%B2%E5%9B%BA%E4%B8%89%E7%9B%B8%E5%8F%98%E5%8C%96/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BB%8E%E5%8E%9F%E5%AD%90%E8%BF%90%E5%8A%A8%E7%9A%84%E8%A7%92%E5%BA%A6%E7%9C%8B%E6%B0%94%E6%B6%B2%E5%9B%BA%E4%B8%89%E7%9B%B8%E5%8F%98%E5%8C%96/</guid>
+      <description>物质中的原子是在不断运动的
+液态的水面上水分子在不断运动, 其中运动得更剧烈的水分子就会脱离液态水, 也就是蒸发. 这些蒸发的水分子能量高于平均, 因此蒸发会导致液态水温度降低. 温度升高, 就是原子运动加剧, 因此升高温度蒸发得更快. 又会有空气中游离的气态水分子附着回到液态水.
+冰中的原子联结更紧密, 运动幅度更小, 但即使在 绝对零度, 也会有最低幅度的振动.
+src: 费曼物理学讲义</description>
+    </item>
+    
+    <item>
+      <title>休闲宗门</title>
+      <link>https://tongluoshao.space/permanent/%E4%BC%91%E9%97%B2%E5%AE%97%E9%97%A8/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BC%91%E9%97%B2%E5%AE%97%E9%97%A8/</guid>
+      <description>炼丹 卷王 莽 炼体 痴情 丹药精通 有权有势 功法/武技精通 其他精通 单独姓&amp;gt;凌&amp;gt;武
+有权有势的保持本姓
+入门顺序 唐龙 0-4 唐霏 0-7 武长泽 0-7 武敖 0-10 *楚苑 1-1 武沧兰 1-1 武慕婉 1-4 姜擎 1-7 *唐枫眠 1-10 魏延昭 2-1 叶酬 2-4 武禾 2-7 上官若水 2-10 *方杨 2-10 武流云 3-1 唐铁江 3-4 林思　3-7 秦小柔 3-7 唐破 3-10 *宁寒 4-4 &amp;mdash;20 *紫寻 ?</description>
+    </item>
+    
+    <item>
+      <title>会飞的丑小鸭 - 教我兄弟学安卓逆向</title>
+      <link>https://tongluoshao.space/project/%E4%BC%9A%E9%A3%9E%E7%9A%84%E4%B8%91%E5%B0%8F%E9%B8%AD-%E6%95%99%E6%88%91%E5%85%84%E5%BC%9F%E5%AD%A6%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/%E4%BC%9A%E9%A3%9E%E7%9A%84%E4%B8%91%E5%B0%8F%E9%B8%AD-%E6%95%99%E6%88%91%E5%85%84%E5%BC%9F%E5%AD%A6%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/</guid>
+      <description>系列目录: https://www.52pojie.cn/thread-742703-1-1.html
+一、安卓正向编程 01编写第一个 app
+1 2 3 4 5 6 7 8 9 EditText Name; Name = (EditText) findViewById(R.id.Text_Name); Button Login; .</description>
+    </item>
+    
+    <item>
+      <title>位图</title>
+      <link>https://tongluoshao.space/permanent/%E4%BD%8D%E5%9B%BE/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BD%8D%E5%9B%BE/</guid>
+      <description> 又称光栅图 raster graphic 解析度 resolution 长和宽上像素点的数量 如 1920x1200 色彩深度 color depth 指用多少位来存储颜色 真彩色 True-Color 用 24 位存储颜色, RGB 各8位 一共有 16 777 216($2^{24}$) 种颜色 JPEG 用的是真彩色 索引色 indexed color 也叫调色板色 palette color 只要 8 位 从真彩色的 16777216 种中选择 256 种 GIF 用的是索引色 </description>
+    </item>
+    
+    <item>
+      <title>位移运算</title>
+      <link>https://tongluoshao.space/permanent/%E4%BD%8D%E7%A7%BB%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BD%8D%E7%A7%BB%E8%BF%90%E7%AE%97/</guid>
+      <description> shift operation 逻辑位移 logical shift operation 逻辑左移: 最高位丢失, 最低位进0, 其余左移一位 逻辑右移: 最高位进0, 最低位丢失, 其余右移一位 循环位移 circular shift operation 循环左移: 最高位到最低位, 其余左移一位 循环右移: 最低位到最高位, 其余右移一位 算术位移 arithmetic shift operation 考虑到了[[permanent/补码系统(有符号整数存储)|补码]]存储的数字 算术左移: 同逻辑左移 算术右移: 全部右移一位, 最低位丢失, 最高位等于原来的最高位 拓展:微机位移指令 ROL:循环左移； ROR:循环右移； RCL: 带进位循环左移； RCR: 带进位循环右移。 具体用法：ROL: 循环左移, 高位到低位并送 CF;ROR: 循环右移, 低位到高位并送 CF；RCL: 循环左移, 进位值到低位, 高位进 CF；RCR: 循环右移, 进位值到高位, 低位进 CF </description>
+    </item>
+    
+    <item>
+      <title>位置化数字系统</title>
+      <link>https://tongluoshao.space/permanent/%E4%BD%8D%E7%BD%AE%E5%8C%96%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BD%8D%E7%BD%AE%E5%8C%96%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F/</guid>
+      <description> 位置化的数字系统中, 数码的位置决定其表示的值 值 $S = S_{k-1} * b^{k-1} + &amp;hellip; + S_1 * b + S_0$ $S_n$ (从右数) n 位置的数码 b 底, base 我们平时用的十进制系统就是位置化数字系统 二进制, 八进制, 十六进制也是 非位置化数字系统, 如罗马数字 </description>
+    </item>
+    
+    <item>
+      <title>你猫游</title>
+      <link>https://tongluoshao.space/permanent/%E4%BD%A0%E7%8C%AB%E6%B8%B8/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BD%A0%E7%8C%AB%E6%B8%B8/</guid>
+      <description>光景攻略合集
+3.0武器建议
+堆血装备一览
+完成度 主线 第一部+隐藏 1.5部前后篇+隐藏 二前 剧情 现东副本毕业 现代八妖 二中 剧情 隐藏Fear 古东副本毕业?差土偶 古代八妖 二转 剧情 隐藏Fear 未东副本 二结 主线 隐藏Fear 十六妖 冥峡界副本 第三部 外传 魔剑1 IDA1 + 隐藏 龙宫1 + 钓鱼 炭矿村 IDA2 + 隐藏 通天塔 幽禁庭院 魔剑2 不凋花 拍卖 没买完, 但点数拿完了 龙宫2 叉鱼 AS 莉瓦雅 外典 西方外典 剧情 极彩之尘(无貌) 未来外典 剧情 还有啥啊 断章 米悠 希尔 联动 P5 剧情 点数 P5R 传说1 传说2 回生 邂逅, 后日谈 其他内容 猫冒险 小黑</description>
+    </item>
+    
+    <item>
+      <title>信息安全的原则</title>
+      <link>https://tongluoshao.space/permanent/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%9A%84%E5%8E%9F%E5%88%99/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%9A%84%E5%8E%9F%E5%88%99/</guid>
+      <description>Need-to-know 原则 应当只被允许访问为履行其职责而需要的信息</description>
+    </item>
+    
+    <item>
+      <title>修改WIN远程桌面侦听端口</title>
+      <link>https://tongluoshao.space/permanent/%E4%BF%AE%E6%94%B9WIN%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BE%A6%E5%90%AC%E7%AB%AF%E5%8F%A3/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BF%AE%E6%94%B9WIN%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BE%A6%E5%90%AC%E7%AB%AF%E5%8F%A3/</guid>
+      <description>默认是 3389
+改 注册表 port number 项 改注册表 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp 也有说计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp 也要改的（测试也是改了才行） 防火墙添加入站规则 firewall 高级设置， 新建入站规则，改成新改的端口 脚本 [[permanent/bat 创建防火墙入站规则|bat 创建防火墙入站规则]] </description>
+    </item>
+    
+    <item>
+      <title>修改编辑默认软件</title>
+      <link>https://tongluoshao.space/permanent/%E4%BF%AE%E6%94%B9%E7%BC%96%E8%BE%91%E9%BB%98%E8%AE%A4%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BF%AE%E6%94%B9%E7%BC%96%E8%BE%91%E9%BB%98%E8%AE%A4%E8%BD%AF%E4%BB%B6/</guid>
+      <description>bat src 修改BAT格式文件的默认编辑程序 - jingkunliu - 博客园
+bat格式文件默认通过文本文档方式编辑，在编辑过程中有很多不便。
+修改方法：
+1、依次打开【开始】菜单，进入【运行】，输入【regedit】进行注册表编辑器。
+2、找到【计算机\HKEY_CLASSES_ROOT\batfile\shell\edit\command】位置下的注册表项。
+3、修改注册表值为默认打开的修改程序。
+【C:\Program Files\Notepad2\Notepad2.exe %1】其中前面部分为需要修改后的默认程序路径，注意别漏掉后面%1的内容。
+建议可以使用NOTEPAD2或者NOTEPAD++等软件作为bat格式文件的默认编辑器。</description>
+    </item>
+    
+    <item>
+      <title>内存和外部存储</title>
+      <link>https://tongluoshao.space/permanent/%E5%86%85%E5%AD%98%E5%92%8C%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%86%85%E5%AD%98%E5%92%8C%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8/</guid>
+      <description>内存 外部存储 纯电子(晶体管和电容) 可磁化的旋转磁盘 易变 不易变 快(10ns) 慢(5ms) 贵 便宜 自由存储 区块存储 ![[Pasted image 20221021184005.png]]</description>
+    </item>
+    
+    <item>
+      <title>冯·诺依曼模型</title>
+      <link>https://tongluoshao.space/permanent/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E6%A8%A1%E5%9E%8B/</guid>
+      <description>冯·诺依曼模型是所有现代计算机遵循的模型 基于冯·诺依曼模型的计算机拥有四个子系统 算术逻辑单元 ALU 控制单元 输入/输出数据 存储器 算术逻辑单元 ALU ![[permanent/CPU#算术逻辑单元 ALU|ALU]]
+控制单元 ![[permanent/CPU#控制单元|控制单元]]</description>
+    </item>
+    
+    <item>
+      <title>分类法</title>
+      <link>https://tongluoshao.space/permanent/%E5%88%86%E7%B1%BB%E6%B3%95/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%88%86%E7%B1%BB%E6%B3%95/</guid>
+      <description>参考: 如何对知识分类
+![[attachments/Pasted image 20221209225037.png]]</description>
+    </item>
+    
+    <item>
+      <title>创造力的关键</title>
+      <link>https://tongluoshao.space/permanent/%E5%88%9B%E9%80%A0%E5%8A%9B%E7%9A%84%E5%85%B3%E9%94%AE/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%88%9B%E9%80%A0%E5%8A%9B%E7%9A%84%E5%85%B3%E9%94%AE/</guid>
+      <description>关键是能够在两种框架中灵活切换:
+天马行空的想象力和发散的思维 理性分析能力和应用能力 相似地: [[permanent/解决问题的能力|解决问题的能力]]
+![[attachments/f774b1a49b05044a3c54fc59717c12f.jpg]]</description>
+    </item>
+    
+    <item>
+      <title>加盐</title>
+      <link>https://tongluoshao.space/permanent/%E5%8A%A0%E7%9B%90/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%8A%A0%E7%9B%90/</guid>
+      <description>https://www.ucloud.cn/yun/88113.html
+加盐 salting 密码学中的加盐是指, 通过在密码的任意固定位置插入(或替换)特定的字符串, 然后散列的结果和原始密码的散列结果不同.
+加盐的方法 固定字符串加盐 就是将固定字符串加在密码的固定位置, 然后进行加密. 这种方法的缺点是, 一旦攻击者拿到源代码(都拿到数据库了还拿不到源码吗), 就能轻松构建一张新的[[permanent/彩虹表]]破解密码.
+随机字符串加盐 盐的长度固定, 但是是随机的. 数据库在存储每位用户的密文密码的同时也存储每位用户的盐. 加密方式例如 md5(md5(passwd) + salt());</description>
+    </item>
+    
+    <item>
+      <title>南蛮DLC地名</title>
+      <link>https://tongluoshao.space/permanent/%E5%8D%97%E8%9B%AEDLC%E5%9C%B0%E5%90%8D/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%8D%97%E8%9B%AEDLC%E5%9C%B0%E5%90%8D/</guid>
+      <description>武陵郡 治所临沅 武陵有个叫汉寿的县，在东汉相当长时间里是荆州刺史的治所，吴时改成吴寿，晋改回汉寿；（葭萌在蜀汉时期被改名汉寿，晋时改晋寿） 迁陵在湘西，现保靖东北。2002年保靖里耶镇出土过36000片秦简，里耶在秦朝属迁陵县。 镡成(xin2)是秦时平定岭南设的军事据点，现湖南靖县附近 充县，现湖南桑植，贺龙元帅故乡。 溇中澧中蛮指溇水澧水一带的蛮族。 夷道，现湖北宜都。 泰山太守应劭 交州刺史朱符 武陵蛮的传说里： 高辛氏是帝喾 秦以二十两为镒 三代以前分土，自秦汉分人 周末始有将军官 吴姓自周命氏 巴郡 巴郡的变迁过程 献帝初赵韪提议（华阳国志） （朐忍chun2，意蚯蚓） 建安五年赵韪造反，刘璋斩之。六年，鱼复的蹇胤又提议改分 涪陵的谢本又请求划分新郡 刘备入益州时将巴东改成江关都尉，后改固陵。然后又有人不满了要改回巴名。 {:height 142, :width 366} 蜀汉时巴郡地图： 涪陵郡 据记载，涪陵没有产榨菜，而是产勇士。 犍为郡 qian2 治所在现武阳彭山，离涪陵郡很远。 孝武帝时置犍为郡，时治鳖（现贵州遵义），昭帝时迁僰道（bo2,现四川宜宾），后迁武阳。 {:height 428, :width 502} 江阳郡 建安十八年刘璋置郡，本来是犍为郡的一部分。 可考证的县只有三个：汉安，江阳（现四川泸州），符节 朱提(shi2,通匙)，前犍为属国的治所，后改朱提郡，今云南昭通 朱提郡有个县叫堂琅，意为螳螂 平夷，今贵州毕节一带，东汉时属牂牁郡。 南方诸郡 东汉时南方四郡（牂牁郡，越嶲xi1郡，益州郡，永昌郡） 建兴三年，诸葛亮征四郡，四郡皆平。改益州郡为建宁郡，分建宁、永昌郡为云南郡，又分建宁，牂牁为兴古郡 云南郡治所梇栋，现姚安 青蛉，现大姚，意为蜻蜓 越嶲郡治所邛都，现西昌。越嶲夷人数次造反，连杀两任太守，后来太守不敢到郡上上任，只敢住在八百里外的安上县，后来张嶷上任才控制住。 益州郡治所滇池，现云南晋宁东北边。汉武帝时攻打昆明国，因为滇池的存在，特意在长安挖了一个昆明池模拟水战环境。现在西安还有昆明池的遗址。 建宁治所味县mei4，今云南曲靖 建宁修云是三国时期新设的县，现大约在云南弥勒附近。 建宁谈稿，现云南盘县附近，三国时期撤县，西晋时才重新设立 牂牁治所且兰，且音沮，汉时叫故且兰，原来是一个叫且兰的部落的地方，大约在现贵州黄平附近 牂牁夜郎，旧部落名，现在大约在贵州关岭附近 牂牁毋敛，现在大约在贵州独山附近 永昌郡西汉时是没有的，东汉时才新开拓 永昌治所不韦，现云南保山附近 永昌永寿，三国或西晋新设 交趾郡 现越南北部 治所龙编，现河内附近 临尘，现广西崇左附近，三国时期应属郁林郡 宛温，宛音yuen1，三国时期应是兴古郡治所，现砚山附近，东晋改名宛暖，避权臣桓温讳。 西随，现云南金平附近，三国时期应属兴古郡 九真郡、日南郡 九真治所胥浦，现越南清化附近，曾经是越南西都 日南治所西卷，现越南广治附近 </description>
+    </item>
+    
+    <item>
+      <title>卡片盒笔记的实践方法</title>
+      <link>https://tongluoshao.space/permanent/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E7%9A%84%E5%AE%9E%E8%B7%B5%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E7%9A%84%E5%AE%9E%E8%B7%B5%E6%96%B9%E6%B3%95/</guid>
+      <description>卡片盒笔记的原则 原子性原则：一条笔记只表述一个内容 自主原则：在脱离上下文后，一张卡片仍保持独立完整 始终链接：避免孤立 建立链接时解释为什么 表达转述 保留参考文献，但不必强调来源。 添加自己的想法：而不仅是笔记 不要在意笔记结构：思考结构又会陷入分类的怪圈。实际上，卡片 盒里的每一张卡片都是平等的 添加[[permanent/卡片盒笔记法#关联笔记|关联笔记]] 添加[[permanent/卡片盒笔记法#大纲笔记|大纲笔记]] 更正代替删除：建立新的卡片更正不再适用的旧卡片，并表述为何卡片不再适用。 大胆添加，什么都可以加，卢曼有90k条笔记 src: 卡片盒笔记的原则
+Workflow 在 Obsd 卢曼卡片盒的默认位置新建一页，此为一张[[permanent/卡片盒笔记法#闪念笔记 fleeting note|闪念卡片]]或[[permanent/卡片盒笔记法#文献笔记 literature note|文献卡片]]。如果无法使用软件，可以就近取材，比如手机备忘录或餐巾纸。 在忘记自己为什么要自己这条笔记前，将闪念卡片整理成[[permanent/卡片盒笔记法#永久笔记 permanent note|永久卡片]], 最好是每天一次.</description>
+    </item>
+    
+    <item>
+      <title>发展技术领导力</title>
+      <link>https://tongluoshao.space/permanent/%E5%8F%91%E5%B1%95%E6%8A%80%E6%9C%AF%E9%A2%86%E5%AF%BC%E5%8A%9B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%8F%91%E5%B1%95%E6%8A%80%E6%9C%AF%E9%A2%86%E5%AF%BC%E5%8A%9B/</guid>
+      <description>#todo https://garden.oldwinter.top/%E5%8F%91%E5%B1%95%E6%8A%80%E6%9C%AF%E9%A2%86%E5%AF%BC%E5%8A%9B/</description>
+    </item>
+    
+    <item>
+      <title>图灵机</title>
+      <link>https://tongluoshao.space/permanent/%E5%9B%BE%E7%81%B5%E6%9C%BA/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%9B%BE%E7%81%B5%E6%9C%BA/</guid>
+      <description> 图灵机不是一个具体的机器, 而是由 Alan Turing 提出的一种数学上的模型. 只要为这类机器提供合适的程序, 图灵机应当能够执行所有的计算. 基于图灵模型的计算机由以下部分组成 图灵机 输入/输出 程序 </description>
+    </item>
+    
+    <item>
+      <title>图灵的猫 - 人人都能听懂的AI通识课</title>
+      <link>https://tongluoshao.space/permanent/%E5%9B%BE%E7%81%B5%E7%9A%84%E7%8C%AB-%E4%BA%BA%E4%BA%BA%E9%83%BD%E8%83%BD%E5%90%AC%E6%87%82%E7%9A%84AI%E9%80%9A%E8%AF%86%E8%AF%BE/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%9B%BE%E7%81%B5%E7%9A%84%E7%8C%AB-%E4%BA%BA%E4%BA%BA%E9%83%BD%E8%83%BD%E5%90%AC%E6%87%82%E7%9A%84AI%E9%80%9A%E8%AF%86%E8%AF%BE/</guid>
+      <description>历史 [[AI的发展历史]]</description>
+    </item>
+    
+    <item>
+      <title>处事方法</title>
+      <link>https://tongluoshao.space/permanent/%E5%A4%84%E4%BA%8B%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%A4%84%E4%BA%8B%E6%96%B9%E6%B3%95/</guid>
+      <description>[[permanent/STAR 模型|STAR 模型]]
+[[permanent/解决问题的能力|解决问题的能力]]
+[[permanent/创造力的关键|创造力的关键]]</description>
+    </item>
+    
+    <item>
+      <title>太吾绘卷</title>
+      <link>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7/</guid>
+      <description>教程 [[permanent/宵夜97 - 太吾绘卷 Mod 制作]]
+readme [[permanent/太吾绘卷Mod 自用更新改动检查器 readme]] [[permanent/太吾绘卷Mod RPC前后端通信 readme]] [[permanent/太吾绘卷Mod RPC前后端通信 readme]]
+笔记 [[permanent/太吾绘卷 Mod 制作分析笔记]] [[permanent/太吾绘卷事件编辑器]] [[permanent/太吾绘卷事件Guid]]</description>
+    </item>
+    
+    <item>
+      <title>太吾绘卷 Mod 制作分析笔记</title>
+      <link>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7-Mod-%E5%88%B6%E4%BD%9C%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7-Mod-%E5%88%B6%E4%BD%9C%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</guid>
+      <description>主动传剑制作中 SetLegacyPassingState 的变化
+1 2 3 4 5 6 7 8 9 2023-04-24 12:00:50.0793|INFO|Main|GameData.Utilities.AdaptableLog|select option to next Event: 52b116a3-0248-4bbe-9d94-06b2029347be 2023-04-24 12:00:53.</description>
+    </item>
+    
+    <item>
+      <title>太吾绘卷Mod RPC前后端通信 readme</title>
+      <link>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7Mod-RPC%E5%89%8D%E5%90%8E%E7%AB%AF%E9%80%9A%E4%BF%A1-readme/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7Mod-RPC%E5%89%8D%E5%90%8E%E7%AB%AF%E9%80%9A%E4%BF%A1-readme/</guid>
+      <description>1 E:\SteamLibrary\steamapps\workshop\content\838350\2879349207 TWPRC 太吾RPC框架(其实应该叫IPC, 进程间调用( ╯□╰ ))
+功能介绍 可以以同步方式调用后端的函数, 就好像在调用本地函数
+特性介绍 易用 接口简单 如: int result3 = (int)client.CallMethod(ClassTpyeName, &amp;quot;TestMethod&amp;quot;, new List&amp;lt;int&amp;gt; { 4, 5, 6 }); 同步调用, 方便debug 高性能, 通信消耗几乎没有, 不额外占用系统资源 解决目前mod加载依赖问题, 不需要框架优先加载(好吧不需要了) 支持多线程(应该) 使用方法 前端的依赖项添加TWRPC.</description>
+    </item>
+    
+    <item>
+      <title>太吾绘卷Mod 自用更新改动检查器 readme</title>
+      <link>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7Mod-%E8%87%AA%E7%94%A8%E6%9B%B4%E6%96%B0%E6%94%B9%E5%8A%A8%E6%A3%80%E6%9F%A5%E5%99%A8-readme/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7Mod-%E8%87%AA%E7%94%A8%E6%9B%B4%E6%96%B0%E6%94%B9%E5%8A%A8%E6%A3%80%E6%9F%A5%E5%99%A8-readme/</guid>
+      <description>0.前言 一个modder可能开发过多个mod，每个mod又可能patch了多个地方。然而茄子一更新，原先patch的地方可能就变了，从而引起mod工作不正常甚至红字。Modder手上的mod越多、越大，每次更新后的红字可能就越多，就需要耗费更多时间去排查、修复。尤其是测试版更新频繁，可能这边焦头烂额地才修到一半，那边又更新了&amp;hellip;久而久之可能会演变成“开发一时爽，维护火葬场”的尴尬局面&amp;hellip;&amp;hellip; 假如能在版本更新后快速找出打过patch的地方哪些是改动过的，哪些是没有改动过的，似乎就能节省不少时间和精力。 于是就写了这个小工具&amp;hellip;&amp;hellip;
+1.使用方法 使用本工具的之前最好卸载所有其它Mod以确保结果的准确性。
+首先确定工作目录(默认为太吾文件夹\Mod\Checker\)，在下面创建2个文件watchlist_Frontend.txt和watchlist_Backend.txt，按照格式填写查询条目(不能有空白行, 不能有空格)。
+查Assembly-CSharp.dll里的方法用watchlist_Frontend.txt；查GameData.dll里或者EventLib里的方法用watchlist_Backend.txt。
+第一次使用时模式需选择提取代码，然后重启游戏。成功patch上的话会在records文件夹内输出提取到的结果。 待本体更新后需要检查所监视的方法是否有改动时，需要把之前得到的结果转移到records_old文件夹内，然后选择对比模式或者对比并且提取，并重启。一切顺利的话会在工作文件夹内生成检查报告。 (检查结果只显示是否有改动，具体改了什么可以用UltraCompare之类的工具查看。)
+2.格式 监视列表中的条目具有形如
+1 &amp;lt;方法名,类或结构体程序集限定名,&amp;lt;泛型参数0类型,泛型参数1类型,...&amp;gt;,&amp;lt;参数0类型,参数1类型,...&amp;gt;,返回值类型,方法类别&amp;gt; (不带最外面的引号，&amp;quot;&amp;hellip;&amp;ldquo;表示省略，下同)的样子， 其中方法名就是方法的名字，不带任何参数和命名空间的那种。
+[[permanent/太吾绘卷Mod 自用更新改动检查器 readme#类或结构体程序集限定名|类或结构体程序集限定名]]</description>
+    </item>
+    
+    <item>
+      <title>太吾绘卷事件Guid</title>
+      <link>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7%E4%BA%8B%E4%BB%B6Guid/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7%E4%BA%8B%E4%BB%B6Guid/</guid>
+      <description>大地图人物交互 人物交互主事件
+1 567d1caf-8b28-4dbf-8cbe-e746e8ac8cfd 交谈
+1 05e87c45-f14e-49ef-8769-cbaced4753ae 比试
+1 9dce4f27-347c-4588-9be4-08c1c7f1f4a3 修习
+1 a9d0bcd8-e378-4ee9-96a6-1e5b9db17371 亲近
+1 bad63f08-115a-45aa-970c-fa203dd85e2b 敌对
+1 7c70ce0c-577a-4049-bcad-e593c63d62d4 互动</description>
+    </item>
+    
+    <item>
+      <title>太吾绘卷事件编辑器</title>
+      <link>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7%E4%BA%8B%E4%BB%B6%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7%E4%BA%8B%E4%BB%B6%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <description>在事件中植入选项 编辑事件代码-OnEventEnter()
+1 2 3 4 5 6 7 8 9 // 向互动植入选项 EventHelper.AddOptionToEvent(&amp;#34;fb38f657-6ed0-41e4-a0c2-c82afb49762f&amp;#34;, Guid.ToString(), EventOptions[0].OptionKey); // 向主交互植入选项 EventHelper.AddOptionToEvent(&amp;#34;567d1caf-8b28-4dbf-8cbe-e746e8ac8cfd&amp;#34;, Guid.ToString(), EventOptions[0].</description>
+    </item>
+    
+    <item>
+      <title>头脑风暴的局限</title>
+      <link>https://tongluoshao.space/permanent/%E5%A4%B4%E8%84%91%E9%A3%8E%E6%9A%B4%E7%9A%84%E5%B1%80%E9%99%90/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%A4%B4%E8%84%91%E9%A3%8E%E6%9A%B4%E7%9A%84%E5%B1%80%E9%99%90/</guid>
+      <description>我们通常不希望放弃大脑里出现的第一个想法, 即使它不那么好. 可能的原理不是很清楚, 感觉类似拍卖那样的, 大脑里有一种先行占有的感觉 因此很多人一起头脑风暴, 也可能导致好点子更少.
+![[0f89ae7f7a68d23acee6217076be433.jpg]]</description>
+    </item>
+    
+    <item>
+      <title>子系统的互连</title>
+      <link>https://tongluoshao.space/permanent/%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BA%92%E8%BF%9E/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BA%92%E8%BF%9E/</guid>
+      <description>三种线: 数据总线, 地址总线, 控制总线
+CPU 与存储器的连接 数据总线 CPU 与存储器的数据交流是以字长为单位的
+每一条数据总线传输一位数据
+64 位的电脑就有 64 条数据总线
+地址总线 内存空间的地址总共需要 n 位表示, 就有 n 条地址总线</description>
+    </item>
+    
+    <item>
+      <title>存储器</title>
+      <link>https://tongluoshao.space/permanent/%E5%AD%98%E5%82%A8%E5%99%A8/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AD%98%E5%82%A8%E5%99%A8/</guid>
+      <description>地址空间 ![[Pasted image 20230316121306.png]] 每一个内存地址有 地址 和 内容 字长, 即内容的位数就是我们常说的 32位/64位, 即字长分别是4字节/8字节 地址的位数 和 地址空间的大小 相关, 以无符号整数保存 计算机存储器层级 寄存器 CPU 里那个 最快, 最小 缓存 主存 存储器的类型 [[permanent/存储器的类型|存储器的类型]]</description>
+    </item>
+    
+    <item>
+      <title>存储器的类型</title>
+      <link>https://tongluoshao.space/permanent/%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E7%B1%BB%E5%9E%8B/</guid>
+      <description>RAM Random Access Memories 随机存取存储器 可以根据地址来读写任意地址的内容 易失性, 断电丢失 SRAM Static RAM 使用触发器门电路 快, 昂贵 DRAM Dynamic RAM 使用电容存储 因为电容会随时间放电, 所以需要周期性刷新 比 SRAM 慢一点, 比较便宜 ROM Read-Only Memories 只读存储器 通常由厂家写好, 用户只读, 比如 BIOS 非易失性, 即使断电也不会丢失数据 PROM Programmable ROM EPROM Erasable and Programmable ROM EEPROM Electronically Erasable and Programmable ROM 磁介质存储设备 [[permanent/磁介质存储设备|磁介质存储设备]] 如磁盘, 磁带 光介质存储设备 如 CD-ROM, DVD </description>
+    </item>
+    
+    <item>
+      <title>学习方法</title>
+      <link>https://tongluoshao.space/permanent/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</guid>
+      <description>[[project/断墨寻径|断墨寻径]]
+Tips [[permanent/学会规则到成为专家|学会规则到成为专家]]</description>
+    </item>
+    
+    <item>
+      <title>学会规则到成为专家</title>
+      <link>https://tongluoshao.space/permanent/%E5%AD%A6%E4%BC%9A%E8%A7%84%E5%88%99%E5%88%B0%E6%88%90%E4%B8%BA%E4%B8%93%E5%AE%B6/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AD%A6%E4%BC%9A%E8%A7%84%E5%88%99%E5%88%B0%E6%88%90%E4%B8%BA%E4%B8%93%E5%AE%B6/</guid>
+      <description>正确运用规则能使人胜任一件事, 但仅仅会正确运用规则是不足以成为专家的, 还需要经验的积累.
+![[attachments/3c28a36d3ebb797c681c1f42f04d5a4.jpg]]</description>
+    </item>
+    
+    <item>
+      <title>宵夜97 - 太吾绘卷 Mod 制作</title>
+      <link>https://tongluoshao.space/permanent/%E5%AE%B5%E5%A4%9C97-%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7-Mod-%E5%88%B6%E4%BD%9C/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AE%B5%E5%A4%9C97-%E5%A4%AA%E5%90%BE%E7%BB%98%E5%8D%B7-Mod-%E5%88%B6%E4%BD%9C/</guid>
+      <description>视频链接
+https://www.bilibili.com/video/BV1Fd4y1z7jV/?spm_id_from=333.999.0.0&amp;vd_source=92451653bea4ed324c9bfc0287256aa5
+灰机wiki - 太吾 Mod 制作
+主要相关 managed-AC, managed-TaiWuModLib, backend-GameData
+Mod 的文件夹结构 mod名文件夹 - Config.lua - Settings.lua - Plugins - xxx.</description>
+    </item>
+    
+    <item>
+      <title>密码学</title>
+      <link>https://tongluoshao.space/permanent/%E5%AF%86%E7%A0%81%E5%AD%A6/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AF%86%E7%A0%81%E5%AD%A6/</guid>
+      <description>密码学 Cryptology Cryptology = Cryptography + Cryptoanalyse [[permanent/Cryptography|Cryptography]] 加密解密技术 [[permanent/Cryptoanalyse|Cryptoanalyse]] 没有密钥进行解密的技术 工具站 spammimic https://www.spammimic.com/ 把信息编码得像垃圾邮件, 这样即使被人看到, 也不知道是加密了的 cryptool 已知密码算法的情况下可用, 丰富的算法 https://www.</description>
+    </item>
+    
+    <item>
+      <title>对已有的想法越熟悉, 就对新想法越开放</title>
+      <link>https://tongluoshao.space/permanent/%E5%AF%B9%E5%B7%B2%E6%9C%89%E7%9A%84%E6%83%B3%E6%B3%95%E8%B6%8A%E7%86%9F%E6%82%89-%E5%B0%B1%E5%AF%B9%E6%96%B0%E6%83%B3%E6%B3%95%E8%B6%8A%E5%BC%80%E6%94%BE/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AF%B9%E5%B7%B2%E6%9C%89%E7%9A%84%E6%83%B3%E6%B3%95%E8%B6%8A%E7%86%9F%E6%82%89-%E5%B0%B1%E5%AF%B9%E6%96%B0%E6%83%B3%E6%B3%95%E8%B6%8A%E5%BC%80%E6%94%BE/</guid>
+      <description>我们对已有的想法越熟悉, 就越容易接受新的想法. 这一点的前提条件我觉得是得对这个想法熟悉到 一定程度, 两者才能正相关. 因为越熟悉就越开放的原因应该是熟悉到足够了解已有的想法的缺陷.
+![[attachments/96022b009828db7aad88384da380c03.jpg]]</description>
+    </item>
+    
+    <item>
+      <title>对称密码</title>
+      <link>https://tongluoshao.space/permanent/%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81/</guid>
+      <description>对称密码 通信双方各持有一份密码本, 加密和解密密钥是相同的 DES, AES, IDEA, RC4, Blowfish, Serpent, Twofish 对称密码技术 Substitution Permutation One-Time-Pad 一次性密码本 对称密码种类 恺撒密码/ROT13/&amp;hellip; One-Time-Pad [[permanent/DES|DES]] [[permanent/AES|AES]] </description>
+    </item>
+    
+    <item>
+      <title>小鹤音形和 Obsidian vim 的适性</title>
+      <link>https://tongluoshao.space/permanent/%E5%B0%8F%E9%B9%A4%E9%9F%B3%E5%BD%A2%E5%92%8C-Obsidian-vim-%E7%9A%84%E9%80%82%E6%80%A7/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%B0%8F%E9%B9%A4%E9%9F%B3%E5%BD%A2%E5%92%8C-Obsidian-vim-%E7%9A%84%E9%80%82%E6%80%A7/</guid>
+      <description>Fly_py 在锁定大写切换回小写的时候 vim 会失效， 而小狼毫不会
+以及在 vim Normal 模式下, 小鹤中文状态, 所有按键会变成双击</description>
+    </item>
+    
+    <item>
+      <title>平均指标</title>
+      <link>https://tongluoshao.space/permanent/%E5%B9%B3%E5%9D%87%E6%8C%87%E6%A0%87/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%B9%B3%E5%9D%87%E6%8C%87%E6%A0%87/</guid>
+      <description> 中位数 算术平均数 mean 对一个序列 $a_1, a_2, \ &amp;hellip;, \ a_n$, 其 mean 为 $$ mean = \frac{\sum_{i=1}^n{a_i} }{n} $$ 调和平均数 harmonic mean 也称为倒数平均数, 是算术平均数的变形 对一个序列 $a_1, a_2, \ &amp;hellip;, \ a_n$, 其 调和平均数 为 $$ H = \frac{n}{\sum^{n}_{i=1} \frac{1}{a_i}}$$ </description>
+    </item>
+    
+    <item>
+      <title>心流</title>
+      <link>https://tongluoshao.space/permanent/%E5%BF%83%E6%B5%81/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%BF%83%E6%B5%81/</guid>
+      <description>Csikszentmihalyi, 1975
+![[attachments/f6c1d9f946ea7a4629af102af8ffe09.jpg]]</description>
+    </item>
+    
+    <item>
+      <title>心理学概念</title>
+      <link>https://tongluoshao.space/permanent/%E5%BF%83%E7%90%86%E5%AD%A6%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%BF%83%E7%90%86%E5%AD%A6%E6%A6%82%E5%BF%B5/</guid>
+      <description>[[permanent/曝光效应|曝光效应]]
+[[permanent/心流|心流]]</description>
+    </item>
+    
+    <item>
+      <title>思考方式</title>
+      <link>https://tongluoshao.space/permanent/%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F/</guid>
+      <description>[[permanent/想象的到的情况更容易被高估发生的可能性|想象的到的情况更容易被高估发生的可能性]]
+[[permanent/对已有的想法越熟悉, 就对新想法越开放|对已有的想法越熟悉, 就对新想法越开放]]
+[[permanent/头脑风暴的局限|头脑风暴的局限]]</description>
+    </item>
+    
+    <item>
+      <title>想象的到的情况更容易被高估发生的可能性</title>
+      <link>https://tongluoshao.space/permanent/%E6%83%B3%E8%B1%A1%E7%9A%84%E5%88%B0%E7%9A%84%E6%83%85%E5%86%B5%E6%9B%B4%E5%AE%B9%E6%98%93%E8%A2%AB%E9%AB%98%E4%BC%B0%E5%8F%91%E7%94%9F%E7%9A%84%E5%8F%AF%E8%83%BD%E6%80%A7/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%83%B3%E8%B1%A1%E7%9A%84%E5%88%B0%E7%9A%84%E6%83%85%E5%86%B5%E6%9B%B4%E5%AE%B9%E6%98%93%E8%A2%AB%E9%AB%98%E4%BC%B0%E5%8F%91%E7%94%9F%E7%9A%84%E5%8F%AF%E8%83%BD%E6%80%A7/</guid>
+      <description>如果你能为某种可能发生的情况找到具体而合理的解释, 那么你通常会高估这种情况发生的可能性.
+这可能是因为人更容易注意到自己熟悉的东西.
+![[attachments/d53d2d6ec48956082d06d49b48edce6.jpg]]</description>
+    </item>
+    
+    <item>
+      <title>抄写于记忆或学习的收益很低</title>
+      <link>https://tongluoshao.space/permanent/%E6%8A%84%E5%86%99%E4%BA%8E%E8%AE%B0%E5%BF%86%E6%88%96%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%94%B6%E7%9B%8A%E5%BE%88%E4%BD%8E/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%8A%84%E5%86%99%E4%BA%8E%E8%AE%B0%E5%BF%86%E6%88%96%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%94%B6%E7%9B%8A%E5%BE%88%E4%BD%8E/</guid>
+      <description>如果你想要学习或记忆一样东西, 包括一段文字, 一个公式等等, 抄写绝不是一个值得使用的方法. 因为你的目的是记下它或者学会它, 而不是, 抄完它. 对于学习, 重点是理解, 想要知道自己是否学会一样东西, 最好的办法的看看自己能否详细阐释它. 对于记忆, 人会更快记住有意义的事物
+抄写只能让人有一种「我抄了那么多遍, 这么努力了, 应该有效果吧」的错觉
+原理: [[permanent/曝光效应|曝光效应]]</description>
+    </item>
+    
+    <item>
+      <title>控制流混淆</title>
+      <link>https://tongluoshao.space/permanent/%E6%8E%A7%E5%88%B6%E6%B5%81%E6%B7%B7%E6%B7%86/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%8E%A7%E5%88%B6%E6%B5%81%E6%B7%B7%E6%B7%86/</guid>
+      <description>有些软件可以在打包的时候使用控制流混淆, 混淆后的代码可读性变得非常差</description>
+    </item>
+    
+    <item>
+      <title>擅长多任务处理的错觉</title>
+      <link>https://tongluoshao.space/permanent/%E6%93%85%E9%95%BF%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%A4%84%E7%90%86%E7%9A%84%E9%94%99%E8%A7%89/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%93%85%E9%95%BF%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%A4%84%E7%90%86%E7%9A%84%E9%94%99%E8%A7%89/</guid>
+      <description>有人可能认为自己擅长多任务处理, 但心理学家的研究表明, 无论是效率还是质量, 擅长多任务处理的人明显比不上一次只做一件事的对照组.
+可能的原理: [[permanent/曝光效应|曝光效应]]
+![[attachments/e990a4700100b9e5af4acd835212a27.jpg]]</description>
+    </item>
+    
+    <item>
+      <title>操作系统理论</title>
+      <link>https://tongluoshao.space/permanent/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA/</guid>
+      <description>[[project/lmu - Betriebsystem|lmu - Betriebsystem]]</description>
+    </item>
+    
+    <item>
+      <title>数字证书</title>
+      <link>https://tongluoshao.space/permanent/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6/</guid>
+      <description> [[permanent/lmu - IT Security#Identification|Identification]] (PS: 不是 CIA 的 Integrity) OIDC OCSP </description>
+    </item>
+    
+    <item>
+      <title>数据库比较</title>
+      <link>https://tongluoshao.space/permanent/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%AF%94%E8%BE%83/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%AF%94%E8%BE%83/</guid>
+      <description>常见的关系型数据库 MySQL Oracle SQLite PostgreSQL 常见的NOSQL数据库 键值数据库：Redis、Memcached、Riak 列族数据库：Bigtable、HBase、Cassandra 文档数据库：MongoDB、CouchDB、MarkLogic 图形数据库：Neo4j、InfoGrid </description>
+    </item>
+    
+    <item>
+      <title>数据库系统</title>
+      <link>https://tongluoshao.space/permanent/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/</guid>
+      <description>[[permanent/2003 SQL Slammer|2003 SQL Slammer]]
+[[permanent/数据系统DBS的九个任务|数据系统DBS的九个任务]]
+[[permanent/主存储器技术|主存储器技术]]
+[[permanent/SQL|SQL]]语言
+数据库 [[permanent/数据库比较|数据库比较]]
+[[permanent/MySQL|MySQL]]
+[[project/lmu - Database system|lmu - Database system]]</description>
+    </item>
+    
+    <item>
+      <title>数据系统DBS的九个任务</title>
+      <link>https://tongluoshao.space/permanent/%E6%95%B0%E6%8D%AE%E7%B3%BB%E7%BB%9FDBS%E7%9A%84%E4%B9%9D%E4%B8%AA%E4%BB%BB%E5%8A%A1/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%95%B0%E6%8D%AE%E7%B3%BB%E7%BB%9FDBS%E7%9A%84%E4%B9%9D%E4%B8%AA%E4%BB%BB%E5%8A%A1/</guid>
+      <description> 集成 Integration 操作 Operation 数据字典 Data Dictionary 用户视图 Benutzersichten 一致性监视 Konsistenzüberwachung ^6e8319 访问控制 交易 Transaktionen Zusammuenfassung einer Folge von Änderungsoperationen zu einer Einheit, deren Effekt bei Erfolg permanent in DB gespeichert wird 同步 数据安全 </description>
+    </item>
+    
+    <item>
+      <title>断墨寻径</title>
+      <link>https://tongluoshao.space/project/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/</guid>
+      <description>Intro 问自己几个问题：
+一个学习方法高效，为什么高效？ 学会了方法，该什么时候使用，失效的时候，又该怎样调整？ 系列目标：
+学习是什么？ 讲清楚学习行为的目标，让学生能根据目标设计符合自己的做题方式、学习方式、记笔记方式和听课方式等。 01 记忆学习与目标学习 信息
+含义：描述一个情况 e.g. 2 是偶数 需要「记忆」，目标是「重现」 知识
+含义：描述同一类问题的所有情况，包括从未提及的新情况 e.g. 所有能被 2 整除的数都是偶数 需要「学习」，目标是「生成」「泛化」 学习与记忆</description>
+    </item>
+    
+    <item>
+      <title>曝光效应</title>
+      <link>https://tongluoshao.space/permanent/%E6%9B%9D%E5%85%89%E6%95%88%E5%BA%94/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%9B%9D%E5%85%89%E6%95%88%E5%BA%94/</guid>
+      <description>曝光效应是指, 某件事情做的次数多了以后, 人就会相信自己对这件事很熟练, 但实际上次数和熟练度并非正相关.
+但一件事做多了却又很容易让人产生自己已经熟练了的错觉. 在肌肉记忆的领域可能 不适用, 但此外需格外注意
+![[attachments/aa73448ba053a97cc3ffd3dd8fd4e1c.jpg]]
+可能导致:
+[[permanent/擅长多任务处理的错觉|擅长多任务处理的错觉]] (擅长xx的错觉) [[permanent/抄写于记忆或学习的收益很低|抄写于记忆或学习的收益很低]] [[permanent/重复多次阅读的收益不如一次深入思考|重复多次阅读的收益不如一次深入思考]] </description>
+    </item>
+    
+    <item>
+      <title>机器学习</title>
+      <link>https://tongluoshao.space/permanent/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <description>[[permanent/人工智能|人工智能]]
+[[permanent/Data Mining]]</description>
+    </item>
+    
+    <item>
+      <title>某洋葱浏览器的连接</title>
+      <link>https://tongluoshao.space/permanent/%E6%9F%90%E6%B4%8B%E8%91%B1%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%9F%90%E6%B4%8B%E8%91%B1%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5/</guid>
+      <description>内置网桥和请求网桥得到的是公用的 中国大陆用户可能必须使用私人或未公开的 obfs4 网桥。 请联系 Telegram 机器人 @GetBridgesBot 并输入 /bridges。 或者发送邮件到 frontdesk@torproject.org 来获取，邮件主题需要包含“private bridge”。</description>
+    </item>
+    
+    <item>
+      <title>欧拉函数</title>
+      <link>https://tongluoshao.space/permanent/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</guid>
+      <description> 计算一个小于等于正整数 n 并与 n 互质的正整数的个数 Euler&amp;rsquo;s phi funcion, 别名 Euler&amp;rsquo;s totient function、φ函数、欧拉商数 $\Phi(n)$ $\Phi(1)=1$ $\Phi(8)=4$ (1,3,5,7) </description>
+    </item>
+    
+    <item>
+      <title>正己 - 安卓逆向这档事</title>
+      <link>https://tongluoshao.space/project/%E6%AD%A3%E5%B7%B1-%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E8%BF%99%E6%A1%A3%E4%BA%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/%E6%AD%A3%E5%B7%B1-%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E8%BF%99%E6%A1%A3%E4%BA%8B/</guid>
+      <description>一、模拟器环境安装 src 《安卓逆向这档事》一、模拟器环境搭建
+三个文件 雷电模拟器9 Magisk LSPosed 本地文件在d/52 安装雷电模拟器 在雷电多开器里新建一个并启动, 小磁盘模式可开
+模拟器的准备 给模拟器root, 重启 -&amp;gt;模拟器软件设置-其他设置 打开共享文件夹, 把网盘里的 LSPosed 压缩包放进去 -&amp;gt;模拟器右侧更多-共享文件夹 如果是最新版本雷电, 要打开磁盘写入 -&amp;gt;模拟器软件设置-性能设置 安装 Magisk Delta 把文件拖进模拟器界面, 安装完打开 永久允许root 安装-请求访问存储-允许, 然后什么都不要做, 后台关掉软件 重新打开-安装 下一步-安装到磁盘(这个是模拟器的特殊选项) 显示 all done 就算安装成功, 重启模拟器 设置 Magisk 设置里打开 Zygisk</description>
+    </item>
+    
+    <item>
+      <title>武林立志传龙吟剑</title>
+      <link>https://tongluoshao.space/permanent/%E6%AD%A6%E6%9E%97%E7%AB%8B%E5%BF%97%E4%BC%A0%E9%BE%99%E5%90%9F%E5%89%91/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%AD%A6%E6%9E%97%E7%AB%8B%E5%BF%97%E4%BC%A0%E9%BE%99%E5%90%9F%E5%89%91/</guid>
+      <description>武功推荐(贴吧:魔帝无天) 武林盟主：展雪 技能路线：魔化心法→夜月流→寒云劲→天寒地冻→冰月极光→修罗斩月→魔帝无天（共64点）
+破玉拳→混元掌→云台指→千仞指→霞光连剑诀→天道剑绝（共39点）
+洗髓心法→刻玉指→天地变→花前月下（共14点）
+素女周天功（共2点）
+共用119点，剩余1点
+解析：大妈的智慧高，可以用56最强智慧装，且冰火魔攻均成长好。大妈走标准魔帝冰攻路线是为了将自身冰火魔攻的性价比发挥至最大，且进一步强化冰攻单杀BOSS能力，让大妈在资料片中更加游刃有余，特定场合（如客栈怪谈既有冰免怪又有火免怪）最好用的人物，无论火系还是冰系单体群体均非常有质量：火系霸天狂单体4W，霸天灭单体2W，霸天绝群攻2W，霸天怒群攻1W；冰系雪晶殇群攻8000，魔帝单体1W5。用大妈可以大大缩减游戏难度和游戏通关时间，因此大妈也被众吧友称为官方作弊器。大妈是整个武林最强的冰火魔导，没有人可以和她抗衡，当之无愧的武林至尊，只学习一个天道都足以血洗整个资料片的恐怖存在。个人推荐用大妈刷装备秘籍和带人坐飞机升级，可以省非常多事情，弊端就是很可能以后每一场战斗你都会情不自禁把大妈摆出来&amp;hellip;总结，大妈不光人物造型英气十足，实力也是一等一的强，龙吟剑霸主的地位无人能撼动。（提示：大妈是要通关60关卡武林至尊之后新开档才能收到的，想一周目就收到大妈的可借助战前存档，用别人的存档通关武林至尊之后再开新档即可，三BOSS也可用同样的办法一周目收到）
+玉兔： 小玉儿 技能路线：太虚心法→梵心诀→晶冰玉结→梵海无边→冰封万里→神渡霜天→赤日神回（共64点）
+破玉拳→混元掌→云台指→千仞指→霞光连剑诀→天道剑绝（共39点）
+洗髓心法→刻玉指→英仙阵→贯虹指（共14点）
+素女周天功（共2点）
+达摩心法（共1点）
+共用120点，剩余0点
+解析：小玉儿的这套加点是我资料片受启发新研究出的，和以往吧里默认的嫁衣千叶路线相差很远，这里我详细说说我这套加点的思路和老版技能路线的对比：老版技能路线着重在小玉儿的奇术和定性上做文章，小玉儿高达11的奇术出地龙再合适不过，而且前置的嫁衣十八跌也非常契合玉儿140的高定性，加上减物理抗的千叶，小玉儿集控场、减益、补刀等多功能于一体，好用得不行，尤其是BOSS战中会异常出彩。我原来玩资料片玉儿的加点是基于原吧主跑偏之王的加点推荐上稍作修改而成，直到近期，看到吧友新发的剑走偏锋那个帖，很受启发，觉得有些东西其实可以没必要那么局限，可以自行开脑洞发散思维。于是我重新研究了玉儿，发现玉儿因为可以穿56最强智慧装，加上冰火魔攻成长好，有没有一个加点是既能将她的输出能力保证同时又不会埋没她的高定性和奇术呢？经过反复洗点，终于确定了现在这个加点：这套加点相比原来，少了地龙的群睡，少了嫁衣、无上聚力诀、千叶的各种减抗，也少了浩瀚的火攻加成；但是多了一个大范围火系群攻， 多了神渡的加成，大家还注意到没有，减抗部分由原来的单体全部变为群体：梵海无边3范围外加20%冰系减抗，贯虹指5范围15%火系减抗，英仙阵1范围10%物理减抗。虽然减抗力度上比原来有所下滑（嫁衣减冰火抗各20%，千叶减单体物理抗25%，无上聚力减单体冰抗15%,个人感觉除了和原来加点的千叶单体减物理抗相差的有点远之外减冰火抗其实真没隔多少，梵海和贯虹还比原来的无上和嫁衣范围大得多），但是从配合群攻来说玉儿的这套加点更能发挥出她高定性减抗的价值。此套技能里面控制系的也不少，有梵心迷惑，有混元和千仞眩晕，有霞光失血，只比原来地龙的路线少了一个单体昏睡和群体昏睡（说实在的，资料片以后太多怪免疫控制了，多个控制远不如多个输出实在），也不算埋没玉儿的奇术。最后我们综合来看一下，玉儿这套点可赤日群攻，可寒冰烈火单体补刀，可神渡加成，可梵海贯虹减群，可素女走位保命&amp;hellip;&amp;hellip;.真正实战中几乎没有一个回合是没有事情做的，比原来的加点团队适用性更广。特别是波次攻击中，小玉儿可以先贯虹减抗为赤日众铺路，当其他人放完赤日等待CD时，小玉儿保留下来的赤日又可以配合其他补师的贯虹继续输出一波（一般这个时候加成补师要做的事情基本已经做完了，前面要做的事情太多没空闲放贯虹），这个节奏真的是非常非常合理。至于漏掉的物理单体最强减抗千叶可以让其他高定性减益补师学习，要用到地龙的场合也可以由黄甫燕、巫如双、贾芷雪、卜南松等高奇术人物代为发挥，况且英仙阵和达摩心法也有个10%减物理抗，聊胜于无，可用于千叶CD或者无千叶人员上场等应急场合。从整个团队效益的角度看，新加点效益要远高于以往的嫁衣千叶路线，小玉儿也从当初主要减益控场的定位变成了集输出、加成、减益、控场、补刀等多方面的万能钥匙，并且在团队契合度上也比原来高了至少两个档次，比一般的赤日众强了不知道多少倍。和原来的加点相比新加点更加可以发挥小玉儿高冰火魔攻的输出功效，在减抗和控制上的损失不大，可以由其他队友补正，甚至减抗范围比原来还有了很大程度的提高，真正意义上完美发挥了这个人物的最大实力。总结，小玉儿也是和大妈一样超脱于各大门派之外的超然存在，龙吟剑第二140的定性和本身自带的寒冰烈火掌相得益彰，加上第一高的奇术，可控可输出，配上高定性减益，攻击性非凡。也许也只有这种妖孽般的存在才能和大妈归类到一起，她们两个都强得变态。（如果实在是放不下玉儿千叶和地龙的专利，这里还有两个选择：1.天道保留，赤日和贯虹改为出地龙和千叶，共117点，最后3点出素女或十字手都行，这套加点中天道强化了玉儿的单体补刀，同时天道线的前置控制技能正好契合玉儿的奇术；2.天道线完全砍掉，保留贯虹，赤日线出到梵海，多出一个花前月下，加上地龙和千叶，也是刚好117点，剩下的3点出素女或者十字手都可以，这套点最大程度强化了玉儿的高减益，两个单体减加两个群体减，且还多了花前的隐身，加上群睡的地龙，也是非常强大的）
+英雄门 展承天 技能路线：破玉拳→混元掌→云台指→千仞指→霞光连剑诀→天道剑绝（共39点）</description>
+    </item>
+    
+    <item>
+      <title>法师的读书阁</title>
+      <link>https://tongluoshao.space/permanent/%E6%B3%95%E5%B8%88%E7%9A%84%E8%AF%BB%E4%B9%A6%E9%98%81/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%B3%95%E5%B8%88%E7%9A%84%E8%AF%BB%E4%B9%A6%E9%98%81/</guid>
+      <description>[[permanent/西汉的三公九卿|西汉的三公九卿]]
+[[permanent/诸葛亮的北伐|诸葛亮的北伐]]
+[[permanent/南蛮DLC地名|南蛮DLC地名]]</description>
+    </item>
+    
+    <item>
+      <title>测试驱动开发 Test-Driven Devlopment</title>
+      <link>https://tongluoshao.space/permanent/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91-Test-Driven-Devlopment/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91-Test-Driven-Devlopment/</guid>
+      <description>TDD 的规则 先写测试用例(失败), 再开始写代码 在单元测试中不要写多余的提示内容. TDD 的影响 in other words, 为什么要使用 tdd
+改变视角. TDD 强迫开发人员变成用户 可测试性. 如此开发的软件是一个完全「可测试」的软件, 并具有积极的耦合特性. 文档示例. 测试用例也可以被看作文档的一部分, 展示了应该如何正确使用类.</description>
+    </item>
+    
+    <item>
+      <title>浮点数的存储</title>
+      <link>https://tongluoshao.space/permanent/%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E5%AD%98%E5%82%A8/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E5%AD%98%E5%82%A8/</guid>
+      <description>![[attachments/Pasted image 20230314111717.png#inl|src: wikipedia]] 精度 Sign(S) Exponent(E) Significand(M) 32 bits 1 8 23 64 bits 1 11 52 Sign 符号位, 0 表示正, 1 表示负 Exponent 指数部分, 表示 2 的多少次方 需要减去偏移量 $2^{|E|} - 1$ Significand 小数部分, 也叫 fraction, Mantisse 要表示 1.</description>
+    </item>
+    
+    <item>
+      <title>物理层传输介质</title>
+      <link>https://tongluoshao.space/permanent/%E7%89%A9%E7%90%86%E5%B1%82%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%89%A9%E7%90%86%E5%B1%82%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8/</guid>
+      <description>物理层的传输介质分类 物理层的传输介质有:
+导向介质(即有线): 双绞线, 同轴电缆, 光纤电缆 非导向介质(即无线): 无线电波, 微波或红外波 术语 trasmision medium 传输介质 guided media 导向介质 unguided media 非导向介质 fiber-optic cable 光纤电缆 coaxial cable 同轴电缆 twisted-pair cable 双绞线 导向介质 非导向介质 无线电波 3 kHz - 1GHz 无线电通信 微波 1 - 300GHz 红外波 300 GHz - 400 THz 高频, 低穿透 比如用在遥控器 </description>
+    </item>
+    
+    <item>
+      <title>电子签名</title>
+      <link>https://tongluoshao.space/permanent/%E7%94%B5%E5%AD%90%E7%AD%BE%E5%90%8D/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%94%B5%E5%AD%90%E7%AD%BE%E5%90%8D/</guid>
+      <description>电子签名技术 ![[attachments/Pasted image 20230222083903.png|L|400]]
+checksum: hash 算法如 MD5 加密 checksum 用非对称私钥 解密 要公钥 成功保证 A, I 不保证 C </description>
+    </item>
+    
+    <item>
+      <title>矢量图</title>
+      <link>https://tongluoshao.space/permanent/%E7%9F%A2%E9%87%8F%E5%9B%BE/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%9F%A2%E9%87%8F%E5%9B%BE/</guid>
+      <description> vector graphic 会将图片拆解成几何图形 存储的数据是如何描绘这些几何图形 如, 记录圆心位置, 半径, 线型和颜色, 填充和颜色 通常没有[[permanent/位图]]精细, 矢量图的质量与算法相关 </description>
+    </item>
+    
+    <item>
+      <title>知识增强大模型</title>
+      <link>https://tongluoshao.space/permanent/%E7%9F%A5%E8%AF%86%E5%A2%9E%E5%BC%BA%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%9F%A5%E8%AF%86%E5%A2%9E%E5%BC%BA%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid>
+      <description>大规模预训练模型 简称大模型, 主要类型有:
+NLP语言处理大模型: 处理文本内容, 如 ChatGPT, 百度文心一言 计算机视觉大模型: 主要处理图像内容, 如购物软件的搜图 跨模态大模型: 多模态, 如 AI作画 科学计算大模型: 能够更好地发现规律, 如蛋白质形态预测 知识增强大模型 整合了知识图谱的大模型, 对歧义内容的处理能力更强</description>
+    </item>
+    
+    <item>
+      <title>磁介质存储设备</title>
+      <link>https://tongluoshao.space/permanent/%E7%A3%81%E4%BB%8B%E8%B4%A8%E5%AD%98%E5%82%A8%E8%AE%BE%E5%A4%87/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%A3%81%E4%BB%8B%E8%B4%A8%E5%AD%98%E5%82%A8%E8%AE%BE%E5%A4%87/</guid>
+      <description>磁盘 硬盘, 磁盘 有磁表示1, 无磁表示0 两面可读写, 分磁道(轨道和扇区) ![[attachments/Pasted image 20230316124504.png|L|500]] 磁盘数据读取的速度 定位盘: 通常3ms 旋转时间: 根据转速而定(7200转 最多8.2ms(1/120), 平均4.1ms) 传输时间: 根据扇区长度而定, 1扇区(512 Bytes) 2.</description>
+    </item>
+    
+    <item>
+      <title>科学上网2209</title>
+      <link>https://tongluoshao.space/permanent/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%912209/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%912209/</guid>
+      <description>vultr xenonl.proton cloud compute, regular performance debian 10 5$
+ProxySU Program tools v2ray模板库 TCP
+v2rayN 粘贴</description>
+    </item>
+    
+    <item>
+      <title>算法</title>
+      <link>https://tongluoshao.space/permanent/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%AE%97%E6%B3%95/</guid>
+      <description>[[permanent/B 树|B 树]]
+[[permanent/B+ 树|B+ 树]]
+[[permanent/Clustering#聚类算法|聚类算法]]</description>
+    </item>
+    
+    <item>
+      <title>统计学</title>
+      <link>https://tongluoshao.space/permanent/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</guid>
+      <description>统计指标 [[permanent/平均指标|平均指标]]
+[[permanent/F1 Metrics|F1 Metrics]]</description>
+    </item>
+    
+    <item>
+      <title>网络安全</title>
+      <link>https://tongluoshao.space/permanent/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
+      <description>病毒事件 [[permanent/1988 Internet Wurm|1988 Internet Wurm]]
+[[permanent/2003 SQL Slammer|2003 SQL Slammer]]
+[[permanent/2009~ Stuxnet|2009~ Stuxnet]]
+[[permanent/2020 SolarWinds|2020 SolarWinds]]
+[[permanent/蠕虫和蓝宝石的对比|蠕虫和蓝宝石的对比]]
+[[permanent/Staatstrojaner|Staatstrojaner]]
+攻击/威胁种类 [[permanent/Access Token Manipulation|Access Token Manipulation]] [[permanent/Buffer Overflows|Buffer Overflows]] [[attachments/Project Asteria.</description>
+    </item>
+    
+    <item>
+      <title>网络安全界张三</title>
+      <link>https://tongluoshao.space/permanent/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%95%8C%E5%BC%A0%E4%B8%89/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%95%8C%E5%BC%A0%E4%B8%89/</guid>
+      <description>Alice 发送方, 协议启动者
+Bob 接收方
+Carol, Dave 事件参与者
+Trend trusted third party
+Walter A, B 的管理者, 看守者
+Eve eavsdropper, 窃听者, 被动攻击者</description>
+    </item>
+    
+    <item>
+      <title>脱壳</title>
+      <link>https://tongluoshao.space/permanent/%E8%84%B1%E5%A3%B3/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%84%B1%E5%A3%B3/</guid>
+      <description>找OEP 通用方法汇总 0、 概述 OEP通常在基址附近，经过较大的跳转来到 1、单步法 一步一步跟踪，规则： 向上 jxx 不让实现，直接f4运行到 jxx 的下一行 如果跳转的下一行是 call 或者还是jxx(无论是向上还是向下), 则运行到再下一行 如果跑飞，在跑飞的地方不要f8，f7进去 其他一步一步往下，向下跳转也继续f8, 看到popad通常离OEP不远了 2、ESP突变 ESP突变指关键句如(push)的下一句只有ESP一个寄存器变红(发生变化)</description>
+    </item>
+    
+    <item>
+      <title>自回归语言模型</title>
+      <link>https://tongluoshao.space/permanent/%E8%87%AA%E5%9B%9E%E5%BD%92%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%87%AA%E5%9B%9E%E5%BD%92%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</guid>
+      <description>自回归语言模型 Autoregressive LM
+通常的语言模型是单向的, 比如从左到右去预测下一个单词. 因为有时候除了考虑上文的信息还要考虑下文, 所以又诞生了从右到左预测的反向语言模型. 自回归模型指的就是这种只能利用上文或下文, 不能同时利用两者的模型.
+典型的自回归语言模型如使用 Transformer 的 GPT, ELMo 这种将上文和下文的 LSTM 拼接的也算变形的自回归语言模型.
+对应: [[permanent/自编码语言模型|自编码语言模型]]
+参考: 自回归语言模型 VS 自编码语言模型 - 知乎</description>
+    </item>
+    
+    <item>
+      <title>自然语言处理</title>
+      <link>https://tongluoshao.space/permanent/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/</guid>
+      <description>[[project/lmu - Syntax of natural language(Germany)|lmu - Syntax of natural language(Germany)]]
+techs: [[permanent/NLTK|NLTK]]
+[[permanent/spaCy|spaCy]]
+[[permanent/Standford Parser|Standford Parser]]
+[[permanent/Tagsets|Tagsets]]</description>
+    </item>
+    
+    <item>
+      <title>自编码语言模型</title>
+      <link>https://tongluoshao.space/permanent/%E8%87%AA%E7%BC%96%E7%A0%81%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%87%AA%E7%BC%96%E7%A0%81%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</guid>
+      <description>自编码语言模型 Autoencoder LM
+自编码语言模型在预训练时, 会随机 Mask 掉输入 X 的一些单词, 然后训练的任务就是根据上下文预测这些单词. 相比于单向的[[permanent/自回归语言模型|自回归语言模型]], 做阅读理解的能力会更好. 但因为在 Fine-Tuning 阶段是看不到 Mask 标记的, 可能会导致预训练和FT阶段的不一致.
+参考: 自回归语言模型 VS 自编码语言模型 - 知乎</description>
+    </item>
+    
+    <item>
+      <title>蠕虫</title>
+      <link>https://tongluoshao.space/permanent/%E8%A0%95%E8%99%AB/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%A0%95%E8%99%AB/</guid>
+      <description>蠕虫 Worm de. Wurm 不需要寄主程序的有害程序 Selbstreplikation, 自分离, 自我复制 单个被感染的机器被称为蠕虫段 Worm-Segment
+蠕虫的扫描方式 Random Scanning 最简单 不可预测 容易重复 Permutation Scanning 蠕虫必须能够确定主机是否已经被感染 所有蠕虫共享全球IP地址空间的随机排列 不重复的原理: 每个新的蠕虫从排列中的一个随机点开始扫描主机，如果发现一个已经被感染的主机，它就从一个新的随机点开始扫描，因此，整个地址空间可以被非常有效地扫描。 Hit-List Scanning 有一份原始的 hitlist 每次新感染的蠕虫会得到清单中剩余条目的一半 二分法 Topological Scanning 感染新的主机后, 在主机上寻找新目标 容易感染某一范围的主机, 但也容易形成孤立闭环 Warhol Worm Warhol 蠕虫是一种能快速复制的计算机蠕虫病毒, 可能在15分钟内感染互联网中的大片计算机.</description>
+    </item>
+    
+    <item>
+      <title>蠕虫和蓝宝石的对比</title>
+      <link>https://tongluoshao.space/permanent/%E8%A0%95%E8%99%AB%E5%92%8C%E8%93%9D%E5%AE%9D%E7%9F%B3%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%A0%95%E8%99%AB%E5%92%8C%E8%93%9D%E5%AE%9D%E7%9F%B3%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
+      <description>[[permanent/1988 Internet Wurm|1988 Internet Wurm]]
+[[permanent/2003 SQL Slammer|2003 SQL Slammer]]
+Wurn Slammer 时间 1988 2003 主机 SUN, VAX, UNIX WIN, SQL服务器 损害方式 高负载, 网络拥堵 极高负载, 网络拥堵 </description>
+    </item>
+    
+    <item>
+      <title>西汉的三公九卿</title>
+      <link>https://tongluoshao.space/permanent/%E8%A5%BF%E6%B1%89%E7%9A%84%E4%B8%89%E5%85%AC%E4%B9%9D%E5%8D%BF/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%A5%BF%E6%B1%89%E7%9A%84%E4%B8%89%E5%85%AC%E4%B9%9D%E5%8D%BF/</guid>
+      <description> 三公 三公：丞相，太尉（/大司马），御史大夫（/大司空） 丞相又改称过相国，有时分设左右丞相，金印紫绶（萧何绿绶更高） 汉朝太尉不常设，汉初年到武帝60年间，只有5位太尉：卢绾，周勃，灌婴，周亚夫，田蚡。金印紫绶 武帝大司马为加官，加在将军上 御史大夫，银印青绶，位上卿，但实际上会被人们称为三公，副官有两丞，御史中丞和御史丞。 将军比公者四：大将军，次骠骑将军，次车骑将军，次卫将军。又有前后左右将军，杂号将军 印的质料有金、银、铜、玉等。 太师，太傅，太保位三公上，，金印银绶，实是虚职 九卿 西汉九卿是一个统称，可能不只九个人，也可能不只九个官。
+东汉后汉书中，有些官会明确卿几人。九卿在东汉是执金吾前面九人。
+太常：原称奉常，景帝时改称太常，掌宗庙礼仪。每年的祭祀活动很庞大，相关人员上十万，耗费众多。多次有上书减少宗庙消耗。 三辅：京兆尹，左冯翊，右扶京 光禄勋：郎中令，掌宫殿掖门户（前殿宫内总管）。属官有大夫，郎，谒者，期门，羽林。 大夫掌论议（顾问官员）：太中大夫/光禄大夫，中大夫，谏大夫 郎掌门户（皇帝的随从）：议郎，中郎（有五官、左右中郎将），侍郎 谒者治礼（司仪工作） 期门掌执兵送从，后改称虎贲，置中郎将 羽林置中郎将。羽林和期门是皇帝的卫队 卫尉：景帝时更名中大夫令，又改回。卫戍部队。与光禄勋同样负责宫门警戒，但更外围。 不只一个。 太仆：掌舆马（宫中车马和军马）。有时也驾车。第一任夏侯婴，滕公。 廷尉：掌刑辟，又称大理。最高司法官员。 大鸿胪：原称典客，改大行令，又改大鸿胪，王莽改典乐。掌归义蛮夷（的接待）（原本由典属国负责，后来典属国归并大鸿胪。也负责进京地方官的接待和外交接待。 宗正：又称宗伯，掌亲属。管理皇室和外戚，由皇族担任，西汉时多是楚元王后代。 大司农：治粟内史，改大农令，后改大司农，掌谷货，财政官员。 少府：掌山海池泽之税。皇帝的财政官和大管家。又叫小府。下有六丞（一般只有一丞）。 执金吾（通御音御）：又称中尉，掌徼循京师。负责京城治安，还是皇帝的仪仗队。 内朝/中朝 皇帝身边的一群人，有的是顾问，有的是掌实权的。 加官 加在别的官衔之上的，不能单独存在的官职。 西汉有：大司马，侍中，左右曹，诸吏，散骑，中常侍，给事中等。内朝官大多有加官。 </description>
+    </item>
+    
+    <item>
+      <title>解决问题的能力</title>
+      <link>https://tongluoshao.space/permanent/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E8%83%BD%E5%8A%9B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E8%83%BD%E5%8A%9B/</guid>
+      <description>解决问题需要根据任务和需求灵活地改变应对策略
+相似地: [[permanent/创造力的关键|创造力的关键]] ![[attachments/a12bdb0ce1f02dd58a176bb99918619.jpg]]</description>
+    </item>
+    
+    <item>
+      <title>计算机体系结构</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</guid>
+      <description>CISC complex instruction set computer(CISC, 读作[sisk], 复杂指令集计算机), 指令多, 电路复杂
+一个减少复杂性的解决方案是:
+将程序分成两个层级 CPU 不直接执行机器语言, 只执行所谓的微操作, 复杂指令会被转化为简单操作后执行 微程序指由微操作设计的程序 RISC reduce instruction set computer(RISK, 读作 [risk], 精简指令集计算机), 指令少, 复杂指令用简单指令模拟</description>
+    </item>
+    
+    <item>
+      <title>计算机协议</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8D%8F%E8%AE%AE/</guid>
+      <description>[[permanent/ICMP 协议|ICMP 协议]]
+[[permanent/IPv4|IPv4]]
+[[permanent/IEEE 802.1X|IEEE 802.1X]]
+[[permanent/TCP|TCP]]
+[[permanent/邮件系统协议简述|邮件系统协议简述]]
+[[permanent/NTP 协议|NTP 协议]]
+[[permanent/Kerberos|Kerberos]]</description>
+    </item>
+    
+    <item>
+      <title>计算机的历史</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8E%86%E5%8F%B2/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8E%86%E5%8F%B2/</guid>
+      <description>第一代计算机 1950-1959 体积庞大 以真空管作为电子开关 需要专业的人操作 第二代计算机 1960-1965 晶体管代替真空管, 减小了体积 第三代计算机 1965-1975 集成电路(Integrated Circuit, IC) 出现, 即晶体管, 导线和其他部件都集成在一块电路板上 市面上已经出现软件包 第四代计算机 1975-1985 微型计算机出现 计算机网络诞生 第五代计算机 1985至今 掌上计算机, 新存储技术, VR技术等 </description>
+    </item>
+    
+    <item>
+      <title>计算机组成原理</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
+      <description>计算机模型 [[permanent/图灵机|图灵机]] [[permanent/冯·诺依曼模型|冯·诺依曼模型]] 计算机的历史 [[permanent/计算机的历史|计算机的历史]] 计算机中数据的存储 [[permanent/位置化数字系统|位置化数字系统]] [[permanent/补码系统(有符号整数存储)|补码系统(有符号整数存储)]] [[permanent/浮点数的存储|浮点数的存储]] [[permanent/ASCII|ASCII]] [[permanent/Unicode|Unicode]] [[permanent/音频文件|音频文件]] [[permanent/位图|位图]] [[permanent/矢量图|矢量图]] 数据运算 [[permanent/逻辑运算|逻辑运算]] [[permanent/位移运算|位移运算]] 计算机硬件组成 ![[attachments/Pasted image 20230316150328.</description>
+    </item>
+    
+    <item>
+      <title>计算机网络</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+      <description>[[permanent/计算机网络基础|计算机网络基础]]
+[[permanent/IEEE 802.1X|IEEE 802.1X]]
+[[permanent/IPv4|IPv4]]
+[[permanent/TCP|TCP]]
+[[permanent/WiFi 技术|WiFi 技术]]</description>
+    </item>
+    
+    <item>
+      <title>计算机网络基础</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</guid>
+      <description>因特网 因特网是成千上万个互联的网络(网络: 局域网, 广域网) 客户网络通常会接入供应商网络([[permanent/Internet Service Provider(ISP)|Internet Service Provider(ISP)]]), 而供应商网络会接入骨干网 供应商网络之间, 供应商网络和骨干网之间会通过peering point(网络对等交汇点)这个交换系统相互连接 TCP/IP 五层模型 [[permanent/TCPIP 五层模型|TCPIP 五层模型]] 应用层 传输层 网络层 数据链路层 物理层 物理传输介质 [[permanent/物理层传输介质|物理层传输介质]]</description>
+    </item>
+    
+    <item>
+      <title>计算理论</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA/</guid>
+      <description>[[permanent/量子计算|量子计算]]</description>
+    </item>
+    
+    <item>
+      <title>设计模式</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+      <description>#todo</description>
+    </item>
+    
+    <item>
+      <title>访问风险网页</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%BF%E9%97%AE%E9%A3%8E%E9%99%A9%E7%BD%91%E9%A1%B5/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%BF%E9%97%AE%E9%A3%8E%E9%99%A9%E7%BD%91%E9%A1%B5/</guid>
+      <description> 火狐: 忽略风险 chromium: 直接在网页上敲 thisisunsafe 回车 </description>
+    </item>
+    
+    <item>
+      <title>诸神黄昏</title>
+      <link>https://tongluoshao.space/permanent/%E8%AF%B8%E7%A5%9E%E9%BB%84%E6%98%8F/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AF%B8%E7%A5%9E%E9%BB%84%E6%98%8F/</guid>
+      <description>![[诸神黄昏规划器.xlsx]]</description>
+    </item>
+    
+    <item>
+      <title>诸葛亮的北伐</title>
+      <link>https://tongluoshao.space/permanent/%E8%AF%B8%E8%91%9B%E4%BA%AE%E7%9A%84%E5%8C%97%E4%BC%90/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AF%B8%E8%91%9B%E4%BA%AE%E7%9A%84%E5%8C%97%E4%BC%90/</guid>
+      <description>策反孟达（1） 孟达已经降魏，当上了新城郡太守，又被诸葛亮策反 诸葛亮怕他拖延不反，派人诈降，把孟达要反的消息知会魏国 孟达反的时候以为司马懿一个月后才会攻过来，谁知道八日至城下 叛乱被镇压，孟达被斩 子午谷奇谋（1） 魏延提出精兵五千走子午谷袭取长安（认为能吓走太守夏侯楙） 诸葛亮觉得冒险没采用 法师：应该是建立在孟达投降的基础上提出的，孟达被镇压后，看到司马对这一带的严防死守，应该不会只带一小队人马 姜维（1） 天水太守马遵害怕，不守天水 天水投降了诸葛亮 姜维在马遵手下，建议马遵不成，家在冀县，只能自己回去 街亭之战（1） 打祁山 诸葛亮不听大家的派马谡守街亭，带走大量精兵 马谡不听诸葛亮的，在山里扎营，不去占领城池 张郃断了马谡的水源，大败马谡 只有王平率领手下两千人，阵形不乱，张郃怕有埋伏没有追 第一次北伐（1） 第一次北伐失败，除了王平全都降职 诸葛亮很得民心，魏国南安，天水，安定都响应了诸葛亮（后来都被血腥镇压） 第一次北伐失败，四镇百姓失去了信心，后来响应的人也越来越少 失败的关键可能就是马谡吧/诸葛亮的用人 </description>
+    </item>
+    
+    <item>
+      <title>软件和应用和轮子</title>
+      <link>https://tongluoshao.space/permanent/%E8%BD%AF%E4%BB%B6%E5%92%8C%E5%BA%94%E7%94%A8%E5%92%8C%E8%BD%AE%E5%AD%90/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%BD%AF%E4%BB%B6%E5%92%8C%E5%BA%94%E7%94%A8%E5%92%8C%E8%BD%AE%E5%AD%90/</guid>
+      <description>[[permanent/Jupyter Notebook|Jupyter Notebook]]
+[[permanent/VIM|VIM]]
+[[permanent/LOIC|LOIC]]
+[[permanent/Obsidian|Obsidian]]
+[[permanent/LaTeX|LaTeX]]
+[[permanent/Git|Git]]</description>
+    </item>
+    
+    <item>
+      <title>软件工程</title>
+      <link>https://tongluoshao.space/permanent/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</guid>
+      <description>技术 [[permanent/重构技术 Refactoring|重构技术 Refactoring]]
+[[permanent/设计模式|设计模式]]
+[[permanent/测试驱动开发 Test-Driven Devlopment|测试驱动开发 Test-Driven Devlopment]]
+[[permanent/Mock|Mock]]
+[[permanent/Git|Git]]
+[[permanent/CRC 卡片|CRC 卡片]]
+[[permanent/UML 图|UML 图]]
+概念 [[permanent/SaaS|SaaS]]</description>
+    </item>
+    
+    <item>
+      <title>远程计算机或设备将不接受连接</title>
+      <link>https://tongluoshao.space/permanent/%E8%BF%9C%E7%A8%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%88%96%E8%AE%BE%E5%A4%87%E5%B0%86%E4%B8%8D%E6%8E%A5%E5%8F%97%E8%BF%9E%E6%8E%A5/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%BF%9C%E7%A8%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%88%96%E8%AE%BE%E5%A4%87%E5%B0%86%E4%B8%8D%E6%8E%A5%E5%8F%97%E8%BF%9E%E6%8E%A5/</guid>
+      <description>Windows 网络诊断: 远程计算机或设备将不接受连接 造成原因大概是 VPN 没关, 或者挂着 VPN 的时候强制关机了
+解决方法: 控制面板 - Internet 选项 - 局域网设置, 把代理关了</description>
+    </item>
+    
+    <item>
+      <title>逻辑运算</title>
+      <link>https://tongluoshao.space/permanent/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/</guid>
+      <description>一元 not ~ 二元 and &amp;amp; or | xor ^ 掩码 指定位复0: 指定位 and0 指定位置1: 指定位 or1 指定位反转: 指定位 xor1 </description>
+    </item>
+    
+    <item>
+      <title>邮件系统协议简述</title>
+      <link>https://tongluoshao.space/permanent/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%8D%8F%E8%AE%AE%E7%AE%80%E8%BF%B0/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%8D%8F%E8%AE%AE%E7%AE%80%E8%BF%B0/</guid>
+      <description>SMTP SMTP全称是Simple Mail Transfer Protocol,直译过来就是简单邮件传输协议, 由RFC5321定义.主要的工作就是把邮件信息从发件人的邮件服务器中传送到接收人的邮件服务器中,偶尔我们使用MUA来发送邮件的话,也承载传输用户邮件到发件服务器的功能, 因而也称作推协议,顺带提一下,SMTP协议的出现是比HTTP还早的,最早在1982年中发布第一版的RFC.
+因而因为提出的年代久远,所以在当时有许多问题都考虑不全面并且也有这许多的限制,例如SMTP要求信息内容需要是7位的ASCII来承载,因而我们在发送以及接受的时候,都需要将其编码解码.
+另外,SMTP还存在一个问题就是没有对发送方进行一个身份验证,虽然在早期的互联网环境没有很大问题,但是在垃圾邮件满天飞的今天,这却是一个明显的短板.因而衍生出了SPF, DKIM, DMARC等一系列用来验证发件人身份的方法.
+POP3 POP3,Post Office Protocol Version 3,直译就是邮局协议第三版,由RFC1939进行定义.这个协议的主要服务于用户管理邮件服务器上面的电子邮件.具体过程是:当外来邮件发送到收件人的邮件服务器上时,收件人可以使用邮件客户端连接邮件服务器,把未阅读的邮件服务器以及部分信息拉取回本地进行处理.在拉取的过程中,我们可以选择拉取完删除以及拉取完不删除两种方式,不过现在默认一般都是拉取完不删除,方便我们在其他的地方也能对邮件进行阅读以及管理.
+IMAP IMAP, Internet Message Access Protocol, 直译过来就是网络信息访问协议,可能和现在主流的翻译不太一致,不过能理解其意思就好.</description>
+    </item>
+    
+    <item>
+      <title>重构技术 Refactoring</title>
+      <link>https://tongluoshao.space/permanent/%E9%87%8D%E6%9E%84%E6%8A%80%E6%9C%AF-Refactoring/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%87%8D%E6%9E%84%E6%8A%80%E6%9C%AF-Refactoring/</guid>
+      <description>refactoring techniques src: Source Making
+Composing methods Extract Method 一个方法内的语句应该是应该是在同一层级的, 这样有利于代码结构的清晰.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 // Before void printOwing() { printBanner(); // Print details.</description>
+    </item>
+    
+    <item>
+      <title>量子计算</title>
+      <link>https://tongluoshao.space/permanent/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/</guid>
+      <description>Qubit 量子比特 两种状态: $|0\rangle$, $|1\rangle$ 量子中一个 bit 的变化会引起另一个的变化 Superposition 叠加意味着一个 Qubit $|\Psi\rangle$ 可以承担任何叠加状态 $|\Psi\rangle = \alpha |0\rangle + \beta |1\rangle$ 其中 $\alpha, \beta$ 表示比例, $|\alpha|^2 + |\beta|^2 = 1$ $|\alpha|^2$ 表示 0 的几率 在测量过程中, 叠加态会崩溃, 即变成 0/1 因为叠加态, 可以同时呈现和计算所有状态 !</description>
+    </item>
+    
+    <item>
+      <title>键盘上的轴记录</title>
+      <link>https://tongluoshao.space/permanent/%E9%94%AE%E7%9B%98%E4%B8%8A%E7%9A%84%E8%BD%B4%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%94%AE%E7%9B%98%E4%B8%8A%E7%9A%84%E8%BD%B4%E8%AE%B0%E5%BD%95/</guid>
+      <description>金粉: WIN 浅云: ` 静音月白: esc, backspace 冰魄: enter
+Ins 灰木v3 del ttc烈焰雪轴 PrtSc G黄Pro2.0
+rCtrl ttc快银 Fn 爱心 rAlt 高特水晶</description>
+    </item>
+    
+    <item>
+      <title>键盘轴体参数</title>
+      <link>https://tongluoshao.space/permanent/%E9%94%AE%E7%9B%98%E8%BD%B4%E4%BD%93%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%94%AE%E7%9B%98%E8%BD%B4%E4%BD%93%E5%8F%82%E6%95%B0/</guid>
+      <description>https://docs.qq.com/sheet/DT0NYT0dBenJVUWlo?tab=BB08J2</description>
+    </item>
+    
+    <item>
+      <title>非对称密码</title>
+      <link>https://tongluoshao.space/permanent/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81/</guid>
+      <description>非对称密码 每个通信者持有 private key, public key 各一份 私钥不公开, 用于解密 公钥公开, 用于加密(用接受者的公钥加密) 加密发给 Bob: c = e(m, $k^{Bob}_e$) Bob 解密: m = d(c, $k^{Bob}_d$) 把加密解密反过来, 就能用作数字签名 非对称密码种类 [[permanent/RSA|RSA]] DSA, ElGamal </description>
+    </item>
+    
+    <item>
+      <title>音频文件</title>
+      <link>https://tongluoshao.space/permanent/%E9%9F%B3%E9%A2%91%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%9F%B3%E9%A2%91%E6%96%87%E4%BB%B6/</guid>
+      <description>音频在计算机世界的存储 在现实中, 声音是连续不断的. 而在计算机世界中, 音频文件是通过在单位时间内取足够多的样本来模拟这种连续的声音. 音频文件术语 采样率 sampling rate 指的是每秒采集多少个声音样本
+位深度 bit depth 又称每样本位 对于每个声音样本要分配多少位 比特率 bit rate 又称位率, 码率, 位速 对于无损音频压缩格式: 比特率 = 位深度 * 采样率 * 声道数 例: 单声道, 采样率 40k, 位深度 16 bit, 位率 = 64000 bps = 640 kbps 采样 声音与时间的关系通过波形图呈现 44.</description>
+    </item>
+    
+    <item>
+      <title>飞桨AI 大模型应用开发技巧与实战</title>
+      <link>https://tongluoshao.space/project/%E9%A3%9E%E6%A1%A8AI-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7%E4%B8%8E%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/%E9%A3%9E%E6%A1%A8AI-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7%E4%B8%8E%E5%AE%9E%E6%88%98/</guid>
+      <description>src: 飞桨AI Studio - 人工智能学习实训社区
+大模型时代的开发者新机遇 ![[attachments/Pasted image 20230607171051.png]]
+游戏npc逻辑, 游戏音乐美术都可以AI协助完成
+应用场景 过去 -&amp;gt; 大模型时代的现代
+写作: 语法纠错-&amp;gt;写作助手 外语: 语言学习平台 -&amp;gt; AI 陪练 算力需求增长也很快 !</description>
+    </item>
+    
+    <item>
+      <title>高等数学</title>
+      <link>https://tongluoshao.space/permanent/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</guid>
+      <description>[[project/Project Asteria#微积分|微积分]]
+[[project/Project Asteria#微分方程|微分方程]]</description>
+    </item>
+    
+    <item>
+      <title>0 周边纪实</title>
+      <link>https://tongluoshao.space/index/0-%E5%91%A8%E8%BE%B9%E7%BA%AA%E5%AE%9E/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/0-%E5%91%A8%E8%BE%B9%E7%BA%AA%E5%AE%9E/</guid>
+      <description>[[permanent/咩啊咩啊|咩啊咩啊]]</description>
+    </item>
+    
+    <item>
+      <title>1 生活消费</title>
+      <link>https://tongluoshao.space/index/1-%E7%94%9F%E6%B4%BB%E6%B6%88%E8%B4%B9/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/1-%E7%94%9F%E6%B4%BB%E6%B6%88%E8%B4%B9/</guid>
+      <description>和日常生活相关的一切.
+[[index/10 个人技能|10 个人技能]]
+[[index/11 成长|11 成长]]
+[[index/12 数码|12 数码]]
+[[index/13 游戏|13 游戏]]
+[[index/19 时间管理|19 时间管理]]</description>
+    </item>
+    
+    <item>
+      <title>10 个人技能</title>
+      <link>https://tongluoshao.space/index/10-%E4%B8%AA%E4%BA%BA%E6%8A%80%E8%83%BD/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/10-%E4%B8%AA%E4%BA%BA%E6%8A%80%E8%83%BD/</guid>
+      <description>[[permanent/魔方攻略本|魔方攻略本]]</description>
+    </item>
+    
+    <item>
+      <title>11 成长</title>
+      <link>https://tongluoshao.space/index/11-%E6%88%90%E9%95%BF/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/11-%E6%88%90%E9%95%BF/</guid>
+      <description>领域 [[permanent/笔记方法|笔记方法]]
+[[permanent/阅读方法|阅读方法]]
+[[permanent/学习方法|学习方法]]
+[[permanent/处事方法|处事方法]]
+[[permanent/思考方式]]
+自测 List [[permanent/发展技术领导力|发展技术领导力]]
+万用 [[permanent/曝光效应|曝光效应]]</description>
+    </item>
+    
+    <item>
+      <title>12 数码</title>
+      <link>https://tongluoshao.space/index/12-%E6%95%B0%E7%A0%81/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/12-%E6%95%B0%E7%A0%81/</guid>
+      <description>[[permanent/键盘上的轴记录|键盘上的轴记录]]
+[[permanent/键盘轴体参数|键盘轴体参数]]</description>
+    </item>
+    
+    <item>
+      <title>13 游戏</title>
+      <link>https://tongluoshao.space/index/13-%E6%B8%B8%E6%88%8F/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/13-%E6%B8%B8%E6%88%8F/</guid>
+      <description>PC [[permanent/冒险岛|冒险岛]]
+[[permanent/了不起的修仙模拟器|了不起的修仙模拟器]]
+[[permanent/武林立志传龙吟剑|武林立志传龙吟剑]]
+[[permanent/P4G|P4G]]
+[[permanent/太吾绘卷|太吾绘卷]]
+主机 手机 [[permanent/你猫游|你猫游]]
+[[permanent/诸神黄昏|诸神黄昏]]
+[[permanent/休闲宗门|休闲宗门]]</description>
+    </item>
+    
+    <item>
+      <title>1988 Internet Wurm</title>
+      <link>https://tongluoshao.space/permanent/1988-Internet-Wurm/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/1988-Internet-Wurm/</guid>
+      <description>起因: 1988 年的「蠕虫」病毒使得美国大面积的计算机(尤其是校园网络)阻塞. 事情的起因是23岁的康奈尔大学学生莫瑞斯, 希望自己写的这个程序悄悄保存在一些机密计算机上. 原理: sendmail BUG finger BUG, buffer overflow remote execution(rsh, rexec) 受影响的账号: 无密码, 简易密码等 受影响的主机: 路由表(Routing-Table), 随机地址, Sun, VAX等</description>
+    </item>
+    
+    <item>
+      <title>2 工学与应用技术</title>
+      <link>https://tongluoshao.space/index/2-%E5%B7%A5%E5%AD%A6%E4%B8%8E%E5%BA%94%E7%94%A8%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/2-%E5%B7%A5%E5%AD%A6%E4%B8%8E%E5%BA%94%E7%94%A8%E6%8A%80%E6%9C%AF/</guid>
+      <description>工学与应用技术分类下主要是偏重实际应用的非理论知识.
+[[index/20 计算机技术|20 计算机技术]]
+[[index/21 电气工程|21 电气工程]]
+[[index/22 医学|22 医学]]</description>
+    </item>
+    
+    <item>
+      <title>20 计算机技术</title>
+      <link>https://tongluoshao.space/index/20-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/20-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/</guid>
+      <description>技术理论领域 [[permanent/算法|算法]] Algorithm
+[[permanent/人工智能|人工智能]] Artificial Intelligence
+[[permanent/计算机网络]] Computer Networking
+[[permanent/计算理论]] Computing Theory
+[[permanent/密码学]] Cryptology
+[[permanent/数据库系统]] Database System
+[[permanent/计算机组成原理]] Foundation of Computer Science</description>
+    </item>
+    
+    <item>
+      <title>2003 SQL Slammer</title>
+      <link>https://tongluoshao.space/permanent/2003-SQL-Slammer/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/2003-SQL-Slammer/</guid>
+      <description>2003年爆发的Slammer病毒(又称蓝宝石Sapphire)是一个针对服务器的攻击程序, 以传播速度快闻名.
+每8.5秒感染多一倍的计算机 WINDOWS 2000 SERVER, port 1434, buffer overflow BUG, 未打补丁的都会被迅速感染 UDP 转发, 包大小一共才404Byte 攻击随机地址 (主要是美国, 欧洲) 90%的脆弱系统在10分钟里被感染, 产生了庞大的数据流量, 服务器不得不被关闭 </description>
+    </item>
+    
+    <item>
+      <title>2020 SolarWinds</title>
+      <link>https://tongluoshao.space/permanent/2020-SolarWinds/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/2020-SolarWinds/</guid>
+      <description>a. 研究并描述SolarWinds攻击的顺序 从 FireEye 获取 pentesting 软件 用 pentesting 软件攻击 Orion 在网管软件 Orion 的更新(可能是代码仓库)中植入木马 用户下载 Orion 软件更新包后被植入木马 b. 攻击者利用了哪些漏洞？为什么攻击会蔓延并在如此长的时间内未被发现？ build 过程(Quellcode -&amp;gt; ausführbares Programm) &amp;ldquo;Sunburst&amp;rdquo; 特洛伊木马植入到更新, 并发布给用户 安静期(Ruhezeit)14天, 之后与 C&amp;amp;C 服务器联系 c.</description>
+    </item>
+    
+    <item>
+      <title>21 电气工程</title>
+      <link>https://tongluoshao.space/index/21-%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/21-%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/</guid>
+      <description>[[permanent/PPS|PPS]]</description>
+    </item>
+    
+    <item>
+      <title>22 医学</title>
+      <link>https://tongluoshao.space/index/22-%E5%8C%BB%E5%AD%A6/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/22-%E5%8C%BB%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3 理学与自然科学</title>
+      <link>https://tongluoshao.space/index/3-%E7%90%86%E5%AD%A6%E4%B8%8E%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/3-%E7%90%86%E5%AD%A6%E4%B8%8E%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6/</guid>
+      <description>[[index/30 数学|30 数学]]
+[[index/31 物理|31 物理]]</description>
+    </item>
+    
+    <item>
+      <title>30 数学</title>
+      <link>https://tongluoshao.space/index/30-%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/30-%E6%95%B0%E5%AD%A6/</guid>
+      <description>分类 [[permanent/线性代数]] [[permanent/高等数学]] [[permanent/统计学]] [[permanent/三角函数]]
+概念 [[permanent/欧拉函数]] [[permanent/Mathematical English]]
+Project [[project/Project Asteria]]</description>
+    </item>
+    
+    <item>
+      <title>31 物理</title>
+      <link>https://tongluoshao.space/index/31-%E7%89%A9%E7%90%86/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/31-%E7%89%A9%E7%90%86/</guid>
+      <description>[[permanent/从原子运动的角度看气液固三相变化]]</description>
+    </item>
+    
+    <item>
+      <title>3Blue1Brown - 线性代数的本质</title>
+      <link>https://tongluoshao.space/project/3Blue1Brown-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9A%84%E6%9C%AC%E8%B4%A8/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/3Blue1Brown-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9A%84%E6%9C%AC%E8%B4%A8/</guid>
+      <description>作者：3Blue1Brown 来源：Bilibili
+01 - 向量究竟是什么？What exactly a vector is （在坐标轴里，物理学角度），向量是沿着某个特定方向的运动。这就可以解释两个向量相加为什么是头尾相连。 向量数乘被称作 scaling 缩放，而用于缩放的数字称为 scalars 标量。 线性代数围绕两种基本运算：向量加法和向量数乘 02 - 线性组合、张成的空间与基 Linear combinations, span, and bases 另一个视角：把向量看成标量 $\hat{\imath}, \hat{\jmath}$ 的延伸（伸展） $\hat{\imath}$ 是[1,0], $\hat{\jmath}$ 是 [0,1]，两者是基向量, basis vectors 如果选择两个新的基向量（两个基向量要不在一条线是上）（也不能的是零向量） 给定向量的张成空间span, 即给定向量通过线性组合( $a\vec{v} + b\vec{w}$ )能形成的向量的集合 换句话说，通过对给定向量的向量加法和向量数乘能得到的向量集合 三维空间中两个不共线的向量的张成空间是一个平面，而三个不共面的向量的张成空间整个三维空间 **线性相关(linear dependent)**的向量指的就是二维共线或者三维共面的向量，他们不能张成更多的空间，是多余的 **线性无关(linear independent)**的向量能够张成空间添加新的维度 向量空间的一组基(basis)是张成该空间的一个线性无关向量集 03 矩阵如同线性变换 Matrices as Linear transformations Linear transformation transformation -&amp;gt; function input-output relation &amp;ldquo;transformation&amp;rdquo; for movement: move input vector to output vector linear: line remains line, without curves; origin remains fixed.</description>
+    </item>
+    
+    <item>
+      <title>4 人文历史与社会科学</title>
+      <link>https://tongluoshao.space/index/4-%E4%BA%BA%E6%96%87%E5%8E%86%E5%8F%B2%E4%B8%8E%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/4-%E4%BA%BA%E6%96%87%E5%8E%86%E5%8F%B2%E4%B8%8E%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6/</guid>
+      <description>40 历史
+[[index/44 心理学|44 心理学]]</description>
+    </item>
+    
+    <item>
+      <title>44 心理学</title>
+      <link>https://tongluoshao.space/index/44-%E5%BF%83%E7%90%86%E5%AD%A6/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/44-%E5%BF%83%E7%90%86%E5%AD%A6/</guid>
+      <description>[[permanent/心理学概念]]</description>
+    </item>
+    
+    <item>
+      <title>5 艺术</title>
+      <link>https://tongluoshao.space/index/5-%E8%89%BA%E6%9C%AF/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/5-%E8%89%BA%E6%9C%AF/</guid>
+      <description> 文学 绘画 雕塑、音乐、舞蹈、建筑、戏剧、电影 52 绘画 [[index/54 音乐|54 音乐]] 59 游戏艺术 </description>
+    </item>
+    
+    <item>
+      <title>54 音乐</title>
+      <link>https://tongluoshao.space/index/54-%E9%9F%B3%E4%B9%90/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/54-%E9%9F%B3%E4%B9%90/</guid>
+      <description>乐理 [[project/编曲二三事 - 和弦大师课预课]]</description>
+    </item>
+    
+    <item>
+      <title>6 语言</title>
+      <link>https://tongluoshao.space/index/6-%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/6-%E8%AF%AD%E8%A8%80/</guid>
+      <description>[[index/60 英语|60 英语]] [[index/61 日语|61 日语]] [[index/62 德语|62 德语]]</description>
+    </item>
+    
+    <item>
+      <title>60 英语</title>
+      <link>https://tongluoshao.space/index/60-%E8%8B%B1%E8%AF%AD/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/60-%E8%8B%B1%E8%AF%AD/</guid>
+      <description>[[permanent/Dictate|Dictate]]</description>
+    </item>
+    
+    <item>
+      <title>61 日语</title>
+      <link>https://tongluoshao.space/index/61-%E6%97%A5%E8%AF%AD/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/61-%E6%97%A5%E8%AF%AD/</guid>
+      <description>[[permanent/日语输入法|日语输入法]]
+[[permanent/日语语法|日语语法]]</description>
+    </item>
+    
+    <item>
+      <title>62 德语</title>
+      <link>https://tongluoshao.space/index/62-%E5%BE%B7%E8%AF%AD/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/62-%E5%BE%B7%E8%AF%AD/</guid>
+      <description>[[permanent/名词强变化与弱变化 Deklination|名词强变化与弱变化 Deklination]] [[permanent/形容词强变化与弱变化 Deklination|形容词强变化与弱变化 Deklination]] [[permanent/定冠词变格|定冠词变格]]
+Indikativ 直陈式 Imperativ 命令式</description>
+    </item>
+    
+    <item>
+      <title>7 哲学与宗教</title>
+      <link>https://tongluoshao.space/index/7-%E5%93%B2%E5%AD%A6%E4%B8%8E%E5%AE%97%E6%95%99/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/7-%E5%93%B2%E5%AD%A6%E4%B8%8E%E5%AE%97%E6%95%99/</guid>
+      <description>70 哲学总论
+[[index/71 逻辑|71 逻辑]]</description>
+    </item>
+    
+    <item>
+      <title>71 逻辑</title>
+      <link>https://tongluoshao.space/index/71-%E9%80%BB%E8%BE%91/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/71-%E9%80%BB%E8%BE%91/</guid>
+      <description>[[project/十五分钟逻辑学|十五分钟逻辑学]]</description>
+    </item>
+    
+    <item>
+      <title>AI的发展历史</title>
+      <link>https://tongluoshao.space/permanent/AI%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/AI%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2/</guid>
+      <description>一
+1970, 理论基础 第一次低谷, 受限于当时计算机的性能, 无法实现 二
+1996 IBM 深蓝出现, 1997, 依靠专家系统(人类专家为计算机构建的数据库), 深蓝战胜国际象棋棋王卡斯帕罗夫 但这类 AI 极其依赖人类提供的知识, 不具备自我学习的能力, 第二次低谷 三
+2016, 深度学习(和算法)打破了以往两次低谷的限制, AlphaGo 战胜李世石和柯洁 此时的 AI 只有下棋厉害, 加上 2017-2022 经济衰退, 第三次低谷 四</description>
+    </item>
+    
+    <item>
+      <title>Dictate</title>
+      <link>https://tongluoshao.space/permanent/Dictate/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Dictate/</guid>
+      <description>Surprising Facts About Anime In Japanese&amp;rsquo;s(Japanese) culture, anime is a revered artistic media(medium), enjoyed by men and women, young and old.</description>
+    </item>
+    
+    <item>
+      <title>Java 基础</title>
+      <link>https://tongluoshao.space/permanent/Java-%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-%E5%9F%BA%E7%A1%80/</guid>
+      <description>Java 入门须知 编译 1 javac app.java 注释 1 2 3 4 5 6 7 8 9 // single line comment /* multi-line comment */ /** * doc comment */ 大小写 类名大小写不敏感(这是操作系统决定的) java 是 case-sensitive, 即方法, 包名等都大小写敏感</description>
+    </item>
+    
+    <item>
+      <title>Kali Linux 常用服务</title>
+      <link>https://tongluoshao.space/permanent/Kali-Linux-%E5%B8%B8%E7%94%A8%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Kali-Linux-%E5%B8%B8%E7%94%A8%E6%9C%8D%E5%8A%A1/</guid>
+      <description>HTTP (Web, Apache2) 用来建立本地服务器的 service apache2 start/stop 启/停 systemctl status apache2.service 查看状态 现在版本的 kali 似乎不会给 info update-rd.d apache2 defaults 将服务加入开机自启动列表</description>
+    </item>
+    
+    <item>
+      <title>Kali Linux 系统更新</title>
+      <link>https://tongluoshao.space/permanent/Kali-Linux-%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Kali-Linux-%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0/</guid>
+      <description>apt-get update 获取更新列表 apt-get upgrade 升级更新列表中的内容 apt-get dist-upgrade 升级整个linux系统</description>
+    </item>
+    
+    <item>
+      <title>Kali Linux 网络设置</title>
+      <link>https://tongluoshao.space/permanent/Kali-Linux-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Kali-Linux-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE/</guid>
+      <description>《Kali Linux 渗透测试的艺术》1.5.2
+有线网络 连接模式为桥接(需要在虚拟机关机时设置) 可以固定分配的ip
+无线网络 需要物理无线网卡, 很多年前大家都说TP-Link wn770n vm: 在开启虚拟机时将usb网卡转移给虚拟机</description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra Concepts 线性代数概念</title>
+      <link>https://tongluoshao.space/permanent/Linear-Algebra-Concepts-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Linear-Algebra-Concepts-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E6%A6%82%E5%BF%B5/</guid>
+      <description>Algebra 代数 包含操作数和操作的集合 de. Operanden, Operator
+Closure 闭包 de. Abgeschlossenheit 对某个集合中的数进行某种运算, 生成的结果仍在此集合中, 则称该集合在该运算下闭合</description>
+    </item>
+    
+    <item>
+      <title>Ob发布到Hugo的尝试</title>
+      <link>https://tongluoshao.space/permanent/Ob%E5%8F%91%E5%B8%83%E5%88%B0Hugo%E7%9A%84%E5%B0%9D%E8%AF%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Ob%E5%8F%91%E5%B8%83%E5%88%B0Hugo%E7%9A%84%E5%B0%9D%E8%AF%95/</guid>
+      <description>主方案是 🪴 Quartz 3.3.
+[[permanent/网站更新记录|网站更新记录]]
+特点:
+仅找到的可用的hugo方案 有预览 同文件夹下支持双链 有知识图, 但感觉算法不太对劲, 而且中文会转码相当难用 有搜索, 但经常抽风 易用的fork, 快速yaml模板 引用预览似乎不行 根目录下一个 make serve 就建好 你可以看一下, search, graph, 等等是怎么实现的, 在layout里</description>
+    </item>
+    
+    <item>
+      <title>Project Asteria</title>
+      <link>https://tongluoshao.space/project/Project-Asteria/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/Project-Asteria/</guid>
+      <description>微积分 求一个函数的倒数，就是求它的斜率，因此有 $\frac{dy}{dx} = \frac{f(x+\Delta x)-f(x)}{\Delta x}$ 求导 differentiate 是一个 线性算符 linear operator 幂函数 $f(x)=x^{n}$, 导数是 $nx^{n-1}$ Product rule 的推导跟面积是类似的： !</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://tongluoshao.space/permanent/Ubuntu/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Ubuntu/</guid>
+      <description>Ubuntu 开放端口 https://www.cnblogs.com/kxm87/p/9561054.html 安装 在终端输入 sudo apt-get install iptables
+添加规则 在终端输入 iptables -I INPUT -p tcp &amp;ndash;dport 80 -j ACCEPT</description>
+    </item>
+    
+    <item>
+      <title>ＷIN 开机自启动</title>
+      <link>https://tongluoshao.space/permanent/%EF%BC%B7IN-%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%EF%BC%B7IN-%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8/</guid>
+      <description>把exe放在
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp</description>
+    </item>
+    
+    <item>
+      <title>WIN 清理右键菜单</title>
+      <link>https://tongluoshao.space/permanent/WIN-%E6%B8%85%E7%90%86%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/WIN-%E6%B8%85%E7%90%86%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/</guid>
+      <description> 1 2 3 4 5 // 选中文件夹时 reg delete HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\xxx /f // 选中非文件夹时 reg delete HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\xxx /f pause </description>
+    </item>
+    
+    <item>
+      <title>WIN11 右键菜单风格恢复</title>
+      <link>https://tongluoshao.space/permanent/WIN11-%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E9%A3%8E%E6%A0%BC%E6%81%A2%E5%A4%8D/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/WIN11-%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E9%A3%8E%E6%A0%BC%E6%81%A2%E5%A4%8D/</guid>
+      <description>一个简单的 File Explorer 系恢复 1）切换回经典右键菜单
+reg add &amp;ldquo;HKCU\Software\Classes\CLSID{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&amp;rdquo; /f /ve
+2）恢复到新版右键菜单
+reg delete &amp;ldquo;HKCU\Software\Classes\CLSID{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}&amp;rdquo; /f
+重启文件管理器生效(重启电脑也可)
+(推荐) Explorer Patcher 可以修改 File Explorer, Start Menu, Taskbar 等等的系统风格 项目:https://github.</description>
+    </item>
+    
+    <item>
+      <title>Windows 注册表改键(扫描码映射)</title>
+      <link>https://tongluoshao.space/permanent/Windows-%E6%B3%A8%E5%86%8C%E8%A1%A8%E6%94%B9%E9%94%AE%E6%89%AB%E6%8F%8F%E7%A0%81%E6%98%A0%E5%B0%84/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Windows-%E6%B3%A8%E5%86%8C%E8%A1%A8%E6%94%B9%E9%94%AE%E6%89%AB%E6%8F%8F%E7%A0%81%E6%98%A0%E5%B0%84/</guid>
+      <description>优点: 直接有效 缺点: 不能发送组合键, 需要重启生效 1 2 3 4 1. 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout 2. 新建一个叫&amp;#34;Scancode Map&amp;#34;的二进制文件 二进制文件内容: (小端序)
+开头 2Byte 全 00 第三个 Byte = 涉及的键数量+1 第四 Byte 开始, 每组都是 (目标键码 原键码) 结尾 1Byte 00 然后重启</description>
+    </item>
+    
+    <item>
+      <title>了不起的修仙模拟器</title>
+      <link>https://tongluoshao.space/permanent/%E4%BA%86%E4%B8%8D%E8%B5%B7%E7%9A%84%E4%BF%AE%E4%BB%99%E6%A8%A1%E6%8B%9F%E5%99%A8/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BA%86%E4%B8%8D%E8%B5%B7%E7%9A%84%E4%BF%AE%E4%BB%99%E6%A8%A1%E6%8B%9F%E5%99%A8/</guid>
+      <description>外链 攻略链接 Excel攻略汇总 攻略图 BWiki
+mod 增加游戏内容的mod 辅助类mod
+门派势力 风水学 朝向 卧房与祖师殿，门朝南开为吉； 工坊、炼宝阁与炼丹房，门朝东开为吉；娱乐房东 厨房，门朝西开为吉。
+大小 极小：10- 狭小：10~20 适中：20~50 宽大：50~100 极大：100~400 400格以上不成房间</description>
+    </item>
+    
+    <item>
+      <title>十五分钟逻辑学</title>
+      <link>https://tongluoshao.space/project/%E5%8D%81%E4%BA%94%E5%88%86%E9%92%9F%E9%80%BB%E8%BE%91%E5%AD%A6/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/%E5%8D%81%E4%BA%94%E5%88%86%E9%92%9F%E9%80%BB%E8%BE%91%E5%AD%A6/</guid>
+      <description>记住：逻辑追求的是确定性 第一章 入门 逻辑学是什么? 什么是逻辑 逻辑是：
+指客观事物的规律，如“大自然有其内在的逻辑” 特殊的理论， 如“侵略者奉行的是强盗逻辑” 指思维的规律，规则 指逻辑学这门科学 逻辑 = 思维的规则、规律、形式、结构…… 语言与逻辑的关系 逻辑离不开语言，思考就如同自己说话。 语言有区域性，但逻辑没有 区分语法错误和逻辑错误 什么是逻辑学 逻辑学是研究思维的规律的科学 目的</description>
+    </item>
+    
+    <item>
+      <title>卡片盒笔记法</title>
+      <link>https://tongluoshao.space/permanent/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95/</guid>
+      <description>思考基准 [[permanent/记笔记的目标|记笔记的目标]]
+卡片的分类 src: 《卡片笔记写作法》 src: 杨奇的博客
+闪念笔记 fleeting note 随时冒出的想法或者随时想记录的内容，放在收集箱中待处理
+文献笔记 literature note 在阅读时认为有价值的内容，以后思考或者写作时可能会用到的 不要抄写，重要的是理解和自己的思考 并记得保留来源
+永久笔记 permanent note 链接好的[[permanent/卡片盒笔记法#闪念笔记 fleeting note|闪念笔记]]，正式加入卡片盒 链接好是指与先前的永久笔记建立好了应有的链接</description>
+    </item>
+    
+    <item>
+      <title>名词强变化与弱变化 Deklination</title>
+      <link>https://tongluoshao.space/permanent/%E5%90%8D%E8%AF%8D%E5%BC%BA%E5%8F%98%E5%8C%96%E4%B8%8E%E5%BC%B1%E5%8F%98%E5%8C%96-Deklination/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%90%8D%E8%AF%8D%E5%BC%BA%E5%8F%98%E5%8C%96%E4%B8%8E%E5%BC%B1%E5%8F%98%E5%8C%96-Deklination/</guid>
+      <description>太长不看 强变化就是单词本身的变化。
+弱变化，首先判断是阳性名词，其次根据结尾的不同以ant. ent. and. ist 这样的类似于职业相关的名词。除一格其他格需添加以n或en。
+强变化 在阳性和中性名词的单数第二格中，单音节名词-x,-s,-ss,-ß,-z,-tz,-x结尾的名词以-s结尾. 多音节名词以-s结尾 部分名词词尾既可以加-s,又可以加-es，具体见词典 以-nis结尾的名词，变复数名词结尾变为-nisse 以-in结尾的阴性名词，复数名词结尾变为-innen 复数名词的第三格以-(e)n结尾. 如果一个名词的复数形式以-s,-n结尾，则这个名词的第三格复数无词尾。如-Auto 带不定冠词的复数名词的第二格以von+第三格的形式表现. 复数名词前有形容词则可以使用第二格 弱变化 阳性名词
+所有以-e,-and,-ant,-ent,-ist结尾的生命名词（除Käse,只有单数形式，Moment，物质名词) 以-e结尾的非生命名词在单数第二格词尾加-s， 来源于希腊语的生命名词和人造机械名词 一些生命名词，没找到规律，列举部分如下: Bär, Nachbar, Narr, Prinz, Herr, Rebell, Bauer, Fürst, Graf, Held, Kamerad</description>
+    </item>
+    
+    <item>
+      <title>咩啊咩啊</title>
+      <link>https://tongluoshao.space/permanent/%E5%92%A9%E5%95%8A%E5%92%A9%E5%95%8A/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%92%A9%E5%95%8A%E5%92%A9%E5%95%8A/</guid>
+      <description>圆筒雪糕 双层吉士汉堡</description>
+    </item>
+    
+    <item>
+      <title>多态</title>
+      <link>https://tongluoshao.space/permanent/%E5%A4%9A%E6%80%81/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%A4%9A%E6%80%81/</guid>
+      <description>多态 多态指的是同一个方法调用，由于对象不同可能会有不同的行为
+是面向对象编程中常用的概念
+链接语言 Java 的多态 [[permanent/Java 基础#Polymorphism|Polymorphism]]</description>
+    </item>
+    
+    <item>
+      <title>定冠词变格</title>
+      <link>https://tongluoshao.space/permanent/%E5%AE%9A%E5%86%A0%E8%AF%8D%E5%8F%98%E6%A0%BC/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AE%9A%E5%86%A0%E8%AF%8D%E5%8F%98%E6%A0%BC/</guid>
+      <description> Case Masc Fem Neut Plural Nom der die das die Gen des der des der Dat dem der dem den Acc den die das die </description>
+    </item>
+    
+    <item>
+      <title>形容词强变化与弱变化 Deklination</title>
+      <link>https://tongluoshao.space/permanent/%E5%BD%A2%E5%AE%B9%E8%AF%8D%E5%BC%BA%E5%8F%98%E5%8C%96%E4%B8%8E%E5%BC%B1%E5%8F%98%E5%8C%96-Deklination/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%BD%A2%E5%AE%B9%E8%AF%8D%E5%BC%BA%E5%8F%98%E5%8C%96%E4%B8%8E%E5%BC%B1%E5%8F%98%E5%8C%96-Deklination/</guid>
+      <description>[[project/lmu - Syntax of natural language(Germany)|lmu - Syntax of natural language(Germany)]] 里说的强弱 Deklination, 强是指零冠词和不定冠词, 弱是指定冠词
+其实形容词有个规律, 如果冠词里没有对 Genus 的指示, 那么形容词就会负责接管(Genus 是啥?</description>
+    </item>
+    
+    <item>
+      <title>彩虹表</title>
+      <link>https://tongluoshao.space/permanent/%E5%BD%A9%E8%99%B9%E8%A1%A8/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%BD%A9%E8%99%B9%E8%A1%A8/</guid>
+      <description>rainbow table 枚举常用密码, 将加密后的散列值做成索引表, 就能根据数据库中加密后的密码反推出原始密码. 这张表就叫做彩虹表</description>
+    </item>
+    
+    <item>
+      <title>操作系统</title>
+      <link>https://tongluoshao.space/permanent/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <description>[[permanent/WIN11 右键菜单风格恢复|WIN11 右键菜单风格恢复]]
+[[permanent/Windows 注册表改键(扫描码映射)|Windows 注册表改键(扫描码映射)]]
+[[permanent/ＷIN 开机自启动|ＷIN 开机自启动]]
+[[permanent/WIN 清理右键菜单|WIN 清理右键菜单]]
+[[permanent/触摸板开关失效事件|触摸板开关失效事件]]
+[[permanent/远程计算机或设备将不接受连接|远程计算机或设备将不接受连接]]
+[[permanent/Kali Linux 常用服务|Kali Linux 常用服务]]
+[[permanent/Kali Linux 网络设置|Kali Linux 网络设置]]</description>
+    </item>
+    
+    <item>
+      <title>日语语法</title>
+      <link>https://tongluoshao.space/permanent/%E6%97%A5%E8%AF%AD%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%97%A5%E8%AF%AD%E8%AF%AD%E6%B3%95/</guid>
+      <description>语法 提示语 名词从属关系 の [名]の[名]
+也 も [名] も
+并列关系 と [名]　と　[名]
+へ 表移动方向, 移动先:
+[場所]　へ　[動]</description>
+    </item>
+    
+    <item>
+      <title>日语输入法</title>
+      <link>https://tongluoshao.space/permanent/%E6%97%A5%E8%AF%AD%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%97%A5%E8%AF%AD%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
+      <description>src: https://zhuanlan.zhihu.com/p/402152402
+Romaji ![[Pasted image 20230220104851.png]]
+Kana 首先要将输入法设置里的假名输入打开, 布局是英文键盘101/102键, 重启电脑
+一个练习地点, 但这需要你有日语布局的键盘, 否则ro打不出: 假名输入练习
+另一个练习地点, 可以用US英文布局: 練習道場
+英语键盘假名对应图 ![[v2-ed9baf0c437a7ef6d4feb4a1ddd4f135_r.jpg]] alt+caps 切换到片假名 ctrl+caps 切换到平假名</description>
+    </item>
+    
+    <item>
+      <title>样式测试</title>
+      <link>https://tongluoshao.space/permanent/%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</guid>
+      <description>code
+1 2 3 def something: a = 0 return 引用
+[[permanent/样式测试|样式测试]] [[不存在的链接|不存在的连接]]
+1111111111 22222222 333333333 44444444 没有一 二也不知道是什么 事不过三 但我就是要有四 h1 讲了一些话</description>
+    </item>
+    
+    <item>
+      <title>笔记方法</title>
+      <link>https://tongluoshao.space/permanent/%E7%AC%94%E8%AE%B0%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%AC%94%E8%AE%B0%E6%96%B9%E6%B3%95/</guid>
+      <description>[[permanent/卡片盒笔记法|卡片盒笔记法]]
+Tips [[permanent/记笔记的目标|记笔记的目标]]
+[[permanent/抄写于记忆或学习的收益很低]]</description>
+    </item>
+    
+    <item>
+      <title>线性代数</title>
+      <link>https://tongluoshao.space/permanent/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</guid>
+      <description>[[permanent/Linear Algebra Concepts 线性代数概念|Linear Algebra Concepts 线性代数概念]]
+[[project/3Blue1Brown - 线性代数的本质|3Blue1Brown - 线性代数的本质]]
+[[project/Project Asteria|Project Asteria]]</description>
+    </item>
+    
+    <item>
+      <title>编曲二三事 - 和弦大师课预课</title>
+      <link>https://tongluoshao.space/project/%E7%BC%96%E6%9B%B2%E4%BA%8C%E4%B8%89%E4%BA%8B-%E5%92%8C%E5%BC%A6%E5%A4%A7%E5%B8%88%E8%AF%BE%E9%A2%84%E8%AF%BE/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/%E7%BC%96%E6%9B%B2%E4%BA%8C%E4%B8%89%E4%BA%8B-%E5%92%8C%E5%BC%A6%E5%A4%A7%E5%B8%88%E8%AF%BE%E9%A2%84%E8%AF%BE/</guid>
+      <description>教案 视频
+一、音高的相对性 绝对音高
+CDEGAB 这个音是什么 相对音高
+do re mi fa sol la si/1234567 这个音和其他音的关系是什么 调性
+这首歌是什么调的 根音是哪个 e.g. 1 = C, 1 = D 二、音程 !</description>
+    </item>
+    
+    <item>
+      <title>编程语言</title>
+      <link>https://tongluoshao.space/permanent/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <description>语言 [[permanent/C++|C++]]
+[[permanent/Dafny|Dafny]]
+[[permanent/Java|Java]]
+[[permanent/Python|Python]]
+[[permanent/Smali|Smali]]
+概念 [[permanent/多态|多态]]</description>
+    </item>
+    
+    <item>
+      <title>网站更新记录</title>
+      <link>https://tongluoshao.space/permanent/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/</guid>
+      <description>-&amp;gt; 指 Obsidian-Hugo 笔记部分的更新记录
+[[permanent/Ob发布到Hugo的尝试|Ob发布到Hugo的尝试]]
+2023-06-14 修改了 code, blockquote的样式 改动了首页的样式 修改了 footer 放上自己的信息 修改了 site-title, page-title 样式 增加了 #content 的蓝色边框 修改了 template, 可以直接附上时间 2023-06-15 修改了 h1 到 h6 的字体大小 修改了 tag 页面的样式 修改了 contact 继续改首页 2023-06-16 把所有旧md做了 quartz 的兼容, 就差发布了.</description>
+    </item>
+    
+    <item>
+      <title>补码系统(有符号整数存储)</title>
+      <link>https://tongluoshao.space/permanent/%E8%A1%A5%E7%A0%81%E7%B3%BB%E7%BB%9F%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B4%E6%95%B0%E5%AD%98%E5%82%A8/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%A1%A5%E7%A0%81%E7%B3%BB%E7%BB%9F%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B4%E6%95%B0%E5%AD%98%E5%82%A8/</guid>
+      <description>![[attachments/Pasted image 20230313225402.png]] 补码的转换 正数转补码: 直接取二进制 负数转补码: 取反加一 补码转: 若最高位为0, 直接求十进制 若最高位为1, 取反加一 补码的加减法 A - B = A + B补 两正相加: 直接加, 需要处理上溢 一正一负: 直接加!</description>
+    </item>
+    
+    <item>
+      <title>记笔记的目标</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E7%9B%AE%E6%A0%87/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E7%9B%AE%E6%A0%87/</guid>
+      <description>记笔记的目的是在以后需要的时候能够重现 - 所以保留来源但不突出来源 - 想在什么主题中重现，就与之链接 再好的内容，如果没有记录下来，就不能成为笔记 - 所以，首先是记录，是否结构清晰内容精致是次要的</description>
+    </item>
+    
+    <item>
+      <title>重复多次阅读的收益不如一次深入思考</title>
+      <link>https://tongluoshao.space/permanent/%E9%87%8D%E5%A4%8D%E5%A4%9A%E6%AC%A1%E9%98%85%E8%AF%BB%E7%9A%84%E6%94%B6%E7%9B%8A%E4%B8%8D%E5%A6%82%E4%B8%80%E6%AC%A1%E6%B7%B1%E5%85%A5%E6%80%9D%E8%80%83/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%87%8D%E5%A4%8D%E5%A4%9A%E6%AC%A1%E9%98%85%E8%AF%BB%E7%9A%84%E6%94%B6%E7%9B%8A%E4%B8%8D%E5%A6%82%E4%B8%80%E6%AC%A1%E6%B7%B1%E5%85%A5%E6%80%9D%E8%80%83/</guid>
+      <description>重复多次阅读, 特别是只阅读, 或者读的时候划划线, 收益很可能不如仅一次的深入思考. 除非你的目的就只是读完很多次而不考虑理解和掌握. 而重复多次可能会让自己误以为自己已经掌握了
+原理: [[permanent/曝光效应|曝光效应]]</description>
+    </item>
+    
+    <item>
+      <title>阅读方法</title>
+      <link>https://tongluoshao.space/permanent/%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95/</guid>
+      <description>[[permanent/阅读时的心态|阅读时的心态]]
+[[permanent/阅读时的提问法|阅读时的提问法]]
+Tips [[permanent/重复多次阅读的收益不如一次深入思考|重复多次阅读的收益不如一次深入思考]]</description>
+    </item>
+    
+    <item>
+      <title>阅读时的心态</title>
+      <link>https://tongluoshao.space/permanent/%E9%98%85%E8%AF%BB%E6%97%B6%E7%9A%84%E5%BF%83%E6%80%81/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%98%85%E8%AF%BB%E6%97%B6%E7%9A%84%E5%BF%83%E6%80%81/</guid>
+      <description> 读一本书是与作者对话, 作者讲的是书的内容, 而我的思考则是我的表达 读书时对内容产生怀疑, 不要急着找书评, 尝试独立思考和判断. </description>
+    </item>
+    
+    <item>
+      <title>阅读时的提问法</title>
+      <link>https://tongluoshao.space/permanent/%E9%98%85%E8%AF%BB%E6%97%B6%E7%9A%84%E6%8F%90%E9%97%AE%E6%B3%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%98%85%E8%AF%BB%E6%97%B6%E7%9A%84%E6%8F%90%E9%97%AE%E6%B3%95/</guid>
+      <description>作者想说明什么?支持什么和反对什么? 作者在和什么对比?(例如提到「人权」, 那么对比的是没有人权的情况还是义务的情况?) ![[attachments/6129beb581071fd03b4ab83bdb07f71.jpg]]</description>
+    </item>
+    
+    <item>
+      <title>阿里云服务器 PPTP VPN</title>
+      <link>https://tongluoshao.space/permanent/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-PPTP-VPN/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-PPTP-VPN/</guid>
+      <description>阿里云服务器安装PPTP VPN全流程-阿里云开发者社区</description>
+    </item>
+    
+    <item>
+      <title>魔方攻略本</title>
+      <link>https://tongluoshao.space/permanent/%E9%AD%94%E6%96%B9%E6%94%BB%E7%95%A5%E6%9C%AC/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%AD%94%E6%96%B9%E6%94%BB%E7%95%A5%E6%9C%AC/</guid>
+      <description>N 阶 中心块带方向 U 180 (URL U2R&amp;rsquo;L&amp;rsquo;)2 或 (RUR&amp;rsquo;U)5
+U, F 90 顺: (RU&amp;rsquo;R&amp;rsquo;B&amp;rsquo;)7 逆: (RUR&amp;rsquo;B&amp;rsquo;)7
+异形 斜转 Skewb 斜转魔方, 角块叫角块, 中间的叫棱块</description>
+    </item>
+    
+    <item>
+      <title>冒险岛</title>
+      <link>https://tongluoshao.space/permanent/%E5%86%92%E9%99%A9%E5%B2%9B/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%86%92%E9%99%A9%E5%B2%9B/</guid>
+      <description>Link, 联盟 Link Link表 ![[attachments/Pasted image 20230311105801.png]] 联盟进度 3500 战士 lv 弓箭手 lv 飞侠 lv 魔法师 lv 海盗 lv 英雄 神射手 刀飞 冰雷 船长 200 圣骑士 箭神 标飞 火毒 队长 黑骑士 古迹 双刀 主教 火炮手 魂骑士 风灵 夜行者 150 炎术士 奇袭者 米哈尔 190 双弩 140 幻影 170 龙神 160 隐月 战神 140 豹弩 尖兵 120 夜光 140 机械师 红毛 200 该隐 魔链 唤灵 天使 白毛 150 虎影 244 林之灵 203 亚克 160 爆破 超能力 墨玄 200 狂龙 阴阳师 神之子 180 圣晶 140 剑豪 200 元素师 213 阿黛尔 练级套制作 法师43 飞侠 44 战士 45 弓箭手 海盗(力) 帽子 9* 6% 8* 9% 9* 9% 9* 9% 9* 9% 套服 9* 6% 9* 9% 9* 6% 9* 9% 9* 6% 3% ?</description>
+    </item>
+    
+    <item>
+      <title>触摸板开关失效事件</title>
+      <link>https://tongluoshao.space/permanent/%E8%A7%A6%E6%91%B8%E6%9D%BF%E5%BC%80%E5%85%B3%E5%A4%B1%E6%95%88%E4%BA%8B%E4%BB%B6/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%A7%A6%E6%91%B8%E6%9D%BF%E5%BC%80%E5%85%B3%E5%A4%B1%E6%95%88%E4%BA%8B%E4%BB%B6/</guid>
+      <description>11.25 这次的 BUG 告一段落了, 原因是改了扫描码 触摸板开关的功能是通过发送键盘事件实现的, 大概是 LWIN + LCTRL + F24, 不过应该有读不到的键名
+![[Pasted image 20221125010339.png]]
+但……还是会出现开关的时候带上大小写锁定的问题
+也许可以给 *LCtrl 加个判断 LWin 键的状态, 如果 LWin 按下则不发送 CapsLock ==成功了== ver1.</description>
+    </item>
+    
+    <item>
+      <title>配置一个二级域名</title>
+      <link>https://tongluoshao.space/permanent/%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/</link>
+      <pubDate>Mon, 14 Feb 2022 20:39:47 +0100</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/</guid>
+      <description>1. 添加 DNS 解析记录 在 DNS 解析商里添加记录。
+记录类型是 A
+二级域名叫 a.example.com, 主机记录就填 a
+记录值是服务器IP
+2. 配置 nginx.conf vim /etc/nginx/nginx.conf
+http 中：</description>
+    </item>
+    
+    <item>
+      <title>Nginx 网站用 Cerbot 配置免费 https 证书</title>
+      <link>https://tongluoshao.space/permanent/Nginx%E7%BD%91%E7%AB%99%E7%94%A8Cerbot%E9%85%8D%E7%BD%AE%E5%85%8D%E8%B4%B9https%E8%AF%81%E4%B9%A6/</link>
+      <pubDate>Thu, 13 Jan 2022 17:43:53 +0100</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Nginx%E7%BD%91%E7%AB%99%E7%94%A8Cerbot%E9%85%8D%E7%BD%AE%E5%85%8D%E8%B4%B9https%E8%AF%81%E4%B9%A6/</guid>
+      <description>Cerbot是什么？
+Certbot 是最流行的基于Let&amp;rsquo;s Encrypt 的客户端，用于在服务器上简化HTTPS（SSL/TLS）证书的申请流程。 本文中，我们介绍通过Certbot 客户端为网络服务器添加、删除 HTTPS 证书、吊销证书，以及为已有证书添加新域名的操作。
+这里可以找到一份 Cerbot 官网指南。
+安装 snapd 首先要安装 snap, 根据系统不同方法可能不一样。详细看 这里
+我的系统是 Ubuntu 20.</description>
+    </item>
+    
+    <item>
+      <title>一个网站的诞生</title>
+      <link>https://tongluoshao.space/permanent/%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E8%AF%9E%E7%94%9F/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E8%AF%9E%E7%94%9F/</guid>
+      <description>准备工作
+服务器, 域名和备案
+[[permanent/从一个空文件夹开始|从一个空文件夹开始]]
+[[permanent/打造自己的Hugo主题|打造自己的Hugo主题]]
+[[permanent/Nginx网站用Cerbot配置免费https证书|Nginx网站用Cerbot配置免费https证书]]</description>
+    </item>
+    
+    <item>
+      <title>从一个空文件夹开始</title>
+      <link>https://tongluoshao.space/permanent/%E4%BB%8E%E4%B8%80%E4%B8%AA%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%BC%80%E5%A7%8B/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BB%8E%E4%B8%80%E4%B8%AA%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%BC%80%E5%A7%8B/</guid>
+      <description>首先 先找一个空地，创建一个文件夹——这时候文件夹是完全空的。
+在最初的阶段，这个文件夹会被作为 Git 仓库，在本机和网站服务器之间同步。
+安装 Linux | Hugo
+创建 Hugo 应用 Hugo - Quick Start
+在空文件夹打开 cmd, 输入以下命令，其中mysite是你的站点名称：
+hugo new site mysite</description>
+    </item>
+    
+    <item>
+      <title>打造自己的Hugo主题</title>
+      <link>https://tongluoshao.space/permanent/%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84Hugo%E4%B8%BB%E9%A2%98/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84Hugo%E4%B8%BB%E9%A2%98/</guid>
+      <description>一个最低限度的 Hugo 主题 参考 Mike Dane 的 ga-hugo-theme. 这里展示了一个拥有基本功能的主题。Mike Dane 的 Hugo 系列教程也是极好的。
+写作时使用 Hugo 0.89 版本。
+在你的 Hugo 应用输入命令以创建一个新主题:</description>
+    </item>
+    
+    <item>
+      <title>bat 乱码代码</title>
+      <link>https://tongluoshao.space/permanent/bat-%E4%B9%B1%E7%A0%81%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Sun, 21 Nov 2021 15:02:39 +0100</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/bat-%E4%B9%B1%E7%A0%81%E4%BB%A3%E7%A0%81/</guid>
+      <description>在bat最开始加上
+chcp 65001
+使用 utf-8 的意思</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tongluoshao.space/index/19-%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/index/19-%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tongluoshao.space/permanent/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</guid>
+      <description>[[permanent/JVM, Dalvik, Art|JVM, Dalvik, Art]]
+[[permanent/控制流混淆|控制流混淆]]
+[[permanent/Smali|Smali]]
+[[permanent/HarmonyPatch|HarmonyPatch]]
+[[permanent/脱壳|脱壳]]
+概念 [[permanent/DRM|DRM]]
+项目 [[project/会飞的丑小鸭 - 教我兄弟学安卓逆向|会飞的丑小鸭 - 教我兄弟学安卓逆向]]
+[[project/正己 - 安卓逆向这档事|正己 - 安卓逆向这档事]]</description>
+    </item>
+    
+  </channel>
+</rss>

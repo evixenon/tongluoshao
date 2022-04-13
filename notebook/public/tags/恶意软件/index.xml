@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>恶意软件 on </title>
+    <link>https://tongluoshao.space/tags/%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6/</link>
+    <description>Recent content in 恶意软件 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dropper</title>
+      <link>https://tongluoshao.space/permanent/Dropper/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Dropper/</guid>
+      <description>Dropper 一种木马, 功能是将嵌入的恶意软件下载到受害者的计算机上, payload 通常是加密存储的
+多阶段 Dropper 为了规避反恶意软件的检测, 附带了更多的伪装, 比如下载器功能, 在受害机器 active 时才下载 payload. 比如 dropper 通过 SFTP 加载又一个 dropper.</description>
+    </item>
+    
+    <item>
+      <title>Staatstrojaner</title>
+      <link>https://tongluoshao.space/permanent/Staatstrojaner/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Staatstrojaner/</guid>
+      <description>国家的特洛伊木马, 安装在需要监控者的终端设备上 据说联邦刑事警察局买了 mfc42ul.dll
+功能
+截图 窃听 Skype, VoIP 与 C&amp;amp;C 服务器通话 分析
+软件到 C&amp;amp;C 单向加密, 使用 AES-ECB cmd 1, cmd 10, cmd 11, cmd 15: &amp;ndash; cmd 2: 客户端重新连接并尝试发送数据（与cmd 13类似） cmd 3: 低质量的屏幕截图 cmd 4: 注册一个内核模式的驱动程序</description>
+    </item>
+    
+    <item>
+      <title>2009~ Stuxnet</title>
+      <link>https://tongluoshao.space/permanent/2009~-Stuxnet/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/2009~-Stuxnet/</guid>
+      <description> 事件经过和分析
+针对可编程工业控制系统(programmable logic device controller, PLCs), 如西门子程序 替换中央DLL, s7otbxdx.dll 目标疑似伊朗的核设施 Suche nach WinCC oder Siemens Step7 Software in Registry </description>
+    </item>
+    
+    <item>
+      <title>蠕虫</title>
+      <link>https://tongluoshao.space/permanent/%E8%A0%95%E8%99%AB/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%A0%95%E8%99%AB/</guid>
+      <description>蠕虫 Worm de. Wurm 不需要寄主程序的有害程序 Selbstreplikation, 自分离, 自我复制 单个被感染的机器被称为蠕虫段 Worm-Segment
+蠕虫的扫描方式 Random Scanning 最简单 不可预测 容易重复 Permutation Scanning 蠕虫必须能够确定主机是否已经被感染 所有蠕虫共享全球IP地址空间的随机排列 不重复的原理: 每个新的蠕虫从排列中的一个随机点开始扫描主机，如果发现一个已经被感染的主机，它就从一个新的随机点开始扫描，因此，整个地址空间可以被非常有效地扫描。 Hit-List Scanning 有一份原始的 hitlist 每次新感染的蠕虫会得到清单中剩余条目的一半 二分法 Topological Scanning 感染新的主机后, 在主机上寻找新目标 容易感染某一范围的主机, 但也容易形成孤立闭环 Warhol Worm Warhol 蠕虫是一种能快速复制的计算机蠕虫病毒, 可能在15分钟内感染互联网中的大片计算机.</description>
+    </item>
+    
+    <item>
+      <title>蠕虫和蓝宝石的对比</title>
+      <link>https://tongluoshao.space/permanent/%E8%A0%95%E8%99%AB%E5%92%8C%E8%93%9D%E5%AE%9D%E7%9F%B3%E7%9A%84%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%A0%95%E8%99%AB%E5%92%8C%E8%93%9D%E5%AE%9D%E7%9F%B3%E7%9A%84%E5%AF%B9%E6%AF%94/</guid>
+      <description>[[permanent/1988 Internet Wurm|1988 Internet Wurm]]
+[[permanent/2003 SQL Slammer|2003 SQL Slammer]]
+Wurn Slammer 时间 1988 2003 主机 SUN, VAX, UNIX WIN, SQL服务器 损害方式 高负载, 网络拥堵 极高负载, 网络拥堵 </description>
+    </item>
+    
+    <item>
+      <title>1988 Internet Wurm</title>
+      <link>https://tongluoshao.space/permanent/1988-Internet-Wurm/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/1988-Internet-Wurm/</guid>
+      <description>起因: 1988 年的「蠕虫」病毒使得美国大面积的计算机(尤其是校园网络)阻塞. 事情的起因是23岁的康奈尔大学学生莫瑞斯, 希望自己写的这个程序悄悄保存在一些机密计算机上. 原理: sendmail BUG finger BUG, buffer overflow remote execution(rsh, rexec) 受影响的账号: 无密码, 简易密码等 受影响的主机: 路由表(Routing-Table), 随机地址, Sun, VAX等</description>
+    </item>
+    
+    <item>
+      <title>2003 SQL Slammer</title>
+      <link>https://tongluoshao.space/permanent/2003-SQL-Slammer/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/2003-SQL-Slammer/</guid>
+      <description>2003年爆发的Slammer病毒(又称蓝宝石Sapphire)是一个针对服务器的攻击程序, 以传播速度快闻名.
+每8.5秒感染多一倍的计算机 WINDOWS 2000 SERVER, port 1434, buffer overflow BUG, 未打补丁的都会被迅速感染 UDP 转发, 包大小一共才404Byte 攻击随机地址 (主要是美国, 欧洲) 90%的脆弱系统在10分钟里被感染, 产生了庞大的数据流量, 服务器不得不被关闭 </description>
+    </item>
+    
+    <item>
+      <title>2020 SolarWinds</title>
+      <link>https://tongluoshao.space/permanent/2020-SolarWinds/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/2020-SolarWinds/</guid>
+      <description>a. 研究并描述SolarWinds攻击的顺序 从 FireEye 获取 pentesting 软件 用 pentesting 软件攻击 Orion 在网管软件 Orion 的更新(可能是代码仓库)中植入木马 用户下载 Orion 软件更新包后被植入木马 b. 攻击者利用了哪些漏洞？为什么攻击会蔓延并在如此长的时间内未被发现？ build 过程(Quellcode -&amp;gt; ausführbares Programm) &amp;ldquo;Sunburst&amp;rdquo; 特洛伊木马植入到更新, 并发布给用户 安静期(Ruhezeit)14天, 之后与 C&amp;amp;C 服务器联系 c.</description>
+    </item>
+    
+  </channel>
+</rss>

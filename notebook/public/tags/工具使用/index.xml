@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具使用 on </title>
+    <link>https://tongluoshao.space/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/</link>
+    <description>Recent content in 工具使用 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bat 创建防火墙入站规则</title>
+      <link>https://tongluoshao.space/permanent/bat-%E5%88%9B%E5%BB%BA%E9%98%B2%E7%81%AB%E5%A2%99%E5%85%A5%E7%AB%99%E8%A7%84%E5%88%99/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/bat-%E5%88%9B%E5%BB%BA%E9%98%B2%E7%81%AB%E5%A2%99%E5%85%A5%E7%AB%99%E8%A7%84%E5%88%99/</guid>
+      <description>教程来源
+1 2 3 4 5 6 7 8 9 10 11 12 13 @echo off netsh advfirewall firewall show rule name=rdp4413 &amp;gt;nul echo .</description>
+    </item>
+    
+    <item>
+      <title>dig</title>
+      <link>https://tongluoshao.space/permanent/dig/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/dig/</guid>
+      <description>dig Domain Information Groper 域信息搜索器
+安装 下载地址 可能需翻墙 win 最高支持到 9.16.30 下载地址
+命令 spamlist 查询 dig +short 2.0.0.127.zen.spamhaus.org 127.0.0.4 127.0.0.10 127.</description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://tongluoshao.space/permanent/Git/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Git/</guid>
+      <description>Git 概念 HEAD 指向当前签出的分支
+3-Way-Merge 在目标分支上创建一个新的提交, 包括源分支和目标分支的修改.
+Fast-Forward-Merge 只有当源分支和目标分支在历史中在同一路径时才可用, 会将目标分支推到源分支
+Rebase 变基. 将源分支的 commit 路程在目标分支里也复制一遍. 例如, 在 feature 执行 git rebase origin, 就会将 feature 的历史复制到 origin.</description>
+    </item>
+    
+    <item>
+      <title>Github 加速</title>
+      <link>https://tongluoshao.space/permanent/Github-%E5%8A%A0%E9%80%9F/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Github-%E5%8A%A0%E9%80%9F/</guid>
+      <description>查ip github.com assets-cdn.github.com github.global.ssl.fastly.net https://www.ipaddress.com/ 查ip
+改hosts c/win/sys32/drivers/etc/hosts
+刷新dns缓存 ipconfig /flushdns
+22.10.1
+140.82.113.4 github.com
+185.199.108.153 assets-cdn.github.com
+151.101.1.194 github.global.ssl.fastly.net</description>
+    </item>
+    
+    <item>
+      <title>Obsidian</title>
+      <link>https://tongluoshao.space/permanent/Obsidian/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Obsidian/</guid>
+      <description>[[permanent/Obsidian 探索|Obsidian 探索]]
+[[permanent/小鹤音形和 Obsidian vim 的适性|小鹤音形和 Obsidian vim 的适性]]
+[[permanent/Ob发布到Hugo的尝试|Ob发布到Hugo的尝试]]</description>
+    </item>
+    
+    <item>
+      <title>PotPlayer 电视源</title>
+      <link>https://tongluoshao.space/permanent/PotPlayer-%E7%94%B5%E8%A7%86%E6%BA%90/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/PotPlayer-%E7%94%B5%E8%A7%86%E6%BA%90/</guid>
+      <description>教程: 电脑上收看传统电视频道：potplayer + iptv 源 - 知乎
+源地址 iptv-org/iptv: Collection of publicly available IPTV channels from all over the world</description>
+    </item>
+    
+    <item>
+      <title>VIM</title>
+      <link>https://tongluoshao.space/permanent/VIM/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/VIM/</guid>
+      <description>VIM 使用 VIM 设置 [[permanent/VIM 界面设置|VIM 界面设置]]
+VIM 在其他地方 [[permanent/小鹤音形和 Obsidian vim 的适性|小鹤音形和 Obsidian vim 的适性]]</description>
+    </item>
+    
+    <item>
+      <title>chrome复制各种链接到剪贴板</title>
+      <link>https://tongluoshao.space/permanent/chrome%E5%A4%8D%E5%88%B6%E5%90%84%E7%A7%8D%E9%93%BE%E6%8E%A5%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/chrome%E5%A4%8D%E5%88%B6%E5%90%84%E7%A7%8D%E9%93%BE%E6%8E%A5%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF/</guid>
+      <description>这个 chrome 插件很好用: 复制链接到剪贴板
+下面是自带的各种格式的演示
+HTML(text/plain) 扩展程序
+1 &amp;lt;a href=&amp;#34;chrome://extensions/&amp;#34;&amp;gt;扩展程序&amp;lt;/a&amp;gt; Markdown 扩展程序
+1 [扩展程序](chrome://extensions/) BBCode(text) [url=chrome://extensions/]扩展程序[/url]
+BBCode(url) [url]chrome://extensions/[/url]
+Textfile &amp;ldquo;扩展程序&amp;rdquo;:chrome://extensions/</description>
+    </item>
+    
+    <item>
+      <title>修改编辑默认软件</title>
+      <link>https://tongluoshao.space/permanent/%E4%BF%AE%E6%94%B9%E7%BC%96%E8%BE%91%E9%BB%98%E8%AE%A4%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BF%AE%E6%94%B9%E7%BC%96%E8%BE%91%E9%BB%98%E8%AE%A4%E8%BD%AF%E4%BB%B6/</guid>
+      <description>bat src 修改BAT格式文件的默认编辑程序 - jingkunliu - 博客园
+bat格式文件默认通过文本文档方式编辑，在编辑过程中有很多不便。
+修改方法：
+1、依次打开【开始】菜单，进入【运行】，输入【regedit】进行注册表编辑器。
+2、找到【计算机\HKEY_CLASSES_ROOT\batfile\shell\edit\command】位置下的注册表项。
+3、修改注册表值为默认打开的修改程序。
+【C:\Program Files\Notepad2\Notepad2.exe %1】其中前面部分为需要修改后的默认程序路径，注意别漏掉后面%1的内容。
+建议可以使用NOTEPAD2或者NOTEPAD++等软件作为bat格式文件的默认编辑器。</description>
+    </item>
+    
+    <item>
+      <title>小鹤音形和 Obsidian vim 的适性</title>
+      <link>https://tongluoshao.space/permanent/%E5%B0%8F%E9%B9%A4%E9%9F%B3%E5%BD%A2%E5%92%8C-Obsidian-vim-%E7%9A%84%E9%80%82%E6%80%A7/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%B0%8F%E9%B9%A4%E9%9F%B3%E5%BD%A2%E5%92%8C-Obsidian-vim-%E7%9A%84%E9%80%82%E6%80%A7/</guid>
+      <description>Fly_py 在锁定大写切换回小写的时候 vim 会失效， 而小狼毫不会
+以及在 vim Normal 模式下, 小鹤中文状态, 所有按键会变成双击</description>
+    </item>
+    
+    <item>
+      <title>某洋葱浏览器的连接</title>
+      <link>https://tongluoshao.space/permanent/%E6%9F%90%E6%B4%8B%E8%91%B1%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%9F%90%E6%B4%8B%E8%91%B1%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5/</guid>
+      <description>内置网桥和请求网桥得到的是公用的 中国大陆用户可能必须使用私人或未公开的 obfs4 网桥。 请联系 Telegram 机器人 @GetBridgesBot 并输入 /bridges。 或者发送邮件到 frontdesk@torproject.org 来获取，邮件主题需要包含“private bridge”。</description>
+    </item>
+    
+    <item>
+      <title>科学上网2209</title>
+      <link>https://tongluoshao.space/permanent/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%912209/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%912209/</guid>
+      <description>vultr xenonl.proton cloud compute, regular performance debian 10 5$
+ProxySU Program tools v2ray模板库 TCP
+v2rayN 粘贴</description>
+    </item>
+    
+    <item>
+      <title>访问风险网页</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%BF%E9%97%AE%E9%A3%8E%E9%99%A9%E7%BD%91%E9%A1%B5/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%BF%E9%97%AE%E9%A3%8E%E9%99%A9%E7%BD%91%E9%A1%B5/</guid>
+      <description> 火狐: 忽略风险 chromium: 直接在网页上敲 thisisunsafe 回车 </description>
+    </item>
+    
+    <item>
+      <title>软件和应用和轮子</title>
+      <link>https://tongluoshao.space/permanent/%E8%BD%AF%E4%BB%B6%E5%92%8C%E5%BA%94%E7%94%A8%E5%92%8C%E8%BD%AE%E5%AD%90/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%BD%AF%E4%BB%B6%E5%92%8C%E5%BA%94%E7%94%A8%E5%92%8C%E8%BD%AE%E5%AD%90/</guid>
+      <description>[[permanent/Jupyter Notebook|Jupyter Notebook]]
+[[permanent/VIM|VIM]]
+[[permanent/LOIC|LOIC]]
+[[permanent/Obsidian|Obsidian]]
+[[permanent/LaTeX|LaTeX]]
+[[permanent/Git|Git]]</description>
+    </item>
+    
+    <item>
+      <title>远程计算机或设备将不接受连接</title>
+      <link>https://tongluoshao.space/permanent/%E8%BF%9C%E7%A8%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%88%96%E8%AE%BE%E5%A4%87%E5%B0%86%E4%B8%8D%E6%8E%A5%E5%8F%97%E8%BF%9E%E6%8E%A5/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%BF%9C%E7%A8%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%88%96%E8%AE%BE%E5%A4%87%E5%B0%86%E4%B8%8D%E6%8E%A5%E5%8F%97%E8%BF%9E%E6%8E%A5/</guid>
+      <description>Windows 网络诊断: 远程计算机或设备将不接受连接 造成原因大概是 VPN 没关, 或者挂着 VPN 的时候强制关机了
+解决方法: 控制面板 - Internet 选项 - 局域网设置, 把代理关了</description>
+    </item>
+    
+  </channel>
+</rss>

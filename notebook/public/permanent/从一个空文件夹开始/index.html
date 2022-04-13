@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta
+    name="description"
+    content="首先 先找一个空地，创建一个文件夹——这时候文件夹是完全空的。
+在最初的阶段，这个文件夹会被作为 Git 仓库，在本机和网站服务器之间同步。
+安装 Linux | Hugo
+创建 Hugo 应用 Hugo - Quick Start
+在空文件夹打开 cmd, 输入以下命令，其中mysite是你的站点名称：
+hugo new site mysite"
+  />
+  <meta property="og:title" content="从一个空文件夹开始">
+  <meta property="og:description" content="首先 先找一个空地，创建一个文件夹——这时候文件夹是完全空的。
+在最初的阶段，这个文件夹会被作为 Git 仓库，在本机和网站服务器之间同步。
+安装 Linux | Hugo
+创建 Hugo 应用 Hugo - Quick Start
+在空文件夹打开 cmd, 输入以下命令，其中mysite是你的站点名称：
+hugo new site mysite">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tongluoshao.space/icon.png">
+  <meta property="og:url" content="https://tongluoshao.space/permanent/%E4%BB%8E%E4%B8%80%E4%B8%AA%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%BC%80%E5%A7%8B/">
+  <meta property="og:width" content="200">
+  <meta property="og:height" content="200">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="从一个空文件夹开始" />
+  <meta name="twitter:description" content="首先 先找一个空地，创建一个文件夹——这时候文件夹是完全空的。
+在最初的阶段，这个文件夹会被作为 Git 仓库，在本机和网站服务器之间同步。
+安装 Linux | Hugo
+创建 Hugo 应用 Hugo - Quick Start
+在空文件夹打开 cmd, 输入以下命令，其中mysite是你的站点名称：
+hugo new site mysite" />
+  <meta name="twitter:image" content="https://tongluoshao.space/icon.png">
+  
+    
+  
+    
+  
+
+  <title>
+    从一个空文件夹开始
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  
+  
+  
+  
+  
+  <link rel="shortcut icon" type="image/png"  href="https://tongluoshao.space//icon.png" />
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <link href="https://tongluoshao.space/styles.88d22826d3297025a3c1bf2a6aca5260.min.css" rel="stylesheet" />
+
+  
+  <link href="https://tongluoshao.space/styles/_light_syntax.248971f6ab797c4cf9beb228933f8362.min.css" rel="stylesheet" id="theme-link">
+
+   
+  
+  
+  
+  
+  <script src="https://tongluoshao.space/js/darkmode.10faa94087fa948a1002c0b385498593.min.js"></script>
+  
+  
+  
+  <script src="https://tongluoshao.space/js/util.00639692264b21bc3ee219733d38a8be.min.js"></script>
+  
+  
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+
+  
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.2.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.2.1"></script>
+  
+  <script defer src="https://tongluoshao.space/js/popover.aa9bc99c7c38d3ae9538f218f1416adb.min.js"></script>
+
+  
+  
+  
+  <script defer src="https://tongluoshao.space/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+  
+
+  
+  
+  <script defer src="https://tongluoshao.space/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+  
+
+  
+  
+  <script defer src="https://tongluoshao.space/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+  
+
+  
+   
+  <script>
+    const SEARCH_ENABLED =  false 
+    const LATEX_ENABLED =  true 
+    const PRODUCTION =  true 
+    const BASE_URL = "https://tongluoshao.space/"
+    const fetchData = Promise.all([
+          fetch("https:\/\/tongluoshao.space\/indices\/linkIndex.baf7c7849c087b9283697bcbc5da2fac.min.json")
+            .then(data => data.json())
+            .then(data => ({
+              index: data.index,
+              links: data.links,
+            })),
+          fetch("https:\/\/tongluoshao.space\/indices\/contentIndex.8c470189cd6cd213e6847cb1682b866b.min.json")
+            .then(data => data.json()),
+        ])
+        .then(([{index, links}, content]) => ({
+          index,
+          links,
+          content,
+        }))
+
+      const render = () => {
+      
+
+      const siteBaseURL = new URL(BASE_URL);
+      const pathBase = siteBaseURL.pathname;
+      const pathWindow = window.location.pathname;
+      const isHome = pathBase == pathWindow;
+
+      addCopyButtons();
+      
+
+      addTitleToCodeBlocks();
+      
+
+      addCollapsibleCallouts();
+      
+
+      
+      initPopover(
+        "https://tongluoshao.space",
+         true 
+      )
+      
+
+      
+      const footer = document.getElementById("footer")
+      if (footer) {
+        const container = document.getElementById("graph-container")
+        
+        if (!container) return requestAnimationFrame(render)
+        
+        container.textContent = ""
+
+        const drawGlobal = isHome &&  false ;
+        drawGraph(
+            "https://tongluoshao.space",
+            drawGlobal,
+            [{"/moc":"#4388cc"}],
+            drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+          );
+
+        }
+      
+
+      
+        var els = document.getElementsByClassName("mermaid");
+        if (els.length > 0) {
+          import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+            (obj) => {
+              
+              
+              obj.default.init();
+            }
+          )
+        }
+      
+      
+      
+      function clickHandler(evt) {
+        const target = evt.target 
+        const classNames = target.className.split(" ")
+        const broken = classNames.includes("broken")
+        const internal = classNames.includes("internal-link")
+        plausible("Link Click", {
+          props: {
+            href: target.href,
+            broken,
+            internal,
+            graph: false,
+          }
+        })
+      }
+
+      const links = document.querySelectorAll("a")
+      for (link of links) {
+        if (link.className.includes("root-title")) {
+          link.addEventListener('click', clickHandler, {once: true})
+        }
+      }
+    }
+
+    const init = (doc = document) => {
+      
+      addCopyButtons();
+      
+
+      addTitleToCodeBlocks();
+      renderMathInElement(doc.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+        ],
+        macros: {
+          '’': "'"
+        },
+        throwOnError : false
+      });
+      
+    };
+  </script>
+  
+  
+  <script type="module">
+    import { attachSPARouting } from "https:\/\/tongluoshao.space\/js\/router.d6fe6bd821db9ea97f9aeefae814d8e7.min.js"
+    attachSPARouting(init, render)
+  </script>
+  
+  
+  <script defer data-domain="tongluoshao.space" src="https://plausible.io/js/script.js"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+</head>
+
+
+<body>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="https://tongluoshao.space/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+
+
+
+<div class="singlePage">
+    
+    <header>
+    
+    
+  <div id="site-title" class="noselect">
+      <a href="https://tongluoshao.space/"><h1>TONGLUOSHAO</h1></a>
+  </div>
+    <div class="spacer"></div>
+    <div id="search-icon">
+      <p>Search</p>
+      <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+    </div>
+    <div class='darkmode'>
+    <input class='toggle' id='darkmode-toggle' type='checkbox' tabindex="-1">
+    <label id="toggle-label-light" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <title>Light Mode</title>
+            <path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </svg>
+    </label>
+    <label id="toggle-label-dark" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xml:space="preserve">
+            <title>Dark Mode</title>
+            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+</header>
+
+
+    <article>
+      <div id="content">
+        <h1>从一个空文件夹开始</h1>
+        <p class="meta">
+          Last updated 
+Jan 10, 2022
+
+ 
+            
+
+        </p>
+        <ul class="tags">
+            
+            <li><a href="https://tongluoshao.space/tags/hugo/">
+            
+              Hugo
+            
+              </a>
+            </li>
+            
+            <li><a href="https://tongluoshao.space/tags/%E4%B8%AA%E7%AB%99/">
+            
+              个站
+            
+              </a>
+            </li>
+            
+        </ul>
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+  
+  
+  
+
+
+
+
+
+
+<a href="#首先"><h1 id="首先"><span class="hanchor" ariaLabel="Anchor"># </span>首先</h1></a>
+<p>先找一个空地，创建一个文件夹——这时候文件夹是完全空的。</p>
+<p>在最初的阶段，这个文件夹会被作为 Git 仓库，在本机和网站服务器之间同步。</p>
+<p>安装 
+<a href="https://gohugo.io/installation/linux/" rel="noopener">Linux | Hugo</a></p>
+<a href="#创建-hugo-应用"><h1 id="创建-hugo-应用"><span class="hanchor" ariaLabel="Anchor"># </span>创建 Hugo 应用</h1></a>
+<p>
+<a href="https://gohugo.io/getting-started/quick-start/" rel="noopener">Hugo - Quick Start</a></p>
+<p>在空文件夹打开 <code>cmd</code>, 输入以下命令，其中<code>mysite</code>是你的站点名称：</p>
+<blockquote>
+<p>hugo new site mysite</p>
+</blockquote>
+<p>完成之后，第一件事是配置 <code>Hugo主题</code>，否则无法正常使用。官方 
+<a href="https://themes.gohugo.io/" rel="noopener">Hugo Themes</a> 提供了很多，挑中哪个主题，跟随主题的指引下载主题即可。主题可以更换。</p>
+<p>下载完之后，记得在 <code>config.toml</code> 中加上想要使用的主题名：</p>
+<blockquote>
+<p>theme = &lsquo;YOURTHEMENAME&rsquo;</p>
+</blockquote>
+<p>也可以像我一样<a href="/permanent/%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84Hugo%E4%B8%BB%E9%A2%98" rel="noopener" class="internal-link" data-src="/permanent/%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84Hugo%E4%B8%BB%E9%A2%98">打造自己的Hugo主题</a></p>
+<p>主题完成配置后，在站点根目录，使用以下命令创建一篇post:</p>
+<blockquote>
+<p>hugo new /posts/fisrt-post.md</p>
+</blockquote>
+<p>这样就在 <code>/content/posts</code> 下创建了一个 <code>md</code> 文件。可以用 Markdown 写文章啦。</p>
+<p>在根目录使用指令：</p>
+<blockquote>
+<p>hugo serve -D</p>
+</blockquote>
+<p>启动 Hugo server。 <code>-D</code> 参数指也输出草稿文件(<code>draft:true</code>的md文件)。然后就能在浏览器用 
+<a href="http://localhost:1313/" rel="noopener">http://localhost:1313/</a> 查看现在站点的样子了。这个功能相当于实时预览。一般的修改都能直接反映出来。但如果修改了 <code>toml</code> 文件就可能需要重新启动 Hugo server 才能生效。</p>
+<blockquote>
+<p>hugo server</p>
+</blockquote>
+<p>等价于</p>
+<blockquote>
+<p>hugo serve</p>
+</blockquote>
+<p>如果要生成静态页面(也就是最后可被 Nginx 部署的页面)，就要用</p>
+<blockquote>
+<p>hugo</p>
+</blockquote>
+<p>指令。不过我们只在服务器上部署，就不必在本机执行这个指令了。</p>
+<p>如果你已经有了域名，在部署之前，必须把 <code>config.toml</code> 里的 <code>baseURL</code> 改成 你自己的域名。否则生成的静态页面会出问题。</p>
+<a href="#上传到-github"><h1 id="上传到-github"><span class="hanchor" ariaLabel="Anchor"># </span>上传到 Github</h1></a>
+<p>这里默认你对 Git 有一定了解.</p>
+<p>先在 Github 新建一个仓库。</p>
+<p>关掉 Hugo server, 在 Hugo 应用根目录打开 cmd 或 git bash(记得改相应参数啊):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m &#39;first commit&#39;
+</span></span><span class="line"><span class="cl">git remote add origin git@github.com:evixenon/tongluoshao.git
+</span></span><span class="line"><span class="cl">git branch -M main
+</span></span><span class="line"><span class="cl">git push -u origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>OK, 在服务器端就可以 clone 这个仓库了.</p>
+<a href="#服务器端环境安装"><h1 id="服务器端环境安装"><span class="hanchor" ariaLabel="Anchor"># </span>服务器端环境安装</h1></a>
+<p>首先在服务器安装 <code>Hugo</code> 和 <code>Nginx</code> 。</p>
+<p>我的是 Ubuntu 系统：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt install nginx
+</span></span><span class="line"><span class="cl">sudo apt-get install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果服务器出现 <code>E:Unable to locate package xxx</code> 错误，运行以下命令更新一下<code>apt</code>:</p>
+<blockquote>
+<p>sudo apt update</p>
+</blockquote>
+<a href="#服务器端生成-hugo-静态页面"><h1 id="服务器端生成-hugo-静态页面"><span class="hanchor" ariaLabel="Anchor"># </span>服务器端生成 Hugo 静态页面</h1></a>
+<p>把仓库克隆下来后，在 Hugo 应用的根目录运行</p>
+<blockquote>
+<p>hugo</p>
+</blockquote>
+<p>这样在根目录下就生成了一个 public 文件夹</p>
+<a href="#服务器端配置-nginx"><h1 id="服务器端配置-nginx"><span class="hanchor" ariaLabel="Anchor"># </span>服务器端配置 Nginx</h1></a>
+<p>Nginx 的配置入门可以看看
+<a href="https://nginx.org/en/docs/beginners_guide.html" rel="noopener">官方教程</a>。现在只要弄让 Nginx 把网站呈现出来就可以了。</p>
+<p>用我自己的例子讲一下 Nginx 的配置，我在根目录下把建了一个 <code>/www</code> 文件夹，并把我的 git 仓库在这里克隆下来。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd /
+</span></span><span class="line"><span class="cl">mkdir /www
+</span></span><span class="line"><span class="cl">git clone git@github.com:evixenon/tongluoshao.git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后修改 Nginx 的配置文件，位置在 <code>/etc/nginx/nginx.conf</code> .</p>
+<p>配置文件的 http 部分加了如下内容:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">    listen  80;
+</span></span><span class="line"><span class="cl">    server_name     www.tongluoshao.space tongluoshao.space;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    location / {
+</span></span><span class="line"><span class="cl">            index index.html;
+</span></span><span class="line"><span class="cl">            root /www/tongluoshao/blogs/public;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>location /</code> 里的 root 指向生成的静态页面，也就是上一步生成的 <code>public</code> 文件夹。
+<code>server_name</code> 写你的域名。如果没有域名，IP也是可以用的。</p>
+<p>这样就可以用了。然后重新载入一下 Nginx:</p>
+<blockquote>
+<p>nginx -s reload</p>
+</blockquote>
+<p>然后就可以从外面访问服务器啦。</p>
+<p>参考：</p>
+<p>
+<a href="https://zhuanlan.zhihu.com/p/365910957" rel="noopener">快速搭建https网站: Hugo + Nginx + Let&rsquo;s Encrypt (certbot)</a></p>
+<p>
+<a href="https://gohugo.io/getting-started/quick-start/" rel="noopener">Hugo - Quick Start</a></p>
+
+
+      </div>
+    </article>
+    
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      <li>
+        <a href="/permanent/%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E8%AF%9E%E7%94%9F/" data-ctx="从一个空文件夹开始" data-src="/permanent/%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E8%AF%9E%E7%94%9F" class="internal-link">一个网站的诞生</a>
+      </li>
+      
+      
+      
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="https://tongluoshao.space/js/graph.6579af7b10c818dbd2ca038702db0224.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        <p style="margin:10px; ">
+        
+        
+        Made by evixenon using <a href="https://github.com/jackyzha0/quartz">Quartz</a>, © 2023
+
+        &nbsp;|&nbsp;粤 ICP 备2022002978号-1</p>
+
+        <ul>
+            
+            <li><a href="https://tongluoshao.space/">Home</a></li>
+            <li><a href="https://github.com/evixenon">GitHub</a></li><li><a href="https://space.bilibili.com/8557634">Bilibili</a></li></ul>
+    </footer>
+</div>
+
+
+</div>
+</body>
+</html>

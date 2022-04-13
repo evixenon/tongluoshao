@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on </title>
+    <link>https://tongluoshao.space/tags/Python/</link>
+    <description>Recent content in Python on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/Python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jupyter Notebook</title>
+      <link>https://tongluoshao.space/permanent/Jupyter-Notebook/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Jupyter-Notebook/</guid>
+      <description>WIN 安装 已安装 python
+先更新 pip
+python -m pip install &amp;ndash;upgrade pip
+安装
+1 2 3 pip install jupyterlab pip install notebook pip install voila 快捷键 在 notebook 中点击键盘图标查看 有点像 vim 和 原生快捷键的混合体</description>
+    </item>
+    
+    <item>
+      <title>NLTK</title>
+      <link>https://tongluoshao.space/permanent/NLTK/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/NLTK/</guid>
+      <description>https://www.nltk.org/book/
+Introduction natural language toolkit, python 库
+help 1 2 nltk.help.upenn_tagset(&amp;#39;DT&amp;#39;) nltk.help.brown_tagset(&amp;#39;DT&amp;#39;) 大类:预处理 根据两个任务拆分 syntax analyse parser 的简要说明 Syntax Analyse with formal Grammar 根据输入的语法规则, 分析给定句子的结构</description>
+    </item>
+    
+    <item>
+      <title>pyinstaller</title>
+      <link>https://tongluoshao.space/permanent/pyinstaller/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/pyinstaller/</guid>
+      <description>参数 常用参数 含义
+-i 或 -icon 生成icon
+-F 创建一个绑定的可执行文件
+-w 使用窗口，无控制台
+-C 使用控制台，无窗口
+-D 创建一个包含可执行文件的单文件夹包(默认情况下)
+-n 文件名</description>
+    </item>
+    
+    <item>
+      <title>python pandas库</title>
+      <link>https://tongluoshao.space/permanent/python-pandas%E5%BA%93/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/python-pandas%E5%BA%93/</guid>
+      <description>读写 Dataframe 1 2 3 4 5 6 7 8 9 10 from pandas import DataFrame data = { &amp;#39;name&amp;#39;: [&amp;#39;zs&amp;#39;, &amp;#39;ls&amp;#39;, &amp;#39;ww&amp;#39;], &amp;#39;age&amp;#39;: [11, 12, 13], &amp;#39;gender&amp;#39;: [&amp;#39;man&amp;#39;, &amp;#39;man&amp;#39;, &amp;#39;woman&amp;#39;]} df = DataFrame(data) # 保存为 xlsx 格式 df.</description>
+    </item>
+    
+    <item>
+      <title>python string库</title>
+      <link>https://tongluoshao.space/permanent/python-string%E5%BA%93/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/python-string%E5%BA%93/</guid>
+      <description> 1 2 3 s = string.ascii_letters s1 = string.ascii_uppercase s2 = string.ascii_lowercase </description>
+    </item>
+    
+    <item>
+      <title>python tkinter库</title>
+      <link>https://tongluoshao.space/permanent/python-tkinter%E5%BA%93/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/python-tkinter%E5%BA%93/</guid>
+      <description>框架 简版
+1 2 3 from tkinter import * root = Tk() tk.mainloop() 应用 ![[attachments/Pasted image 20230526214024.png]]
+浏览文件 1 2 3 4 5 6 7 8 9 10 from tkinter import filedialog # 浏览本地文件 def get_local_file(): file_path=filedialog.</description>
+    </item>
+    
+    <item>
+      <title>python unrar库</title>
+      <link>https://tongluoshao.space/permanent/python-unrar%E5%BA%93/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/python-unrar%E5%BA%93/</guid>
+      <description>https://rarfile.readthedocs.io/api.html#rarfile-class
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 from unrar import rarfile rf = rarfile.</description>
+    </item>
+    
+    <item>
+      <title>spaCy</title>
+      <link>https://tongluoshao.space/permanent/spaCy/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/spaCy/</guid>
+      <description>Introduction deep-learning-based NLP system learn and summerize the syntax model from Corpus, 安装 1 2 3 4 // 安装 pip install spacy // 下载模块 python -m spacy download en_core_web_sm 基本用法 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 1.</description>
+    </item>
+    
+  </channel>
+</rss>

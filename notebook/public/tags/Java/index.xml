@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on </title>
+    <link>https://tongluoshao.space/tags/Java/</link>
+    <description>Recent content in Java on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/Java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gradle</title>
+      <link>https://tongluoshao.space/permanent/Gradle/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Gradle/</guid>
+      <description>是 [[permanent/Java|Java]] 的 Build 工具.
+docs.gradle.org
+Gradle 概念 Wrapper, GradleUserHome, Daemon: 来自Gradle开发团队的Gradle入门教程 P1前22分钟
+Gradle Build Phases Initialization Configuration 会把 build.gradle 从上到下执行(当成 groovy) Execution Gradle Wrapper .</description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://tongluoshao.space/permanent/Java/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java/</guid>
+      <description>Java 原理 [[permanent/JVM, Dalvik, Art|JVM, Dalvik, Art]]
+[[permanent/Java 的工作方式|Java 的工作方式]]
+Java 语法 [[permanent/Java 基础|Java 基础]]
+[[permanent/Java 库|Java 库]]
+[[permanent/Java 细节|Java 细节]]</description>
+    </item>
+    
+    <item>
+      <title>Java Best-Practices</title>
+      <link>https://tongluoshao.space/permanent/Java-Best-Practices/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-Best-Practices/</guid>
+      <description>default in switch branch each switch statement needs a default</description>
+    </item>
+    
+    <item>
+      <title>Java checkstyle</title>
+      <link>https://tongluoshao.space/permanent/Java-checkstyle/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-checkstyle/</guid>
+      <description>一种检查 Java 源代码风格的方法, 通常应该检查:
+命名规范 类设计(e.g. 耦合和内聚) [[permanent/Java Best-Practices|Java Best-Practices]] division by 0 未使用的变量/包 每个方法有且只有一个任务吗 google_checks google_checks.xml 似乎只能检查代码, 注释和文档中不恰当的空格
+java -jar .</description>
+    </item>
+    
+    <item>
+      <title>Java 代码传统</title>
+      <link>https://tongluoshao.space/permanent/Java-%E4%BB%A3%E7%A0%81%E4%BC%A0%E7%BB%9F/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-%E4%BB%A3%E7%A0%81%E4%BC%A0%E7%BB%9F/</guid>
+      <description>https://google.github.io/styleguide/javaguide.html
+命名 括号, 缩进, 空格 空格 括号外的关键字与括号之间应该留有空格, 如:
+1 2 3 4 5 6 7 try { if (true) { // .</description>
+    </item>
+    
+    <item>
+      <title>Java 库</title>
+      <link>https://tongluoshao.space/permanent/Java-%E5%BA%93/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-%E5%BA%93/</guid>
+      <description>[[permanent/Mockito|Mockito]]
+[[permanent/JUnit|JUnit]]</description>
+    </item>
+    
+    <item>
+      <title>Java 的工作方式</title>
+      <link>https://tongluoshao.space/permanent/Java-%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F/</guid>
+      <description>Java 的工作方式
+源代码-&amp;gt;编译器-&amp;gt;输出-&amp;gt;JVM .java -&amp;gt; 编译器 -&amp;gt; .class 编译器产出字节码, JVM可以读取与执行字节码. </description>
+    </item>
+    
+    <item>
+      <title>Java 细节</title>
+      <link>https://tongluoshao.space/permanent/Java-%E7%BB%86%E8%8A%82/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-%E7%BB%86%E8%8A%82/</guid>
+      <description>List&amp;lt;&amp;gt; 和 [] String[] 是数组，定长，不可变
+List&amp;lt;String&amp;gt; 是泛型 ，非定长，可变
+极限值 Integer.MAX_VALUE = 2147483647 Double.NEGATIVE_INFINITIVy Double.NaN
+剩余参数 1 2 3 4 5 private void check(double a, double b, double c, double.</description>
+    </item>
+    
+    <item>
+      <title>JUnit</title>
+      <link>https://tongluoshao.space/permanent/JUnit/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/JUnit/</guid>
+      <description>IntelliJ 中的 Junit 首先, 2017以上版本的 IntelliJ 是默认支持 JUnit 的, 且自带 只要写一个带 @Test 的方法, 再写一个 assert 就会自动导入需要的包
+JUnit 命名风格 测试类的命名是 被测试的类名Test 测试方法的命名是 test被测试方法名_描述</description>
+    </item>
+    
+    <item>
+      <title>JVM, Dalvik, Art</title>
+      <link>https://tongluoshao.space/permanent/JVM-Dalvik-Art/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/JVM-Dalvik-Art/</guid>
+      <description> JVM Java 的虚拟机, 用来运行 Java 字节码 Dalvik 专为 Android 设计的 Java 虚拟机, 有专属的文件后缀 .dex Art Android runtime, Dalvik 的升级版, 本质上与 Dalvik 无异 </description>
+    </item>
+    
+    <item>
+      <title>Mockito</title>
+      <link>https://tongluoshao.space/permanent/Mockito/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Mockito/</guid>
+      <description>Get started 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 //You can mock concrete classes, not just interfaces LinkedList mockedList = mock(LinkedList.</description>
+    </item>
+    
+    <item>
+      <title>Java 基础</title>
+      <link>https://tongluoshao.space/permanent/Java-%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Java-%E5%9F%BA%E7%A1%80/</guid>
+      <description>Java 入门须知 编译 1 javac app.java 注释 1 2 3 4 5 6 7 8 9 // single line comment /* multi-line comment */ /** * doc comment */ 大小写 类名大小写不敏感(这是操作系统决定的) java 是 case-sensitive, 即方法, 包名等都大小写敏感</description>
+    </item>
+    
+  </channel>
+</rss>

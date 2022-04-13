@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>大模型时代 on </title>
+    <link>https://tongluoshao.space/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%97%B6%E4%BB%A3/</link>
+    <description>Recent content in 大模型时代 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%97%B6%E4%BB%A3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI的发展历史</title>
+      <link>https://tongluoshao.space/permanent/AI%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/AI%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2/</guid>
+      <description>一
+1970, 理论基础 第一次低谷, 受限于当时计算机的性能, 无法实现 二
+1996 IBM 深蓝出现, 1997, 依靠专家系统(人类专家为计算机构建的数据库), 深蓝战胜国际象棋棋王卡斯帕罗夫 但这类 AI 极其依赖人类提供的知识, 不具备自我学习的能力, 第二次低谷 三
+2016, 深度学习(和算法)打破了以往两次低谷的限制, AlphaGo 战胜李世石和柯洁 此时的 AI 只有下棋厉害, 加上 2017-2022 经济衰退, 第三次低谷 四</description>
+    </item>
+    
+  </channel>
+</rss>

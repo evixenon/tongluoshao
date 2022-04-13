@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发 on </title>
+    <link>https://tongluoshao.space/tags/%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in 开发 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CRC 卡片</title>
+      <link>https://tongluoshao.space/permanent/CRC-%E5%8D%A1%E7%89%87/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/CRC-%E5%8D%A1%E7%89%87/</guid>
+      <description> class, resonsibility, collaberation cards 软件结构设计的一种方式 ![[attachments/Pasted image 20230219152252.png|L|300]] ![[attachments/Pasted image 20230219152444.png|L|300]] </description>
+    </item>
+    
+    <item>
+      <title>Mock</title>
+      <link>https://tongluoshao.space/permanent/Mock/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Mock/</guid>
+      <description>开发中的软件还不能够使用时, 创建出的能够测试的最小软件. 例如说你开发的类需要依赖别人的类, 但别人还没完成工作
+如何开始测试 从完全不依赖于其他模块的模块开始, 到需要依赖所有模块的模块结束
+工具 因为手动创建 Mock 可能因为人为的失误导致不正确的结果, 因此借助工具可能是更好的选择
+Java Mock Mockito JMock EasyMock </description>
+    </item>
+    
+    <item>
+      <title>UML 图</title>
+      <link>https://tongluoshao.space/permanent/UML-%E5%9B%BE/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/UML-%E5%9B%BE/</guid>
+      <description>UML 在线画图工具: https://www.processon.com/ 每个图用在什么流程 Stage Structure Behavior Requirement Use-case Activity Analyse Sequence Design Class State, Communication Implementation Class Diagram 一个简单说明 [[02-Tutorial-annotated.</description>
+    </item>
+    
+    <item>
+      <title>设计模式</title>
+      <link>https://tongluoshao.space/permanent/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+      <description>#todo</description>
+    </item>
+    
+    <item>
+      <title>重构技术 Refactoring</title>
+      <link>https://tongluoshao.space/permanent/%E9%87%8D%E6%9E%84%E6%8A%80%E6%9C%AF-Refactoring/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%87%8D%E6%9E%84%E6%8A%80%E6%9C%AF-Refactoring/</guid>
+      <description>refactoring techniques src: Source Making
+Composing methods Extract Method 一个方法内的语句应该是应该是在同一层级的, 这样有利于代码结构的清晰.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 // Before void printOwing() { printBanner(); // Print details.</description>
+    </item>
+    
+  </channel>
+</rss>

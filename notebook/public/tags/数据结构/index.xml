@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据结构 on </title>
+    <link>https://tongluoshao.space/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+    <description>Recent content in 数据结构 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>B 树</title>
+      <link>https://tongluoshao.space/permanent/B-%E6%A0%91/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/B-%E6%A0%91/</guid>
+      <description>B 树 数据在硬盘上存储在硬盘块(如4kb block) 每一个非叶子节点都有指针 =&amp;gt; 很贵 在内部可以用二分法快速查找 ![[attachments/Pasted image 20221219143812.png|600]] B 树的阶 m 每个节点最多有 2m key 每个非根节点最少有 m key, 根节点最少 1 key 一个节点如果有 k key, 就有 k+1 子节点 所有叶子节点在同一层级 max height: $h \leq \lfloor \log_{m+1}(\frac{n+1}{2}) \rfloor + 1$ (n=#key)</description>
+    </item>
+    
+    <item>
+      <title>B&#43; 树</title>
+      <link>https://tongluoshao.space/permanent/B&#43;-%E6%A0%91/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/B&#43;-%E6%A0%91/</guid>
+      <description>B+ 树 内部节点不保存数据, 只保存值, 所有的数据只保存在叶子节点 数据磁盘块之间加入了连接 在 B 树的基础上:
+分离 Directory 和 Datei 在有序作业时提升了效率 有序作业(de. sequentielle Verarbeitung) e.g. “Nenne mir alle Studierenden, deren Nachname im Bereich [Be &amp;hellip; Brz] liegt.</description>
+    </item>
+    
+  </channel>
+</rss>

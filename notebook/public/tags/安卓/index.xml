@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安卓 on </title>
+    <link>https://tongluoshao.space/tags/%E5%AE%89%E5%8D%93/</link>
+    <description>Recent content in 安卓 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/%E5%AE%89%E5%8D%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JVM, Dalvik, Art</title>
+      <link>https://tongluoshao.space/permanent/JVM-Dalvik-Art/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/JVM-Dalvik-Art/</guid>
+      <description> JVM Java 的虚拟机, 用来运行 Java 字节码 Dalvik 专为 Android 设计的 Java 虚拟机, 有专属的文件后缀 .dex Art Android runtime, Dalvik 的升级版, 本质上与 Dalvik 无异 </description>
+    </item>
+    
+    <item>
+      <title>正己 - 安卓逆向这档事</title>
+      <link>https://tongluoshao.space/project/%E6%AD%A3%E5%B7%B1-%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E8%BF%99%E6%A1%A3%E4%BA%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/%E6%AD%A3%E5%B7%B1-%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E8%BF%99%E6%A1%A3%E4%BA%8B/</guid>
+      <description>一、模拟器环境安装 src 《安卓逆向这档事》一、模拟器环境搭建
+三个文件 雷电模拟器9 Magisk LSPosed 本地文件在d/52 安装雷电模拟器 在雷电多开器里新建一个并启动, 小磁盘模式可开
+模拟器的准备 给模拟器root, 重启 -&amp;gt;模拟器软件设置-其他设置 打开共享文件夹, 把网盘里的 LSPosed 压缩包放进去 -&amp;gt;模拟器右侧更多-共享文件夹 如果是最新版本雷电, 要打开磁盘写入 -&amp;gt;模拟器软件设置-性能设置 安装 Magisk Delta 把文件拖进模拟器界面, 安装完打开 永久允许root 安装-请求访问存储-允许, 然后什么都不要做, 后台关掉软件 重新打开-安装 下一步-安装到磁盘(这个是模拟器的特殊选项) 显示 all done 就算安装成功, 重启模拟器 设置 Magisk 设置里打开 Zygisk</description>
+    </item>
+    
+  </channel>
+</rss>

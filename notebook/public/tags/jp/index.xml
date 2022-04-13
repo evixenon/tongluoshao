@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jp on </title>
+    <link>https://tongluoshao.space/tags/jp/</link>
+    <description>Recent content in jp on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/jp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>日语语法</title>
+      <link>https://tongluoshao.space/permanent/%E6%97%A5%E8%AF%AD%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%97%A5%E8%AF%AD%E8%AF%AD%E6%B3%95/</guid>
+      <description>语法 提示语 名词从属关系 の [名]の[名]
+也 も [名] も
+并列关系 と [名]　と　[名]
+へ 表移动方向, 移动先:
+[場所]　へ　[動]</description>
+    </item>
+    
+    <item>
+      <title>日语输入法</title>
+      <link>https://tongluoshao.space/permanent/%E6%97%A5%E8%AF%AD%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%97%A5%E8%AF%AD%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
+      <description>src: https://zhuanlan.zhihu.com/p/402152402
+Romaji ![[Pasted image 20230220104851.png]]
+Kana 首先要将输入法设置里的假名输入打开, 布局是英文键盘101/102键, 重启电脑
+一个练习地点, 但这需要你有日语布局的键盘, 否则ro打不出: 假名输入练习
+另一个练习地点, 可以用US英文布局: 練習道場
+英语键盘假名对应图 ![[v2-ed9baf0c437a7ef6d4feb4a1ddd4f135_r.jpg]] alt+caps 切换到片假名 ctrl+caps 切换到平假名</description>
+    </item>
+    
+  </channel>
+</rss>

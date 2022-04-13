@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>密码 on </title>
+    <link>https://tongluoshao.space/tags/%E5%AF%86%E7%A0%81/</link>
+    <description>Recent content in 密码 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/%E5%AF%86%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cryptoanalyse</title>
+      <link>https://tongluoshao.space/permanent/Cryptoanalyse/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Cryptoanalyse/</guid>
+      <description>密码破译技术 Bruteforce 128 bit -&amp;gt; 3.4e+38 种密码可能(如果计算机每秒尝试30亿次, 1000台电脑最多需要尝试3.6e+18年) 256 bit -&amp;gt; 配置同上, 1.2e+57年 撞库 先 MD5散列时代 的攻击技术 所以要[[permanent/加盐|加盐]]啊喂 彩虹表 [[permanent/彩虹表|彩虹表]] 后 MD5散列时代 的爆破用表 对抗密码破译 加盐 [[permanent/加盐|加盐]] 预防撞库攻击, 安全地存储用户密码 </description>
+    </item>
+    
+  </channel>
+</rss>

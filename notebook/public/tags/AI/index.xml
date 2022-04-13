@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on </title>
+    <link>https://tongluoshao.space/tags/AI/</link>
+    <description>Recent content in AI on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/AI/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPT</title>
+      <link>https://tongluoshao.space/permanent/GPT/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/GPT/</guid>
+      <description> Generative Pre-trained Transformer </description>
+    </item>
+    
+    <item>
+      <title>LLM</title>
+      <link>https://tongluoshao.space/permanent/LLM/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/LLM/</guid>
+      <description>large language model 目的: 让机器学习到最符合人类说话逻辑的表达 方法: likelihood + 大力出奇迹 什么叫大: 训练参数超过10亿我们通常就叫大模型 底层基础设施 -&amp;gt; 框架 -&amp;gt; 大模型 (Prompt engineering) -&amp;gt; 应用</description>
+    </item>
+    
+    <item>
+      <title>LoRA 模型</title>
+      <link>https://tongluoshao.space/permanent/LoRA-%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/LoRA-%E6%A8%A1%E5%9E%8B/</guid>
+      <description> 在 Stable Diffusion 中常见的模型类型 LoRA是一种用于大语言模型的低秩逼近（Low-Rank Approximation）技术，可以减少参数量和计算量，提高训练效率和生成质量。推荐的模型;koreanDollLikeness_v10。 </description>
+    </item>
+    
+    <item>
+      <title>图灵的猫 - 人人都能听懂的AI通识课</title>
+      <link>https://tongluoshao.space/permanent/%E5%9B%BE%E7%81%B5%E7%9A%84%E7%8C%AB-%E4%BA%BA%E4%BA%BA%E9%83%BD%E8%83%BD%E5%90%AC%E6%87%82%E7%9A%84AI%E9%80%9A%E8%AF%86%E8%AF%BE/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%9B%BE%E7%81%B5%E7%9A%84%E7%8C%AB-%E4%BA%BA%E4%BA%BA%E9%83%BD%E8%83%BD%E5%90%AC%E6%87%82%E7%9A%84AI%E9%80%9A%E8%AF%86%E8%AF%BE/</guid>
+      <description>历史 [[AI的发展历史]]</description>
+    </item>
+    
+    <item>
+      <title>知识增强大模型</title>
+      <link>https://tongluoshao.space/permanent/%E7%9F%A5%E8%AF%86%E5%A2%9E%E5%BC%BA%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%9F%A5%E8%AF%86%E5%A2%9E%E5%BC%BA%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid>
+      <description>大规模预训练模型 简称大模型, 主要类型有:
+NLP语言处理大模型: 处理文本内容, 如 ChatGPT, 百度文心一言 计算机视觉大模型: 主要处理图像内容, 如购物软件的搜图 跨模态大模型: 多模态, 如 AI作画 科学计算大模型: 能够更好地发现规律, 如蛋白质形态预测 知识增强大模型 整合了知识图谱的大模型, 对歧义内容的处理能力更强</description>
+    </item>
+    
+    <item>
+      <title>自回归语言模型</title>
+      <link>https://tongluoshao.space/permanent/%E8%87%AA%E5%9B%9E%E5%BD%92%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%87%AA%E5%9B%9E%E5%BD%92%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</guid>
+      <description>自回归语言模型 Autoregressive LM
+通常的语言模型是单向的, 比如从左到右去预测下一个单词. 因为有时候除了考虑上文的信息还要考虑下文, 所以又诞生了从右到左预测的反向语言模型. 自回归模型指的就是这种只能利用上文或下文, 不能同时利用两者的模型.
+典型的自回归语言模型如使用 Transformer 的 GPT, ELMo 这种将上文和下文的 LSTM 拼接的也算变形的自回归语言模型.
+对应: [[permanent/自编码语言模型|自编码语言模型]]
+参考: 自回归语言模型 VS 自编码语言模型 - 知乎</description>
+    </item>
+    
+    <item>
+      <title>自编码语言模型</title>
+      <link>https://tongluoshao.space/permanent/%E8%87%AA%E7%BC%96%E7%A0%81%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%87%AA%E7%BC%96%E7%A0%81%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</guid>
+      <description>自编码语言模型 Autoencoder LM
+自编码语言模型在预训练时, 会随机 Mask 掉输入 X 的一些单词, 然后训练的任务就是根据上下文预测这些单词. 相比于单向的[[permanent/自回归语言模型|自回归语言模型]], 做阅读理解的能力会更好. 但因为在 Fine-Tuning 阶段是看不到 Mask 标记的, 可能会导致预训练和FT阶段的不一致.
+参考: 自回归语言模型 VS 自编码语言模型 - 知乎</description>
+    </item>
+    
+    <item>
+      <title>飞桨AI 大模型应用开发技巧与实战</title>
+      <link>https://tongluoshao.space/project/%E9%A3%9E%E6%A1%A8AI-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7%E4%B8%8E%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/project/%E9%A3%9E%E6%A1%A8AI-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7%E4%B8%8E%E5%AE%9E%E6%88%98/</guid>
+      <description>src: 飞桨AI Studio - 人工智能学习实训社区
+大模型时代的开发者新机遇 ![[attachments/Pasted image 20230607171051.png]]
+游戏npc逻辑, 游戏音乐美术都可以AI协助完成
+应用场景 过去 -&amp;gt; 大模型时代的现代
+写作: 语法纠错-&amp;gt;写作助手 外语: 语言学习平台 -&amp;gt; AI 陪练 算力需求增长也很快 !</description>
+    </item>
+    
+  </channel>
+</rss>

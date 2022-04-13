@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安全 on </title>
+    <link>https://tongluoshao.space/tags/%E5%AE%89%E5%85%A8/</link>
+    <description>Recent content in 安全 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Access Token Manipulation</title>
+      <link>https://tongluoshao.space/permanent/Access-Token-Manipulation/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Access-Token-Manipulation/</guid>
+      <description>Access Token Manipulation 通过操纵访问令牌(Access Token), 以另一个用户/系统进行交互, 绕过访问控制验证, 以此获得未经授权的访问能力
+Access Token Manipulation 分类 Token Impersonation/Theft Create Process with Token Make and Impersonate Token Parent PID Spoofing SID-History Injection 防御措施 检测</description>
+    </item>
+    
+    <item>
+      <title>Buffer Overflows</title>
+      <link>https://tongluoshao.space/permanent/Buffer-Overflows/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Buffer-Overflows/</guid>
+      <description>Buffer Overflows 目的
+程序崩溃 Absturz 损毁数据 操纵程序运行时的环境, 尤其是返回地址 stack smashing 1) to write/over-allocate too much data in a given part of the stack, thereby overwriting another part of the stack, and</description>
+    </item>
+    
+    <item>
+      <title>C2 C&amp;C</title>
+      <link>https://tongluoshao.space/permanent/C2-CC/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/C2-CC/</guid>
+      <description> command and control infrastructure a set of tools to maintain communications with the compromised(attacked) devices (following the initial explotation) </description>
+    </item>
+    
+    <item>
+      <title>CSRF</title>
+      <link>https://tongluoshao.space/permanent/CSRF/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/CSRF/</guid>
+      <description>CSRF cross-site request forgery 跨站请求伪造 具有此漏洞的程序允许攻击者以受害者的权限执行操作
+CSRF 攻击流程 要求: 受害者在 Web 服务器上有一个活动会话 攻击者诱使受害者点击特定链接, 这个链接被修改过, 会触发特定操作. 比如表面上是正常页面, 实际发起一个修改密码的请求 Web 服务器会执行请求, 因为该请求是合法用户发起的 !</description>
+    </item>
+    
+    <item>
+      <title>CVE</title>
+      <link>https://tongluoshao.space/permanent/CVE/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/CVE/</guid>
+      <description>Common Vulnerability and Exposures</description>
+    </item>
+    
+    <item>
+      <title>CVSS</title>
+      <link>https://tongluoshao.space/permanent/CVSS/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/CVSS/</guid>
+      <description>CVSS Common Vulnerability Scoring System v3
+是可免费商用的漏洞威胁度评估标准, 量化范围[0. 10] 由 CMU(NIST) 建立, 现在由 FIRST(Forum of Incident Response and Security Teams) 维护, v3 是目前事实上(de-facto)的标准 Input 预先准备好的问题和选项</description>
+    </item>
+    
+    <item>
+      <title>dig</title>
+      <link>https://tongluoshao.space/permanent/dig/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/dig/</guid>
+      <description>dig Domain Information Groper 域信息搜索器
+安装 下载地址 可能需翻墙 win 最高支持到 9.16.30 下载地址
+命令 spamlist 查询 dig +short 2.0.0.127.zen.spamhaus.org 127.0.0.4 127.0.0.10 127.</description>
+    </item>
+    
+    <item>
+      <title>DOS, DDOS</title>
+      <link>https://tongluoshao.space/permanent/DOS-DDOS/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/DOS-DDOS/</guid>
+      <description>DOS, DDOS Denial of Service Distributed Denial of Service
+(D)DOS 常见原因 超负荷 (de. Überlastung) 引导 Exception 引导死机(代码的漏洞或协议的漏洞) (D)DOS 常见类型 请求受限的或不可同时使用的资源 (beschränkte/unteilbare) 更改或毁坏配置 物理毁坏 (D)DOS 例子 邮件轰炸 内存溢出 e.</description>
+    </item>
+    
+    <item>
+      <title>Dropper</title>
+      <link>https://tongluoshao.space/permanent/Dropper/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Dropper/</guid>
+      <description>Dropper 一种木马, 功能是将嵌入的恶意软件下载到受害者的计算机上, payload 通常是加密存储的
+多阶段 Dropper 为了规避反恶意软件的检测, 附带了更多的伪装, 比如下载器功能, 在受害机器 active 时才下载 payload. 比如 dropper 通过 SFTP 加载又一个 dropper.</description>
+    </item>
+    
+    <item>
+      <title>EPP, EDR, XDR</title>
+      <link>https://tongluoshao.space/permanent/EPP-EDR-XDR/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/EPP-EDR-XDR/</guid>
+      <description>EPP, EDR, XDR Endpoint Protection Platform 终端防护平台 Endpoint Detection &amp;amp; Respense 终端检测和响应 Extended Endpoint Detection &amp;amp; Reaction 可以理解为新一代终端安全解决方案(之前是传统杀毒软件)
+EPP 预防已知威胁 EDR 解决未知威胁 XDR 防止域内传播 EDR EDR 的任务和目标</description>
+    </item>
+    
+    <item>
+      <title>NTP 协议</title>
+      <link>https://tongluoshao.space/permanent/NTP-%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/NTP-%E5%8D%8F%E8%AE%AE/</guid>
+      <description>Network Time Protocol
+网络时间协议（NTP）用于通过通信网络同步时钟。它是少数几个仍被广泛使用的不安全和未经认证的互联网协议之一。
+关于 NTP 的攻击 Delay/Replay Man in the middle IP-Spoofing -&amp;gt; [[permanent/NTP 协议#NTP Amplification|NTP Amplification]] 为什么要同步通信时间?
+Timestamp Log 分析 网络监视 Netzmonitoring, 寻找错误, 分析事件联系等等 如果时间同步系统受到攻击……</description>
+    </item>
+    
+    <item>
+      <title>POC</title>
+      <link>https://tongluoshao.space/permanent/POC/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/POC/</guid>
+      <description>Proof of Concept 使用 POC 证明某个漏洞的可利用性</description>
+    </item>
+    
+    <item>
+      <title>return-to-libc</title>
+      <link>https://tongluoshao.space/permanent/return-to-libc/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/return-to-libc/</guid>
+      <description>return-to-libc 一种类似[[permanent/Buffer Overflows|缓冲区溢出]]的攻击, 通过覆盖返回地址到 libc, 以便从 libc 调用(例如系统)函数 会绕过 NX位(no-execute), 将 Stack 标记为不可执行</description>
+    </item>
+    
+    <item>
+      <title>Rootkit</title>
+      <link>https://tongluoshao.space/permanent/Rootkit/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Rootkit/</guid>
+      <description>Rootkit = root + kit 不会自动传播, 也不会造成大范围攻击, 只是对系统的隐蔽通道
+通常带有 [[permanent/Dropper|Dropper]], 即释放或下载另一个恶意软件的木马
+Rootkit 的历史和典型案例 第一代 Rootkits 第一代 rootkits 其实是内置 backdoor 的 UNIX 系统程序</description>
+    </item>
+    
+    <item>
+      <title>AES</title>
+      <link>https://tongluoshao.space/permanent/AES/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/AES/</guid>
+      <description>AES Advanced Encryption Standard 1997 年美国商务部公开招标的算法, Rijndael 中标 diffusion 也比较高 AES 算法 可变块长度 32*$N_b$ bits, 可变密钥长度 32*$N_k$ bits, $N_k$ 和 $N_b$ 4, 6, 8 轮数推导出: $N_r$ = max($N_b$, $N_k$) + 6 总体流程 !</description>
+    </item>
+    
+    <item>
+      <title>Bell LaPadula 模型</title>
+      <link>https://tongluoshao.space/permanent/Bell-LaPadula-%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Bell-LaPadula-%E6%A8%A1%E5%9E%8B/</guid>
+      <description> 又名多层安全模型 主体(用户)对客体(数据)的访问规则 Simple security property 简单安全规则 no read up 主体对于比自己安全级别高的客体不可读 Star property 星属性安全规则 no write down 主体对于比自己安全级别低的客体不可写 Strong star property 强星属性安全规则 主体可以对与自己安全级别相同的客体可读可写 </description>
+    </item>
+    
+    <item>
+      <title>Cryptoanalyse</title>
+      <link>https://tongluoshao.space/permanent/Cryptoanalyse/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Cryptoanalyse/</guid>
+      <description>密码破译技术 Bruteforce 128 bit -&amp;gt; 3.4e+38 种密码可能(如果计算机每秒尝试30亿次, 1000台电脑最多需要尝试3.6e+18年) 256 bit -&amp;gt; 配置同上, 1.2e+57年 撞库 先 MD5散列时代 的攻击技术 所以要[[permanent/加盐|加盐]]啊喂 彩虹表 [[permanent/彩虹表|彩虹表]] 后 MD5散列时代 的爆破用表 对抗密码破译 加盐 [[permanent/加盐|加盐]] 预防撞库攻击, 安全地存储用户密码 </description>
+    </item>
+    
+    <item>
+      <title>Cryptography</title>
+      <link>https://tongluoshao.space/permanent/Cryptography/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Cryptography/</guid>
+      <description>密码系统 Cryptosystem $$ S = (M,K,C,e,d)$$
+Message 明文 Key 密钥 Cipher 密文 encrypt function $e = M \times K \rightarrow C$ decrypt function $d = C \times K \rightarrow M$ 密码分类 [[permanent/对称密码|对称密码]] 与 [[permanent/非对称密码|非对称密码]] 区块密码 与 流密码 密码结构 [[permanent/Feistel 密码结构|Feistel 密码结构]]</description>
+    </item>
+    
+    <item>
+      <title>DES</title>
+      <link>https://tongluoshao.space/permanent/DES/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/DES/</guid>
+      <description>Data Encryption Standard 历史 1977NBS(前NIST), 第一个广泛使用的标准化加密方法 2002年被 AES 取代 98年 EFF 耗资 250k 美金, 搞了个 Deep Crack 针对, 直接给干碎了 特点 substitution, permutaion, modolo 2</description>
+    </item>
+    
+    <item>
+      <title>RSA</title>
+      <link>https://tongluoshao.space/permanent/RSA/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/RSA/</guid>
+      <description>RSA 1978, 命名是三个人名的开头字母 基于质因数分解 RSA 密钥生成 随机选择两个差不多大的质数 p, q n = pq, $\Phi(n) = (p-1)(q-1)$ 选择一个与 p, q 互质的 e, 1 &amp;lt; e &amp;lt; $\Phi(n)$, 常选 e = 65537 d = e$^{-1}$ mod $\Phi(n)$, 逆元, 就是 d 要达到这个效果 扩展欧几里得算法求逆元: d * m - k * Phi(n) = 1, k 正数 !</description>
+    </item>
+    
+    <item>
+      <title>SIEM</title>
+      <link>https://tongluoshao.space/permanent/SIEM/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/SIEM/</guid>
+      <description>SIEM Security Information and Event Management SIEM 是系统安全管理的一种方案, 整合了 SIM(Security Information Management) 和 SEM(Security Event Management).
+SIEM
+从网络设备(Router, Switcher), 服务器, 域管理者, 应用(防火墙, IDS/IDP系统)等地方收集警告, 通知, 日志 集中, 即时地收集, 关联和评价安全信息数据 各系统上的软件代理收集数据, 如有必要, 进行标准化/统一化/预处理并发给 SIEM 处理(一些变体没有代理, 直接发给 SIEM) SIEM 结合了分布式检测能力</description>
+    </item>
+    
+    <item>
+      <title>信息安全的原则</title>
+      <link>https://tongluoshao.space/permanent/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%9A%84%E5%8E%9F%E5%88%99/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%9A%84%E5%8E%9F%E5%88%99/</guid>
+      <description>Need-to-know 原则 应当只被允许访问为履行其职责而需要的信息</description>
+    </item>
+    
+    <item>
+      <title>加盐</title>
+      <link>https://tongluoshao.space/permanent/%E5%8A%A0%E7%9B%90/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%8A%A0%E7%9B%90/</guid>
+      <description>https://www.ucloud.cn/yun/88113.html
+加盐 salting 密码学中的加盐是指, 通过在密码的任意固定位置插入(或替换)特定的字符串, 然后散列的结果和原始密码的散列结果不同.
+加盐的方法 固定字符串加盐 就是将固定字符串加在密码的固定位置, 然后进行加密. 这种方法的缺点是, 一旦攻击者拿到源代码(都拿到数据库了还拿不到源码吗), 就能轻松构建一张新的[[permanent/彩虹表]]破解密码.
+随机字符串加盐 盐的长度固定, 但是是随机的. 数据库在存储每位用户的密文密码的同时也存储每位用户的盐. 加密方式例如 md5(md5(passwd) + salt());</description>
+    </item>
+    
+    <item>
+      <title>密码学</title>
+      <link>https://tongluoshao.space/permanent/%E5%AF%86%E7%A0%81%E5%AD%A6/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AF%86%E7%A0%81%E5%AD%A6/</guid>
+      <description>密码学 Cryptology Cryptology = Cryptography + Cryptoanalyse [[permanent/Cryptography|Cryptography]] 加密解密技术 [[permanent/Cryptoanalyse|Cryptoanalyse]] 没有密钥进行解密的技术 工具站 spammimic https://www.spammimic.com/ 把信息编码得像垃圾邮件, 这样即使被人看到, 也不知道是加密了的 cryptool 已知密码算法的情况下可用, 丰富的算法 https://www.</description>
+    </item>
+    
+    <item>
+      <title>对称密码</title>
+      <link>https://tongluoshao.space/permanent/%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81/</guid>
+      <description>对称密码 通信双方各持有一份密码本, 加密和解密密钥是相同的 DES, AES, IDEA, RC4, Blowfish, Serpent, Twofish 对称密码技术 Substitution Permutation One-Time-Pad 一次性密码本 对称密码种类 恺撒密码/ROT13/&amp;hellip; One-Time-Pad [[permanent/DES|DES]] [[permanent/AES|AES]] </description>
+    </item>
+    
+    <item>
+      <title>数字证书</title>
+      <link>https://tongluoshao.space/permanent/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6/</guid>
+      <description> [[permanent/lmu - IT Security#Identification|Identification]] (PS: 不是 CIA 的 Integrity) OIDC OCSP </description>
+    </item>
+    
+    <item>
+      <title>电子签名</title>
+      <link>https://tongluoshao.space/permanent/%E7%94%B5%E5%AD%90%E7%AD%BE%E5%90%8D/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%94%B5%E5%AD%90%E7%AD%BE%E5%90%8D/</guid>
+      <description>电子签名技术 ![[attachments/Pasted image 20230222083903.png|L|400]]
+checksum: hash 算法如 MD5 加密 checksum 用非对称私钥 解密 要公钥 成功保证 A, I 不保证 C </description>
+    </item>
+    
+    <item>
+      <title>网络安全界张三</title>
+      <link>https://tongluoshao.space/permanent/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%95%8C%E5%BC%A0%E4%B8%89/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%95%8C%E5%BC%A0%E4%B8%89/</guid>
+      <description>Alice 发送方, 协议启动者
+Bob 接收方
+Carol, Dave 事件参与者
+Trend trusted third party
+Walter A, B 的管理者, 看守者
+Eve eavsdropper, 窃听者, 被动攻击者</description>
+    </item>
+    
+    <item>
+      <title>蠕虫</title>
+      <link>https://tongluoshao.space/permanent/%E8%A0%95%E8%99%AB/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E8%A0%95%E8%99%AB/</guid>
+      <description>蠕虫 Worm de. Wurm 不需要寄主程序的有害程序 Selbstreplikation, 自分离, 自我复制 单个被感染的机器被称为蠕虫段 Worm-Segment
+蠕虫的扫描方式 Random Scanning 最简单 不可预测 容易重复 Permutation Scanning 蠕虫必须能够确定主机是否已经被感染 所有蠕虫共享全球IP地址空间的随机排列 不重复的原理: 每个新的蠕虫从排列中的一个随机点开始扫描主机，如果发现一个已经被感染的主机，它就从一个新的随机点开始扫描，因此，整个地址空间可以被非常有效地扫描。 Hit-List Scanning 有一份原始的 hitlist 每次新感染的蠕虫会得到清单中剩余条目的一半 二分法 Topological Scanning 感染新的主机后, 在主机上寻找新目标 容易感染某一范围的主机, 但也容易形成孤立闭环 Warhol Worm Warhol 蠕虫是一种能快速复制的计算机蠕虫病毒, 可能在15分钟内感染互联网中的大片计算机.</description>
+    </item>
+    
+    <item>
+      <title>非对称密码</title>
+      <link>https://tongluoshao.space/permanent/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81/</guid>
+      <description>非对称密码 每个通信者持有 private key, public key 各一份 私钥不公开, 用于解密 公钥公开, 用于加密(用接受者的公钥加密) 加密发给 Bob: c = e(m, $k^{Bob}_e$) Bob 解密: m = d(c, $k^{Bob}_d$) 把加密解密反过来, 就能用作数字签名 非对称密码种类 [[permanent/RSA|RSA]] DSA, ElGamal </description>
+    </item>
+    
+    <item>
+      <title>彩虹表</title>
+      <link>https://tongluoshao.space/permanent/%E5%BD%A9%E8%99%B9%E8%A1%A8/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/%E5%BD%A9%E8%99%B9%E8%A1%A8/</guid>
+      <description>rainbow table 枚举常用密码, 将加密后的散列值做成索引表, 就能根据数据库中加密后的密码反推出原始密码. 这张表就叫做彩虹表</description>
+    </item>
+    
+  </channel>
+</rss>

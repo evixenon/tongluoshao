@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>线代 on </title>
+    <link>https://tongluoshao.space/tags/%E7%BA%BF%E4%BB%A3/</link>
+    <description>Recent content in 线代 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tongluoshao.space/tags/%E7%BA%BF%E4%BB%A3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linear Algebra Concepts 线性代数概念</title>
+      <link>https://tongluoshao.space/permanent/Linear-Algebra-Concepts-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tongluoshao.space/permanent/Linear-Algebra-Concepts-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E6%A6%82%E5%BF%B5/</guid>
+      <description>Algebra 代数 包含操作数和操作的集合 de. Operanden, Operator
+Closure 闭包 de. Abgeschlossenheit 对某个集合中的数进行某种运算, 生成的结果仍在此集合中, 则称该集合在该运算下闭合</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,6196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta
+    name="description"
+    content="K1 Das Betribssystem 1.1 Einordnung des Machinensprache 机器语言的分类/编排 Logische Hierarchie in einem Rechner ![[attachments/image_1638879655684_0.png]]
+BS: Anwendungsprogramme, Systemprogramme, Betriebssystem RA: Machinensprache, Mikroprogrammierung, Physikalische Geräte Mikroprogrammierung: 微指令集，对硬件解释机器语言 1."
+  />
+  <meta property="og:title" content="lmu - Betriebsystem">
+  <meta property="og:description" content="K1 Das Betribssystem 1.1 Einordnung des Machinensprache 机器语言的分类/编排 Logische Hierarchie in einem Rechner ![[attachments/image_1638879655684_0.png]]
+BS: Anwendungsprogramme, Systemprogramme, Betriebssystem RA: Machinensprache, Mikroprogrammierung, Physikalische Geräte Mikroprogrammierung: 微指令集，对硬件解释机器语言 1.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tongluoshao.space/icon.png">
+  <meta property="og:url" content="https://tongluoshao.space/project/lmu-Betriebsystem/">
+  <meta property="og:width" content="200">
+  <meta property="og:height" content="200">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="lmu - Betriebsystem" />
+  <meta name="twitter:description" content="K1 Das Betribssystem 1.1 Einordnung des Machinensprache 机器语言的分类/编排 Logische Hierarchie in einem Rechner ![[attachments/image_1638879655684_0.png]]
+BS: Anwendungsprogramme, Systemprogramme, Betriebssystem RA: Machinensprache, Mikroprogrammierung, Physikalische Geräte Mikroprogrammierung: 微指令集，对硬件解释机器语言 1." />
+  <meta name="twitter:image" content="https://tongluoshao.space/icon.png">
+  
+    
+  
+    
+  
+
+  <title>
+    lmu - Betriebsystem
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  
+  
+  
+  
+  
+  <link rel="shortcut icon" type="image/png"  href="https://tongluoshao.space//icon.png" />
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <link href="https://tongluoshao.space/styles.88d22826d3297025a3c1bf2a6aca5260.min.css" rel="stylesheet" />
+
+  
+  <link href="https://tongluoshao.space/styles/_light_syntax.248971f6ab797c4cf9beb228933f8362.min.css" rel="stylesheet" id="theme-link">
+
+   
+  
+  
+  
+  
+  <script src="https://tongluoshao.space/js/darkmode.10faa94087fa948a1002c0b385498593.min.js"></script>
+  
+  
+  
+  <script src="https://tongluoshao.space/js/util.00639692264b21bc3ee219733d38a8be.min.js"></script>
+  
+  
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+
+  
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.2.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.2.1"></script>
+  
+  <script defer src="https://tongluoshao.space/js/popover.aa9bc99c7c38d3ae9538f218f1416adb.min.js"></script>
+
+  
+  
+  
+  <script defer src="https://tongluoshao.space/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js"></script>
+  
+
+  
+  
+  <script defer src="https://tongluoshao.space/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js"></script>
+  
+
+  
+  
+  <script defer src="https://tongluoshao.space/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js"></script>
+  
+
+  
+   
+  <script>
+    const SEARCH_ENABLED =  false 
+    const LATEX_ENABLED =  true 
+    const PRODUCTION =  true 
+    const BASE_URL = "https://tongluoshao.space/"
+    const fetchData = Promise.all([
+          fetch("https:\/\/tongluoshao.space\/indices\/linkIndex.baf7c7849c087b9283697bcbc5da2fac.min.json")
+            .then(data => data.json())
+            .then(data => ({
+              index: data.index,
+              links: data.links,
+            })),
+          fetch("https:\/\/tongluoshao.space\/indices\/contentIndex.8c470189cd6cd213e6847cb1682b866b.min.json")
+            .then(data => data.json()),
+        ])
+        .then(([{index, links}, content]) => ({
+          index,
+          links,
+          content,
+        }))
+
+      const render = () => {
+      
+
+      const siteBaseURL = new URL(BASE_URL);
+      const pathBase = siteBaseURL.pathname;
+      const pathWindow = window.location.pathname;
+      const isHome = pathBase == pathWindow;
+
+      addCopyButtons();
+      
+
+      addTitleToCodeBlocks();
+      
+
+      addCollapsibleCallouts();
+      
+
+      
+      initPopover(
+        "https://tongluoshao.space",
+         true 
+      )
+      
+
+      
+      const footer = document.getElementById("footer")
+      if (footer) {
+        const container = document.getElementById("graph-container")
+        
+        if (!container) return requestAnimationFrame(render)
+        
+        container.textContent = ""
+
+        const drawGlobal = isHome &&  false ;
+        drawGraph(
+            "https://tongluoshao.space",
+            drawGlobal,
+            [{"/moc":"#4388cc"}],
+            drawGlobal ? {"centerForce":1,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.5,"linkDistance":1,"opacityScale":3,"repelForce":1,"scale":1.4} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+          );
+
+        }
+      
+
+      
+        var els = document.getElementsByClassName("mermaid");
+        if (els.length > 0) {
+          import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+            (obj) => {
+              
+              
+              obj.default.init();
+            }
+          )
+        }
+      
+      
+      
+      function clickHandler(evt) {
+        const target = evt.target 
+        const classNames = target.className.split(" ")
+        const broken = classNames.includes("broken")
+        const internal = classNames.includes("internal-link")
+        plausible("Link Click", {
+          props: {
+            href: target.href,
+            broken,
+            internal,
+            graph: false,
+          }
+        })
+      }
+
+      const links = document.querySelectorAll("a")
+      for (link of links) {
+        if (link.className.includes("root-title")) {
+          link.addEventListener('click', clickHandler, {once: true})
+        }
+      }
+    }
+
+    const init = (doc = document) => {
+      
+      addCopyButtons();
+      
+
+      addTitleToCodeBlocks();
+      renderMathInElement(doc.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+        ],
+        macros: {
+          '’': "'"
+        },
+        throwOnError : false
+      });
+      
+    };
+  </script>
+  
+  
+  <script type="module">
+    import { attachSPARouting } from "https:\/\/tongluoshao.space\/js\/router.d6fe6bd821db9ea97f9aeefae814d8e7.min.js"
+    attachSPARouting(init, render)
+  </script>
+  
+  
+  <script defer data-domain="tongluoshao.space" src="https://plausible.io/js/script.js"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+</head>
+
+
+<body>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="https://tongluoshao.space/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js"></script>
+
+
+
+<div class="singlePage">
+    
+    <header>
+    
+    
+  <div id="site-title" class="noselect">
+      <a href="https://tongluoshao.space/"><h1>TONGLUOSHAO</h1></a>
+  </div>
+    <div class="spacer"></div>
+    <div id="search-icon">
+      <p>Search</p>
+      <svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
+    </div>
+    <div class='darkmode'>
+    <input class='toggle' id='darkmode-toggle' type='checkbox' tabindex="-1">
+    <label id="toggle-label-light" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <title>Light Mode</title>
+            <path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </svg>
+    </label>
+    <label id="toggle-label-dark" for='darkmode-toggle' tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xml:space="preserve">
+            <title>Dark Mode</title>
+            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+</header>
+
+
+    <article>
+      <div id="content">
+        <h1>lmu - Betriebsystem</h1>
+        <p class="meta">
+          Last updated 
+Jun 15, 2023
+
+ 
+            
+
+        </p>
+        <ul class="tags">
+            
+        </ul>
+        
+
+
+        
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+          
+          
+        
+        
+      
+    
+    
+
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+    
+    
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+  
+  
+
+
+<a href="#k1-das-betribssystem"><h2 id="k1-das-betribssystem"><span class="hanchor" ariaLabel="Anchor"># </span>K1 Das Betribssystem</h2></a>
+<a href="#11-einordnung-des-machinensprache"><h3 id="11-einordnung-des-machinensprache"><span class="hanchor" ariaLabel="Anchor"># </span>1.1 Einordnung des Machinensprache</h3></a>
+<ul>
+<li>机器语言的分类/编排</li>
+</ul>
+<a href="#logische-hierarchie-in-einem-rechner"><h4 id="logische-hierarchie-in-einem-rechner"><span class="hanchor" ariaLabel="Anchor"># </span>Logische Hierarchie in einem Rechner</h4></a>
+<p><img src="/attachments/image_1638879655684_0.png" width="auto" /></p>
+<ul>
+<li>BS: Anwendungsprogramme, Systemprogramme, Betriebssystem</li>
+<li>RA: Machinensprache, Mikroprogrammierung, Physikalische Geräte</li>
+<li>Mikroprogrammierung: 微指令集，对硬件解释机器语言</li>
+</ul>
+<a href="#12-aufgabe-des-betriebssystem"><h3 id="12-aufgabe-des-betriebssystem"><span class="hanchor" ariaLabel="Anchor"># </span>1.2 Aufgabe des Betriebssystem</h3></a>
+<a href="#aufgabe-des-betriebssystem"><h4 id="aufgabe-des-betriebssystem"><span class="hanchor" ariaLabel="Anchor"># </span>Aufgabe des Betriebssystem</h4></a>
+<ul>
+<li>Komplexitätreduktion</li>
+<li>Verwalrung und Verteilung(Multiplexing) von Systemressourcen
+<ul>
+<li>Time Multiplexing</li>
+<li>Space Multiplexing</li>
+</ul>
+</li>
+<li>Zugriffskontrolle</li>
+</ul>
+<a href="#kernel-mode-and-user-mode"><h4 id="kernel-mode-and-user-mode"><span class="hanchor" ariaLabel="Anchor"># </span>Kernel Mode and User Mode</h4></a>
+<ul>
+<li>Systemmodus:
+<ul>
+<li><strong>Privilegiert</strong>.</li>
+<li>Zum <strong>Betriebssystem</strong> zählen Programme, die im Systemmodus lafen.</li>
+<li>Dazu zählen unter anderem Gerätetreiber, Prozessmanager, Fenstermanager usw.</li>
+</ul>
+</li>
+<li>Nutzermodus:
+<ul>
+<li>Nicht privilegiert.</li>
+<li>Benutzerprogramme laufen im Nutzermodus.</li>
+</ul>
+</li>
+</ul>
+<a href="#systemaufruf"><h4 id="systemaufruf"><span class="hanchor" ariaLabel="Anchor"># </span>Systemaufruf</h4></a>
+<ul>
+<li>syscalls</li>
+<li>Die <strong>Schnittstelle</strong> zwischen Kernel Mode und User mode.</li>
+<li>Ein Anwendungsprogramme, das nicht direkt auf eine Ressource zugreifen darf, führt dazu einen <strong>Systemaufruf</strong> mit den entsprechenden Parametern aus.</li>
+</ul>
+<a href="#13-geschichte-der-betriebssystem"><h3 id="13-geschichte-der-betriebssystem"><span class="hanchor" ariaLabel="Anchor"># </span>1.3 Geschichte der Betriebssystem</h3></a>
+<ul>
+<li>skipped</li>
+<li><a class="internal-link broken">蒋炎岩</a>-南京大学“操作系统：设计与实现： P1 [绪论]操作系统的历史
+
+<a href="https://www.bilibili.com/video/BV1N741177F5?spm_id_from=333.999.0.0" rel="noopener">https://www.bilibili.com/video/BV1N741177F5?spm_id_from=333.999.0.0</a></li>
+</ul>
+<a href="#k2-programme-und-unterprogramme"><h2 id="k2-programme-und-unterprogramme"><span class="hanchor" ariaLabel="Anchor"># </span>K2 Programme und Unterprogramme</h2></a>
+<a href="#22-unterprogramme-und-prozeduren"><h3 id="22-unterprogramme-und-prozeduren"><span class="hanchor" ariaLabel="Anchor"># </span>2.2 Unterprogramme und Prozeduren</h3></a>
+<a href="#offenes-unterprogramm"><h4 id="offenes-unterprogramm"><span class="hanchor" ariaLabel="Anchor"># </span>Offenes Unterprogramm</h4></a>
+<ul>
+<li>Der entsprechende Programmtext wird an den erfordlichen Stellen ins Hauptprogramm <strong>hineinkopiert</strong>. (Makroaufruf宏调用)</li>
+<li>- Speicherplatz verschwenden</li>
+<li>- Hoher Arbeitsaufwand bei der Änderungen</li>
+</ul>
+<a href="#geschlossenes-unterprogrammmprozedur"><h4 id="geschlossenes-unterprogrammmprozedur"><span class="hanchor" ariaLabel="Anchor"># </span>Geschlossenes Unterprogrammm(Prozedur)</h4></a>
+<ul>
+<li>Das Programmstück wird über seine Anfangsadresss angesprungen.</li>
+<li>Springen -&gt; Ausführen -&gt; Rückspringen</li>
+<li>+ Wiederholung des Codes vermeiden</li>
+<li>- Bei besonders kleinen Unterprogrammen ist es aber wiederum ungünstig. (Sprüge, Parameterübergaben, Sicherung und  Wiederherstellung des Caller-Kontexts, Ergebnisrückgaben.)</li>
+<li>Wir unterscheiden:
+<ul>
+<li><strong>Announcement</strong>: ohne Ergebnisparameter</li>
+<li><strong>Invocation</strong>: mit Ergebnisparameter</li>
+</ul>
+</li>
+<li><strong>Informationen</strong> der UP: Was sind benötig?
+<ul>
+<li>Anfangsadresse</li>
+<li>Rücksprungadresse</li>
+<li>Aufrufparameter</li>
+<li>Rückgabewert(e)</li>
+</ul>
+</li>
+<li><strong>Kommunikation</strong> der UP: Wie tauschen?
+<ul>
+<li>Stack: meistens</li>
+<li>Spezielle Register: eine schnelle Möglichkeit</li>
+</ul>
+</li>
+</ul>
+<a href="#up调用流程4-stufige-aufrufkonvention"><h4 id="up调用流程4-stufige-aufrufkonvention"><span class="hanchor" ariaLabel="Anchor"># </span>UP调用流程（4-stufige Aufrufkonvention）</h4></a>
+<ul>
+<li>Prolog des Callers: push Register, Rücksprungadresse, Parameter
+<ul>
+<li>Prolog des Callees: pop Parameter
+<code>&lt;CODE&gt;</code>
+Epilog des Callees: pop Rücksprungadresse, push Rückgabewert(e)</li>
+</ul>
+</li>
+<li>Epilog des Callers: pop Rückgabewert(e), Register</li>
+</ul>
+<a href="#221-call-und-ret-und-jmp"><h3 id="221-call-und-ret-und-jmp"><span class="hanchor" ariaLabel="Anchor"># </span>2.2.1 CALL und RET (und JMP)</h3></a>
+<ul>
+<li><strong>PC</strong>: Program Counter, 指向的地址中是下一条要被执行的指令
+<strong>RA</strong>: Register
+PUSHR: 所有寄存器入栈</li>
+</ul>
+<a href="#jmp"><h4 id="jmp"><span class="hanchor" ariaLabel="Anchor"># </span>JMP</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">      COMMAND JMP addr
+</span></span><span class="line"><span class="cl">      BEGIN
+</span></span><span class="line"><span class="cl">        PC := addr;
+</span></span><span class="line"><span class="cl">      END
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#call"><h4 id="call"><span class="hanchor" ariaLabel="Anchor"># </span>CALL</h4></a>
+<ul>
+<li>CALL(RA)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">      COMMAND CALL addr
+</span></span><span class="line"><span class="cl">      BEGIN
+</span></span><span class="line"><span class="cl">        RA := PC + 1;
+</span></span><span class="line"><span class="cl">        PC := addr;
+</span></span><span class="line"><span class="cl">      END
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>CALL(Stack)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">      COMMAND CALL addr
+</span></span><span class="line"><span class="cl">      BEGIN
+</span></span><span class="line"><span class="cl">        PUSH PC + 1;
+</span></span><span class="line"><span class="cl">        PC := addr;
+</span></span><span class="line"><span class="cl">      END
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#ret"><h4 id="ret"><span class="hanchor" ariaLabel="Anchor"># </span>RET</h4></a>
+<ul>
+<li>RET(RA)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">      COMMAND RET addr
+</span></span><span class="line"><span class="cl">      BEGIN
+</span></span><span class="line"><span class="cl">        PC := RA;
+</span></span><span class="line"><span class="cl">      END
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>RET(Stack)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">     COMMAND RET addr
+</span></span><span class="line"><span class="cl">     BEGIN
+</span></span><span class="line"><span class="cl">       PC := POP;
+</span></span><span class="line"><span class="cl">     END
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#23-realisierung-eines-unterprogrammaufrufs"><h3 id="23-realisierung-eines-unterprogrammaufrufs"><span class="hanchor" ariaLabel="Anchor"># </span>2.3 Realisierung eines Unterprogrammaufrufs</h3></a>
+<a href="#k3-prozess"><h2 id="k3-prozess"><span class="hanchor" ariaLabel="Anchor"># </span>K3 Prozess</h2></a>
+<a href="#31-das-prozess-konzept"><h3 id="31-das-prozess-konzept"><span class="hanchor" ariaLabel="Anchor"># </span>3.1 Das Prozess Konzept</h3></a>
+<a href="#311-grundlagen-von-prozessen"><h4 id="311-grundlagen-von-prozessen"><span class="hanchor" ariaLabel="Anchor"># </span>3.1.1 Grundlagen von Prozessen</h4></a>
+<a href="#prozess"><h5 id="prozess"><span class="hanchor" ariaLabel="Anchor"># </span>Prozess</h5></a>
+<ul>
+<li>Ein in Ausführung befindliches Maschinenprogramm.</li>
+<li>Program $\xrightarrow[]{execute}$ Process</li>
+</ul>
+<a href="#prozess-kontext"><h5 id="prozess-kontext"><span class="hanchor" ariaLabel="Anchor"># </span>(Prozess-)Kontext</h5></a>
+<ul>
+<li>Zum Kontext eines Prozessese gehören alle Informationen, die den aktuellen Ausführungszustand eines Prozess genau beschreiben.</li>
+<li>进程中断后，在同一台计算机上继续执行所需的内容</li>
+</ul>
+<a href="#prozess-image"><h5 id="prozess-image"><span class="hanchor" ariaLabel="Anchor"># </span>(Prozess-)Image</h5></a>
+<ul>
+<li>Die Gesamtheit der physischen Bestandteile eines Prozesses, also insbesondere seine Befehlsfolge (Trace), aber auch seinen
+Kontext, lokale und globale Variablen und der Ausführungs-Stack.</li>
+<li>Kontext + Programm + Stack</li>
+<li>进程中断后，移动到另一台计算机并执行所需的内容</li>
+</ul>
+<a href="#uniprogramming"><h5 id="uniprogramming"><span class="hanchor" ariaLabel="Anchor"># </span>Uniprogramming</h5></a>
+<ul>
+<li>Prozesse werden <strong>sequenziell nacheinander, vollständig und ohne Unterbrechung</strong> ausgeführt.</li>
+</ul>
+<a href="#multiprogramming"><h5 id="multiprogramming"><span class="hanchor" ariaLabel="Anchor"># </span>Multiprogramming</h5></a>
+<ul>
+<li>Der Prozess wird zwischen mereren Prozessen hin und hergeschaltet.</li>
+<li>Quasiparallel/Pseudo-parallel</li>
+</ul>
+<a href="#multiprocessoring"><h5 id="multiprocessoring"><span class="hanchor" ariaLabel="Anchor"># </span>Multiprocessoring</h5></a>
+<ul>
+<li>Stehen mehrere Prozesseoren zur Verfügung.</li>
+<li>Echt-parallel</li>
+</ul>
+<a href="#312-erzeugung-von-prozessen"><h4 id="312-erzeugung-von-prozessen"><span class="hanchor" ariaLabel="Anchor"># </span>3.1.2 Erzeugung von Prozessen</h4></a>
+<ul>
+<li>System:
+<ul>
+<li>
+<a href="#unter-linuxunix"><h5 id="unter-linuxunix"><span class="hanchor" ariaLabel="Anchor"># </span>Unter Linux/Unix</h5></a>
+<ul>
+<li>fork()</li>
+<li>子程序也可以产生子程序</li>
+<li>所有程序都是<code>init</code>的后代</li>
+</ul>
+</li>
+<li>
+<a href="#unter-ms-dos"><h5 id="unter-ms-dos"><span class="hanchor" ariaLabel="Anchor"># </span>Unter MS DOS</h5></a>
+<ul>
+<li>父子不能并行执行</li>
+</ul>
+</li>
+<li>
+<a href="#unter-windows"><h5 id="unter-windows"><span class="hanchor" ariaLabel="Anchor"># </span>Unter Windows</h5></a>
+<ul>
+<li>keine echte Prozesshierarchie</li>
+<li>不停切换</li>
+<li>父进程会收到子进程的句柄(Handle)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#ursachen-für-erzeugung-eines-prozess"><h5 id="ursachen-für-erzeugung-eines-prozess"><span class="hanchor" ariaLabel="Anchor"># </span>Ursachen für Erzeugung eines Prozess</h5></a>
+<ul>
+<li>Neuer Stapelauftrag 新的批处理任务</li>
+<li>Benutzeranmeldung 用户以交互模式登录</li>
+<li>Dienstleistungsprozess 服务流程，比如一个APP要打印文件时就会创建一个新的进程在后台接管打印工作</li>
+<li>Kindprozesse</li>
+</ul>
+</li>
+<li>
+<a href="#schritte-für-erzeugung-eines-prozess"><h5 id="schritte-für-erzeugung-eines-prozess"><span class="hanchor" ariaLabel="Anchor"># </span>Schritte für Erzeugung eines Prozess</h5></a>
+<ul>
+<li>进程以唯一的<strong>PID</strong>进入<strong>进程表</strong></li>
+<li><strong>进程图像</strong>大小的内存空间被分配给进程</li>
+<li><strong>PCB</strong>初始化</li>
+<li>进程放入调度队列</li>
+<li>如有需要，拓展结构</li>
+</ul>
+</li>
+</ul>
+<a href="#313-realisierung-von-multiprogramming"><h4 id="313-realisierung-von-multiprogramming"><span class="hanchor" ariaLabel="Anchor"># </span>3.1.3 Realisierung von Multiprogramming</h4></a>
+<ul>
+<li><strong>Scheduling</strong> vs. <strong>Dispatching</strong> K5</li>
+</ul>
+<a href="#314-das-2-zustands-prozessmodell"><h4 id="314-das-2-zustands-prozessmodell"><span class="hanchor" ariaLabel="Anchor"># </span>3.1.4 Das 2-Zustands-Prozessmodell</h4></a>
+<ul>
+<li><img src="/attachments/image_1638964022319_0.png" width="auto" /></li>
+<li><img src="/attachments/image_1638963980331_0.png" width="auto" /></li>
+</ul>
+<a href="#315-das-5-zustands-prozessmodell"><h4 id="315-das-5-zustands-prozessmodell"><span class="hanchor" ariaLabel="Anchor"># </span>3.1.5 Das 5-Zustands-Prozessmodell</h4></a>
+<ul>
+<li><img src="/attachments/image_1638964081968_0.png" width="auto" /></li>
+<li>Status
+<ul>
+<li><strong>Running</strong>: Der Prozess befindet sich in der Ausführung. Bei Einprozessor-Systemen
+kann sich zu jedem Zeitpunkt nur ein Prozess in diesem Zustand befinden.</li>
+<li><strong>Ready</strong>: Der Prozess ist zur Ausführung bereit.</li>
+<li><strong>Blocked</strong>: Der Prozess wartet auf ein Ereignis (z.B. Ende einer E/A-Operation, Benutzereingabe) und kann erst zur Ausführung kommen, nachdem das Ereignis eingetretenist.</li>
+<li><strong>New</strong>: Der Prozess wurde erzeugt, aber noch nicht durch das Betriebssystem zur
+Menge der ausführbaren Prozesse hinzugefügt.</li>
+<li><strong>Exit</strong>: Der Prozess wurde durch das Betriebssystem aus der Menge der ausführbaren Prozesse entfernt.</li>
+</ul>
+</li>
+<li>Paths
+<ul>
+<li><strong>Null-&gt;New</strong>: Ein Prozess wird erzeugt.</li>
+<li><strong>New-&gt;Ready</strong>: Das Betriebssystem ist in der Lage, einen zusätzlichen Prozess aufzunehmen (genug Speicher vorhanden).</li>
+<li><strong>Ready-&gt;Running</strong>: Ein rechenbereiter Prozess wird zur Ausführung ausgewählt.</li>
+<li><strong>Running-&gt;Exit</strong>: Das Betriebssystem beendet den Prozess.</li>
+<li><strong>Running-&gt;Ready</strong>: Ein anderer Prozess soll zur Ausführung ausgewählt werden (z.B. weil die maximale Zeit für einen Ausführungs-Slot abgelaufen oder ein höher-priorer Prozess ins System gekommen ist).</li>
+<li><strong>Running-&gt;Blocked</strong>: Der Prozess muss auf ein Ereignis warten.</li>
+<li><strong>Blocked-&gt;Ready</strong>: Das Ereignis, auf das gewartet wurde, ist eingetroffen.</li>
+</ul>
+</li>
+</ul>
+<a href="#316-das-7-zustands-prozessmodell"><h4 id="316-das-7-zustands-prozessmodell"><span class="hanchor" ariaLabel="Anchor"># </span>3.1.6 Das 7-Zustands-Prozessmodell</h4></a>
+<ul>
+<li><strong>Virtueller Speicher</strong>
+<ul>
+<li>Der virtuelle Speicher ist die Menge an Speicher (in Bytes), die dem Betriebssystems maximal zur Abbildung von Prozessen auf dem Hintergrundspeicher zur Verfügung steht.</li>
+<li>虚拟内存：虚拟内存是操作系统可用于在后台内存上映射进程的最大内存量（以字节为单位）。约等于主内存+suspend进程的数据。</li>
+<li>虚拟内存是计算机系统内存管理的一种技术。 它使得应用程序认为它拥有连续的可用的内存（一个连续完整的地址空间），而实际上，它通常是被分隔成多个物理内存碎片，还有部分暂时存储在外部磁盘存储器上，在需要时进行数据交换。 目前，大多数操作系统都使用了虚拟内存，如Windows家族的“虚拟内存”；Linux的“交换空间”等。</li>
+</ul>
+</li>
+<li><img src="/attachments/image_1638964425643_0.png" width="auto" /></li>
+<li>Suspendierung原因
+<ul>
+<li>suspend: 将程序从Hauptspeicher移动到Hintergrudspeicher, 节省空间</li>
+<li>如Monitoring-Prozess, 长期很少地执行，不该占用太多主内存-&gt;ready suspend</li>
+</ul>
+</li>
+<li>Das 9-Zustands-Prozessmodell 见3.3.5</li>
+</ul>
+<a href="#32-prozess-beschreibung"><h3 id="32-prozess-beschreibung"><span class="hanchor" ariaLabel="Anchor"># </span>3.2 Prozess Beschreibung</h3></a>
+<ul>
+<li>Virtueller Speicher
+<ul>
+<li>Der virtuelle Speicher ist die Menge an Speicher (in Bytes), die dem Betriebssystems maximal zur Abbildung von Prozessen auf dem Hintergrundspeicher zur Verfügung steht.
+虚拟内存：虚拟内存是操作系统可用于在后台内存上映射进程的最大内存量（以字节为单位）。约等于主内存+suspend进程的数据。
+虚拟内存是计算机系统内存管理的一种技术。 它使得应用程序认为它拥有连续的可用的内存（一个连续完整的地址空间），而实际上，它通常是被分隔成多个物理内存碎片，还有部分暂时存储在外部磁盘存储器上，在需要时进行数据交换。 目前，大多数操作系统都使用了虚拟内存，如Windows家族的“虚拟内存”；Linux的“交换空间”等。</li>
+</ul>
+</li>
+</ul>
+<a href="#321-kontrollstrukturen-des-bss"><h4 id="321-kontrollstrukturen-des-bss"><span class="hanchor" ariaLabel="Anchor"># </span>3.2.1 Kontrollstrukturen des BSs</h4></a>
+<ul>
+<li>Virtueller Speicher ~= HSP + HiSP</li>
+<li><strong>Frames</strong>(Seitenrahmen)
+<ul>
+<li>Speicherzelle in <strong>Hauptspeicher</strong></li>
+<li>je 2-16 KB</li>
+</ul>
+</li>
+<li><strong>Pages</strong>(Seiten)
+<ul>
+<li>Speicherzelle in <strong>Hintergrundspeicher</strong></li>
+<li>alle sind gleich gross</li>
+<li>frame的大小和page的大小一样</li>
+</ul>
+</li>
+<li><strong>Laden</strong>:
+<ul>
+<li>copy page into frame</li>
+</ul>
+</li>
+<li><strong>Swapping</strong>
+<ul>
+<li>Auslagern von Prozessen aus dem Hauptspeicher in den Hintergrundspeicher</li>
+</ul>
+</li>
+<li>操作系统管理的四张表和功能
+<ul>
+<li><strong>Speichertabellen</strong>
+<ul>
+<li>跟踪(ueber &hellip; der Ueberblick behalten)主内存和虚拟内存</li>
+<li>主内存中的一部分会为系统进程保留</li>
+<li>内存表包括：
+<ul>
+<li>进程的Page分配到的Frame</li>
+<li>虚拟内存分配到进程</li>
+<li>页面或框架的属性和权限</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>E/A-Tabellen</strong>
+<ul>
+<li>一个I/O设备要么是可用的，要么被分配给一个特定的进程</li>
+</ul>
+</li>
+<li><strong>Dateitabellen</strong>
+<ul>
+<li>包含文件的存在，在HiSP的位置，当前状态和其他信息</li>
+<li>如果有独立的文件系统(常见)，很多信息会放到文件系统</li>
+</ul>
+</li>
+<li><strong>Prozesstabellen</strong>
+<ul>
+<li>包括如：进程的状态，进程被block时在什么位置</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#322-prozesskontrollstrukuren"><h4 id="322-prozesskontrollstrukuren"><span class="hanchor" ariaLabel="Anchor"># </span>3.2.2 Prozesskontrollstrukuren</h4></a>
+<ul>
+<li>管理一个进程需要知道两件事：进程被存储在哪(Prozesslokalisierung)？进程管理相关属性的值是什么(Prozesskontrollblock)？</li>
+<li>
+<a href="#prozesslokalisierung"><h5 id="prozesslokalisierung"><span class="hanchor" ariaLabel="Anchor"># </span>Prozesslokalisierung</h5></a>
+</li>
+<li>2 Variante</li>
+<li><strong>Segmentierung</strong>
+<ul>
+<li>dynamische Partitionierung</li>
+<li>alle Daten in ein Segment</li>
+<li><img src="/attachments/image_1639416061890_0.png" width="auto" /></li>
+</ul>
+</li>
+<li><strong>Paging</strong>
+- feste Partitionierung
+- alle Daten in soviele Pages wie noetig
+- <img src="/attachments/image_1639416118711_0.png" width="auto" /></li>
+<li>
+<a href="#prozesskontrollblockpcb"><h5 id="prozesskontrollblockpcb"><span class="hanchor" ariaLabel="Anchor"># </span>Prozesskontrollblock(PCB)</h5></a>
+</li>
+<li><img src="/attachments/image_1639416148380_0.png" width="auto" /></li>
+<li>(a) <strong>Prozessidentifikation</strong>
+<ul>
+<li>PID</li>
+<li>PPID</li>
+<li>UserID</li>
+</ul>
+</li>
+<li>(b) <strong>Prozesszustandsinfo</strong>
+<ul>
+<li>
+<ol>
+<li>Inhalt der Prozessorregister</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>若是被中断的进程：</li>
+</ol>
+<ul>
+<li>用户寄存器</li>
+<li>堆栈指针</li>
+<li>PC，状态码(Condition codes)</li>
+</ul>
+</li>
+<li>
+<ol start="3">
+<li><strong>Programmstatuswort</strong>(PSW):</li>
+</ol>
+<ul>
+<li>Die Menge der Register, die Statusinformationen enthalten</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>(c) <strong>Prozesskontrollinformationen</strong>
+collapsed:: true
+<ul>
+<li>
+<ol>
+<li>Schedling- und Zustandsinfo</li>
+</ol>
+<ul>
+<li>Prozesszustand(&ldquo;ready&rdquo;..)</li>
+<li>Priorität</li>
+<li>Scheduling-Strategie-spezifische Zustandsinformationen(如已等待的时间)</li>
+<li>Ereignisse, auf die der Prozess wartet</li>
+</ul>
+</li>
+<li>
+<ol start="2">
+<li>Datenstruktur，例如，如果所有等待的进程都在一个队列中管理，则是对下一个进程的引用</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>两个独立进程之间交换的 Signale 或 Nachrichten（进程间通信）</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>有关进程的权限、内存管理、资源所有权等的额外信息。</li>
+</ol>
+</li>
+<li><img src="/attachments/image_1639417190103_0.png" width="auto" /></li>
+</ul>
+</li>
+</ul>
+<a href="#33-prozesskontrolle"><h3 id="33-prozesskontrolle"><span class="hanchor" ariaLabel="Anchor"># </span>3.3 Prozesskontrolle</h3></a>
+<ul>
+<li>
+<a href="#funktionen-des-bs-kerns"><h5 id="funktionen-des-bs-kerns"><span class="hanchor" ariaLabel="Anchor"># </span>Funktionen des BS-Kerns</h5></a>
+<ul>
+<li>Support-functions</li>
+<li>Selbstverwaltungs-functions(FCAPS)</li>
+<li>I/O Management (canal and cache)</li>
+<li>Speichermanagement (Segmentierung, Paging)</li>
+<li>Prozessmanagement(erzeugen und wechseln)</li>
+</ul>
+</li>
+</ul>
+<a href="#331-kontext-switch"><h4 id="331-kontext-switch"><span class="hanchor" ariaLabel="Anchor"># </span>3.3.1 Kontext-Switch</h4></a>
+<ul>
+<li>
+<ol>
+<li><strong>Aktualisierung und Sicherung</strong> des PCB des bisherigen Prozesses, also insb. Sicherung der Zustandsinformationen</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><strong>Einfügen</strong> des Prozesskontrollblocks des bisherigen Prozesses in die Warteschlange des Schedulers</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li><strong>Auswahl</strong> eines anderen Prozesses zur Ausführung</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li><strong>Wiederherstellung und Aktualisierung</strong> des Prozesskontrollblocks des neuen Prozesses (einschließlich der Änderung des Ausführungszustands auf “Running”)</li>
+</ol>
+</li>
+</ul>
+<a href="#332-unterbrechungen"><h4 id="332-unterbrechungen"><span class="hanchor" ariaLabel="Anchor"># </span>3.3.2 Unterbrechungen</h4></a>
+<ul>
+<li>
+<a href="#externe-unterbrechung-interrupt"><h5 id="externe-unterbrechung-interrupt"><span class="hanchor" ariaLabel="Anchor"># </span>Externe Unterbrechung (Interrupt)</h5></a>
+<ul>
+<li>外部中断请求，如输入设备(CTRL+C，鼠标)</li>
+<li>移交给Unterbrechungsroutine</li>
+</ul>
+</li>
+<li>
+<a href="#interne-unterbrechung-exception"><h5 id="interne-unterbrechung-exception"><span class="hanchor" ariaLabel="Anchor"># </span>Interne Unterbrechung (Exception)</h5></a>
+<ul>
+<li>内部异常</li>
+</ul>
+</li>
+<li>
+<a href="#unterbrechungsroutineinterrupt-handler"><h5 id="unterbrechungsroutineinterrupt-handler"><span class="hanchor" ariaLabel="Anchor"># </span>Unterbrechungsroutine(Interrupt Handler)</h5></a>
+<ul>
+<li>处理中断的组件 Die Komponente, die die Unterbrechungsbehandlung durchführt</li>
+<li>决定最后执行的进程能否继续，或者是否有必要切换到另一个进程</li>
+</ul>
+</li>
+</ul>
+<a href="#333-moduswechsel"><h4 id="333-moduswechsel"><span class="hanchor" ariaLabel="Anchor"># </span>3.3.3 Moduswechsel</h4></a>
+<ul>
+<li>
+<ol>
+<li><strong>Aktualisierung und Sicherung</strong> der <em>Zustandsinformationen des PCB</em> des gerade aktiven Prozesses (also insb. des Programmstatusworts)</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><strong>Durchführung</strong> des eigentlichen Moduswechsels durch Freigabe aller Privilegien</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li><strong>Sprung</strong> zur Unterbrechungsroutine (Programmzähler wird auf dessen Anfangsadresse gesetzt)</li>
+</ol>
+</li>
+</ul>
+<a href="#334-konflikte-bei-unterbrechungen"><h4 id="334-konflikte-bei-unterbrechungen"><span class="hanchor" ariaLabel="Anchor"># </span>3.3.4 Konflikte bei Unterbrechungen</h4></a>
+<ul>
+<li><strong>Lösung</strong> von Konflikten: Zur Lösung von Konflikten werden <strong>Prioritäten</strong> von Unterbrechungen eingeführt.
+<ul>
+<li>Benutzerprozesse 0</li>
+<li>Externe Unterbrechungen &gt; Interne</li>
+<li>如果IPL有5位，则0到31</li>
+<li>如果中断中又中断，只有后一个的优先级echt高于前一个才会被响应</li>
+</ul>
+</li>
+<li><strong>中断优先级（IPL）</strong>：IPL是进程控制块中程序状态字（PSW）的一部分，它包含对用户或系统进程或中断处理程序的中断优先级。</li>
+<li><strong>Interrupt Priority Level (IPL)</strong>: Das IPL ist Teil des Programmstatuswortes (PSW) im Prozesskontrollblock. und enthält die Unterbrechungs-Priorität zu einem Nutzer- oder Systemprozess bzw. zu einem Interrupt Handler.</li>
+</ul>
+<a href="#335-ausführung-des-betriebssystems"><h4 id="335-ausführung-des-betriebssystems"><span class="hanchor" ariaLabel="Anchor"># </span>3.3.5 Ausführung des Betriebssystems</h4></a>
+<ul>
+<li>操作系统是进程吗？在不同系统有不同答案
+<ul>
+<li>
+<ol>
+<li><strong>独立内核（非进程内核）的概念</strong>**：</li>
+</ol>
+<ul>
+<li>在这种方法中，代表了较早的操作系统，操作系统的内核在任何进程之外执行。如果一个正在执行的进程被中断，那么它的上下文必须被保存，并将控制权转移给操作系统的内核。操作系统有自己的内存和自己的系统地下室，用于控制过程调用和相应的返回。</li>
+<li><img src="/attachments/image_1639418601755_0.png" width="auto" /></li>
+</ul>
+</li>
+<li>
+<ol start="2">
+<li><strong>在用户进程中执行</strong>：</li>
+</ol>
+<ul>
+<li>这是小型计算机的一种常见方法，所有的操作系统软件都在每个用户进程的上下文中执行。假设操作系统是一个可以被用户进程调用的例程集合（参见支持功能），并且也在各自的用户进程的环境中执行。只有在这些环境之外才会发生流程性的改变。这种方法的一个代表是Unix系统5。</li>
+<li><img src="/attachments/image_1639418611816_0.png" width="auto" /></li>
+<li><img src="/attachments/image_1639418808499_0.png" width="auto" /></li>
+</ul>
+</li>
+<li>
+<ol start="3">
+<li><strong>基于进程的操作系统概念</strong>：</li>
+</ol>
+<ul>
+<li>在这里，操作系统被实现为系统进程的集合。每个功能都被组织成一个独立的过程。因此，操作系统的结构是完全模块化的，只有实现进程变化所需的少量代码是在每个进程之外执行的。</li>
+<li><img src="/attachments/image_1639418634668_0.png" width="auto" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#das-9-zustands-prozessmodell"><h4 id="das-9-zustands-prozessmodell"><span class="hanchor" ariaLabel="Anchor"># </span>Das 9-Zustands-Prozessmodell</h4></a>
+<ul>
+<li>上述的第二种方法中，Running被分成User running 和 Kernel running, 7状态模型也因此可以被拓展为9状态模型</li>
+<li><img src="/attachments/image_1639418846166_0.png" width="auto" /></li>
+<li><img src="/attachments/image_1639418853154_0.png" width="auto" /></li>
+<li><img src="/attachments/image_1639418858399_0.png" width="auto" /></li>
+</ul>
+<a href="#k4-threads"><h2 id="k4-threads"><span class="hanchor" ariaLabel="Anchor"># </span>K4 Threads</h2></a>
+<ul>
+<li>本章不是script而是ppt教学</li>
+<li><strong>Threads und Einführung in Java</strong></li>
+</ul>
+<a href="#threads"><h3 id="threads"><span class="hanchor" ariaLabel="Anchor"># </span>Threads</h3></a>
+<ul>
+<li>Einheit, die eine gewisse Aufgabe erledigt</li>
+<li>特点
+<ul>
+<li>Teilen sich <strong>gleichen Adressraum</strong></li>
+<li>Habe <strong>gemeinsamen Zugriff</strong> auf Speicher und Ressourcen d. Prozesses</li>
+<li>Eigener Stack für lokale Variablen</li>
+<li>Eigener Deskriptor</li>
+</ul>
+</li>
+</ul>
+<a href="#multithreading"><h3 id="multithreading"><span class="hanchor" ariaLabel="Anchor"># </span>Multithreading</h3></a>
+<ul>
+<li><img src="/attachments/image_1640609901369_0.png" width="auto" /></li>
+</ul>
+<a href="#thread-zustände"><h3 id="thread-zustände"><span class="hanchor" ariaLabel="Anchor"># </span>Thread-Zustände</h3></a>
+<ul>
+<li><img src="/attachments/image_1640609963734_0.png" width="auto" /></li>
+<li>Zustände zur <strong>Suspendierung</strong> von Threads nicht sinnvoll, da die Auslagerung ein Konzept von Prozessen ist
+→ gemeinsamer Adressraum aller Threads eines Prozesses</li>
+</ul>
+<a href="#thread-arten"><h3 id="thread-arten"><span class="hanchor" ariaLabel="Anchor"># </span>Thread-Arten</h3></a>
+<a href="#user-level-threads-ult"><h4 id="user-level-threads-ult"><span class="hanchor" ariaLabel="Anchor"># </span>User-level-Threads ULT</h4></a>
+<ul>
+<li>在用户模式</li>
+<li>Vor
+<ul>
+<li>kann in jedem BS ablaufen. 可以在任何系统运行不需要任何改变</li>
+<li>Threadwechsel, Threaderzeugung benötigen keine Privilegien</li>
+<li>Das auf BS-Ebene implementierte Scheduling kann auf Thread-Ebene anwendungsspezifisch realisiert werden</li>
+</ul>
+</li>
+<li>Nach
+<ul>
+<li>Wird ein Thread blockiert, so blockiert gleichzeitig der gesamte Prozess</li>
+<li>Können in einer <strong>Multiprozessor</strong>umgebung <strong>nicht parallel</strong> ausgeführt werden</li>
+</ul>
+</li>
+</ul>
+<a href="#kernel-level-threads-klt"><h4 id="kernel-level-threads-klt"><span class="hanchor" ariaLabel="Anchor"># </span>Kernel-level-Threads KLT</h4></a>
+<ul>
+<li>在系统模式</li>
+<li><strong>Threadmanagement vom Betriebssystemkern</strong> durchgeführt
+– muss vom Betriebssystem unterstützt werden</li>
+<li>KLTs <strong>deutlich schneller</strong> als Prozesse erzeugt, gewechselt und terminiert werden</li>
+<li>Ist ein Thread <strong>blockiert</strong>, so kann die Kontrolle einem anderen Thread desselben Prozesses (der sich im Zustand ready befindet) <strong>übergeben</strong> werden</li>
+<li>KLTs können in einer Multiprozessorumgebung <strong>echt parallel</strong> ausgeführt werden</li>
+</ul>
+<a href="#nebenläufigkeit"><h3 id="nebenläufigkeit"><span class="hanchor" ariaLabel="Anchor"># </span>Nebenläufigkeit</h3></a>
+<ul>
+<li><img src="/attachments/image_1640611297381_0.png" width="auto" /></li>
+</ul>
+<a href="#vor--und-nachteile-paralleler-programmierung"><h3 id="vor--und-nachteile-paralleler-programmierung"><span class="hanchor" ariaLabel="Anchor"># </span>Vor- und Nachteile paralleler Programmierung</h3></a>
+<a href="#vorteile"><h4 id="vorteile"><span class="hanchor" ariaLabel="Anchor"># </span>Vorteile:</h4></a>
+<ul>
+<li>Komplexität in parallele Teilbereiche zerlegen</li>
+<li>Höherer Durchsatz/Performanz</li>
+<li>Hardware-Ausnutzung</li>
+<li>Ausnutzung von eingebetteten und verteilten Systemen</li>
+</ul>
+<a href="#nachteile"><h4 id="nachteile"><span class="hanchor" ariaLabel="Anchor"># </span>Nachteile:</h4></a>
+<ul>
+<li>–Erhöhte Komplexität in der Verwaltung</li>
+<li>–Abläufe sind häufig schwer zu durchschauen</li>
+<li>–Sehr fehleranfällig</li>
+<li>–Schwer zu Debuggen bei Laufzeitfehlern</li>
+<li>–Konzepte zur Synchronisation und Thread-Sicherheit erforderlich, um deterministisches Verhalten zu gewährleisten</li>
+</ul>
+<a href="#nachteil-race-conditions"><h4 id="nachteil-race-conditions"><span class="hanchor" ariaLabel="Anchor"># </span>Nachteil: Race Conditions</h4></a>
+<ul>
+<li>Race Condition: Wettlaufsituationen, bei der der zeitliche Ablauf das Ergebnis bestimmt</li>
+</ul>
+<a href="#kritischen-bereich"><h4 id="kritischen-bereich"><span class="hanchor" ariaLabel="Anchor"># </span>Kritischen Bereich</h4></a>
+<ul>
+<li>Phase, in der ein Prozess gemeinsam benutzte (globale) Daten oder Betriebsmittel nutzt.</li>
+</ul>
+<a href="#wechselseitiger-ausschluss"><h3 id="wechselseitiger-ausschluss"><span class="hanchor" ariaLabel="Anchor"># </span>Wechselseitiger Ausschluss</h3></a>
+<ul>
+<li>Es gibt Ressourcen, die als ganzes oder bzgl. einzelner Operationen nur exklusiv, d.h. zu einem Zeitpunkt nur durch einen einzigen Prozess nutzbar sind</li>
+<li>Lösungen zur wechselseitiger Ausschluss
+<ul>
+<li>
+<ol>
+<li><strong>Mutual Exclusion</strong>: Zu jedem Zeitpunkt darf sich höchstens ein Prozess im kritischen Bereich befinden.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><strong>Progress</strong>: Befindet sich kein Prozess im kritischen Bereich, aber es gibt einen Kandidaten für diesen Bereich, so hängt die Entscheidung, welcher Prozess ihn betreten darf, nur von diesem Kandidaten ab und fällt in endlicher Zeit.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li><strong>Bounded Waiting</strong>: Zwischen der Anforderung eines Prozesses, in den kritischen Bereich einzutreten und dem tatsächlichen Eintreten in den kritischen Bereich kann eine gewisse Zeitdauer liegen. Es muss jedoch möglich sein, für diese Wartezeit eine endliche obere Schranke anzugeben.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#deadlocks"><h3 id="deadlocks"><span class="hanchor" ariaLabel="Anchor"># </span>Deadlocks</h3></a>
+<ul>
+<li>Zugriff auf unteilbare Ressourcen (kritische Bereiche) birgt die Gefahr von Verklemmungen</li>
+<li><img src="/attachments/image_1640613196042_0.png" width="auto" /></li>
+</ul>
+<a href="#semaphore"><h3 id="semaphore"><span class="hanchor" ariaLabel="Anchor"># </span>Semaphore</h3></a>
+<ul>
+<li>integer Variable</li>
+<li>信号量，表示可以同时进入Kritische Bereich的数量</li>
+<li>3 Operationen:
+<ul>
+<li>init(S, Anfangswert)</li>
+<li>wait(S), 减少</li>
+<li>signal(S) = release(S) 增加</li>
+</ul>
+</li>
+<li><img src="/attachments/image_1640613503812_0.png" width="auto" /></li>
+<li><img src="/attachments/image_1640613358662_0.png" width="auto" /></li>
+</ul>
+<a href="#monitore"><h3 id="monitore"><span class="hanchor" ariaLabel="Anchor"># </span>Monitore</h3></a>
+<ul>
+<li>管程。实现对共享资源的互斥访问.</li>
+<li>Hoare的管程：将 &ldquo;数据 &ldquo;和 &ldquo;对其定义的操作&rdquo;、&ldquo;访问同步&rdquo;（对进入的进程/线程的队列）组合成一个抽象的数据类型，其操作保证相互排斥。技术上的实现通常是通过一个与对象相连的信号/锁，并在受保护方法的输入端分配，在其结束时再释放。</li>
+<li>Ziel:
+Wechselseitiger Ausschlusses der Monitoroperationen ⇔
+zu jedem Zeitpunkt ist höchstens ein Thread in einem Monitor aktiv</li>
+</ul>
+<a href="#threads-in-java"><h2 id="threads-in-java"><span class="hanchor" ariaLabel="Anchor"># </span>Threads in Java</h2></a>
+<ul>
+<li>特点
+<ul>
+<li>（对于现在的操作系统）echt parallel</li>
+<li>KLT</li>
+<li><img src="/attachments/image_1644419475024_0.png" width="auto" /></li>
+</ul>
+</li>
+<li>Problem
+<ul>
+<li>Race-Conditions</li>
+<li>Deadlocks</li>
+<li>Fairness</li>
+<li>Sicherheit</li>
+<li>Ressourcenverbrauch</li>
+</ul>
+</li>
+</ul>
+<a href="#nebenläufigkeit-in-java-java相关类"><h3 id="nebenläufigkeit-in-java-java相关类"><span class="hanchor" ariaLabel="Anchor"># </span>Nebenläufigkeit in Java (Java相关类)</h3></a>
+<ul>
+<li>Java库中的类：
+<ul>
+<li>**Thread **
+<ul>
+<li>java.lang.Thread</li>
+<li>Jeder laufende Thread stelle ein Exemplar副本 dieser Klasse dar</li>
+</ul>
+</li>
+<li><strong>Runnable</strong>
+<ul>
+<li>Programmcode, der parallel ausgeführt werden soll</li>
+</ul>
+</li>
+<li><strong>Lock</strong>
+<ul>
+<li>Mit Lock können kritische Bereiche markiert werden (nur 1 Thread innerhalb krit. Bereich)</li>
+</ul>
+</li>
+<li><strong>Condition</strong>
+<ul>
+<li>Threads können auf Benachrichtigungen anderer Threads warten</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#实践"><h3 id="实践"><span class="hanchor" ariaLabel="Anchor"># </span>实践</h3></a>
+<ul>
+<li>继承<code>java.lang.Thread</code>类</li>
+<li>继承 Thread 类的类中实现<code>run()</code></li>
+<li>调用时用<code>Thread.start()</code> 则为并行执行<code>run()</code>方法</li>
+<li>需要的方法加<code>synchronized</code>关键字</li>
+<li><img src="/attachments/image_1640616317159_0.png" width="auto" /></li>
+<li>Train.java</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Train</span> <span class="kd">extends</span> <span class="n">Thread</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">     <span class="kd">private</span> <span class="n">RailAB</span>  <span class="n">railAB</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">     <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">west</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">     <span class="kd">public</span> <span class="nf">Train</span><span class="o">(</span><span class="n">RailAB</span> <span class="n">ab</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">w</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">railAB</span> <span class="o">=</span> <span class="n">ab</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">west</span> <span class="o">=</span> <span class="n">w</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">     <span class="o">}</span>
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">west</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">           <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Try to go West!&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">         <span class="n">railAB</span><span class="o">.</span><span class="na">goWest</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">           <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Try to go East!&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">           <span class="n">railAB</span><span class="o">.</span><span class="na">goEast</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">railAB</span><span class="o">.</span><span class="na">leaveAB</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">     <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>TrainNet.java</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TrainNet</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">MAX_THREADS</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">MAX_TRAINS</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">RailAB</span> <span class="n">ab</span><span class="o">=</span> <span class="k">new</span> <span class="n">RailAB</span><span class="o">(</span><span class="n">MAX_TRAINS</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">MAX_THREADS</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">           <span class="n">Train</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Train</span><span class="o">(</span><span class="n">ab</span><span class="o">,</span> <span class="o">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">           <span class="n">train</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>RailAB.java</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RailAB</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">west</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kt">int</span> <span class="n">MAX_TRAINS</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kt">int</span> <span class="n">numberTrains</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="nf">RailAB</span><span class="o">(</span><span class="kt">int</span> <span class="n">MAX_TRAINS</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">MAX_TRAINS</span> <span class="o">=</span> <span class="n">MAX_TRAINS</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">west</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">numberTrains</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">}</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">goEast</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// wait?
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">while</span><span class="o">(</span><span class="n">numberTrains</span> <span class="o">==</span> <span class="n">MAX_TRAINS</span> <span class="o">||</span> <span class="o">(</span><span class="n">west</span> <span class="o">&amp;&amp;</span> <span class="n">numberTrains</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">try</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">wait</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">          
+</span></span><span class="line"><span class="cl">          <span class="c1">// run
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="n">west</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">          <span class="n">numberTrains</span><span class="o">++;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">goWest</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span><span class="o">(</span><span class="n">numberTrains</span> <span class="o">==</span> <span class="n">MAX_TRAINS</span> <span class="o">||</span> <span class="o">(!</span><span class="n">west</span> <span class="o">&amp;&amp;</span> <span class="n">numberTrains</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">try</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">wait</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">          
+</span></span><span class="line"><span class="cl">        <span class="n">west</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">numberTrains</span><span class="o">++;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">leaveAB</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">numberTrains</span><span class="o">--;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">notifyAll</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#k5-scheduling"><h2 id="k5-scheduling"><span class="hanchor" ariaLabel="Anchor"># </span>K5 Scheduling</h2></a>
+<a href="#51-prinzip"><h3 id="51-prinzip"><span class="hanchor" ariaLabel="Anchor"># </span>5.1 Prinzip</h3></a>
+<ul>
+<li><strong>Scheduling</strong>: Auswahl eines rechenbereiten Prozesses, der als nächstes dem Prozessor zugeordnet werden soll</li>
+<li><strong>Dispatching</strong>: Realisierung des eigentlichen Kontextwechsels. Unterbrechung des aktuellen Prozesses, Starten des neuen Prozesses.</li>
+</ul>
+<a href="#511-varianten-des-schedulings"><h4 id="511-varianten-des-schedulings"><span class="hanchor" ariaLabel="Anchor"># </span>5.1.1 Varianten des Schedulings</h4></a>
+<a href="#1-nicht-preemptives-scheduling"><h5 id="1-nicht-preemptives-scheduling"><span class="hanchor" ariaLabel="Anchor"># </span>1. Nicht preemptives Scheduling</h5></a>
+<ul>
+<li>oder Run-to-Completion</li>
+<li>非抢占式调度</li>
+<li>在一个任务执行完之前不可打断</li>
+</ul>
+<a href="#2-preemptives-scheduling"><h5 id="2-preemptives-scheduling"><span class="hanchor" ariaLabel="Anchor"># </span>2. Preemptives Scheduling</h5></a>
+<ul>
+<li>抢占式调度</li>
+<li>可以打断</li>
+</ul>
+<a href="#512-anforderungen-an-einen-scheduling-algorithmus"><h4 id="512-anforderungen-an-einen-scheduling-algorithmus"><span class="hanchor" ariaLabel="Anchor"># </span>5.1.2 Anforderungen an einen Scheduling-Algorithmus</h4></a>
+<ul>
+<li><strong>Fairness</strong></li>
+<li><strong>Policy Enforcement</strong>: wird stets durchgesetzt, d.h. es gibt keine Ausnahmen</li>
+<li><strong>Balance</strong>: Alle Teile des Systems sind (gleichmäßig) ausgelast.</li>
+<li><strong>Datensicherheit</strong></li>
+<li><strong>Skalierbarkeit</strong>: 可扩展性, 随着负载（进程数量）的增长，平均性能得以保持。 没有任何阈值，超过这个阈值，调度工作就会非常缓慢或根本不工作。</li>
+<li><strong>Effizienz</strong></li>
+<li>并非所有要求都必须满足，只是一种权衡</li>
+</ul>
+<a href="#batch-system-的其他指标"><h5 id="batch-system-的其他指标"><span class="hanchor" ariaLabel="Anchor"># </span>Batch-System 的其他指标</h5></a>
+<ul>
+<li>Durchsatz</li>
+<li>Verweildauer 停留时间</li>
+<li>Prozessorauslastung</li>
+</ul>
+<a href="#interaktive-system-的其他指标"><h5 id="interaktive-system-的其他指标"><span class="hanchor" ariaLabel="Anchor"># </span>Interaktive System 的其他指标</h5></a>
+<ul>
+<li>Antwortzeit 响应时间</li>
+<li>Verhältnismäßigkeit 相称性 算法应该对用户的期望做出反应（例如，简单地点击一个图标的反应不应该太长）</li>
+<li>Interaktion 交互 交互用户的数量应该是最大的。</li>
+</ul>
+<a href="#echtzeitsystem-的其他指标"><h5 id="echtzeitsystem-的其他指标"><span class="hanchor" ariaLabel="Anchor"># </span>Echtzeitsystem 的其他指标</h5></a>
+<ul>
+<li>Sollzeitpunkte 目标时间</li>
+<li>Vorhersagbarkeit 可预测性</li>
+</ul>
+<a href="#52-scheduling-algorithmus"><h3 id="52-scheduling-algorithmus"><span class="hanchor" ariaLabel="Anchor"># </span>5.2 Scheduling Algorithmus</h3></a>
+<a href="#521-begriff"><h4 id="521-begriff"><span class="hanchor" ariaLabel="Anchor"># </span>5.2.1 Begriff</h4></a>
+<ul>
+<li><img src="/attachments/image_1640885683960_0.png" width="auto" /></li>
+<li><strong>Ankunftzeit</strong>, der Zeitpunkt ab dem ein Prozess existiert.</li>
+<li><strong>Startzeit</strong>, der Zeitpunkt, an dem der Prozess zum ersten mal dem Prozessor zugewiesen wird.</li>
+<li><strong>Beendigungszeit</strong>, der Zeitpunkt an dem der Prozess terminiert ist.</li>
+<li><strong>Wartezeit</strong> = Startzeit - Ankunftzeit</li>
+<li><strong>Bedienzeit</strong> = Beendigungszeit - Startzeit</li>
+<li><strong>Verweildauer</strong> = Wartezeit + Bedienzeit</li>
+</ul>
+<a href="#522-nicht-preemptive-scheduling-algorithmen"><h4 id="522-nicht-preemptive-scheduling-algorithmen"><span class="hanchor" ariaLabel="Anchor"># </span>5.2.2 Nicht-preemptive Scheduling-Algorithmen</h4></a>
+<a href="#first-come-first-served-fcfs"><h5 id="first-come-first-served-fcfs"><span class="hanchor" ariaLabel="Anchor"># </span>First Come First Served (FCFS)</h5></a>
+<ul>
+<li>先到的先处理</li>
+<li>问题：在这种处理器分配的情况下，I/O设备的阻塞问题很难受。(当I/O设备未被使用时，要求I/O访问的进程在准备队列中等待）。</li>
+<li>simple, fair</li>
+</ul>
+<a href="#shortest-process-next-spn--shortest-job-first-sjf"><h5 id="shortest-process-next-spn--shortest-job-first-sjf"><span class="hanchor" ariaLabel="Anchor"># </span>Shortest Process Next (SPN) / Shortest Job First (SJF)</h5></a>
+<ul>
+<li>先处理等待队列里用时最短的</li>
+<li>问题1：操作系统如何知道作业需要多长时间来处理？ 可能的解决方案：对于类似的作业，看看已经处理过的作业的平均值。</li>
+<li>问题2：较长进程的饥饿。(当然，只有在一开始就不知道所有要处理的进程的情况下，才会出现饥饿现象）。</li>
+<li>optimal for NP-Scheduling, short Antwortzeit,  but hard to realise</li>
+</ul>
+<a href="#523-preemptive-scheduling-algorthmen"><h4 id="523-preemptive-scheduling-algorthmen"><span class="hanchor" ariaLabel="Anchor"># </span>5.2.3 Preemptive Scheduling-Algorthmen</h4></a>
+<ul>
+<li>注意： race condition</li>
+</ul>
+<a href="#shortest-remaining-processing-time-srpt"><h5 id="shortest-remaining-processing-time-srpt"><span class="hanchor" ariaLabel="Anchor"># </span>Shortest Remaining Processing Time (SRPT)</h5></a>
+<ul>
+<li>SPN的剩余停留时间版</li>
+<li>SPN存在的问题同样存在</li>
+</ul>
+<a href="#round-robin-rr"><h5 id="round-robin-rr"><span class="hanchor" ariaLabel="Anchor"># </span>Round Robin (RR)</h5></a>
+<ul>
+<li>排队发糖，还要就重新排</li>
+<li>extern vor intern: 刚结束的在刚来的后面</li>
+<li>优点： fair, kein Verhngern; praktisch implementierbar</li>
+<li>AWZ与现有的Prozess数量相关</li>
+</ul>
+<a href="#524-priority-scheduling-ps"><h4 id="524-priority-scheduling-ps"><span class="hanchor" ariaLabel="Anchor"># </span>5.2.4 Priority Scheduling (PS)</h4></a>
+<ul>
+<li>Vorteile:
+<ul>
+<li>Wichtige Prozesse können bevorzugt werden:
+Bislang haben wir bei “guten” Scheduling-Algorithmen ein Bevorzugen kurzer Prozesse
+beobachtet )wichtige=kurze Prozesse sollen schnell abgearbeitet werden, d.h. eine hohe Priorität bekommen.</li>
+<li>praktisch implementierbar</li>
+</ul>
+</li>
+<li>Nachteile:
+<ul>
+<li>Verhungern von Prozessen mit niedriger Priorität</li>
+<li>relativ schlechte mittlere Verweildauer</li>
+</ul>
+</li>
+</ul>
+<a href="#525-multilevel-feedback-queueing-mlfq"><h4 id="525-multilevel-feedback-queueing-mlfq"><span class="hanchor" ariaLabel="Anchor"># </span>5.2.5 Multilevel Feedback Queueing (MLFQ)</h4></a>
+<ul>
+<li><img src="/attachments/image_1640886347948_0.png" width="auto" /></li>
+<li><img src="/attachments/image_1640886352177_0.png" width="auto" /></li>
+</ul>
+<a href="#53-prozess-wechsel"><h3 id="53-prozess-wechsel"><span class="hanchor" ariaLabel="Anchor"># </span>5.3 Prozess wechsel</h3></a>
+<ul>
+<li><strong>Dispatcher</strong></li>
+<li><strong>Dispatching</strong>: Realisierung des eigentlichen Kontextwechsels. Unterbrechung des aktuellen Prozesses, Starten des neuen Prozesses.</li>
+</ul>
+<a href="#54-arten-des-schedulings"><h3 id="54-arten-des-schedulings"><span class="hanchor" ariaLabel="Anchor"># </span>5.4 Arten des Schedulings</h3></a>
+<ul>
+<li><img src="/attachments/image_1640886773159_0.png" width="auto" /></li>
+</ul>
+<a href="#k6-deadlock"><h2 id="k6-deadlock"><span class="hanchor" ariaLabel="Anchor"># </span>K6 Deadlock</h2></a>
+<ul>
+<li>Philosophenproblem</li>
+<li><strong>Deadlock</strong>
+<ul>
+<li>死锁 如果至少有两个进程处于相互等待状态，并且即使释放其他可能的进程的所有资源也不能释放这种状态，那么系统就处于死锁状态。</li>
+<li>四个条件
+<ul>
+<li><img src="/attachments/image_1644414243833_0.png" width="auto" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#arten-von-bm"><h3 id="arten-von-bm"><span class="hanchor" ariaLabel="Anchor"># </span>Arten von BM</h3></a>
+<ul>
+<li>wiederverwendbar
+<ul>
+<li>teilbar</li>
+<li>unteilbar: kann von nur einem Prozess gleichzeitig verwendet werden</li>
+</ul>
+</li>
+<li>konsumierbar</li>
+<li><strong>Prozessfortschrittsdiagramm</strong>
+<ul>
+<li>路线只能向上或向右，分别代表两个进程的处理</li>
+<li>unmöglich: 两者都需要同一个BM的区间，线不可能走进去</li>
+<li>unsicher: 暂时没有deadlock, 但继续走下去必定遇到deadlock的区间</li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1640946462463_0.png" width="auto" alt="image.png"  /></li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1640946468617_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+</li>
+<li>此处引入：<a href="/permanent/Petri-Netze" rel="noopener" class="internal-link" data-src="/permanent/Petri-Netze">Petri-Netze</a></li>
+</ul>
+<a href="#k7-prozesskoordination"><h2 id="k7-prozesskoordination"><span class="hanchor" ariaLabel="Anchor"># </span>K7 Prozesskoordination</h2></a>
+<a href="#71-nebenläufigkeit"><h3 id="71-nebenläufigkeit"><span class="hanchor" ariaLabel="Anchor"># </span>7.1 Nebenläufigkeit</h3></a>
+<ul>
+<li><strong>Unabhängige Abläufe</strong>
+<ul>
+<li>需要不同的资源</li>
+<li>Gegebenfalls parallel auszuführende Benuzeraufträge, die sich gegenseitig nicht beeinflussen, d.h die für ihre Ausführung unterschiedliche Ressourcen des Systems benötigen(Speicher, Peripheriegeräte, etc)</li>
+</ul>
+</li>
+<li><strong>Abhängige Abläufe</strong>
+<ul>
+<li>需要一样的资源</li>
+<li>Koorperierende Proyess, die voreinander abhängig sind, da sie z.B. über geimeisame Speicherbereiche Daten austauschen oder Betriebsmittel gemeisam nutzen.</li>
+</ul>
+</li>
+<li><strong>Quasi-Paralleilität</strong>
+<ul>
+<li>mehrere Prozesse von einer CPU</li>
+<li>Parallele Abläufe sind quasi-parpallel, wenn mehrere Prozesse von einem Prozessor stückweise bearbeitet werden(preemptive Schedulingstrategien)</li>
+</ul>
+</li>
+<li><strong>Paralleilität</strong>
+<ul>
+<li>mehrere Prozess von mehreren CPUs</li>
+<li>Parallel Abläufe sind (echt) parallel, wenn mehrere Prozessoren ein oder mehrere Prozesse bearbeiten (Mehrprozessorsysteme)</li>
+</ul>
+</li>
+<li><strong>Nebenläufigkeit</strong>
+<ul>
+<li>Nebenläufigkeit = Parallelität + Abhängigkeit</li>
+</ul>
+</li>
+<li><strong>Synchrones Ablaufverhalten</strong>
+<ul>
+<li>Alle Abläufe sind streng getakt, so dass jeder der  beteiligten Prozess zu einem bestimmten Zeitpunkt an einer bestimmten Stelle seiner Ausführung angekommen ist.</li>
+</ul>
+</li>
+<li><strong>Asynchrones Ablaufverhalten</strong>
+<ul>
+<li>Alle Abläufe erfolgen ungeregelt, d.h. eine Koordination wird durch das Eintreffen bestimmter Ereignisses erzielt. z.B. wenn ein bestimmte Signal kommt, dann wird ein bestimmter Ablauf initiiert.</li>
+</ul>
+</li>
+</ul>
+<a href="#72-kritische-bereiche"><h3 id="72-kritische-bereiche"><span class="hanchor" ariaLabel="Anchor"># </span>7.2 Kritische Bereiche</h3></a>
+<ul>
+<li><strong>Kritische Bereich</strong>
+<ul>
+<li>Teil eines Programms (ein paar Zeilen Programm code), in der bei Ausführung der Prozess auf gemeinsam genutzte BM zugreift</li>
+</ul>
+</li>
+<li>问题: 没有sync的E/V问题
+<ul>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1641674389583_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+</li>
+<li>Lösungen:
+<ul>
+<li>
+<ol>
+<li>nicht-preemptive</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Ringpuffer</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><strong>Ringpuffer</strong>
+<ul>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1641674470577_0.png" width="auto" alt="image.png"  /></li>
+<li><strong>in</strong> 指向第一个空位置</li>
+<li><strong>out</strong> 指向第一个要被取出的位置</li>
+<li>开始时 in = out</li>
+<li>判断饱和: out = (in+1) mod MAX</li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1641674555955_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+</li>
+</ul>
+<a href="#73-wechselseitiger-ausschluss-互斥访问"><h3 id="73-wechselseitiger-ausschluss-互斥访问"><span class="hanchor" ariaLabel="Anchor"># </span>7.3 Wechselseitiger Ausschluss 互斥访问</h3></a>
+<ul>
+<li><strong>Wechselseitiger Ausschluss</strong>
+<ul>
+<li>Das Problem wechselseitiger Ausschluss besteht darin, Algorithmen zu finden, die - sobald sich ein Prozess in KB befindet - es keinem anderen Prozess mehr gestatten, den kritischen Bereich zu betreten</li>
+</ul>
+</li>
+<li>Drei <strong>Bedingungen</strong> fuer eine richtige Loesung des WA:
+<ul>
+<li>
+<ol>
+<li><strong>Mutual Exclusion</strong>
+Zu jedem Zeitpunkt darf sich hoechstens ein Prozess im KB befinden.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><strong>Progress</strong>
+Kein Prozess der ausserhalb seines KB laeuft, darf andere Prozess blockieren.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li><strong>Bounded Waiting</strong>
+Kein Prozess darf beliebig/unendlich lange warten muessen, bis er in einer KB kommt(endliche Zeit zwischen Anforderung und Betreten)</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#der-algorithmus-von-decker-erster-ansatz-软件算法"><h4 id="der-algorithmus-von-decker-erster-ansatz-软件算法"><span class="hanchor" ariaLabel="Anchor"># </span>Der Algorithmus von Decker (Erster Ansatz) 软件算法</h4></a>
+<ul>
+<li>思想
+<ul>
+<li>有一块变量, 存储一个int, 该编号表示现在可以访问BM的进程</li>
+<li>该进程访问完成后, 将编号改为下一个进程的编号</li>
+</ul>
+</li>
+<li>问题
+<ul>
+<li>Progress不满足: 如果其中某个进程已经结束, 那它不再需要使用BM, 也不会再去调整编号, 下一个进程永远等待</li>
+</ul>
+</li>
+<li>Code
+
+
+
+<img src="https://tongluoshao.space//../attachments/image_1641679997004_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+<a href="#der-algorithmus-von-decker-zweiter-ansatz-软件算法"><h4 id="der-algorithmus-von-decker-zweiter-ansatz-软件算法"><span class="hanchor" ariaLabel="Anchor"># </span>Der Algorithmus von Decker (Zweiter Ansatz) 软件算法</h4></a>
+<ul>
+<li>思想
+<ul>
+<li>所有进程都有一个布尔变量, 0 表示目前没有访问BM</li>
+<li>进程想要访问BM时, 先 check 一遍所有其他进程, 如果全为 0, 将自己的改为 1, 访问BM, 完成后改回 0</li>
+</ul>
+</li>
+<li>问题
+<ul>
+<li>Mutual Exclusion不满足: check 需要时间(下面代码while和设置flag之间), 如果同时间有另一个进程也发现其他所有进程全0, 就可能出现同时访问的情况</li>
+</ul>
+</li>
+<li>Code
+
+
+
+<img src="https://tongluoshao.space//../attachments/image_1641680325837_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+<a href="#der-algorithmus-von-decker-dritter-ansatz-软件算法"><h4 id="der-algorithmus-von-decker-dritter-ansatz-软件算法"><span class="hanchor" ariaLabel="Anchor"># </span>Der Algorithmus von Decker (Dritter Ansatz) 软件算法</h4></a>
+<ul>
+<li>思想
+<ul>
+<li>前两者结合</li>
+<li>所有进程都有一个布尔变量, 0 表示目前没有访问BM<strong>的需求</strong>(will)</li>
+<li>有一块变量, 存储一个int, 该编号表示现在可以访问BM的进程(darf)</li>
+<li>当一个进程想要访问BM, 先将自己的will设为1, 再把darf变量<strong>设为对方</strong>(ich will, du darfst)</li>
+<li>当且仅当「对方will+对方darfst」时等待, 否则可以访问BM</li>
+</ul>
+</li>
+<li>Code
+
+
+
+<img src="https://tongluoshao.space//../attachments/image_1641680898602_0.png" width="auto" alt="image.png"  />
+
+
+
+<img src="https://tongluoshao.space//../attachments/image_1641680903918_0.png" width="auto" alt="image.png"  />
+
+
+
+<img src="https://tongluoshao.space//../attachments/image_1641680909607_0.png" width="auto" alt="image.png"  /></li>
+<li>三个条件都满足</li>
+</ul>
+<a href="#interrupt-disablingunterbrechungsvermeidung-硬件算法"><h4 id="interrupt-disablingunterbrechungsvermeidung-硬件算法"><span class="hanchor" ariaLabel="Anchor"># </span>Interrupt Disabling(Unterbrechungsvermeidung) 硬件算法</h4></a>
+<ul>
+<li>Code
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">REPEAT
+</span></span><span class="line"><span class="cl">  &lt;Disable Interrupt&gt;
+</span></span><span class="line"><span class="cl">    &lt;KB&gt;
+</span></span><span class="line"><span class="cl">    &lt;Enable Interrupt&gt;
+</span></span><span class="line"><span class="cl">    &lt;unkB&gt;
+</span></span><span class="line"><span class="cl">FOREVER
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>缺点:
+<ul>
+<li>Ban掉中断很危险, 如果出了错, 没有中断处理机制来接手</li>
+<li>多进程环境下无法使用, 因为真并行是无法避免的</li>
+</ul>
+</li>
+<li>Test and Set
+<ul>
+<li>思想
+<ul>
+<li><code>i = 0</code>: BM 可用</li>
+<li><code>testset = true</code>: 允许使用</li>
+<li><code>testset(i)</code>
+<ul>
+<li>i = 0 =&gt; i = 1, testset = true</li>
+<li>i = 1 =&gt; i = 1, testset = false</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Code
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">REPEAT {nothing} UNTIL testset(i);
+</span></span><span class="line"><span class="cl">  &lt;KB&gt;
+</span></span><span class="line"><span class="cl">    i := 0;
+</span></span><span class="line"><span class="cl">    &lt;unkB&gt;
+</span></span><span class="line"><span class="cl">FOREVER
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">testset</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="n">testset</span> <span class="o">=</span> <span class="err">!</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+<a href="#74-semaphor-信号量"><h3 id="74-semaphor-信号量"><span class="hanchor" ariaLabel="Anchor"># </span>7.4 Semaphor 信号量</h3></a>
+<a href="#3-atomare-operationen"><h4 id="3-atomare-operationen"><span class="hanchor" ariaLabel="Anchor"># </span>3 atomare Operationen</h4></a>
+<ul>
+<li>init(S, Anfangswert);</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">S := Anfangswert;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>wait(S);
+<ul>
+<li>ohne Warteschlange</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">WHILE(S&lt;=0) SKIP;
+</span></span><span class="line"><span class="cl">S := S - 1;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>wait(S);
+<ul>
+<li>mit Warteschlange</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">S := S - 1;
+</span></span><span class="line"><span class="cl">IF (S&lt;0) THEN
+</span></span><span class="line"><span class="cl">    &lt;ordne Prozess in Warteschlange and Position -S ein&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>signal(S);
+<ul>
+<li>ohne Warteschlange</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">S := S + 1;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>signal(S);
+<ul>
+<li>mit Warteschlange</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">S := S + 1;
+</span></span><span class="line"><span class="cl">IF (S&lt;=0) THEN
+</span></span><span class="line"><span class="cl">    BEGIN
+</span></span><span class="line"><span class="cl">        &lt;setze laengsten wartenden Prozess rechnend&gt;
+</span></span><span class="line"><span class="cl">        &lt;erlaube Zugriff auf KB&gt;
+</span></span><span class="line"><span class="cl">    END;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>使用</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">REPEAT
+</span></span><span class="line"><span class="cl">    wait(S);
+</span></span><span class="line"><span class="cl">    &lt;kB&gt;
+</span></span><span class="line"><span class="cl">        signal(S);
+</span></span><span class="line"><span class="cl">        &lt;ukB&gt;
+</span></span><span class="line"><span class="cl">    UNTIL FALSE;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><a href="#ev-mit-semaphor"><h4 id="ev-mit-semaphor"><span class="hanchor" ariaLabel="Anchor"># </span>E/V mit Semaphor</h4></a>
+<ul>
+<li>S = Speicher 进入Speicher的权限
+P = Platz 空位
+B = Bestand 已使用位置
+S = 1
+b + p = MAX</li>
+<li><mark>正确示范</mark>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">init(s, 1)     // Zugriff
+</span></span><span class="line"><span class="cl">init(b, 0)
+</span></span><span class="line"><span class="cl">init(p, MAX)
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1642676923542_0.png" width="auto" alt="image.png"  /></li>
+<li>错误示范
+
+
+
+<img src="https://tongluoshao.space//../attachments/image_1642677038424_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+<a href="#ls-mit-semaphor"><h4 id="ls-mit-semaphor"><span class="hanchor" ariaLabel="Anchor"># </span>L/S mit Semaphor</h4></a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(* Writer *)
+</span></span><span class="line"><span class="cl">REPEAT
+</span></span><span class="line"><span class="cl">  wait(S);
+</span></span><span class="line"><span class="cl">    &lt;Schreibvorgang&gt;;
+</span></span><span class="line"><span class="cl">    signal(S);
+</span></span><span class="line"><span class="cl">UNTIL FALSE;
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">(* Reader *)
+</span></span><span class="line"><span class="cl">REAPEAT
+</span></span><span class="line"><span class="cl">  wait(l);
+</span></span><span class="line"><span class="cl">    n := n+1;
+</span></span><span class="line"><span class="cl">    IF (n=1) THEN wait(s);
+</span></span><span class="line"><span class="cl">    signal(l);
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    &lt;Lesevorgang&gt;;
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    wait(l);
+</span></span><span class="line"><span class="cl">    n := n-1;
+</span></span><span class="line"><span class="cl">    IF (n=0) THEN signal(s);
+</span></span><span class="line"><span class="cl">    signal(l);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1642677119003_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+<a href="#75-monitore-管程"><h3 id="75-monitore-管程"><span class="hanchor" ariaLabel="Anchor"># </span>7.5 Monitore 管程</h3></a>
+<ul>
+<li><strong>管程机制</strong>：代表共享资源的数据结构，以及由该共享数据结构实施操作的一组过程)所组成的资源管理程序共同构成了一个操作系统的资源管理模块，称为<strong>管程</strong></li>
+<li><strong>Monitor</strong>.
+<ul>
+<li>ein Objekt, das sich im wesentlichen aus eine <strong>Menge von Prozeduren</strong> auf gegebenfalls gemeinsam genutzen Daten zusammensetzt.</li>
+<li>Zu jedem Zeitpunkt stets nur von <strong>einem</strong> Prozess genutzt werden darf.</li>
+</ul>
+</li>
+</ul>
+<a href="#operationen"><h4 id="operationen"><span class="hanchor" ariaLabel="Anchor"># </span>Operationen</h4></a>
+<ul>
+<li>cwait(c); 暂停调用该操作的进程，直到条件c发生</li>
+<li>csignal(c);  恢复一个等待条件c的已暂停的进程的执行。如果有多个进程则选其一。如果没有则不作为。</li>
+</ul>
+<a href="#bestandteilen-von-monitoren"><h4 id="bestandteilen-von-monitoren"><span class="hanchor" ariaLabel="Anchor"># </span>Bestandteilen von Monitoren</h4></a>
+<ul>
+<li>Ⅰ. lokale Daten 局部于管程的共享数据结构</li>
+<li>Ⅱ. Bedingungsvariablen 条件变量 condition</li>
+<li>Ⅲ. Prozeduren 对数据结构进程操作的一组进程</li>
+<li>Ⅳ. initialisierungscode 对局部于管程的共享数据设置初始值的语句</li>
+<li>除了在管程中的进程，其他进程：
+<ul>
+<li>
+<ol>
+<li>要么已经离开</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>要么在WS里等到进入</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>要么进入了 Ⅲ Prozuduren 的等待队列</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>结构图
+
+
+
+<img src="https://tongluoshao.space//../attachments/image_1642678752196_0.png" width="auto" alt="image.png"  /></li>
+<li>Bsp.
+<ul>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1642678853835_0.png" width="auto" alt="image.png"  /></li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1642678858436_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+</li>
+</ul>
+<a href="#76-message-passing"><h3 id="76-message-passing"><span class="hanchor" ariaLabel="Anchor"># </span>7.6 Message Passing</h3></a>
+<ul>
+<li>分成 send 和 receive</li>
+<li>分成 mit Blockierung 和 ohne Blockierung</li>
+</ul>
+<a href="#761-blockierung"><h4 id="761-blockierung"><span class="hanchor" ariaLabel="Anchor"># </span>7.6.1 Blockierung</h4></a>
+<ul>
+<li>
+<ol>
+<li>Bl send, bl receive: ineffezient, sender 和 receiver 一起等</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>nb send, bl receive: effizienter, sender 只 bl 发送需要的时间</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>nb  receive:Blockierung &amp; Puffer</li>
+</ol>
+</li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1642948390734_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+<a href="#762-addressierung"><h4 id="762-addressierung"><span class="hanchor" ariaLabel="Anchor"># </span>7.6.2 Addressierung</h4></a>
+<ul>
+<li>
+<ol>
+<li>direkte addressierung</li>
+</ol>
+<ul>
+<li>Send Primitiv 拥有 Zielprozesses 的 Identifikator
+Zielprozesse 要么知道发送源， 要么什么消息都收</li>
+</ul>
+</li>
+<li>
+<ol start="2">
+<li>Inderekte Addressierung</li>
+</ol>
+<ul>
+<li>先发送到共用的Datestructure</li>
+<li>四种：
+
+
+
+<img src="https://tongluoshao.space//../attachments/image_1642949868321_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+</li>
+<li>用Mailbox实现互斥
+思想：收到NULL邮件的人才能进入KB，没有msg收的全被blockiert
+
+
+
+<img src="https://tongluoshao.space//../attachments/image_1642949895028_0.png" width="auto" alt="image.png"  /></li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1642949921424_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+<a href="#8-speicher"><h2 id="8-speicher"><span class="hanchor" ariaLabel="Anchor"># </span>8 Speicher</h2></a>
+<a href="#81-speicherverwaltung"><h3 id="81-speicherverwaltung"><span class="hanchor" ariaLabel="Anchor"># </span>8.1 Speicherverwaltung</h3></a>
+<ul>
+<li>5 Anforderung an die Speicherverwaltung
+<ul>
+<li><strong>Relocation</strong> 搬迁，重复代码必须能转化成实际的物理地址</li>
+<li><strong>Protection</strong></li>
+<li><strong>Sharing</strong>. Die Verwaltung muss verschiedenen Prozessen den Zugriff auf einen gemeisam genutzen Speicherbereich ermoeglichen.</li>
+<li><strong>Logical Organization</strong>. Die HS und Sekundaerspeicher has 1d Adressraum -&gt; besser eine modulare Organisation realisieren.</li>
+<li><strong>Physical Organization</strong>. Transport von Daten zwischen HS und HinteS.</li>
+</ul>
+</li>
+</ul>
+<a href="#82-speicherpartitionierung"><h3 id="82-speicherpartitionierung"><span class="hanchor" ariaLabel="Anchor"># </span>8.2 Speicherpartitionierung</h3></a>
+<ul>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1644091035729_0.png" width="auto" alt="image.png"  /></li>
+<li><strong>Interne Fragmentierung</strong>
+<ul>
+<li>Als interne Fragmentierung bezeichnet man die Effekt, viele kleine Module belegen die Partiionen, so dass viel Platz verschwendet wird.</li>
+</ul>
+</li>
+<li><strong>Externe Fragmentierung</strong>
+<ul>
+<li>Ist keine genuegend grosses, zusammenhaegende Speicherstueckt mehr frei, obwohl die Summe  der freien Stueckt reichen wurde.</li>
+</ul>
+</li>
+</ul>
+<a href="#821-feste-partitionierung"><h4 id="821-feste-partitionierung"><span class="hanchor" ariaLabel="Anchor"># </span>8.2.1 Feste Partitionierung</h4></a>
+<ul>
+<li>
+<ol>
+<li>alle Partitionen gleich gross</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>nicht gleich</li>
+</ol>
+</li>
+<li>Problem: <strong>Interne Fragmentierung</strong>.</li>
+</ul>
+<a href="#822-dynamishe-paritionierung"><h4 id="822-dynamishe-paritionierung"><span class="hanchor" ariaLabel="Anchor"># </span>8.2.2 Dynamishe Paritionierung</h4></a>
+<ul>
+<li>verwendet so viele wie gebraucht</li>
+<li>Problem: ** Externe Fragmentierung**</li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/2022-01-19-14-16-17_1644051202635_0.png" width="auto" alt="2022-01-19-14-16-17.png"  /></li>
+<li><strong>Compaction</strong>: Von Zeit zu Zeit werden die Prozesse zu inem Block zusammengechoben</li>
+</ul>
+<a href="#823-buddy-system"><h4 id="823-buddy-system"><span class="hanchor" ariaLabel="Anchor"># </span>8.2.3 Buddy-System</h4></a>
+<ul>
+<li>Buddy-Bau: Halbieren Strategie, bis das Programm fit ist.</li>
+<li>aber: nicht optimal!</li>
+<li>Addressierung
+<ul>
+<li>Bisection, gemeisame Prefix zu suchen !</li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/skript_ws2122_2_1644051299794_0.png" width="auto" alt="skript_ws2122 2.png"  /></li>
+</ul>
+</li>
+<li>- interne und externe Fragmentierung</li>
+</ul>
+<a href="#83-virtueller-speicher"><h3 id="83-virtueller-speicher"><span class="hanchor" ariaLabel="Anchor"># </span>8.3 Virtueller Speicher</h3></a>
+<a href="#831-prinzip"><h4 id="831-prinzip"><span class="hanchor" ariaLabel="Anchor"># </span>8.3.1 Prinzip</h4></a>
+<ul>
+<li>Def. 8.1 <strong>Physischer Adressraum</strong>. Die Menge der im Arbeitsspeicher physisch vorhandenen Speicherplaetze bildet den realen oder physischern Adressraum P.</li>
+<li>Def. 8.2 <strong>Logischer Adressraum</strong>. Dem Physischen oder realen Adressraum steht ein virtueller oder logischer Adressraum L gegenueber.</li>
+<li>Die <strong>Aufgabe</strong> der Speicherverwaltung besteht in der Zuordnung von logischen zu physischen Adressen. L -&gt; P.
+<ul>
+<li>|L| &lt;= |P|: einfach problemlos.</li>
+<li>|L| &gt; |P|: Klassische Fall. -&gt;</li>
+</ul>
+</li>
+<li>CPU kann nur die Hauptspeicher zugreifen.</li>
+</ul>
+<a href="#832-datentransport"><h4 id="832-datentransport"><span class="hanchor" ariaLabel="Anchor"># </span>8.3.2 Datentransport</h4></a>
+<ul>
+<li><strong>Seite/Page</strong>: Feste Laenge definierte Transporteinheiten in logischem Adressraum.</li>
+<li><strong>Seitenrahmen/Frame</strong>:**: Feste Laenge definierte Transporteinheiten in realem Adressraum(HS).</li>
+<li>laden:
+<ul>
+<li>Hintegrundspeicher -&gt; Hauptspeicher</li>
+<li>Page -&gt; Frame</li>
+<li>Pages und Frames sind gleich gross.</li>
+</ul>
+</li>
+</ul>
+<a href="#833-abbildung-virtueller-auf-reale-adressen"><h4 id="833-abbildung-virtueller-auf-reale-adressen"><span class="hanchor" ariaLabel="Anchor"># </span>8.3.3 Abbildung virtueller auf reale Adressen</h4></a>
+<ul>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/skript_ws2122_3_1644052460386_0.png" width="auto" alt="skript_ws2122 3.png"  /></li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1644052751266_0.png" width="auto" alt="image.png"  /></li>
+<li>e.g. MI-Programmadresse
+
+
+
+<img src="https://tongluoshao.space//../attachments/image_1644052963104_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+<a href="#84-paging"><h3 id="84-paging"><span class="hanchor" ariaLabel="Anchor"># </span>8.4 Paging</h3></a>
+<a href="#841-paging-strategien"><h4 id="841-paging-strategien"><span class="hanchor" ariaLabel="Anchor"># </span>8.4.1 Paging-Strategien</h4></a>
+<ul>
+<li><strong>Demand Paging</strong>. Wird von HS gefordert.(liegt ein Seitenfehler)</li>
+<li><strong>Demand Prepaging</strong>. Zu viel gefordert, erst behalten.</li>
+<li><strong>Look-Ahead-Paging</strong>. Auch nach anderen Kriterien nachladen koennen.</li>
+</ul>
+<a href="#842-seitenaustausche-algorithmen"><h4 id="842-seitenaustausche-algorithmen"><span class="hanchor" ariaLabel="Anchor"># </span>8.4.2 Seitenaustausche Algorithmen</h4></a>
+<ul>
+<li>总览
+<ul>
+<li><strong>Resident Set Management Policy</strong>
+<ul>
+<li>规定给定的页数是固定的还是可变的进程在处理时应始终位于主内存中。 （重复：一些信息需要作为进程的驻留集不断地存在于主存中能得到的。）此外，此政策可用于限制符合交换条件的数量页面是受限的，这个事实被称为 <strong>Replacement Scope</strong>。</li>
+</ul>
+</li>
+<li><strong>Fetch Policy</strong>
+<ul>
+<li>本质上确定是否只有在出现页面错误时才重新加载新页面（Demand Paging）或是否也可以重新加载页面如果没有页面错误（Demand Prepaging）。后一种情况可能很有用 - 例如在页面错误的情况下几页也可以一次很好地作为一个块传输。大多数操作系统都实现了Demand Prepaging。</li>
+</ul>
+</li>
+<li><strong>Placement Policy</strong>(Unwichtig)
+<ul>
+<li>确定将进程的一部分写入内存的位置，例如根据最佳拟合、首次拟合……算法。
+此规则与分页无关，因为它不会带来任何存储优势</li>
+</ul>
+</li>
+<li><strong>Replacement Policy</strong> 页面置换算法
+<ul>
+<li>OPT 6</li>
+<li>FIFO-Strategy 9</li>
+<li>LRU 7</li>
+<li>LFU -</li>
+<li>Climb 6</li>
+<li>Clock 8</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>算法
+<ul>
+<li><strong>Optimal Strategy(OPT)</strong>
+<ul>
+<li>am laengste nicht gefordert</li>
+<li>+optimal</li>
+<li>-nicht realisierbat</li>
+</ul>
+</li>
+<li><strong>FIFO Strategy</strong>
+<ul>
+<li>am laengst im Frame bleiben.</li>
+<li>+einfach</li>
+<li>-nicht beste</li>
+</ul>
+</li>
+<li><strong>Least Recently Used(LRU)</strong>
+<ul>
+<li>verkette Liste, am einfachsten realisierbar</li>
+</ul>
+</li>
+<li><strong>Least Frequently Used(LFU)</strong>
+<ul>
+<li>Aufwand gross, kaum genutzt</li>
+</ul>
+</li>
+<li><strong>Climb</strong>
+<ul>
+<li>bei jedem Aufruf eine Position hoeher</li>
+<li>relative einfach, gut</li>
+</ul>
+</li>
+<li><strong>Clock-Strategie</strong>
+<ul>
+<li>in einer zyklischen Liste mit m Ziffern</li>
+<li>Zeige auf aelteste Seite</li>
+<li>引入 Use Bit</li>
+<li>走开擦掉一次当前UB</li>
+<li>e.g.
+<ul>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/2022-01-29-17-51-39_1644053766582_0.png" width="auto" alt="2022-01-29-17-51-39.png"  />
+
+
+
+<img src="https://tongluoshao.space//../attachments/2022-01-29-17-55-25_1644053771656_0.png" width="auto" alt="2022-01-29-17-55-25.png"  />
+
+
+
+<img src="https://tongluoshao.space//../attachments/2022-01-29-17-59-35_1644053775524_0.png" width="auto" alt="2022-01-29-17-59-35.png"  />
+注意最后三个</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#843-minimierung-von-seitenfehlen"><h4 id="843-minimierung-von-seitenfehlen"><span class="hanchor" ariaLabel="Anchor"># </span>8.4.3 Minimierung von Seitenfehlen</h4></a>
+<ul>
+<li><strong>Belady&rsquo;s Anomalie(异常)</strong>: bei mehr Rahmen nicht immer weniger Seitenfehlrer</li>
+<li><strong>Stackalgorithmen</strong>: 保证Rahmen越多 Seitenfehler不会越多</li>
+<li><strong>Reference String</strong>: eine eindeutige Folge von Speicherzugriggen waehrend seiner Aus fuehrung.
+<ul>
+<li>e.g. 2 3 2 1 5 2 4 5 3 2 5 2</li>
+</ul>
+</li>
+<li><strong>Distance String</strong>
+<ul>
+<li>wie viele Frames m brache ich mind., damit KEIN Seitenfehlerauftritt.</li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/2022-01-29-18-34-17_1644053938378_0.png" width="auto" alt="2022-01-29-18-34-17.png"  /></li>
+<li>$C_k$ Anzahl der vorkommen von k in DS</li>
+<li>给出DS，求 m Rahmen 时的 #Seitenfehler: $C_\infty$ + $\sum{C_k}$, $\forall k:k&gt;m$</li>
+</ul>
+</li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/2022-01-29-18-53-33_1644053988462_0.png" width="auto" alt="2022-01-29-18-53-33.png"  />
+<ul>
+<li>r: Nr. der Referenz</li>
+<li>m: Anzahl der Frames</li>
+<li>M: eine Menge, das den Status des Speichers beschreibe</li>
+</ul>
+</li>
+</ul>
+<a href="#844-working-set-strategie"><h4 id="844-working-set-strategie"><span class="hanchor" ariaLabel="Anchor"># </span>8.4.4 Working Set Strategie</h4></a>
+<ul>
+<li><strong>Lifetime function</strong>
+<ul>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/2022-01-29-20-29-06_1644054037818_0.png" width="auto" alt="2022-01-29-20-29-06.png"  /></li>
+<li>找的这个 optimal 的 m</li>
+</ul>
+</li>
+<li><strong>Lokalitaetzprinzip</strong>: Die Vergangenheit ist (oft) mit der unmittelbare Zufunft korelliert.</li>
+<li><strong>Working Set Strategie</strong></li>
+<li>m variabel</li>
+<li>W(t,h)
+<ul>
+<li>Menge von Seiten</li>
+<li>t: der exakte Zeitpunkt einer Ersetzung</li>
+<li>h: Die Groesse des Rueckwaertsfernster</li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/2022-01-29-20-43-12_1644054134410_0.png" width="auto" alt="2022-01-29-20-43-12.png"  /></li>
+</ul>
+</li>
+<li>w(t,h)
+<ul>
+<li>Maechtigkeit</li>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/2022-01-29-20-44-30_1644054159983_0.png" width="auto" alt="2022-01-29-20-44-30.png"  /> 
+
+
+<img src="https://tongluoshao.space//2022-01-29-20-44-30.png" width="auto" alt=""  /></li>
+</ul>
+</li>
+<li>Strategie
+<ul>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/2022-01-29-20-51-46_1644054165754_0.png" width="auto" alt="2022-01-29-20-51-46.png"  /></li>
+</ul>
+</li>
+</ul>
+<a href="#85-segmentierungsstrategien"><h3 id="85-segmentierungsstrategien"><span class="hanchor" ariaLabel="Anchor"># </span>8.5 Segmentierungsstrategien</h3></a>
+<ul>
+<li><strong>Segmentierung Strategie</strong>
+<ul>
+<li>First Fit (FF):Plaziere das Segment in die erste passende Lücke.</li>
+<li>Best Fit (BF): kleinste</li>
+<li>Rotating First Fit (RFF)
+<ul>
+<li>放置方式与 FF 相同，但下一个间隙是从上一次放置的位置开始搜索的，即使用过的间隙的末端</li>
+<li>von vorne begonnen(wurde simulativ gezeigt die beste)</li>
+<li>von hinten begonnen</li>
+</ul>
+</li>
+<li>e.g.
+<ul>
+<li>
+
+
+<img src="https://tongluoshao.space//../attachments/image_1644054264107_0.png" width="auto" alt="image.png"  /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#9-ea-verwaltung"><h2 id="9-ea-verwaltung"><span class="hanchor" ariaLabel="Anchor"># </span>9 E/A Verwaltung</h2></a>
+<a href="#10-lokale-interprozesskommunikation"><h2 id="10-lokale-interprozesskommunikation"><span class="hanchor" ariaLabel="Anchor"># </span>10 Lokale Interprozesskommunikation</h2></a>
+<a href="#11-verteilte-system"><h2 id="11-verteilte-system"><span class="hanchor" ariaLabel="Anchor"># </span>11 Verteilte System</h2></a>
+
+
+      </div>
+    </article>
+    
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      <li>
+        <a href="/permanent/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA/" data-ctx="lmu - Betriebsystem" data-src="/permanent/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA" class="internal-link">操作系统理论</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/permanent/Petri-Netze/" data-ctx="lmu - Betriebsystem" data-src="/permanent/Petri-Netze" class="internal-link">Petri-Netze</a>
+      </li>
+      
+      
+      
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="https://tongluoshao.space/js/graph.6579af7b10c818dbd2ca038702db0224.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        <p style="margin:10px; ">
+        
+        
+        Made by evixenon using <a href="https://github.com/jackyzha0/quartz">Quartz</a>, © 2023
+
+        &nbsp;|&nbsp;粤 ICP 备2022002978号-1</p>
+
+        <ul>
+            
+            <li><a href="https://tongluoshao.space/">Home</a></li>
+            <li><a href="https://github.com/evixenon">GitHub</a></li><li><a href="https://space.bilibili.com/8557634">Bilibili</a></li></ul>
+    </footer>
+</div>
+
+
+</div>
+</body>
+</html>
