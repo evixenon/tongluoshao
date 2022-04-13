@@ -16,8 +16,12 @@ a, a:hover {
   color: #888;
 }
 
-a:visited {
+#content a:visited {
   color: rgb(0, 102, 204);
+}
+
+.site-title a, .site-title a:visited {
+  color: black;
 }
 
 .single-article h1, .single-article h2, .single-article h3 {
