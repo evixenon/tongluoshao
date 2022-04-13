@@ -16,7 +16,7 @@ a, a:hover {
   color: #888;
 }
 
-a:visited {
+#content a:visited {
   color: rgb(0, 102, 204);
 }
 
@@ -26,6 +26,7 @@ a:visited:hover {
 
 .site-title a {
   text-decoration: none;
+.site-title a, .site-title a:visited {
   color: black;
 }
 
