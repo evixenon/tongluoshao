@@ -1,3 +1,6 @@
+/**
+ * 组件简单工厂
+ */
 import React from 'react'
 import Decider from './Decider';
 import EmptyTool from './EmptyTool';

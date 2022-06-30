@@ -18,6 +18,7 @@ function Decider() {
   //   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(entities));
   // }, [entities]);
   
+  // TS 版的组件不能直接返回 Element[], 定义一个常量过度
   const componentArray = entities.map(entity => {
       return <DeciderEntity key={entity.id} entity={entity} setEntities={setEntities}/>
     })
@@ -25,6 +26,8 @@ function Decider() {
   function handleAddEntity() {
     if (inputRef.current) {
       const name = inputRef.current.value;
+      if (name === '') return;
+
       setEntities(prevEntities => {
         return [...prevEntities, {id: uuid(), name: name}];
       })
