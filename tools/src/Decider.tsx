@@ -32,7 +32,10 @@ function Decider() {
         return [...prevEntities, {id: uuid(), name: name}];
       })
       console.log(`[Decider] add ${name}.`);
+     
+      // 清空并 focus 输入框
       inputRef.current.value = '';
+      inputRef.current.focus();
     } else {
       console.log('[Decider] nothing added.')
     }
@@ -54,7 +57,7 @@ function Decider() {
       <p>做决定机 v0.1</p>
       <div className='entities'>{componentArray}</div>
       <label>
-        <input ref={inputRef} type='name'></input>
+        <input autoFocus ref={inputRef} type='name'></input>
         <button onClick={handleAddEntity}>添加</button>
         <button onClick={handleClear}>清空</button>
       </label>
