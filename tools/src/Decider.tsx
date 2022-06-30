@@ -41,6 +41,14 @@ function Decider() {
     }
   }
   
+  // 按 Enter 也触发添加
+  function onKeyUp(event:any) {
+    if (event.keyCode === 13 /* Enter */ ) {
+      handleAddEntity();
+    }
+  }
+  
+  
   function handleClear() {
     setEntities([]);
     setResult('');
@@ -57,7 +65,7 @@ function Decider() {
       <p>做决定机 v0.1</p>
       <div className='entities'>{componentArray}</div>
       <label>
-        <input autoFocus ref={inputRef} type='name'></input>
+        <input autoFocus ref={inputRef} type='name' onKeyUp={onKeyUp}></input>
         <button onClick={handleAddEntity}>添加</button>
         <button onClick={handleClear}>清空</button>
       </label>
