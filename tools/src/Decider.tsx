@@ -3,6 +3,7 @@ import DeciderEntity from './DeciderEntity'
 import {v4 as uuid} from 'uuid';
 
 const LOCAL_STORAGE_KEY = 'decider.entities'
+const version: string = '0.2';
 
 function Decider() {
   const [entities, setEntities] = useState<any[]>([]);
@@ -62,7 +63,7 @@ function Decider() {
   
   return (
     <>
-      <p>做决定机 v0.1</p>
+      <p>做决定机 v{version}</p>
       <div className='entities'>{componentArray}</div>
       <label>
         <input autoFocus ref={inputRef} type='name' onKeyUp={onKeyUp}></input>
