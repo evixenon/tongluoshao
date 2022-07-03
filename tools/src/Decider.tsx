@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import DeciderEntity from './DeciderEntity'
 import {v4 as uuid} from 'uuid';
 
-const LOCAL_STORAGE_KEY = 'decider.entities'
+const LOCAL_STORAGE_KEY = 'decider_entities'
 const version: string = '0.2';
 
 function Decider() {
@@ -10,14 +10,14 @@ function Decider() {
   const [result, setResult] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
   
-  // useEffect(() => {
-  //   const storedEntities = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '{}');
-  //   if (storedEntities) setEntities(storedEntities);
-  // }, []);
+  useEffect(() => {
+    const storedEntities = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '{}');
+    if (storedEntities) setEntities(storedEntities);
+  }, []);
 
-  // useEffect(() => {
-  //   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(entities));
-  // }, [entities]);
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(entities));
+  }, [entities]);
   
   // TS 版的组件不能直接返回 Element[], 定义一个常量过度
   const componentArray = entities.map(entity => {
