@@ -3,7 +3,7 @@ import DeciderEntity from './DeciderEntity'
 import {v4 as uuid} from 'uuid';
 
 const LOCAL_STORAGE_KEY = 'decider_entities'
-const version: string = '0.2';
+const version: string = '0.3';
 
 function Decider() {
   const [entities, setEntities] = useState<any[]>([]);
