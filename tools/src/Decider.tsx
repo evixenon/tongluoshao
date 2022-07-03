@@ -18,11 +18,6 @@ function Decider() {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(entities));
   }, [entities]);
-  
-  // TS 版的组件不能直接返回 Element[], 定义一个常量过度
-  const componentArray = entities.map(entity => {
-      return <DeciderEntity key={entity.id} entity={entity} setEntities={setEntities}/>
-    })
     
   function handleAddEntity() {
     if (inputRef.current) {
@@ -48,8 +43,7 @@ function Decider() {
       handleAddEntity();
     }
   }
-  
-  
+   
   function handleClear() {
     setEntities([]);
     setResult('');
@@ -60,6 +54,22 @@ function Decider() {
     setResult(`就决定是你了！${randres.name}！`);
     console.log(`[Decider] result: ${randres.name}`)
   }
+  
+  function duplicateEntity(id: string) {
+    const entity = entities.find(entity => entity.id === id);
+    setEntities([...entities, {id:uuid(), name:entity.name}]);
+  }
+  
+  function deleteEntity(id: string) {
+    const newEntities = entities.filter(entity => entity.id !== id);
+    setEntities(newEntities);
+  }
+  
+  // TS 版的组件不能直接返回 Element[], 定义一个常量过度
+  const componentArray = entities.map(entity => {
+      return <DeciderEntity key={entity.id} entity={entity} 
+      duplicateEntity={duplicateEntity} deleteEntity={deleteEntity} />
+  });
   
   return (
     <>

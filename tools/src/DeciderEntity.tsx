@@ -1,12 +1,23 @@
 import React from 'react'
 
 function DeciderEntity(props: any) {
+  function duplicateEntity() {
+    props.duplicateEntity(props.entity.id);
+  }
+  
+  function deleteEntity() {
+    props.deleteEntity(props.entity.id);
+  }
 
   return (
+    <div>
     <label>
-        <span className='entity'>&nbsp;|{props.entity.name}|&nbsp;</span>
+        {props.entity.name} &nbsp;
+        <button onClick={duplicateEntity}>+</button>
+        <button onClick={deleteEntity}> - </button>
         &nbsp;
     </label>
+    </div>
   )
 }
 
