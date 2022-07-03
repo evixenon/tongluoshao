@@ -5,11 +5,16 @@ export default function Todo(props:any) {
     props.toggleTodo(props.todo.id);
   }
   
+  function deleteTodo() {
+    props.deleteTodo(props.todo.id);
+  }
+  
   return (
     <div>
         <label>
         <input type='checkbox' checked={props.todo.complete} onChange={toggleTodo}></input>
-        {props.todo.name}
+        {props.todo.name} &nbsp;
+        <button onClick={deleteTodo}> - </button>
         </label>
     </div>
   )
