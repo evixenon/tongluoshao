@@ -3,7 +3,7 @@ import Todo from './Todo';
 import {v4 as uuid} from 'uuid';
 
 const LOCAL_STORAGE_KEY = 'todolist_todos';
-const version = '0.1';
+const version = '0.2';
 
 export default function TodoList() {
   const [todos, setTodos] = useState<any[]>([]);
@@ -51,6 +51,11 @@ export default function TodoList() {
     setTodos([...todos]);
   }
   
+  function deleteTodo(id: string) {
+    const newTodos = todos.filter(todo => todo.id !== id);
+    setTodos(newTodos);
+  }
+  
   function handleClearAll() {
     setTodos([]);
   }
@@ -61,19 +66,21 @@ export default function TodoList() {
   
   // render component list
   const componentArray = todos.map((todo) => {
-    return <Todo todo={todo} toggleTodo={toggleTodo} />;
+    return <Todo todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>;
   });
   
   return (
     <>
-    <div>Todo List v{version}</div>
+    <div><p>Todo List v{version}</p></div>
     <div className='entities'>{componentArray}</div>
     <label>
         <input type='text' ref={inputRef} onKeyUp={handleKeyUp} autoFocus></input>
         <button onClick={handleAddTodo} >添加</button>
         <button onClick={handleClearAll}>清空</button>
         <button onClick={handleClearCompleted}>清空已完成</button>
-        <p>总计{todos.length}项，{todos.filter(todo => todo.complete).length}项已完成</p>
+    </label>
+    <label>
+        总计{todos.length}项，{todos.filter(todo => todo.complete).length}项已完成
     </label>
     </>
   )
