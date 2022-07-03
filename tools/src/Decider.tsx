@@ -63,7 +63,7 @@ function Decider() {
   
   return (
     <>
-      <p>做决定机 v{version}</p>
+      <div><p>做决定机 v{version}</p></div>
       <div className='entities'>{componentArray}</div>
       <label>
         <input autoFocus ref={inputRef} type='name' onKeyUp={onKeyUp}></input>
