@@ -4,14 +4,17 @@
 import React from 'react'
 import Decider from './Decider';
 import EmptyTool from './EmptyTool';
+import TodoList from './TodoList';
 
 function ToolApp(props: {name: string;}): JSX.Element {
     
   function renderApp(): JSX.Element {
     if (props.name === '') return <EmptyTool />;
     switch (props.name) {
-        case 'decider':
+        case 'Decider':
             return <Decider />
+        case 'TodoList':
+            return <TodoList />
         default:
             return <EmptyTool />
     }

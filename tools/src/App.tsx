@@ -17,7 +17,9 @@ function App() {
       <header className="App-header">
         <label>
           选择工具：
-          <button className='App-link' onClick={() =>{changeApp('decider')}}>做决定机</button></label>
+          <button className='App-link' onClick={() =>{changeApp('Decider')}}>做决定机</button>
+          <button className='App-link' onClick={() =>{changeApp('TodoList')}}>Todo</button>
+        </label>
         <img src={logo} className="App-logo" alt="logo" />
 
         <ToolApp name={toolName} />
