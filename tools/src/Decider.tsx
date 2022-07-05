@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import DeciderEntity from './DeciderEntity'
 import {v4 as uuid} from 'uuid';
+import EmptyTool from './EmptyTool';
 
 const LOCAL_STORAGE_KEY = 'decider_entities'
 const version: string = '0.3';
@@ -66,10 +67,15 @@ function Decider() {
   }
   
   // TS 版的组件不能直接返回 Element[], 定义一个常量过度
-  const componentArray = entities.map(entity => {
-      return <DeciderEntity key={entity.id} entity={entity} 
-      duplicateEntity={duplicateEntity} deleteEntity={deleteEntity} />
-  });
+  var componentArray: (JSX.Element[] | null);
+  if (!Array.isArray(entities)) {
+    throw new Error("加载失败，请刷新页面!");
+  } else {
+    componentArray = entities.map(entity => {
+        return <DeciderEntity key={entity.id} entity={entity} 
+        duplicateEntity={duplicateEntity} deleteEntity={deleteEntity} />
+    });
+  }
   
   return (
     <>
