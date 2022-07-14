@@ -67,12 +67,11 @@ export default function TodoList() {
   // render component list
   var componentArray: (JSX.Element[] | null);
   if (!Array.isArray(todos)) {
-    throw new Error("加载失败，请刷新页面!");
-  } else {
-    componentArray = todos.map(todo => {
-      return <Todo todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>;
-    });
+    setTodos([]);
   }
+  componentArray = todos.map(todo => {
+    return <Todo todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>;
+  });
   
   return (
     <>

@@ -69,13 +69,12 @@ function Decider() {
   // TS 版的组件不能直接返回 Element[], 定义一个常量过度
   var componentArray: (JSX.Element[] | null);
   if (!Array.isArray(entities)) {
-    throw new Error("加载失败，请刷新页面!");
-  } else {
-    componentArray = entities.map(entity => {
-        return <DeciderEntity key={entity.id} entity={entity} 
-        duplicateEntity={duplicateEntity} deleteEntity={deleteEntity} />
-    });
+      setEntities([])
   }
+  componentArray = entities.map(entity => {
+      return <DeciderEntity key={entity.id} entity={entity} 
+      duplicateEntity={duplicateEntity} deleteEntity={deleteEntity} />
+  });
   
   return (
     <>
