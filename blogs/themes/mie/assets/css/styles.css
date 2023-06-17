@@ -26,7 +26,6 @@ a:visited:hover {
 
 .site-title a {
   text-decoration: none;
-.site-title a, .site-title a:visited {
   color: black;
 }
 

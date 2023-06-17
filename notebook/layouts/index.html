@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+{{ partial "head.html" . }}
+
+<body>
+{{partial "search.html" .}}
+<div class="singlePage">
+    <!-- Begin actual content -->
+    {{partial "header.html" .}}
+    <article><div id="content">
+      <h1>知识库首页</h1>
+        {{partial "toc.html" .}}
+        {{partial "textprocessing.html" . }}
+        {{if $.Site.Data.config.enableRecentNotes}}
+          {{partial "recent.html" . }}
+        {{end}}
+    </div></article>
+    <!-- {{partial "footerIndex.html" .}} -->
+    {{partial "contact.html" .}}
+</div>
+</body>
+</html>

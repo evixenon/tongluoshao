@@ -1,0 +1,29 @@
+name: evixenon
+enableToc: false
+openToc: false
+enableLinkPreview: true
+enableLatex: true
+enableCodeBlockTitle: true
+enableCodeBlockCopy: true
+enableCallouts: true
+enableSPA: true
+enableFooter: true
+enableContextualBacklinks: true
+enableRecentNotes: true
+enableGitHubEdit: false
+enableMermaid: true
+GitHubLink: https://github.com/jackyzha0/quartz/tree/hugo/content
+search:
+  enableSemanticSearch: false
+  operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
+  operandIndexId: "REPLACE-WITH-YOUR-OPERAND-INDEX-ID"
+description:
+  Host your second brain and digital garden for free. Quartz features extremely fast full-text search,
+  Wikilink support, backlinks, local graph, tags, and link previews.
+page_title:
+  "TONGLUOSHAO"
+links:
+  - link_name: GitHub
+    link: https://github.com/evixenon
+  - link_name: Bilibili
+    link: https://space.bilibili.com/8557634
