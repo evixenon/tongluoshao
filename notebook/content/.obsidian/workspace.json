@@ -1,0 +1,245 @@
+{
+  "main": {
+    "id": "9ce339cb967ac6f5",
+    "type": "split",
+    "children": [
+      {
+        "id": "be66865371205e71",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee56fe476905312c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "permanent/设计模式.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b2cd58d1ec83dae8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "permanent/Git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e8f3b9d9503faece",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "permanent/UML 图.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2be67f8750129e45",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b18d5598ad33e0f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "278fd69e364c9867",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "c1ee86141bee727b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ca9b2b451f185ae2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#：",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "df8a278bfb564cc7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "10a7f46e3aa8099a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "fcea5fa7c548db34",
+    "type": "split",
+    "children": [
+      {
+        "id": "afe12b2a3be1eb9d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9c2ecf02067eb689",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "permanent/Git.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ccac4daa89bb37fd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "permanent/Git.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "4c2581bcebbb2d2d",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "b572e0a1fac580b9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "permanent/Git.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 275.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "workspaces:Manage workspace layouts": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "templater-obsidian:Templater": false,
+      "markdown-table-editor:Open Markdown Table Editor": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "b2cd58d1ec83dae8",
+  "lastOpenFiles": [
+    "permanent/UML 图.md",
+    "project/飞桨AI - 大模型应用开发技巧与实战.md",
+    "permanent/C++基础.md",
+    "project/Paddle AI - 大模型应用开发技巧与实战.md",
+    "private/零样本, 少样本.md",
+    "private",
+    "permanent/设计原则.md",
+    "permanent/富甲天下.md",
+    "permanent/GLM.md",
+    "permanent/Fine Tuning.md",
+    "permanent/C++快速起步.md",
+    "attachments/Pasted image 20230619135420.png",
+    "attachments/Pasted image 20230619123246.png",
+    "attachments/Pasted image 20230619123010.png",
+    "attachments/Pasted image 20230618230031.png",
+    "permanent/从一个空文件夹开始.md",
+    "permanent/设计模式.md",
+    "permanent/Git.md",
+    "index/13 游戏.md",
+    "permanent/C++.md",
+    "permanent/多态.md",
+    "project/Project Asteria.md",
+    "permanent/Linear Algebra Concepts 线性代数概念.md",
+    "private/线性算符.md",
+    "permanent/机器学习.md",
+    "permanent/自回归语言模型.md",
+    "permanent/自编码语言模型.md",
+    "permanent/日语语法.md",
+    "_index.md",
+    "permanent/咩啊咩啊.md",
+    "attachments/3ed63bee587c4487f47374c75f1d8fa.jpg",
+    "attachments/Pasted image 20230616152110.png",
+    "attachments/Pasted image 20230616151237.png",
+    "attachments/Pasted image 20230616151133.png",
+    "attachments/Pasted image 20230616151012.png",
+    "attachments/Pasted image 20230616151001.png",
+    "attachments/诸神黄昏规划器.xlsx",
+    "attachments/武林立志传武功选择表bycsb01421v20190426m.xlsx",
+    "attachments/武林立志传人物60级属性.xlsx",
+    "attachments/常系数线性微分方程1_1641317159536_0.pdf",
+    "attachments/★武林立志传龙吟剑技能树+介绍+出处.doc",
+    "attachments/Wiederholungsfolie10.pdf",
+    "attachments/Wiederholungsfolie08.pdf",
+    "attachments/Wiederholungsfolie09.pdf",
+    "attachments/Wiederholungsfolie07.pdf",
+    "Untitled.canvas"
+  ]
+}
