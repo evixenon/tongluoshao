@@ -64,6 +64,11 @@ git branch --show-current
 git branch --list
 ```
 
+##### 删除分支
+```git
+git branch -d <name>
+```
+
 #### 合并
 
 ##### 合并冲突
@@ -73,11 +78,13 @@ git branch --list
 #### 回滚
 
 ##### 撤销一次 commit
+准确地说是反做
 ```git
 git revert <commit-hash>
 ```
 
 ##### 重置当前 commit
+当前head指向某一节点, 此节点后的都丢弃
 ```git
 git reset
 ```
