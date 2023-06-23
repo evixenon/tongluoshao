@@ -1,0 +1,10 @@
+.DS_Store
+notebook/resources
+notebook/public
+notebook/.idea
+notebook/content/.obsidian/workspace.json
+notebook/assets/indices/linkIndex.json
+notebook/assets/indices/contentIndex.json
+notebook/content/.obsidian
+notebook/linkmap
+notebook/static/linkmap
