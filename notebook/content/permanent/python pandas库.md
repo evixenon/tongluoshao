@@ -4,8 +4,13 @@ date: "2023-06-16"
 tags:
 - Python
 ---
+## 介绍
+- 带有 来源标签 的数据结构, 自动对齐
+- 灵活处理缺省
+- metadata
 
-## 读写 Dataframe
+## 使用
+### 读写 Dataframe
 
 ```python
 from pandas import DataFrame

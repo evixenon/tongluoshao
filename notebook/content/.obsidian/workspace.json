@@ -13,38 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent/设计模式.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b2cd58d1ec83dae8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "permanent/Git.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e8f3b9d9503faece",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "permanent/UML 图.md",
+                "file": "python numpy库.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -129,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "permanent/Git.md",
+                "file": "python numpy库.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent/Git.md",
+                "file": "python numpy库.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "permanent/Git.md"
+                "file": "python numpy库.md"
               }
             }
           }
@@ -175,7 +150,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 275.5
+    "width": 275.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,8 +169,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b2cd58d1ec83dae8",
+  "active": "ee56fe476905312c",
   "lastOpenFiles": [
+    "permanent/Python.md",
+    "Python 数据分析.md",
+    "Python Generator, Iterator.md",
+    "python matplotlib库.md",
+    "permanent/python pandas库.md",
+    "python numpy库.md",
+    "permanent/python unrar库.md",
+    "permanent/设计模式.md",
+    "permanent/Git.md",
+    "个站bug.md",
     "permanent/UML 图.md",
     "project/飞桨AI - 大模型应用开发技巧与实战.md",
     "permanent/C++基础.md",
@@ -211,20 +197,11 @@
     "attachments/Pasted image 20230619123010.png",
     "attachments/Pasted image 20230618230031.png",
     "permanent/从一个空文件夹开始.md",
-    "permanent/设计模式.md",
-    "permanent/Git.md",
     "index/13 游戏.md",
     "permanent/C++.md",
     "permanent/多态.md",
     "project/Project Asteria.md",
     "permanent/Linear Algebra Concepts 线性代数概念.md",
-    "private/线性算符.md",
-    "permanent/机器学习.md",
-    "permanent/自回归语言模型.md",
-    "permanent/自编码语言模型.md",
-    "permanent/日语语法.md",
-    "_index.md",
-    "permanent/咩啊咩啊.md",
     "attachments/3ed63bee587c4487f47374c75f1d8fa.jpg",
     "attachments/Pasted image 20230616152110.png",
     "attachments/Pasted image 20230616151237.png",
