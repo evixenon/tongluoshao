@@ -152,6 +152,8 @@ Index(['b', 'c'], dtype='object')
 
 **单项immutable!!** 但可以增删
 
+并且**不要用Integer作index或column name**, 容易出现奇奇怪怪的错误
+
 ##### 函数
 ```python
 # append(x)
@@ -162,9 +164,9 @@ Index(['b', 'c'], dtype='object')
 # A.insert(i, x) 在第i位插入x
 ```
 
-#### Essential Functions
+### Essential Functions
 
-##### reindex
+#### reindex
 ```python
 # 给 index 重新排序
 df.reindex(new_index_list)
@@ -199,7 +201,7 @@ dtype: object
 # bfill backwards
 ```
 
-#### drop
+#### drop 删除项, 行, 列
 ```python
 # drop 一个/多个
 # 只能在一维这么用
@@ -222,4 +224,101 @@ data.drop(["Ohio", "Utah"])
 # drop 一列
 data.drop("two", axis=1)
 data.drop(columns=["two"])
+```
+
+#### loc 和 iloc
+```python
+# loc 要用index名, iloc 是坐标
+>>> data
+          one  two  three  four
+Ohio        0    1      2     3
+Colorado    4    5      6     7
+Utah        8    9     10    11
+New York   12   13     14    15
+>>> data.loc["Ohio", "two"]
+1
+>>> data.iloc[0, 1]
+1
+
+
+# 并且可以用这两个函数修改
+>>> data.loc["Ohio":"Utah", "two"] = 5
+>>> data
+          one  two  three  four
+Ohio        0    5      2     3
+Colorado    4    5      6     7
+Utah        8    5     10    11
+New York   12   13     14    15
+```
+
+
+#### Filter/Selection
+```python
+>>> data
+          one  two  three  four
+Ohio        0    1      2     3
+Colorado    4    5      6     7
+Utah        8    9     10    11
+New York   12   13     14    15
+
+# 切片/片区选取
+>>> data[:-2]
+          one  two  three  four
+Ohio        0    5      2     3
+Colorado    4    5      6     7
+>>> data[:-2][:-1] # ???
+      one  two  three  four
+Ohio    0    5      2     3
+>>> data[:2][:1]
+      one  two  three  four
+Ohio    0    5      2     3
+
+# filter1, 返回 bool阵
+>>> data < 5
+              0      1      2      3
+Ohio       True   True  False   True
+Colorado   True  False  False  False
+Utah      False  False  False  False
+New York  False  False  False  False
+
+# filter2, 返回符合的数据
+>>> data[data[2] > 5]
+           0   1   2   3
+New York  12  13  14  15
+# 并且可以直接赋值
+data[data < 5] = 0
+```
+
+#### Arithmetic and Data Alignment
+正确的用法是
+```python
+# 如果 df1 + df2, 只要对应位置有任意一方是NaN, 那么结果就是 NaN
+In [202]: df1 + df2
+Out[202]: 
+      a     b     c     d   e
+0   0.0   2.0   4.0   6.0 NaN
+1   9.0   NaN  13.0  15.0 NaN
+2  18.0  20.0  22.0  24.0 NaN
+3   NaN   NaN   NaN   NaN NaN
+
+# 正确的用法是
+In [203]: df1.add(df2, fill_value=0)
+Out[203]: 
+      a     b     c     d     e
+0   0.0   2.0   4.0   6.0   4.0
+1   9.0   5.0  13.0  15.0   9.0
+2  18.0  20.0  22.0  24.0  14.0
+3  15.0  16.0  17.0  18.0  19.0
+```
+
+类似的函数
+```
+add(), sub, div, floor, floordiv, mul, pow
+```
+
+#### df 和 Series 的联合操作
+```Python
+arr = pd.DataFrame(np.arange(16).reshape(4, 4))
+# 会在每一行都减对应列
+arr - arr[0]
 ```
