@@ -199,4 +199,4 @@ dtype: object
 # bfill backwards
 ```
 
-
+#### drop
