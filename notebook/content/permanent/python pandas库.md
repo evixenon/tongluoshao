@@ -200,3 +200,24 @@ dtype: object
 ```
 
 #### drop
+```python
+# drop 一个/一堆
+new_obj = obj.drop("c")
+obj.drop(["d", "c"])
+```
+
+```python
+"""
+          one  two  three  four
+Ohio        0    1      2     3
+Colorado    4    5      6     7
+Utah        8    9     10    11
+New York   12   13     14    15
+"""
+
+
+
+# drop 一列
+data.drop("two", axis=1)
+data.drop(columns=["two"])
+```
