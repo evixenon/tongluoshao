@@ -216,8 +216,9 @@ Utah        8    9     10    11
 New York   12   13     14    15
 """
 
-# drop 一行
-data.drop()
+# drop 多行
+data.drop(["Ohio", "Utah"])
+
 # drop 一列
 data.drop("two", axis=1)
 data.drop(columns=["two"])
