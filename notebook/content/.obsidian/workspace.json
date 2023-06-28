@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python numpy库.md",
+                "file": "permanent/python pandas库.md",
                 "mode": "source",
                 "source": false
               }
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "python numpy库.md",
+                "file": "permanent/python pandas库.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "python numpy库.md",
+                "file": "permanent/python pandas库.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python numpy库.md"
+                "file": "permanent/python pandas库.md"
               }
             }
           }
@@ -171,12 +171,13 @@
   },
   "active": "ee56fe476905312c",
   "lastOpenFiles": [
+    "permanent/你猫游.md",
+    "permanent/python pandas库.md",
     "permanent/Python.md",
+    "python numpy库.md",
     "Python 数据分析.md",
     "Python Generator, Iterator.md",
     "python matplotlib库.md",
-    "permanent/python pandas库.md",
-    "python numpy库.md",
     "permanent/python unrar库.md",
     "permanent/设计模式.md",
     "permanent/Git.md",
@@ -201,7 +202,6 @@
     "permanent/C++.md",
     "permanent/多态.md",
     "project/Project Asteria.md",
-    "permanent/Linear Algebra Concepts 线性代数概念.md",
     "attachments/3ed63bee587c4487f47374c75f1d8fa.jpg",
     "attachments/Pasted image 20230616152110.png",
     "attachments/Pasted image 20230616151237.png",
