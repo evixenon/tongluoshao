@@ -322,3 +322,113 @@ arr = pd.DataFrame(np.arange(16).reshape(4, 4))
 # 会在每一行都减对应列
 arr - arr[0]
 ```
+
+df + Series, 也会出现 [[#Arithmetic and Data Alignment|对齐]] 问题, 双方不重合的部分变成 NaN 
+
+#### Fuction Application and Mapping
+大部分 np [[python numpy库#函数|函数]] 能直接用在 df, 比如 abs(), max() 之类的, 也有一些本身就是 df函数
+
+##### apply
+apply(函数, 范围), 范围通常是列或行
+```python
+# 随机生成
+In [223]: frame = pd.DataFrame(np.random.standard_normal((4, 3)),
+   .....:                      columns=list("bde"),
+   .....:                      index=["Utah", "Ohio", "Texas", "Oregon"])
+
+# 展示生成
+In [224]: frame
+Out[224]: 
+               b         d         e
+Utah   -0.204708  0.478943 -0.519439
+Ohio   -0.555730  1.965781  1.393406
+Texas   0.092908  0.281746  0.769023
+Oregon  1.246435  1.007189 -1.296221
+
+# 定义一个f1
+In [226]: def f1(x):
+   .....:     return x.max() - x.min()
+
+# 对列 apply
+In [228]: frame.apply(f1, axis="columns")
+Out[228]: 
+Utah      0.998382
+Ohio      2.521511
+Texas     0.676115
+Oregon    2.542656
+dtype: float64
+```
+
+##### applymap
+和 apply 的区别是 element-wise
+```python
+def f2(x):
+    return f"{x:.2f}"
+
+frame.applymap(f2)
+"""
+            b     d      e
+Utah    -0.20  0.48  -0.52
+Ohio    -0.56  1.97   1.39
+Texas    0.09  0.28   0.77
+Oregon   1.25  1.01  -1.30
+"""
+```
+
+#### Sorting, Ranking
+
+##### Sorting
+index/column
+```Python
+# 会对 index 升序排序
+obj.sort_index()
+# column 降序
+frame.sort_index(axis="columns", ascending=False)
+```
+
+一维value
+```python
+obj.sort_values()
+
+# NaN 在最前, 不设默认在最后
+obj.sort_values(na_position="first")
+```
+
+多维value
+```Python
+frame.sort_values("b")
+
+# 多级
+frame.sort_values(["a", "b"])
+```
+
+##### Ranking
+显示排序序号, 默认并列会用.5表示
+```python
+In [251]: obj = pd.Series([7, -5, 7, 4, 2, 0, 4])
+
+In [252]: obj.rank()
+Out[252]: 
+0    6.5
+1    1.0
+2    6.5
+3    4.5
+4    3.0
+5    2.0
+6    4.5
+dtype: float64
+```
+
+如果不想管并列, 先出现的排前面
+```python
+In [253]: obj.rank(method="first")
+Out[253]: 
+0    6.0
+1    1.0
+2    7.0
+3    4.0
+4    3.0
+5    2.0
+6    5.0
+dtype: float64
+```
