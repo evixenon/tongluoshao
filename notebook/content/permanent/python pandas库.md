@@ -201,8 +201,9 @@ dtype: object
 
 #### drop
 ```python
-# drop 一个/一堆
-new_obj = obj.drop("c")
+# drop 一个/多个
+# 只能在一维这么用
+new_obj = obj.drop("c") # 在多维, 相当于 drop "c" 行
 obj.drop(["d", "c"])
 ```
 
@@ -215,8 +216,8 @@ Utah        8    9     10    11
 New York   12   13     14    15
 """
 
-
-
+# drop 一行
+data.drop()
 # drop 一列
 data.drop("two", axis=1)
 data.drop(columns=["two"])
