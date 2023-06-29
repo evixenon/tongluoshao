@@ -115,23 +115,6 @@ pdata = {"Ohio": frame3["Ohio"][:-1],
          "Nevada": frame3["Nevada"][:2]}
 ```
 
-##### 读写 xlsx/csv
-
-```python
-# 保存为 xlsx 格式
-df.to_excel('new.xlsx') # will erase
-
-# 保存为 csv 格式
-df.to_excel('new.csv')
-```
-
-例: 修改某列的所有性别
-```python
-df = pd.read_excel(file_path)
-df['gender'][df['gender'] == 'girl'] = 'female'
-df['gender'][df['gender'] == 'boy'] = 'male'
-```
-
 #### Index Objects
 Series 的 index, DataFrame 的列名, 或者其他 metadata, responsible for holding the axis labels
 ```python
@@ -487,3 +470,57 @@ Out[284]: 8.870655479703549e-05
 
 # corrwith
 ```
+
+## 读写文件
+
+##### 读写 xlsx/csv
+对读成 DataFrame
+```python
+# 保存为 xlsx 格式
+df.to_excel('new.xlsx') # will erase
+
+# 保存为 csv 格式
+df.to_excel('new.csv')
+```
+
+例: 修改某列的所有性别
+```python
+df = pd.read_excel(file_path)
+df['gender'][df['gender'] == 'girl'] = 'female'
+df['gender'][df['gender'] == 'boy'] = 'male'
+```
+
+##### 读写各种文件
+```python
+# read_csv()
+# read_excel()
+# read_clipboard()
+# read_html()
+# read_json()
+# read_sql()
+# read_xml()
+```
+
+##### 行名和列名
+```python
+# 列名 指定为参数 names
+# 行名 以表里的 message列 为行名
+pd.read_csv("examples/ex2.csv", names=names, index_col="message")
+```
+
+并且是可以做到 hierarchical indexing 的, 比如指定某一列为参数, 这一列上有纵向合并的单元格
+
+##### 一些读入技巧
+```python
+# 不读某些行
+pd.read_csv("examples/ex4.csv", skiprows=[0, 2, 3])
+
+# 指定哪些值被当作 NaN
+result3 = pd.read_csv("examples/ex5.csv", keep_default_na=False, na_values=["NA"])
+
+# 分隔符
+pd.read_csv("1.txt", sep=".") # delimiter似乎是一样的
+```
+
+- converters={"foo": f}, 对 foo列应用函数f
+- decimal, 小数的分隔符, 默认是'.', 可以改成',''
