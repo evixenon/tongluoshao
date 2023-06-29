@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "012ab9cac6a0c3e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "python numpy库.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -117,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "python numpy库.md",
+                "file": "permanent/python pandas库.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "python numpy库.md",
+                "file": "permanent/python pandas库.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python numpy库.md"
+                "file": "permanent/python pandas库.md"
               }
             }
           }
@@ -182,11 +169,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "012ab9cac6a0c3e1",
+  "active": "ee56fe476905312c",
   "lastOpenFiles": [
+    "python numpy库.md",
     "permanent/冒险岛.md",
     "permanent/python pandas库.md",
-    "python numpy库.md",
     "permanent/你猫游.md",
     "permanent/Python.md",
     "Python 数据分析.md",

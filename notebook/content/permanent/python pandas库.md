@@ -9,9 +9,7 @@ tags:
 - 灵活处理缺省
 - metadata
 
-## 使用
-
-### pandas 数据结构
+## pandas 数据结构
 
 #### Series
 一维的数组, 又类似 dict
@@ -164,7 +162,7 @@ Index(['b', 'c'], dtype='object')
 # A.insert(i, x) 在第i位插入x
 ```
 
-### Essential Functions
+## Essential Functions
 
 #### reindex
 ```python
@@ -431,4 +429,61 @@ Out[253]:
 5    2.0
 6    5.0
 dtype: float64
+```
+
+## 统计
+
+```python
+# skipna = skip NaN 
+df.sum(axis="index", skipna=False)
+
+# idxmax, idxmin
+# attain 最大值的 index+columnname
+df.idxmax()
+
+# accumulation
+df.cumsum()
+
+# describe
+# 会展示一些统计数据
+In [276]: df.describe()
+Out[276]: 
+            one       two
+count  3.000000  2.000000
+mean   3.083333 -2.900000
+std    3.493685  2.262742
+min    0.750000 -4.500000
+25%    1.075000 -3.700000
+50%    1.400000 -2.900000
+75%    4.250000 -2.100000
+max    7.100000 -1.300000
+
+# df.unique()
+# df.value_counts()
+```
+
+```python
+# get indexer
+In [298]: to_match = pd.Series(["c", "a", "b", "b", "c", "a"])
+
+In [299]: unique_vals = pd.Series(["c", "b", "a"])
+
+In [300]: indices = pd.Index(unique_vals).get_indexer(to_match)
+
+In [301]: indices
+Out[301]: array([0, 2, 1, 1, 0, 2])
+```
+
+[更多函数](https://wesmckinney.com/book/pandas-basics.html#tbl-table_descriptive_stats)
+
+```python
+# correlation
+In [283]: returns["MSFT"].corr(returns["IBM"])
+Out[283]: 0.49976361144151166
+
+# covariation
+In [284]: returns["MSFT"].cov(returns["IBM"])
+Out[284]: 8.870655479703549e-05
+
+# corrwith
 ```
