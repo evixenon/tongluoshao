@@ -9,6 +9,8 @@ tags:
 - 灵活处理缺省
 - metadata
 
+[书签](https://wesmckinney.com/book/accessing-data.html#io_file_formats_html_xml)
+
 ## pandas 数据结构
 
 #### Series
@@ -473,7 +475,7 @@ Out[284]: 8.870655479703549e-05
 
 ## 读写文件
 
-##### 读写 xlsx/csv
+##### 读写 xlsx/csv 示例
 对读成 DataFrame
 ```python
 # 保存为 xlsx 格式
@@ -490,7 +492,9 @@ df['gender'][df['gender'] == 'girl'] = 'female'
 df['gender'][df['gender'] == 'boy'] = 'male'
 ```
 
-##### 读写各种文件
+### 读取
+
+#### 读各种文件
 ```python
 # read_csv()
 # read_excel()
@@ -500,6 +504,8 @@ df['gender'][df['gender'] == 'boy'] = 'male'
 # read_sql()
 # read_xml()
 ```
+
+#### CSV
 
 ##### 行名和列名
 ```python
@@ -523,4 +529,55 @@ pd.read_csv("1.txt", sep=".") # delimiter似乎是一样的
 ```
 
 - converters={"foo": f}, 对 foo列应用函数f
-- decimal, 小数的分隔符, 默认是'.', 可以改成',''
+- decimal, 小数的分隔符, 默认是'.', 可以改成','
+
+如果文件太长...
+```python
+# 只读前5行
+pd.read_csv("ex6.csv", nrows=5)
+
+# chunker, 指定 chunksize, 把一整个文件读取成多个 pieces, 返回 Iterable
+chunker = pd.read_csv("ex6.csv", chunksize=1000)
+for piece in chunker:
+    pass
+```
+
+##### 如果是处理不了的分隔符
+```python
+In [57]: !cat examples/ex7.csv
+"a","b","c"
+"1","2","3"
+"1","2","3"
+
+In [58]: import csv
+
+In [59]: f = open("examples/ex7.csv")
+
+In [60]: reader = csv.reader(f)
+```
+
+[link](https://wesmckinney.com/book/accessing-data.html#io_file_formats_csv)
+
+#### JSON
+
+read_json() 只能处理数组长度相同的情况
+
+更通用的处理需要[[python json库]]
+
+#### XML, HTML
+在使用read_html前, 需要安装 lxml, beautifulsoup4, html5lib
+
+[Web Scraping](https://wesmckinney.com/book/accessing-data.html#io_file_formats_html_xml)
+
+### 写
+
+```python
+# 写出到系统输出
+# 并以|分隔,将NaN替换为"NULL"
+data.to_csv(sys.stdout, sep="|", na_rep="NULL")
+
+# 不输出行名列名
+data.to_csv(sys.stdout, index=False, header=False)
+
+# 输出时指定行名
+data.to_csv(sys.stdout, index=False, columns=["a", "b", "c"])
