@@ -399,4 +399,41 @@ scale: 比如 0.7毕加索 0.5梵高
 
 ![[attachments/Pasted image 20230630135704.png]]
 
+ ---
+ ![[attachments/Pasted image 20230630135849.png]]
  
+ ![[attachments/Pasted image 20230630135923.png]]
+ 
+ ![[attachments/Pasted image 20230630135954.png]]
+
+![[attachments/Pasted image 20230630140036.png]]
+
+## 智能文档查询助手
+
+![[attachments/Pasted image 20230630140906.png]]
+
+![[attachments/Pasted image 20230630140931.png]]
+
+![[attachments/Pasted image 20230630141328.png]]
+
+finetune因为需要频繁更新, 更适合专门的专业的人来干
+
+**能联合个人知识库??**
+
+![[attachments/Pasted image 20230630142142.png]]
+
+- ptv: 帮助将输入转换为语言模型能理解的
+- ir: 语言模型和文档更好地交互
+- cmh: 历史管理
+
+![[attachments/Pasted image 20230630142416.png]]
+
+![[attachments/Pasted image 20230630142453.png]]
+
+![[attachments/Pasted image 20230630142631.png]]
+
+![[attachments/Pasted image 20230630142643.png]]
+
+![[attachments/Pasted image 20230630142716.png]]
+
+
