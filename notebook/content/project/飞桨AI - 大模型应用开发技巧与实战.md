@@ -7,7 +7,7 @@ tags:
 
 src: [飞桨AI Studio - 人工智能学习实训社区](https://aistudio.baidu.com/aistudio/education/group/info/28611)
 
-###  大模型时代的开发者新机遇
+##  大模型时代的开发者新机遇
 
 ![[attachments/Pasted image 20230607171051.png]]
 
@@ -78,7 +78,7 @@ Step 2
 
 ![[attachments/Pasted image 20230608001710.png]]
 
-### 大模型底层原理与应用开发范式
+## 大模型底层原理与应用开发范式
 
 ![[attachments/Pasted image 20230608131859.png]]
 
@@ -188,7 +188,7 @@ Gradio
 
 ![[attachments/Pasted image 20230608172038.png]]
 
-### 用 Prompt 提示词构建你的专属聊天机器
+## 用 Prompt 提示词构建你的专属聊天机器
 
 ![[attachments/Pasted image 20230616142858.png]]
 
@@ -288,3 +288,115 @@ chatGLM 支持微调
 ![[attachments/Pasted image 20230616152110.png]]
 
 47分问答
+
+## 文生图问题 
+
+![[attachments/Pasted image 20230630130359.png]]
+
+SD 找不到论文, 要看 Latent Diffusion 和 Imagen
+
+越想深入了解越要往前找 到DDPM也只是2020年
+
+![[attachments/Pasted image 20230630130606.png]]
+
+上面是clip 下面是 diffusion
+
+text encoder -> 文字特征 <-> 训练图像特征文字特征对应 -> diffusion黑盒(上图是自回归,下图是扩散模型) -> 图像特征 -decoder-> 图片(u-net)
+
+下面一行是扩散的过程, 训练时从右往左, 生成时从左往右
+
+![[attachments/Pasted image 20230630131022.png]]
+文图生成大模型工具
+
+![[attachments/Pasted image 20230630131139.png]]
+
+![[attachments/Pasted image 20230630131402.png]]
+
+![[attachments/Pasted image 20230630131540.png]]
+
+![[attachments/Pasted image 20230630131732.png]]
+- Textual Inversion: 原生是不懂一些词的, 比如"画个齐白石风格的"
+- DreamBooth: 更优化, 能去学习风格
+- LoRA: 类似 DreamBooth, 但体量更少
+- ControlNet: 做控制, 保留什么改什么
+
+![[attachments/Pasted image 20230630131955.png]]
+
+- 上行: 学习「打坐」这个词
+- 下行: 改变对「猫」的认知
+
+![[attachments/Pasted image 20230630132152.png]]
+
+- pretrained : 载入哪个模型
+- train_data: 如右
+- learnable_p : "object" "style"
+- placeholder_token: 你以后生成的 cat toy 要是这样子的
+- init token: 你可以把这个toy先验知识带来, 再来学习 cat toy
+- 下面的参数基本是固定的
+
+![[attachments/Pasted image 20230630132539.png]]
+
+![[attachments/Pasted image 20230630132653.png]]
+
+学习一个物体, 然后可以让物体完美出现在各种背景
+
+![[attachments/Pasted image 20230630132844.png]]
+
+![[attachments/Pasted image 20230630133004.png]]
+
+![[attachments/Pasted image 20230630133103.png]]
+
+![[attachments/Pasted image 20230630133151.png]]
+
+- instance_prompt: 你给的这些图是什么
+
+![[attachments/Pasted image 20230630133424.png]]
+
+![[attachments/Pasted image 20230630133537.png]]
+
+civitai
+
+DreamBooth 对所有参数更新, 开销巨大, 而 lora 只更新部分
+
+![[attachments/Pasted image 20230630134010.png]]
+
+灾难性遗忘, 比如 DB 因为整个改变, 所以可能会忘掉一些什么
+
+scale: 比如 0.7毕加索 0.5梵高
+
+![[attachments/Pasted image 20230630134216.png]]
+
+不会有「应该放在哪个地方」问题
+
+![[attachments/Pasted image 20230630134343.png]]
+
+![[attachments/Pasted image 20230630134519.png]]
+
+![[attachments/Pasted image 20230630134632.png]]
+
+- validation_prompt: 测试时的出图 prompt
+- validation_epochs: 测多少步vali 一下
+
+![[attachments/Pasted image 20230630134757.png]]
+
+![[attachments/Pasted image 20230630134850.png]]
+
+中途冻结 SD, copy, 再用 ControlNet 训练完融合回去
+
+想详细了解去看论文
+
+![[attachments/Pasted image 20230630135034.png]]
+
+![[attachments/Pasted image 20230630135252.png]]
+
+![[attachments/Pasted image 20230630135307.png]]
+
+![[attachments/Pasted image 20230630135332.png]]
+
+![[attachments/Pasted image 20230630135451.png]]
+
+![[attachments/Pasted image 20230630135513.png]]
+
+![[attachments/Pasted image 20230630135704.png]]
+
+ 

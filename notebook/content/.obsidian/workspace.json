@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent/python pandas库.md",
+                "file": "project/飞桨AI - 大模型应用开发技巧与实战.md",
                 "mode": "source",
                 "source": false
               }
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "permanent/python pandas库.md",
+                "file": "project/飞桨AI - 大模型应用开发技巧与实战.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent/python pandas库.md",
+                "file": "project/飞桨AI - 大模型应用开发技巧与实战.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "permanent/python pandas库.md"
+                "file": "project/飞桨AI - 大模型应用开发技巧与实战.md"
               }
             }
           }
@@ -171,8 +171,19 @@
   },
   "active": "ee56fe476905312c",
   "lastOpenFiles": [
-    "python json库.md",
+    "attachments/Pasted image 20230630135704.png",
+    "attachments/Pasted image 20230630135513.png",
+    "attachments/Pasted image 20230630135451.png",
+    "attachments/Pasted image 20230630135332.png",
+    "attachments/Pasted image 20230630135307.png",
+    "attachments/Pasted image 20230630135252.png",
+    "attachments/Pasted image 20230630135034.png",
+    "attachments/Pasted image 20230630134850.png",
+    "attachments/Pasted image 20230630134757.png",
+    "attachments/Pasted image 20230630134632.png",
+    "attachments/Pasted image 20230630134519.png",
     "permanent/python pandas库.md",
+    "python json库.md",
     "python numpy库.md",
     "permanent/冒险岛.md",
     "permanent/你猫游.md",
@@ -195,19 +206,8 @@
     "permanent/GLM.md",
     "permanent/Fine Tuning.md",
     "permanent/C++快速起步.md",
-    "attachments/Pasted image 20230619135420.png",
-    "attachments/Pasted image 20230619123246.png",
-    "attachments/Pasted image 20230619123010.png",
-    "attachments/Pasted image 20230618230031.png",
     "permanent/从一个空文件夹开始.md",
     "index/13 游戏.md",
-    "permanent/C++.md",
-    "attachments/3ed63bee587c4487f47374c75f1d8fa.jpg",
-    "attachments/Pasted image 20230616152110.png",
-    "attachments/Pasted image 20230616151237.png",
-    "attachments/Pasted image 20230616151133.png",
-    "attachments/Pasted image 20230616151012.png",
-    "attachments/Pasted image 20230616151001.png",
     "attachments/诸神黄昏规划器.xlsx",
     "attachments/武林立志传武功选择表bycsb01421v20190426m.xlsx",
     "attachments/武林立志传人物60级属性.xlsx",
