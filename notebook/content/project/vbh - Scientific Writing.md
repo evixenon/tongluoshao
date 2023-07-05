@@ -56,4 +56,28 @@ tags:
 	- Outcome
 	- example
     	 ![[Pasted image 20221017155217.png]]
-	- 
+
+- Restrict your search(citeria)
+    - controlling your search: 善用 boolean operator 和 well-defined term-> most essential
+    - saving time: filter->reduce
+    - qualify standard: deselect old publication/target publication -> minimun qualify standard
+
+- define your search term
+    - 限制 P
+    - AND OR NOT
+    - 空格=AND, 括号=布尔优先级, 引号=组合, \*=wildcard
+
+- Advanced search options
+    - language(指定论文语言)
+    - timespan(出版时间): 通常五年
+    - article type: 比如先看 secondary 来确定大概方向(因时效性, 应辅以 primary)
+
+##### if restrict access
+- 花钱
+- 你的大学的图书馆
+- 让你的大学花钱
+- ResearchGate
+- 请求作者发一份
+
+##### publication bias
+是指被发表的更多是 positive findings, 而 negative or inconclusive results 

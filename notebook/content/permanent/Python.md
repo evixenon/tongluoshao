@@ -7,21 +7,25 @@ date: "2023-06-16"
 - 因为 GIL(global interpreter lock) 机制, 用 Python 构建高并发多线程程序有难度, 尤其是 CPU-bound 的线程. Python C Extensions 可以不受 GIL 影响地执行并行代码
 
 ### Python 进阶
-[[Python Generator, Iterator]]
+[[permanent/Python Generator, Iterator]]
 
 
 ### 数据分析和绘图
-[[Python 数据分析]]
+[[permanent/Python 数据分析|Python 数据分析]]
 
-[[python numpy库]]
+[[permanent/python numpy库|python numpy库]]
 
 [[permanent/python pandas库|python pandas库]]
+
+[[permanent/python matplotlib库|python matplotlib库]]
 
 ### GUI
 [[permanent/python tkinter库|python tkinter库]]
 
 ### 文件处理
 [[permanent/python unrar库|python unrar库]]
+
+[[permanent/python json库|python json库]]
 
 ### 其他库
 [[permanent/pyinstaller|pyinstaller]]

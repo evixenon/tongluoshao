@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 使用的库
-- [[python numpy库]]
+- [[permanent/python numpy库]]
 - [[permanent/python pandas库|python pandas库]]
-- [[python matplotlib库]]
+- [[permanent/python matplotlib库]]
 

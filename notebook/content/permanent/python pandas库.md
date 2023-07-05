@@ -309,7 +309,7 @@ arr - arr[0]
 df + Series, 也会出现 [[#Arithmetic and Data Alignment|对齐]] 问题, 双方不重合的部分变成 NaN 
 
 #### Fuction Application and Mapping
-大部分 np [[python numpy库#函数|函数]] 能直接用在 df, 比如 abs(), max() 之类的, 也有一些本身就是 df函数
+大部分 np [[permanent/python numpy库#函数|函数]] 能直接用在 df, 比如 abs(), max() 之类的, 也有一些本身就是 df函数
 
 ##### apply
 apply(函数, 范围), 范围通常是列或行
@@ -562,7 +562,7 @@ In [60]: reader = csv.reader(f)
 
 read_json() 只能处理数组长度相同的情况
 
-更通用的处理需要[[python json库]]
+更通用的处理需要[[permanent/python json库]]
 
 #### XML, HTML
 在使用read_html前, 需要安装 lxml, beautifulsoup4, html5lib
