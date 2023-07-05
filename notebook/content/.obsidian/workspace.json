@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent/冒险岛.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "mode": "source",
                 "source": false
               }
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "permanent/冒险岛.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent/冒险岛.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "permanent/冒险岛.md"
+                "file": "project/vbh - Scientific Writing.md"
               }
             }
           }
@@ -171,6 +171,11 @@
   },
   "active": "ee56fe476905312c",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230705125116.png",
+    "attachments/Pasted image 20230705125033.png",
+    "attachments/Pasted image 20230705125030.png",
+    "attachments/Pasted image 20230705125012.png",
+    "permanent/冒险岛.md",
     "project/正己 - 安卓逆向这档事.md",
     "attachments/Pasted image 20230702213536.png",
     "project/飞桨AI - 大模型应用开发技巧与实战.md",
@@ -180,13 +185,9 @@
     "attachments/Pasted image 20230630142453.png",
     "attachments/Pasted image 20230630142416.png",
     "attachments/Pasted image 20230630142142.png",
-    "attachments/Pasted image 20230630142133.png",
-    "attachments/Pasted image 20230630141328.png",
-    "attachments/Pasted image 20230630140931.png",
     "permanent/python pandas库.md",
     "python json库.md",
     "python numpy库.md",
-    "permanent/冒险岛.md",
     "permanent/你猫游.md",
     "permanent/Python.md",
     "Python 数据分析.md",
@@ -207,7 +208,6 @@
     "permanent/Fine Tuning.md",
     "permanent/C++快速起步.md",
     "permanent/从一个空文件夹开始.md",
-    "index/13 游戏.md",
     "attachments/诸神黄昏规划器.xlsx",
     "attachments/武林立志传武功选择表bycsb01421v20190426m.xlsx",
     "attachments/武林立志传人物60级属性.xlsx",
