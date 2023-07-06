@@ -30,8 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b8691aaa582aa0d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "permanent/冒险岛.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -116,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "project/vbh - Scientific Writing.md",
+                "file": "permanent/冒险岛.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "project/vbh - Scientific Writing.md",
+                "file": "permanent/冒险岛.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "project/vbh - Scientific Writing.md"
+                "file": "permanent/冒险岛.md"
               }
             }
           }
@@ -180,10 +193,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ee56fe476905312c",
+  "active": "b8691aaa582aa0d3",
   "lastOpenFiles": [
-    "private/写论文指南.md",
     "project/vbh - Scientific Writing.md",
+    "private/Untitled.md",
+    "private/写论文指南.md",
     "private/账号管理.md",
     "permanent/python json库.md",
     "permanent/Python.md",
@@ -219,7 +233,6 @@
     "permanent/设计原则.md",
     "permanent/富甲天下.md",
     "permanent/GLM.md",
-    "permanent/Fine Tuning.md",
     "attachments/诸神黄昏规划器.xlsx",
     "attachments/武林立志传武功选择表bycsb01421v20190426m.xlsx",
     "attachments/武林立志传人物60级属性.xlsx",
