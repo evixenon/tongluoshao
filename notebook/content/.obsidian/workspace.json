@@ -20,31 +20,19 @@
             }
           },
           {
-            "id": "1c3a647f3fd9bdec",
+            "id": "e81ad8379967231b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/写论文指南.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b8691aaa582aa0d3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "permanent/冒险岛.md",
+                "file": "permanent/python pandas库.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -129,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "permanent/冒险岛.md",
+                "file": "permanent/python pandas库.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent/冒险岛.md",
+                "file": "permanent/python pandas库.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "permanent/冒险岛.md"
+                "file": "permanent/python pandas库.md"
               }
             }
           }
@@ -193,11 +181,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b8691aaa582aa0d3",
+  "active": "e81ad8379967231b",
   "lastOpenFiles": [
     "project/vbh - Scientific Writing.md",
-    "private/Untitled.md",
     "private/写论文指南.md",
+    "permanent/冒险岛.md",
+    "private/Untitled.md",
     "private/账号管理.md",
     "permanent/python json库.md",
     "permanent/Python.md",
@@ -210,7 +199,6 @@
     "attachments/Pasted image 20230705125033.png",
     "attachments/Pasted image 20230705125030.png",
     "attachments/Pasted image 20230705125012.png",
-    "permanent/冒险岛.md",
     "project/正己 - 安卓逆向这档事.md",
     "attachments/Pasted image 20230702213536.png",
     "project/飞桨AI - 大模型应用开发技巧与实战.md",
