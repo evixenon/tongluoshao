@@ -474,6 +474,7 @@ Out[284]: 8.870655479703549e-05
 ```
 
 ## 读写文件
+[Pandas 写入 Excel 的几种情形与方式,覆盖,新增,追加,对齐_pandas写入excel_小玉的小本本的博客-CSDN博客](https://blog.csdn.net/m0_46419189/article/details/123111493)
 
 ##### 读写 xlsx/csv 示例
 对读成 DataFrame
