@@ -94,3 +94,26 @@ tags:
 
 ##### Outcome Report Bias
 研究者更倾向于发表统计学上显著(statistically significant)的结果
+
+## 3 Literature Management
+
+#### Citation
+reference to published/unpublished text
+
+将已有的工作归于正确的来源, 以便于读者自行判断观点内容和观点是否支持当前工作
+
+#### Citation Management Program
+
+##### 用来
+- 收集, 组织和管理 Citation
+- 可以直接在最重要的一些数据库里搜索
+- 引入和导出各种引用格式
+
+##### 现有的软件
+- Citavi
+    - 关键词: 仅win, humanist, beginngers to professionals, 直观操作, 阅读时引用, 知识管理, 任务计划, 免费版没有teamwork
+- Endnote
+    - 关键词: win+mac, 免费(受限)网页版和iPad App, pdf 导入, 
+- **Zotero**
+- **RefWorks**
+- **Mendeley**
