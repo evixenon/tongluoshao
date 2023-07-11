@@ -116,5 +116,6 @@ reference to published/unpublished text
     - 关键词: win+mac, 免费(受限)网页版和iPad App, pdf 导入, teamwork差, medicine 相关专业
 - Zotero
     - 关键词: 免费, PC全平台+ios+网页版+网页插件, 可离线, 适合小数据集
-- **RefWorks**
+- RefWorks
+    - 关键词: 收费并强制联网, 界面好, 操作容易, Word-add-in, metadata库,  仅校园通行证可用 Integration of Documents
 - **Mendeley**

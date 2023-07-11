@@ -20,6 +20,30 @@
             }
           },
           {
+            "id": "e4542c17edba025e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "private/RefWorks.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "752a362eff19bcac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "private/Zotero.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "fd9427dadc4b9ba3",
             "type": "leaf",
             "state": {
@@ -50,6 +74,18 @@
               "type": "markdown",
               "state": {
                 "file": "private/写论文指南.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2079b3553e010ef9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "permanent/Git.md",
                 "mode": "source",
                 "source": false
               }
@@ -206,10 +242,14 @@
   },
   "active": "ee56fe476905312c",
   "lastOpenFiles": [
+    "private/RefWorks.md",
+    "project/vbh - Scientific Writing.md",
+    "permanent/Git.md",
+    "permanent/个站bug.md",
+    "private/写论文指南.md",
+    "private/Zotero.md",
     "private/Endnote.md",
     "private/Citavi.md",
-    "project/vbh - Scientific Writing.md",
-    "private/写论文指南.md",
     "attachments/Pasted image 20230711110914.png",
     "permanent/python pandas库.md",
     "permanent/冒险岛.md",
@@ -218,7 +258,6 @@
     "permanent/Python.md",
     "permanent/Python Generator, Iterator.md",
     "permanent/Python 数据分析.md",
-    "permanent/个站bug.md",
     "permanent/python numpy库.md",
     "private",
     "attachments/Pasted image 20230705125116.png",
@@ -236,14 +275,11 @@
     "permanent/python matplotlib库.md",
     "permanent/python unrar库.md",
     "permanent/设计模式.md",
-    "permanent/Git.md",
     "permanent/UML 图.md",
     "permanent/C++基础.md",
     "project/Paddle AI - 大模型应用开发技巧与实战.md",
     "private/零样本, 少样本.md",
     "private",
-    "permanent/设计原则.md",
-    "permanent/富甲天下.md",
     "attachments/诸神黄昏规划器.xlsx",
     "attachments/武林立志传武功选择表bycsb01421v20190426m.xlsx",
     "attachments/武林立志传人物60级属性.xlsx",
