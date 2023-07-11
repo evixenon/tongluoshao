@@ -111,9 +111,10 @@ reference to published/unpublished text
 
 ##### 现有的软件
 - Citavi
-    - 关键词: 仅win, humanist, beginngers to professionals, 直观操作, 阅读时引用, 知识管理, 任务计划, 免费版没有teamwork
+    - 关键词: 仅win, humanist 专业, beginngers to professionals, 直观操作, 阅读时引用, 知识管理, 任务计划, 免费版没有teamwork
 - Endnote
-    - 关键词: win+mac, 免费(受限)网页版和iPad App, pdf 导入, 
-- **Zotero**
+    - 关键词: win+mac, 免费(受限)网页版和iPad App, pdf 导入, teamwork差, medicine 相关专业
+- Zotero
+    - 关键词: 免费, PC全平台+ios+网页版+网页插件, 可离线, 适合小数据集
 - **RefWorks**
 - **Mendeley**
