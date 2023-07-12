@@ -118,4 +118,13 @@ reference to published/unpublished text
     - 关键词: 免费, PC全平台+ios+网页版+网页插件, 可离线, 适合小数据集
 - RefWorks
     - 关键词: 收费并强制联网, 界面好, 操作容易, Word-add-in, metadata库,  仅校园通行证可用 Integration of Documents
-- **Mendeley**
+- Mendeley
+    - 关键词: 免费2GB, PC全平台+网页版, 合作好用, mutated vowels导入时有问题(特殊字母), 没有ISBN查找, 论文复引, 医学科学相关
+
+##### 怎么用
+1. 建账号, 下软件. 如果有, 装网页版插件(特指Zotero)
+2. 在软件里创建一个项目, 就是你要写的论文
+3. 搜索, 下载, 导入文献
+4. 补充文献缺失的信息
+5. 查阅过的文献写备注/评论/想法
+6. 引入 Citation(Word, LaTeX..)
