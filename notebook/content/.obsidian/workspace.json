@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/Mendeley.md",
+                "file": "permanent/冒险岛.md",
                 "mode": "source",
                 "source": false
               }
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "private/Mendeley.md",
+                "file": "permanent/冒险岛.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/Mendeley.md",
+                "file": "permanent/冒险岛.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/Mendeley.md"
+                "file": "permanent/冒险岛.md"
               }
             }
           }
@@ -170,12 +170,13 @@
   },
   "active": "138eb473f00d21ad",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230712160301.png",
+    "private/Mendeley.md",
     "private/RefWorks.md",
     "private/Zotero.md",
     "private/Endnote.md",
     "private/Citavi.md",
     "private/写论文指南.md",
-    "private/Mendeley.md",
     "project/vbh - Scientific Writing.md",
     "permanent/Git.md",
     "permanent/个站bug.md",
@@ -206,7 +207,6 @@
     "permanent/设计模式.md",
     "permanent/UML 图.md",
     "permanent/C++基础.md",
-    "project/Paddle AI - 大模型应用开发技巧与实战.md",
     "private",
     "attachments/诸神黄昏规划器.xlsx",
     "attachments/武林立志传武功选择表bycsb01421v20190426m.xlsx",
