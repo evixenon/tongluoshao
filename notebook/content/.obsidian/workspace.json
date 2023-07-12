@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "99be370ca60fe7bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "private/http referrer 图片防盗链.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -104,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "permanent/冒险岛.md",
+                "file": "private/http referrer 图片防盗链.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -116,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent/冒险岛.md",
+                "file": "private/http referrer 图片防盗链.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "permanent/冒险岛.md"
+                "file": "private/http referrer 图片防盗链.md"
               }
             }
           }
@@ -168,8 +181,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "138eb473f00d21ad",
+  "active": "99be370ca60fe7bc",
   "lastOpenFiles": [
+    "permanent/冒险岛.md",
+    "private/http referrer 图片防盗链.md",
     "attachments/Pasted image 20230712160301.png",
     "private/Mendeley.md",
     "private/RefWorks.md",
@@ -182,7 +197,6 @@
     "permanent/个站bug.md",
     "attachments/Pasted image 20230711110914.png",
     "permanent/python pandas库.md",
-    "permanent/冒险岛.md",
     "private/账号管理.md",
     "permanent/python json库.md",
     "permanent/Python.md",
@@ -200,7 +214,6 @@
     "attachments/Pasted image 20230630142716.png",
     "attachments/Pasted image 20230630142643.png",
     "attachments/Pasted image 20230630142631.png",
-    "attachments/Pasted image 20230630142453.png",
     "permanent/你猫游.md",
     "permanent/python matplotlib库.md",
     "permanent/python unrar库.md",
