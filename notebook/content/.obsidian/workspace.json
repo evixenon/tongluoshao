@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/非暴力沟通.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "mode": "source",
                 "source": false
               }
@@ -87,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "fcea5fa7c548db34",
@@ -103,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "private/非暴力沟通.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -115,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/非暴力沟通.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/非暴力沟通.md"
+                "file": "project/vbh - Scientific Writing.md"
               }
             }
           }
@@ -169,6 +170,13 @@
   },
   "active": "036056909576c116",
   "lastOpenFiles": [
+    "attachments/Student Guide For Scientific Writing.pdf",
+    "attachments/Pasted image 20230713135016.png",
+    "attachments/Pasted image 20230713134847.png",
+    "attachments/Pasted image 20230713134832.png",
+    "attachments/Pasted image 20230713134035.png",
+    "attachments/Pasted image 20230713134022.png",
+    "attachments/IMRAD.pdf",
     "private/非暴力沟通.md",
     "private/账号管理.md",
     "private/写论文指南.md",
@@ -190,11 +198,6 @@
     "attachments/Pasted image 20230705125116.png",
     "attachments/Pasted image 20230705125033.png",
     "attachments/Pasted image 20230705125030.png",
-    "attachments/Pasted image 20230705125012.png",
-    "attachments/Pasted image 20230702213536.png",
-    "attachments/Pasted image 20230630142716.png",
-    "attachments/Pasted image 20230630142643.png",
-    "attachments/Pasted image 20230630142631.png",
     "permanent/冒险岛.md",
     "project/vbh - Scientific Writing.md",
     "permanent/Git.md",
@@ -205,7 +208,6 @@
     "permanent/你猫游.md",
     "permanent/python unrar库.md",
     "permanent/设计模式.md",
-    "permanent/UML 图.md",
     "attachments/诸神黄昏规划器.xlsx",
     "attachments/武林立志传武功选择表bycsb01421v20190426m.xlsx",
     "attachments/武林立志传人物60级属性.xlsx",

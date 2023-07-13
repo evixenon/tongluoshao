@@ -128,3 +128,72 @@ reference to published/unpublished text
 4. 补充文献缺失的信息
 5. 查阅过的文献写备注/评论/想法
 6. 引入 Citation(Word, LaTeX..)
+
+## Planning of the writing process
+
+#### IMRAD
+- **I**ntroduction: _What did you/others do?_
+- **M**ethods: _How did you do it?_
+- **R**esults: _What did you find?_
+- **A**nd
+- **D**iscussion: _What does it all mean?_
+![[attachments/IMRAD.pdf]]
+
+#### Structure
+
+##### general scientific structure
+-  Title
+-  Abstract
+-  Introduction/Background
+-  Aim
+-  Methods
+-  Results
+-  Discussion
+-  Conclusion
+-  Visuals
+-  Bibliography/References
+
+##### 工程和自然科学的通用结构
+- Title
+- Abstract
+- Introdution
+- Methods
+- Results
+- Discussion
+- Summary and Conclusions
+- Acknowledgements
+- References
+
+##### APA style
+1. Title
+2. Introduction
+3. Review of Literature
+4. Methodology
+5. Findings (also called Results)
+6. Discussion
+7. Conclusion
+8. References (generally APA style)
+9. Appendices (if needed)
+
+
+#### Advices
+1. Pay attention to **author guidelines**.
+2. Use a **scientific writing style**.
+3. Use a **clean and legible layout**.
+4. Make a **plan** of your writing.
+5. **Criticize** your work.
+
+#### Author Guideline
+also called instruction for authors
+
+不同的 scientific journal 有不同的 guideline
+
+#### Scientific Writing Style
+
+![[attachments/Pasted image 20230713135016.png]]
+
+![[attachments/Pasted image 20230713134832.png]]
+
+![[attachments/Pasted image 20230713134847.png]]
+
+![[attachments/Student Guide For Scientific Writing.pdf]]
