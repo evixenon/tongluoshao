@@ -129,7 +129,7 @@ reference to published/unpublished text
 5. 查阅过的文献写备注/评论/想法
 6. 引入 Citation(Word, LaTeX..)
 
-## Planning of the writing process
+## 4 Planning of the writing process
 
 #### IMRAD
 - **I**ntroduction: _What did you/others do?_
@@ -222,3 +222,44 @@ paragraph,  subheadings
 4.  **Discussion and Conclusion**
 5.  **References** 
 6.  **Title and Abstract**
+
+## 5 Language and Expression
+
+#### 原则
+- grammatically correct language
+- formal language
+- functional language
+- neutral language
+
+是可以用 active voice 的 
+
+#### 语法上正确
+
+##### Verb
+
+注意
+- 单复数
+- 时态
+- 情态, 尤其是关于声明的力度, 可能性
+
+Method 部分应该用过去时
+
+##### Preposition
+
+注意
+- time
+- place
+- direction
+    - in, into, through, towards
+- source/origin
+    - from, of
+- agent
+    - by, with
+- instruments
+    - by, on, with
+- reason
+    - *through*, *because of*, *on account of*, *from*
+
+##### Article
+分清定冠词和不定冠词
+
