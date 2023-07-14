@@ -231,8 +231,6 @@ paragraph,  subheadings
 - functional language
 - neutral language
 
-是可以用 active voice 的 
-
 #### 语法上正确
 
 ##### Verb
@@ -261,5 +259,84 @@ Method 部分应该用过去时
     - *through*, *because of*, *on account of*, *from*
 
 ##### Article
-分清定冠词和不定冠词
+分清定冠词和不定冠词和零冠词
+
+##### Puntuation
+[The Punctuation Guide](https://www.thepunctuationguide.com/index.html)
+
+- colon :
+    - introduce a list
+    - dividing the title
+- comma ,
+    - 不要用在 that从句 前面
+    - 并列关系
+    - 弱化的括号
+- semi-colon ;
+    - dividing sentence into parts which all belong to a same group
+- question mark ?
+    - 通常只在
+        - introduction
+        - bridge to the story
+        - discussion
+- exclaimation mark !
+    - 别用
+- quotation mark ""
+    - 引用其他来源的原文
+        - ![[attachments/Pasted image 20230714194405.png]]
+- brackets ()
+    - 组成成分
+        - ![[attachments/Pasted image 20230714194524.png]]
+
+#### 科学写作注意事项
+
+##### Write out all verb froms
+- 禁止缩写(e.g. **isn't, shouldn't, can't, don't**)
+
+##### 口语化连接词
+- 避免用 **"and", "but", "so" and "because"** 开头
+- alternatives
+    - but: although, however, in contrast, on the contrary, nevertheless,
+    - because: because of, since, accordingly
+    - so: similarly, as a result, therefor, further,  thus, subsequently
+    - and: additionally, moreover, consequently
+
+![[attachments/Pasted image 20230714200816.png]]
+
+##### avoid "get"
+- received
+- became
+- acquired
+- retrieve
+- obtain
+
+##### 用完整的句子
+- 主谓宾
+- 从句成分
+
+##### 使用简单清晰的句子结构\
+越复杂越容易出错
+
+![[attachments/Pasted image 20230714194819.png]]
+
+![[attachments/Pasted image 20230714195535.png]]
+判断的方法是, 想一想有没有更清晰的句式. 
+
+##### 尽量用 positive, 而不是 negative 语句
+注意说的不是主动句和被动句
+
+(N): There was nothing that did not work out.  
+(P): Everything worked out.
+
+##### 主动+被动
+是可以用 active voice 的, 建议两者兼用
+
+##### 避免冗余
+redundant or unnecessary information
+
+- Does this sentence express what it is supposed to?
+- If so, can I write this sentence in a shorter way?
+- Can I remove any of the words in my sentence without sacrificing its clarity?
+
+##### 避免模棱两可
+a lot -> better: 95%
 
