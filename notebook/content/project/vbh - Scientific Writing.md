@@ -183,12 +183,14 @@ reference to published/unpublished text
 4. Make a **plan** of your writing.
 5. **Criticize** your work.
 
-#### Author Guideline
+Reporting statements, also known as reporting guidelines, are the sets of criteria, which help you write a scientifically sound article. STROBE, which we discussed earlier in this unit, is one example of this from the field of epidemiology.
+
+##### 1. Author Guideline
 also called instruction for authors
 
 不同的 scientific journal 有不同的 guideline
 
-#### Scientific Writing Style
+##### 2. Scientific Writing Style
 
 ![[attachments/Pasted image 20230713135016.png]]
 
@@ -197,3 +199,26 @@ also called instruction for authors
 ![[attachments/Pasted image 20230713134847.png]]
 
 ![[attachments/Student Guide For Scientific Writing.pdf]]
+
+##### 3. Layout
+
+![[attachments/Pasted image 20230713135753.png]]
+
+paragraph,  subheadings
+
+##### 4. Develop a plan
+用 - 或数字
+
+![[attachments/Pasted image 20230713140352.png]]
+
+##### 5. Critically assessing your work
+- 自己读一读
+- 同时思考前面的advices
+
+#### 写作顺序
+1.  **Methods**
+2.  **Introduction and Aim**
+3.  **Results**
+4.  **Discussion and Conclusion**
+5.  **References** 
+6.  **Title and Abstract**
