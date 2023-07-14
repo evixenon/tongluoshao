@@ -231,6 +231,9 @@ paragraph,  subheadings
 - functional language
 - neutral language
 
+#### 速览
+![[attachments/Pasted image 20230714231412.png]]
+
 #### 语法上正确
 
 ##### Verb
@@ -313,7 +316,7 @@ Method 部分应该用过去时
 - 主谓宾
 - 从句成分
 
-##### 使用简单清晰的句子结构\
+##### 使用简单清晰的句子结构
 越复杂越容易出错
 
 ![[attachments/Pasted image 20230714194819.png]]
@@ -338,5 +341,13 @@ redundant or unnecessary information
 - Can I remove any of the words in my sentence without sacrificing its clarity?
 
 ##### 避免模棱两可
-a lot -> better: 95%
+- a lot -> better: 95%
+- 不要用主观的表述
+
+##### 不要用广告语气
+- 避免 amazing, unbelievable, incredible
+![[attachments/Pasted image 20230714225611.png]]
+
+##### 毋必
+不要绝对
 
