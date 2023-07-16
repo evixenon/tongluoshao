@@ -351,3 +351,29 @@ redundant or unnecessary information
 ##### 毋必
 不要绝对
 
+## 6 Methods
+
+#### Strategy
+
+1. Use **identical or similar subheadings** for both the methods and the results in order to make it easy for the reader to understand which results were generated with which method.
+    (指部分相同)
+    
+2. Use  **introductory sentences** in the methods that relate to the aim of the study: In case the first approach for any reason would not fit to your structure, this strategy might be better.
+
+#### Including
+Some key elements of this section include: 
+
+- Overview of the **study design,**
+- **Study population** or laboratory animals (description),
+-  Ethical considerations, (通常学科不需要)
+- **Measurements**,
+- **Quality control and data managemen**t,
+- **Statistical methods**,
+    - Statistical analyses,
+    -  Sample size calculations and  power,
+- **References** (to already published methods),
+- **Appendices** (additional description of the methods).
+
+![[attachments/Pasted image 20230716205357.png]]
+
+![[attachments/Pasted image 20230716205436.png]]
