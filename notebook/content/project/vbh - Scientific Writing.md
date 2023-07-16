@@ -377,3 +377,51 @@ Some key elements of this section include: 
 ![[attachments/Pasted image 20230716205357.png]]
 
 ![[attachments/Pasted image 20230716205436.png]]
+
+example
+![[attachments/Pasted image 20230716212456.png]]
+
+#### tense
+- 在 Methods 部分通常用 past tense
+- 会有一些 present tense, 在描述客观事实时, 比如一直有效的数据(如果一个计算结果在过去是A, 它并不会因为时间变成B)
+
+#### active/passive
+都可. 被动听起来更客观, 主动能提供主语信息.
+
+#### figures/tables
+- For visualizing the selection of **study participants**.
+- For visualizing the selection of articles for a **systematic review**.
+- For visualizing **questionnaire items** used in the study.
+
+#### common mistakes
+- Methods are **not related to the study aim**.
+- Description of methods, participants, procedures or variables are **incomplete**.
+- **Results description**/**results graphs** have been included in the Methods section.
+- Noncompliance with **author guidelines** and / or **reporting statements** (see unit 4).
+
+#### 详细大纲
+**1.**  **Study design**
+    (e.g. cross section design, cohort design, case-control design)
+
+**2. Study participants**
+
+1.  ​Target population
+2.  Sampling from target population
+    (the way to select sample)
+
+**​3. Study instruments**
+
+1.  ​Questionnaire
+2.  Validation method
+    ![[attachments/Pasted image 20230716221550.png]]
+
+**4. Definition of variables**
+
+1. **​** Dependent variable(s)
+2.  Independent variable(s)
+3.  Potential confounder(s)
+
+**5. Statistical analysis**
+
+1.  Descriptive analysis
+2.  Regression analysis
