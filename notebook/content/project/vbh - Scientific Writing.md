@@ -418,10 +418,16 @@ example
 **4. Definition of variables**
 
 1. **​** Dependent variable(s)
+    ![[attachments/Pasted image 20230716222249.png]]
 2.  Independent variable(s)
+    ![[attachments/Pasted image 20230716222314.png]] 
 3.  Potential confounder(s)
+    ![[attachments/Pasted image 20230716222407.png]]
 
 **5. Statistical analysis**
 
 1.  Descriptive analysis
+     ![[attachments/Pasted image 20230716224113.png]]
 2.  Regression analysis
+    ![[attachments/Pasted image 20230716224734.png]]
+    
