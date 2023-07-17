@@ -36,6 +36,7 @@ tags:
 ## 2 Literature Search
 
 #### literature sources
+
 	![[Pasted image 20221017153618.png]]
     - [Web of Science platform - Clarivate](https://clarivate.com/products/scientific-and-academic-research/research-discovery-and-workflow-solutions/webofscience-platform/)
     - [Journal Citation Reports - Clarivate](https://clarivate.com/products/scientific-and-academic-research/research-analytics-evaluation-and-management-solutions/journal-citation-reports/)
@@ -137,6 +138,7 @@ reference to published/unpublished text
 - **R**esults: _What did you find?_
 - **A**nd
 - **D**iscussion: _What does it all mean?_
+
 ![[attachments/IMRAD.pdf]]
 
 #### Structure
@@ -430,4 +432,27 @@ example
      ![[attachments/Pasted image 20230716224113.png]]
 2.  Regression analysis
     ![[attachments/Pasted image 20230716224734.png]]
-    
+
+## 7 Introduction and Aims
+
+#### 这部分需要回答这些问题
+- What is the  **objective** of the study?
+- Why is the presented study of  **scientific interest**? (为什么重要)
+- What  **prior knowledge** was already available on this study topic?
+- How will the current study **update existing knowledge** and **fill an existing  research gap**?
+
+#### Aims include...
+-  **Study exposure**
+    ![[attachments/Pasted image 20230717123036.png]]
+    - 主语: a force or influence
+-  **Study outcome**
+    ![[attachments/Pasted image 20230717123054.png]]
+-  **Study design**
+    ![[attachments/Pasted image 20230717123107.png]]
+-  **Study population**
+
+![[attachments/Pasted image 20230717123522.png]]
+
+#### 三个段落
+
+![[attachments/Pasted image 20230717123925.png]]

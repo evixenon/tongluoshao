@@ -18,18 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "adbe05edd89db681",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "private/阻碍我们成长的是什么.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ]
       }
@@ -182,19 +170,20 @@
   },
   "active": "036056909576c116",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230717123925.png",
+    "attachments/Pasted image 20230717123522.png",
+    "attachments/Pasted image 20230717123107.png",
+    "attachments/Pasted image 20230717123054.png",
+    "attachments/Pasted image 20230717123036.png",
+    "private/阻碍我们成长的是什么.md",
+    "permanent/个站bug.md",
+    "project/vbh - Scientific Writing.md",
     "attachments/Pasted image 20230716224734.png",
     "attachments/Pasted image 20230716224133.png",
     "attachments/Pasted image 20230716224113.png",
     "attachments/Pasted image 20230716222407.png",
     "attachments/Pasted image 20230716222314.png",
     "attachments/Pasted image 20230716222249.png",
-    "attachments/Pasted image 20230716221550.png",
-    "attachments/Pasted image 20230716212456.png",
-    "attachments/Pasted image 20230716205436.png",
-    "attachments/Pasted image 20230716205357.png",
-    "private/阻碍我们成长的是什么.md",
-    "project/vbh - Scientific Writing.md",
-    "attachments/Pasted image 20230714231412.png",
     "private/网页文字修改魔法.md",
     "attachments/Student Guide For Scientific Writing.pdf",
     "attachments/IMRAD.pdf",
@@ -208,7 +197,6 @@
     "private/Endnote.md",
     "private/Citavi.md",
     "private",
-    "permanent/个站bug.md",
     "permanent/python numpy库.md",
     "permanent/python matplotlib库.md",
     "permanent/python json库.md",

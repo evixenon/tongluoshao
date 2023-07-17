@@ -31,4 +31,8 @@ notebook/static/linkmap
 ```
 
 #### 同源策略导致的搜索问题
+二级域名的不一样的时候搜索会失效
+#todo 
+
+#### 自动开始下载 pdf
 #todo 
