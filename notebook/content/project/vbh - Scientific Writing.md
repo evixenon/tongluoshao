@@ -465,3 +465,37 @@ example
 6. While referring to other studies, you should summarize them **in your own words**.
 
 ##### 1. Field of research
+- 研究背景
+- 能揭示这个研究的重要性
+![[attachments/Pasted image 20230718143311.png]]
+
+##### 2. Research gap
+- 展示一个在你的 paper 中会被填补的 gap
+
+![[attachments/Pasted image 20230718142920.png]]
+
+##### 3. Study Objective
+- 告诉读者他们能在这篇论文中学到什么
+- 使用已有的观点作为原理(supporting statement)
+- 避免使用 "可能"、"假设"、"潜在"、"可能是 "或 "也许是 "等含蓄的词语，因为它们会影响研究的目的。
+- 要保持准确，不要提供过多信息
+- 在 sample paper 里不是包含在 introduction 中的, 而是以单独的 section 写出
+
+包括:
+- objective
+- activities
+- supporting statements
+
+![[attachments/Pasted image 20230718144036.png]]
+
+#### 语法方面
+时态
+- present simple tense: facts
+- present perfect tense: actions, situations
+
+主动被动
+- 更建议主动, 遵循 SVO 的方式
+- 部分被动, 涉及到 agent 时
+
+人称
+- 用第一人称
