@@ -138,7 +138,7 @@ reference to published/unpublished text
 - **A**nd
 - **D**iscussion: _What does it all mean?_
 
-![[attachments/IMRAD.pdf]]
+![[attachments/IMRAD.pdf|IMRAD]]
 
 #### Structure
 
@@ -456,10 +456,12 @@ example
 
 ![[attachments/Pasted image 20230717123925.png]]
 
-#### 建议
+##### 建议
 1. Formulate  **informative sentences in the beginning**.
 2. Move  **from more general information to very precise information**.
 3. Put  **available information before new**.
 4. The first words of each sentence should be  **linked to the previous sentence**.
 5. In general, a paragraph should consist of **at least three sentences**.
 6. While referring to other studies, you should summarize them **in your own words**.
+
+##### 1. Field of research
