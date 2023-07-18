@@ -36,8 +36,7 @@ tags:
 ## 2 Literature Search
 
 #### literature sources
-
-	![[Pasted image 20221017153618.png]]
+	![[attachments/Pasted image 20221017153618.png]]
     - [Web of Science platform - Clarivate](https://clarivate.com/products/scientific-and-academic-research/research-discovery-and-workflow-solutions/webofscience-platform/)
     - [Journal Citation Reports - Clarivate](https://clarivate.com/products/scientific-and-academic-research/research-analytics-evaluation-and-management-solutions/journal-citation-reports/)
 
@@ -58,7 +57,7 @@ tags:
 - Comparison
 - Outcome
 - example
-     ![[Pasted image 20221017155217.png]]
+     ![[attachments/Pasted image 20221017155217.png]]
 
 #### How to search
 
