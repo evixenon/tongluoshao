@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project/vbh - Scientific Writing.md",
+                "file": "permanent/冒险岛.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "project/vbh - Scientific Writing.md",
+                "file": "permanent/冒险岛.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "project/vbh - Scientific Writing.md",
+                "file": "permanent/冒险岛.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "project/vbh - Scientific Writing.md"
+                "file": "permanent/冒险岛.md"
               }
             }
           }
@@ -183,6 +183,7 @@
   },
   "active": "9158a20118a1b06f",
   "lastOpenFiles": [
+    "project/vbh - Scientific Writing.md",
     "attachments/Pasted image 20230720131307.png",
     "attachments/Pasted image 20230720125556.png",
     "attachments/Pasted image 20230720124825.png",
@@ -194,7 +195,6 @@
     "permanent/Python.md",
     "permanent/python matplotlib库.md",
     "project/正己 - 安卓逆向这档事.md",
-    "project/vbh - Scientific Writing.md",
     "private/阻碍我们成长的是什么.md",
     "attachments/Pasted image 20230718144036.png",
     "attachments/Pasted image 20230718143311.png",
@@ -202,7 +202,6 @@
     "attachments/Pasted image 20230718142648.png",
     "project/飞桨AI - 大模型应用开发技巧与实战.md",
     "attachments/Pasted image 20230717123925.png",
-    "attachments/Pasted image 20230717123522.png",
     "permanent/个站bug.md",
     "private/网页文字修改魔法.md",
     "attachments/Student Guide For Scientific Writing.pdf",
