@@ -495,7 +495,7 @@ example
 - present perfect tense: actions, situations
 
 主动被动
-- 更建议主动, 遵循 SVO 的方式
+- 更建议主动, 遵循 SVO 的方式, 用 we ...
 - 部分被动, 涉及到 agent 时
 
 人称
@@ -507,3 +507,46 @@ example
 - 清晰地表明 objective
 - 具体准确
 - 不需要讲个人经历
+
+## 8 Results
+
+#### Structure
+
+#### 怎么写
+1. 先定好 analysis plan, 并做好空 tables
+
+
+#### 建议
+- 不要重复 Methods, 建议 referring to and highlighting an already described method
+- 可以用 subtitle 和 Methods 对应
+
+#### 要达到的目的
+- most important findings
+    - Descriptive data of determinant variables
+        - ![[attachments/Pasted image 20230720124631.png]]
+    - Descriptive data of outcome variables
+        - ![[attachments/Pasted image 20230720124753.png]]
+    - Bi- or Multivariate analysis
+        - ![[attachments/Pasted image 20230720124825.png]]
+- comment on various results
+    - ![[attachments/Pasted image 20230720125556.png]]
+- refer to tables/figures
+    - 比如上图的 (Table 2)
+
+#### 语法方面
+
+时态
+- past tense: 常用
+- present tense : 同之前, 事实用
+
+主动
+- 用主动
+- 但要避免用 we
+
+#### tables and figures
+- most compact way to show results
+- self-explainary(stand alone)
+- different statistical analysis
+
+##### table
+![[attachments/Pasted image 20230720131307.png]]

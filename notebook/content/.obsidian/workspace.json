@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/python bs4库.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "private/python bs4库.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/python bs4库.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/python bs4库.md"
+                "file": "project/vbh - Scientific Writing.md"
               }
             }
           }
@@ -183,9 +183,14 @@
   },
   "active": "9158a20118a1b06f",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230720131307.png",
+    "attachments/Pasted image 20230720125556.png",
+    "attachments/Pasted image 20230720124825.png",
+    "attachments/Pasted image 20230720124753.png",
+    "attachments/Pasted image 20230720124631.png",
+    "private/python bs4库.md",
     "permanent/python pandas库.md",
     "permanent/Smali.md",
-    "private/python bs4库.md",
     "permanent/Python.md",
     "permanent/python matplotlib库.md",
     "project/正己 - 安卓逆向这档事.md",
@@ -198,11 +203,7 @@
     "project/飞桨AI - 大模型应用开发技巧与实战.md",
     "attachments/Pasted image 20230717123925.png",
     "attachments/Pasted image 20230717123522.png",
-    "attachments/Pasted image 20230717123107.png",
-    "attachments/Pasted image 20230717123054.png",
-    "attachments/Pasted image 20230717123036.png",
     "permanent/个站bug.md",
-    "attachments/Pasted image 20230716224734.png",
     "private/网页文字修改魔法.md",
     "attachments/Student Guide For Scientific Writing.pdf",
     "attachments/IMRAD.pdf",
@@ -221,7 +222,6 @@
     "permanent/Python 数据分析.md",
     "permanent/Python Generator, Iterator.md",
     "permanent/冒险岛.md",
-    "permanent/Git.md",
     "attachments/诸神黄昏规划器.xlsx",
     "attachments/武林立志传武功选择表bycsb01421v20190426m.xlsx",
     "attachments/武林立志传人物60级属性.xlsx",
