@@ -550,3 +550,17 @@ example
 
 ##### table
 ![[attachments/Pasted image 20230720131307.png]]
+
+
+##### figures
+
+why use?
+- You want to show an overall **trend** in your data,
+- You want to **compare** only a few elements/variables,
+- The precise actual **values** are of **less importance**.
+
+#### 误区
+- discuss
+- 多余的result
+- results are not objective
+- 再次描述 Methods
