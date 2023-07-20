@@ -582,3 +582,12 @@ data.to_csv(sys.stdout, index=False, header=False)
 
 # 输出时指定行名
 data.to_csv(sys.stdout, index=False, columns=["a", "b", "c"])
+```
+
+## 非核心功能
+
+##### 将日期字符串转换成日期
+dayfirst 是指英式日期
+```python
+pd.to_datetime(str, dayfirst=True)
+```

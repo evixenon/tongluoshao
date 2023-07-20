@@ -13,25 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent/python pandas库.md",
+                "file": "permanent/Python.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4db6d3e9e4296ee4",
+            "id": "9158a20118a1b06f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent/Smali.md",
+                "file": "private/python bs4库.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -116,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "permanent/python pandas库.md",
+                "file": "private/python bs4库.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent/python pandas库.md",
+                "file": "private/python bs4库.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "permanent/python pandas库.md"
+                "file": "private/python bs4库.md"
               }
             }
           }
@@ -180,10 +181,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "036056909576c116",
+  "active": "9158a20118a1b06f",
   "lastOpenFiles": [
-    "project/正己 - 安卓逆向这档事.md",
+    "permanent/python pandas库.md",
     "permanent/Smali.md",
+    "private/python bs4库.md",
+    "permanent/Python.md",
+    "permanent/python matplotlib库.md",
+    "project/正己 - 安卓逆向这档事.md",
     "project/vbh - Scientific Writing.md",
     "private/阻碍我们成长的是什么.md",
     "attachments/Pasted image 20230718144036.png",
@@ -212,15 +217,11 @@
     "private/Citavi.md",
     "private",
     "permanent/python numpy库.md",
-    "permanent/python matplotlib库.md",
     "permanent/python json库.md",
     "permanent/Python 数据分析.md",
     "permanent/Python Generator, Iterator.md",
     "permanent/冒险岛.md",
     "permanent/Git.md",
-    "permanent/python pandas库.md",
-    "permanent/Python.md",
-    "permanent/你猫游.md",
     "attachments/诸神黄昏规划器.xlsx",
     "attachments/武林立志传武功选择表bycsb01421v20190426m.xlsx",
     "attachments/武林立志传人物60级属性.xlsx",
