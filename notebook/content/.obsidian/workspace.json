@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project/vbh - Scientific Writing.md",
+                "file": "permanent/统计学.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b22310a7fa30ec1b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "private/自研文献阅读方法.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -104,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "project/vbh - Scientific Writing.md",
+                "file": "private/自研文献阅读方法.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -116,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "project/vbh - Scientific Writing.md",
+                "file": "private/自研文献阅读方法.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "project/vbh - Scientific Writing.md"
+                "file": "private/自研文献阅读方法.md"
               }
             }
           }
@@ -168,8 +181,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "036056909576c116",
+  "active": "b22310a7fa30ec1b",
   "lastOpenFiles": [
+    "attachments/Pasted image 20230721132451.png",
+    "attachments/Pasted image 20230721132317.png",
+    "permanent/统计学.md",
+    "private/自研文献阅读方法.md",
+    "index/30 数学.md",
+    "project/vbh - Scientific Writing.md",
     "attachments/Pasted image 20230721115521.png",
     "attachments/Pasted image 20230721110523.png",
     "attachments/Pasted image 20230721110512.png",
@@ -181,18 +200,15 @@
     "permanent/PPI.md",
     "permanent/python bs4库.md",
     "permanent/冒险岛.md",
-    "project/vbh - Scientific Writing.md",
     "attachments/Pasted image 20230720131307.png",
     "attachments/Pasted image 20230720125556.png",
     "attachments/Pasted image 20230720124825.png",
     "attachments/Pasted image 20230720124753.png",
-    "attachments/Pasted image 20230720124631.png",
     "permanent/python pandas库.md",
     "permanent/Smali.md",
     "permanent/python matplotlib库.md",
     "project/正己 - 安卓逆向这档事.md",
     "private/阻碍我们成长的是什么.md",
-    "attachments/Pasted image 20230718144036.png",
     "project/飞桨AI - 大模型应用开发技巧与实战.md",
     "permanent/个站bug.md",
     "private/网页文字修改魔法.md",
@@ -205,10 +221,7 @@
     "private/RefWorks.md",
     "private/http referrer 图片防盗链.md",
     "private/Endnote.md",
-    "private/Citavi.md",
     "private",
-    "permanent/python numpy库.md",
-    "permanent/python json库.md",
     "attachments/诸神黄昏规划器.xlsx",
     "attachments/武林立志传武功选择表bycsb01421v20190426m.xlsx",
     "attachments/武林立志传人物60级属性.xlsx",
