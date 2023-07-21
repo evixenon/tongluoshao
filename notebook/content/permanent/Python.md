@@ -28,7 +28,7 @@ date: "2023-06-16"
 [[permanent/python json库|python json库]]
 
 ### 网页分析
-[[private/python bs4库|python bs4库]]
+[[permanent/python bs4库|python bs4库]]
 
 ### 其他库
 [[permanent/pyinstaller|pyinstaller]]
