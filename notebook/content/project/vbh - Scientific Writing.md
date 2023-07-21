@@ -564,3 +564,15 @@ why use?
 - 多余的result
 - results are not objective
 - 再次描述 Methods
+
+## 9 Discussion and Conclusion
+
+#### D+C 要回答
+- Do your results provide answers to your hypotheses?
+- If so, how do you interpret your findings?
+- Do your findings agree with what others have shown?
+- If not, do they suggest an alternative explanation or perhaps an unforeseen design flaw in your experiment (or theirs)?
+- Given your conclusions, what is our new understanding of the problem you investigated and outlined in the Introduction?
+- If warranted, what would be the next step in your study, e.g., what experiments would you do next?
+
+#### Discussion 和 Conclusion 的区别

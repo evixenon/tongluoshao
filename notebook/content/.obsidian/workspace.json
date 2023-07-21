@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent/Python.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "mode": "source",
                 "source": false
               }
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "permanent/Python.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent/Python.md",
+                "file": "project/vbh - Scientific Writing.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "permanent/Python.md"
+                "file": "project/vbh - Scientific Writing.md"
               }
             }
           }
@@ -170,6 +170,8 @@
   },
   "active": "036056909576c116",
   "lastOpenFiles": [
+    "permanent/Python.md",
+    "permanent/终身成长.md",
     "permanent/非暴力沟通.md",
     "permanent/PPI.md",
     "permanent/python bs4库.md",
@@ -182,7 +184,6 @@
     "attachments/Pasted image 20230720124631.png",
     "permanent/python pandas库.md",
     "permanent/Smali.md",
-    "permanent/Python.md",
     "permanent/python matplotlib库.md",
     "project/正己 - 安卓逆向这档事.md",
     "private/阻碍我们成长的是什么.md",
@@ -208,7 +209,6 @@
     "permanent/python numpy库.md",
     "permanent/python json库.md",
     "permanent/Python 数据分析.md",
-    "permanent/Python Generator, Iterator.md",
     "attachments/诸神黄昏规划器.xlsx",
     "attachments/武林立志传武功选择表bycsb01421v20190426m.xlsx",
     "attachments/武林立志传人物60级属性.xlsx",
