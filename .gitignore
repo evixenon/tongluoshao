@@ -5,7 +5,11 @@ notebook/.idea
 notebook/content/.obsidian/workspace.json
 # notebook/assets/indices/linkIndex.json
 # notebook/assets/indices/contentIndex.json
+
 notebook/content/.obsidian
+notebook/content/zotero
+notebook/content/private
+
 notebook/linkmap
 notebook/static/linkmap
 notebook/content/private
