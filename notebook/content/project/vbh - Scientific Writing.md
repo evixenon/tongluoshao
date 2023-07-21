@@ -618,3 +618,66 @@ C
 ![[attachments/Pasted image 20230721110523.png]]
 
 ##### Limitation
+- Weak validity
+- Weak reliability
+- Low generalizability
+- Limitations in study design
+- Bias,  Confounding Variables and Imprecision
+    - selection bias: volunteer bias, non-response bias
+    - measurement bias: instrument bias, recall/memory bias
+
+> **Volunteer/referral bias** occurs because people who volunteer to participate in a study are often different from non-volunteers
+
+> **Non-response bias** occurs when those who do not respond to a survey differ in important ways from those who respond or participate.
+
+Strategies reducing confounding:
+- **Randomization**: random distribution of confounders between study groups
+- **Restriction**: restrict entry to study of individuals with confounding factors (risks bias in itself)
+- **Standardization** (direct or indirect depending on the data analysis)
+- **Matching** (of individuals or groups, for equal distribution of confounders)
+- **Stratification** (distribution of confounders evenly within each stratum)
+- **Adjustment** (usually distorted by choice of standard)
+- **Multivariate Analysis** (only works if you can identify and measure the confounders)
+
+##### Intepretation
+- How do the results that you obtained relate to the original study question?
+- Do the results comply with the objective of the study?
+- Does the data support the hypothesis of the study or not?
+- Do the results of your study comply with the results of other similar and relevant studies?
+- If the results of your study turn out to be unexpected: Why might this have happened?
+
+##### Generalizability
+- 通常关系到 external validity
+
+通过
+- Broadening the **inclusion criteria**
+- Maximizing the **sample size**
+- Using valid and normally easily available **study instruments**
+- Using **standard protocol**
+
+![[attachments/Pasted image 20230721115521.png]]
+
+##### Further research
+- 如果有计划就说
+
+#### Conclusion
+- restate the main conclusions in a new concise way
+- Mention at least one relevant theory!
+
+#### 语法
+- past tense
+- active voice as much as you can
+
+#### 注意用词
+- 建议使用: indicates, appears, suggests
+- 慎重: firmly, completely, strongly 或类似词只在结果不容置疑时使用
+- hypothesizing: 推荐使用 modal verb (may be)
+
+#### 常见误区(Discussion & Conclusion)
+- introducing new result
+- 没有 conclude, 只是重复
+- Result 和 Discussion 混在一起
+- 提及了(太)广泛的信息, 不具体
+- 无法关联其他 studies
+- 不提这个 study 的 strengths 和 weaknesses
+- 加起来不要超过3页
