@@ -576,3 +576,45 @@ why use?
 - If warranted, what would be the next step in your study, e.g., what experiments would you do next?
 
 #### Discussion 和 Conclusion 的区别
+D
+- interpret
+- 揭示 implications
+- recommendation for future research
+
+C
+- highlight the most important parts of your study (in new and concise way)
+
+#### Discussion should include
+1. **Key results** 
+2. **Limitations** of your study
+3. **Strength** of your study
+4. **Interpretation** of the results
+5. **Generalizability** of your study
+6. Recommendations for **further research**
+
+##### Key results
+- 不要完全重复地表达
+- 为什么这些结果关键
+- 不要在这个 section 引出新 result
+- describe only key, precise
+
+##### Strengths of your study
+突出 
+- study design
+- study population and methods
+
+优势主要体现在
+- Validity
+- Reliability
+- Sample size & Selection
+- Study Design
+
+![[attachments/Pasted image 20230721110448.png]]
+
+![[attachments/Pasted image 20230721110502.png]]
+
+![[attachments/Pasted image 20230721110512.png]]
+
+![[attachments/Pasted image 20230721110523.png]]
+
+##### Limitation
