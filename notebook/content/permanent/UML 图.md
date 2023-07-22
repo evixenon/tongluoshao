@@ -10,6 +10,7 @@ tags:
 - 
 
 ### 每个图用在什么流程
+
 | Stage          | Structure | Behavior |
 | -------------- | --------- | -------- |
 | Requirement    | Use-case  | Activity |
