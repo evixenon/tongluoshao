@@ -5,6 +5,8 @@ draft: true
 tags:
 ---
 
+![[attachments/Pasted image 20230723143437.png]]
+
 ## 1 Introduction
 - boh science and language competency
 - common structure of scientific method
@@ -139,7 +141,7 @@ reference to published/unpublished text
 - **A**nd
 - **D**iscussion: _What does it all mean?_
 
-![[attachments/IMRAD.pdf|IMRAD]]
+[[attachments/IMRAD.pdf|IMRAD]]
 
 #### Structure
 
@@ -192,6 +194,9 @@ also called instruction for authors
 
 不同的 scientific journal 有不同的 guideline
 
+比如: 
+[Instructions for preparing an initial manuscript | Science | AAAS](https://www.science.org/content/page/instructions-preparing-initial-manuscript)
+
 ##### 2. Scientific Writing Style
 
 ![[attachments/Pasted image 20230713135016.png]]
@@ -200,7 +205,7 @@ also called instruction for authors
 
 ![[attachments/Pasted image 20230713134847.png]]
 
-![[attachments/Student Guide For Scientific Writing.pdf]]
+[[attachments/Student Guide For Scientific Writing.pdf]]
 
 ##### 3. Layout
 
@@ -681,3 +686,73 @@ Strategies reducing confounding:
 - 无法关联其他 studies
 - 不提这个 study 的 strengths 和 weaknesses
 - 加起来不要超过3页
+
+## 10 Title and Abstract
+
+#### 简述
+- Title 是第一个被看到的, 如果读者对这个题目有兴趣, 就会接下去看 Abstract. 
+- 如果写得不好, 剩下的内容可能不会被阅读.
+- 是会被搜索的部分
+- -> convincing, eye-catching, informative
+
+#### Title page 包括
+- The **title** of the article,
+- The names of the **authors** and highest **degree** by order,
+- The **authors´ affiliation** (places of work),
+- **Contact details** of the author submitting the article (termed corresponding author).
+
+### Title
+- Declarative or exclamatory or interrogative statement (陈述性, 感叹性, 或质疑性表述)
+- 尽量具体(e.g. xxx contributes to yyy)
+- 展示结果是什么而不是你做了什么
+- 应该包含 keywords, 一种标题写法是用 `:` 或 `-` 将标题分为两部分
+    - keyword including part
+    - explanatory part
+
+#### 语言选择策略
+- no jargon
+- no abbreviation
+- 小心像媒体一样的标题, 更学术一点
+    - Technology: The future that will ultimate doom our children -> Technology: Unforseen negative consequence of for future generation
+- avoid vagueness
+- 不要用 A study of ... 开头
+    - -> 直接去掉
+- scientific names 用 italic
+- 拼写数字
+
+#### 不要
+- 不要太长
+- 不要用多余的词
+- no irony, puns, humor
+
+### Keywords
+- 为了增加被阅读的可能性而设置的
+
+##### General keywords
+比如研究领域, 学科
+
+##### Specific keywords
+比如用到的材料, 方法
+
+### Abstract 
+
+示例: [[attachments/example abstract.pdf]]
+
+#### Abstract 应该包括
+- Some **background information**,
+- The **objective/aim** of the study.
+- The **methods** used,
+- The most important **result** of your study.
+- A **conclusion or recommendation**.
+
+#### 语法方面
+- 尽量 active voice
+- past tense
+
+#### 建议
+- 增加 Keywords
+- informative
+- 别把背景故事弄得很长
+- no reference
+- no slang, acronym or abbreviation
+- no tables, figures of graphs
