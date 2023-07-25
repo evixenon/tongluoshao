@@ -756,3 +756,20 @@ Strategies reducing confounding:
 - no reference
 - no slang, acronym or abbreviation
 - no tables, figures of graphs
+
+## Visuals
+
+#### 核心思想
+- 图表的目的是为了让人清晰地了解数据
+- 展示趋势/关系
+
+#### Tables or Figures/Graphs
+![[attachments/Pasted image 20230725124320.png]]
+
+### Table
+
+#### Text Table
+
+#### Summary Table
+
+#### Data Table
