@@ -769,7 +769,74 @@ Strategies reducing confounding:
 ### Table
 
 #### Text Table
+- listing key points, for comparing
 
 #### Summary Table
+- Summarizing key findings
+- 适合大型数据集
+- 不适合少量数据
 
 #### Data Table
+- 可列出人口统计特征或展示比较组的特征, 统计学参数
+- 适合需要准确数据, 或单个数据重要
+- 不适合文本就能描述的小数据
+
+#### 好的 table
+- good design
+- good layout
+- well chosen and well organized data
+- specific footnote
+- well informative title
+- referencing the text
+
+#### table title
+- 序数
+- max 20/30 words
+- including:
+    - purpose of table
+    - title of the study
+    - location, year
+    - number of subjects
+- e.g. Model summary for the logistic regression model with the eight independent variables predicting group membership
+    - 缺少 numbers of subjects (N=194)
+    - 缺少 study design
+    - 缺少 location year
+    - 对 study 标题没有提示
+
+### Figures and Graphs
+
+#### Figures
+
+| **  <br>use**     | **Advantage**                                                                                                                                                | **Disadvantage**                                                  |                                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Photograph**    | Can be used when a visual representation is better than plain or overcomplicated text.                                                                       | Easy to understand.                                               | If the photograph is shrunk to fit the paper size, or printed in black and white, it can lose its value. |
+| **Line drawing**  | Can be used to denote a key point in a procedure, or to demonstrate a characteristic of a disease etc.                                                       | Is better than a cluttered image or when an image is unavailable. | Simply depicts a situation and fails to explain anything more complex.                                   |
+| **Flowchart**     | Can be used to depict a multi-step process like: denoting exclusion criteria, the protocol of a patient´s treatment, or to demonstrate steps of a procedure. | Can shorten the text, as minimal text is required.                | Is not suitable for highly branched and complex processes.                                               |
+| **Decision tree** | Can be used when you need to demonstrate potential outcomes or decisions in a sequential manner. Also used to find a strategy to reach goal.                 | Is suitable for cost-utility analysis.                            | Requires extensive space and is hard to follow.                                                          |
+|                   |                                                                                                                                                              |                                                                   |                                                                                                          |
+|                   |                                                                                                                                                              |                                                                   |                                                                                                          |
+
+#### Graphs
+
+|**  <br>Use**|**Advantage**|**Disadvantage**|
+|---|---|---|
+|**Column and bar graph**|Can be used for comparing multiple contributors for single category.|Easy to interpret and good for observing trend in paired data.|Lacks information on individual data points.|
+|**Line graph**|Can be used to observe change in single/ multiple variable(s) over time.|Good for showing data values with the slopes between them.|Not appropriate for representing averages or other such measurements.|
+|**Histogram**|Can be used to represent sampling distribution with a continuous dependent variable.|Is appropriate for showing shape of distributions and good for displaying quantitative data.|If intervals were large, the correct shape might not be seen.|
+|**Box plot**|Can be used to show the distribution of data from one or multiple groups.|Good for showing and comparing large datasets.|Only shows outliers and not individual data points. Is not appropriate for small datasets, which can be represented in a histogram.|
+|**Scatter plot**|Can be used to show individual data points from bivariate data.|Preserves both dimensions of data and individual points. Is a good choice for representing paired data.|Unable to distinguish points that fall on same or close coordinates.|
+|**Survival curve**|Can be used to show cumulative changes in a population.|Can show cumulative changes on morbidity or mortality in a population.|Cannot show stratification variables.|
+
+#### Selection
+
+![[attachments/Pasted image 20230725134724.png]]
+
+#### 注意点
+- lengths
+- color: 会变成黑白
+- combination
+- resolution
+- label
+- structure
+- error bar/ confidence interval
+
