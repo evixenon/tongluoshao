@@ -964,3 +964,46 @@ $$ JIF\ Year_{x} = \frac{cite\ to\ recent\ article(Year_{x-1} + Year_{x-2})}{|re
 1.  **Peer review period**,
 2.  **Time to publication**.
 
+
+##### 5. Page charge and open access
+- subscription
+- gold open access
+
+##### 6. Additional factors:
+
+Additional factors for the selection of the journals you would like to submit your article to could be:
+
+-  **Governance and Funding of the Journal**,
+-  **Length restriction**,
+-  **Publication frequency**,
+-  **Publication types**,
+-  **Rejection rates**.
+
+#### 提交前 checklist
+1. After completing the draft of the manuscript, **put it aside** for 48 hours and then review it again before sending.
+2. If possible, print the manuscript and analyze it from the **point of view of the reviewer**.
+3. Check the **subheadings** wherever necessary.
+4. Check that the manuscript follows the **general guidelines** of the target journal you have selected.
+5. **Spell check** the whole manuscript.
+6. Edit the correctness and the consistency of the **reference list** and the referee list.
+7. Do a **final check**.
+
+#### 提交时通常需要提交
+-  Cover letter, 
+-  Manuscript,
+-  Appendix,
+-  List of potential reviewers/ non-reviewers,
+-  Author contributions/ conflict of interest statements/ copyright release statements.
+
+##### Cover letter
+类似简介信, 要短而精炼
+- 表明 this paper is in the scope of the journal
+- new, original, 会对科学作出贡献的
+- 表明格式正确, 希望得到评论和发表
+- 以及
+    - Title of the paper
+    - name, address, phone/fax/email
+    - 
+
+##### List of potential (non)reviewers
+![[attachments/Pasted image 20230726170335.png]]
