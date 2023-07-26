@@ -757,7 +757,7 @@ Strategies reducing confounding:
 - no slang, acronym or abbreviation
 - no tables, figures of graphs
 
-## Visuals
+## 11 Visuals
 
 #### 核心思想
 - 图表的目的是为了让人清晰地了解数据
@@ -852,3 +852,89 @@ A **legend** of approximately 100 to 300 words follows the figure. This legen
 - **Key to the nomenclature, symbols, abbreviations and units** used in the figure (some prefer to include the key into the figure itself).
 
 图后有一个约 100 至 300 字的图例。图例应包含以下内容  图的标签；图的内容解释；如果需要：方法信息；图中变量之间的影响或关联说明；变量的坐标轴和单位说明；图中使用的术语、符号、缩写和单位的关键（有些人喜欢将关键包含在图中）。
+
+
+## 12 Bibliography and Citation
+
+
+#### 可用的引源(15~30)
+- Scientific article
+- all book
+- internet source
+- literature referred to within your scientific article
+
+甚至
+- video
+- personal conversation
+- email
+
+#### 3? Citation
+
+##### 为什么要用 Citation
+- 支持你的论据
+- 肯定前人的工作
+- 让读者可以追溯一个观点
+- 展示你对领域的熟悉度
+- avoid plagiarism
+
+##### 什么时候引用
+- direct quotation: 直接将一个观点附在文中
+- 如果要将一个观点 paraphrase 或 summarize
+- 引用 fact, statistic, data
+- - when **figures**, **illustrations** or other **graphical presentations** are adopted from a source.
+
+##### 如何引用
+- parenthetical in-text citation
+    - ![[attachments/Pasted image 20230726092946.png]]
+- footnote
+    - ![[attachments/Pasted image 20230726093003.png]]
+- 如果是总结的 idea, 则在句末
+    - ![[attachments/Pasted image 20230726093405.png]]
+- 图表
+    - ![[attachments/Pasted image 20230726093508.png]]
+    - adapted from/ source
+
+可以多个引用指向一个句子
+
+#### 引文的作者人数不同
+
+##### 一作者
+![[attachments/Pasted image 20230726093242.png]]
+
+##### 二作者
+![[attachments/Pasted image 20230726093256.png]]
+
+##### 更多作者
+![[attachments/Pasted image 20230726093312.png]]
+
+#### in text citation
+
+##### Author prominent
+谁谁谁认为...
+![[attachments/Pasted image 20230726093736.png]]
+
+##### Information or Idea prominent
+说完观点最后引用
+![[attachments/Pasted image 20230726093747.png]]
+
+
+#### 常见 Citation 格式
+![[attachments/Pasted image 20230726095333.png]]
+
+##### Vancouver style
+![[attachments/Pasted image 20230726093946.png]]
+
+##### Author date style
+![[attachments/Pasted image 20230726094000.png]]
+
+##### MLA style
+[MLA - Citing Your Sources - Research Guides at Williams College Libraries](https://libguides.williams.edu/citing/mla)
+![[attachments/Pasted image 20230726094026.png]]
+
+##### APA style
+[APA (7th) - Citing Your Sources - Research Guides at Williams College Libraries](https://libguides.williams.edu/citing/apa)
+![[attachments/Pasted image 20230726094050.png]]
+
+##### ACS style
+[ACS - Citing Your Sources - Research Guides at Williams College Libraries](https://libguides.williams.edu/citing/acs)
+![[attachments/Pasted image 20230726094110.png]]
