@@ -956,3 +956,11 @@ A **legend** of approximately 100 to 300 words follows the figure. This legen
 -  **Status** of the journal,
 - **History of publishing** in the field,
 -  **Access** to the audience (Open Access option or not?).
+
+##### 3. Impact factor
+$$ JIF\ Year_{x} = \frac{cite\ to\ recent\ article(Year_{x-1} + Year_{x-2})}{|recent\ article(Year_{x-1} + Year_{x-2})|}$$
+
+##### 4. Turnaround time
+1.  **Peer review period**,
+2.  **Time to publication**.
+
