@@ -938,3 +938,21 @@ A **legend** of approximately 100 to 300 words follows the figure. This legen
 ##### ACS style
 [ACS - Citing Your Sources - Research Guides at Williams College Libraries](https://libguides.williams.edu/citing/acs)
 ![[attachments/Pasted image 20230726094110.png]]
+
+
+## 13 Submission to the journal
+
+#### 怎样选择出版社
+
+##### 1.缩小范围
+- Identifying  **most cited journals**,
+- Performing a  **keyword search**,
+- Going through the  **aims and scope of the journal**,
+- Going through the titles and abstracts of the  **recently published articles**.
+
+##### 2. Audience or readership
+读者群体取决于
+-  **Aims and scope** of the journal,
+-  **Status** of the journal,
+- **History of publishing** in the field,
+-  **Access** to the audience (Open Access option or not?).
