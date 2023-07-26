@@ -834,9 +834,21 @@ Strategies reducing confounding:
 #### 注意点
 - lengths
 - color: 会变成黑白
-- combination
+- combination: 尽量避免多part图
 - resolution
 - label
 - structure
 - error bar/ confidence interval
 
+#### Legend
+图例/ 图下跟着的文字
+A **legend** of approximately 100 to 300 words follows the figure. This legend should have the following elements:
+
+- **Label** of the figure,
+- **Explanation of the content** of the figure,
+- If required: **information on the method**,
+- **Description of the effect or associations** between the variables in the figure,
+- **Description of the axis and the units** of the variables,
+- **Key to the nomenclature, symbols, abbreviations and units** used in the figure (some prefer to include the key into the figure itself).
+
+图后有一个约 100 至 300 字的图例。图例应包含以下内容  图的标签；图的内容解释；如果需要：方法信息；图中变量之间的影响或关联说明；变量的坐标轴和单位说明；图中使用的术语、符号、缩写和单位的关键（有些人喜欢将关键包含在图中）。
