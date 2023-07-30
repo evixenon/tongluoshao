@@ -112,9 +112,14 @@ table(c(10,10,40,30))
 
 ## Graphs
 
+### Base
+
 #### plot()
 
+通常用来画散点图, 有时也会自适应画其他
+
 ##### plot(x, y)
+散点图
 
 给 x, y 轴数据, 自动选择合适的图表类型生成 graph
 
@@ -129,8 +134,14 @@ table(c(10,10,40,30))
 plot(dnorm, -3, 3) 
 ```
 
-##### 更多参数
+#### 参数
 `?plot` 查看帮助
+
+各种图表通用的参数:
+- col, 颜色
+- main, 标题
+- xlab, ylab, x轴/y轴标签
+- xlim, ylim, x轴/y轴的范围
 
 ```R
 # Plot with options
@@ -149,7 +160,33 @@ plot(iris$Petal.Length, iris$Petal.Width,
 barplot(data)
 
 这个 data 比如说 table 生成的
+```R
+barplot(table(iris$Species))
+```
 
+#todo ~是什么
+```R
+boxplot(iris$Sepal.Length~iris$Species)
+typeof(iris$Petal.Length~iris$Species)
+[1] "language"
+```
+
+#### hist() 直方图
+直方图(histogram)和条形图(bar chart)的区别是, 直方图的 x 轴是连续的数值, 且柱子之间没有空隙. 所以条形图更适合统计某一类的数量, 直方图更适合展示分布情况.
+
+```R
+hist(iris$Sepal.Length)
+```
+
+#### 多个图像
+通过 `par(mfrow=c(r)`
+
+下图是直方图课件里的例子
+![[attachments/Pasted image 20230730131327.png]]
+
+### ggplot2
+
+[手把手教你使用ggplot2绘制条形图 - 知乎](https://zhuanlan.zhihu.com/p/25173606)
 ## Distribution
 
 dnorm = density of normal distribution
