@@ -4,6 +4,8 @@ date: "2023-06-16"
 tags:
 - Java
 ---
+#### 环境配置
+[[private/Java 的环境配置|Java 的环境配置]]
 
 #### Java 原理
 [[permanent/JVM, Dalvik, Art|JVM, Dalvik, Art]]

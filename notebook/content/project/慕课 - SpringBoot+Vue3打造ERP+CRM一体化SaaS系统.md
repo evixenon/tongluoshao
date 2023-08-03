@@ -9,9 +9,9 @@ tags:
 #### 标题的这几个缩写是什么
 [[permanent/SaaS|SaaS]]
 
-[[private/CRM|CRM]] => 增加销售额
+[[permanent/CRM|CRM]] => 增加销售额
 
-[[private/ERP|ERP]] => 降低成本
+[[permanent/ERP|ERP]] => 降低成本
 
 #### 设计方案
 
@@ -47,5 +47,7 @@ SaaS 系统
 3. 数据源切换
 
 ## 流程化搭建开发环境
+
+[[private/Java 的环境配置|Java 的环境配置]]
 
 
