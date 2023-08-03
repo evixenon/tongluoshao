@@ -2,7 +2,7 @@
 title: "lmu - IT Security"
 date: "2023-06-16"
 ---
-
+#todo
 
 ## Einleitung
 
@@ -370,13 +370,13 @@ unerwünschte Werbemails
 ### Systemnahe Angriffe
 
 #### Buffer Overflows
-![[attachments/permanent/Buffer Overflows#Buffer Overflows]]
+[[permanent/Buffer Overflows#Buffer Overflows]]
 
-![[attachments/permanent/Buffer Overflows#stack smashing]]
+[[permanent/Buffer Overflows#stack smashing]]
 
-![[attachments/permanent/Buffer Overflows#防御措施]]
+[[permanent/Buffer Overflows#防御措施]]
 
-![[attachments/permanent/Buffer Overflows#其他方式]]
+[[permanent/Buffer Overflows#其他方式]]
 
 
 #### Account/Password Cracking
@@ -387,8 +387,7 @@ unerwünschte Werbemails
 - 撞哈希/破解加密算法
 - 撞库
 
-字典攻击的对抗方式: 加盐
-![[attachments/permanent/加盐#加盐]]
+字典攻击的对抗方式: [[permanent/加盐#加盐|加盐]]
 
 
 #### Back Door, Trap Door
@@ -398,11 +397,11 @@ unerwünschte Werbemails
 - `.rhosts`(root)或`authorized_keys`(ssh)文件里留痕迹
 
 #### Rootkits
-![[attachments/Rootkit#Rootkit 的历史和典型案例]]
+[[Rootkit#Rootkit 的历史和典型案例]]
 
-![[attachments/Rootkit#User-Mode/Kernel-Mode Rootkit]]
+[[Rootkit#User-Mode/Kernel-Mode Rootkit]]
 
-![[attachments/Rootkit#Rootkit 的反取证措施]]
+[[Rootkit#Rootkit 的反取证措施]]
 
 #### Adobe Flash
 Flash 已于 2020 年末结束服务
@@ -423,9 +422,9 @@ Flash 已于 2020 年末结束服务
 ### Web 攻击
 
 #### XSS
-![[attachments/XSS#XSS]]
+[[XSS#XSS]]
 
-![[attachments/XSS#XSS 对策]]
+[[XSS#XSS 对策]]
 
 
 事件: Angriff auf Issue Tracking System von Apache(见 Script Kapital 3)
@@ -510,7 +509,7 @@ Wide Area Network
 - 终端设备的安全管理(monitoring, patching, local knowledge sharing)
 
 #### EPP, EDR, XDR
-![[attachments/permanent/EPP, EDR, XDR#EPP, EDR, XDR]]
+![[permanent/EPP, EDR, XDR#EPP, EDR, XDR]]
 
 ![[attachments/permanent/EPP, EDR, XDR#EDR]]
 
