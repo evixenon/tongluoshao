@@ -48,10 +48,13 @@ SaaS 系统
 
 ## 流程化搭建开发环境
 
+##### Java
 [[private/Java 的环境配置|Java 的环境配置]]
 
+##### node.js+npm
 [[private/node.js 的环境配置|node.js 的环境配置]]
 
+##### vue, vue-cli
 然后 
 ```
 npm install -g vue
@@ -60,4 +63,24 @@ npm install -g @vue/cli
 
 两个都装好后 vue --version 验证
 
+##### postman
 建议安装: postman 用于调试 API
+
+##### mysql
+下载 mysql installer for WIN: [MySQL :: MySQL Community Downloads](https://dev.mysql.com/downloads/)
+
+安装 MySQL server 8.0, 点击加到右边的项可以自定义安装地址
+
+选 server computer
+![[attachments/Pasted image 20230804141231.png]]
+
+验证: mysql -u root -p
+
+##### Redis
+[Releases · tporadowski/redis](https://github.com/tporadowski/redis/releases)
+
+配置环境
+##### maven
+[Maven – Download Apache Maven](https://maven.apache.org/download.cgi)
+
+验证 mvn -version
