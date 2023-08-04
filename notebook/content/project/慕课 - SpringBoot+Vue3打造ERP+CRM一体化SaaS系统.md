@@ -50,4 +50,14 @@ SaaS 系统
 
 [[private/Java 的环境配置|Java 的环境配置]]
 
+[[private/node.js 的环境配置|node.js 的环境配置]]
 
+然后 
+```
+npm install -g vue
+npm install -g @vue/cli
+```
+
+两个都装好后 vue --version 验证
+
+建议安装: postman 用于调试 API
