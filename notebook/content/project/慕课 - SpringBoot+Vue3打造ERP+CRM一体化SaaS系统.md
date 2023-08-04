@@ -79,8 +79,29 @@ npm install -g @vue/cli
 ##### Redis
 [Releases · tporadowski/redis](https://github.com/tporadowski/redis/releases)
 
-配置环境
+配置环境变量
 ##### maven
-[Maven – Download Apache Maven](https://maven.apache.org/download.cgi)
 
-验证 mvn -version
+[[private/maven 安装配置|maven 安装配置]]
+
+maven 是一个插件框架
+
+maven-source-plugin
+![[attachments/Pasted image 20230804151847.png]]
+
+maven-compiler-plugin, 用来编译源码, 通常只用设置版本
+![[attachments/Pasted image 20230804151915.png]]
+
+spring-boot-maven-plugin, springboot打包 jar 包
+![[attachments/Pasted image 20230804152028.png]]
+
+资源配置
+![[attachments/Pasted image 20230804152044.png]]
+
+maven-surefire-plugin, 单元测试
+![[attachments/Pasted image 20230804152107.png]]
+
+![[attachments/Pasted image 20230804152136.png]]
+
+[[private/maven 常见命令|maven 常见命令]]
+
