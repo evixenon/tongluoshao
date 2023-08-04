@@ -105,3 +105,13 @@ maven-surefire-plugin, 单元测试
 
 [[private/maven 常见命令|maven 常见命令]]
 
+IntelliJ 项目设置里 show members 可以看到类的成员, ctrl+e 最近文件, settings-file encoding 全部改 utf-8
+
+IntelliJ 插件
+- grep console, 配置日志颜色
+- GsonFormatPlus, 方便处理 gson
+- jadx 反编译
+- alibaba java coding, guidelines, 代码规范
+- codeglance, 右侧代码预览缩略图
+- MyBatisX, mapper 和 xml 之间跳转
+- MyBatisCodeHelperPro, 协助生成 dml 语句
