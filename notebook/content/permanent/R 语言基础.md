@@ -75,6 +75,18 @@ p_unload(ggplot2) # unload 某个包
 p_unload(all) # unload 所有加载的包
 ```
 
+#### 拓展: R的教程包swirl
+swirl 是配套 coursera上的约翰霍普金斯大学的R语言课程 写的
+
+```R
+# 安装和加载
+install.packages("pacman")
+pacman::p_load(swirl)
+
+swirl()
+```
+
+然后跟着指示走吧
 ## 获取数据
 
 #### datasets 包
