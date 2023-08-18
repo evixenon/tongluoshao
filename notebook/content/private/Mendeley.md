@@ -2,7 +2,6 @@
 title: "Mendeley"
 date: "2023-07-11"
 tags:
-- 软件
 ---
 
 Strengths:
