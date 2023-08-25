@@ -15,7 +15,8 @@ tags:
 #### Java SE
 [[permanent/Java 基础|Java 基础]] if,  函数等
 
-面向对象
+[[permanent/Java OOP|Java OOP]]
+
 接口
 异常
 泛型
