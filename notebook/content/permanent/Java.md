@@ -7,19 +7,27 @@ tags:
 #### 环境配置
 [[private/Java 的环境配置|Java 的环境配置]]
 
-#### Java 原理
+#### Java 原理机制
 [[permanent/JVM, Dalvik, Art|JVM, Dalvik, Art]]
 
-[[permanent/Java 的工作方式|Java 的工作方式]]
+[[permanent/Java 的原理机制|Java 的原理机制]]
 
-#### Java 语法
-[[permanent/Java 基础|Java 基础]]
+#### Java SE
+[[permanent/Java 基础|Java 基础]] if,  函数等
 
-[[permanent/Java 库|Java 库]]
+面向对象
+接口
+异常
+泛型
+反射
+IO
+
+#### 其他
 
 [[permanent/Java 细节|Java 细节]]
 
-#### Java  Build Tool
+[[permanent/Java 库|Java 库]]
+#### Java Build Tool
 [[permanent/Gradle|Gradle]]
 
 Maven
