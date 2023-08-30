@@ -189,7 +189,10 @@ do {
 和 [[#while]] 的区别在于 do block 内的代码必定执行一次
 
 ## Function
-好像没啥说的?
+
+Java 的方法只能有一个返回值, 如果需要返回多个, 只能通过装入数组的方式传递
+
+Java 是 call by value
 
 ## Exception Handling
 

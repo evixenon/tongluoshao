@@ -17,3 +17,6 @@ main() 不是每个类必须的, 一个程序只需要一个 main
 
 #### .jar 文件
 .jar 是 java archive 文件, 在 .jar 中引入 manifest 可以定义 .jar 中哪一个文件带有 main() 方法
+
+#### call by value
+Java 是值传递/拷贝传递/call by value
