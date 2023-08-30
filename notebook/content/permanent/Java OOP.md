@@ -114,3 +114,6 @@ class Main{
 #### Java Encapsulation
 指的是把数据(字段和方法)封装在一个单独的类里, 外部类不能随意修改
 涉及到 private, get/set 方法
+
+#### Getter/Setter
+Getter 和 Setter 的作用并不仅仅是给属性设置读取和修改两个方法, 更重要的是执行这些行为时的检查.
