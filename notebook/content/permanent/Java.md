@@ -21,7 +21,8 @@ tags:
 异常
 泛型
 反射
-IO
+
+[[private/Java IO|Java IO]]
 
 #### 其他
 
