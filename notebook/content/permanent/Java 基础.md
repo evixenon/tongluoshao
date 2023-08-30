@@ -64,8 +64,9 @@ while
 #### 变量
 变量其实是一块预留空间的名字, 变量的类型则指示了预留空间的大小以及解析方式
 
-变量是有类型的, 这意味着不能把 int 装进 char 的箱子
+Java 变量是有类型的, 这意味着不能把 int 装进 char 的箱子
 
+实例变量有初始值, 但局部变量没有
 #### local, instance, static
 ```java
 class Guru99 {
@@ -94,6 +95,8 @@ class Guru99 {
 
 
 ## 数据类型 
+
+primitive 和引用都可以用 == 进行同类型之间的比较, 比较的是字节上的差异
 
 ### 原始数据类型 Primitive Data Type
 
