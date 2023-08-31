@@ -137,6 +137,21 @@ class Main{
 
 抽象方法就是其所有子类共有的东西
 
+#### Java Interface
+接口是纯抽象类, 无法实例化, 所有的方法都是抽象方法.
+
+类可以实现多个接口
+
+```java
+public interace Pet {...}
+
+public class Dog extends Canine implements Pet {...}
+```
+
+##### 何时使用接口?
+接口其实其实现类都能做的事. 就比如说, 舞者这个职业相当于抽象类, 而会跳舞的人都是实现了跳舞这个接口. 
+
+
 ### Encapsulation
 
 #### Java Encapsulation
