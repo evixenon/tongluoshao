@@ -4,7 +4,6 @@ date: "2023-08-25"
 tags:
 ---
 
-## Java OOP
 
 ### Class
 类名应和文件名同名, 后缀 .java 是源文件, .class 是类文件也就是编译后的文件.
@@ -27,10 +26,10 @@ tags:
 ```java
 // A simple interface
 interface In1 {
-    // public, static and final  // 实现了此接口的类可以直接使用a
-	final int a = 10;
-    // public and abstract
-    void display();
+    // public, static and final  // 实现了此接口的类可以直接使用a
+    final int a = 10;
+    // public and abstract
+    void display();
 }
 ```
 
@@ -51,6 +50,13 @@ Object, 有 State, 有 Behavior, 有 Identity
 在 Java 中, 一个类不能继承多个类(类似的功能只能通过接口实现)
 建议在 `is-a` 关系时才使用继承
 
+#### 类的继承
+类的继承没有层数限制(至少你应该不会碰到), 但用 final 修饰的类不能被继承.(final 也表示它在继承链的末端)
+#### 方法的继承
+子类会继承所有 public 的实例变量和方法, 但不会继承 private
+
+修饰为 final 的类表示无法被重写
+
 #### extends
 ```java
 class subclass extends baseclass {
@@ -60,11 +66,16 @@ class subclass extends baseclass {
 
 #### override 重写
 子类可以重写父类的方法.
+
+override 的要求是:
+- 参数必须一样
+
 如果子类调用一个方法, 会先检查子类是否有该方法或重写了该方法, 然后检查父类中时候实现了该方法.
 
 想要重写方法, 在子类被重写的方法前添加 `@Override` 关键字
 
 ### Polymorphism
+在多态下, 引用与对象可以是不同的类型. 尤其是, 声明/参数返回时, 引用可以是对象的父类
 
 #### Runtime polymorphism/Dynamic Method Dispatch
 指调用方法时的[[permanent/多态|多态]], 也就是在运行时, 才根据变量的内容决定调用哪个函数
@@ -117,3 +128,10 @@ class Main{
 
 #### Getter/Setter
 Getter 和 Setter 的作用并不仅仅是给属性设置读取和修改两个方法, 更重要的是执行这些行为时的检查.
+
+### Overload
+
+#### 重载的规范
+- 唯一标识: 参数类型
+- 不同的重载的返回类型可以不同
+- 可以更改存取权限(?什么意思)
