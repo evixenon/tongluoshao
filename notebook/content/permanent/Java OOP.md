@@ -18,29 +18,10 @@ tags:
 
 #### constructor
 与类同名的方法, 可以多个, 可以省略不写, 不能用 static/final 修饰
+
 构造器省略, 则 JVM 会自动创建一个无参的构造函数
 
-### Interfaces
-
-#### 创建 interface
-```java
-// A simple interface
-interface In1 {
-    // public, static and final  // 实现了此接口的类可以直接使用a
-    final int a = 10;
-    // public and abstract
-    void display();
-}
-```
-
-#### implements
-必须实现
-```java
-class TestClas implements In1{
-	void display() { ... }
-	// some codes
-}
-```
+构造函数可以调用自身另一个重载的构造函数, 但不能同时调用 super() 和 this()
 
 ### Object
 Object, 有 State, 有 Behavior, 有 Identity
@@ -80,6 +61,14 @@ class subclass extends baseclass {
 - 返回类型必须兼容, 否则不通过编译
 - 参数应当一样, 否则算一种重载
 - 不能降低方法的权限(public -> private)
+
+
+#### 构造方法的继承
+- 在创建新对象时, 所有继承下来的构造函数也都会执行.
+    - 即子类构造函数会调用父类构造函数, 一直调用到 Object. 注意调用栈.
+- 如果没有调用 super(), 编译器会帮你自动加一个
+    - 并且加的一定是父类没有参数版本的构造函数(没有无参版本则不能被自动继承, 必须手动调用 super())
+    - 父类的构造函数必须在子类构造函数的一开始就被调用
 
 ### Polymorphism
 在多态下, 引用与对象可以是不同的类型. 尤其是, 声明/参数返回时, 引用可以是对象的父类
@@ -140,7 +129,7 @@ class Main{
 #### Java Interface
 接口是纯抽象类, 无法实例化, 所有的方法都是抽象方法.
 
-类可以实现多个接口
+类可以 implement 多个接口, 每个接口的方法都必须实现
 
 ```java
 public interace Pet {...}
