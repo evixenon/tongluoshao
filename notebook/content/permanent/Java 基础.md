@@ -116,6 +116,11 @@ primitive 和引用都可以用 == 进行同类型之间的比较, 比较的是�
 - standardized: 在所有平台上数据类型的大小是一致的
 - char 是 2 Bytes, 因为使用了 Unicode, 范围是 \\u0000 到 \\uffff
 
+#### String.format
+- 完整的日期与时间 %tc
+- 只有时间 %tr
+- 周, 月, 日 %tA %tB %td
+- 同上一个格式 %\<tB
 
 ### 非原始数据类型 Non-primitive Data Type
 或者说, 引用
@@ -201,11 +206,45 @@ Java 的方法只能有一个返回值, 如果需要返回多个, 只能通过�
 
 Java 是 call by value
 
+
+## Static, Final
+
 ### static
+
+#### static 方法
 > 想想 Math.min
 
 - 静态方法是这个类的方法, 而不是对象的方法
 - 静态的方法不能调用非静态的变量, 也不能调用非静态的方法
+#### static 变量
+static block 也是一样的
+
+- 静态变量会在该类的任何对象创建之前完成初始化, 包括继承的子类
+- 静态变量会在该类的任何静态方法执行之前初始化
+
+#### static 类
+- static 不能修饰顶级类
+- 内部静态类不需要有指向外部类的引用。但非静态内部类需要持有对外部类的引用
+- 非静态内部类能够访问外部类的静态和非静态成员。静态类不能访问外部类的非静态成员。他只能访问外部类的静态成员。
+- 一个非静态内部类不能脱离外部类实体被创建，一个非静态内部类可以访问外部类的数据和方法，因为他就在外部类里面。
+
+静态内部类使用场景一般是**当外部类需要使用内部类，而内部类无需外部类资源，并且内部类可以单独创建的时候**会考虑采用静态内部类的设计，在知道如何初始化静态内部类，在《Effective Java》第二章所描述的静态内部类builder阐述了如何使用静态内部类
+
+[java中的Static class - 功夫 熊猫 - 博客园](https://www.cnblogs.com/kungfupanda/p/7239414.html)
+#### static import
+- static 的 import 则可以直接使用方法, 而不用带类名
+- 但可能导致混乱
+
+```java
+import static java.lang.System.out;
+import static java.lang.Math.*;
+...
+out.println("1");
+sqrt(2);
+```
+
+### final
+- final 表示方法类不能被继承, 方法不会被重写, 变量不会被改变
 
 ## Exception Handling
 

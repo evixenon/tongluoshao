@@ -17,7 +17,6 @@ tags:
 
 [[permanent/Java OOP|Java OOP]]
 
-接口
 异常
 泛型
 反射

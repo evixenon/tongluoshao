@@ -26,3 +26,10 @@ Java 是值传递/拷贝传递/call by value
 - 被引用的方法会放在栈顶上
 - 对象本身只存活于可垃圾回收的堆上, 被引用时在栈中创建一个引用
 - 只有被创建的对象才会在堆中
+
+#### Autoboxing
+本来 primitive 类型是不能直接当成对象使用的, 需要打包成对象(e.g. int -> Integer), 但 Java 5.0 的新特性把打包自动化了. 此后可以直接当对象使用
+
+- int <-> ArrayList\<Integer>
+- boolean <-> Boolean
+- char <-> Character
