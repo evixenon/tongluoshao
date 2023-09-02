@@ -44,7 +44,7 @@ edgeless 部分, 虚拟机试运行 edgeless 部分参考[制作U盘中的「战
 
 参考 [最强WinToGo教程！让系统随身携带，利用Ventoy引导多个PE、WinToGo_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1pe4y127uX/?spm_id_from=333.788.recommend_more_video.0&vd_source=92451653bea4ed324c9bfc0287256aa5)大概一分多的操作, 直接在移动固态分盘
 
-### 流程
+### NTFS版成功流程
 1. 格盘
     1. 可以直接系统格盘, ntfs
     2. 也可以用 DiskGenius 硬盘工具, guid, ntfs
