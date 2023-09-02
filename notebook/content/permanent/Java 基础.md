@@ -201,6 +201,12 @@ Java 的方法只能有一个返回值, 如果需要返回多个, 只能通过�
 
 Java 是 call by value
 
+### static
+> 想想 Math.min
+
+- 静态方法是这个类的方法, 而不是对象的方法
+- 静态的方法不能调用非静态的变量, 也不能调用非静态的方法
+
 ## Exception Handling
 
 ### Exception Hierarchy
