@@ -310,6 +310,8 @@ try {
     // 即使 try/catch block 有 return 语句, finally 也会执行
 }
 ```
+
+对每一种可能的 Exception, 就应该有一个对应的 catch block, 并以从子异常到父异常的顺序排列
 ### throw, throws
 `throws` 在方法的头部声明(可能出现的)异常, 以便将异常传递到方法外处理
 ```java
@@ -362,6 +364,31 @@ public class Test {
 ### 重写方法时异常声明的限制
 如果父类方法声明了异常, 那么子类方法重写时只能声明该异常本身或其子类.
 
+### ducking
+- 不想处理异常, 可以 duck 掉, 主打一个"谁调用的我谁自己处理异常", 这会让使得调用的时候必须 catch 该异常
+- 踢皮球
+- 这就是为什么方法会 throws Exception(ducking 也就是指方法 throws Exception)
+- 如果直到 main() 都 duck 掉异常, 虚拟机只好挂了
+
+```java
+// 两种方式
+
+// 处理
+void foo() {
+    try {
+        laundry.doLaundry();
+    } catch (ClothingException cex) {
+        // do something
+    }
+}
+
+// duck
+// 于是乎调用 foo() 的时候就要 处理 or duck
+void foo() throw ClothingException {
+    laundry.doLaundry();
+}
+
+```
 ## Package
 ### Java Package 的作用
 - 数据封装: 包相当于把一些类封装(encapsulate)到一起
