@@ -52,8 +52,8 @@ edgeless 部分, 虚拟机试运行 edgeless 部分参考[制作U盘中的「战
     1. wtga (5.6.0.0), 直接在移动硬盘/U盘里制作
     2. 虚拟磁盘模式, UEFI+GPT, 屏蔽本机磁盘可选可不选择 虚拟磁盘里手动设置大小, 分页 GPT, 不要勾选固定大小
 3. 部署 wintogo
-    1. 如果是 win8/win10, 应该可以用虚拟机启动, 方法是虚拟机硬件里磁盘用SATA-物理磁盘-选择对应的移动硬盘
-    2. 如果是 win11, 还是直接重启吧, 进 bios, 启动对应的 系统
+    1. 如果 wtg 是 win8/win10, 应该可以用虚拟机启动, 方法是虚拟机硬件里磁盘用SATA-物理磁盘-选择对应的移动硬盘
+    2. 如果 wtg 是 win11, 还是直接重启吧, 进 bios, 启动对应的 系统
     3. 如果缺少驱动(尤其网卡驱动), 用 dism++ 在原系统里拷过去
     4. 部署好回到本机系统, 做好的 vhdx 文件从移动硬盘拷出来, 注意有两层, 拷里面的那个
 4. 制作 ventoy+edgeless
@@ -63,4 +63,5 @@ edgeless 部分, 虚拟机试运行 edgeless 部分参考[制作U盘中的「战
     4. ventoy 盘建一个名叫 `ventoy` (大小写敏感)的文件夹, 把 wimboot.img, vhdboot.img, ventoy.json 放进去
 5. 完成了 想要的话再用 FirPE 制作工具做个 FirPE 吧, 这个选 exFaT 好像没问题
 
-pan.baidu.com/s/1F2C-30Y8gehXUG5w7bBWXA
+### exFAT
+试了一下把上面流程所有 ntfs 改成 exFAT 没有问题.
