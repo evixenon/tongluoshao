@@ -248,6 +248,8 @@ sqrt(2);
 
 ## Exception Handling
 
+throw 的意义是, 说明这个类/方法可能会出现必须处理的问题
+
 ### Exception Hierarchy
 - Object
 	- Throwable
@@ -292,6 +294,7 @@ e.g.
 在编译时可以被编译器发现的
 
 **Unchecked Exceptions**
+RuntimeException: 编译器不会管
 只有在运行中才会被发现的
 
 ### try ... catch ... finally
@@ -304,6 +307,7 @@ try {
 	System.out.println(e.getMessage());  // Out: by zero
 } finally {
 	// do something
+    // 即使 try/catch block 有 return 语句, finally 也会执行
 }
 ```
 ### throw, throws
