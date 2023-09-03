@@ -42,7 +42,7 @@ edgeless 部分, 虚拟机试运行 edgeless 部分参考[制作U盘中的「战
 
 参考[【教程】打造2022年个人最强U盘！快闪U盘配ventoy，集成多个PE、wintogo、linuxtogo系统_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1pe4y127uX/?spm_id_from=333.788.recommend_more_video.0)
 
-参考 [最强WinToGo教程！让系统随身携带，利用Ventoy引导多个PE、WinToGo_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1pe4y127uX/?spm_id_from=333.788.recommend_more_video.0&vd_source=92451653bea4ed324c9bfc0287256aa5)大概一分多的操作, 直接在移动固态分盘
+参考 [最强WinToGo教程！让系统随身携带，利用Ventoy引导多个PE、WinToGo_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1pe4y127uX/?spm_id_from=333.788.recommend_more_video.0&vd_source=92451653bea4ed324c9bfc0287256aa5) 大概一分多的操作, 直接在移动固态分盘
 
 ### NTFS版成功流程
 1. 格盘
@@ -62,3 +62,5 @@ edgeless 部分, 虚拟机试运行 edgeless 部分参考[制作U盘中的「战
     3. 跟着引导选择做好的 ventoy 盘, edgeless 一键部署
     4. ventoy 盘建一个名叫 `ventoy` (大小写敏感)的文件夹, 把 wimboot.img, vhdboot.img, ventoy.json 放进去
 5. 完成了 想要的话再用 FirPE 制作工具做个 FirPE 吧, 这个选 exFaT 好像没问题
+
+pan.baidu.com/s/1F2C-30Y8gehXUG5w7bBWXA
