@@ -66,7 +66,7 @@ while
 
 Java 变量是有类型的, 这意味着不能把 int 装进 char 的箱子
 
-实例变量有初始值, 但局部变量没有
+实例变量有初始, 但局部变量没有
 #### local, instance, static
 ```java
 class Guru99 {
