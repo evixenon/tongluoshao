@@ -33,6 +33,7 @@ tags:
 - ==ects==
 	- **Receive a "Schein" (including ECTS) from the Ludwig-Maximilians-Universität München:** If you enroll in any university of Bavaria and you want to receive a "Schein", please submit **an essay of your own scientific work** at the end of the course to scientificwritingmunich@gmail.com. As mentioned on card 5, you should apply the gathered knowledge of each unit on your own project or scientific work (which can also be a Bachelor´s or Master´s thesis). At the end, students should *only submit the title, abstract & result sections* as essay and not the whole of the project or publication. The students can submit their parts *on or before 15.09.* for the summer semester and **14.03.** for the winter semester. Please submit your parts in english. Please also tell us your **institution and matriculation number** in this mail.
 	- Please mind that you will receive a confirmation mail from us within a week after your submission. If you don't, please write to nicole.schaefer@med.uni-muenchen.de and ask for help.
+    - 获得慕尼黑路德维希-马克西米利安大学颁发的 "Schein"（包括 ECTS）证书： 如果您就读于巴伐利亚州的任何一所大学，并希望获得 "Schein"，请在课程结束时向 scientificwritingmunich@gmail.com 提交一篇自己的科研论文。如卡片 5 所述，您应在自己的项目或科研工作（也可以是学士或硕士论文）中应用每个单元所学的知识。最后，学生只需提交论文的标题、摘要和结果部分，而不需提交项目或出版物的全部内容。夏季学期学生可在 9 月 15 日或之前提交论文，冬季学期学生可在 3 月 14 日或之前提交论文。请用英语提交。请在邮件中注明您的学校和学号。提交论文的前提条件是您已成功完成至少 10 个单元的在线课程。
 
 
 
