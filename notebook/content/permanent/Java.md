@@ -23,7 +23,7 @@ tags:
 
 [[private/Java IO|Java IO]]
 
-[[private/Java 序列化|Java 序列化]]
+[[permanent/Java 序列化|Java 序列化]]
 #### 其他
 
 [[permanent/Java 细节|Java 细节]]

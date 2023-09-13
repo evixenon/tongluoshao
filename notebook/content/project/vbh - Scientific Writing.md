@@ -409,7 +409,7 @@ example
 
 #### 详细大纲
 **1.**  **Study design**
-    (e.g. cross section design, cohort design, case-control design)
+    (e.g. cross-sectional design, cohort design, case-control design)
 
 **2. Study participants**
 
@@ -515,14 +515,8 @@ example
 - 不需要讲个人经历
 
 ## 8 Results
-
-#### Structure
-
-#### 怎么写
-1. 先定好 analysis plan, 并做好空 tables
-
-
 #### 建议
+- 先定好 analysis plan, 并做好空 tables
 - 不要重复 Methods, 建议 referring to and highlighting an already described method
 - 可以用 subtitle 和 Methods 对应
 
@@ -556,7 +550,6 @@ example
 
 ##### table
 ![[attachments/Pasted image 20230720131307.png]]
-
 
 ##### figures
 
