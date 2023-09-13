@@ -1001,3 +1001,117 @@ Additional factors for the selection of the journals you would like to submit yo
 
 ##### List of potential (non)reviewers
 ![[attachments/Pasted image 20230726170335.png]]
+
+
+## 备份稿
+
+
+```LaTeX
+%%
+%% This is file `sample-sigconf.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `sigconf')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-sigconf.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%% The first command in your LaTeX source must be the \documentclass command.
+\documentclass[sigconf]{acmart}
+
+\usepackage{stfloats}
+\usepackage{multirow}
+
+\settopmatter{printacmref=false}
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{iw3c2w3}
+\copyrightyear{\the\year{}}
+\acmYear{\the\year{}}
+
+\begin{document}
+
+\title{Stress among German postgraduate students: a
+cross-sectional study}
+
+
+\begin{abstract}
+For years the problem of stress plagued university students. Either a greater or lower level of stress might adversely affect students’ cognitive functioning and learning abilities, moreover, their academic performances. However, stress research on German postgraduate students was not well developed. In this paper we measure the prevalence of stress among a population of 9874 German postgraduate students by the established Kessler Psychological Distress Scale (K10). We also analyze the associations between different student characteristics (gender, faculty, study year, grade and regular attendance) and levels of stress. 79\% of the participants reported an undergo of stress, further, 24\% suffered a severe level of stress. Female students have significantly higher prevalence of stress. Students grades show no associations with stress. These results allow us to specify the emphasis of preventive and mitigating measures for stress management in postgraduate students.
+\end{abstract}
+
+\keywords{stress, cross-sectional study, German postgraduate student, Kessler Psychological Distress Scale}
+
+\maketitle
+
+\clearpage
+
+\begin{table*}[htbp]
+\caption{Prevalence of stress as well as bi-variate and multivariate
+associations between study variables and stress (N=9874).
+Unadjusted and adjusted odds ratios (OR) with 95\% confidence
+intervals (95\% CI).}
+\begin{tabular}{lllllll}
+\hline
+ &  & \multicolumn{2}{l}{Stress presents} & \multicolumn{2}{l}{OR (95\% CI)} & p-value \\
+\multicolumn{2}{l}{Variable} & N & \% & Unadjusted & Adjusted &  \\ \hline
+\multicolumn{2}{l}{Gender:} &  &  &  &  &  \\
+ & Male & 3007 & 65.5 & 1 & 1 & \multirow{2}{*}{\textless{}0.001} \\
+ & Female & 4825 & 91.3 & 1.7 (1.3-1.9) & 2.0 (1.4-2.3) &  \\ \hline
+\multicolumn{2}{l}{Faculty:} &  &  &  &  &  \\
+ & Medical & 2912 & 81.6 & 1 & 1 &  \\
+ & Psychological & 1867 & 83.9 & 1.2 (0.9-1.4) & 1.2 (0.9-1.4) & \multirow{4}{*}{\textless{}0.001} \\
+ & Sociological & 945 & 73.3 & 0.8 (0.5-1.1) & 0.7 (0.4-1.1) &  \\
+ & Economical & 1240 & 92.2 & 1.4 (1.1-1.5) & 1.4 (1.3-1.5) &  \\
+ & \begin{tabular}[c]{@{}l@{}}Law and political\\ science\end{tabular} & 768 & 57.7 & 0.6 (0.3-1.0) & 0.7 (0.4-1.1) &  \\ \hline
+\multicolumn{2}{l}{Study year:} &  &  &  &  &  \\
+ & 1st & 4280 & 93.4 & 1 & 1 & \multirow{2}{*}{\textless{}0.01} \\
+ & 2nd & 3552 & 67.1 & 0.6 (0.3-0.9) & 0.5 (0.2-0.7) &  \\ \hline
+\multicolumn{2}{l}{Grade:} &  &  &  &  &  \\
+ & Excellent & 4378 & 81.2 & 1 & 1 & \multirow{4}{*}{0.864} \\
+ & Very good & 1978 & 80.6 & 0.9 (0.6-1.4) &  &  \\
+ & Good & 797 & 69.7 & 0.8 (0.6-1.1) &  &  \\
+ & Poor & 679 & 79.4 & 0.9 (0.5-1.5) &  &  \\ \hline
+\multicolumn{2}{l}{Regular attendance:} &  &  &  &  &  \\
+ & No & 1297 & 98.9 & 1 & 1 & \multirow{2}{*}{\textless{}0.05} \\
+ & Yes & 6535 & 76.3 & 0.7 (0.4-0.9) & 0.7 (0.5-0.8) &  \\ \hline
+\end{tabular}
+\end{table*}
+
+\section{Results}
+
+\subsection{Descriptive Statistics}
+The dataset collected 9874 replies with a response rate 82\%. 79.3\% of the participants experienced any level of stress. A perception of severe stress was reported by 24.0\%. Moderate stress and Mild stress was reported respectively by 37.2\% and 18.1\%.
+
+The mean age of the population was 23.4(\textit{SD} = 1.4). 53.5\% of the participants were females. The distribution of faculties was: Medical (36.1\%), Psychological (23.7\%), Sociological (13.1\%), Economical (13.6\%), Law and political science (13.5\%). 46.1\% of the participants were in the first year of study, whereas 52.6\% were in the second year. The grades of participants differed in Excellent (54.6\%), Very good (24.9\%), Good (11.5\%) and Poor (9\%). Self reported regular attendance was 87.7\%.
+
+\subsection{Analysis of bi-variate and multivariate
+associations}
+Table 1 presents the associations between study variables and stress before and after adjustment. The results of grade were not sufficient to present a statistical significant (p = 0.864), accordingly it was excluded in the adjustment process.
+
+As hypothesized, females are more likely to experience a stressful academic career. Specially, the female to male Odd ratio(OR) reach 2.0 after adjustment (p < 0.001). Students in the first year have a higher risk to encounter stress than second year students (OR 1 vs. 0.5, p < 0.01). Students with regular attendance reported a lower prevalence of stress(OR 0.7 vs. 1, p < 0.05). The faculties of students attribute to their perceptions to stress. Economical students reported 92.2\% stressful, which is highest among the investigated faculties. Law and political students showed a lowest risk(57.7\%). However, students grades show no positive or negative association to their stress, which vary from the hypothesis. 
+
+\end{document}
+```
