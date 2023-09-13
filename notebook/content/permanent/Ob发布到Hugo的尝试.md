@@ -28,3 +28,5 @@ tags:
 draft:true在图里是乱码, 其他好像不会
 
 链接用别名好像 rebuild 一下也不会乱码
+
+1.4 obsidian 支持 Proporties,  也是对 yaml 更好的支持
