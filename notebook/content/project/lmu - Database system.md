@@ -1783,10 +1783,10 @@ materialisierte Views)
 ## Clustering
 
 #### K-Mean
-![[attachments/permanent/Clustering#K-Mean]]
+![[permanent/Clustering#K-Mean]]
 
 #### DBSCAN
-![[attachments/permanent/Clustering#DBSCAN]]
+![[permanent/Clustering#DBSCAN]]
 
 ## Wiederholung
 
