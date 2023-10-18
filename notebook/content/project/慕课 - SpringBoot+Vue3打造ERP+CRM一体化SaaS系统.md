@@ -115,3 +115,14 @@ IntelliJ 插件
 - codeglance, 右侧代码预览缩略图
 - MyBatisX, mapper 和 xml 之间跳转
 - MyBatisCodeHelperPro, 协助生成 dml 语句
+
+## 数据库层设计
+
+#### 数据库设计步骤
+- 需求分析
+- 概念结构设计
+- 逻辑结构设计
+- 物理结构设计
+- 数据库实施
+- 运行和维护
+
