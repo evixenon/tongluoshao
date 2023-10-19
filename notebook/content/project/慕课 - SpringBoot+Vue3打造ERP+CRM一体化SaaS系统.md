@@ -133,3 +133,7 @@ IntelliJ 插件
 - 聚簇 索引: 为了提高某个属性组的查询速度, 把具有相同值的条目
 
 ### 开发
+
+#### PowerDesigner
+[PowerDesigner 安装+汉化+破解+使用过程 - 沦陷 - 博客园](https://www.cnblogs.com/huangting/p/12654057.html)
+也许是原版: [PowerDesigner安装教程（含下载+汉化+破解） - 付杰博客](https://www.fujieace.com/software/powerdesigner.html)
