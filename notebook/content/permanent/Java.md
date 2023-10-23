@@ -32,7 +32,7 @@ tags:
 #### Java Build Tool
 [[permanent/Gradle|Gradle]]
 
-Maven
+[[index/Maven|Maven]]
 
 Ant
 

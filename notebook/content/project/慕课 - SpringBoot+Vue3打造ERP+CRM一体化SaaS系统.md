@@ -82,7 +82,7 @@ npm install -g @vue/cli
 配置环境变量
 ##### maven
 
-[[private/maven 安装配置|maven 安装配置]]
+[[permanent/Maven 安装配置|Maven 安装配置]]
 
 maven 是一个插件框架
 
@@ -103,7 +103,7 @@ maven-surefire-plugin, 单元测试
 
 ![[attachments/Pasted image 20230804152136.png]]
 
-[[private/maven 常见命令|maven 常见命令]]
+[[permanent/Maven 常见命令|Maven 常见命令]]
 
 IntelliJ 项目设置里 show members 可以看到类的成员, ctrl+e 最近文件, settings-file encoding 全部改 utf-8
 
@@ -174,3 +174,39 @@ ryt_5rbg03bq -> 主数据库管理的业务数据库 super admin
 
 启动: IJ 打开项目, npm run dev
 build: IJ 打开项目, npm run build:prod
+
+#### 父子工程创建
+![[attachments/Pasted image 20231023222156.png]]
+
+如果 pom.xml 被忽略
+![[attachments/Pasted image 20231023222211.png]]
+
+### SprintBoot
+
+#### SprintBoot 简介
+![[attachments/Pasted image 20231023222607.png]]
+2-直接集成到 tomcat 等
+![[attachments/Pasted image 20231023222709.png]]
+![[attachments/Pasted image 20231023222810.png]]
+![[attachments/Pasted image 20231023222819.png]]
+
+#### 实战: maven 项目改造为 SpringBoot 项目
+就是在父工程的 xml 文件里添加 SpringBoot 相关的依赖
+
+![[attachments/Pasted image 20231023223212.png]]
+- 其中 type 行意指 pom 文件会指明依赖的 jar 包
+- scope import 配合 type pom, 打破单继承. SprintBoot 官方的使用推荐是继承 父pom, 但如果有其他 父pom 又要使用 SprintBoot, 就可以以这种方式打破
+
+还要引入
+![[attachments/Pasted image 20231023223736.png]]
+
+关注这两个类:
+![[attachments/Pasted image 20231023223932.png]]
+![[attachments/Pasted image 20231023224042.png]]
+- scanBase 指定根目录
+- exclude 在多数据源的时候排除, 以手动指定数据源
+
+![[attachments/Pasted image 20231023224351.png]]
+
+![[attachments/Pasted image 20231023224500.png]]
+- application.yml 是主配置文件
