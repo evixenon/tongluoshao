@@ -137,3 +137,40 @@ IntelliJ 插件
 #### PowerDesigner
 [PowerDesigner 安装+汉化+破解+使用过程 - 沦陷 - 博客园](https://www.cnblogs.com/huangting/p/12654057.html)
 也许是原版: [PowerDesigner安装教程（含下载+汉化+破解） - 付杰博客](https://www.fujieace.com/software/powerdesigner.html)
+
+## COMMON
+
+4-1、下载代码，并进行启动，注册租户，并登录  
+4-2、父子工程是什么意思？思考如果自己搭建，基本流程和注意事项是什么！  
+4-3、spi机制原理是什么？  
+4-4、@ConfigurationProperties注解核心原理是什么，如何应用？  
+4-5、请阐述一下常量的命名规则！  
+4-6、@InitBinder注解的作用是什么？思考如何更有效的应用  
+4-7、Entity的作用是什么？  
+4-8、自己梳理一下注册和登录的流程  
+4-9、cod、data、message来存放什么信息？  
+4-10、邻接表的优缺点是什么？  
+4-11、请手动梳理TableSupport的逻辑流程  
+4-12、手动梳理RedisCache的重点逻辑  
+4-13、什么是字符集？思考字符集和字符编码的区别  
+4-14、Converter接口怎么定义的？  
+4-15、不看源码，自己手动编写字符串格式方法  
+4-16、如何比较两个枚举成员定义的顺序？  
+4-17、自己手动梳理全局异常定义的方法步骤
+
+![[attachments/Pasted image 20231019204508.png]]
+
+ryt_nelub7xr -> 测试租户 tenant 4 -> admin root1234
+ryt_5rbg03bq -> 主数据库管理的业务数据库 super admin
+
+#### 后端
+启动 redis
+
+启动
+![[attachments/Pasted image 20231019204854.png]]
+
+#### 前端
+前端项目是 erp-crm-ui, 需要 npm, vue 相关环境
+
+启动: IJ 打开项目, npm run dev
+build: IJ 打开项目, npm run build:prod
