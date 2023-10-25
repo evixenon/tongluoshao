@@ -140,6 +140,7 @@ IntelliJ 插件
 
 ## COMMON
 
+### 介绍
 4-1、下载代码，并进行启动，注册租户，并登录  
 4-2、父子工程是什么意思？思考如果自己搭建，基本流程和注意事项是什么！  
 4-3、spi机制原理是什么？  
@@ -175,7 +176,7 @@ ryt_5rbg03bq -> 主数据库管理的业务数据库 super admin
 启动: IJ 打开项目, npm run dev
 build: IJ 打开项目, npm run build:prod
 
-#### 父子工程创建
+### 父子工程创建
 ![[attachments/Pasted image 20231023222156.png]]
 
 如果 pom.xml 被忽略
@@ -218,8 +219,33 @@ application.yml 是主配置文件
 ![[attachments/Pasted image 20231024185746.png]]
 使 devtools 配置和热加载用同一个加载器
 
+### 配置
 #### 怎么读取项目配置
 - common 模块
 - ![[attachments/Pasted image 20231024190149.png]]
 - ConfigurationProperties 注意前缀
 - ErpCrmConfig 类的变量名要和 application.yml 中的属性并保持一致
+
+#### 常量
+- 项目名小写
+- 包名小写
+- 类名大写开头驼峰
+- 方法名小写开头驼峰
+- 常量大写
+
+项目中的常量定义在 common.constant
+
+#### initBinder
+由 `@initBinder` 修饰的方法用于初始化 `WebDataBinder` 对象
+
+用 request `@RequestParam` 或 `@PathVariable` 修饰的方法获取参数后, 如果参数类型不匹配, WebDataBinder 可以处理
+
+例如前台传来的日期字符串转换为 Date 类型
+
+#### BaseController
+这是作为控制类的基类
+
+关于防 sql 注入
+```Java
+String orderBy = SqlUtil.escapeOrderBySql(pageDomain.getOrderBy());
+```

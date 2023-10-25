@@ -1292,31 +1292,8 @@ Eine (Einweg-)Funktion wird als kollisionsresistent bezeichnet, wenn es „schwe
 - 作为伪随机数生成器
 
 ### MD5
+已迁移: [[permanent/MD5|MD5]]
 
-#### MD5 算法
-- src: [掌芝士 md5](https://www.bilibili.com/video/BV1u44y1z7t1/?spm_id_from=333.337.search-card.all.click&vd_source=92451653bea4ed324c9bfc0287256aa5)
-- 128 bit 散列值, 512 bits 块
-- 补位: 512\*n + 448
-    - 如果源文件刚好满足, 也要补512
-    - 448 = 512 - 64, 64 用来记录原始数据长度
-- 每次处理 512 bits 中的 32 bits
-- IV: 4\*4字节(称为ABCD), 也就是一共 128 bit
-    - 对每一个 32 bits, 要经过4轮函数
-    - ![[attachments/Pasted image 20230222155453.png]]
-- 四个函数, 通过位移, 异或改变 A 的值
-    - s, ac 是固定值, x 是当前处理的 32 bit
-    - ![[attachments/Pasted image 20230222154835.png|L|400]]
-    - ![[attachments/Pasted image 20230222155302.png|L|500]]
-- Merkle-Damgard 结构
-
-#### MD5 的安全性
-- 对4轮函数的一轮可以做到差分密码分析
-- 1993伪撞库: 可以找到散列值相同但没有意义的序列
-- 2004撞库: 一个多小时可以找到同散列值
-
-=> MD5 不再安全(SHA-1也不安全)
-- 用这些替代: SHA-256, Whirlpool, SHA-3
-- 仅在同时使用多种散列算法时有意义
 
 ### SHA-3
 - 又是 NIST, 这次他们来找 SHA-2 的升级, Keccak 赢了
