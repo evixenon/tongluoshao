@@ -190,7 +190,7 @@ build: IJ 打开项目, npm run build:prod
 ![[attachments/Pasted image 20231023222810.png]]
 ![[attachments/Pasted image 20231023222819.png]]
 
-#### 实战: maven 项目改造为 SpringBoot 项目
+#### maven 项目改造为 SpringBoot 项目
 就是在父工程的 xml 文件里添加 SpringBoot 相关的依赖
 
 ![[attachments/Pasted image 20231023223212.png]]
@@ -209,4 +209,17 @@ build: IJ 打开项目, npm run build:prod
 ![[attachments/Pasted image 20231023224351.png]]
 
 ![[attachments/Pasted image 20231023224500.png]]
-- application.yml 是主配置文件
+
+![[attachments/Pasted image 20231024185932.png]]
+application.yml 是主配置文件
+
+4-5
+
+![[attachments/Pasted image 20231024185746.png]]
+使 devtools 配置和热加载用同一个加载器
+
+#### 怎么读取项目配置
+- common 模块
+- ![[attachments/Pasted image 20231024190149.png]]
+- ConfigurationProperties 注意前缀
+- ErpCrmConfig 类的变量名要和 application.yml 中的属性并保持一致
