@@ -161,7 +161,7 @@ IntelliJ 插件
 
 ![[attachments/Pasted image 20231019204508.png]]
 
-ryt_nelub7xr -> 测试租户 tenant 4 -> admin root1234
+ryt_nelub7xr -> 测试租户 tenant4 -> admin root1234
 ryt_5rbg03bq -> 主数据库管理的业务数据库 super admin
 
 #### 后端
