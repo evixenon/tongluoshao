@@ -161,6 +161,7 @@ foreign key (a5,a6) references B (b1,b2)
 
 ## SQL 增删查改
 
+use database1;
 ### DDL
 data defination language
 - meta 层

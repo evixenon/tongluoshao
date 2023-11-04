@@ -69,7 +69,7 @@ npm install -g @vue/cli
 ##### mysql
 下载 mysql installer for WIN: [MySQL :: MySQL Community Downloads](https://dev.mysql.com/downloads/)
 
-安装 MySQL server 8.0, 点击加到右边的项可以自定义安装地址
+安装 MySQL server, 点击加到右边的项可以自定义安装地址. 示范项目用的是5.7.21
 
 选 server computer
 ![[attachments/Pasted image 20230804141231.png]]
@@ -80,6 +80,7 @@ npm install -g @vue/cli
 [Releases · tporadowski/redis](https://github.com/tporadowski/redis/releases)
 
 配置环境变量
+
 ##### maven
 
 [[permanent/Maven 安装配置|Maven 安装配置]]
@@ -159,22 +160,42 @@ IntelliJ 插件
 4-16、如何比较两个枚举成员定义的顺序？  
 4-17、自己手动梳理全局异常定义的方法步骤
 
+
+#### 示例启动
+
+##### 启动 redis
+在 redis 目录, cmd, redis-server
+
+如果没有字符图形也就是失败了, 就运行
+```
+redis-cli
+shutdown
+exit
+redis-server.exe redis.windows.conf
+```
+
+##### 第一次时: 数据库初始化
+```sql
+mysql -u root -p 密码
+source xxx.sql;
+```
+运行 sql 目录的数据库脚本, 注意先选择对应的库. 出现中文乱码, cmd 里先跑 chcp 65001 再进 mysql
+
 ![[attachments/Pasted image 20231019204508.png]]
 
 ryt_nelub7xr -> 测试租户 tenant4 -> admin root1234
 ryt_5rbg03bq -> 主数据库管理的业务数据库 super admin
 
-#### 后端
-启动 redis
-
-启动
+##### 后端启动
 ![[attachments/Pasted image 20231019204854.png]]
 
-#### 前端
+##### 前端启动
 前端项目是 erp-crm-ui, 需要 npm, vue 相关环境
 
 启动: IJ 打开项目, npm run dev
 build: IJ 打开项目, npm run build:prod
+
+然后自动打开浏览器
 
 ### 父子工程创建
 ![[attachments/Pasted image 20231023222156.png]]
