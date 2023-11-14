@@ -1,9 +1,9 @@
 ---
-title: "ICMP 协议"
-date: "2023-06-16"
+title: ICMP 协议
+date: 2023-06-16
 tags:
-- 协议
-- 计网
+  - 协议
+  - 网络
 ---
 
 Internet Control Messege Protocol

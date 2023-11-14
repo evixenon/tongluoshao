@@ -1,8 +1,8 @@
 ---
-title: "WiFi 技术"
-date: "2023-06-16"
+title: WiFi 技术
+date: 2023-06-16
 tags:
-- 计网
+  - 网络
 ---
 
 WiFi 的 5G 指的是 Hz, 与手机的代数 **G**eneration 区分

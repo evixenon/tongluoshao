@@ -1,8 +1,8 @@
 ---
-title: "TCPIP 五层模型"
-date: "2023-06-16"
+title: TCPIP 五层模型
+date: 2023-06-16
 tags:
-- 计网
+  - 网络
 ---
 
 - ![[attachments/Pasted image 20230316194705.png|L|400]]

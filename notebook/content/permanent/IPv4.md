@@ -1,9 +1,9 @@
 ---
-title: "IPv4"
-date: "2023-06-16"
+title: IPv4
+date: 2023-06-16
 tags:
-- 计网
-- 协议
+  - 协议
+  - 网络
 ---
 
 #### IPv4 Header
