@@ -1,9 +1,7 @@
 ---
 title: TCP 四次挥手
 date: 2023-11-15
-tags:
-  - 网络
-  - 协议
+tags: []
 ---
 ![[attachments/Pasted image 20231115054731.png]]
 
