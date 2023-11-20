@@ -191,7 +191,7 @@ hist(iris$Sepal.Length)
 ```
 
 #### 多个图像
-通过 `par(mfrow=c(r)`
+通过 `par(mfrow=c(r))`
 
 下图是直方图课件里的例子
 ![[attachments/Pasted image 20230730131327.png]]
