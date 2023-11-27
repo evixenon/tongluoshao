@@ -36,10 +36,12 @@ Cerbot是什么？
 
 这是获取并安装证书的命令：
 >sudo certbot --nginx
+
 回车之后还有一些要配置的，见机行事。
 
 这是只获取证书的命令：
 >sudo certbot certonly --nginx
+
 这条指令没有尝试过。
 
 根据代理服务的不同，命令的参数也不同，这里是 nginx.
