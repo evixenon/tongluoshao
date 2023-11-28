@@ -27,6 +27,8 @@ date: "2023-06-16"
 
 [[permanent/python json库|python json库]]
 
+[Welcome to PyPDF2 — PyPDF2 documentation](https://pypdf2.readthedocs.io/en/latest/index.html)
+
 ### 网页分析
 [[permanent/python bs4库|python bs4库]]
 

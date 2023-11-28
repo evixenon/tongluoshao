@@ -16,6 +16,7 @@ tk.mainloop()
 应用
 ![[attachments/Pasted image 20230526214024.png]]
 
+[python tkinter 全部组件（widget）及事件类型（event）一览_self create widgets-CSDN博客](https://blog.csdn.net/explorer9607/article/details/82783470)
 #### 浏览文件
 ```python
 from tkinter import filedialog
