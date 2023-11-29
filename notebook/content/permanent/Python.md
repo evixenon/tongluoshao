@@ -29,6 +29,8 @@ date: "2023-06-16"
 
 [Welcome to PyPDF2 — PyPDF2 documentation](https://pypdf2.readthedocs.io/en/latest/index.html)
 
+[[permanent/python os|python os]]
+
 ### 网页分析
 [[permanent/python bs4库|python bs4库]]
 
