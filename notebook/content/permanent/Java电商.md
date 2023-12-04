@@ -39,6 +39,17 @@ tags:
 2. 拆分服务器, app 的服务器性能强点, 数据服务器容量大点
 3. 增加缓存服务器, app 的本地缓存
 4. 增加负载均衡调度服务器
+5. Session管理, 方案:
+    1. Session Sticky 粘滞会话
+    2. Session 复制
+    3. Cookies
+    4. Session 服务器
+6. 数据库读写分离
+7. 反向代理和 CDN
+8. 分布式文件系统
+9. 数据垂直拆分, 专库专用, 如 Products, Users
+10. 数据水平拆分, Users 拆成 User1, User2
+11. 拆分搜索引擎
 
 ## 环境配置
 
