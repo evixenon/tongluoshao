@@ -3,12 +3,20 @@ title: Java电商
 date: 2023-12-04
 tags:
 ---
-## 导学
+## 导学&资料
 #### 一个大型电商的架构
 ![[attachments/Pasted image 20231204162540.png]]
 - 还有一些看不到的, 如高并发, 容灾
 
-####
+
+[找工作的季节之简历及找工作的分享_慕课手记](https://www.imooc.com/article/19998)
+
+[《Java从零打造企业级电商实战-服务端》思维导图&amp;知识点索引&amp;温馨tips_慕课手记](https://www.imooc.com/article/20193)
+
+[happymmall课程QQ群分享手记_慕课手记](https://www.imooc.com/article/19094)
+
+[happymmall课程QQ群分享手记_慕课手记](https://www.imooc.com/article/19094)
+#### 邮箱注册验证的思路
 数据库表设计：  
 **账号ID，邮箱，生成的随机激活Key，有效验证时间**
 
@@ -21,3 +29,12 @@ tags:
 
 在数据库设一个 status, 验证前是锁定的, 验证后邮箱可以使用
 [链接](https://segmentfault.com/u/superadmins)
+
+#### 大型项目架构演进
+推荐书: 大型网站技术架构核心原理与案例分析
+[大型项目架构演进过程及思考的点_慕课手记](http://www.imooc.com/article/17545)
+
+1. all in one 服务器, 包括 app, file, database 都放一个
+2. 拆分服务器, app 的服务器性能强点, 数据服务器容量大点
+3. 增加缓存服务器, app 的本地缓存
+4. 增加负载均衡调度服务器
