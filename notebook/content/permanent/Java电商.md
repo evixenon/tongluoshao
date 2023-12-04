@@ -43,7 +43,7 @@ tags:
     1. Session Sticky 粘滞会话
     2. Session 复制
     3. Cookies
-    4. Session 服务器
+    4. Session 服务器              
 6. 数据库读写分离
 7. 反向代理和 CDN
 8. 分布式文件系统
