@@ -34,7 +34,29 @@ tags:
 推荐书: 大型网站技术架构核心原理与案例分析
 [大型项目架构演进过程及思考的点_慕课手记](http://www.imooc.com/article/17545)
 
+#todo
 1. all in one 服务器, 包括 app, file, database 都放一个
 2. 拆分服务器, app 的服务器性能强点, 数据服务器容量大点
 3. 增加缓存服务器, app 的本地缓存
 4. 增加负载均衡调度服务器
+
+## 环境配置
+
+####  jdk
+
+#### tomcat
+
+[Apache Tomcat® - Apache Tomcat 10 Software Downloads](https://tomcat.apache.org/download-10.cgi)
+
+
+环境配置
+- 环境变量, CATALINA_HOME 设成 tomcat 根目录
+- path, `%CATALINA_HOME%\bin\`
+
+中文乱码
+- /conf/server.xml  Connector port="8080" 的位置, 加上 URIEncoding="UTF-8"
+    - ![[attachments/Pasted image 20231204183419.png]]
+
+日志乱码
+- /conf/logging.properties 
+    - ![[attachments/Pasted image 20231204185205.png]]
