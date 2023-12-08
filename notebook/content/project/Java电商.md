@@ -70,3 +70,12 @@ tags:
 日志乱码
 - /conf/logging.properties 
     - ![[attachments/Pasted image 20231204185205.png]]
+
+#### maven 安装配置
+[[permanent/Maven 安装配置|Maven 安装配置]]
+
+项目里说到的 Settings 是 `/conf/settings`
+
+#### FTPserver
+
+这个似乎是个私人小软件, 不是 Apache 的 FTPserver
