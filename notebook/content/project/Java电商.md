@@ -2,6 +2,8 @@
 title: Java电商
 date: 2023-12-04
 tags:
+  - Java
+  - 服务器
 ---
 ## 导学&资料
 #### 一个大型电商的架构
@@ -79,3 +81,7 @@ tags:
 #### FTPserver
 
 这个似乎是个私人小软件, 不是 Apache 的 FTPserver
+
+MS Edge, Firefox, Chrome 都不支持 ftp 了, 现在要用 File Explorer 访问 ftp
+
+#### Nginx
