@@ -85,3 +85,6 @@ tags:
 MS Edge, Firefox, Chrome 都不支持 ftp 了, 现在要用 File Explorer 访问 ftp
 
 #### Nginx
+[[private/Nginx|Nginx]]
+
+win 直接下载压缩, 在 `/drivers/etc/host` 配置 host
