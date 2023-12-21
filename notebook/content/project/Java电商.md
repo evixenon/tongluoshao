@@ -80,7 +80,7 @@ tags:
 
 #### FTPserver
 
-这个似乎是个私人小软件, 不是 Apache 的 FTPserver
+这个似乎是个私人小软件, 不是 Apache 的 FTPserver. 开箱即用
 
 MS Edge, Firefox, Chrome 都不支持 ftp 了, 现在要用 File Explorer 访问 ftp
 
@@ -88,3 +88,21 @@ MS Edge, Firefox, Chrome 都不支持 ftp 了, 现在要用 File Explorer 访问
 [[private/Nginx|Nginx]]
 
 win 直接下载压缩, 在 `/drivers/etc/host` 配置 host
+
+在 `conf.d/*.conf` 下配置单个文件
+
+##### image 配置(目录转发型)
+
+配置 conf
+![[attachments/Pasted image 20231221184047.png]]
+
+在 hosts 添加 二级域名
+
+在 win 下需要修改各路径, 注意用反斜杠
+
+
+##### tomcat 配置(端口转发型)
+
+![[attachments/Pasted image 20231221200444.png]]
+
+然后启动 tomcat
