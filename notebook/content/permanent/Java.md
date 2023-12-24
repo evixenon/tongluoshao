@@ -40,7 +40,7 @@ tags:
 
 [[permanent/Gradle|Gradle]]
 
-[[index/Maven|Maven]]
+[[permanent/Maven|Maven]]
 
 Ant
 

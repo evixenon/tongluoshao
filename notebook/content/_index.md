@@ -11,8 +11,6 @@ tag:
 
 ## 文件夹
 
-[Quartz文档/](notes/)
-
 [index/](index/)
 
 [permanent/](permanent/)
