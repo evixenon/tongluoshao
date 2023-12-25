@@ -106,3 +106,54 @@ win 直接下载压缩, 在 `/drivers/etc/host` 配置 host
 ![[attachments/Pasted image 20231221200444.png]]
 
 然后启动 tomcat
+
+##### 文件服务器搭建
+
+根据以上两种 nginx 配置, 加上 apache 的一些 ftp 文件上传 API
+
+![[attachments/Pasted image 20231225223111.png]]
+
+#### MySQL 安装配置
+
+Linux: 安装, 字符集配置, 自启动, 防火墙
+Windows: 下载安装, 字符集配置
+
+[[permanent/MySQL#安装和初配置|MySQL#安装和初配置]]
+
+项目用的 MySQL 5.1.73
+
+```sql
+/* 本地用户赋予所有权限 mmall.* 是指这个数据库下所有 table */
+grant all privileges on mmall.* to yourusername@localhost identified by 'yourpassword';
+```
+
+![[attachments/Pasted image 20231225230739.png]]
+
+
+## 数据表设计
+
+没有使用外键和触发器, 因为拓展修改和数据清洗麻烦
+
+![[attachments/Pasted image 20231225234713.png]]
+
+![[attachments/Pasted image 20231225231216.png]]
+- 倒数第二句, 把 username 设为唯一索引
+
+![[attachments/Pasted image 20231225231821.png]]
+
+![[attachments/Pasted image 20231225231837.png]]
+- text 比 varchar 长很多, 如果作了 url 长度限制, 也可以用 varchar
+
+![[attachments/Pasted image 20231225232259.png]]
+- 一项应该是某个用户购物车里的一条商品信息
+- 加了 user_id 的索引来提高效率
+
+![[attachments/Pasted image 20231225232427.png]]
+
+![[attachments/Pasted image 20231225232658.png]]
+- shipping_ip 对应订单的收货地址表id 
+
+![[attachments/Pasted image 20231225232930.png]]
+- 这里的商品名称和图片起到一个快照的作用
+
+![[attachments/Pasted image 20231225233440.png]]

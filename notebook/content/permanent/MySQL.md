@@ -4,15 +4,17 @@ date: "2023-06-16"
 tags:
 - 数据库
 ---
-
-使用 [[permanent/SQL|SQL]] 语言
+- 典型的关系型数据库管理系统
+- Oracle 旗下(收购), MySQL AB 公司 开发
+- 体积小, 速度快, 总拥有成本低
+- 使用 [[permanent/SQL|SQL]] 语言
 
 ## 安装和初配置
 [官网下载链接](https://dev.mysql.com/downloads/mysql/)
 [MySQL安装 | 菜鸟教程](https://www.runoob.com/mysql/mysql-install.html)
 
 
-#### ZIP 包解压的安装方式
+#### Windows ZIP 包解压的安装方式
 1. 在[官网](https://dev.mysql.com/downloads/mysql/)下载对应版本的 ZIP 包, 解压到想放的位置
 2. 在根目录创建 `my.ini`, 内容如下:
    ```ini
@@ -48,7 +50,38 @@ tags:
 8. 更改默认密码
 > ALTER USER USER() IDENTIFIED BY 'new_password';
 
-## 元数据查询
+#### Linux 下安装和配置
+默认配置文件在 `/etc/my.cnf`
+
+可以通过以下命令检查是否已经安装
+```
+rpm -qa | grep mysql-server
+```
+
+在配置文件 `[mysqld]` 节点下添加
+```ini
+default-character-set=utf8
+character-set-server=utf8
+```
+
+中文乱码问题
+#todo 
+
+![[attachments/Pasted image 20231225224259.png]]
+自启动配置
+
+#todo
+![[attachments/Pasted image 20231225224552.png]]
+
+防火墙
+![[attachments/Pasted image 20231225224712.png]]
+
+启动
+```
+server mysqld start
+```
+
+## 通用数据查询
 ```sql
 /* 查询所有库 */
 SHOW DATABASES;
@@ -58,11 +91,30 @@ SELECT * FROM information_schema.tables where table_schema=库名;
 SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_name=表名 [and table_schema=库名];
 ```
 
+```MySQL
+/* 查看目前已有用户 */
+select user, host, password from mysql.user;
+
+/* 修改 root 密码 */
+set password for root@localhost=password('yourpw');
+
+/* 删除匿名用户 */
+delete from mysql.user where user='';
+
+/* 刷新使新配置生效 */
+flush privileges;
+
+/* 插入新用户 */
+insert into mysql.user(Host, User, Password) values ("localhost", "name", password("yourpw"));
+
+```
+
 ## 数据库操作
 
 #### 创建数据库
 ```mysql
-CREATE DATABASE database_name;
+CREATE DATABASE `database_name`;
+DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
 #### 指定使用的数据库
