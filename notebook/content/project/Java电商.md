@@ -165,3 +165,4 @@ grant all privileges on mmall.* to yourusername@localhost identified by 'yourpas
 
 .sql 文件可以在慕课的代码仓库找到
 
+我的 MySQL 5.7 在
