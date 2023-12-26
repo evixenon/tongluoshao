@@ -160,9 +160,14 @@ grant all privileges on mmall.* to yourusername@localhost identified by 'yourpas
 
 ## 项目初始化
 
+### 项目初始化
+IntelliJ 需要配置 JDK, Maven, tomcat
+
 ### 数据库初始化
 教程用的 Navicat, 太贵了, 我用的 DBeaver
 
-.sql 文件可以在慕课的代码仓库找到
+mmall.sql 文件可以在慕课的代码仓库找到
 
-我的 MySQL 5.7 在
+我的 3306 是一个 8.0, 3307 是一个 5.7
+
+这个项目用在 5.7
