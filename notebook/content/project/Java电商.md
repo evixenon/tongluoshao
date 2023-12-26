@@ -160,3 +160,8 @@ grant all privileges on mmall.* to yourusername@localhost identified by 'yourpas
 
 ## 项目初始化
 
+### 数据库初始化
+教程用的 Navicat, 太贵了, 我用的 DBeaver
+
+.sql 文件可以在慕课的代码仓库找到
+
