@@ -157,3 +157,6 @@ grant all privileges on mmall.* to yourusername@localhost identified by 'yourpas
 - 这里的商品名称和图片起到一个快照的作用
 
 ![[attachments/Pasted image 20231225233440.png]]
+
+## 项目初始化
+
