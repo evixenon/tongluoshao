@@ -32,6 +32,21 @@ pull 将远程的修改同步到本地
 
 ### Git 命令
 
+#### 项目相关
+##### 将本地仓库上传到 remote
+先在远程创建一个仓库, 内容不重要都会被覆盖
+
+本地仓库执行
+```git
+git init
+git add . 
+git commit -am "first commit"
+git remote add origin [远程仓库 ssh 地址]
+git push -u -f origin main 
+```
+
+##### 添加 LICENCE
+在 github 创建文件, 文件名写 licence, 可以选择模板
 #### 修改
 ##### 直接修改上一次 commit
 改完后 add, 

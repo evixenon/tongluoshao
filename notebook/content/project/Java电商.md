@@ -60,24 +60,12 @@ tags:
 
 [Apache Tomcat® - Apache Tomcat 10 Software Downloads](https://tomcat.apache.org/download-10.cgi)
 
-
-环境配置
-- 环境变量, CATALINA_HOME 设成 tomcat 根目录
-- path, `%CATALINA_HOME%\bin\`
-
-中文乱码
-- /conf/server.xml  Connector port="8080" 的位置, 加上 URIEncoding="UTF-8"
-    - ![[attachments/Pasted image 20231204183419.png]]
-
-日志乱码
-- /conf/logging.properties 
-    - ![[attachments/Pasted image 20231204185205.png]]
-
+[[permanent/Tomcat 配置|Tomcat 配置]]
 #### maven 安装配置
+
 [[permanent/Maven 安装配置|Maven 安装配置]]
 
 项目里说到的 Settings 是 `/conf/settings`
-
 #### FTPserver
 
 这个似乎是个私人小软件, 不是 Apache 的 FTPserver. 开箱即用
@@ -163,6 +151,66 @@ grant all privileges on mmall.* to yourusername@localhost identified by 'yourpas
 ### 项目初始化
 IntelliJ 需要配置 JDK, Maven, tomcat
 
+[[permanent/Maven 安装配置|Maven 安装配置]] 沿用了 erpcrm 的 settings
+
+创建项目
+- 用 maven 的 archetype `org.apache.maven.archetypes:maven-archetype-webapp`
+- 创建好了在 main 目录下创建 java 目录并标记成 src root; 在 src 下创建 test/java 标记为 test root
+
+然后在 `Run/Debug Configuration` 增加 tomcat server 配置
+- 如果没有找到要先装 plugin
+- 选择 tomcat 根目录
+- 端口改成了 8088
+- run, 然后 8088 就可以看到 hello world 了. 此时还能在 `\webapps\ROOT` 看到 `index.jsp` ([[permanent/JSP|JSP文件]])
+
+### Git 配置
+
+在 github 创建一个仓库
+
+
+在本地项目创建 readme.md 和 .gitignore
+
+```gitignore
+*.class
+
+# package file
+#*.jar
+*.war
+*.ear
+
+# kdiff3
+*.orig
+
+# maven
+target/
+
+# eclipse
+.settings/
+.project
+.classpath
+
+# IntelliJ IDEA
+.idea/
+/idea/
+*.ipr
+*.iml
+*.iws
+
+# temporary file
+*.log
+*.cache
+*.patch
+*.diff
+*.tmp
+
+# system
+.DS_store
+Thumbs.db
+```
+
+[[permanent/Git#将本地仓库上传到 remote|Git#将本地仓库上传到 remote]]
+
+然后创建一个新的分支用于开发, 并推送分支到远程`git push origin HEAD -u`
 ### 数据库初始化
 教程用的 Navicat, 太贵了, 我用的 DBeaver
 

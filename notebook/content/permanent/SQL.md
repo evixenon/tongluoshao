@@ -135,6 +135,9 @@ unique, not null
 设置默认值 $w_1$
 e.g. default 'Auto'
 
+```sql
+`product_id` int(11) DEFAULT NULL COMMENT '商品id',
+```
 #### check f
 给定限定条件
 e.g. check (A <= 100)
