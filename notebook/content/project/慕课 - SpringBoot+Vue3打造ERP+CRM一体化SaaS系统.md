@@ -49,7 +49,7 @@ SaaS 系统
 ## 流程化搭建开发环境
 
 ##### Java
-[[private/Java 的环境配置|Java 的环境配置]]
+[[Inbox/Java 的环境配置|Java 的环境配置]]
 
 ##### node.js+npm
 [[private/node.js 的环境配置|node.js 的环境配置]]

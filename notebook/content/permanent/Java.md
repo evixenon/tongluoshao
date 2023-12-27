@@ -5,7 +5,7 @@ tags:
 - Java
 ---
 #### 环境配置
-[[private/Java 的环境配置|Java 的环境配置]]
+[[Inbox/Java 的环境配置|Java 的环境配置]]
 
 #### Java 原理机制
 [[permanent/JVM, Dalvik, Art|JVM, Dalvik, Art]]
@@ -21,7 +21,7 @@ tags:
 泛型
 反射
 
-[[private/Java IO|Java IO]]
+[[Inbox/Java IO|Java IO]]
 
 [[permanent/Java 序列化|Java 序列化]]
 
