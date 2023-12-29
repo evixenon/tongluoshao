@@ -37,3 +37,4 @@ tags:
 
 https://blog.csdn.net/shell_picker/article/details/6033023
 
+[Vim 修改 Tab 键为 4 个空格 - 知乎](https://zhuanlan.zhihu.com/p/367795051)
