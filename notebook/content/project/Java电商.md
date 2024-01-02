@@ -148,7 +148,7 @@ grant all privileges on mmall.* to yourusername@localhost identified by 'yourpas
 
 ## 项目初始化
 
-### 项目初始化
+#### 项目初始化
 IntelliJ 需要配置 JDK, Maven, tomcat
 
 [[permanent/Maven 安装配置|Maven 安装配置]] 沿用了 erpcrm 的 settings
@@ -163,7 +163,7 @@ IntelliJ 需要配置 JDK, Maven, tomcat
 - 端口改成了 8088
 - run, 然后 8088 就可以看到 hello world 了. 此时还能在 `\webapps\ROOT` 看到 `index.jsp` ([[permanent/JSP|JSP文件]])
 
-### Git 配置
+#### Git 配置
 
 在 github 创建一个仓库
 
@@ -211,7 +211,7 @@ Thumbs.db
 [[permanent/Git#将本地仓库上传到 remote|Git#将本地仓库上传到 remote]]
 
 然后创建一个新的分支用于开发, 并推送分支到远程`git push origin HEAD -u`
-### 数据库初始化
+#### 数据库初始化
 教程用的 Navicat, 太贵了, 我用的 DBeaver
 
 mmall.sql 文件可以在慕课的代码仓库找到
@@ -220,3 +220,37 @@ mmall.sql 文件可以在慕课的代码仓库找到
 
 这个项目用在 5.7
 
+#### pom 配置
+
+直接复制了, 建议熟悉各个包后可以再来看看
+
+maven-compiler-plugin 报错, 加上 `<version>2.3.2</version>` 就可以了
+
+还需要配置一下 extendir, 因为中央仓库没有的包放在项目里
+
+实操了一下配 jedis
+
+配置 pom 的方式是
+- 中央仓库 [search.maven.org](search.maven.org)
+- 搜索需要的 jar, 点进去, 复制
+
+pom 在实际开发中, 是用到一个配一个的
+
+#### java 结构
+![[attachments/Pasted image 20240102172054.png]]
+- common 常量
+- controller 控制层
+- dao 数据库
+- pojo 数据库对象
+- service
+- util
+- vo =view object
+
+dao 层跟 db 交互, 中间是 service 层, 交给 controller
+
+pojo 是数据库对象, vo 封装, 再交给 controller 展示
+
+#### Mybatis
+
+##### Mybatis-generator
+根据数据库自动生成 pojo 和 dao 和对应的 xml 文件
