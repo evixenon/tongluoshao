@@ -254,3 +254,11 @@ pojo 是数据库对象, vo 封装, 再交给 controller 展示
 
 ##### Mybatis-generator
 根据数据库自动生成 pojo 和 dao 和对应的 xml 文件
+
+[MyBatis Generator Core – MyBatis Generator Quick Start Guide](https://mybatis.org/generator/quickstart.html)
+
+使用 MBG 需要配置 `generator.xml`, 如果涉及到变量, 还需 `datasource.proporties`(这是自己命名的文件, 导入了)
+
+需要的 mysql driver 包在 源码 tools 文件夹下
+
+![[attachments/Pasted image 20240102181812.png]]
