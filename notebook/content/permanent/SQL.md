@@ -86,6 +86,7 @@ SQL 支持 compatible range:
 
 **text 家族(MySQL特有, 在标准中是clot)**
 - 固长字符串
+
 | 类型名     | 长度              |
 | ---------- | ----------------- |
 | tinytext   | $2^{8} -1$ Bytes  |
