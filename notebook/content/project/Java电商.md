@@ -146,9 +146,9 @@ grant all privileges on mmall.* to yourusername@localhost identified by 'yourpas
 
 ![[attachments/Pasted image 20231225233440.png]]
 
-## 项目初始化
+## 项目初始化和配置
 
-#### 项目初始化
+### 项目初始化
 IntelliJ 需要配置 JDK, Maven, tomcat
 
 [[permanent/Maven 安装配置|Maven 安装配置]] 沿用了 erpcrm 的 settings
@@ -163,7 +163,7 @@ IntelliJ 需要配置 JDK, Maven, tomcat
 - 端口改成了 8088
 - run, 然后 8088 就可以看到 hello world 了. 此时还能在 `\webapps\ROOT` 看到 `index.jsp` ([[permanent/JSP|JSP文件]])
 
-#### Git 配置
+### Git 配置
 
 在 github 创建一个仓库
 
@@ -211,7 +211,7 @@ Thumbs.db
 [[permanent/Git#将本地仓库上传到 remote|Git#将本地仓库上传到 remote]]
 
 然后创建一个新的分支用于开发, 并推送分支到远程`git push origin HEAD -u`
-#### 数据库初始化
+### 数据库初始化
 教程用的 Navicat, 太贵了, 我用的 DBeaver
 
 mmall.sql 文件可以在慕课的代码仓库找到
@@ -236,7 +236,7 @@ maven-compiler-plugin 报错, 加上 `<version>2.3.2</version>` 就可以了
 
 pom 在实际开发中, 是用到一个配一个的
 
-#### java 结构
+### java 结构
 ![[attachments/Pasted image 20240102172054.png]]
 - common 常量
 - controller 控制层
@@ -250,15 +250,123 @@ dao 层跟 db 交互, 中间是 service 层, 交给 controller
 
 pojo 是数据库对象, vo 封装, 再交给 controller 展示
 
-#### Mybatis
+### Mybatis
 
-##### Mybatis-generator
+#### Mybatis-generator
 根据数据库自动生成 pojo 和 dao 和对应的 xml 文件
 
 [MyBatis Generator Core – MyBatis Generator Quick Start Guide](https://mybatis.org/generator/quickstart.html)
 
-使用 MBG 需要配置 `generator.xml`, 如果涉及到变量, 还需 `datasource.proporties`(这是自己命名的文件, 导入了)
+使用 MBG 需要配置 `generator.xml`, 如果涉及到变量, 还需 `datasource.properties`(这是自己命名的文件, 导入了)
 
 需要的 mysql driver 包在 源码 tools 文件夹下
 
 ![[attachments/Pasted image 20240102181812.png]]
+
+然后在右边 maven, 找到 mbg, 双击执行, 需要一个有权限的 mysql 用户.
+
+BUILD SUCCESS 之后 dao 层 pojo 就会出现内容, resources.mapper 也有很多 xml
+
+#### 时间戳优化
+
+将 createTime 和 updateTime 的处理交给 mysql 内置函数
+
+具体做法是将 xml(也就是 java 转 sql 代码) 中, 
+- create 函数的 createTime 和 updateTime 都交给 now() 处理
+- update 函数的 交给 now()
+
+#### Mybatis-plus
+
+直接搜索 Mybatis-Plugin 搜不到了, 用这个
+[安装 | MyBatis-Plus](https://baomidou.com/pages/bab2db/#spring-boot3)
+
+效果是在 dao 层增加了新方法后可以直接在 xml 添加模板
+
+#### Mybatis-PageHelper
+[pagehelper/Mybatis-PageHelper: Mybatis通用分页插件](https://github.com/pagehelper/Mybatis-PageHelper)
+
+商品翻页的时候会用上. 在 pom 加载就行
+
+### Spring
+
+[Spring Framework](https://spring.io/projects/spring-framework/) 官方
+
+用例
+- [spring-attic/spring-mvc-showcase: Demonstrates the features of the Spring MVC web framework](https://github.com/spring-attic/spring-mvc-showcase)
+- [spring-projects/spring-petclinic: A sample Spring-based application](https://github.com/spring-projects/spring-petclinic)
+- [spring-attic/greenhouse: Reference web application for Spring technologies and social destination for Spring developers.](https://github.com/spring-attic/greenhouse)
+- https://github.com/spring-projects/spring-boot
+
+
+把这 5 个直接复制来了(实际上是上面几个用例了复制过来改) 
+![[attachments/Pasted image 20240103172905.png]]
+
+#### Web.xml
+![[attachments/Pasted image 20240103174342.png]]
+####
+#### applicationContext.xml
+主配置
+
+![[attachments/Pasted image 20240103174859.png]]
+
+配置注解: 在Spring配置文件中配置扫描除@Controller以外的注解类, 在SpringMVC中配置只扫描带@Controller的类
+
+![[attachments/Pasted image 20240103175837.png]]
+
+数据库建议配置 
+```properties
+db.initialSize = 20
+db.maxActive = 50
+db.maxIdle = 20
+db.minIdle = 10
+db.maxWait = 10
+db.defaultAutoCommit = true
+db.minEvictableIdleTimeMillis = 3600000
+```
+
+![[attachments/Pasted image 20240103181035.png]]
+
+pageHelper 的配置红了, 在官方 github 找到新的一个写法
+[abel533/Mybatis-Spring: 这是一个集成了Mybatis分页插件和通用Mapper的示例项目](https://github.com/abel533/Mybatis-Spring)
+
+但好像去掉 array 就行了
+
+然后还有配置扫描和回滚, 不多写了
+
+#### dispatcher-servlet.xml
+Spring-MVC 的配置
+
+这个xml是默认的名字, 可以通过在 web.xml 里添加 init-param 节点, 修改 XX 改
+![[attachments/Pasted image 20240103182334.png]]
+
+
+![[attachments/Pasted image 20240103182518.png]]
+
+![[attachments/Pasted image 20240103182626.png]]
+
+### logback 配置
+
+直接复制
+
+![[attachments/Pasted image 20240103182952.png]]
+[catalina.out 和 catalina.log 的区别和用途_.out是什么日志-CSDN博客](https://blog.csdn.net/itzhangdaopin/article/details/79139777)
+
+console 所以打印到 catalina.out
+
+![[attachments/Pasted image 20240103184108.png]]
+
+![[attachments/Pasted image 20240103184057.png]]
+
+![[attachments/Pasted image 20240103184236.png]]
+
+#### ftp 配置
+![[attachments/Pasted image 20240103184401.png]]
+
+#### idea 注入和自动编译
+
+![[attachments/Pasted image 20240103184738.png]]
+实时 build, 可以在下方 problems 看到实时的问题
+
+配置结束了上传 git 吧
+
+然后介绍了 fehelper 和 Restlet Client 插件, 后者和 postman 差不多, 就用 postman 吧

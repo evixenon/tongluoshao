@@ -105,8 +105,9 @@ delete from mysql.user where user='';
 flush privileges;
 
 /* 插入新用户 */
-insert into mysql.user(Host, User, Password) values ("localhost", "name", password("yourpw"));
-
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+/* 并赋予权限 */
+grant all privileges on mmlearning.* to mmlearning@'%' identified by 'mm971302798';
 ```
 
 ## 数据库操作
