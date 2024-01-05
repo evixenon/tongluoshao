@@ -373,25 +373,7 @@ console 所以打印到 catalina.out
 
 ## 用户模块开发
 
-### 登录功能
-
-首先在 controller 下创建一个 package `portal`, 其中创建一个类 `UserController`
-
-对类添加注解
-- `@Controller`
-- `@RequestMapping("/user/")` 表示我们现在定义的接口是在 /user 路径下
-
-![[attachments/Pasted image 20240105142818.png]]
-#### login
-- username, pw, HttpSession session
-- 注解
-    - `@RequestMapping(value = "login.do", method = RequestMethod.POST)`
-    - `@ResponseBody` 将返回值序列化为 json, 这是 dispatch-servlet 里配置的 Jackson converter 处理的. 注入的内容是 `supportedMediaTypes`
-
-#### IUserService
-在 service 下创建接口 IUserService, 包含 login 方法, login(username, pw) -> Object
-
-然后 在 service 下创建 impl 包, 创建 实现上面接口的 `UserServiceImpl`
+### 一些公用的东西
 
 #### ServerResponse
 common 包下的类 `ServerResponse<T>`, 用来封装响应, impl Serializable
@@ -424,3 +406,65 @@ common 包下的类 `ServerResponse<T>`, 用来封装响应, impl Serializable
 - enum, common 下
 
 ![[attachments/Pasted image 20240105141903.png]]
+
+### 登录功能
+
+![[attachments/Pasted image 20240105142818.png]]
+#### UserController
+首先在 controller 下创建一个 package `portal`, 其中创建一个类 `UserController`
+
+对类添加注解
+- `@Controller`
+- `@RequestMapping("/user/")` 表示我们现在定义的接口是在 /user 路径下
+
+login
+- username, pw, HttpSession session
+- 返回 `ServerResponse<User>`
+- 注解
+    - `@RequestMapping(value = "login.do", method = RequestMethod.POST)`
+    - `@ResponseBody` 将返回值序列化为 json, 这是 dispatch-servlet 里配置的 Jackson converter 处理的. 注入的内容是 `supportedMediaTypes`
+
+#### IUserService
+在 service 下创建接口 IUserService, 包含 login 方法, login(username, pw) -> Object
+
+#### UserServiceImpl
+然后 在 service 下创建 impl 包, 创建 实现上面接口的 `UserServiceImpl`
+
+```java
+@Autowired
+private UserMapper userMapper;
+```
+
+然后去 UserMapper 增加一个 int checkUsername(username);
+
+去到 UserMapper.xml 里改
+![[attachments/Pasted image 20240105151622.png]]
+
+再增加一个 selectLogin()
+```java
+User selectLogin(@Param("username") String username, @Param("password") String password);  // Mybatis 传多个参数需要用 @Param, parameterType 写 map
+```
+
+![[attachments/Pasted image 20240105152515.png]]
+
+有以上的基础就可以实现 login 函数了
+
+![[attachments/Pasted image 20240105152639.png]]
+
+#### 注入 Controller
+对 impl 类添加注解
+`@Service("iUserService")` 
+注意小写
+
+对 `UserController` 类增加参数
+```java
+@Autowired
+private IUserService iUserService;
+```
+
+顺便在 Common.Const 写个常量
+```java
+public static final String CURRENT_USER = "currentUser";
+```
+
+![[attachments/Pasted image 20240105153547.png]]
