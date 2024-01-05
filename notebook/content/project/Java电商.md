@@ -375,6 +375,12 @@ console 所以打印到 catalina.out
 
 ### 一些公用的东西
 
+#### ResponseCode
+
+- enum, common 下
+
+![[attachments/Pasted image 20240105141903.png]]
+
 #### ServerResponse
 common 包下的类 `ServerResponse<T>`, 用来封装响应, impl Serializable
 
@@ -401,13 +407,39 @@ common 包下的类 `ServerResponse<T>`, 用来封装响应, impl Serializable
 
 再创建失败时的调用
 ![[attachments/Pasted image 20240105142631.png]]
-#### ResponseCode
-
-- enum, common 下
-
-![[attachments/Pasted image 20240105141903.png]]
 
 ### 登录功能
+
+```plantuml
+@startuml
+Class Common.ServerResponse {
+    - {static} <T> ServerResponse();
+    + <T> createBySuccess();
+    + <T> createByError();
+}
+Enum Common.ResponseCode {
+    - code
+    - desc
+    + getters()
+}
+Class Service.impl.UserServiceImpl {
+    - UserMapper
+    + login(String username, String pw);
+}
+Interface Service.IUserService
+UserServiceImpl ..|> IUserService
+
+Class Controller.UserController {
+    - IUserService
+    + ServerResponse<User> login(String username, String password, HttpSession session)
+}
+
+UserController --> UserServiceImpl : use
+UserController --> ServerResponse : use
+ServerResponse --> ResponseCode : use
+@enduml
+```
+
 
 ![[attachments/Pasted image 20240105142818.png]]
 #### UserController
