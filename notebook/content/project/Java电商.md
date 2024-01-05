@@ -370,3 +370,29 @@ console 所以打印到 catalina.out
 配置结束了上传 git 吧
 
 然后介绍了 fehelper 和 Restlet Client 插件, 后者和 postman 差不多, 就用 postman 吧
+
+## 用户模块开发
+
+### 登录功能
+
+首先在 controller 下创建一个 package `portal`, 其中创建一个类 `UserController`
+
+对类添加注解
+- `@Controller`
+- `@RequestMapping("/user/")` 表示我们现在定义的接口是在 /user 路径下
+
+#### login
+- username, pw, HttpSession session
+- 注解
+    - `@RequestMapping(value = "login.do", method = RequestMethod.POST)`
+    - `@ResponseBody` 将返回值序列化为 json, 这是 dispatch-servlet 里配置的 Jackson converter 处理的. 注入的内容是 `supportedMediaTypes`
+
+#### IUserService
+在 service 下创建接口 IUserService, 包含 login 方法, login(username, pw) -> Object
+
+然后 在 service 下创建 impl 包, 创建 实现上面接口的 `UserServiceImpl`
+
+#### ServerResponse<T>
+common 包下的类, 用来封装响应, impl Serializable
+
+![[attachments/Pasted image 20240105141228.png]]
