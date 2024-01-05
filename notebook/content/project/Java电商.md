@@ -381,6 +381,7 @@ console 所以打印到 catalina.out
 - `@Controller`
 - `@RequestMapping("/user/")` 表示我们现在定义的接口是在 /user 路径下
 
+![[attachments/Pasted image 20240105142818.png]]
 #### login
 - username, pw, HttpSession session
 - 注解
@@ -392,7 +393,34 @@ console 所以打印到 catalina.out
 
 然后 在 service 下创建 impl 包, 创建 实现上面接口的 `UserServiceImpl`
 
-#### ServerResponse<T>
-common 包下的类, 用来封装响应, impl Serializable
+#### ServerResponse
+common 包下的类 `ServerResponse<T>`, 用来封装响应, impl Serializable
 
-![[attachments/Pasted image 20240105141228.png]]
+加上注解 
+`@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)` 
+保证序列化 json 的时候, 如果是 null 的对象, key 也会消失
+
+`alt+\` 智能感知, 显示注解里可以添加的属性, 有的是 tab+space
+
+构造器
+
+![[attachments/Pasted image 20240105141319.png]]
+
+判断成功的方法, 加上注解不会被 json 序列化
+
+![[attachments/Pasted image 20240105142715.png]]
+
+
+再加上三个属性的 getter
+
+
+成功时的调用
+![[attachments/Pasted image 20240105142322.png]]
+
+再创建失败时的调用
+![[attachments/Pasted image 20240105142631.png]]
+#### ResponseCode
+
+- enum, common 下
+
+![[attachments/Pasted image 20240105141903.png]]
