@@ -434,7 +434,7 @@ Class Controller.UserController {
     + ServerResponse<User> login(String username, String password, HttpSession session)
 }
 
-UserController --> UserServiceImpl : use
+UserController --> UserServiceImpl : 调用 service
 UserController --> ServerResponse : use
 ServerResponse --> ResponseCode : use
 @enduml
@@ -500,3 +500,25 @@ public static final String CURRENT_USER = "currentUser";
 ```
 
 ![[attachments/Pasted image 20240105153547.png]]
+
+### 登出接口
+
+登出其实相当于 清除 session
+
+
+![[attachments/Pasted image 20240108151437.png]]
+
+### 注册接口
+
+逻辑需求: 校验用户名是否存在, 校验 email
+
+小技巧: 用 interface 分组 Const
+![[attachments/Pasted image 20240108152546.png]]
+
+直接 copy 了 md5 算法
+
+![[attachments/Pasted image 20240108154421.png]]
+
+这时候顺便补一下之前的 md5 加密 todo, 再把边角处理一下
+
+### 校验
