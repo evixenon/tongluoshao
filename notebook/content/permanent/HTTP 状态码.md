@@ -26,6 +26,7 @@ tags:
 | 307    |      Temporary Redirect       |                    请求的资源临时从其他位置响应                    |
 | 400    |          Bad Request          |                        服务器无法解析该请求                        |
 | 401    |         Unauthorized          |                  请求没有进行身份验证或验证未通过                  |
+| 402    |                               | 就是你这个代理用不了了                                                                   |
 | 403    |           Forbidden           |                          服务器拒绝此请求                          |
 | 404    |           Not Found           |                       服务器找不到请求的网页                       |
 | 405    |      Method Not Allowed       |                    服务器禁用了请求中指定的方法                    |
@@ -41,6 +42,7 @@ tags:
 | 415    |    Unsupported Media Type     |                      请求格式不被请求页面支持                      |
 | 416    | Request Range Not Satisfiable |                       页面无法提供请求的范围                       |
 | 417    |      Expectation Failed       |                 服务器未满足期望请求标头字段的要求                 |
+| 429    |          Read Limit           |                            访问次数过多                            |
 | 500    |     Internal Server Error     |                    服务器遇到错误，无法完成请求                    |
 | 501    |        Not Implemented        |                     服务器不具备完成请求的功能                     |
 | 502    |          Bad Gateway          |           服务器作为网关或代理，从上游服务器收到无效响应           |

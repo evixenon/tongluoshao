@@ -522,3 +522,14 @@ public static final String CURRENT_USER = "currentUser";
 这时候顺便补一下之前的 md5 加密 todo, 再把边角处理一下
 
 ### 校验
+check_valid.do
+
+写一个 checkValid, 可以检验用户名和邮箱
+
+- String.Utils.isNotBlank(" ") = false;
+- String.Utils.isNotEmpty(" ") = true;
+
+其实根据上面的就可以自己写了, 以防万一
+![[attachments/Pasted image 20240108170147.png]]
+
+然后可以把这个函数复用到前面的注册
