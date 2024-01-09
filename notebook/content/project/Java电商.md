@@ -564,3 +564,10 @@ Common.TokenCache, 使用本地缓存
 ### 登录状态重置密码
 
 ![[attachments/Pasted image 20240109200317.png]]
+
+### 登陆状态更新个人信息
+![[attachments/Pasted image 20240109203808.png]]
+
+![[attachments/Pasted image 20240109204049.png]]
+- 防止越权, 从 session 读取 id
+- 这里是用户名不可修改的情况
