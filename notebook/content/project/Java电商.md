@@ -533,3 +533,24 @@ check_valid.do
 ![[attachments/Pasted image 20240108170147.png]]
 
 然后可以把这个函数复用到前面的注册
+
+### 获取用户信息
+![[attachments/Pasted image 20240109144837.png]]
+
+### 获取提示问题
+先检查用户名存在, 再根据用户名从数据库获取问题
+
+![[attachments/Pasted image 20240109145840.png]]
+
+![[attachments/Pasted image 20240109145900.png]]
+###  提问问题与答案
+![[attachments/Pasted image 20240109150128.png]]
+
+Common.TokenCache, 使用本地缓存
+![[attachments/Pasted image 20240109151251.png]]
+- import org.slf4j.Logger;
+
+生成一个随机的 UUID 作为 token
+![[attachments/Pasted image 20240109152108.png]]
+
+![[attachments/Pasted image 20240109152142.png]]
