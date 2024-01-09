@@ -554,3 +554,9 @@ Common.TokenCache, 使用本地缓存
 ![[attachments/Pasted image 20240109152108.png]]
 
 ![[attachments/Pasted image 20240109152142.png]]
+
+### 重置密码
+
+![[attachments/Pasted image 20240109171038.png]]
+
+![[attachments/Pasted image 20240109171138.png]]
