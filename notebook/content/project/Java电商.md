@@ -571,3 +571,36 @@ Common.TokenCache, 使用本地缓存
 ![[attachments/Pasted image 20240109204049.png]]
 - 防止越权, 从 session 读取 id
 - 这里是用户名不可修改的情况
+
+### 获取用户详细信息
+- 需要强制登录那种, impl 回传的时候把密码和答案设空
+- 例如需要修改信息时, 可以先用这个函数获取
+![[attachments/Pasted image 20240111120839.png]]
+
+
+### 后台管理员登录
+- controller.backend.UserManageController
+- 可以调用前台的登录并加一个 Role 检查
+![[attachments/Pasted image 20240111123249.png]]
+
+### 加盐
+#todo [数据库的存储的密码加了盐，知道被加密后的内容和盐的值，能算出密码是多少吗？ - 知乎](https://www.zhihu.com/question/398702744)
+
+mmall.properties 加一条盐值
+
+![[attachments/Pasted image 20240111130302.png]]
+
+### 模块测试
+首先把 logback.xml, log 位置改一下. 不止截图这一个. 注意权限
+![[attachments/Pasted image 20240111131716.png]]
+
+> 如果要在tomcat中为TLD扫描的jar启用调试日志记录，则必须更改tomcat目录中的/conf/logging.properties文件 .
+> 取消注释：  
+> org.apache.jasper.servlet.TldScanner.level = FINE
+> **FINE** 级别用于调试日志 .
+> [至少有一个JAR被扫描用于TLD但尚未包含TLD-Java 学习之路](https://www.javaroad.cn/questions/355416)
+
+(smartTomcat log 位置又不一样)
+
+[How to properly configure Jakarta EE libraries in Maven pom.xml for Tomcat? - Stack Overflow](https://stackoverflow.com/questions/65703840/how-to-properly-configure-jakarta-ee-libraries-in-maven-pom-xml-for-tomcat)
+无果, 下载了个 tomcat 8, 将环境配置项目配置都改了

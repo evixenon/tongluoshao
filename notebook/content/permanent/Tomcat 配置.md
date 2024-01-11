@@ -14,4 +14,4 @@ tags:
 
 #### 日志乱码
 - /conf/logging.properties 
-    - ![[attachments/Pasted image 20231204185205.png]] 改成 UTF-8
+    - ![[attachments/Pasted image 20231204185205.png]] 10 版本: 改成 UTF-8
