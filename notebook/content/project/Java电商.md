@@ -287,6 +287,8 @@ BUILD SUCCESS 之后 dao 层 pojo 就会出现内容, resources.mapper 也有很
 
 商品翻页的时候会用上. 在 pom 加载就行
 
+源码的 array 报红, 去掉就行了
+
 ### Spring
 
 [Spring Framework](https://spring.io/projects/spring-framework/) 官方
@@ -603,4 +605,7 @@ mmall.properties 加一条盐值
 (smartTomcat log 位置又不一样)
 
 [How to properly configure Jakarta EE libraries in Maven pom.xml for Tomcat? - Stack Overflow](https://stackoverflow.com/questions/65703840/how-to-properly-configure-jakarta-ee-libraries-in-maven-pom-xml-for-tomcat)
-无果, 下载了个 tomcat 8, 将环境配置项目配置都改了
+
+无果, 下载了个 tomcat 8, 将环境配置项目配置都改了. 
+
+发现两个问题, 主配置 `mappers/*.xml` 写错, 另一个是 sqlSettionFactory(pagehelper) 配错
