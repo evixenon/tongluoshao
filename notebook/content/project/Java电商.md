@@ -655,3 +655,37 @@ userImpl 写了一个专门检查权限的函数
 
 
 ![[attachments/Pasted image 20240112162633.png]]
+
+### 获取子接点(不递归)
+getParallelChildrenCategory
+
+用 sql 查就可以了
+
+没有的时候 logger.info() 输出一行日志
+![[attachments/Pasted image 20240112221112.png]]
+
+```java
+@Override
+public ServerResponse<List<Category>> getParallelChildrenCategory(Integer categoryId) {
+    if (categoryId == null) {
+        return ServerResponse.createByErrorMessage("Incorrect parameters.");
+    }
+    List<Category> categoryList = categoryMapper.selectParalleiChildrenCategory(categoryId);
+    if (CollectionUtils.isEmpty(categoryList)) {
+        logger.info("No children category found.");
+    }
+    return ServerResponse.createBySuccess();
+}
+```
+
+```xml
+<select id="selectParalleiChildrenCategory" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+select
+<include refid="Base_Column_List" />
+from mmall_category
+where parent_id = #{parentId, jdbcType=INTEGER}
+</select>
+```
+### 获取子节点(递归)
+
+重写 Category 的 equals 和 hashCode, 只要 id 相同就认为相同
