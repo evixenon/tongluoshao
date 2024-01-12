@@ -270,6 +270,7 @@ BUILD SUCCESS 之后 dao 层 pojo 就会出现内容, resources.mapper 也有很
 #### 时间戳优化
 
 将 createTime 和 updateTime 的处理交给 mysql 内置函数
+- 注意 if
 
 具体做法是将 xml(也就是 java 转 sql 代码) 中, 
 - create 函数的 createTime 和 updateTime 都交给 now() 处理
@@ -539,6 +540,10 @@ check_valid.do
 ### 获取用户信息
 ![[attachments/Pasted image 20240109144837.png]]
 
+user.setPassword(StringUtils.EMPTY);
+
+答案同理
+
 ### 获取提示问题
 先检查用户名存在, 再根据用户名从数据库获取问题
 
@@ -563,10 +568,14 @@ Common.TokenCache, 使用本地缓存
 
 ![[attachments/Pasted image 20240109171138.png]]
 
+根据讨论区做了一个改进: 密码重置成功使用 LoadingCache 的 invalidate() 方法
+TokenCache.removeKey(TokenCache.TOKEN_PREFIX + username);
+
 ### 登录状态重置密码
 
 ![[attachments/Pasted image 20240109200317.png]]
 
+嗯, 然后图中还没有验证是否登录
 ### 登陆状态更新个人信息
 ![[attachments/Pasted image 20240109203808.png]]
 
@@ -609,3 +618,5 @@ mmall.properties 加一条盐值
 无果, 下载了个 tomcat 8, 将环境配置项目配置都改了. 
 
 发现两个问题, 主配置 `mappers/*.xml` 写错, 另一个是 sqlSettionFactory(pagehelper) 配错
+
+测试没什么大问题(大概), 有用错重载函数的, 有 sql 写错列名的, 还有一些课程 bug
