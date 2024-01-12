@@ -620,3 +620,38 @@ mmall.properties 加一条盐值
 发现两个问题, 主配置 `mappers/*.xml` 写错, 另一个是 sqlSettionFactory(pagehelper) 配错
 
 测试没什么大问题(大概), 有用错重载函数的, 有 sql 写错列名的, 还有一些课程 bug
+
+
+## 分类模块开发
+
+### 接口列表
+- 获取子分类: getCategory(int categoryId)
+- 增加节点: addCategory(int parentId, String categoryName)
+- 修改分类名: setCategoryName(int parentId, String categoryName)
+- 获取当前分类 id 和递归子节点 id: get_deep_category(int categoryId)
+
+backend.CategoryManageController
+
+### 公共
+
+userImpl 写了一个专门检查权限的函数
+
+再创建一个 CategoryServiceImpl (以下省略)
+
+### 增加分类
+@RequestParam(value = "parentId", defaultValue="0") int parentId
+如果前端没有传值默认 0
+
+要判断用户登录和权限
+
+![[attachments/Pasted image 20240112162214.png]]
+
+检查参数后, 新建一个类 insert 进去
+![[attachments/Pasted image 20240112162057.png]]
+
+### 设置分类名
+
+![[attachments/Pasted image 20240112162546.png]]
+
+
+![[attachments/Pasted image 20240112162633.png]]
