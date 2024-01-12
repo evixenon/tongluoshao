@@ -634,7 +634,7 @@ backend.CategoryManageController
 
 ### 公共
 
-userImpl 写了一个专门检查权限的函数
+userImpl 写了一个专门检查权限的函数         
 
 再创建一个 CategoryServiceImpl (以下省略)
 
