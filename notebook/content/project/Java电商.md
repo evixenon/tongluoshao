@@ -504,6 +504,7 @@ public static final String CURRENT_USER = "currentUser";
 
 ![[attachments/Pasted image 20240105153547.png]]
 
+答案也要屏蔽
 ### 登出接口
 
 登出其实相当于 清除 session
@@ -632,6 +633,8 @@ mmall.properties 加一条盐值
 
 backend.CategoryManageController
 
+实用肯定还需要删除, 更新的功能
+添加节点: 如果输入的 parentId 不存在?
 ### 公共
 
 userImpl 写了一个专门检查权限的函数         
@@ -712,3 +715,51 @@ private List<Integer> deepSearchChildrenCategory(List<Integer> categoryIdList, I
     return categoryIdList;
 }
 ```
+
+## 商品模块开发
+
+### POJO, BO, VO
+![[attachments/Pasted image 20240115151041.png]]
+
+### 接口
+前
+![[attachments/Pasted image 20240115151503.png]]
+
+![[attachments/Pasted image 20240115151654.png]]
+后
+![[attachments/Pasted image 20240115151920.png]]
+
+![[attachments/Pasted image 20240115152002.png]]
+
+![[attachments/Pasted image 20240115152029.png]]
+
+![[attachments/Pasted image 20240115152800.png]]
+
+![[attachments/Pasted image 20240115152806.png]]
+
+![[attachments/Pasted image 20240115152828.png]]
+
+![[attachments/Pasted image 20240115152952.png]]
+
+### 后台新增商品
+- backend.ProductManageController
+- /manage/product
+- IProductService
+
+后台功能全部是强制登录并检查权限的
+
+因为老是查登录和权限很烦, 提取出了函数
+
+addProduct
+
+后台 addOrUpdateProduct(Product)
+- 将 subImage 第一张设为主图
+- 根据传入数据是否有 id 判断是新增还是更新
+
+### 后台商品上下架
+
+setSaleStatus(Integer productId, Integer status)
+
+调用接口处 <C+T> 可以直接转到实现
+
+这时候用 IllegalArgument 了
