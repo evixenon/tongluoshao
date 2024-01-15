@@ -750,9 +750,9 @@ private List<Integer> deepSearchChildrenCategory(List<Integer> categoryIdList, I
 
 因为老是查登录和权限很烦, 提取出了函数
 
-addProduct
+updateProduct
 
-后台 addOrUpdateProduct(Product)
+后台 updateProduct(Product)
 - 将 subImage 第一张设为主图
 - 根据传入数据是否有 id 判断是新增还是更新
 
