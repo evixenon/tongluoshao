@@ -776,3 +776,15 @@ host 从配置中获取, 不要硬编码
 static 块, 在类初始化时会执行一次, 一般用来初始化类变量,
 
 static {...} -> {...} -> Constructor
+
+用 forname 加载 com.mysql.jdbc.Driver 会执行 这个类里的 static 块
+
+写 ProportiesUtil, new Proporties(), 写两个读取方法, 其中一个带默认值
+
+然后 DateUtil, 毫秒 Timestamp 和 yyyyMMddhhmmss 互转
+
+![[attachments/Pasted image 20240115230958.png]]
+
+![[attachments/Pasted image 20240115231208.png]]
+
+![[attachments/Pasted image 20240115231239.png]]
