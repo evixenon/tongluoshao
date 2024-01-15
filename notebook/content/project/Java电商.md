@@ -763,3 +763,16 @@ setSaleStatus(Integer productId, Integer status)
 调用接口处 <C+T> 可以直接转到实现
 
 这时候用 IllegalArgument 了
+
+### 商品详情
+getDetail(productId)
+
+vo.ProductDetailVo + gettersetter
+![[attachments/Pasted image 20240115202931.png]]
+
+![[attachments/Pasted image 20240115203105.png]]
+host 从配置中获取, 不要硬编码
+
+static 块, 在类初始化时会执行一次, 一般用来初始化类变量,
+
+static {...} -> {...} -> Constructor
