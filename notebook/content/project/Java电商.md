@@ -784,6 +784,7 @@ static {...} -> {...} -> Constructor
 然后 DateUtil, 毫秒 Timestamp 和 yyyyMMddhhmmss 互转
 
 ![[attachments/Pasted image 20240115230958.png]]
+但我想拿 java.time.LocalDateTime 写
 
 ![[attachments/Pasted image 20240115231208.png]]
 
