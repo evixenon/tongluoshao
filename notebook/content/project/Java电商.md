@@ -688,4 +688,27 @@ where parent_id = #{parentId, jdbcType=INTEGER}
 ```
 ### 获取子节点(递归)
 
-重写 Category 的 equals 和 hashCode, 只要 id 相同就认为相同
+
+```java
+@Override
+public ServerResponse getRecursiveChildrenCategory(Integer categoryId) {
+    if (categoryId == null) {
+        return ServerResponse.createByErrorMessage("Incorrect parameters.");
+    }
+    List<Integer> categoryIdList = deepSearchChildrenCategory(new ArrayList<Integer>(), categoryId);
+    return ServerResponse.createBySuccess(categoryIdList);
+}
+
+private List<Integer> deepSearchChildrenCategory(List<Integer> categoryIdList, Integer categoryId) {
+    Category category = categoryMapper.selectByPrimaryKey(categoryId);
+    if (category != null) {
+        categoryIdList.add(category.getId());
+    }
+    List<Category> subCategoryList = categoryMapper.selectParallelChildrenCategory(categoryId);
+
+    for(Category c:subCategoryList) {
+        deepSearchChildrenCategory(categoryIdList, c.getId());
+    }
+    return categoryIdList;
+}
+```
