@@ -810,3 +810,20 @@ mybatis 默认处理 sql Datetime 类型用的是 java.utils.Date, 但这个类�
 
 ![[attachments/Pasted image 20240116034213.png]]
 
+### 后台商品 list
+
+page-helper 是用 aop 实现的
+
+使用
+- startPage(), 点进去可以看, 注释非常完善
+- 填充 sql 逻辑
+- pageHelper
+
+![[attachments/Pasted image 20240116213251.png]]
+pagehelper 用的 sql 不要写分号, 会自动 aop 注入 limit 10 offset 1
+
+ProductListVo 和组装方法
+![[attachments/Pasted image 20240116212314.png]]
+
+![[attachments/Pasted image 20240116213150.png]]
+
