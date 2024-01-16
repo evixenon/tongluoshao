@@ -786,10 +786,27 @@ static {...} -> {...} -> Constructor
 ![[attachments/Pasted image 20240115230958.png]]
 但我想拿 java.time.LocalDateTime 写. 似乎要大费周章
 
+![[attachments/Pasted image 20240115231208.png]]
+
+![[attachments/Pasted image 20240115231239.png]]
+
+#### 关于转 JRS310
 mybatis 默认处理 sql Datetime 类型用的是 java.utils.Date, 但这个类已经是 deprecated, 转为 LocalDate 方法见下
 
 [Java 8 LocalDate mapping with mybatis - Stack Overflow](https://stackoverflow.com/questions/25113579/java-8-localdate-mapping-with-mybatis)
 
-![[attachments/Pasted image 20240115231208.png]]
+通过 mybatis-generator 的话, 这个办法可行(这时也改了 mybatis + generator 两者的版本号)
+[datetime - SQL Server type to generate Instant in Mybatis Generator - Stack Overflow](https://stackoverflow.com/questions/68574227/sql-server-type-to-generate-instant-in-mybatis-generator)
 
-![[attachments/Pasted image 20240115231239.png]]
+更好的方法: 
+```
+<javaTypeResolver>
+    <property name="useJSR310Types" value="true"/>
+</javaTypeResolver>
+```
+ [MyBatis Generator Core – The &lt;javaTypeResolver&gt; Element](https://mybatis.org/generator/configreference/javaTypeResolver.html)
+
+接下来就是漫长的复原
+
+![[attachments/Pasted image 20240116034213.png]]
+
