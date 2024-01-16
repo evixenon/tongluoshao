@@ -779,7 +779,7 @@ static {...} -> {...} -> Constructor
 
 用 forname 加载 com.mysql.jdbc.Driver 会执行 这个类里的 static 块
 
-写 ProportiesUtil, new Proporties(), 写两个读取方法, 其中一个带默认值
+写 PropertiesUtil, new Properties(), 写两个读取方法, 其中一个带默认值
 
 然后 DateUtil, 毫秒 Timestamp 和 yyyyMMddhhmmss 互转
 
