@@ -784,7 +784,11 @@ static {...} -> {...} -> Constructor
 然后 DateUtil, 毫秒 Timestamp 和 yyyyMMddhhmmss 互转
 
 ![[attachments/Pasted image 20240115230958.png]]
-但我想拿 java.time.LocalDateTime 写
+但我想拿 java.time.LocalDateTime 写. 似乎要大费周章
+
+mybatis 默认处理 sql Datetime 类型用的是 java.utils.Date, 但这个类已经是 deprecated, 转为 LocalDate 方法见下
+
+[Java 8 LocalDate mapping with mybatis - Stack Overflow](https://stackoverflow.com/questions/25113579/java-8-localdate-mapping-with-mybatis)
 
 ![[attachments/Pasted image 20240115231208.png]]
 
