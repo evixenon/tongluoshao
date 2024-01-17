@@ -827,3 +827,11 @@ ProductListVo 和组装方法
 
 ![[attachments/Pasted image 20240116213150.png]]
 
+### 后台搜索
+
+![[attachments/Pasted image 20240117225927.png]]
+
+![[attachments/Pasted image 20240117230053.png]]
+### 文件上传
+
+SpringMVC 的 上传文件类型是Multipartfile
