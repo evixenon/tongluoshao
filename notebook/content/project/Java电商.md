@@ -810,6 +810,7 @@ mybatis 默认处理 sql Datetime 类型用的是 java.utils.Date, 但这个类�
 
 ![[attachments/Pasted image 20240116034213.png]]
 
+[Mybatis报错 Result Maps collection already contains value for 原因汇总-CSDN博客](https://blog.csdn.net/flystarfly/article/details/106195858)
 ### 后台商品 list
 
 page-helper 是用 aop 实现的
@@ -835,3 +836,191 @@ ProductListVo 和组装方法
 ### 文件上传
 
 SpringMVC 的 上传文件类型是Multipartfile
+
+FileServiceImpl
+```java
+public String upload(MultipartFile file, String path) {
+    String originalFilename = file.getOriginalFilename();
+    String fileExtensionName = originalFilename.substring(originalFilename.lastIndexOf(".") + 1);
+    String targetFilename = UUID.randomUUID() + "." + fileExtensionName; // filename on the server
+    logger.info("Start uploading file: original name: {}, upload path: {}, new file name: {}", originalFilename,
+            path, targetFilename);
+
+    File targetDir = new File(path);
+    if (!targetDir.exists()) {
+        targetDir.setWritable(true);
+        targetDir.mkdir();
+    }
+    File targetFile = new File(path, targetFilename);
+
+    try {
+        file.transferTo(targetDir); // 上传到项目里面
+        FTPUtil.uploadFile(Lists.newArrayList(targetFile), "img"); // 上传到服务器
+        targetFile.delete(); // 删除项目的文件
+    } catch (IOException e) {
+        logger.error("Upload file error.");
+        return null;
+    }
+    return targetFile.getName();
+
+```
+
+FileUtil
+```java
+private boolean connectServer(String ip, int port, String user, String pass) {
+    boolean isSuccess = false;
+    ftpClient = new FTPClient();
+    try {
+        ftpClient.connect(ip);
+        isSuccess = ftpClient.login(user, pass);
+    } catch (IOException e) {
+        logger.error("Connect server error", e);
+    }
+    
+    return isSuccess;
+}
+```
+
+```java
+private boolean uploadFile(String remotePath, List<File> fileList) throws IOException {
+    boolean isSuccess = false;
+    FileInputStream fis = null;
+
+    if (connectServer(this.ip, this.port, this.user, this.pass)) {
+        try {
+            // Settings
+            ftpClient.changeWorkingDirectory(remotePath);
+            ftpClient.setBufferSize(1024);
+            ftpClient.setControlEncoding("UTF-8");
+            ftpClient.setFileType(FTPClient.BINARY_FILE_TYPE);
+            ftpClient.enterLocalPassiveMode();
+
+            // upload
+            for (File fileItem : fileList) {
+                fis = new FileInputStream(fileItem);
+                ftpClient.storeFile(fileItem.getName(), fis);
+            }
+
+            isSuccess = true;
+            
+        } catch (IOException e) {
+            logger.error("Upload file error", e);
+            e.printStackTrace();
+        } finally {
+            fis.close();
+            ftpClient.disconnect();
+        }
+    }
+    
+    return isSuccess;
+}
+```
+
+```java
+public static boolean uploadFile(List<File> fileList, String path) throws IOException {
+    FTPUtil ftpUtil = new FTPUtil(ftpIp, 21, ftpUser, ftpPass);
+    logger.info("Uploading file, connecting FTP server.");
+    boolean result = ftpUtil.uploadFile(path, fileList);
+    logger.info("Uploading file, result: {}", result);
+    return result;
+}
+```
+
+
+Controller
+```java
+@RequestMapping(value = "upload.do", method = RequestMethod.POST)
+@ResponseBody
+public ServerResponse upload(HttpSession session, @RequestParam(value = "upload_file", required = false) MultipartFile file, HttpServletRequest request) {
+
+    User user = (User) session.getAttribute(Const.CURRENT_USER);
+    ServerResponse<String> checkResponse = iUserService.checkLoginAndAdmin(user);
+    if (!checkResponse.isSuccess()) {
+        return checkResponse;
+    }
+
+    String path = request.getSession().getServletContext().getRealPath("upload"); // 上传到 /resources/webapp/upload
+    String targetFilename = iFileService.upload(file, path);
+    String url = PropertiesUtil.getProp("ftp.server.http.prefix") + targetFilename;
+
+    Map fileMap = Maps.newHashMap();
+    fileMap.put("uri", targetFilename);
+    fileMap.put("url", url);
+    return ServerResponse.createBySuccess(fileMap);
+}
+```
+
+#### 配置部分
+dispatcher-servlet 的 MultipartResolver
+
+#### 上传测试
+index.jsp
+
+`<C-S-N>` 查找文件
+
+```jsp
+<form name="test-springmvc-upload-file" action="/mmall_learning/manage/product/upload_image.do" method="post" enctype="multipart/form-data">
+    <input type="file" name="upload_file" />
+    <input type="submit" value="Upload" />
+</form>
+```
+
+### 富文本上传 
+
+和图片上传的逻辑相似, 使用的是 simditor
+
+[Options - Simditor](https://simditor.tower.im/docs/doc-config.html)
+
+json 返回要求 用 Map 返回
+```json
+{
+  "success": true/false,
+  "file_path": "[real file path]",
+  "msg": "error message" # optional
+}
+```
+
+```java
+@RequestMapping(value = "rtf_upload_image.do", method = RequestMethod.POST)
+@ResponseBody
+public Map rtfUploadImage(HttpSession session, @RequestParam(value = "upload_file", required = false) MultipartFile file,
+                          HttpServletRequest request, HttpServletResponse response) {
+    Map resultMap = Maps.newHashMap();
+
+    User user = (User) session.getAttribute(Const.CURRENT_USER);
+    ServerResponse<String> checkResponse = iUserService.checkLoginAndAdmin(user);
+    if (!checkResponse.isSuccess()) {
+        resultMap.put("success", false);
+        resultMap.put("msg", "Not login or no privilege.");
+    }
+
+    String path = request.getSession().getServletContext().getRealPath("upload"); // 上传到 /resources/webapp/upload
+    String targetFilename = iFileService.upload(file, path);
+    String url = PropertiesUtil.getProp("ftp.server.http.prefix") + targetFilename;
+
+    if (targetFilename == null) {
+        resultMap.put("success", false);
+        resultMap.put("msg", "Upload file failed.");
+    } else {
+        resultMap.put("success", true);
+        resultMap.put("msg", "Upload succeeded.");
+        resultMap.put("file_path", url);
+        response.addHeader("Access-Control-AllowHeaders", "X-File-Name"); // requested by Simditor
+    }
+
+    return resultMap;
+}
+```
+
+servlet response 加 header
+
+#### 测试
+
+```jsp
+<form name="test-rtf-upload-file" action="/mmall_learning/manage/product/rtf_upload_image.do" method="post" enctype="multipart/form-data">
+    <input type="file" name="upload_file" />
+    <input type="submit" value="Upload" />
+</form>
+```
+
+[解决配置文件没有编译到target中的问题，ava.io.IOException: Could not find resource mybatis-config.xml_java.io.ioexception: could not find resource mybat-CSDN博客](https://blog.csdn.net/weixin_46066795/article/details/124453904)
