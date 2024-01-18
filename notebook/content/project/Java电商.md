@@ -1023,4 +1023,7 @@ servlet response 加 header
 </form>
 ```
 
-[解决配置文件没有编译到target中的问题，ava.io.IOException: Could not find resource mybatis-config.xml_java.io.ioexception: could not find resource mybat-CSDN博客](https://blog.csdn.net/weixin_46066795/article/details/124453904)
+然后 这句报错, 发现是自己把类名写错了
+```java
+props.load(new InputStreamReader(PropertiesUtil.class.getClassLoader().getResourceAsStream(filename), "UTF-8"));
+```
