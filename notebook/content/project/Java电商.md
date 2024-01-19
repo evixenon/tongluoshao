@@ -833,7 +833,7 @@ ProductListVo 和组装方法
 ![[attachments/Pasted image 20240117225927.png]]
 
 ![[attachments/Pasted image 20240117230053.png]]
-### 文件上传
+### 后台文件上传
 
 SpringMVC 的 上传文件类型是Multipartfile
 
@@ -965,7 +965,7 @@ index.jsp
 </form>
 ```
 
-### 富文本上传 
+### 后台富文本上传 
 
 和图片上传的逻辑相似, 使用的是 simditor
 
@@ -1027,3 +1027,27 @@ servlet response 加 header
 ```java
 props.load(new InputStreamReader(PropertiesUtil.class.getClassLoader().getResourceAsStream(filename), "UTF-8"));
 ```
+
+### 前台
+ProductController
+
+前台的方法都不需要验证
+![[attachments/Pasted image 20240119161904.png]]
+
+Const
+![[attachments/Pasted image 20240119160324.png]]
+
+
+获取详情基本上可以复用
+
+排序
+- categoryId 为空时, 返回空分页, 不报错
+- 
+![[attachments/Pasted image 20240119162215.png]]
+
+处理约定和 sql 语句的差异
+![[attachments/Pasted image 20240119162350.png]]
+
+
+多 category 的处理
+![[attachments/Pasted image 20240119163226.png]]
