@@ -1028,7 +1028,7 @@ servlet response 加 header
 props.load(new InputStreamReader(PropertiesUtil.class.getClassLoader().getResourceAsStream(filename), "UTF-8"));
 ```
 
-### 前台
+### 前台商品详情和搜索
 ProductController
 
 前台的方法都不需要验证
@@ -1038,7 +1038,7 @@ Const
 ![[attachments/Pasted image 20240119160324.png]]
 
 
-获取详情基本上可以复用
+获取详情基本上可以复用, 要多一个判断是否在售
 
 排序
 - categoryId 为空时, 返回空分页, 不报错
