@@ -5,6 +5,8 @@ tags:
 - 说明书
 ---
 
+[在线LaTeX公式编辑器-编辑器](https://www.latexlive.com/)
+
 ![[symbols_1638700519189_0 1.pdf]]
 
 underset $A \oplus B = \underset{b\in B}{\cup} A_b$
