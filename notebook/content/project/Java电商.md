@@ -291,6 +291,9 @@ BUILD SUCCESS 之后 dao 层 pojo 就会出现内容, resources.mapper 也有很
 
 源码的 array 报红, 去掉就行了
 
+重要提示: 只有紧跟在`PageHelper.startPage`方法后的**第一个**Mybatis的查询（Select）方法会被分页。
+
+PageHelper 应当在执行 select 前设置完(如 PageHelper.orderBy())
 ### Spring
 
 [Spring Framework](https://spring.io/projects/spring-framework/) 官方
@@ -722,26 +725,6 @@ private List<Integer> deepSearchChildrenCategory(List<Integer> categoryIdList, I
 ### POJO, BO, VO
 ![[attachments/Pasted image 20240115151041.png]]
 
-### 接口
-前
-![[attachments/Pasted image 20240115151503.png]]
-
-![[attachments/Pasted image 20240115151654.png]]
-后
-![[attachments/Pasted image 20240115151920.png]]
-
-![[attachments/Pasted image 20240115152002.png]]
-
-![[attachments/Pasted image 20240115152029.png]]
-
-![[attachments/Pasted image 20240115152800.png]]
-
-![[attachments/Pasted image 20240115152806.png]]
-
-![[attachments/Pasted image 20240115152828.png]]
-
-![[attachments/Pasted image 20240115152952.png]]
-
 ### 后台新增商品
 - backend.ProductManageController
 - /manage/product
@@ -1053,3 +1036,28 @@ Const
 ![[project/Untitled Diagram.svg]]
 多 category 的处理
 ![[attachments/Pasted image 20240119163226.png]]
+
+### 接口
+前
+![[attachments/Pasted image 20240115151503.png]]
+
+![[attachments/Pasted image 20240115151654.png]]
+后
+![[attachments/Pasted image 20240115151920.png]]
+
+![[attachments/Pasted image 20240115152002.png]]
+
+![[attachments/Pasted image 20240115152029.png]]
+
+![[attachments/Pasted image 20240115152800.png]]
+
+![[attachments/Pasted image 20240115152806.png]]
+
+![[attachments/Pasted image 20240115152828.png]]
+
+![[attachments/Pasted image 20240115152952.png]]
+
+### 商品模块测试
+试着缺少各个参数, 自己添加了很多 @RequestParam
+
+后台的 search 方法挺怪的, 感觉很不实用
