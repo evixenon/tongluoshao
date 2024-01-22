@@ -1039,13 +1039,12 @@ ProductController
 Const
 ![[attachments/Pasted image 20240119160324.png]]
 
+![[attachments/Pasted image 20240119162215.png]]
 
 获取详情基本上可以复用, 要多一个判断是否在售
 
 排序
 - categoryId 为空时, 返回空分页, 不报错
-- 
-![[attachments/Pasted image 20240119162215.png]]
 
 处理约定和 sql 语句的差异
 ![[attachments/Pasted image 20240119162350.png]]
@@ -1053,5 +1052,3 @@ Const
 ![[project/Untitled Diagram.svg]]
 多 category 的处理
 ![[attachments/Pasted image 20240119163226.png]]
-
-![[project/Untitled Diagram 1.svg]]
