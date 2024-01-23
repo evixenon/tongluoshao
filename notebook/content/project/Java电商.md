@@ -774,27 +774,6 @@ static {...} -> {...} -> Constructor
 
 ![[attachments/Pasted image 20240115231239.png]]
 
-#### 关于转 JRS310
-mybatis 默认处理 sql Datetime 类型用的是 java.utils.Date, 但这个类已经是 deprecated, 转为 LocalDate 方法见下
-
-[Java 8 LocalDate mapping with mybatis - Stack Overflow](https://stackoverflow.com/questions/25113579/java-8-localdate-mapping-with-mybatis)
-
-通过 mybatis-generator 的话, 这个办法可行(这时也改了 mybatis + generator 两者的版本号)
-[datetime - SQL Server type to generate Instant in Mybatis Generator - Stack Overflow](https://stackoverflow.com/questions/68574227/sql-server-type-to-generate-instant-in-mybatis-generator)
-
-更好的方法: 
-```
-<javaTypeResolver>
-    <property name="useJSR310Types" value="true"/>
-</javaTypeResolver>
-```
- [MyBatis Generator Core – The &lt;javaTypeResolver&gt; Element](https://mybatis.org/generator/configreference/javaTypeResolver.html)
-
-接下来就是漫长的复原
-
-![[attachments/Pasted image 20240116034213.png]]
-
-[Mybatis报错 Result Maps collection already contains value for 原因汇总-CSDN博客](https://blog.csdn.net/flystarfly/article/details/106195858)
 ### 后台商品 list
 
 page-helper 是用 aop 实现的
@@ -1061,3 +1040,48 @@ Const
 试着缺少各个参数, 自己添加了很多 @RequestParam
 
 后台的 search 方法挺怪的, 感觉很不实用
+
+然后发现 insertselective 是没有加 createTime 的, 又去改
+
+## 改动备忘
+
+#### Mybatis-generator
+```
+<javaTypeResolver>
+    <property name="useJSR310Types" value="true"/>
+</javaTypeResolver>
+```
+
+如果重新生成, 要把之前的 xml 删除. generator 并不考虑已经存在 xml 的 sql 方法, 所以极大可能出现重名方法报错 
+#### xml
+- java.util.Date -> java.time.LocalDateTime
+- create time 和 update time 都用 now()
+- insert selective 的 create time, update time 所有 if 去掉
+- sql update 方法 不改变 create time. update time 的 if 去掉
+```vim
+%s/java.util.Date/java.time.LocalDateTime/g
+%s/#{createTime,jdbcType=TIMESTAMP}/now()/g
+%s/#{updateTime,jdbcType=TIMESTAMP}/now()/g
+```
+:模式下用`<C+r>` + 寄存器粘贴
+#### 关于转 JRS310
+mybatis 默认处理 sql Datetime 类型用的是 java.utils.Date, 但这个类已经是 deprecated, 转为 LocalDate 方法见下
+
+[Java 8 LocalDate mapping with mybatis - Stack Overflow](https://stackoverflow.com/questions/25113579/java-8-localdate-mapping-with-mybatis)
+
+通过 mybatis-generator 的话, 这个办法可行(这时也改了 mybatis + generator 两者的版本号)
+[datetime - SQL Server type to generate Instant in Mybatis Generator - Stack Overflow](https://stackoverflow.com/questions/68574227/sql-server-type-to-generate-instant-in-mybatis-generator)
+
+更好的方法: 
+```
+<javaTypeResolver>
+    <property name="useJSR310Types" value="true"/>
+</javaTypeResolver>
+```
+ [MyBatis Generator Core – The &lt;javaTypeResolver&gt; Element](https://mybatis.org/generator/configreference/javaTypeResolver.html)
+
+接下来就是漫长的修复
+
+![[attachments/Pasted image 20240116034213.png]]
+
+[Mybatis报错 Result Maps collection already contains value for 原因汇总-CSDN博客](https://blog.csdn.net/flystarfly/article/details/106195858)
