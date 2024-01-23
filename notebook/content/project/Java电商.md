@@ -1103,8 +1103,9 @@ public static BigDecimal div(double v1, double v2) {
 除了组装属性, 还需要
 - 判断数量是否超过库存和处理
 
+改进: 应当避免或减少循环中的 sql 操作
+ProductService 里再写一个服务, 可以通过 List(productId) 获得 List(Product)
 #### assembleCartVo
-
 
 ### 接口方法
 #### add
