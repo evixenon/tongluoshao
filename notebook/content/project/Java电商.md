@@ -1104,7 +1104,25 @@ public static BigDecimal div(double v1, double v2) {
 - 判断数量是否超过库存和处理
 
 改进: 应当避免或减少循环中的 sql 操作
-ProductService 里再写一个服务, 可以通过 List(productId) 获得 List(Product)
+[使用Mybatis进行连表查询、left join_mybatis left join-CSDN博客](https://blog.csdn.net/jinzhencs/article/details/51980518)
+
+#todo 没测试呢
+```xml
+<select id="selectByUserId" parameterType="java.lang.Integer" resultMap="CartProductVoMap">
+select
+c.id, c.user_id, c.product_id, c.quantity, p.name, p.subtitle, p.main_image, p.price, p.price*c.quantity, p.stock, p.status, c.checked
+from mmall_cart as c left join mmall_product as p on c.product_id = p.id
+<where>
+  <if test="cartItemIdList != null">
+    and c.id in
+    <foreach collection="cartItemIdList" open="(" separator="," close=")" item="item" index="index" >
+      #{item}
+    </foreach>
+  </if>
+</where>
+</select>
+```
+
 #### assembleCartVo
 
 ### 接口方法
