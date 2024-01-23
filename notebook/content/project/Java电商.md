@@ -1043,9 +1043,77 @@ Const
 
 然后发现 insertselective 是没有加 createTime 的, 又去改
 
-## 改动备忘
+## 购物车模块开发
 
-#### Mybatis-generator
+### 接口
+![[attachments/Pasted image 20240123175132.png]]
+
+![[attachments/Pasted image 20240123175246.png]]
+
+![[attachments/Pasted image 20240123175503.png]]
+
+![[attachments/Pasted image 20240123175651.png]]
+
+### 核心方法, vo, util
+
+#### CartProductVo
+```java
+public class CartProductVo {
+    private Integer id;
+    private Integer userId;
+    private Integer productId;
+    private Integer quantity;
+    private String productName;
+    private String productSubtitle;
+    private String productMainImage;
+    private BigDecimal price;
+    private BigDecimal totalPrice;
+    private Integer stock;
+    private Integer status;
+    private Integer checked;
+    private String limitQuantity; // success: quantity under stock
+}
+```
+
+#### CartVo
+```java
+public class CartVo {
+    private List<CartProductVo> cartProductVoList;
+    private BigDecimal cartTotalPrice;
+    private Boolean allChecked; // 这样前端能知道全选按钮能不能用
+    private String imageHost;
+}
+```
+
+#### BigDecimalUtil
+实现一下 BigDecimalUtil 类的 static 加减乘除方法, 注意除法的舍入问题
+
+```java
+public static BigDecimal div(double v1, double v2) {
+    BigDecimal b1 = new BigDecimal(Double.toString(v1));
+    BigDecimal b2 = new BigDecimal(Double.toString(v2));
+    return b1.divide(b2, 2, RoundingMode.HALF_UP); // 四舍五入
+}
+```
+
+#### Const
+![[attachments/Pasted image 20240123185128.png]]
+
+#### assembleCartProductVo
+除了组装属性, 还需要
+- 判断数量是否超过库存和处理
+
+#### assembleCartVo
+
+
+### 接口方法
+#### add
+![[attachments/Pasted image 20240123181519.png]]
+#### update_count
+
+## 备忘
+
+#### Mybatis-generator 改动
 ```
 <javaTypeResolver>
     <property name="useJSR310Types" value="true"/>
@@ -1053,7 +1121,7 @@ Const
 ```
 
 如果重新生成, 要把之前的 xml 删除. generator 并不考虑已经存在 xml 的 sql 方法, 所以极大可能出现重名方法报错 
-#### xml
+#### xml 改动
 - java.util.Date -> java.time.LocalDateTime
 - create time 和 update time 都用 now()
 - insert selective 的 create time, update time 所有 if 去掉
@@ -1085,3 +1153,10 @@ mybatis 默认处理 sql Datetime 类型用的是 java.utils.Date, 但这个类�
 ![[attachments/Pasted image 20240116034213.png]]
 
 [Mybatis报错 Result Maps collection already contains value for 原因汇总-CSDN博客](https://blog.csdn.net/flystarfly/article/details/106195858)
+
+#### 商业运算中的精度问题
+Java 本身没有专门处理货币的类, 但可以用 BigDecimal 类 处理浮点数的精度问题.
+```java
+BigDecimal b1 = new BigDecimal("0.01"); // 一定要用 String 参数的构造器
+BigDecimal b1 = new BigDecimal(Double.toString(num1));
+```
