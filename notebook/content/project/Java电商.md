@@ -1110,7 +1110,7 @@ public static BigDecimal div(double v1, double v2) {
 ```xml
 <select id="selectByUserId" parameterType="java.lang.Integer" resultMap="CartProductVoMap">
 select
-c.id, c.user_id, c.product_id, c.quantity, p.name, p.subtitle, p.main_image, p.price, p.price*c.quantity, p.stock, p.status, c.checked
+c.id, c.user_id, c.product_id, c.quantity, p.name, p.subtitle, p.main_image, p.price, p.price*c.quantity, p.stock, p.status, c.checked, ""
 from mmall_cart as c left join mmall_product as p on c.product_id = p.id
 <where>
   <if test="cartItemIdList != null">
@@ -1122,8 +1122,6 @@ from mmall_cart as c left join mmall_product as p on c.product_id = p.id
 </where>
 </select>
 ```
-
-#### assembleCartVo
 
 ### 接口方法
 #### add
