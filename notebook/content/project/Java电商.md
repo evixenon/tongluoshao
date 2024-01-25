@@ -1131,6 +1131,26 @@ from mmall_cart as c left join mmall_product as p on c.product_id = p.id
 #### remove
 接口是传 String productIds, 写一个 sql 
 
+#### getCartProductCount
+```xml
+  <select id="selectCartProductCount" parameterType="int" resultType="int">
+    select IFNULL(sum(quantity),0) as count from mmall_cart where user_id = #{userId}
+  </select>
+```
+
+#### select
+```xml
+  <update id="checkedOrUncheckedProduct" parameterType="map">
+    UPDATE  mmall_cart
+    set checked = #{checked},
+    update_time = now()
+    where user_id = #{userId}
+    <if test="productId != null">
+      and product_id = #{productId}
+    </if>
+  </update>
+```
+用这个就可以处理所有单选和全选
 ## 备忘
 
 #### Mybatis-generator 改动
