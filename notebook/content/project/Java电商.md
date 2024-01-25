@@ -1013,7 +1013,7 @@ Const
 ![[attachments/Pasted image 20240119162350.png]]
 
 ![[project/Untitled Diagram.svg]]
-多 category 的处理
+多 category 的处理, foreach 在 xml 的用法
 ![[attachments/Pasted image 20240119163226.png]]
 
 ### 接口
@@ -1124,9 +1124,12 @@ from mmall_cart as c left join mmall_product as p on c.product_id = p.id
 ```
 
 ### 接口方法
-#### add
+#### add, update_count
 ![[attachments/Pasted image 20240123181519.png]]
-#### update_count
+注意一下空判断就好
+
+#### remove
+接口是传 String productIds, 写一个 sql 
 
 ## 备忘
 
