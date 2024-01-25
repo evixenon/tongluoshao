@@ -1104,7 +1104,7 @@ public static BigDecimal div(double v1, double v2) {
 - 判断数量是否超过库存和处理
 
 改进: 应当避免或减少循环中的 sql 操作
-[使用Mybatis进行连表查询、left join_mybatis left join-CSDN博客](https://blog.csdn.net/jinzhencs/article/details/51980518)
+[(29 封私信 / 80 条消息) 什么工具能将html文件的内容由英文翻译成中文？ - 知乎](https://www.zhihu.com/question/296506516/answers/updated)
 
 #todo 没测试呢
 ```xml
@@ -1123,6 +1123,23 @@ from mmall_cart as c left join mmall_product as p on c.product_id = p.id
 </select>
 ```
 
+备份
+```xml
+<constructor>
+<idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+<arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+<arg column="product_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+<arg column="quantity" javaType="java.lang.Integer" jdbcType="INTEGER" />
+<arg column="productName" javaType="java.lang.String" jdbcType="VARCHAR"/>
+<arg column="productSubtitle" javaType="java.lang.String" jdbcType="VARCHAR"/>
+<arg column="productMainImage" javaType="java.lang.String" jdbcType="VARCHAR"/>
+<arg column="price" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+<arg column="totalPrice" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+<arg column="stock" javaType="java.lang.Integer" jdbcType="INTEGER" />
+<arg column="status" javaType="java.lang.Integer" jdbcType="INTEGER" />
+<arg column="checked" javaType="java.lang.Integer" jdbcType="INTEGER" />
+</constructor>
+```
 ### 接口方法
 #### add, update_count
 ![[attachments/Pasted image 20240123181519.png]]
