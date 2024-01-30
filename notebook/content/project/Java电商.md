@@ -1104,14 +1104,15 @@ public static BigDecimal div(double v1, double v2) {
 - 判断数量是否超过库存和处理
 
 改进: 应当避免或减少循环中的 sql 操作
-[(29 封私信 / 80 条消息) 什么工具能将html文件的内容由英文翻译成中文？ - 知乎](https://www.zhihu.com/question/296506516/answers/updated)
 
-#todo 没测试呢
+[Mybatis实现多表联查_mybatis多表联查-CSDN博客](https://blog.csdn.net/qq_36747735/article/details/90044639)
+
+select 方法和 resultMap
 ```xml
-<select id="selectByUserId" parameterType="java.lang.Integer" resultMap="CartProductVoMap">
+<select id="selectCartProductVoByCartItemIds" parameterType="java.util.List" resultMap="CartProductVoMap">
 select
-c.id, c.user_id, c.product_id, c.quantity, p.name, p.subtitle, p.main_image, p.price, p.price*c.quantity, p.stock, p.status, c.checked, ""
-from mmall_cart as c left join mmall_product as p on c.product_id = p.id
+c.id `mmall_cart.id`, user_id, product_id, quantity, name, subtitle, main_image, price, 0 as zero, stock, status, checked, "" as lm
+from mmall_cart c left join mmall_product p on c.product_id = p.id
 <where>
   <if test="cartItemIdList != null">
     and c.id in
@@ -1123,23 +1124,26 @@ from mmall_cart as c left join mmall_product as p on c.product_id = p.id
 </select>
 ```
 
-备份
+注意 association 必须放后面(顺序问题可以通过报错看到), 并且加几个 sel 方法要联查的表
 ```xml
-<constructor>
-<idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-<arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-<arg column="product_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-<arg column="quantity" javaType="java.lang.Integer" jdbcType="INTEGER" />
-<arg column="productName" javaType="java.lang.String" jdbcType="VARCHAR"/>
-<arg column="productSubtitle" javaType="java.lang.String" jdbcType="VARCHAR"/>
-<arg column="productMainImage" javaType="java.lang.String" jdbcType="VARCHAR"/>
-<arg column="price" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
-<arg column="totalPrice" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
-<arg column="stock" javaType="java.lang.Integer" jdbcType="INTEGER" />
-<arg column="status" javaType="java.lang.Integer" jdbcType="INTEGER" />
-<arg column="checked" javaType="java.lang.Integer" jdbcType="INTEGER" />
-</constructor>
+<resultMap id="CartProductVoMap" type="com.mmall.vo.CartProductVo">
+    <id column="mmall_cart.id" property="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    <result column="product_id" property="productId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    <result column="quantity" property="quantity" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    <result column="price" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+    <result column="zero" property="totalPrice" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+    <result column="stock" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    <result column="status" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    <result column="checked" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    <result column="lm" property="limitQuantity" />
+    <association property="productName" javaType="java.lang.String" jdbcType="VARCHAR" select="com.mmall.dao.ProductMapper.selNameById" column="product_id" />
+    <association property="productSubtitle" javaType="java.lang.String" jdbcType="VARCHAR" select="com.mmall.dao.ProductMapper.selSubtitleById" column="product_id" />
+    <association property="productMainImage" javaType="java.lang.String" jdbcType="VARCHAR" select="com.mmall.dao.ProductMapper.selMainImageById" column="product_id" />
+</resultMap>
 ```
+
+vo 对象要 constructor 给各属性赋值
 ### 接口方法
 #### add, update_count
 ![[attachments/Pasted image 20240123181519.png]]
@@ -1167,7 +1171,7 @@ from mmall_cart as c left join mmall_product as p on c.product_id = p.id
     </if>
   </update>
 ```
-用这个就可以处理所有单选和全选
+参考这个就可以处理所有单选和全选
 ## 备忘
 
 #### Mybatis-generator 改动
@@ -1217,3 +1221,8 @@ Java 本身没有专门处理货币的类, 但可以用 BigDecimal 类 处理浮
 BigDecimal b1 = new BigDecimal("0.01"); // 一定要用 String 参数的构造器
 BigDecimal b1 = new BigDecimal(Double.toString(num1));
 ```
+
+#### 多表联查
+[Mybatis实现多表联查_mybatis多表联查-CSDN博客](https://blog.csdn.net/qq_36747735/article/details/90044639)
+
+详细状况见 [[#assembleCartProductVo]]
