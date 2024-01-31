@@ -1172,6 +1172,21 @@ vo 对象要 constructor 给各属性赋值
   </update>
 ```
 参考这个就可以处理所有单选和全选
+
+## 订单模块, 防止横向越权
+
+### 接口
+![[attachments/Pasted image 20240131134024.png]]
+
+### 接口方法
+
+#### add
+![[attachments/Pasted image 20240131135819.png]]
+
+注意对象绑定, 返回值 data 需要 用 Map
+
+#### delete 安全漏洞
+不能直接用自动生成的方法, 要同时判断 userId 和 shippingId
 ## 备忘
 
 #### Mybatis-generator 改动
@@ -1226,3 +1241,10 @@ BigDecimal b1 = new BigDecimal(Double.toString(num1));
 [Mybatis实现多表联查_mybatis多表联查-CSDN博客](https://blog.csdn.net/qq_36747735/article/details/90044639)
 
 详细状况见 [[#assembleCartProductVo]]
+
+
+#### SpringMVC 对象绑定
+
+#### sql insert 语句返回值
+![[attachments/Pasted image 20240131135326.png]]
+![[attachments/Pasted image 20240131135615.png]]
