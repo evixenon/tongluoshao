@@ -6,6 +6,10 @@ date: "2023-06-16"
 - 节省程序员时间的语言, 虽然费CPU时间, 但权衡之下大家通常乐意这个牺牲. 只有在搭建*延迟非常低*的和*资源利用率非常高*的应用时会放弃Python
 - 因为 GIL(global interpreter lock) 机制, 用 Python 构建高并发多线程程序有难度, 尤其是 CPU-bound 的线程. Python C Extensions 可以不受 GIL 影响地执行并行代码
 
+#### 检验第三方库的健康程度
+最简单的办法就是通过 Synk Advisor 打分来评估 Python 库的健康情况：
+https://snyk.io/advisor/python/scoring
+评分在 85 分左右的 Python 库可以一试。评分如果在 95 分上下，说明 Python 库的健康程度很好
 ### Python 进阶
 [[permanent/Python Generator, Iterator]]
 
