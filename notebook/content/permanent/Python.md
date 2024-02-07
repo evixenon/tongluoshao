@@ -24,16 +24,20 @@ https://snyk.io/advisor/python/scoring
 ### Python 进阶
 [[permanent/Python Generator, Iterator]]
 
-
-### 数据分析和绘图
-[[permanent/Python 数据分析|Python 数据分析]]
-
+### 科学计算和数据分析
 [[permanent/python numpy库|python numpy库]]
 
 [[permanent/python pandas库|python pandas库]]
 
+sklearn
+
+### 可视化
+
 [[permanent/python matplotlib库|python matplotlib库]]
 
+[[permanent/python plotly库|python plotly库]]
+
+[[permanent/python seaborn 库|python seaborn 库]]
 ### GUI
 [[permanent/python tkinter库|python tkinter库]]
 
