@@ -29,9 +29,10 @@ https://snyk.io/advisor/python/scoring
 
 [[permanent/python pandas库|python pandas库]]
 
-sklearn
+[[Inbox/python sklearn库|python sklearn库]]
 
 ### 可视化
+[[Inbox/python 数据可视化统览|python 数据可视化统览]]
 
 [[permanent/python matplotlib库|python matplotlib库]]
 

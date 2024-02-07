@@ -4,12 +4,15 @@ date: 2024-02-07
 tags:
 ---
 
-主要使用:
+可视化核心库:
 - [[permanent/python matplotlib库|python matplotlib库]]
 - [[permanent/python plotly库|python plotly库]]
 - [[permanent/python seaborn 库|python seaborn 库]]
-- [[permanent/python pandas库|python pandas库]]
 
+使用:
+- [[permanent/python pandas库|python pandas库]]
+- [[permanent/python numpy库|python numpy库]]
+- [[Inbox/python sklearn库|python sklearn库]]
 #### 数据集的载入
 - seaborn.load_dataset("iris")
 - sklearn.datasets.load_iris()
