@@ -1173,7 +1173,7 @@ vo 对象要 constructor 给各属性赋值
 ```
 参考这个就可以处理所有单选和全选
 
-## 订单模块, 防止横向越权
+## 地址模块开发, 防止横向越权
 
 ### 接口
 ![[attachments/Pasted image 20240131134024.png]]
@@ -1187,6 +1187,24 @@ vo 对象要 constructor 给各属性赋值
 
 #### delete 安全漏洞
 不能直接用自动生成的方法, 要同时判断 userId 和 shippingId
+
+
+## 订单模块开发
+
+### 接口设计
+![[attachments/Pasted image 20240208122034.png]]
+组合索引是为了提高效率
+
+前台
+![[attachments/Pasted image 20240208123835.png]]
+
+![[attachments/Pasted image 20240208124218.png]]
+
+后台
+![[attachments/Pasted image 20240208124452.png]]
+
+
+
 ## 备忘
 
 #### Mybatis-generator 改动
