@@ -25,6 +25,8 @@ https://snyk.io/advisor/python/scoring
 [[permanent/Python Generator, Iterator]]
 
 ### 科学计算和数据分析
+[[Inbox/python sympy 库|python sympy 库]]
+
 [[permanent/python numpy库|python numpy库]]
 
 [[permanent/python pandas库|python pandas库]]
