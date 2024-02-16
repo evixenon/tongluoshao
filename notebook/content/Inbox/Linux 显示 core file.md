@@ -21,11 +21,10 @@ ulimit -c unlimited
 ```
 于是会生成以我们规定的方式命名的 core file
 
-持久化: (最后一个引号是加的, 不加报错, 真的对吗)
+持久化: (最后一个引号是加的, 不加报错, 真的对吗, 注意, 这会把原文件内容全部删除)
 ```bash
 sudo bash -c "cat << EOF > /etc/security/limits.conf
 * soft core unlimited
 * hard core unlimited
 EOF"
 ```
-注意, 这会把原文件内容全部删除
