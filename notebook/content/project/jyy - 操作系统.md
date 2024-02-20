@@ -6,6 +6,9 @@ tags:
 
 ## 绪论
 
+[1. 操作系统概述](https://jyywiki.cn/OS/2023/build/lect1.ipynb.html)
+
+delay lines 延迟线, 1940 时代计算机的存储器
 
 ## 获得的资料和视野
 数字电路课 Verilog
