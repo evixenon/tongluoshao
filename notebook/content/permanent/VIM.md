@@ -12,6 +12,8 @@ tags:
 - [《Practical Vim 2nd Edition》 | 开发者工具论坛](https://learnku.com/docs/practical-vim-2nd-edition)
 
 - gi 快速回到上一次编辑的地方并进入编辑模式
+
+set paste
 ### VIM 设置
 
 [[permanent/VIM 配置|VIM 配置]]

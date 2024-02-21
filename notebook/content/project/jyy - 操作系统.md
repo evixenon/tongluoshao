@@ -18,6 +18,8 @@ delay lines 延迟线, 1940 时代计算机的存储器
 
 [GDB debugging tutorial for beginners - Linux Tutorials - Learn Linux Configuration](https://linuxconfig.org/gdb-debugging-tutorial-for-beginners)
 
+[GDB调试入门指南 - 知乎](https://zhuanlan.zhihu.com/p/74897601)
+
 ![[attachments/Pasted image 20240220231615.png]]
 
 [Harley Hahn's Guide to Unix and Linux](https://www.harley.com/unix-book/book/chapters/home.html)
@@ -26,7 +28,60 @@ delay lines 延迟线, 1940 时代计算机的存储器
 
 [Top (GNU make)](https://www.gnu.org/software/make/manual/html_node/index.html#SEC_Contents)
 
+#### 阅读
+```c
+#include <stdio.h>
+#include <unistd.h>
 
+#define REGS_FOREACH(_)  _(X) _(Y)
+#define OUTS_FOREACH(_)  _(A) _(B) _(C) _(D) _(E) _(F) _(G)
+#define RUN_LOGIC        X1 = !X && Y; \
+                         Y1 = !X && !Y; \
+                         A  = (!X && !Y) || (X && !Y); \
+                         B  = 1; \
+                         C  = (!X && !Y) || (!X && Y); \
+                         D  = (!X && !Y) || (X && !Y); \
+                         E  = (!X && !Y) || (X && !Y); \
+                         F  = (!X && !Y); \
+                         G  = (X && !Y); 
+
+#define DEFINE(X)   static int X, X##1;
+#define UPDATE(X)   X = X##1;
+#define PRINT(X)    printf(#X " = %d; ", X);
+
+int main() {
+  REGS_FOREACH(DEFINE);
+  OUTS_FOREACH(DEFINE);
+  while (1) { // clock
+    RUN_LOGIC;
+    OUTS_FOREACH(PRINT);
+    REGS_FOREACH(UPDATE);
+    putchar('\n');
+    fflush(stdout);
+    sleep(1);
+  }
+}
+```
+
+```
+A = 1; B = 1; C = 1; D = 1; E = 1; F = 1; G = 0;
+A = 0; B = 1; C = 1; D = 0; E = 0; F = 0; G = 0;
+A = 1; B = 1; C = 0; D = 1; E = 1; F = 0; G = 1;
+A = 1; B = 1; C = 1; D = 1; E = 1; F = 1; G = 0;
+A = 0; B = 1; C = 1; D = 0; E = 0; F = 0; G = 0;
+A = 1; B = 1; C = 0; D = 1; E = 1; F = 0; G = 1;
+A = 1; B = 1; C = 1; D = 1; E = 1; F = 1; G = 0;
+A = 0; B = 1; C = 1; D = 0; E = 0; F = 0; G = 0;
+A = 1; B = 1; C = 0; D = 1; E = 1; F = 0; G = 1;
+A = 1; B = 1; C = 1; D = 1; E = 1; F = 1; G = 0;
+A = 0; B = 1; C = 1; D = 0; E = 0; F = 0; G = 0;
+A = 1; B = 1; C = 0; D = 1; E = 1; F = 0; G = 1;
+A = 1; B = 1; C = 1; D = 1; E = 1; F = 1; G = 0;
+A = 0; B = 1; C = 1; D = 0; E = 0; F = 0; G = 0;
+A = 1; B = 1; C = 0; D = 1; E = 1; F = 0; G = 1;
+A = 1; B = 1; C = 1; D = 1; E = 1; F = 1; G = 0;
+...
+```
 
 ## 获得的资料和视野
 
