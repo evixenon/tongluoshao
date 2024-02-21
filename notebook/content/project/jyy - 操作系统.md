@@ -10,7 +10,25 @@ tags:
 
 delay lines 延迟线, 1940 时代计算机的存储器
 
+操作系统没有传说中那么复杂 (程序视角：对象 + API，硬件视角：一个 C 程序)
+
+- 为什么要学操作系统：解锁 “实现一切” 的系统编程能力
+- 什么是操作系统：应用视角 (一组对象 + API)、机器视角 (一个程序)
+- 怎么学操作系统：答案就在代码中
+
+[GDB debugging tutorial for beginners - Linux Tutorials - Learn Linux Configuration](https://linuxconfig.org/gdb-debugging-tutorial-for-beginners)
+
+![[attachments/Pasted image 20240220231615.png]]
+
+
+[Harley Hahn's Guide to Unix and Linux](https://www.harley.com/unix-book/book/chapters/home.html)
+
+
+
 ## 获得的资料和视野
+
+[操作系统：教科书与参考资料](https://jyywiki.cn/OS/OS_References.html)
+
 数字电路课 Verilog
 
 [学习笔记：时序电路基础 - 知乎](https://zhuanlan.zhihu.com/p/150137008)
