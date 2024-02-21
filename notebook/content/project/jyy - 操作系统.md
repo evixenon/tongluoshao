@@ -20,8 +20,11 @@ delay lines 延迟线, 1940 时代计算机的存储器
 
 ![[attachments/Pasted image 20240220231615.png]]
 
-
 [Harley Hahn's Guide to Unix and Linux](https://www.harley.com/unix-book/book/chapters/home.html)
+
+[Linux下的终端神器Tmux的小白教学_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1da4y1p7e1/?spm_id_from=..search-card.all.click&vd_source=92451653bea4ed324c9bfc0287256aa5)
+
+[Top (GNU make)](https://www.gnu.org/software/make/manual/html_node/index.html#SEC_Contents)
 
 
 
