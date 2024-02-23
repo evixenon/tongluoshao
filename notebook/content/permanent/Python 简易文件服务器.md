@@ -11,6 +11,7 @@ python -m http.server
 ```
 http 8000 端口访问
 
+python -m http.server --directory F:\share
 #### pyftplib
 
 ```cmd
