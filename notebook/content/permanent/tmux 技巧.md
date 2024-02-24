@@ -2,6 +2,7 @@
 title: tmux 技巧
 date: 2024-02-21
 tags:
+  - Linux
 ---
 ```tldr
 tmux new -s name

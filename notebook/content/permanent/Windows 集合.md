@@ -1,6 +1,8 @@
 ---
-title: 操作系统技巧
-date: 2023-06-14
+title: Windows 集合
+date: 2024-02-23
+tags:
+  - WIN
 ---
 
 [[permanent/WIN11 右键菜单风格恢复|WIN11 右键菜单风格恢复]]
@@ -21,30 +23,12 @@ date: 2023-06-14
 
 [[permanent/bat 创建防火墙入站规则|bat 创建防火墙入站规则]]
 
+[[permanent/微软是有什么大病砍掉了 Win11 的平板模式开关|微软是有什么大病砍掉了 Win11 的平板模式开关]]
+
 ---
 
 [[permanent/WINTOGO & more|WINTOGO & more]]
 
-
 ---
 
-[[Inbox/Vmware 虚拟机|Vmware 虚拟机]]
-
----
-
-[[permanent/Linux 终端快捷键|Linux 终端快捷键]]
-
-[jyy 的 Linux 入门教程 · GitBook](https://nju-projectn.github.io/ics-pa-gitbook/ics2024/linux.html)
-
-[jyy 的 man入门教程 · GitBook](https://nju-projectn.github.io/ics-pa-gitbook/ics2024/man.html)
-
-
----
-[[permanent/Kali Linux 常用服务|Kali Linux 常用服务]]
-
-[[permanent/Kali Linux 网络设置|Kali Linux 网络设置]]
-
-[[permanent/Kali Linux 系统更新|Kali Linux 系统更新]]
-
----
-[[permanent/Ubuntu|Ubuntu]]
+[[permanent/Vmware 虚拟机|Vmware 虚拟机]]

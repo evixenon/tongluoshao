@@ -5,17 +5,6 @@ tag:
 - Home
 ---
 
-## Tags
-
-[All Tags](tags/)
-
-## 文件夹
-
-[index/](index/)
-
-[permanent/](permanent/)
-
-[project/](project)
 ## Index
 - [[index/1 生活消费|1 生活消费]]
 - [[index/2 工学与应用技术|2 工学与应用技术]]
@@ -25,5 +14,14 @@ tag:
 - [[index/6 语言|6 语言]]
 - [[index/7 哲学与宗教|7 哲学与宗教]]
 - [[index/9 周边纪实|9 周边纪实]]
+## Tags
+
+- [All Tags](tags/)
+
+## 文件夹
+
+- [index/](index/)
+- [permanent/](permanent/)
+- [project/](project)
 
 [[permanent/样式测试|样式测试]]

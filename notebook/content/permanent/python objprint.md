@@ -2,9 +2,10 @@
 title: python objprint
 date: 2024-01-21
 tags:
+  - Python
 ---
 
-优雅地打印任意对象
+优雅地打印任意对象 - 码农高天
 
 [gaogaotiantian/objprint: A library that can print Python objects in human readable format](https://github.com/gaogaotiantian/objprint)
 

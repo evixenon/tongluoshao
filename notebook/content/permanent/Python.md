@@ -25,7 +25,7 @@ https://snyk.io/advisor/python/scoring
 [[permanent/Python Generator, Iterator]]
 
 ### 科学计算和数据分析
-[[Inbox/python sympy 库|python sympy 库]]
+[[permanent/python sympy 库|python sympy 库]]
 
 [[permanent/python numpy库|python numpy库]]
 
@@ -34,7 +34,7 @@ https://snyk.io/advisor/python/scoring
 [[Inbox/python sklearn库|python sklearn库]]
 
 ### 可视化
-[[Inbox/python 数据可视化统览|python 数据可视化统览]]
+[[permanent/python 数据可视化统览|python 数据可视化统览]]
 
 [[permanent/python matplotlib库|python matplotlib库]]
 

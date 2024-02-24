@@ -2,6 +2,7 @@
 title: python 数据可视化统览
 date: 2024-02-07
 tags:
+  - Python
 ---
 
 可视化核心库:
