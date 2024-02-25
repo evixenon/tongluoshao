@@ -28,14 +28,23 @@ tags:
 后面两个参数指的自屏幕左上角像素值参考位置
 
 ## 编辑器
-#### tab
-> set tabstop/softtabstop=4
-> set expandtab
+#### tab, indent
+> set tabstop=4 tab字符长度
+> set softtabstop=4 按下 tab 时的行为
+> set expandtab 表示将 tab 转换为 空格
 
-https://blog.csdn.net/shell_picker/article/details/6033023
+- tabstop：表示一个 tab 字符显示出来是多少个空格，默认 8  
+- softtabstop：在编辑的时候 (比如按退格或 tab 键), 按一次 tab 是多少长度
+    - 不足 tab 的长度会转为空格
+    - 如果设置了 expandtab, 则全转为空格
+- expandtab/noexpandtab：将 tab 扩展/不扩展成空格  
+- shiftwidth：每一级缩进是多少个空格  
+- smarttab：根据文件中其他地方的缩进空格个数来确定一个 tab 是多少个空格
 
-[Vim 修改 Tab 键为 4 个空格 - 知乎](https://zhuanlan.zhihu.com/p/367795051)
-
+```
+:[range]retab [new_tabstop]
+```
+应用新的 tabstop 值，替换所有的 tab，如果设置了expandtab，还会把文件中 tab 都替换成空格。
 
 ## 环境
 #### 备份文件
