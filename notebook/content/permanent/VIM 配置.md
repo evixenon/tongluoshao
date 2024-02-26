@@ -54,5 +54,5 @@ tags:
 备份文件地址, 必须是已经存在的文件夹
 可以用环境变量
 
-## jyy 的快速配置教程
+## 余子濠 的快速配置教程
 [Configuring vim · GitBook](https://nju-projectn.github.io/ics-pa-gitbook/ics2024/0.4.html)
