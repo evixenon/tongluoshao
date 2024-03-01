@@ -28,6 +28,13 @@ delay lines 延迟线, 1940 时代计算机的存储器
 [Top (GNU make)](https://www.gnu.org/software/make/manual/html_node/index.html#SEC_Contents)
 
 [GitHub - jlevy/the-art-of-command-line: Master the command line, in one page](https://github.com/jlevy/the-art-of-command-line)
+
+**Virtualizing CPU** means to turn a single into seemingly many cpus thus allowing many programs seemingly run at the same time.
+
+Each process has its own virtual memory space(address space). OS maps the virtual memory spaces to physical memory spaces.
+
+**DRAM** stores values in a volatile manner.
+
 ## 获得的资料和视野
 
 [操作系统：教科书与参考资料](https://jyywiki.cn/OS/OS_References.html)
