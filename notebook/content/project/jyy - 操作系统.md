@@ -35,6 +35,18 @@ Each process has its own virtual memory space(address space). OS maps the virtua
 
 **DRAM** stores values in a volatile manner.
 
+transitors -> logic gates -> assembly -> C
+
+OS design goals:
+- high performance
+- minimize overheads(time/space/...)
+- protection between apps(isolation)
+- high degree of reliability
+- other: energy-efficiency, security, mobility
+
+trap: a spectial hardware instruction to initiate sys call
+
+
 ## 获得的资料和视野
 
 [操作系统：教科书与参考资料](https://jyywiki.cn/OS/OS_References.html)
