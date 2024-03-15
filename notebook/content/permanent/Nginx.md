@@ -43,6 +43,17 @@ linux 安装后在目录执行 `./configure`
 win 下载后解压缩就能运行 exe
 
 ## 使用
+
+#### 常用配置
+linux
+- 主页是 `/var/www/html/`
+- 主配置文件是 `/etc/nginx/nginx.conf` (好像是?)
+
+
+window
+- 主页是 `./html/`
+- 主配置文件是 `./conf/`
+
 #### 常用命令
 **测试**配置是否正确
 ```
@@ -104,4 +115,6 @@ win 下 路径用 `\`, 路径最后即使是文件夹, 不要再加一个反斜�
 
 win 的报错信息报的是错误的+1行
 
-access_log 这样配 access_log logs\access.log 不出问题. 其他好像会有 create_file() 问题
+access_log 这样配 access_log `logs\access.log` 不出问题. 其他好像会有 create_file() 问题
+
+portable 在安装目录进入 cmd 打开, 不然会有工作目录问题
