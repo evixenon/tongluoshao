@@ -41,6 +41,8 @@ initio
 wordpress + woocommerce (+ Nginx)
 
 [建站教程（四）：基于Nginx部署WordPress - 知乎](https://zhuanlan.zhihu.com/p/37614954)
+
+[使用 Docker 搭建 WordPress 并启用 HTTPS 访问 | Ethan's Blog - 记录和思考](https://ethanblog.com/tips/install-wordpress-and-enable-ssl-with-docker.html#:~:text=%E4%BD%BF%E7%94%A8%20Docker%20%E6%90%AD%E5%BB%BA%20WordPress%20%E5%B9%B6%E5%90%AF%E7%94%A8%20HTTPS%20%E8%AE%BF%E9%97%AE%201,4%204%E3%80%81%E9%85%8D%E7%BD%AE%20nginx%20%E5%B9%B6%E5%BC%80%E5%90%AF%20HTTPS%20%E8%AE%BF%E9%97%AE%20WordPress%20)
 ## 备用资料
 
 - [WordPress 搬家方法总结：迁移主机和更换域名 - 知乎](https://zhuanlan.zhihu.com/p/50803437)
