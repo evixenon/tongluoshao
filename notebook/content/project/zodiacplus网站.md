@@ -54,6 +54,8 @@ location / {
     proxy_set_header Host $host; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_pass http://宿主机ip:8080; 
     }
 ```
+
+[wordpress主题模板开发制作教程_wordpress 模板教程-CSDN博客](https://blog.csdn.net/qq_39339179/article/details/118998401)
 ## 备用资料
 
 - [WordPress 搬家方法总结：迁移主机和更换域名 - 知乎](https://zhuanlan.zhihu.com/p/50803437)
