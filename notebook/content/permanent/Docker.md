@@ -9,9 +9,11 @@ tags:
 ## Intro
 
 #### What is Docker?
-- a platform that automates the deployment, scaling, and management of applications by isolating them into lightweight, portable containers
-#### What is container? Why container?
+- a platform that **automates the deployment, scaling, and management of applications** by isolating them into lightweight, portable containers
+#### What is container? 
 - software environment
+
+#### Why container?
 - bare metal not flexible
 - virtual machines too heavy
 
@@ -29,7 +31,7 @@ tags:
 
 > **Important**
 > To run Windows containers, you need Windows 10 or Windows 11 Professional or Enterprise edition. Windows Home or Education editions only allow you to run Linux containers.
-    
+
 Win 需要先安装和更新 wsl 
 ```powershell
 wsl --install
@@ -38,15 +40,17 @@ wsl --update
 
 ## Underlying Mechanisms
 
-#### cgroup/control grouip
-- a linux kernel feature that allow you to allocate or manage computer resources(CPU, memory, bandwidth, I/O ...)
+#### cgroup/control group
+- a linux kernel feature that allow you to **allocate or manage computer resources**(CPU, memory, bandwidth, I/O ...)
+
 - pros
     - Resources isolation: avoid negative affects (on resources) from other container
     - can mannually limit resources usage
     - monitering
     - can give priority to certain container
+
 #### Namespaces
-- Linux kernel features allows the isolation of system resources
+- Linux kernel features allows the **isolation of system resources**
 - types of namespaces:
     - PID
     - NET(network)
@@ -92,6 +96,8 @@ Popular UnionFS in Docker:
 - `docker container stop <container>`: Stop a running container.
 - `docker container rm <container>`: Remove a stopped container.
 
+PS: docker-compose commands are also important
+
 ### Data Persistence in Docker
 - Containers are *ephemeral* by default, which means any data stored in the container will be lost once it is terminated
 - to store data permanently, there are 3 ways:
@@ -125,6 +131,7 @@ docker volume rm my-volume
 ```
 
 - a volume can be mounted in different containers at the same time
+
 #### Bind Mount
 - Bind mounts allow you to map any directory on the host machine to a directory within the container
 
@@ -209,7 +216,6 @@ docker run -it --rm --name temp-mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -p 3306:
 ```
 
 #### Command Line Utilities
-应该是 当你在一个 docker container 中, 运行一下代码就可以用的
 
 ##### BusyBox
 - provides a large amount of common unix utilities, such as `awk`, `grep`, `vi`, etc
@@ -234,6 +240,7 @@ docker run --rm curlimages/curl https://example.com
 - `wget`: A free utility for non-interactive download of files from the Web.
 - `imagemagick`: A powerful software suite for image manipulation and conversion.
 - `jq`: A lightweight and flexible command-line JSON processor.
+
 ### Building Container Images
 Container image is a executable package including all things to run an application. Including:
 - code
