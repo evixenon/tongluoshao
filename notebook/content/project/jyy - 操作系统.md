@@ -57,7 +57,7 @@ trap: a spectial hardware instruction to initiate sys call
 
 [学习笔记：时序电路基础 - 知乎](https://zhuanlan.zhihu.com/p/150137008)
 
-计算机系统基础(NJU 王慧妍等)
+计算机系统基础(NJU 王慧妍等), imooc 上的 NJU 袁春风课作为理论
 
 [NJUESE|《数字集成电路I》|南京大学电子科学与工程学院大三下集成电路设计与集成系统专业核心课，微电子科学与工程专业选修课 - 知乎](https://zhuanlan.zhihu.com/p/463370754)
 
