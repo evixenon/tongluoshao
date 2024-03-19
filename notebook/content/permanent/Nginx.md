@@ -102,6 +102,15 @@ sudo vim /etx/sysconfig/iptables -A INPUT -p tcp -m state --state NEW -m tcp --d
 指向端口的 http 转发
 ![[attachments/Pasted image 20231208221700.png]]
 
+proxy_pass 如果不是转发给 80,  需要这么写
+```conf
+location / { 
+    proxy_set_header Host $host; 
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
+    proxy_pass http://宿主机ip:8080; 
+    }
+```
+
 指向目录
 ![[attachments/Pasted image 20231208221904.png]]
 
