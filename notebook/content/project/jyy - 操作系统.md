@@ -46,6 +46,9 @@ OS design goals:
 
 trap: a spectial hardware instruction to initiate sys call
 
+[2. 应用视角的操作系统](https://jyywiki.cn/OS/2023/build/lect2.ipynb.html)
+
+gcc -e a.c 可以获得展开宏的代码
 
 ## 获得的资料和视野
 
