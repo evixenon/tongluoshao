@@ -12,9 +12,9 @@ delay lines 延迟线, 1940 时代计算机的存储器
 
 操作系统没有传说中那么复杂 (程序视角：对象 + API，硬件视角：一个 C 程序)
 
-- 为什么要学操作系统：解锁 “实现一切” 的系统编程能力
-- 什么是操作系统：应用视角 (一组对象 + API)、机器视角 (一个程序)
-- 怎么学操作系统：答案就在代码中
+- *为什么*要学操作系统：解锁 “实现一切” 的系统编程能力
+- *什么是*操作系统：应用视角 (一组对象 + API)、机器视角 (一个程序)
+- *怎么学*操作系统：答案就在代码中
 
 [GDB debugging tutorial for beginners - Linux Tutorials - Learn Linux Configuration](https://linuxconfig.org/gdb-debugging-tutorial-for-beginners)
 
