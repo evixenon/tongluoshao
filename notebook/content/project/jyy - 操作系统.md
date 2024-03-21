@@ -16,9 +16,9 @@ delay lines 延迟线, 1940 时代计算机的存储器
 - *什么是*操作系统：应用视角 (一组对象 + API)、机器视角 (一个程序)
 - *怎么学*操作系统：答案就在代码中
 
-[GDB debugging tutorial for beginners - Linux Tutorials - Learn Linux Configuration](https://linuxconfig.org/gdb-debugging-tutorial-for-beginners)
+[gdb debugging tutorial for beginners - linux tutorials - learn linux configuration](https://linuxconfig.org/gdb-debugging-tutorial-for-beginners)
 
-[GDB调试入门指南 - 知乎](https://zhuanlan.zhihu.com/p/74897601)
+[gdb调试入门指南 - 知乎](https://zhuanlan.zhihu.com/p/74897601)
 
 ![[attachments/Pasted image 20240220231615.png]]
 
@@ -49,6 +49,21 @@ trap: a spectial hardware instruction to initiate sys call
 [2. 应用视角的操作系统](https://jyywiki.cn/OS/2023/build/lect2.ipynb.html)
 
 gcc -e a.c 可以获得展开宏的代码
+
+什么是程序
+- 你需要 [Formal Semantics of Programming Languages, Fall 2021](https://cs.nju.edu.cn/hongjin/teaching/semantics/index.htm) by NJU 梁红瑾 <span style="text-decoration:line-through">不, 你不需要</span>
+
+什么是程序(源代码版)
+- 状态机, 状态=堆+栈
+- 函数调用在 C 程序就是创建一个 栈帧(stack frame, 里面包含状态, pc)
+- 函数调用 = push frame(frame.pc = 入口)
+- ![[attachments/Pasted image 20240320224321.png|L|240]]
+- return 则是把新创建的这个栈帧删除 pop frame
+
+什么是程序(二进制版)
+- 还是状态机, 状态=寄存器+内存
+- 程序自身能执行的指令只有计算(的话), 甚至不能退出自己. 所以有一条特殊的 **syscall**, 将 M, R 交给 OS 任其修改
+
 
 ## 获得的资料和视野
 
