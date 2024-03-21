@@ -64,7 +64,7 @@ gcc -e a.c 可以获得展开宏的代码
 - 还是状态机, 状态=寄存器+内存
 - 程序自身能执行的指令只有计算(的话), 甚至不能退出自己. 所以有一条特殊的 **syscall**, 将 M, R 交给 OS 任其修改
 
-
+[C 语言 #、##、__VA_ARGS__ - 知乎](https://zhuanlan.zhihu.com/p/101168748)
 ## 获得的资料和视野
 
 [操作系统：教科书与参考资料](https://jyywiki.cn/OS/OS_References.html)
