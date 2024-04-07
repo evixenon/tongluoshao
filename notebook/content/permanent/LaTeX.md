@@ -14,6 +14,9 @@ $\neg \wedge \vee \ \forall \ \exists$
 $\bowtie$
 $\mathrm{d}$x $\newcommand*{\dif}{\mathop{}\!\mathrm{d}}$x
 
+$\xlongequal{\quad}$
+$\xlongequal[\triangle]{\ce{MnO2}}$
+
 ![[Pasted image 20221219145348.png]]
 
 ![[attachments/Book_1_Ch_03__LaTeX部分.pdf]]
