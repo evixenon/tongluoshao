@@ -95,7 +95,7 @@ location / {
     }
 ```
 
-
+启动方法: 开 mysql, 改 conf.d 里的 本机 ip, 重新 docker-compose up, docker run
 ##### 迁移改动
 - nginx default.conf 的 ip
 - 
