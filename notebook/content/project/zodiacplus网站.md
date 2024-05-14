@@ -32,7 +32,7 @@ initio
 整个请求-响应流程大概是
 - 用户请求发送到服务器 80 -> nginx 容器的 80
 - nginx 将指定域名内容转发到 服务器的 8080 -> wordpress 容器的 80
-- 
+- 启动方法: 开 mysql, 改 conf.d 里的 本机 ip, 重新 docker-compose up, docker run
 
 docker-compose.yml
 ```yml
@@ -95,9 +95,8 @@ location / {
     }
 ```
 
-启动方法: 开 mysql, 改 conf.d 里的 本机 ip, 重新 docker-compose up, docker run
-##### 迁移改动
-- nginx default.conf 的 ip
+##### 迁移时改动
+- nginx default.conf 的 本机的 ip
 - 
 ##### 其他参考
 [建站教程（四）：基于Nginx部署WordPress - 知乎](https://zhuanlan.zhihu.com/p/37614954)
