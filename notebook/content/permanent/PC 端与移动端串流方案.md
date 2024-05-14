@@ -10,10 +10,10 @@ tags:
 sunshine https://github.com/LizardByte/Sunshine
 
 moonlight https://github.com/moonlight-stream/moonlight-android/releases
-码率建议 30-180 mbps
+
+nk971302
 
 sunshine 重置密码
-
 ```
 sunshine -creds username pass
 ```
