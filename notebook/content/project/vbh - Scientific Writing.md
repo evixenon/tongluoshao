@@ -7,7 +7,7 @@ tags:
 
 ![[attachments/Pasted image 20230723143437.png]]
 
-## 1 Introduction
+## 1 Introductary Guide
 - boh science and language competency
 - common structure of scientific method
 	- questiono
