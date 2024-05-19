@@ -70,3 +70,10 @@ difference 差别, 不同之处
 distinction 可以用于区分的点, 尤其用于表示不同于常人的优秀的点
     - be distinct from
 discriminable 可以找出区别的
+
+##### 有丰富的
+be loaded with 
+be full of
+
+##### to be honest
+as a matter of fact
