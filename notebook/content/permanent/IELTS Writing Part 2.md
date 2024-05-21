@@ -96,6 +96,7 @@ P2
 #### Practice
 ![[attachments/Pasted image 20240521142946.png]]
 
+
 ### Collection
 ![[attachments/Pasted image 20240520093304.png]]
 
