@@ -30,6 +30,7 @@ huge
 numerous
 abundant
 tremendous 大量的
+mass
 gigantic 形态庞大
 a () amount of 
 
