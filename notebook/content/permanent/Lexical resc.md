@@ -53,6 +53,7 @@ competitor 参赛选手, 竞争通用
 contender 竞争者, 竞争一个职位
 opponent 竞争者, 反对者
 rival 对手公司, 主要竞争对手, 宿敌/死敌
+adversary 对手
 
 ##### incompatible 无法比较的, 无比的
 unparalleled
@@ -78,3 +79,7 @@ be full of
 
 ##### to be honest
 as a matter of fact
+
+搞砸了
+mess up 
+botch (the surgery)
