@@ -96,10 +96,15 @@ P2
 #### Practice
 ![[attachments/Pasted image 20240521142946.png]]
 
-Some believe that aritificial intelligences will become the most common lecturers in the education area and take the places of traditional teachers. This essay strongly disagrees with this opinion, as AI is not capable to discriminate wrong information in contemporary time. However, there is an alternative to allow AI act as a teaching assistance.
+Some believe that aritificial intelligences will become the most common lecturers in the education area and take the places of traditional teachers. This essay strongly disagrees with this opinion, as AI is not capable to discriminate wrong information in contemporary time. Instead of studying in classrooms, students could attend prerecorded online courses.
 
-Artificial intelligence will not replace the the role of humankind in the classroom since it is not competent. In spite of an incredible learning efficiency, AI also exposes its paucity in telling true and fake resources. Therefore, the information provided by AI is not always proven knowledge or real fact. For example, if you converse with AI and persist to tell it a wrong message, AI will stop argueing with you, apologize and admit your correctness in a few turns of conversation.
+Artificial intelligence will not take over the role of humankind in the classroom since it is not competent. In spite of an incredible learning efficiency, AI also exposes its paucity in identifying true and fake resources. Therefore, the information provided by AI is not always proven knowledge or real fact. For example, if you converse with an AI and persists to tell it a wrong message, AI will stop arguing with you, apologize and admit your correctness in a few turns of conversation.
 
+There is also an alternative to acquire knowledge via online courses. Online courses are nowadays well developed. Most of the famous platforms of online learning are established by credible institutions and the quality of lessons are ensured. These lessons provide not only the lecture videos, but also slides, practices and answers. These education resources are accessible to every students with an internet-connected device. For example, several celebrated universities have their own online courses platforms, including MIT, Stanford and Havard.
+
+In conclusion, AI is not going to replace teachers in classrooms due to its lack of capability. If we need to substitute the tradictional face-to face patterns in teaching, online courses would be a better choice currently. 
+
+![[attachments/Pasted image 20240523130214.png]]
 ### Collection
 ![[attachments/Pasted image 20240520093304.png]]
 

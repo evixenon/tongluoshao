@@ -36,6 +36,28 @@ a () amount of
 
 examples of sth. abound (in ...)
 
+##### 具备能力 can/cannot
+able/capable to
+at the stage/level yet where (it can) ...
+(-)falls short for (English learners) 
+reach the point
+lacking ... skill
+at an effective level
+
+##### 必须
+be absolute necessity
+be absolutely essential
+
+##### 成功 有能力 有大跨越
+make great strides
+advancements in
+progress
+enhancement
+
+##### 正确
+correct
+proper
+
 ### 连接表达
 在文章中适当使用, 更多去追求语言本身的逻辑连接
 in other words
