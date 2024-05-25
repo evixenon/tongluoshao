@@ -16,14 +16,13 @@ basically
 essentially
 fundamentally
 in principle
-in the main
-on the whole
 
 ##### small
 subtle
 tiny
 few
 slightly
+spare
 
 ##### big/many
 huge
@@ -43,26 +42,56 @@ at the stage/level yet where (it can) ...
 reach the point
 lacking ... skill
 at an effective level
+exposes its inability to
 
 ##### 必须
 be absolute necessity
 be absolutely essential
 
-##### 成功 有能力 有大跨越
-make great strides
-advancements in
-progress
-enhancement
-
-##### 正确
-correct
-proper
-
 ### 连接表达
 在文章中适当使用, 更多去追求语言本身的逻辑连接
 in other words
-for example/instance
+for example/instance, namely
 in conclusion
+
+##### 归因, 为什么
+because/because of
+be traced to
+due to
+be attributable to
+stem from
+as it ...
+
+##### 所以
+thus
+therefore
+so that
+consequently
+as a result
+accordingly
+
+##### 造成, 引起, 导致
+lead to
+cause
+induces (a variety of)
+result in
+
+##### 相反
+in contrast
+while ...
+
+##### 有问题
+... get in the way
+be an obstacle
+hamper by/ +n.
+here lies the conundrum
+
+##### 有利于 
+benefits in
+be conducive to
+boost
+foster
+enhance
 
 ### 常见词
 ##### love, like 喜爱热爱
@@ -83,7 +112,6 @@ has no rival
 unequalled
 matchless
 
-
 ##### hard 表示难
 difficult 纯难
 complicate 复杂繁琐
@@ -98,10 +126,41 @@ discriminable 可以找出区别的
 ##### 有丰富的
 be loaded with 
 be full of
+be rich in
 
 ##### to be honest
 as a matter of fact
 
-搞砸了
+##### 搞砸了
 mess up 
 botch (the surgery)
+i goof it
+
+##### 有名的
+famous
+renowned
+famed
+established
+
+##### 现在, 现代
+nowadays
+at the present time
+in contemparory times
+
+##### 被视为
+be considered n.
+be regarded as n.
+be seen as
+
+##### 成功 有能力 有大跨越
+make great strides
+advancements in
+progress
+enhancement
+push the boundary
+innovation
+
+##### 正确
+correct
+proper
+
