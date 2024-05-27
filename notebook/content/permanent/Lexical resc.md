@@ -48,6 +48,13 @@ exposes its inability to
 be absolute necessity
 be absolutely essential
 
+##### 重要性
+it is difficult to overstate the importance of
+
+##### 值得
+rewarding
+worth doing
+
 ### 连接表达
 在文章中适当使用, 更多去追求语言本身的逻辑连接
 in other words
@@ -56,7 +63,7 @@ in conclusion
 
 ##### 归因, 为什么
 because/because of
-be traced to
+can be traced to
 due to
 be attributable to
 stem from
@@ -106,7 +113,7 @@ opponent 竞争者, 反对者
 rival 对手公司, 主要竞争对手, 宿敌/死敌
 adversary 对手
 
-##### incompatible 无法比较的, 无比的
+##### incomparable 无法比较的, 无比的
 unparalleled
 has no rival
 unequalled
