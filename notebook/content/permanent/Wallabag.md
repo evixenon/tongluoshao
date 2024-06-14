@@ -80,3 +80,73 @@ services:
 docker-compose up -d 才有
 
 注册说 465 端口拒绝, 用 firewall-cmd --permanent --add-port 465/tcp --zone=docker
+
+### 2024-06-14 尝试
+根据 [[project/zodiacplus网站|zodiacplus网站]] 里的经验, 反代理改回 https, 加上 http header 的转发, 好像过了?
+
+```conf
+location / { 
+    proxy_set_header Host $host; 
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
+    }
+```
+
+![[attachments/Pasted image 20240614152144.png]]
+
+![[attachments/Pasted image 20240614152319.png|L|300]]
+
+docker-compose.yml
+```docker
+version: '3'
+services:
+  wallabag:
+    image: wallabag/wallabag
+    environment:
+      - MYSQL_ROOT_PASSWORD=wallaroot
+      - SYMFONY__ENV__DATABASE_DRIVER=pdo_mysql
+      - SYMFONY__ENV__DATABASE_HOST=db
+      - SYMFONY__ENV__DATABASE_PORT=3306
+      - SYMFONY__ENV__DATABASE_NAME=wallabag
+      - SYMFONY__ENV__DATABASE_USER=wallabag
+      - SYMFONY__ENV__DATABASE_PASSWORD=wallapass
+      - SYMFONY__ENV__DATABASE_CHARSET=utf8mb4
+      - SYMFONY__ENV__MAILER_HOST=127.0.0.1
+      - SYMFONY__ENV__MAILER_USER=~
+      - SYMFONY__ENV__MAILER_PASSWORD=~
+      - SYMFONY__ENV__FROM_EMAIL=1037635613@qq.com  # 修改成你自己的邮箱
+      - SYMFONY__ENV__DOMAIN_NAME=https://wallabag.tongluoshao.space  # 修改成稍后要反向代理的域名
+      - SYMFONY__ENV__SERVER_NAME="Roy's Wallabag"
+    ports:
+      - 8011:80   # 8080可以修改成其他的自己想用的端口
+    volumes:
+      - /root/data/docker_data/wallabag/images:/var/www/wallabag/web/assets/images  # 将图片映射挂载到本地，这样docker停止了，数据不会丢失
+    healthcheck:
+      test: ["CMD", "wget" ,"--no-verbose", "--tries=1", "--spider", "http://localhost"]
+      interval: 1m
+      timeout: 3s
+    depends_on:
+      - db
+      - redis
+  db:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=wallaroot
+    volumes:
+      - /root/data/docker_data/wallabag/data:/var/lib/mysql  # 将数据映射挂载到本地，这样docker停止了，数据不会丢失
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 20s
+      timeout: 3s
+  redis:
+    image: redis:alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 20s
+      timeout: 3s
+```
+
+注册不行, 但是用 默认管理员账号 wallabag/wallabag 可以使用服务
+
+用管理员账号可以创建其他账号, 但所有和邮箱相关的用不了.
+
+Android 在 Play 商店直接下客户端, 然后运行配置向导可用
