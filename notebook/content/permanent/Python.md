@@ -22,7 +22,9 @@ https://snyk.io/advisor/python/scoring
 
 
 ### Python 进阶
-[[permanent/Python Generator, Iterator]]
+[[permanent/Python Generator, Iterator|Python Generator, Iterator]]
+
+[[]]
 
 
 ### 科学计算和数据分析
