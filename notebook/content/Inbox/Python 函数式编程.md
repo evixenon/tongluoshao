@@ -61,3 +61,39 @@ L = list(filter(is_odd, range(1, 20)))
 
 L = list(filter(lambda x: x % 2 == 1, range(1,20)))
 ```
+
+#### Closure
+- 使用闭包，就是内层函数引用了外层函数的局部变量
+
+- 函数 A 返回了一个函数 B 后，A 内部的局部变量还被函数 B 引用
+
+
+- 返回函数时, 函数不会马上执行, 而是在被调用的时候才会执行
+- 如果包含循环变量, 可能会出现严重的问题
+
+
+```python
+# 错误示范
+def count():
+    fs = []
+    for i in range(1, 4):
+        def f():
+             return i*i
+        fs.append(f)
+    return fs
+
+f1, f2, f3 = count() # 调用三个函数的结果都是 9, 因为 i 在调用的时候是 3
+```
+
+
+- 内层函数**可以读取**外层函数的局部变量的值, 但**通常不能修改**外层函数的局部变量的值
+- 如果要修改, 需要用 `nonlocal` 声明
+```Python
+def createCounter():
+    ctr = 0
+    def counter():
+        nonlocal ctr
+        ctr = ctr + 1
+        return ctr
+    return counter
+```
