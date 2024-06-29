@@ -66,6 +66,8 @@ GIF 考察:
 
 #### [[permanent/Python PIL 库#根据色彩通道数值生成图片(Misc)|PIL 库 根据色彩通道生成图片]]
 
+#### 改变高度
+- 如果用 010 Editor 打开改变了高度宽度的图片, 左下会提示 chunk0 CRC 与期待不符 
 ### 音频隐写
 - 注意 EXIF 信息(这里是标题, 艺术家, 星级 ...)
 - mp3: 
@@ -82,6 +84,31 @@ GIF 考察:
 
 ![[attachments/Pasted image 20240628134314.png|400]]
 
+### 文档隐写
+文档经常只是辅助其他考察, 不会作为主要考察点
+
+Word
+- 隐藏文字(设置)
+- 白底白字
+- 行间距, 字体编码
+- 新版(docx, pptx...) 都可以用 zip 读取, 是 doc+素材+xml
+
+PDF
+- 用编辑模式(比如用图片挡住文字)
+- metadata(工具: pdfinfo)
+- 隐藏内容(屏幕外的内容, 可以藏东西的装饰)
+- 文件头 24 50 44 46
+- 用库, pdf.js, 
+- [Extract Text from a PDF — pypdf 4.3.0 documentation](https://pypdf.readthedocs.io/en/latest/user/extract-text.html)
+
+
+隐写工具: wb4stego4open
+
+### 固件和磁盘镜像
+- 可能作为解题的第一步
+- 多个文件结合的结构
+- 工具: binwalk -e, foremose, dd
+- 磁盘镜像: mount 挂载
 ## 密码学
 - 古典密码: 密码体系的安全性取决于**算法**的保密
 - 现代密码: 密码体系的安全性取决于**密钥**的保密
@@ -94,7 +121,3 @@ GIF 考察:
 Python 现代密码库 pycryptodome
 
 
-
-有火箭 准备好 = 缩
-有火箭 没准备 = 伸
-没火箭 准没准备好 缩

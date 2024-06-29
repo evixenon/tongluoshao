@@ -24,8 +24,9 @@ https://snyk.io/advisor/python/scoring
 ### Python 进阶
 [[permanent/Python Generator, Iterator|Python Generator, Iterator]]
 
-[[]]
+[[permanent/Python 技巧|Python 技巧]]
 
+[[permanent/Python 函数式编程|Python 函数式编程]]
 
 ### 科学计算和数据分析
 [[permanent/python sympy 库|python sympy 库]]
@@ -52,9 +53,11 @@ https://snyk.io/advisor/python/scoring
 
 [[permanent/python json库|python json库]]
 
-[Welcome to PyPDF2 — PyPDF2 documentation](https://pypdf2.readthedocs.io/en/latest/index.html)
+pypdf [Welcome to PyPDF2 — PyPDF2 documentation](https://pypdf2.readthedocs.io/en/3.x/)
 
 [[permanent/python os|python os]]
+
+[[permanent/Python PIL 库|Python PIL 库]]
 
 ### 网页分析
 [[permanent/python bs4库|python bs4库]]
