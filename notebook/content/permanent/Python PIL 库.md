@@ -31,3 +31,22 @@ for l in lines:
 
 img.save("flag.png")
 ```
+
+
+#### 拆分 GIF 并保存
+```Python
+from PIL import Image
+
+file = 'inner.gif'
+
+im = Image.open(file)
+
+try: 
+    im.save('break00.png'.format(im.tell()))
+    while True:
+        curr = im.seek(im.tell()+1)
+        im.save('break{:02}.png'.format(im.tell()))
+except EOFError:
+    pass
+
+```

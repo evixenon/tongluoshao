@@ -58,6 +58,13 @@ GIF 考察:
 - GIF89a / GIF87a
 - 每帧之间的时间间隔
 - 逐帧查看
+
+[[permanent/Python PIL 库#拆分 GIF 并保存|拆分 GIF 并保存]]
+```Python
+curr = im.seek(im.tell()+1)
+im.save('break{:02}.png'.format(im.tell()))
+```
+
 ![[attachments/Pasted image 20240627180301.png]]
 
 #### LSB 隐写
