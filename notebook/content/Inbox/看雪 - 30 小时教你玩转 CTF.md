@@ -109,7 +109,6 @@ PDF
 - 用库, pdf.js, 
 - [Extract Text from a PDF — pypdf 4.3.0 documentation](https://pypdf.readthedocs.io/en/latest/user/extract-text.html)
 
-
 隐写工具: wb4stego4open
 
 ### 固件和磁盘镜像
