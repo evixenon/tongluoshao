@@ -4,6 +4,8 @@ date: 2024-02-21
 tags:
   - Linux
 ---
+[Linux下的终端神器Tmux的小白教学_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1da4y1p7e1/?spm_id_from=..search-card.all.click&vd_source=92451653bea4ed324c9bfc0287256aa5)
+
 ```tldr
 tmux new -s name
 C+b d (dettach)
@@ -11,6 +13,7 @@ tmux ls
 tmux attach -t name
 ```
 ## 快捷键
+
 ```
 Session
 C+b d dettach
@@ -24,6 +27,7 @@ C+b n 切换到下一个窗口
 C+b <number> 切换到指定编号的窗口 
 C+b w 从列表中选择窗口
 C+b , 窗口重命名
+C+b & 关闭窗口
 
 Pane
 C+b % 垂直划分 pane
