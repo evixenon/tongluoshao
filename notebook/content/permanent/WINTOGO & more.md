@@ -67,3 +67,5 @@ edgeless 部分, 虚拟机试运行 edgeless 部分参考[制作U盘中的「战
 - 如果WinNTSetup vhd 不能被选中为引导驱动器 -> 右下角 VHD>> 右键取消
 ### exFAT
 试了一下把上面流程所有 ntfs 改成 exFAT 没有问题.
+
+## edgeless
