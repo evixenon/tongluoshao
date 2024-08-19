@@ -15,5 +15,8 @@ tags:
 VMX86.SYS: begin DriverEntry
 \??\C:\WINDOWS\SysWow64\drivers\SECDRV.SYS
 
+在日志里逮到了一个创建转储文件失败的错误, `\Device\HarddiskVolume3`
+diskpart 找到 volumn 3 叫 RECOVERY, 去 DiskGenus 看, 果然在 OEM 盘上, 下次换了
+
 #### 调教
 色彩文件 [怪不得电脑hdr发灰，win11对hdr色彩的逆天bug，谁说hdr400不能用开了不如不开的？教你电脑hdr正确游玩姿势_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV18C41137pN/?spm_id_from=333.788&vd_source=92451653bea4ed324c9bfc0287256aa5) 略微解决了hdr发灰问题
