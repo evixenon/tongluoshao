@@ -11,7 +11,7 @@ tags:
 
 [[permanent/ＷIN 开机自启动|ＷIN 开机自启动]]
 
-[[permanent/WIN 清理右键菜单|WIN 清理右键菜单]]
+[[permanent/WIN 注册表|WIN 注册表]]
 
 [[permanent/触摸板开关失效事件|触摸板开关失效事件]] & [[permanent/ArmounyCrateService 启动时截图问题|ArmounyCrateService 启动时截图问题]]
 
