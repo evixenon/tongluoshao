@@ -39,13 +39,13 @@ Wireshark 命令行工具 dumpcap, 用来在后台持续捕捉流量, 并存为 
 [How to Filter Traffic // Intro to Wireshark Tutorial // Lesson 5 - YouTube](https://www.youtube.com/watch?v=-HDpYR_QSFw)
 
 Capture Filter
-- pre filter
+- pre-filter
 - capture or not
 - ip, arp, host xxx, port xxx, tcp
 - careful! because tcp package loss might be relied by icmp
 
 Display Filter
-- post filter 
+- post-filter 
 - display or not
 
 #### Display Filter syntax
@@ -55,3 +55,8 @@ Display Filter
 
 - ip.addr == 192.168.178.40
 - tcp.port in {80, 443}
+- frame contains google (case sensitive)
+- frame matches Google (case insensitive)
+- arp
+
+## Name Resolution
