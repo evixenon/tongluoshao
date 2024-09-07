@@ -20,3 +20,11 @@ tags:
 随机名称
 ![[attachments/Pasted image 20240824214940.png]]
 
+### 驱动过保护
+- 工程 unit, DBK32Function 文件, 把 `dbk32.sys` `dbk64.sys` 改成别的名字, 旁边的 service name 也改掉
+- 打开 DBKkernel.sln, 平台选 x64, Debug 改成 Release without sig
+- DBKkernel 的项目属性里, 目标文件名改成刚刚改的
+    - 生成事件-生成后事件, 把命令行的签名删掉
+    - Driver signing, 测试签名关掉或者自己弄个签名
+- DBKkernel.sln, 文件里, Driver Files, DBK64.inf, 把当前文档所有的 dbk64 字符串替换
+- 编译(生成)(出错: Window7 is not supported system)
