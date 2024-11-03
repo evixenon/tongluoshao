@@ -13,7 +13,7 @@ tags:
 使用:
 - [[permanent/python pandas库|python pandas库]]
 - [[permanent/python numpy库|python numpy库]]
-- [[Inbox/python sklearn库|python sklearn库]]
+- [[permanent/python sklearn库|python sklearn库]]
 #### 数据集的载入
 - seaborn.load_dataset("iris")
 - sklearn.datasets.load_iris()

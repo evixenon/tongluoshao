@@ -35,7 +35,7 @@ https://snyk.io/advisor/python/scoring
 
 [[permanent/python pandas库|python pandas库]]
 
-[[Inbox/python sklearn库|python sklearn库]]
+[[permanent/python sklearn库|python sklearn库]]
 
 ### 可视化
 [[permanent/python 数据可视化统览|python 数据可视化统览]]
