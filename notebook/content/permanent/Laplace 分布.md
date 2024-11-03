@@ -32,6 +32,8 @@ $$ P(A) := \frac{|A|}{|\Omega|} = \frac{|A|}{n} $$
 
 ### Kolmogorov 的概率分布公理
 
+> 由此公理开始, 推出概率的其他定理
+
 ##### Axiom
 
 A1) $P(A) \ge 0$, for any $A \subset \Omega$

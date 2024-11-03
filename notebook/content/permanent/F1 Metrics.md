@@ -23,5 +23,5 @@ FN = false positive, 实为 pos, 预测为 neg
 - R(neg) = TN / (TN + FP)
 
 ##### F1-score
-- 是 [[#Precision|Precision]] 和 [[#Recall|Recall]] 的 [[permanent/平均指标#调和平均数|调和平均数]]
-- F1 = 2 * P * R / (P + R)
+- [[#Precision|Precision]] 和 [[#Recall|Recall]] 的 [[permanent/平均指标#调和平均数|调和平均数]]
+$$ F1 = \frac{2PR}{P+R}$$
