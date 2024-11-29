@@ -547,7 +547,14 @@ for piece in chunker:
 ```Python
 DATE_COLUMN = 'date/time'
 
-data = pd.read_csv(DATA_URL, nrows=nrows) lowercase = lambda x: str(x).lower() data.rename(lowercase, axis='columns', inplace=True) data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
+data = pd.read_csv(DATA_URL, nrows=nrows) 
+lowercase = lambda x: str(x).lower() data.rename(lowercase, axis='columns', inplace=True) 
+data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
+```
+
+dayfirst 是指英式日期
+```python
+pd.to_datetime(str, dayfirst=True)
 ```
 ##### 如果是处理不了的分隔符
 ```python
@@ -590,10 +597,3 @@ data.to_csv(sys.stdout, index=False, header=False)
 data.to_csv(sys.stdout, index=False, columns=["a", "b", "c"])
 ```
 
-## 非核心功能
-
-##### 将日期字符串转换成日期
-dayfirst 是指英式日期
-```python
-pd.to_datetime(str, dayfirst=True)
-```
