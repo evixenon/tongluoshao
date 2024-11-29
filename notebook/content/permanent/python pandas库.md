@@ -543,6 +543,12 @@ for piece in chunker:
     pass
 ```
 
+##### 处理日期和大小写
+```Python
+DATE_COLUMN = 'date/time'
+
+data = pd.read_csv(DATA_URL, nrows=nrows) lowercase = lambda x: str(x).lower() data.rename(lowercase, axis='columns', inplace=True) data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
+```
 ##### 如果是处理不了的分隔符
 ```python
 In [57]: !cat examples/ex7.csv
