@@ -95,7 +95,7 @@ df.loc[1]
 frame2["debt"] = np.arange(6.)
 
 del df["year"]
-df.columns
+df.columns # 返回 list(df.Styler)
 
 # 行名和列名
 frame3.index.name = "year"
