@@ -46,3 +46,14 @@ dism++ 可以禁用不要的系统功能
 
 [去掉不用的右键菜单 - 知乎](https://zhuanlan.zhihu.com/p/57176783)
 
+
+#### 在桌面右键菜单添加关闭屏幕
+```reg
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Turn off Monitor]
+"Icon"="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Turn off Monitor\command]
+@="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -WindowStyle Hidden -Command \"(Add-Type '[DllImport(\\\"user32.dll\\\")]public static extern int SendMessage(int hWnd,int hMsg,int wParam,int lParam);' -Name a -Pas)::SendMessage(-1,0x0112,0xF170,2);\""
+```
