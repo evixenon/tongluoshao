@@ -1,6 +1,6 @@
 ---
-title: "断墨寻径"
-date: "2023-06-15"
+title: 断墨寻径 - Yjango
+date: 2023-06-15
 ---
 
 ## Intro

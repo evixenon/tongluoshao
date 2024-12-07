@@ -1,5 +1,5 @@
 ---
-title: Java电商
+title: Java电商 - 慕课网
 date: 2023-12-04
 tags:
   - Java
@@ -600,7 +600,10 @@ TokenCache.removeKey(TokenCache.TOKEN_PREFIX + username);
 ![[attachments/Pasted image 20240111123249.png]]
 
 ### 加盐
-#todo [数据库的存储的密码加了盐，知道被加密后的内容和盐的值，能算出密码是多少吗？ - 知乎](https://www.zhihu.com/question/398702744)
+[数据库的存储的密码加了盐，知道被加密后的内容和盐的值，能算出密码是多少吗？ - 知乎](https://www.zhihu.com/question/398702744)
+以下原因可能导致反推出密码 原理都是暴力破解
+- 使用了固定的盐
+- 盐太简单
 
 mmall.properties 加一条盐值
 

@@ -64,19 +64,21 @@ default-character-set=utf8
 character-set-server=utf8
 ```
 
-中文乱码问题
-#todo 
+##### 中文乱码问题
+5.1 版本:
+- my.ini 中, \[mysql\] 和 \[mysqld\] 写 default-character-set=utf8
 
-![[attachments/Pasted image 20231225224259.png]]
-自启动配置
+5.5 版本:
+- 相比 5.1, \[mysqld\] 改成 character-set-server=utf8
 
-#todo
+##### 自启动配置
+
 ![[attachments/Pasted image 20231225224552.png]]
 
-防火墙
+##### 防火墙
 ![[attachments/Pasted image 20231225224712.png]]
 
-启动
+##### 启动
 ```
 server mysqld start
 ```

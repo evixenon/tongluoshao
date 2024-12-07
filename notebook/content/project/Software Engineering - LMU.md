@@ -1,6 +1,6 @@
 ---
-title: "lmu - Software Engineering"
-date: "2023-06-16"
+title: Software Engineering - LMU
+date: 2023-06-16
 ---
 
 swt

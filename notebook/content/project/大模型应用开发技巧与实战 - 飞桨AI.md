@@ -1,8 +1,8 @@
 ---
-title: "飞桨AI 大模型应用开发技巧与实战"
-date: "2023-06-15"
+title: 大模型应用开发技巧与实战 - 飞桨AI
+date: 2023-06-15
 tags:
-- AI
+  - AI
 ---
 
 src: [飞桨AI Studio - 人工智能学习实训社区](https://aistudio.baidu.com/aistudio/education/group/info/28611)
@@ -215,7 +215,7 @@ Prompt 构造:(推荐顺序)
 
 构造时:
 - 明确给出任务, 最好是任务名字
-- 给出少量的参考案例(想想[[project/断墨寻径|断墨寻径]])
+- 给出少量的参考案例(想想[[project/断墨寻径 - Yjango|断墨寻径 - Yjango]])
 
 调整:
 - 直接对话(你忘记了xxx, 请用xx格式)

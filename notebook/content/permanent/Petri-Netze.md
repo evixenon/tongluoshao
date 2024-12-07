@@ -3,7 +3,7 @@ title: "Petri-Netze"
 date: "2023-06-15"
 ---
 
-属于 [[project/lmu - Betriebsystem|lmu - Betriebsystem]]
+属于 [[project/Betriebsystem - LMU|Betriebsystem - LMU]]
 
 ## Petri-Netze components
 - Petrinetze $$Y = (S,T,F,K,W,M_0)$$

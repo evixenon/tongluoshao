@@ -1,6 +1,6 @@
 ---
-title: "lmu - Database system"
-date: "2023-06-16"
+title: Database system - LMU
+date: 2023-06-16
 ---
 
 dbs
@@ -334,7 +334,7 @@ $\{x_1, \ x_2, \ ... | \psi (x_1,\ x_2\ ...)\}$
 - $x\ \Theta \ y$
 
 ##### Formel
-analog.  [[project/lmu - Database system#Formel|Tupelkalkül Formel]]
+analog.  [[project/Database system - LMU#Formel|Tupelkalkül Formel]]
 
 ![[attachments/Pasted image 20221117092918.png|600]]
 

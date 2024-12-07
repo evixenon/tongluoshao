@@ -1,6 +1,6 @@
 ---
-title: "vbh - Scientific Writing"
-date: "2023-06-16"
+title: " Scientific Writing - vbh"
+date: 2023-06-16
 draft: true
 tags:
 ---

@@ -1,6 +1,6 @@
 ---
-title: "lmu - Syntax of natural language(Germany)"
-date: "2023-06-16"
+title: Syntax of natural language(German)  - LMU
+date: 2023-06-16
 ---
 
 
@@ -97,7 +97,7 @@ Det -> "die" | "den"
 N -> "Katze" | "Hund"
 
 - keine Disambiguierung
-- [[project/lmu - Syntax of natural language(Germany)#Overgeneration|Übergenerierung]]
+- [[project/Syntax of natural language(German)#Overgeneration|Übergenerierung]]
 
 #### Dependenz-Struktur
 - Abhängigkeitsstruktur

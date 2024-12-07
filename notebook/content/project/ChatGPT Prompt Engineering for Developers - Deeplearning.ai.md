@@ -1,5 +1,5 @@
 ---
-title: Deeplearning.ai - ChatGPT Prompt Engineering for Developers
+title: ChatGPT Prompt Engineering for Developers - Deeplearning.ai
 date: 2024-07-12
 tags:
 ---

@@ -29,7 +29,7 @@ syntax analyse 的任务主要是两种
 - Strukturzuweisung 结构分配: 重现找到的语法推导
 
 ### Grammar types in NLTK
-[[project/lmu - Syntax of natural language(Germany)#Grammatikformalismus]]
+[[project/Syntax of natural language(German)#Grammatikformalismus]]
 
 
 > sent = ['I', 'shot', 'an', 'elephant', 'in', 'my', 'pajamas']
@@ -162,7 +162,7 @@ tree.pretty_print()
 #### Constituent Tests
 
 ##### 用 CFG 进行删除测试 
-[[project/lmu - Syntax of natural language(Germany)#Eliminierungstest]]
+[[project/Syntax of natural language(German)#Eliminierungstest]]
 1. 给定原句的 syntaktische 和 lexicalische 规则
 2. 确保原句可以按 [[#用 CFG 生成句子]] 这里这样生成树.
 3. 输入的句子用删除后的句
@@ -404,7 +404,7 @@ for sentence in sentences:
 - ShiftReduceParser
 - EarleyChartParser
 - ViterbiParser
-由于目前很忙所以先空着, 在[[#Syntax Analyse with formal Grammar]] 和 [[project/lmu - Syntax of natural language(Germany)#Parsers]] 的部分内容应该整合到这里
+由于目前很忙所以先空着, 在[[#Syntax Analyse with formal Grammar]] 和 [[project/Syntax of natural language(German)#Parsers]] 的部分内容应该整合到这里
 
 
 PCFG(u12)

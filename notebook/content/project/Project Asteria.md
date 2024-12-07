@@ -58,7 +58,7 @@ date: "2023-06-14"
 - 补课 费曼物理学讲义第一卷
 
 ## 线性代数
-- 建议阅读: [[project/3Blue1Brown - 线性代数的本质|3Blue1Brown - 线性代数的本质]]
+- 建议阅读: [[project/线性代数的本质 - 3B1B|线性代数的本质 - 3B1B]]
 - 矩阵乘法不满足交换律, 但满足结合律
 - **坐标的旋转操作**:
     - 如果用矢量 $\mathbf{P} = \left[ \begin{array}{c} x_p \\ y_p \end{array} \right]$ 表示 $P$ 的坐标,

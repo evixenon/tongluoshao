@@ -1,6 +1,6 @@
 ---
-title: "lmu - Betriebsystem"
-date: "2023-06-15"
+title: Betriebsystem - LMU
+date: 2023-06-15
 ---
 
 ## K1 Das Betribssystem
