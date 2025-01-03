@@ -90,3 +90,75 @@ hatten gemacht
     - 这种关系也能用（介词+）einander表示
 
 - ![[attachments/Pasted image 20250103161429.png|L|400]]
+
+## 三、情态动词
+
+- 情态动词做一般作助动词与动词不定式连用
+
+形式： Modalverb + Inf.
+
+情态动词与动词不定式成框架结构，动词不定式放在句末
+
+- ![[attachments/Pasted image 20250103165201.png|L|300]]
+
+- 情态动词与完成时连用：haben + Inf. + 情态动词不定式
+
+## 四、动词名词化 Nominalstil
+
+- 一般动词变名词用以下几种方式：
+
+1、动词原形即名词，如 das Essen, 这时名词多为中性
+
+2、动词词干作名词，如 der Schlaf, 此时名词多为阳性
+
+3、词干加后缀-ung -sel -nis -tum等，或者加前缀Ge-，这时的词性根据前缀或后    缀判断。
+
+![[attachments/Pasted image 20250103165452.png|L|300]]
+
+- 情态动词名词化改写
+
+|   |   |
+|---|---|
+|dürfen|die Erlaubnis/Genehmigung haben,|
+|können|die Fähigkeit haben,|
+|wollen, mögen|den Wunsch haben,|
+|müssen|die Pflicht haben,|
+|sollen|Rat Empfehlung|
+
+一般不会直接要求改成名词形式，可以用从句，如：
+
+es ist verboten/möglich/erlaubt/nötig/ratsam, dass…
+
+![[attachments/Pasted image 20250103165812.png]]
+
+
+## 五、动词支配格
+
+- 支配第四格的动词
+
+- 大部分及物动词
+- 一部分无人称动词，如es freut mich
+- 大部分带有不可分前缀 be-, ver- zer- 的
+- es gibt 和 haben
+
+- 支配第三格的动词
+
+- 少数宾语是人的动词和支配双宾语（人三物四）的动词
+- ![[attachments/Pasted image 20250103170202.png|L|400]]
+
+- 支配第二格的动词
+
+- 极少：bedürfen需要 gedenken怀念
+
+- 支配第一格的动词
+
+- sein, werden, bleiben
+
+- 支配四格和二格的动词
+- ![[attachments/Pasted image 20250103165848.png]]
+# 六、动词支配介词
+
+太多了，只能靠积累
+
+详见德语语法与解析附录
+![[attachments/Pasted image 20250103165918.png]]![[attachments/Pasted image 20250103165921.png]]
