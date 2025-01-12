@@ -49,7 +49,7 @@ icacls [当前文件夹路径] /grant "Everyone:(w)"
 
 `config/corne.keymap` 后者是布局文件, 可以自行修改. 修改后 push 到 远程仓库, 就会重新 build 固件. 
 
-build 出问题可能是太久了版本问题, 要从第一步开始
+build 出问题可能是太久了版本问题, 要从第一步开始. 也有可能单纯 keymap 有错
 
 ![[attachments/Pasted image 20231004225522.png]]
 
