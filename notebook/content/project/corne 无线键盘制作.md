@@ -49,6 +49,8 @@ icacls [当前文件夹路径] /grant "Everyone:(w)"
 
 `config/corne.keymap` 后者是布局文件, 可以自行修改. 修改后 push 到 远程仓库, 就会重新 build 固件. 
 
+build 出问题可能是太久了版本问题, 要从第一步开始
+
 ![[attachments/Pasted image 20231004225522.png]]
 
 ### 刷固件
@@ -60,6 +62,9 @@ Nologo 的板子连上电脑, 0.5s 内短接两次 `RST` 到 `GND`, 就会进入
 
 ### 先放着
 [浅谈ZMK Firmware：蓝牙双模键盘入门级教程——环境搭建_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1HM4y1E7xB/?spm_id_from=333.788.recommend_more_video.-1&vd_source=92451653bea4ed324c9bfc0287256aa5)
+
+### 改键
+[List of Keycodes | ZMK Firmware](https://zmk.dev/docs/keymaps/list-of-keycodes#keyboard) 键名表
 
 ### 焊接测试
 行:
