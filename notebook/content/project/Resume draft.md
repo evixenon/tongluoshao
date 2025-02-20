@@ -83,7 +83,7 @@ _Munich, Germany | Apr 2019 – Present_
     
     - Containerized a SpringBoot-based product showcase platform using **Docker-compose** and **Nginx**, handling 1k+ concurrent users.
         
-    - Implemented pagination and data persistence with **MySQL** and **MyBatis**, improving query response time by 40%.
+    - Write sql query sentences, implemented pagination and data persistence with **MySQL** and **MyBatis**, improving query response time by 40%.
         
 - **Data Processing Automation**:
      
