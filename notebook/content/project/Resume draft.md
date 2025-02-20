@@ -40,13 +40,86 @@ Nuoheng Luo
 
 nuohengluo@outlook.com | 13268879015 | Dongguan, Guangdong
 
-#### Education
-**Ludwig Maximilliam University of Munich(LMU),** Germany   April 2019 - Now
-B. Sc. in Computer Science + Computer Linguistics   Grade 1.7/1.0
+#### **Education**
 
-#### Work Experience
-**System Developer Intern (Campus)** | LMU, Munich
-- 
+**Ludwig Maximilian University of Munich (LMU)**  
+_Munich, Germany | Apr 2019 – Present_
 
+- **Bachelor of Science in Computer Science** (Major)
+    
+- **Minor in Computational Linguistics**
+    
+- **GPA**: 1.7/1.0 (German grading scale: 1.0 = highest, 5.0 = fail)
+    
+
+---
+
+#### **Work Experience**
+
+**Systems Programming Intern (On-Campus)** | _Ludwig Maximilian University of Munich | Oct 2022 – Jan 2023_
+
+- **Quarto Game Client Development**:
+    
+    - Developed a **Windows Native API-based Quarto game client** with single-player (AI) and multiplayer modes.
+        
+    - Implemented real-time multiplayer functionality using **Socket communication**, enabling synchronized gameplay across clients.
+        
+    - Optimized inter-process communication via **Shared Memory** and **Semaphores**, reducing latency by 30% in concurrent operations.
+        
+    - Designed AI decision-making logic for computer opponents using heuristic algorithms.
+        
+    - Collaborated with a 4-member team using **Git**, achieving 95% code integration efficiency.
+        
+
+**Software Development Intern** | _Zodiac Plus GmbH | Braunschweig, Germany | May 2024 – Aug 2024_
+
+- **Shoe Inventory Automation**:
+    
+    - Built a Python-based OCR pipeline using **PaddleOCR** to extract shoe metadata (SKU, size, color) from images, achieving 98% accuracy.
+        
+    - Automated CSV data entry, reducing manual processing time by 70%.
+        
+- **E-commerce Platform Deployment**:
+    
+    - Containerized a SpringBoot-based product showcase platform using **Docker-compose** and **Nginx**, handling 1k+ concurrent users.
+        
+    - Implemented pagination and data persistence with **MySQL** and **MyBatis**, improving query response time by 40%.
+        
+- **Data Processing Automation**:
+     
+    - Developed **VBA scripts** to clean and transform 100k+ row Excel datasets under strict security constraints.
+        
+
+---
+
+#### **Projects**
+
+**Movie Review Sentiment Analysis Model**
+
+- Engineered a **bidirectional LSTM** model using **Keras** to classify movie reviews as positive/negative with **85% accuracy**.
+    
+- Preprocessed text data via **NLTK** (tokenization, stopword removal, stemming) and converted to embeddings using **Word2Vec**.
+    
+- Optimized training with **Binary Crossentropy loss** and Adam optimizer, reducing validation loss by 22% over baseline models.
+    
+
+**OpenAI-Powered Concept Learning Assistant**
+
+- Developed a multi-turn dialogue AI using **OpenAI API** to explain complex concepts through definitions, examples, and quizzes.
+    
+- Designed structured prompts via **Prompt Engineering** to enforce consistent JSON output formatting.
+    
+- Built an interactive web UI with **Streamlit**, serving 500+ weekly users during beta testing.
+    
+
+---
+
+### **Technical Skills**
+
+- **Proficient**: Python, C, Java, SQL, Git, Docker, Nginx, MyBatis, Windows API
+    
+- **Familiar**: TypeScript, Haskell, VBA, Shell Scripting, C++, C#, SpringBoot, PaddleOCR
+    
+- **Tools**: PyCharm, VS Code, MySQL Workbench, Jira
 
 ---
