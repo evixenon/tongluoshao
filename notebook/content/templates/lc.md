@@ -1,7 +1,9 @@
 ---
 title: "{{title}}"
 date: "{{date}}"
-difficulty: 
-tags: 
+d: 
+t: 
 mastered: false
+note: 
+tags: []
 ---

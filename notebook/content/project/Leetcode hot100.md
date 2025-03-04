@@ -5,6 +5,6 @@ tags:
 ---
 
 ```dataview
-Table difficulty, tag, date, mastered
+Table d, t, date, mastered
 From "lc"
 ```
