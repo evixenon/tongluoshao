@@ -5,5 +5,6 @@ d:
 t: 
 mastered: false
 note: 
-tags: []
+tags:
+  - hot100
 ---
