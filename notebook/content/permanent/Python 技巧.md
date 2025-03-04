@@ -65,6 +65,18 @@ ts()
 | `is not` | 是否不是同一对象 | `a is not b` → `True`  |
 != 调用的是 对象的 `__ne__` 方法
 
+#### 使用 dict.get() 避免 KeyError
+```Python
+# 使用 get 避免 KeyError
+count = word_counts.get(word, 0)
+word_counts[word] = count + 1
+
+# 等效于：
+if word in word_counts:
+    word_counts[word] += 1
+else:
+    word_counts[word] = 1
+```
 ## leetcode py
 
 - 用 if + 比较符代替 max()min()?
