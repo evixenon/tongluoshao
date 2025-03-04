@@ -64,3 +64,7 @@ ts()
 | `!=`     | 值是否不等    | `a != b` → `False`     |
 | `is not` | 是否不是同一对象 | `a is not b` → `True`  |
 != 调用的是 对象的 `__ne__` 方法
+
+## leetcode py
+
+- 用 if + 比较符代替 max()min()?
