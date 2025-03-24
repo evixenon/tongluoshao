@@ -10,5 +10,8 @@ tags:
 Table d, t, date, mastered as fin, note
 From "lc"
 Where contains(file.tags, "hot100") 
-sort date, file asc
+sort date asc
 ```
+
+283, 287, 297, 301, 538, 617, 621, 4, 10, 23, 32, 76, 84, 85, 253*
+
