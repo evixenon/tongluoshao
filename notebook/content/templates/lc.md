@@ -6,5 +6,5 @@ t:
 mastered: false
 note: 
 tags:
-  - hot100
+  - SQL50
 ---

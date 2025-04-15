@@ -15,3 +15,10 @@ sort date asc
 
 4, 10, 23, 32, 76, 84, 85, 297, 301, 253*
 
+#### SQL 50
+```dataview
+Table d, t, date, mastered as fin, note
+From "lc"
+Where contains(file.tags, "SQL50") 
+sort date asc
+```
