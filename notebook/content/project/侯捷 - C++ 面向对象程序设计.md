@@ -200,4 +200,71 @@ Complex 类练习:
 
 ## 考虑一个带指针的类
 
-#### 
+#### 构造函数, 析构函数
+- 带指针类的构造函数: 需要分配空间
+- `new` 关键字会分配一块内存
+- ![[attachments/Pasted image 20250427173503.png]]
+- 析构函数: ~Typename(), 清理空间 
+
+#### 为什么要重写拷贝构造和拷贝赋值函数
+- 如果没有手动写这两个函数, 编译器默认会生成一套浅拷贝版
+- 带指针的类**必须**手动写一版深拷贝的
+
+- 有 String a 和 b, 当我们写 b = a 时, 是希望 b 和 a 有同样的内容
+- 但浅拷贝版会使 b 和 a 指向同一地址(两者一起变化), 且 b 原本指向的内容丢失(memory leak, 内容还在但没有指针指向它)
+- ![[attachments/Pasted image 20250427174419.png]]
+
+#### 深拷贝和浅拷贝
+- 浅拷贝: 见上一节图片下半部分, 虽然是按值拷贝的, 但拷贝的是指针指向地址的值
+- 深拷贝: 先创造新的空间, 再把内容拷贝过去
+
+#### 拷贝构造, 拷贝赋值
+- copy constructor, copy assignment operator
+- 拷贝构造: 参数是自身类引用的构造函数
+- ![[attachments/Pasted image 20250427175011.png]]
+
+
+- 拷贝赋值: 重载=, 参数是自身类引用, 返回类型是自身类引用
+- 两边本来都有东西, 所以要1先清空左值, 2分配和右值一样的空间, 3再复制内容
+- 不检查自我赋值是可能会出错的! 会把自身 delete 掉
+- ![[attachments/Pasted image 20250427175214.png]]
+
+#### output 函数 <<
+- ostream 可以接受 传统的 c 指针
+- ![[attachments/Pasted image 20250427180238.png]]
+
+#### 总结带指针的函数设计
+
+## 堆, 栈, 内存管理
+
+ #### stack 和 heap
+ ![[attachments/Pasted image 20250427180511.png]]
+
+- {} 形成一个作用域, 函数本身及其参数使用的空间也取自 stack
+- new 动态获得的空间来自 heap. 动态获得的内存空间, 就需要程序员自己负责管理
+
+#### stack objects 的生命周期
+- {} 形成一个作用域, 函数本身及其参数使用的空间也取自 stack
+- 离开作用域后, 自动调用析构函数
+- 用 new 创建的对象不属于此类!!
+- ![[attachments/Pasted image 20250427181218.png]]
+
+#### static stack objects 的生命周期
+- 即使离开 scope, static object 依然存在
+- static object 一直存在直到程序结束
+- ![[attachments/Pasted image 20250427181409.png]]
+
+#### global objects 的生命周期
+- 全局对象: 写在任何作用域之外的
+- 作用域实际上相当于整个程序
+- 生命周期直到程序结束
+
+#### heap objects 的生命周期
+- 生命周期直到被 delete
+- ![[attachments/Pasted image 20250427181807.png]]
+
+#### 内存泄漏
+ 指针所指的空间还在, 但指针已经死亡了
+
+#### new
+- `new` = 1分配 memory, 2类型转换, 3调用 constructor
