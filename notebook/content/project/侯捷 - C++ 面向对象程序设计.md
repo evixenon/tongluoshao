@@ -36,7 +36,7 @@ tags:
 - C++ 对象模型
 - STL 源码剖析
 
-## C++ 面向对象简单探索
+## C++ 文件结构, 面向对象初探
 
 #### 为什么出现了面向对象语言
 - 从前, C lang 中,  数据是全局的, 所有函数都可以处理所有数据
@@ -47,7 +47,8 @@ tags:
 - .cpp 代码
 - 标准库
 
-include "" 是当前路径, <>是系统路径
+include "" 是从当前路径开始查找, <>是系统路径.
+查找顺序是
 
 #### 防卫式声明
 
@@ -83,7 +84,14 @@ include "" 是当前路径, <>是系统路径
 - 数据不要 public
 
 
-## 构造函数 Constructor
+## 当一个类的成员不涉及指针
+
+#### 设计一个类的注意事项
+- 数据一定放在 private 
+- 参数/返回值尽可能以 reference(to const) 来传
+- 应加 const 就要加
+- 构造函数尽量用初始化语法
+
 #### 构造函数 constructor
 - 可默认实参
 - 没有返回类型
@@ -105,8 +113,6 @@ include "" 是当前路径, <>是系统路径
 #### private 区的 constructor
 - 什么情况下: 单例模式
 - ![[attachments/Pasted image 20250426180753.png]]
-
-## 语法?
 
 #### const 成员函数
 - 重要却常被忘记: 在不改变数据的函数 要用 const 修饰
@@ -140,8 +146,33 @@ include "" 是当前路径, <>是系统路径
 - 相同 class 的各个 object 互为友元
 - 外部 class 的友元函数实际上打破了封装
 - ![[attachments/Pasted image 20250426183738.png]]
-#### 设计一个类的注意事项
-- 数据一定放在 private 
-- 参数/返回值尽可能以 reference(to const) 来传
-- 应加 const 就要加
-- 构造函数尽量用初始化语法
+#### 操作符重载1, 成员函数
+- operator overloading
+- 作用在左数的, 实现时有用到(隐藏)参数 this 的, 例如 +=
+
+![[attachments/Pasted image 20250426231943.png]]
+
+#### pass by reference 的好处示例
+- 传递者无需知道接收者是以什么形式接收
+- 接收者是 reference, 那么传递者传 value 也行
+![[attachments/Pasted image 20250426233624.png]]
+
+#### global 函数
+- 传类尽量用 reference
+- ![[attachments/Pasted image 20250426234341.png]]
+
+#### 操作符重载2, 非成员函数
+- ![[attachments/Pasted image 20250426234603.png]]
+
+#### 临时对象 与 typename()
+- 上一节的三个函数不能 return by reference, 因为返回值是必定是 local object/临时对象(新的空间)
+- typename() 语法 创建的必定是临时对象
+
+- ![[attachments/Pasted image 20250426235935.png]]
+- 而此处的正号是可以 return by reference 的, 只是标准库没有这么做
+
+#### 操作符重载的设计
+- 用户会怎么使用? 会不会连用?
+- 左值和右值可能是什么类型?
+- 参数的传递要不要 reference?
+- 返回可不可以用 reference?
