@@ -84,7 +84,8 @@ include "" 是从当前路径开始查找, <>是系统路径.
 - 数据不要 public
 
 
-## 基于对象设计: 当一个类的成员不涉及指针
+## OBD: 当一个类的成员不涉及指针
+Object Based Design
 
 #### 构造函数 constructor
 - 可默认实参
@@ -200,7 +201,7 @@ include "" 是从当前路径开始查找, <>是系统路径.
 - + 重载
 - << 重载
 
-## 基于对象设计: 考虑一个带指针的类
+## OBD: 考虑一个带指针的类
 
 #### 构造函数, 析构函数
 - 带指针类的构造函数: 需要分配空间
@@ -339,4 +340,68 @@ https://www.bilibili.com/video/BV1Ef3CekE4k?t=1471.9&p=8
     - 什么意思: 每有一个新 T(如下面的 double, int) , 将原版的 T 全部换成这个新类型, 形成一份新代码
     - 但这种膨胀是必要的
 - ![[attachments/Pasted image 20250427235423.png]]
+
+#### function template
+- 比如比大小函数, 好像所有类型的比大小都一样
+- ![[attachments/Pasted image 20250428103806.png]]
+- C++ 标准库里的算法(如比大小这种)很多都是 function template
+
+#### namespace
+- 避免同名
+- ![[attachments/Pasted image 20250428104135.png]]
+
+#### 更多细节
+- ![[attachments/Pasted image 20250428104343.png]]
+
+## OOD: 组合, 委托与继承
+Object Oriented Design
+
+#### 三种重要关系
+- 继承 Inheritance
+- 组合 Composition
+- 委托 Delegation
+
+#### 组合 Composition, has-a 关系
+- ![[attachments/Pasted image 20250428110057.png]]
+- 这个例子是 Adapter: 改造并开放已有的特定接口
+
+- Compoitiom 模式下, 大小计算层层拆解
+
+#### 组合关系下的构造和析构
+- Container:
+    - 构造从内而外: 先调用 Component 构造, 再调用 Container 构造
+    - 析构从外而内: 先调用 Container 析构, 再调用 Component 析构
+    - 红色部分是编译器会自动帮我们加的,调 默认
+    - 如果不应该调默认, 就要自己写清楚
+    - ![[attachments/Pasted image 20250428111256.png]]
+
+#### 委托 Delegation, Composition by reference
+- 与 Composition 的差异是: 拥有的是**指针**
+- 把任务委托给一个指针对象
+- 因为以指针相连, 所以会出现两者**生命周期不一致**的问题
+
+#### Handle/Body, pImpl
+- ![[attachments/Pasted image 20250428112122.png]]
+- pimpl : pointer to implementation(也叫 Handle/Body 模式)
+    - 左边是对外接口, 右边是实现
+    - 好处
+        - 具体实现可以切换
+        - 可以做引用计数
+    - 修改的时候: copy on write
+        - 比如 a, b, c 共享, 这时候 a 想修改内容, 那就单独给一份副本给 a 改, b和c继续共享
+
+#### 继承 Interitance, is-a 关系
+- 语法是类名后加冒号
+- public 继承 表示 is-a
+- ![[attachments/Pasted image 20250428113112.png]]
+- 父类的数据是可以完整继承的, 子类拥有的是 父类数据+子类数据
+- 继承最大的价值在于和虚函数搭配
+
+#### 继承下的构造和析构
+- Derived:
+    - base 是基础, 所以是内
+    - 构造从内而外: 先调用 Base 构造, 再调用 Derived 构造
+    - 析构从外而内: 先调用 Derived 析构, 再调用 Base 析构
+    - base 类的 析构必须是 virtual
+    - ![[attachments/Pasted image 20250428113637.png]]
 
