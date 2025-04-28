@@ -84,7 +84,7 @@ include "" 是从当前路径开始查找, <>是系统路径.
 - 数据不要 public
 
 
-## 当一个类的成员不涉及指针
+## 基于对象设计: 当一个类的成员不涉及指针
 
 #### 构造函数 constructor
 - 可默认实参
@@ -111,6 +111,7 @@ include "" 是从当前路径开始查找, <>是系统路径.
 #### const 成员函数
 - 重要却常被忘记: 在不改变数据的函数 要用 const 修饰
 - 在这个例子中, 只是取出参数, 所以要加
+- 加在函数名()后面
 - ![[attachments/Pasted image 20250426181053.png]]
 - 不加有什么后果?实例对象为 const 时, 非法(const 和 非 const 冲突)
 - ![[attachments/Pasted image 20250426181748.png]]
@@ -149,7 +150,7 @@ include "" 是从当前路径开始查找, <>是系统路径.
 
 #### pass by reference 的好处示例
 - 传递者无需知道接收者是以什么形式接收
-- 接收者是 reference, 那么传递者传 value 也行
+- 不管接收方是接 reference 还是 value, 传出去是一个对象 
 ![[attachments/Pasted image 20250426233624.png]]
 
 #### global 函数
@@ -172,7 +173,7 @@ include "" 是从当前路径开始查找, <>是系统路径.
 - ![[attachments/Pasted image 20250427154148.png]]
 
 
-#### 总结编程流程
+#### 总结类设计流程
 - 防卫式声明
 - class head
 - private 数据, 以及数据的类型
@@ -180,11 +181,6 @@ include "" 是从当前路径开始查找, <>是系统路径.
 - 这个类需要什么函数? -> 函数设计
 - 函数可以只在 class 中声明, 在外部写成内联
 
-Complex 类练习:
-- 实部, 虚部及封装函数
-- += 重载
-- + 重载
-- << 重载
 #### 设计一个函数的注意事项
 - 参数/返回值尽可能以 reference(to const) 来传
 - 应加 const 就要加
@@ -198,11 +194,18 @@ Complex 类练习:
 - 要返回吗? 返回可不可以用 reference?
 - 成员函数? 全局函数?
 
-## 考虑一个带指针的类
+#### Complex 类练习
+- 实部, 虚部及封装函数
+- += 重载
+- + 重载
+- << 重载
+
+## 基于对象设计: 考虑一个带指针的类
 
 #### 构造函数, 析构函数
 - 带指针类的构造函数: 需要分配空间
 - `new` 关键字会分配一块内存
+- array new 要搭配 array delete
 - ![[attachments/Pasted image 20250427173503.png]]
 - 析构函数: ~Typename(), 清理空间 
 
@@ -234,6 +237,17 @@ Complex 类练习:
 - ![[attachments/Pasted image 20250427180238.png]]
 
 #### 总结带指针的函数设计
+- 首先是 [[#总结类设计流程]], 
+- [[#设计一个函数的注意事项]], [[#操作符重载的设计]]
+- 有指针的类? 通常数据是用指针的, 因为需要动态分配大小, 数组不行
+- 构造函数分配空间, 析构函数释放空间
+- 深拷贝版本的拷贝构造函数和拷贝赋值函数
+
+#### String 类练习
+- 数据
+- 构造函数分配空间, 析构函数释放空间
+- 深拷贝版本的拷贝构造函数和拷贝赋值函数
+- 重构 <<
 
 ## 堆, 栈, 内存管理
 
@@ -266,5 +280,63 @@ Complex 类练习:
 #### 内存泄漏
  指针所指的空间还在, 但指针已经死亡了
 
-#### new
+#### new 的实际行为
 - `new` = 1分配 memory, 2类型转换, 3调用 constructor
+- `operator new` 整体是一个函数, 用来分配内存, 作用类似 `malloc`
+- `static_cast<T*>` 是 C++ 中的类型转换操作
+- ![[attachments/Pasted image 20250427220623.png]]
+
+#### delete 的实际行为
+- `delete` = 1 调用析构函数, 2 释放 memory
+- `operator delete` 调用 `free`
+- ![[attachments/Pasted image 20250427222550.png]]
+
+#### 动态分配到底得到多大的内存(VC)?
+https://www.bilibili.com/video/BV1Ef3CekE4k?t=1471.9&p=8
+
+![[attachments/Pasted image 20250427223606.png]]
+
+
+[为什么 array new 要搭配 array delete](https://www.bilibili.com/video/BV1Ef3CekE4k?t=2225.6&p=8)
+
+![[attachments/Pasted image 20250427224415.png]]
+
+![[attachments/Pasted image 20250427224711.png]]
+
+
+
+## 特性补充: static, 模板, 
+
+#### static 关键字
+- `static` 关键字可以加在 data 或 function 前
+- [[#static stack objects 的生命周期]] 是整个程序运行期间
+- 调用 non-static 函数隐式使用 this
+- ![[attachments/Pasted image 20250427232758.png]]
+- static 的 data 和 function 和 非static 的部分是分开存放的
+- static 数据 应该是整个类公用的数据
+
+- static 函数 没有 this pointer, 也就是不能处理实例, 只能处理 static 数据
+- static 函数 两种方式调用(示例见下):
+    - 通过 object
+    - 通过类名
+
+**例: Account 类**
+![[attachments/Pasted image 20250427233727.png]]
+
+#### 单例模式中的 static
+- static 这个单例 保证只有一个实例
+- static getInstance 方法, 因此可以通过类名取得单例
+- 将单例 放在 函数里面的好处是: 只有函数被调用时才创建单例
+- ![[attachments/Pasted image 20250427234519.png]]
+
+#### cout 是什么, 为什么能接受各种数据?
+- cout 做了很多的重载, 因此可以接收很多类型的数据
+- 是一种 ostream
+- ![[attachments/Pasted image 20250427234922.png]]
+
+#### class template
+- template 会造成代码的膨胀
+    - 什么意思: 每有一个新 T(如下面的 double, int) , 将原版的 T 全部换成这个新类型, 形成一份新代码
+    - 但这种膨胀是必要的
+- ![[attachments/Pasted image 20250427235423.png]]
+
