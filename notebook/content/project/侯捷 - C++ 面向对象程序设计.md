@@ -393,7 +393,8 @@ Object Oriented Design
 #### 继承 Interitance, is-a 关系
 - 语法是类名后加冒号
 - public 继承 表示 is-a
-- ![[attachments/Pasted image 20250428113112.png]]
+- ![[attachments/Pasted image 20250428135643.png]]
+
 - 父类的数据是可以完整继承的, 子类拥有的是 父类数据+子类数据
 - 继承最大的价值在于和虚函数搭配
 
@@ -405,3 +406,25 @@ Object Oriented Design
     - base 类的 析构必须是 virtual
     - ![[attachments/Pasted image 20250428113637.png]]
 
+## OOD: 虚函数与多态
+
+#### 继承和虚函数
+- 在任意成员前面加上 virtual 就可以成为虚函数 
+- non-virtual 函数: 不希望被 derived class override
+- virtual 函数: 希望被 override, 但也有默认定义
+- pure virtual 函数: 必须被 override
+- ![[attachments/Pasted image 20250428140250.png]]
+
+#### Template Method 模板模式, 虚函数指针
+- 子类调用父类函数遇到虚函数
+- ![[attachments/Pasted image 20250428141008.png]]
+- 子类实例 myDoc 调用 父类 CDocument 的 OnFileOpen(), 执行到虚函数时, 前往子类寻找重写的方法
+
+![[attachments/Pasted image 20250428142248.png]]
+
+#### 继承+组合下的构造和析构
+- 谨记从内而外构造, 从外而内析构
+- ![[attachments/Pasted image 20250428142709.png]]
+
+#### Observer 模式 案例, Delegation+Inheritance
+- 数据和视图的关系, 视图是 Observer
