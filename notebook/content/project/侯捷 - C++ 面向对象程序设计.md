@@ -1,6 +1,6 @@
 ---
-title: "侯捷 - C++ 面向对象程序设计"
-date: "2025-04-26"
+title: 侯捷 - C++ 面向对象程序设计
+date: 2025-04-26
 tags:
 ---
 ## C++ Intro
@@ -400,7 +400,7 @@ Object Oriented Design
 
 #### 继承下的构造和析构
 - Derived:
-    - base 是基础, 所以是内
+    - base 会是 Derived 的一部分, 所以是内
     - 构造从内而外: 先调用 Base 构造, 再调用 Derived 构造
     - 析构从外而内: 先调用 Derived 析构, 再调用 Base 析构
     - base 类的 析构必须是 virtual
@@ -426,5 +426,18 @@ Object Oriented Design
 - 谨记从内而外构造, 从外而内析构
 - ![[attachments/Pasted image 20250428142709.png]]
 
-#### Observer 模式 案例, Delegation+Inheritance
+#### Observer 模式, Delegation+Inheritance
 - 数据和视图的关系, 视图是 Observer
+- ![[attachments/Pasted image 20250428160852.png]]
+
+#### Composite 模式, Delegation+Inheritance
+- 文件系统, File=Primitive, Dir=Composite
+- ![[attachments/Pasted image 20250428161610.png]]
+
+#### Prototype 模式, Delegation+Inheritance
+- 原型模式: 子类在未来才被派生
+- 父类容器会收集子类原型, 通过 clone() 创建新的子类实例
+- ![[attachments/Pasted image 20250428164211.png]]
+- ![[attachments/Pasted image 20250428164531.png]]
+- ![[attachments/Pasted image 20250428164839.png]]
+- 私有的构造函数会添加到父类容器, 所以还需要一个重载构造函数(int 其实是无关紧要的)
