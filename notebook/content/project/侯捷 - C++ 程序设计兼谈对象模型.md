@@ -123,3 +123,57 @@ tags:
 - 这种不是, 看底下的例子, int 写死了
 - ![[attachments/Pasted image 20250429142510.png]]
 ## C++ 标准库
+
+![[attachments/Pasted image 20250429151716.png]]
+
+- 标准库重要的东西
+    - 容器
+    - 算法
+    - 高效常用操作
+
+- 你应该知道
+    - 有什么可以用的
+    - 什么时候用
+
+## C++ 11 相关的三个特性
+
+#### C++ 11, 也就是 C++ 2.0
+- 你应该了解什么版本的编译器 支持 C++ 2.0
+
+支持测试: `cout << __cplusplus << endl;`
+- ![[attachments/Pasted image 20250429152435.png]]
+
+#### variadic templates 数量不定的模板参数
+- 语法 `...` pack
+- 一个 递归 print 函数
+- ![[attachments/Pasted image 20250429152844.png]]
+
+#### auto, 自动推定类型
+- 例如迭代器的类型太长了, 不想写
+- 但不能依赖
+- ![[attachments/Pasted image 20250429153516.png]]
+
+#### range-base `for`
+- 左边是 i, 右边是 range
+- 两种写法, by value(不影响原值)/ by reference(影响原值)
+- ![[attachments/Pasted image 20250429153952.png]]
+- 以前: 普通 for, for each 两种
+
+## reference
+
+
+#### 引用, 指针, 变量
+- 引用必须设初值, 而且设了就不能再变了
+- 引用是变量的别名! 对引用操作, 相当于直接操作变量
+- ![[attachments/Pasted image 20250429155243.png]]
+
+#### 效果测试
+- ![[attachments/Pasted image 20250429155634.png]]
+
+#### reference 的用途
+- 很少声明一个 ref 变量, 多半用在参数传递上
+- 传参数进去尽量用 ref
+- 传ref 的函数签名与 传值 相同
+- ![[attachments/Pasted image 20250429160345.png]]
+
+## Object Model
