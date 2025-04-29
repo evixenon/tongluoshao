@@ -79,5 +79,47 @@ tags:
 - 比如测试程序, 测试类很容易冲突
 - ![[attachments/Pasted image 20250428224506.png]]
 
-## Template
+## Template 和 Specialization
 
+#### class template
+- 设计类时, 哪些成员的类型可以不写死以后再决定, 就可以用 class template
+- ![[attachments/Pasted image 20250429131322.png]]
+
+#### function template
+- 同样的操作, 可以在不同类型上使用
+- ![[attachments/Pasted image 20250429131439.png]]
+
+#### member template
+- 成员模板: 本身是模板, 又是另一个模板的成员
+- ![[attachments/Pasted image 20250429131926.png]]
+- 通常这么调用时, T1 T2 与 U1 U2 有继承关系, 为了兼容把子类赋给父类的动作才写成员函数
+- ![[attachments/Pasted image 20250429132514.png]]
+- 如果 U1 不继承 T1, `first(p.first)` 接受到的 U1 就不能放入 T1 中, 调用失败
+
+
+- 另一个例子, 智能指针的 模拟 up-cast
+- ![[attachments/Pasted image 20250429134802.png]]
+
+#### specialization, 模板特化
+- 特化和泛化对应
+- 特化用于某些时候要对特定类做特殊处理
+- 例如 Bresenham 直线算法, 用于快速计算两点之间线段路径上的像素坐标，适用于光栅化直线绘制. 这个算法在参数是整数时特别快
+- ![[attachments/Pasted image 20250429135914.png]]
+
+#### partial specialization, 偏特化
+- 局部特化, 个数的偏 或 范围的偏
+- **个数的偏**, 多于一个的模板参数, 但只绑定其中一部分, 另一部分灵活设置
+- ![[attachments/Pasted image 20250429140552.png]]
+
+- **范围的偏**, 例如任意类型缩小为指针类型
+- ![[attachments/Pasted image 20250429140825.png]]
+
+#### template template parameter, 模板模板参数
+- 在模板的`<>`中, class 和 typename 共通 
+- 用在 模板参数是 容器, 又想指定容器内装的类型时
+- ![[attachments/Pasted image 20250429142149.png]]
+- 更优的写法是用智能指针
+- ![[attachments/Pasted image 20250429142344.png]]
+- 这种不是, 看底下的例子, int 写死了
+- ![[attachments/Pasted image 20250429142510.png]]
+## C++ 标准库
