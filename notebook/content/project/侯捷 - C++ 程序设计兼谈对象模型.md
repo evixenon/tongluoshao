@@ -45,3 +45,39 @@ tags:
 - explicit 一般会用在构造函数的前面
 - ![[attachments/Pasted image 20250428175213.png]]
 
+## pointer-like class, function-like classes
+
+#### pointer-like classes: 智能指针
+- 写成像指针的类
+- 里面一定有一根一般的指针
+- 指针允许的动作(\* 和 ->), 这个 pointer-like class 也要允许
+- 这里先不讨论为什么要这么写, 先讨论语法和实现
+- -> 作用下去得到的结果, -> 还会继续作用下去, 不消耗
+- ![[attachments/Pasted image 20250428215913.png]]
+
+#### pointer-like classes: 迭代器
+- 主要用来遍历容器, 所以要支持更多操作(比如地址++) 
+- `*ite` 应该得到一个被迭代的对象 
+- `ite->method` 应该得到一个被迭代对象的方法
+- ![[attachments/Pasted image 20250428221144.png]]
+- ![[attachments/Pasted image 20250428221229.png]]
+
+#### function-like classes: 仿函数 functor
+- 一个类像一个函数, 主要实现`()`操作符 function call operator
+- 也叫函数对象
+- ![[attachments/Pasted image 20250428223422.png]]
+- 实际上, 这种仿函数会继承某个类
+- 标准库有很多仿函数
+- ![[attachments/Pasted image 20250428223747.png]]
+- ![[attachments/Pasted image 20250428223850.png]]
+- 这俩大小是1
+
+## namespace 经验谈
+
+- 防止名称冲突
+- 用 namespace 把内容包起来是一个好习惯
+- 比如测试程序, 测试类很容易冲突
+- ![[attachments/Pasted image 20250428224506.png]]
+
+## Template
+
