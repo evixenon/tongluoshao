@@ -114,7 +114,7 @@ Object Based Design
 - 在这个例子中, 只是取出参数, 所以要加
 - 加在函数名()后面
 - ![[attachments/Pasted image 20250426181053.png]]
-- 不加有什么后果?实例对象为 const 时, 非法(const 和 非 const 冲突)
+- 不加有什么后果?实例对象为 const 时, 非法(const 和 非 const 冲突) 详参 [[project/侯捷 - C++ 程序设计兼谈对象模型#const 修饰成员函数|const 修饰成员函数]]
 - ![[attachments/Pasted image 20250426181748.png]]
 
 #### 参数传递 pass by value/by reference(to const)
@@ -412,7 +412,7 @@ Object Oriented Design
 - 在任意成员前面加上 virtual 就可以成为虚函数 
 - non-virtual 函数: 不希望被 derived class override
 - virtual 函数: 希望被 override, 但也有默认定义
-- pure virtual 函数: 必须被 override
+- pure virtual 函数: 以 ` = 0` 结尾,必须被 override
 - ![[attachments/Pasted image 20250428140250.png]]
 
 #### Template Method 模板模式, 虚函数指针

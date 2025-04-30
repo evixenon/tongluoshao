@@ -177,3 +177,46 @@ tags:
 - ![[attachments/Pasted image 20250429160345.png]]
 
 ## Object Model
+
+#### vptr 和 vtbl
+- 当一个类有虚函数(无论是一个还是多个), 就会多**一个**虚指针
+- 继承是继承调用权而非内存
+- 通常的 c 的调用是静态绑定(汇编 call + 地址)
+- 通过指针调用虚函数是**动态绑定**, 按照地址路径找到应该调用的函数
+- ![[attachments/Pasted image 20250429182447.png]]
+- ![[attachments/Pasted image 20250429183025.png]]
+- 用法示例: 一个容纳 `A*` 的 List, 想要遍历并 draw 每个形状, 就可以通过 虚函数 draw 实现, 不用判断指向的是哪个类型
+
+#### 关于 this
+- this object, 是调用函数的对象
+- this 指针会隐式传入函数
+- 子类调用父类方法时, 实际上调用,  `this->method()`
+- ![[attachments/Pasted image 20250429184337.png]]
+
+#### 动态绑定的条件
+符合
+- 通过指针调用
+- 指针是 up-cast
+- 调用的是虚函数
+
+绑定成 `(*(p->vptr)[n])(p)`
+
+#### Dynamic Binding
+- ![[attachments/Pasted image 20250429185001.png]]
+- ![[attachments/Pasted image 20250429185041.png]]
+
+
+## 主题: const
+
+#### const 修饰成员函数
+- const 修饰成员函数 所表达的意思是, 我这个函数不打算修改类的数据
+- ![[attachments/Pasted image 20250429185500.png]]
+- 如果成员函数有 const 和 non-const 版本
+    - const object 只能调用 const 版本函数
+    - non-const object 只能调用 non-const 版本函数
+    - 注意有无 const 的函数签名是不同的
+- ![[attachments/Pasted image 20250429190053.png]]
+- 
+
+
+## 主题: new 和 delete
