@@ -213,10 +213,45 @@ tags:
 - ![[attachments/Pasted image 20250429185500.png]]
 - 如果成员函数有 const 和 non-const 版本
     - const object 只能调用 const 版本函数
-    - non-const object 只能调用 non-const 版本函数
+    - non-const object 只会调用 non-const 版本函数
     - 注意有无 const 的函数签名是不同的
 - ![[attachments/Pasted image 20250429190053.png]]
-- 
-
+-  COW: non-const 必须考虑 cow
 
 ## 主题: new 和 delete
+
+#### 复习
+- [[project/侯捷 - C++ 面向对象程序设计#new 的实际行为]]
+- ![[attachments/Pasted image 20250430111001.png]]
+
+#### 如何重载 operator new/delete
+- 全局重载他们影响深远
+- ![[attachments/Pasted image 20250430111339.png]]
+
+#### 重载成员版
+- ![[attachments/Pasted image 20250430111741.png]]
+- ![[attachments/Pasted image 20250430111747.png]]
+
+#### 重载示例
+- 如果有成员函数就会优先调用(除非指定用全局)
+- ![[attachments/Pasted image 20250430112113.png]]
+-  `[]` 中的 size 怎么知道?  内容类型size \* 数组个数 + 4
+    - 多出来这个 4 Bytes 用来记录数组个数
+    - ![[attachments/Pasted image 20250430112529.png]]
+
+
+#### placement operator new
+- 重载的条件
+    - 不和已有的重复
+    - 第一个参数是 `size_t`
+    - 其余参数直接在括号赋初值
+- ![[attachments/Pasted image 20250430113313.png]]
+- ![[attachments/Pasted image 20250430113945.png]]
+
+#### placement operator delete
+- ![[attachments/Pasted image 20250430114446.png]]
+- ![[attachments/Pasted image 20250430114457.png]]
+
+#### 例子: basic_string 使用 new() 扩充申请量
+- 什么时候重载 operator new? 想悄悄地多申请一些东西时
+- ![[attachments/Pasted image 20250430115129.png]]
