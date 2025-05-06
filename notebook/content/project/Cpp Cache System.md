@@ -129,3 +129,32 @@ void safeFunction() {
 - initializeList
 - updateExistingNode
 - addNewNode
+- removeNode 删除指定
+- moveToMostRecent
+- insertNode 添加到尾部(最近使用)
+- removeLeastRecent
+
+## LRU-K
+
+#### LRU-K 算法
+
+k: 现在需要被访问k（大小自定义）次才能被放入缓存中
+
+LRU-k算法有两个队列一个是缓存队列，一个是数据访问历史队列。
+
+当访问一个数据时，首先将其添加进入访问历史队列并进行累加访问次数，当该数据的访问次数超过k次后，才将数据缓存到缓存队列，从而**避免缓存队列被冷数据所污染**。
+
+同时访问历史队列中的数据也不是一直保留的，也是需要按照LRU的规则进行淘汰的。
+
+一般情况下，当k的值越大，缓存的命中率越高，但也使得缓存难以淘汰。综合来说，k = 2 时性能最优。
+
+![image.png](http://127.0.0.1:1886/1733747775068-c066db38-807d-42a7-adf6-18492075db89.png)
+
+#### 拓展
+
+成员
+- k, 多少的访问量准许进入缓存队列
+- historyList_, unique_ptr, 访问数据历史记录
+- historyValueMap, 访问数据
+
+需要重写 get 和 put, 增加对访问历史的处理, 然后调用原方法
