@@ -26,3 +26,27 @@ tags:
 - 高移植性: 在项目a用stl 开发的模块可以直接移植到项目b
 - 跨平台
 
+#### 容器的分类
+
+序列式容器 sequence container
+- 元素位置与插入方式有关
+- vector, deque, list, stack, queue
+
+关联式容器 associated containers
+- 元素位置与插入方式无关, 与特定排序准则有关
+- set, multiset, map, multimap
+
+## vector
+
+## deque
+
+## list
+
+## stack
+
+## queue
+
+## set
+
+## map
+
