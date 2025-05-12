@@ -18,3 +18,5 @@ The **code .** command opened VS Code in the current working folder, which bec
 - `c_cpp_properties.json` (compiler path and IntelliSense settings)
 - `tasks.json` (build instructions)
 - `launch.json` (debugger settings)
+
+还有 task.json 简易教程 
