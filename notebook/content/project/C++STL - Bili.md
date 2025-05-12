@@ -37,6 +37,26 @@ tags:
 - set, multiset, map, multimap
 
 ## vector
+- 动态的数组
+- 尾部添加或移除 O(1), 中部O(n)
+
+#### vector 的构造
+```cpp
+// 默认构造
+vector<T> vecT;
+
+// 从另一个 vector 的区间构造 左闭右开 [beg, end)
+vector<T> vecT(beg, end);
+vector<int> vecT(vecA.begin(), vecA.begin()+3);
+
+// 构造一个 n 个 elem 的数组
+vector<T> vecT(n, elem);
+vector<int> vecT(3, 9); // {9,9,9}
+
+// 拷贝构造
+vector<T> vecT(const vector &vec);
+```
+
 
 ## deque
 
