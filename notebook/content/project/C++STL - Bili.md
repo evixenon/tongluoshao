@@ -112,9 +112,15 @@ vec.pop_back();
 
 ```cpp
 // pos 参数为指针, 比如 vec.begin() + 3
-vec.insert(pos, elem);  // 返回新数据的位置
+it = vec.insert(pos, elem);  // 返回新数据的位置(新的迭代器)
 vec.insert(pos, n, elem); // 无返回
 vec.insert(pos, beg, end); // 无返回
+```
+
+#### vector 的删除(erase)
+```cpp
+it = vec.erase(it);
+vec.erase(beg, end);
 ```
 
 #### vector 迭代器
@@ -133,6 +139,11 @@ vector<int>::iterator it=v.begin(); // 使用容器的 begin()/end()函数, 指�
 for(; it!=v.end(); iter++)  // 使用自增取下一个, end() 是边界, 这也解释了左闭右开
     *it=0;
 ```
+
+#### vector 迭代器失效
+- 插入元素或删除元素后
+- 插入可能导致扩容, 扩容可能会整体搬迁, 所以失效
+
 ## deque
 
 ## list
