@@ -89,6 +89,7 @@ vec.swap(vec2)
 
 ```cpp
 vec.size();
+vec.capacity();
 vec.resize(n, elem=0); // 缩小则删, 扩大则以 elem 填充
 vec.empty(); // 实验结果: 全为0 -> 0, 未赋初值 -> 1
 ```
@@ -119,9 +120,20 @@ vec.insert(pos, beg, end); // 无返回
 
 #### vector 的删除(erase)
 ```cpp
-it = vec.erase(it);
-vec.erase(beg, end);
+// 删除末尾
+vec.pop_back();
+
+// 删除指定位置, 返回下一个位置的迭代器
+it = vec.erase(pos);
+
+// 删除 vector 容器中位于迭代器 [beg,end)指定区域内的所有元素，并返回指向被删除区域下一个位置元素的迭代器
+it = vec.erase(beg, end);
+
+
 ```
+
+删除所有指定元素的正确写法
+![[attachments/Pasted image 20250513191136.png]]
 
 #### vector 迭代器
 
