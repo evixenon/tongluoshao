@@ -43,7 +43,7 @@ tags:
     - 统一对所有容器的访问方式: 无论什么容器, 都能用迭代器自增进行访问
 
 ## vector
-- 动态的数组
+- 原理是动态的数组
 - 尾部添加或移除 O(1), 中部O(n)
 
 #### vector 的构造
@@ -158,11 +158,105 @@ for(; it!=v.end(); iter++)  // 使用自增取下一个, end() 是边界, 这也
 
 ## deque
 
+- 双端队列
+- 原理是动态数组
+- 相比于 vector 多了一端, 其他很像
+- 头尾操作快O(1), 中间操作慢O(n)
+
+```cpp
+deq.push_front(elem); //在头部插入一个
+deq.pop_front(); // 删除第一个
+```
 ## list
 
+- 原理是双向链表
+- 查找O(n)
+- 插入或删除可以 O(n)
+- 不支持 at() 或 下标访问
+- 可以 it++,  不能 it+5
+
+#### list 构造
+```cpp
+list<int> lst;
+
+list<int> lst(n, elem);
+list<int> lst(beg, end);  // 闭区间!! 注意不能地址+n
+lst(const list& lst); // 拷贝构造
+```
+
+#### list 赋值
+```cpp
+lst.assign(beg, end); //左闭右开
+lst.assign(n, elem);
+list& operator= (const list& lst);
+lst1.swap(lst2);
+```
+
+#### list 头尾操作
+```cpp
+lst.push_back();
+lst.pop_back();
+lst.push_front();
+lst.pop_front();
+
+lst.front() = 1; // 修改第一个节点
+a = lst.back(); // 也可以直接读取
+```
+
+#### list 的反向迭代器
+
+```cpp
+// 四种迭代器
+begin(), end(), rbegin(), rend()
+```
+
+反向迭代的用法
+![[attachments/Pasted image 20250513203405.png]]
+
+#### list 结构操作
+```cpp
+lst.reverse(); // 得到一个反的
+```
+其他跟 vector 一样
+
+#### list 插入和删除
+
+insert 一个元素, 会在插入后返回位置指针
+
+![[attachments/Pasted image 20250513204219.png]]
+
+erase 会返回下一个位置, 毕竟原位置是野指针了
+
+![[attachments/Pasted image 20250513204311.png]]
+
+#### list 迭代器注意
+it++, 其实是双链的 next 实现的, 因此 erase 之后无法使用 it++
 ## stack
 
+```cpp
+st.push(elem);
+st.pop(); 
+
+st.top(); // 返回栈顶元素
+st.empty();
+st.size();
+
+stack(const stack& st);
+stack& operator= (const stack& st);
+```
 ## queue
+- FIFO 队列
+
+```cpp
+que.push(elem); // 从队尾入队
+que.pop(); // 从队首出队
+
+que.front();
+que.back();
+
+que.empty();
+que.size();
+```
 
 ## set
 
