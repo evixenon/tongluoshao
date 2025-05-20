@@ -155,15 +155,7 @@ c5f4f3d Revert "3rd change"
 2. 如果在 dev 开发中(半成品代码), 然后需要切回 master 改bug, 那就可以用 `git stash`/`git stash pop`
 
 ### 工作流程
-
-#### Workflow
-[[permanent/Gitflow Workflow|Gitflow Workflow]]
-
-[[permanent/Gitlab Workflow|Gitlab Workflow]]
-
-[[permanent/Feature Branch Workflow|Feature Branch Workflow]]
-
-[[permanent/Trunk-based Workflow|Trunk-based Workflow]]
+[[permanent/Git 工作流|Git 工作流]]
 
 #### ssh 密钥生成
 ```bash

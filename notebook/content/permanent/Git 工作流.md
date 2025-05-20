@@ -1,22 +1,23 @@
 ---
-title: "Gitflow Workflow"
-date: "2023-06-16"
+title: "Git 工作流"
+date: "2025-05-21"
 tags:
-- Git
 ---
 
-是 Git 的一种工作流.
+## Gitflow workflow
 - git branching model
 - 现在受欢迎程度下降, 取而代之的是 [[permanent/Trunk-based Workflow|Trunk-based Workflow]]
 - 更多分支, 分支的生命周期更长, 更大的 commit
 
 src: [Gitflow Workflow|Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
-### Gitflow
 - 为每一个 feature 创建分支, 直到 feature 完成才将分支合并到主干(导致容易偏离)
 - 有独立的分支来管理 releases
 - 也有 [[permanent/Feature Branch Workflow#Benifits|Feature Branch Workflow 的好处]]
 
+#### 速通
+1. 接手一个项目
+    1. git clone
 
 #### Get started
 
@@ -131,3 +132,10 @@ git flow release finish hotfix_branch
 ### Example
 ![[attachments/Pasted image 20221212230143.png|500]]
 
+[[permanent/Gitflow Workflow|Gitflow Workflow]]
+
+[[permanent/Gitlab Workflow|Gitlab Workflow]]
+
+[[permanent/Feature Branch Workflow|Feature Branch Workflow]]
+
+[[permanent/Trunk-based Workflow|Trunk-based Workflow]]
