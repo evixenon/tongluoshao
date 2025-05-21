@@ -2,6 +2,7 @@
 title: 侯捷 - C++ 面向对象程序设计
 date: 2025-04-26
 tags:
+  - cpp
 ---
 ## 上: 面向对象程序设计
 ## C++ Intro
@@ -79,6 +80,8 @@ include "" 是从当前路径开始查找, <>是系统路径.
 - 比较快
 - 函数若太复杂, 编译器无法让函数 inline
 - `inline`关键字: 在 class body 外 定义内联函数
+- **允许重复定义**：在多个翻译单元（`.cpp` 文件）中允许存在相同函数的定义（通常用于**头文件中的函数定义**，避免链接错误）。
+- 头文件中建议加 `inline`, 如果函数只在 单个 .cpp 中使用则不需要加(也无优化影响)
 
 #### access level
 - public, private, protected
@@ -115,7 +118,7 @@ Object Based Design
 - 在这个例子中, 只是取出参数, 所以要加
 - 加在函数名()后面
 - ![[attachments/Pasted image 20250426181053.png]]
-- 不加有什么后果?实例对象为 const 时, 非法(const 和 非 const 冲突) 详参 [[project/侯捷 - C++ 程序设计兼谈对象模型#const 修饰成员函数|const 修饰成员函数]]
+- 不加有什么后果?实例对象为 const 时, 非法(const 和 非 const 冲突) 详参 [[#const 修饰成员函数]]
 - ![[attachments/Pasted image 20250426181748.png]]
 
 #### 参数传递 pass by value/by reference(to const)
@@ -198,9 +201,9 @@ Object Based Design
 
 #### Complex 类练习
 - 实部, 虚部及封装函数
-- += 重载
-- + 重载
-- << 重载
+- += 重载(成员函数)
+- + 重载(非成员函数)
+- << 重载(连用的设计)
 
 ## OBD: 考虑一个带指针的类
 
@@ -228,7 +231,6 @@ Object Based Design
 - 拷贝构造: 参数是自身类引用的构造函数
 - ![[attachments/Pasted image 20250427175011.png]]
 
-
 - 拷贝赋值: 重载=, 参数是自身类引用, 返回类型是自身类引用
 - 两边本来都有东西, 所以要1先清空左值, 2分配和右值一样的空间, 3再复制内容
 - 不检查自我赋值是可能会出错的! 会把自身 delete 掉
@@ -246,7 +248,7 @@ Object Based Design
 - 深拷贝版本的拷贝构造函数和拷贝赋值函数
 
 #### String 类练习
-- 数据
+- 数据使用的是指针
 - 构造函数分配空间, 析构函数释放空间
 - 深拷贝版本的拷贝构造函数和拷贝赋值函数
 - 重构 <<
@@ -366,7 +368,7 @@ Object Oriented Design
 - ![[attachments/Pasted image 20250428110057.png]]
 - 这个例子是 Adapter: 改造并开放已有的特定接口
 
-- Compoitiom 模式下, 大小计算层层拆解
+- Compoitiom 模式下, 占用空间大小计算层层拆解
 
 #### 组合关系下的构造和析构
 - Container:
@@ -651,7 +653,7 @@ Object Oriented Design
 #### const 修饰成员函数
 - const 修饰成员函数 所表达的意思是, 我这个函数不打算修改类的数据
 - ![[attachments/Pasted image 20250429185500.png]]
-- 如果成员函数有 const 和 non-const 版本
+- 如果成员函数有 const 和 non-const 两个版本
     - const object 只能调用 const 版本函数
     - non-const object 只会调用 non-const 版本函数
     - 注意有无 const 的函数签名是不同的
