@@ -5,7 +5,7 @@ tags:
   - Linux
 ---
 
-[[permanent/Linux 终端快捷键|Linux 终端快捷键]]
+[[Linux 系统]]
 
 [[permanent/GNU_Linux 软件|GNU_Linux 软件]]
 
