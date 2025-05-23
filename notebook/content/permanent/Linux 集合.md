@@ -5,7 +5,7 @@ tags:
   - Linux
 ---
 
-[[Linux 系统]]
+[[permanent/Linux 系统]]
 
 [[permanent/GNU_Linux 软件|GNU_Linux 软件]]
 
