@@ -8,14 +8,14 @@ tags:
 
 [1. 操作系统概述](https://jyywiki.cn/OS/2023/build/lect1.ipynb.html)
 
-#### 操作系统三问
+[Yanyan's Wiki](https://jyywiki.cn/OS/2025/lect1.md)
 
-delay lines 延迟线, 1940 时代计算机的存储器
+#### 操作系统三问
 
 操作系统没有传说中那么复杂 (程序视角：对象 + API，硬件视角：一个 C 程序)
 
 - *为什么*要学操作系统：解锁 “实现一切” 的系统编程能力
-- *什么是*操作系统：应用视角 (一组对象 + API)、机器视角 (一个程序)
+- *什么是*操作系统：应用视角 (一组对象 + API)、机器视角 (一个程序), 软件和硬件的中间层
 - *怎么学*操作系统：答案就在代码中
 
 - *为什么需要*操作系统: 更好更快地服务更多应用
@@ -39,9 +39,9 @@ delay lines 延迟线, 1940 时代计算机的存储器
 [[permanent/命令行指南#常用命令行工具|命令行指南#常用命令行工具]]
 
 
-#### 熟悉 Unix 和 Linux
-
-[Harley Hahn's Guide to Unix and Linux](https://www.harley.com/unix-book/book/chapters/home.html)
+#### 阅读材料
+教科书: [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/) 1,2章
+延伸阅读: [Harley Hahn's Guide to Unix and Linux](https://www.harley.com/unix-book/book/chapters/home.html)
 
 [Top (GNU make)](https://www.gnu.org/software/make/manual/html_node/index.html#SEC_Contents)
 
@@ -56,6 +56,14 @@ delay lines 延迟线, 1940 时代计算机的存储器
  - GPT4级别可能是人类历史的转折点: 幻觉抑制非常好(尤其是常识问题), 所以可以左脚踩右脚, 把大问题分成小步骤, 每个步骤都可以用幻觉足够小的模型验证(R1就是这么来的)
  - 相信你的AI在考虑问题的时候直觉相当于专业人士 -> 适当地引导 AI, 获得一切能力
 
+#### 历史
+把时间花在再敲一遍课件上有的东西是值得的吗
+
+#### 做一个有梦想的 CS 人
+- 掌握 big pictur, 根据自己的理解补充细节, 不要沉浸在犄角旮旯
+- 代码是你手中的剑, 在大语言模型的帮助下的我们什么都不怕
+- 出 bug 的时候机器总是对的
+- 还有更好的做法吗? 觉得麻烦想改变但没有头绪可以问问 ai
 
 #### other notes
 
