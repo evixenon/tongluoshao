@@ -5,7 +5,6 @@ tags:
 - 工具使用
 - Git
 ---
-jibf
 ### Git 概念
 
 ##### HEAD
