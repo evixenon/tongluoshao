@@ -18,6 +18,7 @@ delay lines 延迟线, 1940 时代计算机的存储器
 - *什么是*操作系统：应用视角 (一组对象 + API)、机器视角 (一个程序)
 - *怎么学*操作系统：答案就在代码中
 
+- *为什么需要*操作系统: 更好更快地服务更多应用
 #### 熟悉 gdb
 
 [gdb debugging tutorial for beginners - linux tutorials - learn linux configuration](https://linuxconfig.org/gdb-debugging-tutorial-for-beginners)
@@ -45,6 +46,16 @@ delay lines 延迟线, 1940 时代计算机的存储器
 [Top (GNU make)](https://www.gnu.org/software/make/manual/html_node/index.html#SEC_Contents)
 
 [GitHub - jlevy/the-art-of-command-line: Master the command line, in one page](https://github.com/jlevy/the-art-of-command-line)
+
+
+#### AI 时代的操作系统 2025
+
+ - AI 会导致人的生产力断崖式的差距
+ - 红利不一定每个人都能吃到, 但便利可以
+ - AC 4年: Anno ChatGPT. 
+ - GPT4级别可能是人类历史的转折点: 幻觉抑制非常好(尤其是常识问题), 所以可以左脚踩右脚, 把大问题分成小步骤, 每个步骤都可以用幻觉足够小的模型验证(R1就是这么来的)
+ - 相信你的AI在考虑问题的时候直觉相当于专业人士 -> 适当地引导 AI, 获得一切能力
+
 
 #### other notes
 
