@@ -117,3 +117,10 @@ useradd, userdel, passwd 三个命令
 3. Group ID (GID)
 4. List of users - you can manually specify users you want in a specific group
 
+
+## 命令行
+[[permanent/命令行指南|命令行指南]]
+
+Ctrl-Alt-F1 to get into TTY1
+
+pts 是 pseudoterminal, 用 shell 窗口模拟 terminal, 是以及
