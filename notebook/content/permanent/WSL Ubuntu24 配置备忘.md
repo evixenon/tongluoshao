@@ -20,3 +20,11 @@ The **code .** command opened VS Code in the current working folder, which bec
 - `launch.json` (debugger settings)
 
 还有 task.json 简易教程 
+
+#### python 环境
+
+如果安装了 `python-is-python3` 包，则 `python` 会直接调用 `python3`：
+
+```python
+sudo apt install python-is-python3  # 显式建立软链接
+```

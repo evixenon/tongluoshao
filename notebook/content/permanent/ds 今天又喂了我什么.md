@@ -301,3 +301,66 @@ run 0 "results/${THREADS}threads/"
 ---
 以上内容由AI生成，仅供娱乐参考。玄学算命是一种可能性的艺术，其内容并非绝对，切勿过度依赖。希望您能更关注自己的现实生活，理性看待此类信息。愿您在未来的日子里，心怀希望，脚踏实地，收获属于自己的美好与幸福。
 
+#### jyy 的 wget
+wget -r -np -nH --cut-dirs=2 -R "index.html*" "https://jyywiki.cn/os-demos/introduction/logisim/" 这条命令的各个参数是什么意思
+
+这条 `wget` 命令用于递归下载指定网址的内容，同时过滤掉不必要的文件和目录结构。以下是各个参数的含义及作用：
+
+
+ **参数解析**
+ 
+| 参数                                                    | 全称/含义                    | 作用                                               |
+| ----------------------------------------------------- | ------------------------ | ------------------------------------------------ |
+| `-r`                                                  | `--recursive`            | **递归下载**，抓取指定 URL 的所有子目录和文件。                     |
+| `-np`                                                 | `--no-parent`            | **不追溯父目录**，仅下载当前目录及其子目录内容，避免下载上级无关文件。            |
+| `-nH`                                                 | `--no-host-directories`  | **不创建主机名目录**，默认会生成类似 `jyywiki.cn` 的根目录，此参数禁用该行为。 |
+| `--cut-dirs=2`                                        | -                        | **忽略远程路径中的前 2 级目录**，直接保存到本地当前目录。                 |
+| `-R "index.html*"`                                    | `--reject="index.html*"` | **排除匹配的文件**，不下载所有 `index.html` 文件（如自动生成的索引页）。    |
+
+
+**命令整体作用**
+递归下载 `https://jyywiki.cn/os-demos/introduction/logisim/` 下的所有文件，但：
+1. **不下载父目录**（如 `/os-demos/introduction/` 之外的内容）。
+2. **本地不生成 `jyywiki.cn` 目录**，直接保存到当前文件夹。
+3. **忽略路径前 2 级**（即跳过 `/os-demos/introduction/`，直接保存 `logisim/` 下的内容）。
+4. **排除所有 `index.html` 文件**（避免下载冗余的索引页）。
+
+
+ **示例对比**
+ **原始 URL 结构**
+```
+https://jyywiki.cn/os-demos/introduction/logisim/file1
+https://jyywiki.cn/os-demos/introduction/logisim/subdir/file2
+```
+
+ **默认下载后的本地结构（无参数）**
+```
+jyywiki.cn/os-demos/introduction/logisim/file1
+jyywiki.cn/os-demos/introduction/logisim/subdir/file2
+```
+
+ **使用该命令后的本地结构**
+```
+./logisim/file1          # -nH 去掉了主机名，--cut-dirs=2 跳过了前 2 级目录
+./logisim/subdir/file2
+```
+
+
+ **常见问题**
+1. **为什么用 `-np`？**  
+   防止下载到 `/os-demos/` 或 `/introduction/` 中与目标无关的文件。
+
+2. **`--cut-dirs=2` 如何计算？**  
+   URL 中 `https://jyywiki.cn/os-demos/introduction/logisim/` 的目录层级：  
+   `os-demos` (1) + `introduction` (2) → 前 2 级被忽略。
+
+3. **如何调整排除文件？**  
+   修改 `-R` 参数，例如 `-R "*.tmp,*.bak"` 排除临时文件。
+
+
+ **替代方案**
+如果需保留更多原始路径，可减少 `--cut-dirs` 的值或移除 `-nH`。例如：
+```bash
+wget -r -np -nH --cut-dirs=1 https://jyywiki.cn/os-demos/introduction/logisim/
+```
+此时本地路径会保留 `introduction/logisim/`。

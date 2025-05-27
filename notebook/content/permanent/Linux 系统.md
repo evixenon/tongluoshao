@@ -122,9 +122,43 @@ useradd, userdel, passwd 三个命令
 ## 命令行
 [[permanent/命令行指南|命令行指南]]
 
+#### 终端
 Ctrl-Alt-F1 to get into TTY1
 
 pts 是 pseudoterminal, 用 shell 窗口模拟 terminal, 是以及
+
+#### 前台和后台作业
+- 在命令后添加 & 会在后台运行
+- jobs 列出后台作业
+- fg %1 会将 jobs 中 ID 为 1 的任务移动到前台. 
+    - 不带%数字的话, 默认是最近的任务, 也就是 jobs 中带 * 的
+- 要将正在运行的任务移动到后台, c-z 然后 bg
+
+#### 包管理
+- Ubuntu 的 source repo 在 cat /etc/apt/sources.list.d/ubuntu.sources
+- Ubuntu 是 Debian 的发行版, 所以 软件包是 `.deb` 格式, 包管理工具是 `dpkg`, red hat-based 是 rpm
+
+#### 从源代码编译
+
+首先, 需要允许变异源代码的工具
+```shell
+sudo apt install build-essential
+```
+
+通常来说, 需要三步：`./configure && make && make install`
+
+先配置和构建 
+```shell
+./configure
+make
+```
+
+使用 checkinstall 是更好的安装方式. 此命令实质上是 “make install” 并构建一个 .deb 包并安装它。这样以后可以更轻松地删除包。
+```shell
+sudo checkinstall
+```
+
+
 
 ## 进程和线程
 

@@ -67,6 +67,11 @@ tags:
 
 #### other notes
 
+Three Pieces:
+- Virtualization: CPU and Memory
+- Concurrency
+- Persistency
+
 **Virtualizing CPU** means to turn a single into seemingly many cpus thus allowing many programs seemingly run at the same time.
 
 Each process has its own virtual memory space(address space). OS maps the virtual memory spaces to physical memory spaces.
@@ -112,7 +117,7 @@ gcc -e a.c 可以获得展开宏的代码
 
 [GitHub - ibraheemdev/modern-unix: A collection of modern/faster/saner alternatives to common unix commands.](https://github.com/ibraheemdev/modern-unix) 介绍一些 modern unix 工具
 
-数字电路课 Verilog
+数字电路课 Verilog logisim
 
 [学习笔记：时序电路基础 - 知乎](https://zhuanlan.zhihu.com/p/150137008)
 
