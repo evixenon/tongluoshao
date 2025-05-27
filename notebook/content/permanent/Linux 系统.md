@@ -56,6 +56,7 @@ Filesystem Hierarchy Standard(fhs)
     - `less /proc/cpuinfo` 查看CPU高级指标
     - 查看系统 mount
     - lsof, strace, pmap
+    - 存储了每个运行中进程的信息
 - `/sys` 组件和硬件的访问权限
     - 可以对设备, 模块 等组件精细监控和配置
 
@@ -124,3 +125,63 @@ useradd, userdel, passwd 三个命令
 Ctrl-Alt-F1 to get into TTY1
 
 pts 是 pseudoterminal, 用 shell 窗口模拟 terminal, 是以及
+
+## 进程和线程
+
+#### 进程创建
+- fork
+- 每个进程都有 父进程 除了 PID 1 的 `init`, ps -l 可以看到 ppid
+
+#### 进程终止
+- 当子进程退出, 终止状态是0表示成功终止. 进程必须使用 wait syscall 来确认子进程的终止，它的作用是检查子进程的终止状态
+- **孤儿进程**：父进程先一步终止了，子进程会被 **PID 1 的进程接管**（此时 `PPID` 变为 1）。由 init 调用 wait
+- **僵尸进程**: 
+    - 当子进程终止并且父进程尚未调用 wait. 
+    - 子进程使用的资源仍会释放给其他进程
+    - 但是 process 表中仍有一个用于此 Stalbie 的条目.僵尸进程太多可能是一件坏事，因为它们会占用进程表上的空间
+
+#### Niceness - CPU 需求指标
+Niceness 是一个非常奇怪的名字，但它的意思是进程有一个数字来确定它们在 CPU 中的优先级。高数字表示进程很好，CPU 的优先级较低，低或负数表示该进程不是很好，它希望获得尽可能多的 CPU。
+
+```shell
+# top 的 NI 表示 niceness
+$ top
+
+# 使用 nice 设置新进程的 NI
+$ nice -n 5 apt upgrade
+# 使用 renice 设置已存在进程的 NI
+$ renice 10 -p 3245
+```
+
+
+## 信号 Signal
+
+#### Signal 的用处
+- software interrupt
+- notify a process that something has happened
+
+#### Signal handling
+when a signal is passed, a process can :
+- *ignore*
+- *catch*, and perform specific routine
+- *terminate*, abnormal exit
+- *block* the signal
+
+#### common Signal
+- SIGHUP or HUP or 1: Hangup
+- SIGINT or INT or 2: Interrupt
+- SIGKILL or KILL or 9: Kill
+- SIGSEGV or SEGV or 11: Segmentation fault
+- SIGTERM or TERM or 15: Software termination
+- SIGSTOP or STOP: Stop
+
+[[permanent/命令行指南#kill|kill]] can send specified signal, by default SIGTERM
+
+#### Signal explanation
+- SIGHUP - Hangup, 在控制终端关闭时发送到进程。例如，如果您关闭了一个正在运行进程的终端窗口，您将收到 SIGHUP 信号。所以基本上你已经挂断了
+- SIGINT -  是一个中断信号，因此您可以使用 Ctrl-C，系统将尝试正常终止该进程
+- SIGTERM - 终止进程，但允许它先进行一些清理
+- SIGKILL - 杀死进程，用火杀死它，不做任何清理
+- SIGSTOP - Stop/suspend a process
+
+
