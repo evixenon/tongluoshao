@@ -161,6 +161,21 @@ int main(){
 称一个类为另一个类的子类型, 需要满足:
 - public 继承, 或
 - **遵守里氏替换原则（Liskov Substitution Principle, LSP）** - 任何使用基类对象的地方，都能透明替换为子类对象
+
+#### 外部变量
+```cpp
+// file1.c
+int globalVar = 42;  // 定义外部变量
+
+// file2.c
+extern int globalVar;  // 声明外部变量
+```
+
+#### 寄存器变量
+```cpp
+register int i;  // 寄存器变量（循环计数器）
+```
+
 ## 异常处理
 
 #### 内存泄漏

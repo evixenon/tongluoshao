@@ -28,3 +28,36 @@ The **code .** command opened VS Code in the current working folder, which bec
 ```python
 sudo apt install python-is-python3  # 显式建立软链接
 ```
+
+#### tmux + 默认 zsh
+```shell
+# 1. 安装 zsh
+sudo apt install zsh
+
+# 2. 将 zsh 设为默认 Shell
+chsh -s $(which zsh)
+
+# 3. 安装 Oh My Zsh（增强框架）
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# 4. 启动 tmux 自动使用 zsh
+tmux new -s mysession
+```
+
+#### zsh 主题
+
+```shell
+# 安装最流行的 Powerlevel10k 主题
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+```shell
+# ~/.zshrc
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+
+#### 永久激活 autojump
+```shell
+# 永久激活（添加到 zsh 配置）
+echo "[[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh" >> ~/.zshrc
+```

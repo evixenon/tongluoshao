@@ -19,6 +19,8 @@ Session
 C+b d dettach
 C+b s 列出所有会话
 C+b $ 重命名当前会话
+tmux kill-session -t 会话名 关闭会话
+tmux kill-server 关闭所有会话
 
 Window
 C+b c 创建新窗口
