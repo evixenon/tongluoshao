@@ -4,8 +4,9 @@ date: 2024-02-23
 tags:
   - Linux
 ---
+[[permanent/命令行指南|命令行指南]]
 
-[[permanent/Linux 系统]]
+[[permanent/Linux 系统|Linux 系统]]
 
 [[permanent/GNU_Linux 软件|GNU_Linux 软件]]
 

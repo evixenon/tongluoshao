@@ -76,18 +76,18 @@ Three Pieces:
 
 Each process has its own virtual memory space(address space). OS maps the virtual memory spaces to physical memory spaces.
 
-**DRAM** stores values in a volatile manner.
+**DRAM** stores values in a volatile manner. (易失性)
 
 transitors -> logic gates -> assembly -> C
 
-OS design goals:
+**OS design goals**:
 - high performance
 - minimize overheads(time/space/...)
 - protection between apps(isolation)
 - high degree of reliability
 - other: energy-efficiency, security, mobility
 
-trap: a spectial hardware instruction to initiate sys call
+trap: a special hardware instruction to initiate sys call
 
 
 ## 绪论: 2. 应用视角的操作系统

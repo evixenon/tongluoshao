@@ -226,6 +226,32 @@ vc 编译器、x86上的 gcc 规定 char 为 signed char -128~127
 
 #### 编译参数
 - 使用pthread库的多线程程序编译时的连接参数 -lpthread
+
+#### C 源代码编译流程
+
+1. **预处理**：展开宏、处理 `#include` 等指令 → 生成 `.i` 文件
+2. **编译**：将预处理后的代码转为汇编代码 → 生成 `.s` 文件
+3. **汇编**：将汇编代码转为机器码（二进制目标文件） → 生成 `.o` 文件
+4. **链接**：合并目标文件和库文件 → 生成可执行文件
+
+```shell
+gcc -E main.c -o main.i    # 预处理  
+gcc -S main.i -o main.s    # 生成汇编  
+gcc -c main.s -o main.o    # 生成目标文件  
+gcc main.o -o program      # 链接  
+```
+
+| **参数**       | 作用                 | 示例                       |
+| ------------ | ------------------ | ------------------------ |
+| `-o <fname>` | 指定输出文件名            | `gcc -o program main.c`  |
+| `-c`         | 只编译不链接（生成 `.o`）    | `gcc -c main.c`          |
+| `-Wall`      | 启用所有警告提示           | `gcc -Wall main.c`       |
+| `-O2`        | 优化级别（加速代码执行）       | `gcc -O2 main.c`         |
+| `-g`         | 添加调试信息（GDB 使用）     | `gcc -g main.c`          |
+| `-I<目录>`     | 添加头文件搜索路径          | `gcc -I./include main.c` |
+| `-l<库名>`     | 链接动态库（如 `-lm` 数学库） | `gcc main.c -lm`         |
+| `-L<目录>`     | 添加库文件搜索路径          | `gcc -L./lib main.c`     |
+
 ## STL
 
 #### 下标操作
