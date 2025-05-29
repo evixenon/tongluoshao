@@ -57,6 +57,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
 #### 永久激活 autojump
+
+这玩意会自己统计访问次数, 所以你只要 j 就可以了
+
 ```shell
 # 永久激活（添加到 zsh 配置）
 echo "[[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh" >> ~/.zshrc
