@@ -62,6 +62,7 @@ Filesystem Hierarchy Standard(fhs)
 
 **其他**
 - `/dev` 设备
+    - `/dev/null` 2>/dev/null
 - `/srv` 关键的系统服务
 - `/opt` 有的人用来放自己的东西
 #### 设置
@@ -69,6 +70,22 @@ Filesystem Hierarchy Standard(fhs)
 - sudo echo 500 > brightness 会失败因为sudo 只运行 了 echo , 而不是 sudo 打开 brightness
     - sudo su 会换成 root
     - echo 500 | sudo tee brightness 就可行, 因为用 sudo 执行了 tee, tee 打开的 brightness
+
+#### /dev
+ls -l /dev, there are 4 types
+- c - character
+- b - block
+- p - pipe
+- s - socket
+
+**Character Device**
+This devices transfer data, but one char at a time. Usually for os functionalities.
+
+**Block Device**
+These devices transfer data, but in large fixed-sized blocks. E.g. for harddrives, filesystems.
+
+**Pipe Device**
+Named pipes allow two or more processes to communicate with each other.
 
 ## Linux 用户和权限
 
