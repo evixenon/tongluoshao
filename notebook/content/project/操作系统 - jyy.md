@@ -93,8 +93,13 @@ trap: a special hardware instruction to initiate sys call
 ## 绪论: 2. 应用视角的操作系统
 
 [2. 应用视角的操作系统](https://jyywiki.cn/OS/2023/build/lect2.ipynb.html)
+[02 - 应用视角的操作系统 \[2025 南京大学操作系统原理\]_哔哩哔哩_bilibili - https://www.bilibili.com/](https://www.bilibili.com/video/BV1HTAWeTEo3/?spm_id_from=333.788.videopod.sections&vd_source=92451653bea4ed324c9bfc0287256aa5)
 
-gcc -e a.c 可以获得展开宏的代码
+#### gcc gdb
+gcc -E a.c 可以获得展开宏的代码
+
+gdb a.out -tui 可以获得一个炫酷的调试界面
+- r, a, p, n, q
 
 什么是程序
 - 你需要 [Formal Semantics of Programming Languages, Fall 2021](https://cs.nju.edu.cn/hongjin/teaching/semantics/index.htm) by NJU 梁红瑾 <span style="text-decoration:line-through">不, 你不需要</span>
