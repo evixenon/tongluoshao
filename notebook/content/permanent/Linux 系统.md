@@ -71,7 +71,8 @@ Filesystem Hierarchy Standard(fhs)
     - sudo su 会换成 root
     - echo 500 | sudo tee brightness 就可行, 因为用 sudo 执行了 tee, tee 打开的 brightness
 
-#### /dev
+### /dev
+#### dev types
 ls -l /dev, there are 4 types
 - c - character
 - b - block
@@ -85,7 +86,31 @@ This devices transfer data, but one char at a time. Usually for os functionaliti
 These devices transfer data, but in large fixed-sized blocks. E.g. for harddrives, filesystems.
 
 **Pipe Device**
-Named pipes allow two or more processes to communicate with each other.
+Named pipes allow two or more *processes* to communicate with each other.
+
+**Socket Device**
+Socket devices facilitate communication between processes, similar to pipe devices but they can communicate with *many processes at once*.
+
+#### SCSI protocol
+- SCSI (pronounced "scuzzy") stands for Small Computer System Interface.
+- allows communication between disks, printers, scanners and other peripherals to your system.
+
+#### device name
+**SCSI devices**
+- /dev/sda - First hard disk
+- /dev/sdb - Second hard disk
+- /dev/sda3 - Third partition on the first hard disk
+
+**Pseudo devices**
+- /dev/null - accepts and discards all input, produces no output
+- /dev/zero - accepts and discards all input, produces a continuous stream of NULL (zero value) bytes
+- /dev/random - produces random numbers
+
+**PATA devices**
+Sometimes in older systems
+- /dev/hda - First hard disk
+- /dev/hdd2 - Second partition on 4th hard disk
+
 
 ## Linux 用户和权限
 
