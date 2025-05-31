@@ -86,6 +86,10 @@ std::shared_ptr<Object> pObj(new Object);
 #### memmove(), memcpy()
 - memmove() 能够安全地处理源地址和目标地址重叠的情况，并且对内存空间大小没有特殊限制(也增加了一点开销)
 - memcpy() 虽然也是内存复制函数，但它要求源地址和目标地址不能重叠
+
+#### main func
+- `main(int argc, char **argv)`
+- `char *argv[]`或`char **argv`
 ## 语法
 
 #### switch 和 case
@@ -108,7 +112,22 @@ int main(){
 - 如果所有 case 都不匹配就执行 default
 
 #### C语言中对特定内存地址进行赋值
-- `(volatile int *)0xaae0275c[0] = 1`
+```cpp
+// right
+*(volatile int *)0xaae0275c = 1   //这是最简洁的写法
+
+//声明了一个volatile指针p指向该地址,然后通过解引用操作符*赋值
+volatile int *p = (int *)0xaae0275c;*p = 1 
+
+//通过数组下标方式访问第一个元素进行赋值
+volatile int *p = (int *)0xaae0275c;p[0] = 1 
+
+// wrong
+// 这种写法存在两个问题:  
+// 1. 数组下标运算符[]的优先级高于类型转换,所以会先计算0xaae0275c[0],这是非法的  
+// 2. 试图将一个值赋给类型转换表达式的结果,这在C语言中是不允许的
+(volatile int *)0xaae0275c[0] = 1
+```
 
 #### 转义字符
  -  \012, \x12 是正确的
@@ -327,6 +346,10 @@ gcc main.o -o program      # 链接
 8. unordered_set(): 哈希表实现的集合,同样只能通过迭代器访问  
 9. stack(): 栈结构,只能访问栈顶元素,不支持随机访问
 
+#### string
+- string类是支持*UTF-8*编码的字符
+- string类允许在已创建的字符串中进行插入、删除或替换操作
+- string类会*自动*处理内存管理和字符移动, 可以*动态*地调整存储空间以容纳任何长度的字符
 ## 类型, 运算, 运算符, 优先级
 
 #### 优先级
