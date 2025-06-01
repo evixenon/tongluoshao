@@ -93,19 +93,18 @@ trap: a special hardware instruction to initiate sys call
 ## 绪论: 2. 应用视角的操作系统
 
 [2. 应用视角的操作系统](https://jyywiki.cn/OS/2023/build/lect2.ipynb.html)
-[02 - 应用视角的操作系统 \[2025 南京大学操作系统原理\]_哔哩哔哩_bilibili - https://www.bilibili.com/](https://www.bilibili.com/video/BV1HTAWeTEo3/?spm_id_from=333.788.videopod.sections&vd_source=92451653bea4ed324c9bfc0287256aa5)
-
+[02 - 应用视角的操作系统 \[2025 南京大学操作系统原理\]](https://www.bilibili.com/video/BV1HTAWeTEo3/?spm_id_from=333.788.videopod.sections&vd_source=92451653bea4ed324c9bfc0287256aa5)
+[Yanyan's Wiki](https://jyywiki.cn/OS/2025/lect2.md)
 #### gcc gdb
-gcc -E a.c 可以获得展开宏的代码
 
-gdb a.out -tui 可以获得一个炫酷的调试界面
-- r, a, p, n, q
+[[permanent/GDB|GDB]]
 
-什么是程序
+#### 什么是程序
 - 你需要 [Formal Semantics of Programming Languages, Fall 2021](https://cs.nju.edu.cn/hongjin/teaching/semantics/index.htm) by NJU 梁红瑾 <span style="text-decoration:line-through">不, 你不需要</span>
+- 状态又是什么? 一个一个的 stack frame + 全局变量
 
 什么是程序(源代码版)
-- 状态机, 状态=堆+栈
+- **状态机**, 状态=堆+栈
 - 函数调用在 C 程序就是创建一个 栈帧(stack frame, 里面包含状态, pc)
 - 函数调用 = push frame(frame.pc = 入口)
 - ![[attachments/Pasted image 20240320224321.png|L|240]]
@@ -116,6 +115,19 @@ gdb a.out -tui 可以获得一个炫酷的调试界面
 - 程序自身能执行的指令只有计算(的话), 甚至不能退出自己. 所以有一条特殊的 **syscall**, 将 M, R 交给 OS 任其修改
 
 [C 语言 \#、##、__VA_ARGS__ - 知乎](https://zhuanlan.zhihu.com/p/101168748)
+
+#### 程序是什么样的状态机
+
+**状态**
+stack\[frame 1, frame 2, ...] + global vars
+
+**初始状态**
+stack frame main(argc, argv, pc = 0)
+
+**状态迁移**
+执行 frame\[-1].pc 
+
+其实你折腾过 od 的应该知道的
 ## 获得的资料和视野
 
 [操作系统：教科书与参考资料](https://jyywiki.cn/OS/OS_References.html)

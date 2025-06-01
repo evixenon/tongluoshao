@@ -12,3 +12,9 @@ layout src 源代码布局, 看断点上下文比较清晰
 layout asm 汇编代码
 
 info frame 可以查 arglist
+
+info locals 本地变量
+
+gdb a.out -tui 可以获得一个炫酷的调试界面
+- start, r, a, p, n, q
+- info locals
