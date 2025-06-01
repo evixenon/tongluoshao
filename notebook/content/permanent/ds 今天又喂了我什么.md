@@ -415,17 +415,17 @@ wget -r -np -nH --cut-dirs=1 https://jyywiki.cn/os-demos/introduction/logisim/
  解决方案
 1. **获取上一个命令的最后一个参数**  
    示例：
-   ```bash
-   $ cd 1.txt        # 错误命令
-   $ cat !$          # 自动替换为 cat 1.txt
-   ```
+```bash
+$ cd 1.txt        # 错误命令
+$ cat !$          # 自动替换为 cat 1.txt
+```
 
 2. **获取上一个命令的所有参数**  
    示例：
-   ```bash
-   $ cp file1.txt file2.txt   # 错误命令
-   $ ls !*                    # 自动替换为 ls file1.txt file2.txt
-   ```
+```bash
+$ cp file1.txt file2.txt   # 错误命令
+$ ls !*                    # 自动替换为 ls file1.txt file2.txt
+```
 
 3. **交互式选择历史参数（推荐）**  
    按 `Alt + .`（或 `Esc + .`），每按一次会插入上一个命令的最后一个参数，可连续按来遍历历史参数。
