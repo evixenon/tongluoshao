@@ -8,7 +8,7 @@ tags:
 
 linux 一切皆文件. dir 也是文件.
 通常使用的是 ext 系列文件格式.
-#### 各文件夹简介
+### 各文件夹简介
 Filesystem Hierarchy Standard(fhs)
 
 **二进制可执行文件**
@@ -136,6 +136,53 @@ Sometimes in older systems
 - 新的, 只有一种分区
 - 每个分区都有一个全局唯一 ID （GUID）
 - 主要与基于 UEFI 的引导结合使用
+
+### inode
+
+#### inode
+一个 inode 节点记录以下内容 
+- File type - regular file, directory, character device, etc
+- Owner
+- Group
+- Access permissions
+- Timestamps - mtime (time of last file modification), ctime (time of last attribute change), atime (time of last access)
+- Number of hardlinks to the file
+- Size of the file
+- Number of blocks allocated to the file
+- Pointers to the data blocks of the file - most important!
+
+### link
+
+#### soft link, symbolic link, symlink
+- 在 win 中, 快捷方式(shortcuts)是一个别名, 如果更改原始文件会破坏快捷方式
+- 在 linux 中, symlink 等价于 快捷方式
+- `ln -s myfile myfilelink` 创建一个 指向 myfile 的 syslink
+- symlinks are just files that point to filenames
+- syslink 文件的 inode 和原文件*不同*, 因为 inode 编号*对文件系统是唯一的*
+- 使用 syslink 可以在不同文件系统中指引用文件, 因为使用的是文件名而非 inode 编号 
+
+#### 硬链接 hardlinks
+- 使用 `ls -li` 第三个字段是文件的 硬链接数量
+- A hardlink just creates another file with a link to the same inode
+- 删除了指向 inode 的所有硬链接后，才会删除 inode
+- 同一文件的多个目录入口（共享 inode）, 常用来防误删
+-  如何查看文件的所有硬链接（`find -samefile`）
+
+#### 对比
+链接（Hard Link）与符号链接（Symbolic Link）核心区别
+
+| **特性**      | **硬链接 (Hard Link)**      | **符号链接 (Symbolic Link)**   |
+| ----------- | ------------------------ | -------------------------- |
+| **本质**      | 同一文件的多个目录入口（共享 inode）    | 独立文件（存储目标路径）               |
+| **inode 号** | 与源文件相同                   | 独立 inode（不同号）              |
+| **文件删除影响**  | 源文件删除后仍可用（数据不丢）          | 源文件删除后失效（"断链"）             |
+| **跨文件系统**   | ❌ 不支持                    | ✅ 支持                       |
+| **链接目标**    | 仅限文件（不能链接目录）             | 可链接文件和目录                   |
+| **创建命令**    | `ln source.txt hardlink` | `ln -s source.txt symlink` |
+| **查看方式**    | `ls -i` 显示相同 inode       | `ls -l` 显示 `->` 指向路径       |
+| **存储空间**    | 不额外占用空间（共享数据块）           | 占用少量空间（存储路径字符串）            |
+| **递归链接**    | 无递归风险                    | 可能形成死循环（如 `ln -s dir dir`） |
+
 ## Linux 用户和权限
 
 useradd, userdel, passwd 三个命令 
