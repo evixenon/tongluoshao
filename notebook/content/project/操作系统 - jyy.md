@@ -128,6 +128,34 @@ stack frame main(argc, argv, pc = 0)
 执行 frame\[-1].pc 
 
 其实你折腾过 od 的应该知道的
+
+#### 最小可执行文件
+实际上, 程序的入口不是 main() 而是 \_start()
+```cpp
+// 编译使用 gcc -nostartfiles 可以通过
+// -static -nostdlic 更小了
+void _start () {}
+``` 
+return 指令是什么? 把 sp 的 8 个字节放到 pc
+
+这是一个可以正常退出的程序(当然, 严格来说应该 return 0才是正常)
+![[attachments/Pasted image 20250602133853.png]]
+
+#### syscall
+- syscall 指令: 把状态机完全交给 os(上帝你好, 帮我干这个)
+- os 会检查权限, 处理 syscall 请求, 然后交还状态机
+
+ABI: App Binary Interface
+
+man 2 syscalls 查看所有可能的系统调用
+man 2 syscall 是另一个手册, 会讲解参数怎么用
+
+#### GNU core utils
+- unix 系统默认的工具包们, 也有简化版 toybox, busybox
+- ffmpeg 真神1(jyy说直播是用它建立的), gstreamer 真神2(cmd obs)
+
+- daemon 守护进程
+
 ## 获得的资料和视野
 
 [操作系统：教科书与参考资料](https://jyywiki.cn/OS/OS_References.html)
