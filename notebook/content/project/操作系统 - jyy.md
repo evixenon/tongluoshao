@@ -156,6 +156,12 @@ man 2 syscall 是另一个手册, 会讲解参数怎么用
 
 - daemon 守护进程
 
+#### strace
+system trace
+- -f 追踪创建的子进程
+- 看到复杂的日志想放弃的时候, 花30秒再看看, 会进入新世界
+- 放进编辑器里, 善用编辑器的功能
+- strace -f gcc a.c & | vim -
 ## 获得的资料和视野
 
 [操作系统：教科书与参考资料](https://jyywiki.cn/OS/OS_References.html)
