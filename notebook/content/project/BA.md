@@ -40,3 +40,35 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqRKdNEi0BdbS4d4vL5N27pEPi65fbbySJ4JFyy8Kc
 cpu uses SRAM
 
 The stack distance algorithm is based on [Kim et al. 1991](https://dl.acm.org/doi/pdf/10.1145/107972.107995)
+
+#!/bin/bash
+
+# settings
+BASE_URL="http://sparse-files.engr.tamu.edu/MM"
+MTX_LIST="ss490matrices.txt"
+OUTPUT_DIR="/home/nk/data/mtx/suitesparse"
+
+# -p: parent, create the dir parent if needed
+# also, create dir if not exist, ignore when exist
+mkdir -p "$OUTPUT_DIR"
+
+while read -r group name
+do
+    group=$(echo $group | tr -d [:space:]) # delete space
+    name=$(echo $name | tr -d [:space:])
+    
+    file_dir="$OUTPUT_DIR/$group" 
+    mkdir -p "$file_dir"
+    
+    # # -nv: not verbosely
+    # # -c: continue when interrupted
+    wget -c -nv -P "$file_dir" "$BASE_URL/$group/${name}.tar.gz"
+    
+    # # extract and remove redundant files
+    tar xf "${file_dir}/${name}.tar.gz" --directory="$file_dir"
+    rm "${file_dir}/${name}.tar.gz"
+    mv "$file_dir/$name/*.mtx" "$file_dir"
+    if [ $? -eq 0 ]; then
+        rm -r "$file_dir/$name"
+    fi
+done < "$MTX_LIST"
