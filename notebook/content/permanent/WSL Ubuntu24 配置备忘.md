@@ -66,4 +66,31 @@ echo "[[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/aut
 ```
 
 #### vim
+```c
+set relativenumber
+command! Tl :set relativenumber! | set number! " :Tl to toggle between rn and n
+
+set guicursor=n-v-c:block,i-ci-ve:ver25
+let &t_SI = "\e[5 q"  " insert: blinking line
+let &t_EI = "\e[2 q"  " normal: block
+
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
+
+" use clip.exe to make vim y use windows clipboard
+set clipboard=unnamedplus
+if system('uname -r') =~ "microsoft"
+    augroup Yank
+        autocmd!
+        autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
+    augroup END
+endif
+
+```
+#### vscode
+code 指定 vscode
+```bash
+# ~/.zshrc
+alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code"
 ```

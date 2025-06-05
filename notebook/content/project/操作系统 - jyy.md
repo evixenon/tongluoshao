@@ -160,8 +160,15 @@ man 2 syscall 是另一个手册, 会讲解参数怎么用
 system trace
 - -f 追踪创建的子进程
 - 看到复杂的日志想放弃的时候, 花30秒再看看, 会进入新世界
-- 放进编辑器里, 善用编辑器的功能
-- strace -f gcc a.c & | vim -
+- strace -f gcc a.c
+- strace command 2>&1 | vim - 放进编辑器里, 善用编辑器的功能
+
+#### variadic args `...`
+`...` is a *variadic macro parameter* that captures any number of arguments passed to the macro. `__VA_ARGS__` expands to those captured arguments.
+
+So with `call(...)`,  `call(x, y, z)` would expand the `__VA_ARGS__` part to `x, y, z` in the struct initialization
+
+
 ## 获得的资料和视野
 
 [操作系统：教科书与参考资料](https://jyywiki.cn/OS/OS_References.html)

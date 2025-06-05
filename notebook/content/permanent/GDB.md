@@ -3,6 +3,7 @@ title: GDB
 date: 2024-03-20
 tags:
 ---
+[GDB Doc](https://sourceware.org/gdb/current/onlinedocs/gdb.html/)
 
 [gdb debugging tutorial for beginners - linux tutorials - learn linux configuration](https://linuxconfig.org/gdb-debugging-tutorial-for-beginners)
 
@@ -19,3 +20,6 @@ gdb a.out -tui 可以获得一个炫酷的调试界面
 - start, r, a, p, n, q
 - info locals
 - starti 在第一条指令开始时调试它
+
+
+gdb 还能反向调试!
