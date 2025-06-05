@@ -4,6 +4,23 @@ date: 2024-02-13
 tags:
 ---
 
+## 获得的资料和视野
+
+[操作系统：教科书与参考资料](https://jyywiki.cn/OS/OS_References.html)
+
+[GitHub - ibraheemdev/modern-unix: A collection of modern/faster/saner alternatives to common unix commands.](https://github.com/ibraheemdev/modern-unix) 介绍一些 modern unix 工具
+
+数字电路课 Verilog logisim
+
+[学习笔记：时序电路基础 - 知乎](https://zhuanlan.zhihu.com/p/150137008)
+
+计算机系统基础(NJU 王慧妍等), imooc 上的 NJU 袁春风课作为理论
+
+[NJUESE|《数字集成电路I》|南京大学电子科学与工程学院大三下集成电路设计与集成系统专业核心课，微电子科学与工程专业选修课 - 知乎](https://zhuanlan.zhihu.com/p/463370754)
+
+[(29 封私信 / 80 条消息) 你在南京大学上过最牛的课是什么？ - 知乎](https://www.zhihu.com/question/356467344)
+
+![[attachments/Pasted image 20240220221131.png]]
 ## 绪论: 1. 操作系统概述
 
 [1. 操作系统概述](https://jyywiki.cn/OS/2023/build/lect1.ipynb.html)
@@ -169,20 +186,23 @@ system trace
 So with `call(...)`,  `call(x, y, z)` would expand the `__VA_ARGS__` part to `x, y, z` in the struct initialization
 
 
-## 获得的资料和视野
+##  3. 硬件视角的操作系统
 
-[操作系统：教科书与参考资料](https://jyywiki.cn/OS/OS_References.html)
+#### 硬件视角
+- 硬件不知道有没有操作系统, 只是在执行收到的指令
+- 多核, 每个 cpu 各自有寄存器
 
-[GitHub - ibraheemdev/modern-unix: A collection of modern/faster/saner alternatives to common unix commands.](https://github.com/ibraheemdev/modern-unix) 介绍一些 modern unix 工具
+CPU reset
+- 定义一个初始状态
+- CPU 从 CPU reset 开始执行指令
 
-数字电路课 Verilog logisim
+操作系统就是一个普通的二进制程序
+- 管理中断, I/O
+- 硬件响应中断,  os 执行, os 给硬件发下一个任务
 
-[学习笔记：时序电路基础 - 知乎](https://zhuanlan.zhihu.com/p/150137008)
-
-计算机系统基础(NJU 王慧妍等), imooc 上的 NJU 袁春风课作为理论
-
-[NJUESE|《数字集成电路I》|南京大学电子科学与工程学院大三下集成电路设计与集成系统专业核心课，微电子科学与工程专业选修课 - 知乎](https://zhuanlan.zhihu.com/p/463370754)
-
-[(29 封私信 / 80 条消息) 你在南京大学上过最牛的课是什么？ - 知乎](https://www.zhihu.com/question/356467344)
-
-![[attachments/Pasted image 20240220221131.png]]
+#### 固件
+- low-level software, controls hardware components
+- 在设备启动时或 reset 后执行
+- 会有一个特殊的寄存器, 存储 cpu reset 后执行的代码. 在 reset 时, mmap 读取. 这就是固件. 
+- 早期的 firmware readonly, 现在可以软件升级固件(请小心)
+- 固件会负责加载操作系统, 通常自带设备的驱动
