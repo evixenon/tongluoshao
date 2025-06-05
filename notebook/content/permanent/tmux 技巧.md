@@ -4,6 +4,7 @@ date: 2024-02-21
 tags:
   - Linux
 ---
+
 [Linux下的终端神器Tmux的小白教学_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1da4y1p7e1/?spm_id_from=..search-card.all.click&vd_source=92451653bea4ed324c9bfc0287256aa5)
 
 ```tldr
