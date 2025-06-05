@@ -64,3 +64,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # 永久激活（添加到 zsh 配置）
 echo "[[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh" >> ~/.zshrc
 ```
+
+#### vim
+```
