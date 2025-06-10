@@ -15,9 +15,7 @@ http 8000 端口访问
 python -m http.server --directory F:\share
 ```
 
-
-```
-```
+你有个 lanfile 口令
 #### pyftplib
 
 ```cmd
