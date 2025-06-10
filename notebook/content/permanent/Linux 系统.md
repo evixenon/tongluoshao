@@ -4,7 +4,7 @@ date: 2025-05-23
 tags:
   - Linux
 ---
-## Linux 文件系统
+#t# Linux 文件系统
 
 linux 一切皆文件. dir 也是文件.
 通常使用的是 ext 系列文件格式.
