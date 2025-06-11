@@ -94,3 +94,19 @@ code 指定 vscode
 # ~/.zshrc
 alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code"
 ```
+
+
+#### pip in wsl best practices
+
+```shell
+# Use virtual environments
+python3 -m venv myenv
+source myenv/bin/activate
+pip install package_name
+
+# Update pip first
+pip install --upgrade pip
+
+# Install from requirements
+pip install -r requirements.txt
+```
