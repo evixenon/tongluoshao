@@ -446,3 +446,8 @@ $ ls !*                    # 自动替换为 ls file1.txt file2.txt
 - 如何批量处理多个历史命令的参数  
 - `fc` 命令的高级历史编辑技巧  
 - Zsh 中的历史参数扩展功能
+
+#### 来点开心的
+
+有必要吗
+![[attachments/Pasted image 20250611132036.png]]
