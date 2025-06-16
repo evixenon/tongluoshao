@@ -391,3 +391,354 @@ if (atomic_compare_exchange_strong(&_tail, (uintptr_t *)&old_p, (uintptr_t)NULL)
 为什么用 strong?
 - 操作的正确性比轻微的性能优化更重要
 - 避免伪失败导致的不必要自旋
+
+### cache
+
+#### 纵览
+
+1. 整体架构：
+这是一个用于模拟和分析内存访问模式的缓存模拟器，主要包含两个类：
+- `Cache`：基础缓存类
+- `SharedCache`：支持多线程的共享缓存类
+
+2. 核心数据结构：
+```cpp
+class Cache {
+    std::list<MemoryBlock> stack_{};  // 缓存栈
+    std::vector<StackIterator> refmap_{};  // 引用映射
+    std::vector<Bucket> buckets_{};  // 桶系统
+};
+```
+
+3. 主要功能和工作原理：
+
+a) 缓存行访问处理：
+```cpp
+void Cache::handle_cline(Addr addr) {
+    if (addr == last_) {
+        incr_access({0u});
+        return;
+    }
+    last_ = addr;
+    StackIterator &it = refmap_[addr];
+    
+    if (it == stack_.end()) {
+        incr_access_inf();
+        refmap_[addr] = on_block_new(MemoryBlock{0u});
+    } else {
+        incr_access(on_block_seen(it));
+    }
+}
+```
+- 检查是否是重复访问
+- 查找缓存行是否在缓存中
+- 处理缓存命中或未命中的情况
+
+b) 缓存替换策略：
+```cpp
+StackIterator Cache::on_block_new(MemoryBlock &&mb) {
+    stack_.push_front(std::move(mb));
+    move_markers(next_bucket_ - 1);
+    
+    if (Bucket::min_dists[next_bucket_] != Bucket::INF_DIST &&
+        (stack_.size() > Bucket::min_dists[next_bucket_])) {
+        on_next_bucket_gets_active();
+    }
+    return stack_.begin();
+}
+```
+- 使用栈式替换策略
+- 新访问的块放在栈顶
+- 通过桶系统跟踪访问距离
+
+c) 桶系统管理：
+```cpp
+void Cache::move_markers(unsigned bucket_max) {
+    for (unsigned b{1u}; b <= bucket_max; b++) {
+        --(buckets_[b].marker);
+        (buckets_[b].marker)->bucket++;
+    }
+}
+```
+- 使用桶来分类缓存块
+- 根据访问距离将块分配到不同的桶
+- 动态调整桶的标记位置
+
+4. 多线程支持：
+```cpp
+class SharedCache : public Cache {
+    void handle_cline_shared(int tid, Addr a) {
+        mcslock_.lock(tid);
+        handle_cline(a);
+        mcslock_.unlock(tid);
+    }
+    MCSLock mcslock_{};
+};
+```
+- 使用 MCSLock 实现线程安全
+- 提供线程安全的缓存访问方法
+
+5. 性能分析功能：
+```cpp
+void Cache::print_csv(FILE *file, const auto &matrix, int id, double time) const {
+    size_t working_set_size = stack_.size();
+    for (size_t i{0u}; i != Bucket::min_dists.size(); ++i) {
+        fprintf(file, "%s,%zu,%zu,%d,%d,%f,%zu,%zu,%lu\n",
+                matrix.name, matrix.nnz, matrix.nrow, id,
+                shared_, time, working_set_size,
+                Bucket::min_dists[i], buckets_[i].access_counts.count);
+    }
+}
+```
+- 记录缓存访问统计信息
+- 输出性能指标到 CSV 文件
+
+6. 一致性检查：
+```cpp
+void Cache::check_consistency(bool force) {
+    // 检查桶标记的位置是否正确
+    // 验证访问距离是否符合预期
+}
+```
+- 确保缓存状态的一致性
+- 验证桶系统的正确性
+
+这个缓存模拟器的主要用途是：
+1. 分析内存访问模式
+2. 评估缓存性能
+3. 研究缓存替换策略
+4. 支持多线程环境下的缓存行为分析
+
+特别适用于：
+- 矩阵运算等计算密集型应用
+- 内存访问模式分析
+- 缓存性能优化研究
+- 多线程程序的内存行为分析
+
+这个实现的特点是：
+1. 使用栈式替换策略
+2. 通过桶系统跟踪访问距离
+3. 支持多线程访问
+4. 提供详细的性能统计
+5. 包含完整的一致性检查机制
+
+#### stack_, refmap_
+
+让我详细解释 `stack_` 和 `refmap_` 的作用和关系：
+
+1. 数据结构定义：
+```cpp
+std::list<MemoryBlock> stack_{};  // 缓存栈
+std::vector<StackIterator> refmap_{};  // 引用映射
+```
+
+2. 它们的作用：
+
+`stack_`：
+- 是一个双向链表，存储实际的缓存块
+- 最近访问的块在栈顶（链表头部）
+- 最久未访问的块在栈底（链表尾部）
+- 每个块都记录了自己的桶号（bucket）
+
+`refmap_`：
+- 是一个向量，用于快速查找缓存块
+- 索引是缓存行地址（Addr）
+- 值是 `stack_` 中对应块的迭代器
+- 用于 O(1) 时间复杂度的缓存查找
+
+3. 举例说明：
+
+假设我们有以下内存访问序列：
+```
+访问地址：A -> B -> C -> A -> D -> B
+```
+
+让我们看看 `stack_` 和 `refmap_` 如何变化：
+
+初始状态：
+```
+stack_: 空
+refmap_: 所有位置指向 stack_.end()
+```
+
+访问 A：
+```
+stack_: [A]
+refmap_: [A的迭代器, 其他都是end]
+```
+
+访问 B：
+```
+stack_: [B, A]
+refmap_: [A的迭代器, B的迭代器, 其他都是end]
+```
+
+访问 C：
+```
+stack_: [C, B, A]
+refmap_: [A的迭代器, B的迭代器, C的迭代器, 其他都是end]
+```
+
+访问 A（再次访问）：
+```
+stack_: [A, C, B]
+refmap_: [A的迭代器, B的迭代器, C的迭代器, 其他都是end]
+```
+
+访问 D：
+```
+stack_: [D, A, C, B]
+refmap_: [A的迭代器, B的迭代器, C的迭代器, D的迭代器, 其他都是end]
+```
+
+访问 B（再次访问）：
+```
+stack_: [B, D, A, C]
+refmap_: [A的迭代器, B的迭代器, C的迭代器, D的迭代器, 其他都是end]
+```
+
+4. 关键操作示例：
+
+a) 查找缓存块：
+```cpp
+StackIterator &it = refmap_[addr];
+if (it == stack_.end()) {
+    // 缓存未命中
+} else {
+    // 缓存命中
+}
+```
+
+b) 添加新块：
+```cpp
+stack_.push_front(std::move(mb));  // 新块放在栈顶
+refmap_[addr] = stack_.begin();    // 更新引用映射
+```
+
+c) 移动已存在的块：
+```cpp
+// 将块移到栈顶
+stack_.splice(stack_.begin(), stack_, it);
+// refmap_ 不需要更新，因为迭代器仍然有效
+```
+
+5. 性能特点：
+
+`stack_`：
+- 使用 `std::list` 实现
+- 支持 O(1) 时间的插入和删除
+- 支持 O(1) 时间的块移动
+- 内存开销较大
+
+`refmap_`：
+- 使用 `std::vector` 实现
+- O(1) 时间的查找
+- 连续内存布局，缓存友好
+- 需要预分配空间
+
+6. 实际应用场景：
+
+假设在矩阵运算中：
+```
+访问矩阵元素：M[0,0] -> M[0,1] -> M[1,0] -> M[0,0]
+```
+
+对应的缓存行访问：
+```
+访问缓存行：C0 -> C1 -> C2 -> C0
+```
+
+缓存模拟器会：
+1. 通过 `refmap_` 快速检查缓存行是否在缓存中
+2. 使用 `stack_` 维护缓存行的访问顺序
+3. 根据访问模式更新桶系统
+4. 记录缓存命中/未命中的统计信息
+
+这种设计的优点：
+1. 快速查找（O(1)）
+2. 高效更新（O(1)）
+3. 准确模拟缓存行为
+4. 支持详细的性能分析
+
+这种实现特别适合：
+- 分析内存访问模式
+- 研究缓存替换策略
+- 优化程序的内存访问
+- 评估缓存性能
+
+#### Bucket: miss/hit stats
+-  通过桶系统跟踪 reuse distance
+
+```cpp
+void incr_access(Bucket::Counts &&bucket) {
+    auto [bx] = bucket;
+    buckets_[bx].access_counts.count++;  // 在对应桶中增加计数
+}
+```
+
+```cpp
+void incr_access_inf() {
+    auto bucket_inf = Bucket::min_dists.size() - 1;  // 使用最后一个桶
+    incr_access({bucket_inf});  // 在无限距离桶中增加计数
+}
+```
+
+实例
+```
+访问A（未命中）：
+- 增加 INF 距离桶的计数
+
+访问B（未命中）：
+- 增加 INF 距离桶的计数
+
+访问C（未命中）：
+- 增加 INF 距离桶的计数
+
+访问A（命中，距离=2）：
+- 增加距离2桶的计数
+
+访问D（未命中）：
+- 增加 INF 距离桶的计数
+
+访问B（命中，距离=2）：
+- 增加距离2桶的计数
+```
+
+### openMP
+
+#### 速通
+ -  parallel：创建并行区域。
+ -  critical：保护共享数据（慎用，性能低）。
+ -  single：只有一个线程执行任务。
+ -  barrier：所有线程到达 barrier 再继续执行. (OpenMP 在某些隐式同步点, 如 parallel for 结束, 会自动插入屏障)
+ -  schedule：优化循环分配策略。
+ -  规则：优先用 atomic 替代 critical，用 reduction 处理规约操作，避免过度同步。
+ 
+```cpp
+#include <omp.h>
+#include <stdio.h>
+
+int main() {
+    int sum = 0;
+    #pragma omp parallel
+    {
+        #pragma omp single
+        printf("Threads: %d\n",
+omp_get_num_threads());
+
+        #pragma omp for schedule(static)
+reduction(+:sum)
+        for (int i = 0; i < 100; i++) {
+            sum += i;
+        }
+
+        #pragma omp barrier  //
+确保所有线程完成累加
+
+        #pragma omp critical
+        printf("Thread %d: sum = %d\n",
+omp_get_thread_num(), sum);
+    }
+    return 0;
+}
+```

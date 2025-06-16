@@ -475,6 +475,7 @@ Object Oriented Design
 
 #### non-explicit-one-argument ctor
 - 可以被调用作类型转换函数
+- 如果 ctor 没用 explicit 修饰, 编译器会自动尝试调用 non-explicit-one-arg ctor 去转换为此类型 
 - one argument 的意思是只要一个实参就够, 不是必须仅一个参数
 - ![[attachments/Pasted image 20250428174449.png]]
 
