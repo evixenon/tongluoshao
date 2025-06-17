@@ -31,6 +31,8 @@ tags:
 
 [[permanent/家庭版添加组策略编辑器代码|家庭版添加组策略编辑器代码]]
 
+[Windows10/11 永久停止系统更新（关闭自动更新）的方法 - 兔哥博客 - https://uuzi.net/](https://uuzi.net/windows-stop-update/)
+
 ---
 
 [[permanent/WINTOGO & more|WINTOGO & more]]
