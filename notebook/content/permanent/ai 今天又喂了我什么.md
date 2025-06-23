@@ -1,6 +1,6 @@
 ---
-title: "ds 今天又喂了我什么"
-date: "2025-05-27"
+title: ai 今天又喂了我什么
+date: 2025-05-27
 tags:
 ---
 
@@ -451,3 +451,146 @@ $ ls !*                    # 自动替换为 ls file1.txt file2.txt
 
 有必要吗
 ![[attachments/Pasted image 20250611132036.png]]
+
+
+#### c/cpp print
+
+在C++中，输出函数主要分为C风格和C++风格两类。以下是常用函数的简要说明：
+
+─────────────────────────────────────────────
+                   1. C风格函数
+
+                      printf
+
+
+```cpp
+ #include <cstdio>
+ printf("格式字符串", 参数...); // 标准输出
+```
+
+
+ • 特点：格式化输出到stdout，支持%d、%s等占位符。
+ • 示例：
+
+```cpp
+printf("整数: %d, 字符串: %s\n", 42, "hello")
+```
+
+
+                     fprintf
+
+
+```cpp
+ fprintf(FILE* stream, "格式字符串", 参数...); // 输出到指定流
+```
+
+
+ • 特点：可输出到文件流（如stdout、stderr或自定义文件）。
+ • 示例：
+
+```cpp
+fprintf(stderr, "错误: %s\n", strerror(errno)
+// 输出到标准错误
+```
+
+
+                      perror
+
+
+ perror("自定义前缀"); // 自动附加错误信息
+
+
+ • 特点：根据errno输出错误描述，默认输出到stderr。
+ • 示例：
+
+```cpp
+if (open("file.txt", O_RDONLY) == -1) {
+    perror("打开文件失败"); // 输出:
+"打开文件失败: No such file or directory"
+}
+```
+
+
+                 sprintf/snprintf
+
+
+```cpp
+ char buf[100];
+ sprintf(buf, "格式字符串", 参数...); //
+ 不安全，可能缓冲区溢出
+ snprintf(buf, sizeof(buf), "格式字符串", 参数...
+ // 安全版本
+```
+
+
+ • 特点：将结果写入字符数组，snprintf会限制写入长度。
+
+─────────────────────────────────────────────
+                    2. C++风格
+
+                    std::cout
+
+
+```cpp
+ #include <iostream>
+ std::cout << "值: " << 42 << std::endl; //
+ 类型安全，无需格式化
+```
+
+
+ • 特点：类型安全，支持运算符重载，但性能略低于printf。
+
+                    std::cerr
+
+
+```
+ std::cerr << "错误信息" << std::endl; //
+```
+ 无缓冲，直接输出到stderr
+
+
+ • 特点：专用于错误输出，立即刷新。
+
+                  std::ofstream
+
+
+```cpp
+ #include <fstream>
+ std::ofstream file("log.txt");
+ file << "写入文件" << std::endl; // 文件输出
+```
+
+
+─────────────────────────────────────────────
+                 3. 其他实用函数
+
+                 dprintf (POSIX)
+
+
+```cpp
+ dprintf(fd, "格式字符串", 参数...); // 直接输出到文件描述符
+```
+
+
+ • 适用场景：Linux系统编程中直接操作文件描述符。
+
+               std::format (C++20)
+
+
+```cpp
+ #include <format>
+ std::string msg = std::format("{} {}", "Hello",
+ 42); // 类型安全的格式化
+```
+
+
+ • 特点：现代C++的格式化方式，类似Python的f-string 。
+
+─────────────────────────────────────────────
+                     选择建议
+
+ • 简单输出：用std::cout或printf。
+ • 错误处理：perror或std::cerr。
+ • 文件操作：fprintf或std::ofstream。
+ • 安全格式化：优先选snprintf或C++20的std::format 。
+
