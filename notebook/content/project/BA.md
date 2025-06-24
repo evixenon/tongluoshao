@@ -396,10 +396,144 @@ if (atomic_compare_exchange_strong(&_tail, (uintptr_t *)&old_p, (uintptr_t)NULL)
 
 #### 纵览
 
-1. 整体架构：
-这是一个用于模拟和分析内存访问模式的缓存模拟器，主要包含两个类：
-- `Cache`：基础缓存类
-- `SharedCache`：支持多线程的共享缓存类
+
+```mermaid
+classDiagram
+    %% 核心数据结构
+    class matrix_csr~VT, RT, CT~ {
+        +VT* val
+        +RT* row_ptr
+        +CT* col_idx
+        +uint64_t nrow
+        +uint64_t ncol
+        +uint64_t nnz
+        +const char* name
+        +bool symmetric
+        +~matrix_csr()
+        +struct coo_entry
+        +static void read_matrix_coo()
+        +static void matrix_csr_from_coo()
+        +static matrix_csr read_matrix()
+    }
+
+    %% 内存块和桶
+    class MemoryBlock {
+        +uint32_t bucket
+    }
+
+    class Bucket {
+        +StackIterator marker
+        +Counts access_counts
+        +static vector~min_type~ min_dists
+        +static constexpr min_type INF_DIST
+        +Bucket(StackIterator)
+        +struct Counts
+    }
+
+    %% 缓存系统
+    class Cache {
+        #bool shared_
+        -std::list~MemoryBlock~ stack_
+        -std::vector~StackIterator~ refmap_
+        -unsigned next_bucket_
+        -Addr last_
+        -std::vector~Bucket~ buckets_
+        +void handle_cline(Addr)
+        +Bucket::Counts on_block_seen(StackIterator&)
+        +StackIterator on_block_new(MemoryBlock&&)
+        +void incr_access(Bucket::Counts&&)
+        +void incr_access_inf()
+        +void print_csv(FILE*, const auto&, int, double)
+        +void reset_buckets()
+        +void set_refmap_size(size_t)
+        -void move_markers(unsigned)
+        -void on_next_bucket_gets_active()
+        -void check_consistency(bool)
+        +static const char* csv_header_
+    }
+
+    class SharedCache {
+        -MCSLock mcslock_
+        +SharedCache()
+        +void handle_cline_shared(int, Addr)
+        +void handle_clines_shared(int, Addr, Addr)
+        +void handle_clines_shared(int, Addr, Addr, Addr)
+        +void reset_buckets_shared(int)
+    }
+
+    class PrivateCache {
+        +PrivateCache()
+    }
+
+    %% 锁机制
+    class qnode {
+        +atomic_uintptr_t next
+        +atomic_bool wait
+    }
+
+    class MCSLock {
+        -atomic_uintptr_t _tail
+        -qnode _nodes[MAX_THREADS]
+        +MCSLock()
+        +~MCSLock()
+        +void lock(int)
+        +void unlock(int)
+        +void lock(qnode*)
+        +void unlock(qnode*)
+    }
+
+    %% 枚举类型
+    class Enums {
+        <<enumeration>>
+        partition
+        mtxobject
+        mtxformat
+        mtxfield
+        mtxsymmetry
+        streamtype
+    }
+
+    %% 工具函数
+    class Utils {
+        <<utility>>
+        +template~T, size_t CLSIZE~ Addr cline(uint64_t)
+        +bool is_pow2(int)
+        +int ffs_constexpr(int)
+        +void set_buckets()
+        +void reuse_compute(int, PrivateCache&, SharedCache&, const auto&)
+        +void read_matrix(matrix_csr&, const char*)
+        +int parse_int(int*, const char*, char**, int64_t*)
+        +int parse_double(double*, const char*, char**, int64_t*)
+        +int freadline(char*, size_t, streamtype, stream)
+    }
+
+    %% 联合体
+    class stream {
+        <<union>>
+        +FILE* f
+        +gzFile gzf
+    }
+
+    %% 关系定义
+    Cache <|-- SharedCache : inheritance
+    Cache <|-- PrivateCache : inheritance
+    
+    SharedCache --> MCSLock : uses
+    MCSLock --> qnode : contains
+    
+    Bucket --> MemoryBlock : references
+    Cache --> Bucket : contains
+    Cache --> MemoryBlock : manages
+    
+    matrix_csr --> Utils : uses
+    Utils --> Enums : uses
+    Utils --> stream : uses
+    
+    %% 模板实例化
+    matrix_csr~double, int64_t, int~ : instantiation
+```
+
+这是一个用于模拟和分析内存访问模式的缓存模拟器
 
 2. 核心数据结构：
 ```cpp
@@ -690,7 +824,7 @@ void incr_access_inf() {
 }
 ```
 
-实例
+##### 实例
 ```
 访问A（未命中）：
 - 增加 INF 距离桶的计数
@@ -711,6 +845,16 @@ void incr_access_inf() {
 - 增加距离2桶的计数
 ```
 
+
+#### cache misses
+ 1 冷缺失（Cold Miss）
+    • 首次访问某数据时必然发生，因数据尚未加载到缓存中，也称为冷启动缺失。
+ 2 容量缺失（Capacity Miss）
+    • 因缓存容量有限，当活跃数据量超过缓存大小时，部分数据被替换出去，再次访问时引发缺失。
+ 3 冲突缺失（Conflict Miss）
+    • 由缓存映射规则（如组相联映射）导致：多个数据竞争同一缓存组（行），即使缓存仍有空闲空间也会触发替换。
+ 4 一致性缺失（Coherency Miss）
+    • 多核/多处理器系统中，因其他核心修改共享数据（缓存一致性协议触发失效）而导致的缺失。
 ### openMP
 
 #### 速通
@@ -946,3 +1090,12 @@ min dist : 0, 1024, 131072, inf
 - 1024: in L1
 - 131072: in L2
 - inf: cold miss
+
+
+
+## if we want cache associality
+
+##### need to change
+- all cache blocks in a LRU stack -> divide into more sets
+- cline addr -> set and tag
+- Cache -> Cache\<Way>
