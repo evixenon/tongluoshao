@@ -437,7 +437,7 @@ void Cache::handle_cline(Addr addr) {
 b) 缓存替换策略：
 ```cpp
 StackIterator Cache::on_block_new(MemoryBlock &&mb) {
-    stack_.push_front(std::move(mb));
+    stack_.push_front(std ::move(mb));
     move_markers(next_bucket_ - 1);
     
     if (Bucket::min_dists[next_bucket_] != Bucket::INF_DIST &&
@@ -546,7 +546,7 @@ std::vector<StackIterator> refmap_{};  // 引用映射
 - 值是 `stack_` 中对应块的迭代器
 - 用于 O(1) 时间复杂度的缓存查找
 
-3. 举例说明：
+##### 举例说明：
 
 假设我们有以下内存访问序列：
 ```
@@ -597,7 +597,7 @@ stack_: [B, D, A, C]
 refmap_: [A的迭代器, B的迭代器, C的迭代器, D的迭代器, 其他都是end]
 ```
 
-4. 关键操作示例：
+##### 关键操作示例
 
 a) 查找缓存块：
 ```cpp
@@ -622,7 +622,7 @@ stack_.splice(stack_.begin(), stack_, it);
 // refmap_ 不需要更新，因为迭代器仍然有效
 ```
 
-5. 性能特点：
+##### 性能特点
 
 `stack_`：
 - 使用 `std::list` 实现
@@ -667,6 +667,13 @@ stack_.splice(stack_.begin(), stack_, it);
 - 评估缓存性能
 
 #### Bucket: miss/hit stats
+
+| 桶索引 | 最小距离   | 含义      | 缓存行为       |
+| --- | ------ | ------- | ---------- |
+| 0   | 0      | 立即重用    | 缓存命中（最近访问） |
+| 1   | 1024   | L1缓存范围内 | 可能在L1缓存中   |
+| 2   | 131072 | L2缓存范围内 | 可能在L2缓存中   |
+| 3   | ∞      | 超出所有缓存  | 冷缺失（从内存加载） |
 -  通过桶系统跟踪 reuse distance
 
 ```cpp
@@ -928,11 +935,14 @@ indptr: enumerate(i, x) 表示从 data 中的 第 x 个元素开始, 进入 第 
 - 一共 *5* 个非 0 元素
 
 
-#### matrix
+#### csv
 
-nnz : \#(non zero elements)
+nnz : \#(non zero elements) of matrix
 
 working set size : how many memory blocks used
 
-min dist : 
-
+min dist : 0, 1024, 131072, inf
+- 0: cache hit, reuse
+- 1024: in L1
+- 131072: in L2
+- inf: cold miss
