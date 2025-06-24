@@ -594,3 +594,23 @@ if (open("file.txt", O_RDONLY) == -1) {
  • 文件操作：fprintf或std::ofstream。
  • 安全格式化：优先选snprintf或C++20的std::format 。
 
+
+#### free + nullptr
+
+```cpp
+free(matrix.val);
+matrix.val = nullptr;  // 防止悬空指针
+```
+
+在 C++ 中同时使用 `free(val)` 和 `val = nullptr` 是一种防御性编程习惯，主要出于以下原因：
+
+1. **释放内存后置空指针**  
+   - `free(val)` 会释放 `val` 指向的动态内存，但指针本身仍保留原来的地址（悬空指针，dangling pointer）。
+   - 后续若误用 `val` 会导致未定义行为（如重复释放或访问已释放内存）。
+   - 通过 `val = nullptr` 显式置空，后续对 `val` 的操作会触发明确的空指针错误（如崩溃或断言），而非隐蔽的未定义行为。
+
+2. **提高代码健壮性**  
+   - 显式置空使指针状态明确，便于调试（如检查 `if (val == nullptr)`）。
+   - 避免悬空指针被误判为有效指针。
+
+**注意**：在纯 C++ 中，优先使用 `delete` 替代 `free`，并配合 `nullptr` 使用。但根本解决方案是使用智能指针或 RAII 机制。
