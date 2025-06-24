@@ -1054,6 +1054,8 @@ pc.print_csv(csv_file, matrix, tid, time_diff);
 **indptr**
 划分行范围. 存储每行的起始位置在data中的偏移。长度为行数+1，最后一项为总非零元素数。
 
+又名: 使用压缩稀疏行（CSR）格式，存储非零元素的值（`values`）、列索引（`col_indices`）和行指针（`row_ptr`）。
+
 <section style="display: flex; flex-direction: row; align-items: center;"><span style="color: rgb(205, 82, 85); display: flex; flex-direction: row; align-items: center; padding: 0px 0.5em; font-size: 0.824em; border-radius: 0.428em; line-height: 2.306em; background-color: rgba(205, 82, 85, 0.15);"><span style="margin-right: 0.2em; display: flex; flex-direction: row; align-items: center; justify-content: center;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" width="1.9988577955454025em" height="1.9988577955454025em" stroke="currentColor" aria-hidden="true" class=""><path fill="currentColor" d="m21.9 15.621c0.1248-1.8535-0.6087-3.4099-2.6058-3.8292-0.7712-0.15744-1.3921-0.13977-2.1113-0.14543-0.6323 0.0048-1.1718-0.01567-1.8401 0.03203 1.5356-0.8078 1.6998-2.205 1.6567-3.546 0.1272-2.3708-1.4685-3.666-3.7727-3.673-2.2427-0.04024-5.0463-0.27229-5.9443 1.9172-0.28083 0.6692-0.27606 1.2179-0.28202 1.6587-0.08527 1.4303 0.20687 2.9224 1.662 3.6429-2.3051-0.05275-5.3273-0.39212-6.28 1.8983-0.28073 0.66862-0.27595 1.2174-0.282 1.6572-0.10329 1.6061 0.3059 3.171 2.0252 3.8067 1.2061 0.4187 2.2175 0.2869 3.3945 0.3134 2.0524 0.0901 4.0448-0.4637 4.4796-2.4982 0.609 2.5638 3.2086 2.5463 5.3204 2.4982 2.7823 0.1278 4.7024-0.9368 4.5798-3.7329zm-12.899-7.6287c-0.14889-1.8665 1.8839-1.4921 3.1358-1.546 0.8939 0.05358 2.4743-0.21158 2.8003 0.88445 0.2729 2.4494-0.0297 2.8555-2.5242 2.8232-0.94713-0.07259-2.869 0.28949-3.3134-0.77077-0.14881-0.44557-0.08538-0.92893-0.09846-1.3909zm0.2606 9.2128c-0.56638 0.162-1.1652 0.1412-1.7487 0.1488-0.59786-0.0036-1.1977 0.0131-1.7948-0.0233-0.93407-0.0365-1.6776-0.3579-1.6157-1.4217 0.01574-0.5119-0.06845-1.0551 0.11822-1.5436 0.4432-0.84155 1.5978-0.6728 2.4032-0.7191 0.81712 0.01614 1.6464-0.05154 2.4536 0.10154 0.99382 0.17537 1.0564 0.91742 1.0227 1.7752-6.1e-4 0.7729 0.04085 1.416-0.83867 1.6821zm2.9212-3.6286c-0.0836 0.19457-0.14194 0.3848-0.18279 0.56614-0.18535-0.87758-0.76293-1.6189-1.5605-2.02 1.0871 0.04933 2.0387 0.04959 3.1216-8e-5 -0.7672 0.39034-1.1687 0.96486-1.3783 1.4539zm6.8788 3.6286c-0.5664 0.162-1.1652 0.1412-1.7488 0.1488-0.5978-0.0036-1.1977 0.0131-1.7947-0.0233-0.9341-0.0365-1.6776-0.3579-1.6157-1.4217 0.0157-0.5119-0.0685-1.0551 0.1182-1.5436 0.4432-0.84155 1.5978-0.6728 2.4033-0.7191 0.8171 0.01614 1.6464-0.05154 2.4536 0.10154 0.9938 0.17537 1.0563 0.91742 1.0227 1.7752-6e-4 0.7729 0.0409 1.416-0.8386 1.6821z"></path></svg></span>example</span></section>
 
 示例：\[0, 2, 3, 5]
@@ -1091,7 +1093,195 @@ min dist : 0, 1024, 131072, inf
 - 131072: in L2
 - inf: cold miss
 
+#### reuse_compute
 
+让我详细分析 `reuse_compute` 函数，这是整个缓存分析程序的核心函数。
+
+---
+函数签名和目的
+
+```cpp
+void reuse_compute(int tid, PrivateCache &pc, SharedCache &sc, const auto &matrix)
+```
+
+**目的**：模拟稀疏矩阵向量乘法（SpMV）的内存访问模式，分析缓存性能。
+
+---
+1. 内存布局设计
+
+ 虚拟内存地址分配
+```cpp
+//           x[0]...x[ncol] <padding> rowptr[0] ... rowptr[nrow] ...
+//
+// cacheline(x[0]) = 0 ... cacheline(ncol) = ncol * sizeof(val_t) / MEMBLOCKLEN ...
+// assign cache line number 0 to x_0
+auto cl_x_end     = cline<val_t, MEMBLOCKLEN>(matrix.ncol);
+auto cl_row_start = cl_x_end + 1;
+auto cl_y_start   = cl_row_start + cline<rowptr_t, MEMBLOCKLEN>(matrix.nrow + 1) + 1;
+auto cl_a_start   = cl_y_start + cline<val_t, MEMBLOCKLEN>(matrix.nrow) + 1;
+auto cl_col_start = cl_a_start + cline<val_t, MEMBLOCKLEN>(matrix.nnz) + 1;
+```
+
+这里设计了一个**虚拟内存布局**，模拟CSR格式矩阵在内存中的存储：
+
+```
+内存布局：
+[ x向量 ] [ rowptr数组 ] [ y向量 ] [ a数组 ] [ col_idx数组 ]
+   ↑           ↑           ↑         ↑         ↑
+ cl_x_end   cl_row_start cl_y_start cl_a_start cl_col_start
+```
+
+
+ 缓存行计算详解
+```cpp
+template <typename T, size_t CLSIZE>
+Addr cline(uint64_t idx)
+{
+    constexpr static auto first_bit_set = ffs_constexpr(CLSIZE / sizeof(T));
+    return static_cast<Addr>(idx >> first_bit_set);
+}
+```
+
+这个函数计算数组索引对应的缓存行号：
+- `CLSIZE`：缓存行大小（通常是64字节）
+- `sizeof(T)`：数据类型大小（如 `double` 是8字节）
+- `first_bit_set`：计算 `CLSIZE/sizeof(T)` 的二进制中第一个1的位置
+- 结果：`idx >> first_bit_set`，相当于 `idx / (CLSIZE/sizeof(T))`
+
+**示例**：
+- 如果 `CLSIZE=64`, `sizeof(double)=8`
+- 则 `CLSIZE/sizeof(double) = 8`
+- `first_bit_set = 3`（因为8=2³）
+- `cline<double, 64>(16) = 16 >> 3 = 2`
+
+---
+2. 线程特定的初始化
+
+```cpp
+// row_ptr[r]
+unsigned first_row = (matrix.nrow / omp_get_num_threads()) * omp_get_thread_num();
+
+auto cl_row = cl_row_start + cline<rowptr_t, MEMBLOCKLEN>(first_row);
+pc.handle_cline(cl_row);
+sc.handle_cline_shared(tid, cl_row);
+```
+
+每个线程首先访问自己负责的第一个矩阵行的 `rowptr` 元素，这确保了：
+- 每个线程都有初始的缓存状态
+- 模拟真实的并行SpMV算法
+
+---
+3. 主要的SpMV模拟循环
+
+ 并行循环结构
+```cpp
+#pragma omp for schedule(static)
+for (unsigned r = 0; r < matrix.nrow; ++r) {
+    // 处理矩阵的第r行
+}
+```
+
+使用静态调度将矩阵行分配给线程。
+
+ 每行的处理步骤
+
+ 步骤1：访问行指针
+```cpp
+// rowptr[r + 1]
+auto cl_row_plus1 = cl_row_start + cline<rowptr_t, MEMBLOCKLEN>(r + 1);
+pc.handle_cline(cl_row_plus1);
+```
+
+访问当前行的结束位置指针。
+
+ 步骤2：访问输出向量
+```cpp
+// y[r]
+auto cl_y = cl_y_start + cline<val_t, MEMBLOCKLEN>(r);
+pc.handle_cline(cl_y);
+```
+
+访问输出向量 `y[r]`。
+
+ 步骤3：共享缓存处理
+```cpp
+sc.handle_clines_shared(tid, cl_row_plus1, cl_y);
+```
+
+将这两个访问提交到共享缓存（使用锁保护）。
+
+ 步骤4：处理非零元素
+```cpp
+for (rowptr_t i = matrix.row_ptr[r]; i < matrix.row_ptr[r + 1]; ++i) {
+    // a[i]
+    auto cl_a = cl_a_start + cline<val_t, MEMBLOCKLEN>(i);
+    pc.handle_cline(cl_a);
+    // col_idx[i]
+    auto cl_col = cl_col_start + cline<colidx_t, MEMBLOCKLEN>(i);
+    pc.handle_cline(cl_col);
+    // x[col_idx[i]]
+    auto cl_x = cline<val_t, MEMBLOCKLEN>(matrix.col_idx[i]);
+    pc.handle_cline(cl_x);
+    // avoid some locking by merging 3 lines here
+    sc.handle_clines_shared(tid, cl_a, cl_col, cl_x);
+}
+```
+
+这是SpMV的核心部分，模拟对每个非零元素的访问：
+
+1. **`a[i]`**：矩阵值
+2. **`col_idx[i]`**：列索引
+3. **`x[col_idx[i]]`**：输入向量元素
+
+---
+4. 缓存访问模式分析
+
+ SpMV算法的内存访问模式
+```cpp
+y[r] = 0;
+for (i = row_ptr[r]; i < row_ptr[r+1]; i++) {
+    y[r] += a[i] * x[col_idx[i]];
+}
+```
+
+这个函数模拟了上述算法的内存访问：
+
+1. **顺序访问**：`rowptr[r]`, `rowptr[r+1]`
+2. **顺序访问**：`y[r]`（写操作）
+3. **顺序访问**：`a[i]`, `col_idx[i]`
+4. **随机访问**：`x[col_idx[i]]`（这是缓存性能的关键）
+
+ 缓存性能瓶颈
+- **`x` 向量的随机访问**：这是SpMV算法的主要性能瓶颈
+- **缓存行对齐**：通过 `cline` 函数确保正确的缓存行计算
+- **局部性**：矩阵的非零元素分布影响缓存性能
+
+---
+5. 优化策略
+
+ 批量处理共享缓存访问
+```cpp
+// avoid some locking by merging 3 lines here
+sc.handle_clines_shared(tid, cl_a, cl_col, cl_x);
+```
+
+将三个缓存行访问合并到一次锁操作中，减少锁开销。
+
+ 私有缓存 vs 共享缓存
+- **私有缓存**：每个线程独立，无锁开销
+- **共享缓存**：多个线程共享，需要锁保护
+
+---
+总结
+
+`reuse_compute` 函数是一个**高度优化的SpMV内存访问模拟器**：
+
+1. **精确模拟**：完全按照CSR格式的SpMV算法模拟内存访问
+2. **性能分析**：通过重用距离分析识别缓存性能瓶颈
+3. **并行优化**：使用私有缓存减少锁竞争
+4. **内存布局优化**：虚拟内存布局便于缓存行计算
+
+这个函数是理解稀疏矩阵算法缓存性能的关键工具。
 
 ## if we want cache associality
 
