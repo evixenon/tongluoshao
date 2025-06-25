@@ -958,3 +958,293 @@ $$
 - **分块/向量化**：提升缓存利用率。
 
 如果需要代码实现（如C/Python），可进一步说明！
+
+#### 当缓存分成多个set之后，重用距离的计算
+
+这是一个非常关键的问题！当缓存分成多个set之后，重用距离的计算变得复杂了。让我详细分析这个问题。
+
+##### 重用距离的本质重新思考
+
+1.1 全关联缓存中的重用距离
+```
+全关联缓存：所有缓存行共享一个LRU栈
+重用距离 = 从当前访问到上次访问之间访问的不同地址数量
+```
+
+1.2 组关联缓存中的挑战
+```
+组关联缓存：每个set有独立的LRU栈
+问题：如何定义"重用距离"？
+```
+
+##### 不同的重用距离定义
+
+2.1 方案A：Set-level重用距离
+```cpp
+// 每个set独立计算重用距离
+struct SetReuseDistance {
+    std::list<MemoryBlock> lru_stack;  // 每个set的LRU栈
+    std::unordered_map<Addr, StackIterator> tag_map;
+    
+    unsigned calculate_reuse_distance(Addr tag) {
+        auto it = tag_map.find(tag);
+        if (it == tag_map.end()) {
+            return INFINITE_DISTANCE;  // 冷缺失
+        }
+        
+        // 计算在set内的重用距离
+        unsigned distance = 0;
+        for (auto stack_it = lru_stack.begin(); stack_it != it->second; ++stack_it) {
+            distance++;
+        }
+        return distance;
+    }
+};
+```
+
+**优点**：准确反映set内的访问模式
+**缺点**：忽略了其他set的访问，可能低估全局重用距离
+
+2.2 方案B：Global重用距离
+```cpp
+// 维护全局LRU栈，但按set分组统计
+struct GlobalReuseDistance {
+    std::list<MemoryBlock> global_stack;
+    std::unordered_map<Addr, StackIterator> global_map;
+    
+    unsigned calculate_global_reuse_distance(Addr addr) {
+        auto it = global_map.find(addr);
+        if (it == global_map.end()) {
+            return INFINITE_DISTANCE;
+        }
+        
+        // 计算全局重用距离
+        unsigned distance = 0;
+        for (auto stack_it = global_stack.begin(); stack_it != it->second; ++stack_it) {
+            distance++;
+        }
+        return distance;
+    }
+};
+```
+
+**优点**：反映真实的全局访问模式
+**缺点**：不能直接反映set内的冲突情况
+
+2.3 方案C：混合重用距离
+```cpp
+// 同时维护set-level和global重用距离
+struct HybridReuseDistance {
+    std::vector<SetReuseDistance> set_distances;
+    GlobalReuseDistance global_distance;
+    
+    struct ReuseInfo {
+        unsigned set_distance;
+        unsigned global_distance;
+        unsigned set_id;
+    };
+    
+    ReuseInfo calculate_hybrid_reuse_distance(Addr addr) {
+        CacheAddress cache_addr = parse_address(addr);
+        
+        return {
+            set_distances[cache_addr.set].calculate_reuse_distance(cache_addr.tag),
+            global_distance.calculate_global_reuse_distance(addr),
+            cache_addr.set
+        };
+    }
+};
+```
+
+##### 实际实现策略
+
+3.1 推荐方案：Set-level + Global组合
+```cpp
+class SetAssociativeCache {
+private:
+    // 每个set的LRU栈
+    std::vector<std::list<MemoryBlock>> set_stacks_;
+    std::vector<std::unordered_map<Addr, StackIterator>> set_maps_;
+    
+    // 全局LRU栈（用于容量分析）
+    std::list<MemoryBlock> global_stack_;
+    std::unordered_map<Addr, StackIterator> global_map_;
+    
+    // 桶系统
+    std::vector<std::vector<Bucket>> set_buckets_;  // per-set桶
+    std::vector<Bucket> global_buckets_;            // 全局桶
+
+public:
+    void handle_cline(Addr addr) {
+        CacheAddress cache_addr = parse_address(addr);
+        
+        // 处理set-level访问
+        handle_set_access(cache_addr);
+        
+        // 处理global访问
+        handle_global_access(addr);
+    }
+    
+private:
+    void handle_set_access(CacheAddress addr) {
+        auto& set_stack = set_stacks_[addr.set];
+        auto& set_map = set_maps_[addr.set];
+        
+        auto it = set_map.find(addr.tag);
+        if (it == set_map.end()) {
+            // Set-level缺失
+            handle_set_miss(addr);
+        } else {
+            // Set-level命中
+            handle_set_hit(addr, it->second);
+        }
+    }
+    
+    void handle_global_access(Addr addr) {
+        auto it = global_map_.find(addr);
+        if (it == global_map_.end()) {
+            // Global缺失
+            handle_global_miss(addr);
+        } else {
+            // Global命中
+            handle_global_hit(addr, it->second);
+        }
+    }
+};
+```
+
+3.2 重用距离计算
+```cpp
+struct ReuseDistanceInfo {
+    unsigned set_distance;      // set内的重用距离
+    unsigned global_distance;   // 全局重用距离
+    unsigned set_id;           // set ID
+    MissType miss_type;        // 缺失类型
+};
+
+ReuseDistanceInfo calculate_reuse_distances(Addr addr) {
+    CacheAddress cache_addr = parse_address(addr);
+    
+    // 计算set-level重用距离
+    unsigned set_dist = calculate_set_distance(cache_addr);
+    
+    // 计算global重用距离
+    unsigned global_dist = calculate_global_distance(addr);
+    
+    // 确定缺失类型
+    MissType miss_type = determine_miss_type(set_dist, global_dist);
+    
+    return {set_dist, global_dist, cache_addr.set, miss_type};
+}
+```
+
+##### 缺失类型判断
+
+4.1 基于重用距离的缺失分类
+```cpp
+enum MissType {
+    COLD_MISS,      // 首次访问
+    CONFLICT_MISS,  // 冲突缺失
+    CAPACITY_MISS   // 容量缺失
+};
+
+MissType determine_miss_type(unsigned set_dist, unsigned global_dist) {
+    if (set_dist == INFINITE_DISTANCE) {
+        return COLD_MISS;  // 首次访问
+    }
+    
+    if (set_dist < CACHE_WAYS && global_dist > CACHE_SIZE / CACHE_LINE_SIZE) {
+        return CONFLICT_MISS;  // set内距离小但全局距离大
+    }
+    
+    return CAPACITY_MISS;  // 容量不足
+}
+```
+
+4.2 更精确的冲突检测
+```cpp
+bool is_conflict_miss(CacheAddress addr, unsigned set_dist) {
+    // 检查set是否已满
+    if (set_stacks_[addr.set].size() < CACHE_WAYS) {
+        return false;  // set未满，不是冲突
+    }
+    
+    // 检查全局工作集大小
+    if (global_stack_.size() < CACHE_SIZE / CACHE_LINE_SIZE) {
+        return true;  // 全局未满但set满，是冲突
+    }
+    
+    return false;  // 可能是容量缺失
+}
+```
+
+##### 5. 统计和输出
+
+5.1 扩展的统计结构
+```cpp
+struct CacheStatistics {
+    // Per-set统计
+    std::vector<size_t> set_hits;
+    std::vector<size_t> set_misses;
+    std::vector<size_t> set_conflict_misses;
+    
+    // Global统计
+    size_t global_hits;
+    size_t global_misses;
+    size_t global_capacity_misses;
+    
+    // 重用距离分布
+    std::vector<std::vector<size_t>> set_reuse_distances;
+    std::vector<size_t> global_reuse_distances;
+};
+```
+
+5.2 CSV输出格式
+```cpp
+// 扩展的CSV格式
+"matrix,nnz,nrows,cache_id,shared,time,set_id,reuse_type,distance,miss_type,count\n"
+
+// 示例输出
+// matrix1,1000,100,0,0,1.5,64,set,2,conflict,150
+// matrix1,1000,100,0,0,1.5,64,global,1024,capacity,50
+```
+
+##### 实现建议
+
+6.1 分阶段实现
+```cpp
+// 阶段1：实现set-level重用距离
+class SetAssociativeCache {
+    void implement_set_level_distance();
+};
+
+// 阶段2：添加global重用距离
+class SetAssociativeCache {
+    void add_global_distance_tracking();
+};
+
+// 阶段3：实现混合分析
+class SetAssociativeCache {
+    void implement_hybrid_analysis();
+};
+```
+
+6.2 性能优化
+```cpp
+// 使用更高效的数据结构
+struct OptimizedSet {
+    std::vector<MemoryBlock> ways;  // 固定大小数组
+    std::unordered_map<Addr, size_t> tag_to_way;  // tag到way索引的映射
+};
+```
+
+##### 总结
+
+在set-associative cache中计算重用距离需要：
+
+1. **双重跟踪**：同时维护set-level和global重用距离
+2. **精确分类**：基于重用距离准确判断缺失类型
+3. **综合分析**：结合set和global信息进行性能分析
+4. **灵活统计**：支持多种维度的统计和输出
+
+这种设计能够准确分析set-associative cache的性能特征，特别是冲突缺失的检测和分析。
