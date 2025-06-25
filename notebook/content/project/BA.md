@@ -397,6 +397,8 @@ if (atomic_compare_exchange_strong(&_tail, (uintptr_t *)&old_p, (uintptr_t)NULL)
 #### 纵览
 
 
+##### full structure uml
+
 ```mermaid
 classDiagram
     %% 核心数据结构
