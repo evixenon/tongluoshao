@@ -1334,6 +1334,7 @@ sc.handle_clines_shared(tid, cl_a, cl_col, cl_x);
 - global RD > capacity -> capacity miss
 - global RD <= capacity && not in set(set full) -> conflict miss
 
+so add a hit_count in Bucket
 #### laptop info
 
 ![[attachments/Pasted image 20250625133102.png]]
