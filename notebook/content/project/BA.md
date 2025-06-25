@@ -1285,9 +1285,39 @@ sc.handle_clines_shared(tid, cl_a, cl_col, cl_x);
 
 这个函数是理解稀疏矩阵算法缓存性能的关键工具。
 
-## if we want cache associality
+## if we want set-associality
 
 ##### need to change
 - all cache blocks in a LRU stack -> divide into more sets
 - cline addr -> set and tag
 - Cache -> Cache\<Way>
+
+
+#### laptop info
+
+![[attachments/Pasted image 20250625133102.png]]
+
+```lscpu
+Architecture:             x86_64
+  CPU op-mode(s):         32-bit, 64-bit
+  Address sizes:          48 bits physical, 48 bits virtual
+  Byte Order:             Little Endian
+CPU(s):                   16
+  On-line CPU(s) list:    0-15
+Vendor ID:                AuthenticAMD
+  Model name:             AMD Ryzen 9 6900HS with Radeon Graphics
+    CPU family:           25
+    Model:                68
+    Thread(s) per core:   2
+...
+Caches (sum of all):
+  L1d:                    256 KiB (8 instances)
+  L1i:                    256 KiB (8 instances)
+  L2:                     4 MiB (8 instances)
+  L3:                     16 MiB (1 instance)
+  ```
+
+|                      |               |                                                                                         |          |
+| -------------------- | ------------- | --------------------------------------------------------------------------------------- | -------- |
+| AMD Ryzen 9 6900HS « | 3.3 - 4.9 GHz | 8 / 16 ![cores](https://www.notebookcheck.net/fileadmin/templates/images/cpu_cores.svg) | 16 MB L3 |
+cache line size: 64 B
