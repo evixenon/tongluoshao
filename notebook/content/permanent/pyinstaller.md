@@ -22,3 +22,11 @@ tags:
 [PyInstaller 系列 - 单目录和单文件模式 - cocoonink - 博客园](https://www.cnblogs.com/cocoonink/p/13858062.html)
 
 [【Python】使用pyinstaller打包exe运行报错“PackageNotFoundError”_有问必答-CSDN问答](https://ask.csdn.net/questions/7505436)
+
+#### setup.py egg_info?
+
+incompatible `setuptools` version and target package
+
+`pip install --upgrade setuptools` upgrade but the new version may still unstable
+
+know: `pip install setuptools==58.0.4` is a stable version

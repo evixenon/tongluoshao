@@ -67,7 +67,7 @@ pypdf [Welcome to PyPDF2 — PyPDF2 documentation](https://pypdf2.readthedocs.io
 
 [[permanent/Python 简易文件服务器|Python 简易文件服务器]]
 
-
+img2pdf input.jpg -o output.pdf
 ### 优秀开源项目
 
 [intermediatePython](https://hellogithub.com/periodical/statistics/click?target=https://github.com/yasoob/intermediatePython)：《Intermediate Python》Python 进阶。这是本很薄的 Python 入门级书籍，每篇内容花个五分钟就能看完、看懂、有收获的那种
