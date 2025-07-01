@@ -25,3 +25,12 @@ Though anime has a reputation of not (catering to) western sensibility regarding
 Due to the often shocking against(and) contrivercial content to(of) Evangelion, TV Tokyo became heavily sensoring(censoring) subsequent anime like the // acclaimed Cowby Bebop resulting in only half of the episodes produced for the space western ever airing on television.
 Akira's widely considered to be one of the most influential (works of) animes(anime) ever created, introducing anime to the western world // when it bursts onto the screen in 1988.
 19
+
+##### BBC news item
+51-60
+spell out
+petition
+virgin forest
+looting vandalism
+coalition
+step down
