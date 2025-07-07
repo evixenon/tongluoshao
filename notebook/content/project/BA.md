@@ -1102,6 +1102,28 @@ reuse_compute
 ---
 
 现在我们来到 handle cline
+
+```mermaid
+flowchart
+
+Enter[handle_cline] --> D1{found in Cache.stack_}
+D1 -->|Y| D2{which bucket?}
+D1 -->|N| Info1(Capicity miss of all level)
+D2 -->|L1| AL1access[L1 bucket+access count]
+AL1access --> Dl1{found in L1 set?}
+D2 -->|L2| AL2access[L2 bucket+access count]
+AL2access --> Info6(L1 capacity miss)
+Info6 --> Dl2{found in L2 set?}
+Dl1 -->|Y| Info2(L1 hit)
+Dl1 -->|N| Info3(L1 conflict miss)
+Dl2 -->|Y| Info4(L2 hit)
+Dl2 -->|N| Info5(L2 conflict miss)
+
+Info1 --> A1[inf bucket + access count]
+Info2 --> A2[L1 bucket + hit count]
+Info4 --> A4[L2 bucket + hit count]
+```
+
 #### csr format
 - compress sparse row
 - 适用于绝大多数元素为零的矩阵
