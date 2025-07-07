@@ -1067,6 +1067,41 @@ pc.print_csv(csv_file, matrix, tid, time_diff);
 
 ### main
 
+#### 走一遍流程
+
+准备工作:
+- getopt 获取文件路径, verbose 参数
+- read matrix
+- set_buckets()
+- init shared_caches_
+
+each thread: 
+- 自己的 pc
+- 获取分配的 sc
+- pc.set_refmap_size()
+- sc.set_refmap_size()
+    - 每个线程都会调用, 但因为 `#pragma omp critical` 只会执行一次
+    - 保证了每个 sc 都设置到, 而且只执行一次
+
+barrier: 等待 set_refmap_size() 完成
+
+这个时候开始计时 (omp single), 等一下, 为什么从第一次开始计时
+
+执行两次 reuse_compute, 第二次会 reset_buckets
+
+reuse_compute
+- 先模拟内存布局, 为 matrix 中的每个数据都分配虚拟的地址
+- sc 和 pc 分别处理访问, 这是为了模拟私有缓存和共享缓存
+
+然后 barrier, 停止计时
+
+打印结果
+- 注意 shared 是布尔值, cache id 是 tid
+- working_set_size = stact_.size()
+
+---
+
+现在我们来到 handle cline
 #### csr format
 - compress sparse row
 - 适用于绝大多数元素为零的矩阵
