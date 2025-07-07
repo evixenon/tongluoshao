@@ -1103,6 +1103,7 @@ reuse_compute
 
 现在我们来到 handle cline
 
+
 ```mermaid
 flowchart
 
@@ -1124,6 +1125,9 @@ Info2 --> A2[L1 bucket + hit count]
 Info4 --> A4[L2 bucket + hit count]
 ```
 
+move_markers(next_bucket_ - 1)
+- 各级 bucket.marker 往前移一个(因为刚刚插入了新数据)
+- 最后一个 it 算进下一个 bucket
 #### csr format
 - compress sparse row
 - 适用于绝大多数元素为零的矩阵
