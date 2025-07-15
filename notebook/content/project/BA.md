@@ -1423,5 +1423,7 @@ Caches (sum of all):
 | AMD Ryzen 9 6900HS « | 3.3 - 4.9 GHz | 8 / 16 ![cores](https://www.notebookcheck.net/fileadmin/templates/images/cpu_cores.svg) | 16 MB L3 |
 cache line size: 64 B
 
+![[attachments/Pasted image 20250715174240.png]]
+
 ![[attachments/Pasted image 20250715170531.png]]
     ![[attachments/Pasted image 20250715170538.png]]
