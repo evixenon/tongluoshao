@@ -1427,3 +1427,4 @@ cache line size: 64 B
 
 ![[attachments/Pasted image 20250715170531.png]]
     ![[attachments/Pasted image 20250715170538.png]]
+
