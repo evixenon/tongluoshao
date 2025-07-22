@@ -1428,3 +1428,15 @@ cache line size: 64 B
 ![[attachments/Pasted image 20250715170531.png]]
     ![[attachments/Pasted image 20250715170538.png]]
 
+
+## draft
+
+
+### BG 
+
+![[attachments/Pasted image 20250722132931.png]]
+
+论点+找论据支持/源头
+
+#### 2.1 Role of Caches in Modern Computer Architecture
+
