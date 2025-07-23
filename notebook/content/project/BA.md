@@ -1456,7 +1456,7 @@ Cache is organized in different levels, each level trades capacity for speed. A 
 
 Figure 2 illustrates the classic memory hierarchy and their typical sizes and speeds. The memory hierarchy model indicates the order in which the processor searches for data, from higher level to lower level. When a block of data is not found in the L1 cache, then the processor turns to the L2 cache. 
 
-(a figure like this, in pyramid)
+(a figure like this, in pyramid)(figure based on ...cite)
 ![[attachments/Pasted image 20250722161415.png]]
 
 
