@@ -307,9 +307,9 @@ Method 部分应该用过去时
 - 避免用 **"and", "but", "so" and "because"** 开头
 - alternatives
     - but: although, however, in contrast, on the contrary, nevertheless,
-    - because: because of, since, accordingly
+    - because: because of, since, accordingly, consequently
     - so: similarly, as a result, therefor, further,  thus, subsequently
-    - and: additionally, moreover, consequently
+    - and: additionally, moreover
 
 ![[attachments/Pasted image 20230714200816.png]]
 
