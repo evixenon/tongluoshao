@@ -38,6 +38,12 @@ ssh cip + 151
 
 ssh lrzcluster -p 22 + 151
 
+2FA: Privacy IDEA(Android+ios) + PUSH Toke
+
+以上两个都设置好了应该不再需要输密码
+
+ssh beast 等待通过
+
 ## Collect Materials
 
 - you should cite it if your use their matrices [About | SuiteSparse Matrix Collection](https://sparse.tamu.edu/about)
