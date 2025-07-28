@@ -1,5 +1,5 @@
 ---
-title: 英语单词主题学习
+title: Eng Themes
 date: 2024-02-24
 tags:
 ---
@@ -83,7 +83,7 @@ wizard 男巫, 奇才
 witch 女巫
 sellsword 佣兵
 radiant knight 白骑士
-gryphon 狮鹫, 格里芬
+gryphon/griffin 狮鹫, 格里芬
 shaman 萨满
 druid 德鲁伊
 valkyria 瓦尔基里, 女武神
@@ -159,3 +159,48 @@ Sonata 奏鸣曲
 Variation 变奏曲
 Waltz 圆舞曲
 polyphony 复调
+
+#### Scribblenauts Unlimited
+
+
+![[attachments/Pasted image 20250726122856.png]]
+
+
+bandage 绷带
+
+dumbbell 哑铃
+
+capital city runoff 径流
+![[attachments/Pasted image 20250726124437.png]]
+
+
+海葵和小丑鱼 anemone fish/anemone stinkhorn
+![[attachments/Pasted image 20250726124942.png]]
+
+
+siren 警笛
+
+machine gun 机关枪
+
+defibrillator 心脏除颤器
+
+psychiatrist 精神病专家
+
+maxwell in disguise 变装
+
+curator 保安(in charge of a museum, library)
+
+archaeologist 古生物学家
+
+troglodyte 类人猿
+
+spirit 
+
+#### BBC news item
+51-60
+spell out
+petition
+virgin forest
+looting vandalism
+coalition
+step down

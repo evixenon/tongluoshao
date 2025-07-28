@@ -1,13 +1,11 @@
 ---
-title: "60 英语"
-date: "2023-06-14"
+title: 60 Eng
+date: 2023-06-14
 ---
-
-[[permanent/Dictate|Dictate]]
 
 [[permanent/一些转换思维的英语表达|一些转换思维的英语表达]]
 
-[[permanent/英语单词主题学习|英语单词主题学习]]
+[[permanent/Eng Themes|Eng Themes]]
 
 [[permanent/Lexical resc|Lexical resc]]
 

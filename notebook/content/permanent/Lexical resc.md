@@ -35,27 +35,8 @@ a () amount of
 
 examples of sth. abound (in ...)
 
-##### 具备能力 can/cannot
-able/capable to
-at the stage/level yet where (it can) ...
-(-)falls short for (English learners) 
-reach the point
-lacking ... skill
-at an effective level
-exposes its inability to
 
-##### 必须
-be absolute necessity
-be absolutely essential
-
-##### 重要性
-it is difficult to overstate the importance of
-
-##### 值得
-rewarding
-worth doing
-
-### 连接表达
+### 逻辑表达
 在文章中适当使用, 更多去追求语言本身的逻辑连接
 in other words
 for example/instance, namely
@@ -171,3 +152,22 @@ innovation
 correct
 proper
 
+##### 具备能力 can/cannot
+able/capable to
+at the stage/level yet where (it can) ...
+(-)falls short for (English learners) 
+reach the point
+lacking ... skill
+at an effective level
+exposes its inability to
+
+##### 必须
+be absolute necessity
+be absolutely essential
+
+##### 重要性
+it is difficult to overstate the importance of
+
+##### 值得
+rewarding
+worth doing
