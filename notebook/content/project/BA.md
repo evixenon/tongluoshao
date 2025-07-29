@@ -42,7 +42,11 @@ ssh lrzcluster -p 22 + 151
 
 以上两个都设置好了应该不再需要输密码
 
-ssh beast 等待通过
+ssh beast
+
+ssh-copy-id lrzcluster -p 22 
+
+![[attachments/Pasted image 20250729111156.png]]
 
 ## Collect Materials
 
