@@ -1548,5 +1548,8 @@ Although the aggregate miss rate is important, understanding the composition of 
 
 The reuse distance metric, which will be introduced in the next section, serves as an effective tool for characterizing these aspects, enabling a more accurate evaluation of cache performance and informing strategies to improve efficiency.
 
+#### 3.2 reuse
+
+
 #### 3.4
 A cache miss triggers a series of operations that ultimately require the cache to select a victim block for replacement. Upon a cache miss, the request is propagated down the memory hierarchy until the data is located.
