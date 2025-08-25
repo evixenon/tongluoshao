@@ -48,6 +48,7 @@ ssh-copy-id lrzcluster -p 22
 
 ![[attachments/Pasted image 20250729111156.png]]
 
+window 不支持 ControlPath, 去 config 里注释掉就好了
 ## Collect Materials
 
 - you should cite it if your use their matrices [About | SuiteSparse Matrix Collection](https://sparse.tamu.edu/about)
