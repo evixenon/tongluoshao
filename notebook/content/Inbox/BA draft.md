@@ -25,6 +25,8 @@ Figure 2 illustrates the classic memory hierarchy and their typical sizes and sp
 (a figure like this, in pyramid)(figure based on ...cite)
 ![[attachments/Pasted image 20250722161415.png]]
 
+![[attachments/mermaid-diagram-2025-08-27-221849 1.svg]]
+caption: A simple example of CPU cache memory hierarchy (L1, L2, L3) in a 2-core processor, illustrating the flow of data requests from the CPU core to main memory.
 
 
 In the memory hierarchy model, there are two principles typically to be followed: 
