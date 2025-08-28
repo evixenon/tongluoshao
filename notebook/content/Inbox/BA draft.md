@@ -56,7 +56,7 @@ caption: A simple example of CPU cache memory hierarchy (L1, L2, L3) in a 2-core
 
 Figure 2 illustrates the classic memory hierarchy and their typical sizes and speeds. The memory hierarchy model indicates the order in which the processor searches for data, from higher level to lower level. When a block of data is not found in the L1 cache, then the processor turns to the L2 cache. 
 
-(a figure like this, in pyramid)(figure based on ...cite)
+(a figure like this, in pyramid)(figure based on ...cite) The memory hierarchy in computer systems, organized as a pyramid from registers at the top to main memory at the base, with indicative latencies (left) and typical sizes (right). 
 ![[attachments/Pasted image 20250722161415.png]]
 
 ![[attachments/mermaid-diagram-2025-08-27-221849 1.svg]]
