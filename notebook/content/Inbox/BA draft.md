@@ -185,3 +185,37 @@ In simulation environments, cache behavior prediction is often performed using v
 Multithreading and Inter-core Interference
 
 In real multi-core processors, shared cache contention from other threads significantly perturbs the access pattern and eviction flow, an effect rarely captured in simulation, leading to overly optimistic predictions.
+
+
+#### 4 intro
+
+This chapter will detail the experimental design of this study. 
+
+#### 4.1 Experimental Tools and Platform
+
+
+
+#### 4.2 Cache Simulator Implementation
+The cache simulator is built upon an existing fully associative cache implementation that uses the stack distance algorithm [Kim et al., 1991] and is modified based on the implementation in [Breiter et al., 2023]. 
+#### 4.2.1 Cache Simulator Architecture
+
+Listing 1 illustrates the data structure of the `Cache` class. This class can be used independently as a cache simulator to emulate the behavior of a cache at a specific level, such as an L1 cache. Within this structure, `stack_` is implemented as a doubly linked list that stores the cache blocks, which contains the bucket number. The most recently accessed block is located at the top of the stack (the head of the linked list), whereas the least recently accessed block resides at the bottom. To enable fast lookups, `refmap_` is provided as a vector where each index corresponds to a cache line address, and each value is an iterator pointing to the corresponding block within `stack_`. The `buckets_` variable is a vector used to track cache hits and misses.
+
+```cpp
+class Cache {
+    std::list<MemoryBlock> stack_{};  // 缓存栈
+    std::vector<list<MemoryBlock>::iterator> refmap_{};  // 引用映射
+    std::vector<Bucket> buckets_{};  // 桶系统
+};
+```
+
+
+#### 4.2.2 LRU Replacement Policy
+
+This cache simulator employs the most common LRU algorithm. In addition to moving the newest memory block to the top of the `stack_` during each cache access, the simulator also performs additional adjustments based on the bucket system.
+#### 4.2.3 Bucket System for Reuse Distance Tracking
+
+The idea of using a bucket system to track and analyze reuse distance was proposed by Kim et al. [1991]. The `buckets_` variable in Listing 1 is a vector composed of multiple buckets. Each bucket contains a parameter named `mindist`, which stands for minimal distance. For example, consider a processor with a 32 KiB L1 cache, a 512 KiB L2 cache, no L3 cache, and a common cache line size of 64 bytes. In this bucket system, the `buckets` variable consists of 4 buckets with mindist values of 0, 512, 8192, and INF. The minimal distances for the second and third buckets are derived from (L1 capacity / cache line size) and (L2 capacity / cache line size), respectively.
+
+继续写什么情况下哪个桶计数增加, 写完了扔给 ds 润色
+
