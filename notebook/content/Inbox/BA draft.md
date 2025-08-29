@@ -201,8 +201,9 @@ This chapter will detail the experimental design of this study.
 The cache simulator is built upon an existing fully associative cache implementation that uses the stack distance algorithm [Kim et al., 1991] and is modified based on the implementation in [Breiter et al., 2023]. 
 #### 5.1 Cache Simulator Architecture
 
-Listing 1 illustrates the data structure of the `Cache` class. This class can be used independently as a cache simulator to emulate the behavior of a cache at a specific level, such as an L1 cache. Within this structure, `stack_` is implemented as a doubly linked list that stores the cache blocks. The most recently accessed block is located at the top of the stack (the head of the linked list), whereas the least recently accessed block resides at the bottom. To enable fast lookups, `refmap_` is provided as a `unordered_map` container where each index corresponds to a cache line address, and each value is an iterator pointing to the corresponding block within `stack_`. The `buckets_` variable is a vector used to track cache hits and misses.
+Listing 5.1 illustrates the data structure of the `Cache` class. This class can be used independently as a cache simulator to emulate the behavior of a cache at a specific level, such as an L1 cache. Within this structure, `stack_` is implemented as a doubly linked list that stores the cache blocks. The most recently accessed block is located at the top of the stack (the head of the linked list), whereas the least recently accessed block resides at the bottom. To enable fast lookups, `refmap_` is provided as a `unordered_map` container where each index corresponds to a cache line address, and each value is an iterator pointing to the corresponding block within `stack_`. The `buckets_` variable is a vector used to track cache hits and misses.
 
+Listing 5.1
 ```cpp
 class Cache {
     std::list<MemoryBlock> stack_{};
@@ -216,7 +217,9 @@ class Cache {
 
 #### 5.2 Bucket System for Reuse Distance Tracking
 
-The concept of employing a bucket system to track and analyze reuse distance was proposed by [Kim et al. (1991)]. In Listing 1, the `buckets_` variable is implemented as a vector consisting of multiple buckets. Each bucket contains a parameter named `mindist`, denoting the minimal distance.
+这一段可能要移到第四章, 用来描述统计方法. 又或者在这里加上具体的 miss 统计公式
+
+The concept of employing a bucket system to track and analyze reuse distance was proposed by [Kim et al. (1991)]. In Listing 5.1, the `buckets_` variable is implemented as a vector consisting of multiple buckets. Each bucket contains a parameter named `mindist`, denoting the minimal distance.
 
 Consider a processor configuration with a 32 KiB L1 cache, a 512 KiB L2 cache, no L3 cache, and a cache line size of 64 bytes. In this bucket system, the `buckets` vector comprises four buckets with `mindist` values of 0, 512, 8192, and INF. These four buckets correspond to the L1 cache range, the L2 cache range, cache misses, and an infinite distance category. The minimal distances for the second and third buckets are derived from the L1 capacity divided by the cache line size and the L2 capacity divided by the cache line size, respectively.
 
@@ -230,7 +233,7 @@ This cache simulator did not employ actual SpMV computations but instead utilize
 
 The `cline()` function serves as the convertor of the address mapping system. This function calculates the required offset by locating the first set bit in the cache line size divided by the data type size, then shifts the memory index right by that number of bits to obtain the cache line number. 
 
-[Listing of cline()]
+Listing 5.2
 ```cpp
 template <typename T, size_t CLSIZE>
 Addr cline(uint64_t idx)
@@ -248,14 +251,15 @@ Addr cline(uint64_t idx)
 }
 ```
 
-Listing 2 demonstrates the code principles of `cline()` function. In the actual program, constant expression grammar is employed to prevent redundant computations. The template parameter T represents the data type of values within the matrix, while CLSIZE denotes the cache line size. The function returns a virtual line address, which can be utilized for subsequent cache access simulation.
+Listing 5.2 demonstrates the code principles of `cline()` function. In the actual program, constant expression grammar is employed to prevent redundant computations. The template parameter T represents the data type of values within the matrix, while CLSIZE denotes the cache line size. The function returns a virtual line address, which can be utilized for subsequent cache access simulation.
 
 #### 5.4 LRU Replacement Policy
 
 This cache simulator employs the most common LRU algorithm. In addition to moving the newest memory block to the top of the `stack_` during each cache access, the simulator also performs additional adjustments based on the bucket system.
 
-As mentioned in Listing 1, the `stack_` member variable is a list container holding `MemoryBlock` structures, with each `MemoryBlock` simulating a cache block. Within this structure, a `bucket_idx` integer variable records the bucket index where the cache block should reside. When the cache simulator attempts to access a cache block at address x, it first uses `refmap_.find(x)` to obtain the iterator for that cache block within `stack_`. It then processes the block using two functions: `on_block_seen()` for blocks already present in the cache history, and `on_block_new()` for blocks that have never entered the cache.
+As mentioned in Listing 5.1, the `stack_` member variable is a list container holding `MemoryBlock` structures, with each `MemoryBlock` simulating a cache block. Within this structure, a `bucket_idx` integer variable records the bucket index where the cache block should reside. The `handle_cline()` function is an entry of address handling. When the cache simulator attempts to access a cache block at address x, it first uses `refmap_.find(x)` to obtain the iterator for that cache block within `stack_`. It then processes the block using two functions: `on_block_seen()` for blocks already present in the cache history, and `on_block_new()` for blocks that have never entered the cache.
 
+Listing 5.3
 ```pseudo
 function on_block_seen(iterator it):
     
@@ -272,10 +276,11 @@ function on_block_seen(iterator it):
     return result  // Return bucket index for statistics
 ```
 
-For cache blocks that have been previously encountered, the `on_block_seen()` function takes a stack iterator as input and returns the bucket index for statistical analysis. This function first retrieves the current bucket index of the accessed cache block, then invokes `move_markers()` to adjust the bucket indices of other cache blocks in the stack accordingly. Subsequently, it resets the bucket index of the accessed block to 0, signifying that this block now belongs to the topmost bucket in `buckets_`. Following standard LRU replacement policy, the cache block is relocated to the top of the stack using the `splice` operation. The function's return value indicates which bucket's access counter should be incremented in the cache simulator. Listing 4 presents the pseudocode for the `on_block_seen()` function.
+For cache blocks that have been previously encountered, the `on_block_seen()` function takes a stack iterator as input and returns the bucket index for statistical analysis. This function first retrieves the current bucket index of the accessed cache block, then invokes `move_markers()` to adjust the bucket indices of other cache blocks in the stack accordingly. Subsequently, it resets the bucket index of the accessed block to 0, signifying that this block now belongs to the topmost bucket in `buckets_`. Following standard LRU replacement policy, the cache block is relocated to the top of the stack using the `splice` operation. The function's return value indicates which bucket's access counter should be incremented in the cache simulator. Listing 5.3 presents the pseudocode for the `on_block_seen()` function.
 
-Listing 5 presents the pseudocode for the `on_block_new()` function. In contrast to `on_block_seen()`, this function constantly processes newly instantiated blocks, which are initialized with a bucket index of 0. After inserting a new block onto the stack, the function evaluates whether to activate the next bucket based on the current stack size and predefined distance thresholds. The function returns an iterator pointing to the newly inserted block. Following the execution of this function, the bucket corresponding to cache misses (infinite reuse distance) is incremented accordingly.
+Listing 5.4 presents the pseudocode for the `on_block_new()` function. In contrast to `on_block_seen()`, this function constantly processes newly instantiated blocks, which are initialized with a bucket index of 0. After inserting a new block onto the stack, the function evaluates whether to activate the next bucket based on the current stack size and predefined distance thresholds. The function returns an iterator pointing to the newly inserted block. Following the execution of this function, the bucket corresponding to cache misses (infinite reuse distance) is incremented accordingly.
 
+Listing 5.4
 ```pseudo
 function on_block_new(memory_block mb):
     stack.push_front(mb)
@@ -291,14 +296,98 @@ function on_block_new(memory_block mb):
 ```
 #### 5.5 Multi-Threading Support
 
-To support parallel execution of SpMV, the simulator employs the MCS locking technology and OpenMP framework.
+In this cache simulator, the `SharedCache` class, which inherits from the `Cache` base class, manages caches shared across multiple threads. To support parallel execution of SpMV, the simulator employs the Mellor-Crummey and Scott (MCS) Lock technology and OpenMP framework.
+#### 5.5.1 Mellor-Crummey and Scott Lock
+
+The Mellor-Crummey and Scott(MCS) lock[cite] is a variant of the spin lock specifically designed to minimize cache coherence traffic in high-contention scenarios. Unlike traditional spin locks, which notify all waiting threads when the lock is released—thereby triggering the Thundering Herd effect—the MCS lock maintains a FIFO queue and only notifies the next thread in line. Furthermore, each thread spins only on its own locally allocated variable, significantly reducing unnecessary cache coherence overhead.
+
+The `SharedCache` class contains an `mcslock_` member variable, implemented as an MCS lock class that leverages the C++ atomic library for all synchronization operations. As demonstrated in Listing 5.5, this code example allows concurrent access to multiple cache addresses and effectively prevents resource contention.
+
+Listing 5.5
+```cpp
+MCSLock mcslock_;
+mcslock_.lock(thread_id);   // acquire lock
+// critical section, handling (multiple) cache access here
+mcslock_.unlock(thread_id); // release lock
+```
+
+#### 5.5.2 OpenMP
+
+OpenMP is the de facto standard API for developing shared-memory parallel applications in C, C++, and Fortran. The OpenMP parallel programming framework is integrated into this cache simulator through the inclusion of the `omp.h` header file, which provides access to OpenMP's thread management functions.
+
+The implementation employs several key OpenMP constructs: `#pragma omp parallel` creates parallel regions where each thread simulates independent cache behavior using private cache instances. The `#pragma omp for schedule(static)` directive distributes matrix rows evenly among threads, mimicking typical SpMV parallelization strategies. Synchronization is achieved through `#pragma omp barrier` to coordinate timing measurements and `#pragma omp single` to ensure single-threaded execution of critical sections like time recording. Thread-safe cache access is managed through `#pragma omp critical` sections when writing simulation results to CSV files. 
+
+To support shared cache simulation across multiple threads, an array of SharedCache class instances is created that represents all shared cache instances available on the target CPU architecture. Each thread is assigned to a specific shared cache instance based on its thread ID, ensuring that multiple threads can share the same cache while maintaining thread-safe access through appropriate synchronization mechanisms. The `omp_get_thread_num()` function returns the unique identifier of the currently executing thread within the parallel region. The allocation of threads to shared caches is implemented using a simple mapping function that divides the thread ID by the number of threads per shared cache, as illustrated in Listing 5.6.
+
+Listing 5.6
+```cpp
+#include <omp.h>
+
+std::array<SharedCache, num_shared_caches> shared_caches{};
+
+#pragma omp parallel
+    {
+        int tid = omp_get_thread_num();
+        SharedCache &sc = shared_caches[tid / threads_per_shared_cache];
+        
+        #pragma omp for schedule(static)
+        for (/* condition */) {
+        
+            /* ... distributed work ... */
+            
+        }
+    }
+```
+cap: In this project, the distributed work is the cache access handling.
+
+#### 5.6 Cache Simulator Extended with Set-associativity
+
+A key contribution of this research is the enhancement of the reuse distance-based cache simulator. Originally designed to measure cache misses in fully associative cache systems, the simulator was extended to support set-associative cache systems. This enhancement was achieved through three main objectives: (1) the implementation of a set-associative cache structure to simulate real-world n-way caches, (2) the modification of the original bucket system to enable counting of conflict misses, and (3) the development of a processing mechanism that handles cache accesses in the original program while simultaneously simulating their behavior within the set-associative cache structure.
+
+#### 5.6.1 Set-associative Cache Structure
+
+The set-associative cache structure is implemented using arrays of PrivateCache instances to simulate individual cache sets. The number of cache sets for each cache level is calculated based on the cache capacity, associativity, and cache line size. The calculation follows the standard cache design formula where the number of sets equals the cache capacity divided by the product of associativity and cache line size.
+
+For private caches, the implementation creates separate arrays where each element represents a single cache set. The implementation is shown in Listing 5.7, assuming L1 and L2 caches are private:
+
+Listing 5.7
+```cpp
+// Calculate number of cache sets
+#define L1_NSETS (L1_CAPACITY / (L1_WAYS * CACHE_LINE_SIZE))
+#define L2_NSETS (L2_CAPACITY / (L2_WAYS * CACHE_LINE_SIZE))
+
+#pragma omp parallel
+{
+    // Create arrays of cache with cache sets for each thread
+    auto l1_cache = std::vector<PrivateCache>(L1_NSETS);
+    auto l2_cache = std::vector<PrivateCache>(L2_NSETS);
+}
+```
+
+For shared caches, the method for calculating the number of cache sets remains the same. Assuming that in a certain processor, the L3 cache is shared, with a total of `num_shared_caches` shared cache blocks, and every `threads_per_shared_cache` threads share one shared cache block, then the L3 cache can be implemented and allocated using the code in Listing 5.8:
+
+```cpp
+#define L3_NSETS (L3_CAPACITY / (L3_WAYS * CACHE_LINE_SIZE))
+
+// Create arrays of shared cache with cache sets
+std::array<std::vector<SharedCache>, num_shared_caches> l3_shared_caches{};
+for (int i = 0; i < num_shared_caches; i++) {
+    l3_shared_caches[i] = std::vector<SharedCache>(L3_NSETS);
+}
+
+#pragma omp parallel
+{
+    // Acquire current thread number
+    int tid = omp_get_thread_num();
+    
+    // Allocate shared caches for each thread
+    auto& l3c = l3_shared_caches[tid / threads_per_shared_cache];
+}
+```
+
+#### 5.6.2 Modification of Bucket system
 
 
+#### 5.6.3 
 
-#### 5.5.1 MCS Lock
-
-OpenMP is the de facto standard API for developing shared-memory parallel applications in C, C++, and Fortran.
-
-
-
-#### Set-Associative Cache Extension
+The cache set allocation is determined through modulo arithmetic, where the memory address is divided by the number of cache sets to determine which specific cache set should handle the access.
