@@ -195,6 +195,7 @@ This chapter will detail the experimental design of this study.
 
 
 
+
 #### 4.2 Cache Simulator Implementation
 The cache simulator is built upon an existing fully associative cache implementation that uses the stack distance algorithm [Kim et al., 1991] and is modified based on the implementation in [Breiter et al., 2023]. 
 #### 4.2.1 Cache Simulator Architecture
@@ -210,12 +211,21 @@ class Cache {
 ```
 
 
-#### 4.2.2 LRU Replacement Policy
+#### 4.2.2 Bucket System for Reuse Distance Tracking
+
+The concept of employing a bucket system to track and analyze reuse distance was initially proposed by Kim et al. (1991). In Listing 1, the `buckets_` variable is implemented as a vector consisting of multiple buckets. Each bucket contains a parameter named `mindist`, denoting the minimal distance.
+
+Consider a processor configuration with a 32 KiB L1 cache, a 512 KiB L2 cache, no L3 cache, and a cache line size of 64 bytes. In this bucket system, the `buckets` vector comprises four buckets with `mindist` values of 0, 512, 8192, and INF. These four buckets correspond to the L1 cache range, the L2 cache range, cache misses, and an infinite distance category. The minimal distances for the second and third buckets are derived from the L1 capacity divided by the cache line size and the L2 capacity divided by the cache line size, respectively.
+
+ If a cache block is assigned to a particular bucket, it indicates that the block’s stack distance is greater than or equal to the current bucket’s `mindist` and less than the `mindist` of the next bucket. For example, if a cache block exhibits a stack distance of 512, the count in the third bucket—the bucket with a `mindist` of 8192—is incremented. This implies that, under the fully associative cache assumption, the access occurred within the L2 cache range, thereby imcreasing an L2 hit.
+
+#### 4.2.3 LRU Replacement Policy
 
 This cache simulator employs the most common LRU algorithm. In addition to moving the newest memory block to the top of the `stack_` during each cache access, the simulator also performs additional adjustments based on the bucket system.
-#### 4.2.3 Bucket System for Reuse Distance Tracking
 
-The idea of using a bucket system to track and analyze reuse distance was proposed by Kim et al. [1991]. The `buckets_` variable in Listing 1 is a vector composed of multiple buckets. Each bucket contains a parameter named `mindist`, which stands for minimal distance. For example, consider a processor with a 32 KiB L1 cache, a 512 KiB L2 cache, no L3 cache, and a common cache line size of 64 bytes. In this bucket system, the `buckets` variable consists of 4 buckets with mindist values of 0, 512, 8192, and INF. The minimal distances for the second and third buckets are derived from (L1 capacity / cache line size) and (L2 capacity / cache line size), respectively.
 
-继续写什么情况下哪个桶计数增加, 写完了扔给 ds 润色
 
+
+#### Address Mapping
+
+#### Multiple Thread Support
