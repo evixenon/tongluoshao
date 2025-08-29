@@ -197,35 +197,40 @@ This chapter will detail the experimental design of this study.
 
 
 #### 4.2 Cache Simulator Implementation
+
 The cache simulator is built upon an existing fully associative cache implementation that uses the stack distance algorithm [Kim et al., 1991] and is modified based on the implementation in [Breiter et al., 2023]. 
 #### 4.2.1 Cache Simulator Architecture
 
-Listing 1 illustrates the data structure of the `Cache` class. This class can be used independently as a cache simulator to emulate the behavior of a cache at a specific level, such as an L1 cache. Within this structure, `stack_` is implemented as a doubly linked list that stores the cache blocks, which contains the bucket number. The most recently accessed block is located at the top of the stack (the head of the linked list), whereas the least recently accessed block resides at the bottom. To enable fast lookups, `refmap_` is provided as a vector where each index corresponds to a cache line address, and each value is an iterator pointing to the corresponding block within `stack_`. The `buckets_` variable is a vector used to track cache hits and misses.
+Listing 1 illustrates the data structure of the `Cache` class. This class can be used independently as a cache simulator to emulate the behavior of a cache at a specific level, such as an L1 cache. Within this structure, `stack_` is implemented as a doubly linked list that stores the cache blocks. The most recently accessed block is located at the top of the stack (the head of the linked list), whereas the least recently accessed block resides at the bottom. To enable fast lookups, `refmap_` is provided as a `unordered_map` container where each index corresponds to a cache line address, and each value is an iterator pointing to the corresponding block within `stack_`. The `buckets_` variable is a vector used to track cache hits and misses.
 
 ```cpp
 class Cache {
-    std::list<MemoryBlock> stack_{};  // 缓存栈
-    std::vector<list<MemoryBlock>::iterator> refmap_{};  // 引用映射
-    std::vector<Bucket> buckets_{};  // 桶系统
+    std::list<MemoryBlock> stack_{};
+    std::unordered_map<Addr, StackIterator> refmap_{};
+    std::vector<Bucket> buckets_{};
 };
 ```
 
 
+`MemoryBlock` is a custom data structure that models a cache block. `StackIterator`, defined as an alias for `std::list<MemoryBlock>::iterator`, represents an iterator used to traverse and manipulate elements within the `stack_` container. `Addr` is an integer type alias specifically designated for representing virtual address line numbers. `Bucket` is another custom structure designed for collecting and categorizing cache hit statistics.
+
 #### 4.2.2 Bucket System for Reuse Distance Tracking
 
-The concept of employing a bucket system to track and analyze reuse distance was initially proposed by Kim et al. (1991). In Listing 1, the `buckets_` variable is implemented as a vector consisting of multiple buckets. Each bucket contains a parameter named `mindist`, denoting the minimal distance.
+The concept of employing a bucket system to track and analyze reuse distance was proposed by [Kim et al. (1991)]. In Listing 1, the `buckets_` variable is implemented as a vector consisting of multiple buckets. Each bucket contains a parameter named `mindist`, denoting the minimal distance.
 
 Consider a processor configuration with a 32 KiB L1 cache, a 512 KiB L2 cache, no L3 cache, and a cache line size of 64 bytes. In this bucket system, the `buckets` vector comprises four buckets with `mindist` values of 0, 512, 8192, and INF. These four buckets correspond to the L1 cache range, the L2 cache range, cache misses, and an infinite distance category. The minimal distances for the second and third buckets are derived from the L1 capacity divided by the cache line size and the L2 capacity divided by the cache line size, respectively.
 
  If a cache block is assigned to a particular bucket, it indicates that the block’s stack distance is greater than or equal to the current bucket’s `mindist` and less than the `mindist` of the next bucket. For example, if a cache block exhibits a stack distance of 512, the count in the third bucket—the bucket with a `mindist` of 8192—is incremented. This implies that, under the fully associative cache assumption, the access occurred within the L2 cache range, thereby imcreasing an L2 hit.
 
-#### 4.2.3 LRU Replacement Policy
+#### 4.2.3 Address Mapping
+
+
+#### 4.2.4 LRU Replacement Policy
 
 This cache simulator employs the most common LRU algorithm. In addition to moving the newest memory block to the top of the `stack_` during each cache access, the simulator also performs additional adjustments based on the bucket system.
 
+As mentioned in Listing 1, the `stack_` member variable is a list container holding `MemoryBlock` structures, with each MemoryBlock simulating a cache block. Within this structure, a `bucket_idx` integer variable records the bucket index where the cache block should reside. When the cache simulator attempts to access a cache block at address x, it first uses `refmap_.find(x)` to obtain the iterator for that cache block within `stack_`. It then processes the block using two functions: `on_block_seen()` for blocks already present in the cache history, and `on_block_new()` for blocks that have never entered the cache.
 
 
-
-#### Address Mapping
 
 #### Multiple Thread Support
