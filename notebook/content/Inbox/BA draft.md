@@ -182,7 +182,7 @@ Virtual-to-Physical Address Mapping
 
 In simulation environments, cache behavior prediction is often performed using virtual addresses for simplicity. However, real hardware caches typically use physical addresses for indexing and tagging. The translation from virtual to physical addresses might map two virtually contiguous addresses to non-contiguous physical addresses, potentially causing different collision patterns in the cache sets than those predicted by virtual-address-based models.
 
-Multithreading and Inter-core Interference
+Multi-threading and Inter-core Interference
 
 In real multi-core processors, shared cache contention from other threads significantly perturbs the access pattern and eviction flow, an effect rarely captured in simulation, leading to overly optimistic predictions.
 
@@ -193,13 +193,13 @@ This chapter will detail the experimental design of this study.
 
 #### 4.1 Experimental Tools and Platform
 
+4.2 Experiment procedure
 
 
-
-#### 4.2 Cache Simulator Implementation
+#### 5. Implementation
 
 The cache simulator is built upon an existing fully associative cache implementation that uses the stack distance algorithm [Kim et al., 1991] and is modified based on the implementation in [Breiter et al., 2023]. 
-#### 4.2.1 Cache Simulator Architecture
+#### 5.1 Cache Simulator Architecture
 
 Listing 1 illustrates the data structure of the `Cache` class. This class can be used independently as a cache simulator to emulate the behavior of a cache at a specific level, such as an L1 cache. Within this structure, `stack_` is implemented as a doubly linked list that stores the cache blocks. The most recently accessed block is located at the top of the stack (the head of the linked list), whereas the least recently accessed block resides at the bottom. To enable fast lookups, `refmap_` is provided as a `unordered_map` container where each index corresponds to a cache line address, and each value is an iterator pointing to the corresponding block within `stack_`. The `buckets_` variable is a vector used to track cache hits and misses.
 
@@ -214,7 +214,7 @@ class Cache {
 
 `MemoryBlock` is a custom data structure that models a cache block. `StackIterator`, defined as an alias for `std::list<MemoryBlock>::iterator`, represents an iterator used to traverse and manipulate elements within the `stack_` container. `Addr` is an integer type alias specifically designated for representing virtual address line numbers. `Bucket` is another custom structure designed for collecting and categorizing cache hit statistics.
 
-#### 4.2.2 Bucket System for Reuse Distance Tracking
+#### 5.2 Bucket System for Reuse Distance Tracking
 
 The concept of employing a bucket system to track and analyze reuse distance was proposed by [Kim et al. (1991)]. In Listing 1, the `buckets_` variable is implemented as a vector consisting of multiple buckets. Each bucket contains a parameter named `mindist`, denoting the minimal distance.
 
@@ -222,13 +222,13 @@ Consider a processor configuration with a 32 KiB L1 cache, a 512 KiB L2 cache, n
 
  If a cache block is assigned to a particular bucket, it indicates that the block’s stack distance is greater than or equal to the current bucket’s `mindist` and less than the `mindist` of the next bucket. For example, if a cache block exhibits a stack distance of 512, the count in the third bucket—the bucket with a `mindist` of 8192—is incremented. This implies that, under the fully associative cache assumption, the access occurred within the L2 cache range, thereby imcreasing an L2 hit.
 
-#### 4.2.3 Address Mapping
+#### 5.3 Address Mapping
 
-This cache simulator does not employ actual SpMV computations but instead utilizes the virtual address mapping solution designed for SpMV cache partitioning in [Brei20]. The SpMV workload are systemetically allocated to distinct regions of the virtual cache line space. The vector x, which contains the input values, is mapped to cache lines starting from zero. The row pointer array, which stores the starting indices for each row in the sparse matrix, follows immediately after the vector x. The output vector y and the matrix values array are then mapped to subsequent cache line regions. Finally, the column index array, which stores the column positions of non-zero elements, occupies the highest cache line numbers in our virtual address space.
+This cache simulator did not employ actual SpMV computations but instead utilizes the virtual address mapping solution designed for SpMV cache partitioning in [Brei20]. The SpMV workload are systemetically allocated to distinct regions of the virtual cache line space. The vector x, which contains the input values, is mapped to cache lines starting from zero. The row pointer array, which stores the starting indices for each row in the sparse matrix, follows immediately after the vector x. The output vector y and the matrix values array are then mapped to subsequent cache line regions. Finally, the column index array, which stores the column positions of non-zero elements, occupies the highest cache line numbers in our virtual address space.
 
 [Figure cite]
 
-The cline() function serves as the convertor of the address mapping system. This function calculates the required offset by locating the first set bit in the cache line size divided by the data type size, then shifts the memory index right by that number of bits to obtain the cache line number. 
+The `cline()` function serves as the convertor of the address mapping system. This function calculates the required offset by locating the first set bit in the cache line size divided by the data type size, then shifts the memory index right by that number of bits to obtain the cache line number. 
 
 [Listing of cline()]
 ```cpp
@@ -250,11 +250,55 @@ Addr cline(uint64_t idx)
 
 Listing 2 demonstrates the code principles of `cline()` function. In the actual program, constant expression grammar is employed to prevent redundant computations. The template parameter T represents the data type of values within the matrix, while CLSIZE denotes the cache line size. The function returns a virtual line address, which can be utilized for subsequent cache access simulation.
 
-#### 4.2.4 LRU Replacement Policy
+#### 5.4 LRU Replacement Policy
 
 This cache simulator employs the most common LRU algorithm. In addition to moving the newest memory block to the top of the `stack_` during each cache access, the simulator also performs additional adjustments based on the bucket system.
 
-As mentioned in Listing 1, the `stack_` member variable is a list container holding `MemoryBlock` structures, with each MemoryBlock simulating a cache block. Within this structure, a `bucket_idx` integer variable records the bucket index where the cache block should reside. When the cache simulator attempts to access a cache block at address x, it first uses `refmap_.find(x)` to obtain the iterator for that cache block within `stack_`. It then processes the block using two functions: `on_block_seen()` for blocks already present in the cache history, and `on_block_new()` for blocks that have never entered the cache.
+As mentioned in Listing 1, the `stack_` member variable is a list container holding `MemoryBlock` structures, with each `MemoryBlock` simulating a cache block. Within this structure, a `bucket_idx` integer variable records the bucket index where the cache block should reside. When the cache simulator attempts to access a cache block at address x, it first uses `refmap_.find(x)` to obtain the iterator for that cache block within `stack_`. It then processes the block using two functions: `on_block_seen()` for blocks already present in the cache history, and `on_block_new()` for blocks that have never entered the cache.
+
+```pseudo
+function on_block_seen(iterator it):
+    
+    // Record current bucket index
+    bucket = it->bucket_idx
+    result = {bucket}
+    
+    // Move all bucket markers below current block's bucket
+    move_markers(bucket)
+    
+    stack.splice(stack.begin(), stack, it)  
+    it->bucket_idx = 0
+    
+    return result  // Return bucket index for statistics
+```
+
+For cache blocks that have been previously encountered, the `on_block_seen()` function takes a stack iterator as input and returns the bucket index for statistical analysis. This function first retrieves the current bucket index of the accessed cache block, then invokes `move_markers()` to adjust the bucket indices of other cache blocks in the stack accordingly. Subsequently, it resets the bucket index of the accessed block to 0, signifying that this block now belongs to the topmost bucket in `buckets_`. Following standard LRU replacement policy, the cache block is relocated to the top of the stack using the `splice` operation. The function's return value indicates which bucket's access counter should be incremented in the cache simulator. Listing 4 presents the pseudocode for the `on_block_seen()` function.
+
+Listing 5 presents the pseudocode for the `on_block_new()` function. In contrast to `on_block_seen()`, this function constantly processes newly instantiated blocks, which are initialized with a bucket index of 0. After inserting a new block onto the stack, the function evaluates whether to activate the next bucket based on the current stack size and predefined distance thresholds. The function returns an iterator pointing to the newly inserted block. Following the execution of this function, the bucket corresponding to cache misses (infinite reuse distance) is incremented accordingly.
+
+```pseudo
+function on_block_new(memory_block mb):
+    stack.push_front(mb)
+    
+    // Move all active bucket markers upward
+    move_markers(next_bucket - 1)
+    
+    // Check if next bucket should be activated
+    if stack.size > min_distance[next_bucket]:
+        activate_next_bucket()
+    
+    return stack.begin()  // Return iterator to new block
+```
+#### 5.5 Multi-Threading Support
+
+To support parallel execution of SpMV, the simulator employs the MCS locking technology and OpenMP framework.
 
 
-#### Multiple Thread Support
+
+#### 5.5.1 MCS Lock
+
+OpenMP is the de facto standard API for developing shared-memory parallel applications in C, C++, and Fortran.
+
+
+
+#### Set-Associative Cache Extension
