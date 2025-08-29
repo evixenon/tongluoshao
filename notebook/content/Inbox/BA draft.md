@@ -224,13 +224,37 @@ Consider a processor configuration with a 32 KiB L1 cache, a 512 KiB L2 cache, n
 
 #### 4.2.3 Address Mapping
 
+This cache simulator does not employ actual SpMV computations but instead utilizes the virtual address mapping solution designed for SpMV cache partitioning in [Brei20]. The SpMV workload are systemetically allocated to distinct regions of the virtual cache line space. The vector x, which contains the input values, is mapped to cache lines starting from zero. The row pointer array, which stores the starting indices for each row in the sparse matrix, follows immediately after the vector x. The output vector y and the matrix values array are then mapped to subsequent cache line regions. Finally, the column index array, which stores the column positions of non-zero elements, occupies the highest cache line numbers in our virtual address space.
+
+[Figure cite]
+
+The cline() function serves as the convertor of the address mapping system. This function calculates the required offset by locating the first set bit in the cache line size divided by the data type size, then shifts the memory index right by that number of bits to obtain the cache line number. 
+
+[Listing of cline()]
+```cpp
+template <typename T, size_t CLSIZE>
+Addr cline(uint64_t idx)
+{
+    int x = CLSIZE / sizeof(T);
+    
+    int n = 0;
+    while ((x & 1) == 0) {
+        x >>= 1;
+        n++;
+    }
+
+    static auto first_bit_set = n;
+    return static_cast<Addr>(idx >> first_bit_set);
+}
+```
+
+Listing 2 demonstrates the code principles of `cline()` function. In the actual program, constant expression grammar is employed to prevent redundant computations. The template parameter T represents the data type of values within the matrix, while CLSIZE denotes the cache line size. The function returns a virtual line address, which can be utilized for subsequent cache access simulation.
 
 #### 4.2.4 LRU Replacement Policy
 
 This cache simulator employs the most common LRU algorithm. In addition to moving the newest memory block to the top of the `stack_` during each cache access, the simulator also performs additional adjustments based on the bucket system.
 
 As mentioned in Listing 1, the `stack_` member variable is a list container holding `MemoryBlock` structures, with each MemoryBlock simulating a cache block. Within this structure, a `bucket_idx` integer variable records the bucket index where the cache block should reside. When the cache simulator attempts to access a cache block at address x, it first uses `refmap_.find(x)` to obtain the iterator for that cache block within `stack_`. It then processes the block using two functions: `on_block_seen()` for blocks already present in the cache history, and `on_block_new()` for blocks that have never entered the cache.
-
 
 
 #### Multiple Thread Support
