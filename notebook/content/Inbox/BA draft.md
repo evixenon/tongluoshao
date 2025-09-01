@@ -262,6 +262,8 @@ This cache simulator employs the most common LRU algorithm. In addition to movin
 
 As mentioned in Listing 5.1, the `stack_` member variable is a list container holding `MemoryBlock` structures, with each `MemoryBlock` simulating a cache block. Within this structure, a `bucket_idx` integer variable records the bucket index where the cache block should reside. The `handle_cline()` function is an entry of address handling. When the cache simulator attempts to access a cache block at address x, it first uses `refmap_.find(x)` to obtain the iterator for that cache block within `stack_`. It then processes the block using two functions: `on_block_seen()` for blocks already present in the cache history, and `on_block_new()` for blocks that have never entered the cache.
 
+加一个 handle_cline()
+
 Listing 5.3
 ```pseudo
 function on_block_seen(iterator it):
@@ -306,7 +308,7 @@ The Mellor-Crummey and Scott(MCS) lock[cite] is a variant of the spin lock speci
 
 The `SharedCache` class contains an `mcslock_` member variable, implemented as an MCS lock class that leverages the C++ atomic library for all synchronization operations. As demonstrated in Listing 5.5, this code example allows concurrent access to multiple cache addresses and effectively prevents resource contention.
 
-Listing 5.5
+Listing 5.5 改, 把 handle_shared 放进来
 ```cpp
 MCSLock mcslock_;
 mcslock_.lock(thread_id);   // acquire lock
@@ -393,11 +395,20 @@ uml 示意图
 
 #### 5.6.2 Modification of Bucket system
 
+As introduced in Section 5.2, the original bucket system assigns each bucket a `min_dist` attribute, which denotes the minimum reuse distance of cache blocks within that bucket, while also serving as a statistical container.
+
+To adapt this system to a set-associative cache, specifically, to track and quantify conflict misses under set-associative mappings, the `min_dist` values must be replaced with the number of ways at each cache level. For instance, consider an L1 cache with 4-way associativity, an L2 cache with 4-way associativity, and an L3 cache with 8-way associativity. In this case, the corresponding `min_dist` values for the buckets would be 0, 4, 8, and ∞. The L1 and L2 caches share the same number of ways, however, duplicate buckets are unnecessary.
+
+#### 5.6.3 Set Selection
+
+The cache set allocation is determined through modulo operation, where the memory address is divided by the number of cache sets to determine which specific cache set should handle the access. For each cache level, the set index is calculated as:
+
+The address-to-set mapping is implemented through a simple modulo operation that distributes memory accesses across the available cache sets. For each cache level, the set index is calculated as:
+
+$$ set\ number = addr\ \%\ number\ of\ sets\ in\ cache$$
 
 
-#### 5.6.3 Set
 
-The cache set allocation is determined through modulo arithmetic, where the memory address is divided by the number of cache sets to determine which specific cache set should handle the access.
 
 #### 并行问题, 可能解释 shared 错误的
 #### 结果是怎么统计的
