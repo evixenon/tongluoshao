@@ -223,11 +223,14 @@ The concept of employing a bucket system to track and analyze reuse distance was
 
 Consider a processor configuration with a 32 KiB L1 cache, a 512 KiB L2 cache, no L3 cache, and a cache line size of 64 bytes. In this bucket system, the `buckets` vector comprises four buckets with `mindist` values of 0, 512, 8192, and INF. These four buckets correspond to the L1 cache range, the L2 cache range, cache misses, and an infinite distance category. The minimal distances for the second and third buckets are derived from the L1 capacity divided by the cache line size and the L2 capacity divided by the cache line size, respectively.
 
+图?
+
  If a cache block is assigned to a particular bucket, it indicates that the block’s stack distance is greater than or equal to the current bucket’s `mindist` and less than the `mindist` of the next bucket. For example, if a cache block exhibits a stack distance of 512, the count in the third bucket—the bucket with a `mindist` of 8192—is incremented. This implies that, under the fully associative cache assumption, the access occurred within the L2 cache range, thereby imcreasing an L2 hit.
+
 
 #### 5.3 Address Mapping
 
-This cache simulator did not employ actual SpMV computations but instead utilizes the virtual address mapping solution designed for SpMV cache partitioning in [Brei20]. The SpMV workload are systemetically allocated to distinct regions of the virtual cache line space. The vector x, which contains the input values, is mapped to cache lines starting from zero. The row pointer array, which stores the starting indices for each row in the sparse matrix, follows immediately after the vector x. The output vector y and the matrix values array are then mapped to subsequent cache line regions. Finally, the column index array, which stores the column positions of non-zero elements, occupies the highest cache line numbers in our virtual address space.
+This cache simulator did not employ actual SpMV computations, instead, utilizes the virtual address mapping solution designed for SpMV cache partitioning in [Brei20]. The SpMV workload are systemetically allocated to distinct regions of the virtual cache line space. The vector x, which contains the input values, is mapped to cache lines starting from zero. The row pointer array, which stores the starting indices for each row in the sparse matrix, follows immediately after the vector x. The output vector y and the matrix values array are then mapped to subsequent cache line regions. Finally, the column index array, which stores the column positions of non-zero elements, occupies the highest cache line numbers in our virtual address space.
 
 [Figure cite]
 
@@ -307,7 +310,7 @@ Listing 5.5
 ```cpp
 MCSLock mcslock_;
 mcslock_.lock(thread_id);   // acquire lock
-// critical section, handling (multiple) cache access here
+// ... critical section, handling (multiple) cache access here ...
 mcslock_.unlock(thread_id); // release lock
 ```
 
@@ -385,9 +388,17 @@ for (int i = 0; i < num_shared_caches; i++) {
 }
 ```
 
+
+uml 示意图
+
 #### 5.6.2 Modification of Bucket system
 
 
-#### 5.6.3 
+
+#### 5.6.3 Set
 
 The cache set allocation is determined through modulo arithmetic, where the memory address is divided by the number of cache sets to determine which specific cache set should handle the access.
+
+#### 并行问题, 可能解释 shared 错误的
+#### 结果是怎么统计的
+
