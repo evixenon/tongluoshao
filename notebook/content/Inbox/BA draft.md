@@ -209,15 +209,24 @@ Sparse Matrix-Vector multiplication is a fundamental kernel routine in numerical
 
 
 The principal challenge and design focus of efficient SpMV implementations stem from the matrix's sparsity. SpMV algorithms strategically avoid unnecessary arithmetic on zero operands. Specifically, they ensure that each element of the matrix is accessed only once during computation. However, the irregular and data-dependent access pattern to the vector `x` often results in poor cache utilization, presenting a significant performance bottleneck.
-Consequently, the performance of spMV is typically not governed by floating-point operation throughput but is predominantly constrained by memory bandwidth limitations. This necessitates specialized storage formats (e.g., Compressed Sparse Row - CSR, Compressed Sparse Column - CSC) that encapsulate only the non-zero values and their coordinates, thereby reducing memory footprint and access overhead.
-#### SpMV Workload
+
+Different sparse matrix storage formats also affect cache access patterns. In this study, the CSR format is employed. The CSR format stores a matrix using three arrays: `var[]` stores all nonzeros, `col_idx[]` stores the column index of each nonzero element, and `row_ptr[]` stores the starting index of each new row in `val[]`. Listing aa shows the pseudocode for performing SpMV operations using the CSR format. In the study, this operation is not actually executed; instead, simulated cache accesses to matrices and vectors are performed.
+
+Listing aa
+```pseudo
+do i = 1, Nr
+    do j = row_ptr(i), row_ptr(i+1) - 1
+        y(i) = y(i) + val(j) * A(col_idx(j))
+    enddo
+enddo
+```
+#### Sparse Matrix-Vector Dataset
 
 The SuiteSparse Matrix Collection from the University of Florida[] is a widely recognized repository of sparse matrices derived from a wide spectrum of domains. It serves as a standard benchmark in evaluating the performance of sparse matrix algorithms. In this study, the dataset was used as the workload for SpMV. 
 
 The matrices within the collection span a broad range of application domains, including both geometric (such as 2D/3D models) and non-geometric problems. Furthermore, the dataset includes matrices of varying scales, ranging from small to medium and large dimensions, making it suitable for computational experiments. By providing a diverse set of realistically occurring matrices, the collection supports robust and reproducible experimental comparisons.
 
-
-
+About页面有关于特征的论文
 
 #### 5. Implementation
 
