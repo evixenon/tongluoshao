@@ -191,9 +191,11 @@ In real multi-core processors, shared cache contention from other threads sign
 
 This chapter will detail the experimental design of this study. 
 
-#### 4.1 Experimental Tools and Platform
+#### 4.1 Tools and Experimental Platform
 
-4.2 Experiment procedure
+
+#### 4.2 Experimental Procedure
+
 
 
 #### 5. Implementation
@@ -308,12 +310,19 @@ The Mellor-Crummey and Scott(MCS) lock[cite] is a variant of the spin lock speci
 
 The `SharedCache` class contains an `mcslock_` member variable, implemented as an MCS lock class that leverages the C++ atomic library for all synchronization operations. As demonstrated in Listing 5.5, this code example allows concurrent access to multiple cache addresses and effectively prevents resource contention.
 
-Listing 5.5 改, 把 handle_shared 放进来
+Listing 5.5 Using MCS Lock to handle three cache accesses together
 ```cpp
 MCSLock mcslock_;
-mcslock_.lock(thread_id);   // acquire lock
-// ... critical section, handling (multiple) cache access here ...
-mcslock_.unlock(thread_id); // release lock
+
+void handle_clines_shared(int tid, Addr a0, Addr a1, Addr a2)
+{
+    mcslock_.lock(tid);
+    handle_cline(a0);
+    handle_cline(a1);
+    handle_cline(a2);
+    mcslock_.unlock(tid);
+}
+
 ```
 
 #### 5.5.2 OpenMP
@@ -391,7 +400,7 @@ for (int i = 0; i < num_shared_caches; i++) {
 ```
 
 
-uml 示意图
+调整后的结构 uml 示意图
 
 #### 5.6.2 Modification of Bucket system
 
@@ -407,13 +416,13 @@ $$ set\ index = address\ \mod\ number\ of\ sets\ in\ cache$$
 
 Listing demonstrated the code used in the project, assuming private L1 and a shared L2 cache. In the base program, each location `handle_cline()` is invoked to process a cache access, `handle_cline_in_set()` is invoked for set-specific handling.
 
+Listing x
 ```cpp
 void handle_cline_in_set(int tid, Addr addr, 
     std::vector<PrivateCache> &l1c, std::vector<SharedCache> &l2c)
 {
     int l1_set_index = addr % L1_NSETS;
     int l2_set_index = addr % L2_NSETS;
-    int l3_set_index = addr % L3_NSETS;
     
     l1c[l1_set_index].handle_cline(addr);
     l2c[l2_set_index].handle_cline_shared(tid, addr);
@@ -423,9 +432,46 @@ void handle_cline_in_set(int tid, Addr addr,
 
 #### 5.6.4 Parallel handling
 
+As outlined in Section 5.5.1, the program initially intended to use MCS Lock to process multiple cache accesses simultaneously within a critical section. However, due to structural constraints in the program design, this approach was abandoned. Instead, the implemented version processes only one cache access at a time within the shared cache.
+
+The function responsible for handling an access within a cache set is named `handle_cline_in_set()`. For every cache access processed in the original program via `handle_cline()` or `handle_cline_shared()`, the modified implementation now invokes `handle_cline_in_set()` once. This ensures that the frequency of cache access processing remains consistent with the original program, thereby minimizing potential cache inconsistencies introduced by multi-threaded handling. Given that our research does not focus on the efficiency of the cache simulator, the additional computational overhead is considered acceptable.
+
+Listing x shows the source code of the `handle_cline_in_set()` function, while Listing y illustrates the handling of a specific cache access, including the calculation of the virtual address and the subsequent function calls. The method for determining the virtual address has been described previously in Section 5.3.
+
+Listing y
+```cpp
+    auto cl_row = cl_row_start + cline<rowptr_t, MEMBLOCKLEN>(first_row);
+    pc.handle_cline(cl_row);
+    sc.handle_cline_shared(tid, cl_row);
+    handle_cline_in_set(tid, cl_row, l1c, l2c);
+```
 
 
+#### 5.6.5 Statistics Collection
 
+Since a `std::vector<Cache>` is used to model a cache with multiple sets, the counts of non-conflicted cache hits are distributed across the individual elements of the vector. To aggregate these statistics, a new function named `print_set_assoc_statistics()` was implemented.
 
-#### 结果是怎么统计的
+This function first calculates the `working_set_size`, defined as the total number of unique cache lines across all sets, which is used for validation purposes. It then employs a two-level nested loop to accumulate the counts from each cache set, producing aggregated memory access statistics per reuse distance bucket. Finally, the results are printed using a single loop. The source code of this function is provided in Listing z.
 
+```cpp
+void print_set_assoc_statistics(FILE *file, const auto& matrix, std::vector<Cache>& cache_sets, const char* level, int id, double time, int shared) {
+    
+    size_t bucket_size = Bucket::min_dists.size();
+    
+    unsigned long working_set_size = 0;
+    std::vector<unsigned long> counts(bucket_size, 0);
+    
+    for (size_t i = 0; i < cache_sets.size(); i++) {
+        working_set_size += cache_sets[i].get_stack_size();
+        for (size_t j = 0; j < bucket_size; j++) {
+            counts[j] += cache_sets[i].get_buckets()[j].access_counts.count;
+        }
+    }
+    
+    for (size_t i = 0; i < bucket_size; i++) {
+        /* ... print results to a csv file ... */
+    }
+}
+```
+
+#### python analysis
