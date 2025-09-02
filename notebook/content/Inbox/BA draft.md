@@ -4,6 +4,9 @@ date: "2025-08-23"
 tags:
 ---
 
+#### 2 intro
+This paper focuses entirely on the cache system of modern computers. To better understand the paper, this chapter introduces basic cache knowledge, emphasizing content relevant to this research and briefly introducing related technologies not used.
+
 #### 2.1 Role of Caches in Modern Computer Architecture
 
 - 为什么需要 cache
@@ -115,8 +118,6 @@ In contrast, the *write-back* policy mitigates write latency by deferring the 
 
 The choice of write policy is often coupled with a decision on *write allocation*. On a write miss, a *write-allocate* policy will load the missed block into the cache from memory and then perform the write operation on the cached copy. This policy is typically used with write-back caches. Conversely, a *no-write-allocate* policy bypasses the cache and writes directly to lower-level memory, making it more suitable for write-through caches. Modern systems predominantly employ a write-back policy with write allocation to optimize for the common case of localized write patterns.
 
-#### 2 intro
-This paper focuses entirely on the cache system of modern computers. To better understand the paper, this chapter introduces basic cache knowledge, emphasizing content relevant to this research and briefly introducing related technologies not used.
 
 #### 3 intro
 As established in Section 2.1, the growing performance gap between processor and memory speeds has made the memory subsystem a critical bottleneck in modern computing systems. Caches serve as a fundamental technique to mitigate this gap by storing frequently accessed data close to the processor. Consequently, improving cache utilization efficiency is directly linked to enhancing overall system performance. To achieve this, a deeper understanding of cache access patterns is essential. This necessity motivates the field of cache behavior prediction, which aims to anticipate future data accesses and manage cache resources more intelligently.
@@ -192,6 +193,12 @@ In real multi-core processors, shared cache contention from other threads sign
 This chapter will detail the experimental design of this study. 
 #### 4.1 Experimental Platform and Tools
 
+#### Testing Environment
+The experiments are conducted in the Bavarian Energy Architecture & Software Testbed(BEAST) environment at Leibniz Supercomputing Centre(LRZ). Beast 实验环境中提供了多种 state-of-the-art hardware architectures, 可以在 OpenMP 接口及其目标卸载功能的帮助下处理 GPU 编程和代码重定位. 在本次研究中, 基于其中四种不同的 cpu model 执行测试.
+
+https://www.lrz.de/presse/ereignisse/2020-11-06_BEAST/
+
+The A64FX is a 48-core processor with private 64 KiB 4-way L1D caches grouped into four NUMA domains. Each NUMA domain has an 8 MiB 16-way last-level L2 cache, shared by 12 cores each, and is connected to an HBM2 module [10] This is an ARM system by Fujitsu with a rather simple topology (48 cores, each core has a private L1 cache, 12 cores share the same last-level L2 cache, no L3 cache).
 
 #### OpenMP
 
@@ -225,7 +232,10 @@ The SuiteSparse Matrix Collection from the University of Florida[] is a widely r
 
 The matrices within the collection span a broad range of application domains, including both geometric (such as 2D/3D models) and non-geometric problems. Furthermore, the dataset includes matrices of varying scales, ranging from small to medium and large dimensions, making it suitable for computational experiments. By providing a diverse set of realistically occurring matrices, the collection supports robust and reproducible experimental comparisons.
 
-选择了其中40
+According to Davis and Hu’s 2011 study, matrices within the dataset can be classified into 27 distinct application domains[]. In this work, 40 matrices were selected from the collection, encompassing 18 of these categories as indicated by the “kind” tag in the data source. During the selection process, a wide variety of matrix sources were incorporated  (also referred to as the group attribute), with the number of nonzeros scaling from \_ to \_. Table 4.1 lists the data tags for the selected matrices.
+
+todo range
+todo 表格
 
 #### 4.2 Experimental Procedure
 

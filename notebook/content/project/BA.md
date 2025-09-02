@@ -57,7 +57,6 @@ cpu uses SRAM
 
 The stack distance algorithm is based on [Kim et al. 1991](https://dl.acm.org/doi/pdf/10.1145/107972.107995)
 
-Beast: 
 Christie Alappat, Nils Meyer, Jan Laukemann, Thomas Gruber, Georg Hager, Gerhard Wellein, and Tilo Wettig. 2022. Execution-Cache-Memory modeling and performance tuning of sparse matrix-vector multiplication and Lattice quantum chromodynamics on A64FX. Concurrency and Computation: Practice and Experience 34, 20 (2022), e6512. 
 ## extend
 
@@ -1480,7 +1479,7 @@ Freescale circuit5M_dc Circuit Simulation Problem
 GAP GAP-road Directed Weighted Graph
 GHS_indef mario002 Duplicate 2D/3D Problem
 Gleich wikipedia-20051105 Directed Graph
-Goodwin Goodwin_054 Computational Fluid Dynamics
+Goodwin Goodwin_054 Computational Fluid Dynamics 
 Gupta gupta1 Optimization Problem
 HB bcsstk30 Structural Problem
 Janna ML_Laplace Structural Problem
@@ -1500,7 +1499,7 @@ VLSI nv1 Semiconductor Device Problem
 Williams pdb1HYS Weighted Undirected Graph
 Zaoui kkt_power Optimization Problem
 
-
+18种
 
 
 
