@@ -187,16 +187,15 @@ Multi-threading and Inter-core Interference
 In real multi-core processors, shared cache contention from other threads significantly perturbs the access pattern and eviction flow, an effect rarely captured in simulation, leading to overly optimistic predictions.
 
 
-#### 4 intro
+#### 4 Methodology
 
 This chapter will detail the experimental design of this study. 
-#### 4.1 Experimental Procedure
+#### 4.1 Experimental Platform and Tools
 
-#### 4.2 Tools and Experimental Platform
 
 #### OpenMP
 
-OpenMP is the de facto standard API for developing shared-memory parallel applications in C, C++, and Fortran.
+The parallel programming content in this study utilizes OpenMP directives. OpenMP is the de facto standard API for developing shared memory parallel applications in C, C++, and Fortran. It enables programmers to parallelize serial code easily by adding compiler directives (pragmas), without requiring in-depth knowledge of low-level hardware details or complex multithreaded management. OpenMP is particularly suited for the shared memory parallelism model, in which all threads operate within a single address space and share data seamlessly. This allows multiple threads to access the same memory locations and efficiently share variable values. 
 
 #### Sparse Matrix-Vector multiplication
 This study investigated the cache behavior while simulating a Sparse Matrix-Vector multiplication program. Sparse Matrix-Vector multiplication (SpMV), denoted operation of multiplying a sparse matrix and a vector. Wilkinson stated his definition of sparse matrix in [Wilkinson 12]:
@@ -226,7 +225,10 @@ The SuiteSparse Matrix Collection from the University of Florida[] is a widely r
 
 The matrices within the collection span a broad range of application domains, including both geometric (such as 2D/3D models) and non-geometric problems. Furthermore, the dataset includes matrices of varying scales, ranging from small to medium and large dimensions, making it suitable for computational experiments. By providing a diverse set of realistically occurring matrices, the collection supports robust and reproducible experimental comparisons.
 
-About页面有关于特征的论文
+选择了其中40
+
+#### 4.2 Experimental Procedure
+
 
 #### 5. Implementation
 

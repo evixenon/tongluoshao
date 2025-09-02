@@ -1456,3 +1456,62 @@ cache line size: 64 B
 
 论点+找论据支持/源头
 
+
+#### 矩阵统计
+AG-Monien debr Undirected Graph Sequence
+AG-Monien wave 2D/3D Problem
+AMD G3_circuit Circuit Simulation Problem
+Andrianov ins2 Optimization Problem
+ATandT pre2 Frequency Domain Circuit Simulation Problem
+Belcastro human_gene1 Undirected Weighted Graph
+Bodendiek CurlCurl_1 Model Reduction Problem
+Boeing bcsstk35 Structural Problem
+Boeing pcrystk03 Duplicate Materials Problem
+Botonakis thermomech_dK Thermal Problem
+Bourchtein atmosmodd Computational Fluid Dynamics Problem
+Castrillon denormal Counter Example Problem
+CEMW t2em Electromagnetics Problem
+Chen pkustk03 Structural Problem
+Cunningham qa8fk Acoustics Problem
+DIMACS10 AS365 Undirected Graph
+DIMACS10 rgg_n_2_19_s0 Undirected Random Graph
+Dziekonski dielFilterV2real Electromagnetics Problem
+Freescale circuit5M_dc Circuit Simulation Problem
+GAP GAP-road Directed Weighted Graph
+GHS_indef mario002 Duplicate 2D/3D Problem
+Gleich wikipedia-20051105 Directed Graph
+Goodwin Goodwin_054 Computational Fluid Dynamics
+Gupta gupta1 Optimization Problem
+HB bcsstk30 Structural Problem
+Janna ML_Laplace Structural Problem
+LAW eu-2005 Directed Graph
+Mallya lhr71 Chemical Process Simulation Problem
+MAWI mawi_201512012345 Undirected Weighted Graph
+Mycielski mycielskian14 Undirected Graph
+ND nd3k 2D/3D Problem
+Nemeth nemeth21 Subsequent Theoretical/Quantum Chemistry Problem
+Oberwolfach boneS01 Model Reduction Problem
+PARSEC Ga10As10H30 Theoretical/Quantum Chemistry Problem
+Schenk_IBMNA c-73 Optimization Problem Sequence
+Simon venkat01 Computational Fluid Dynamics Problem Sequence
+TSOPF TSOPF_FS_b300 Power Network Problem
+VanVelzen Zd_Jac2 Chemical Process Simulation Problem
+VLSI nv1 Semiconductor Device Problem
+Williams pdb1HYS Weighted Undirected Graph
+Zaoui kkt_power Optimization Problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
