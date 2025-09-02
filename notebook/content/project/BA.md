@@ -51,6 +51,12 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMvKIE3fCDxWG+Ribh82LfCGMDogD9qvih1sN9753B
 ![[attachments/Pasted image 20250729111156.png]]
 
 window 不支持 ControlPath, 去 config 里注释掉就好了
+
+
+不知道怎么出了一次问题, vsc 怎么也连不上
+[ra72qab@cs2 ~]$ rm -rf .vscode-server/ 删掉了重装又连上了cs2, 其他还是不行
+
+然后又在 coop1 上删一次, 就登上了 coop1
 ## Collect Materials
 
 - you should cite it if your use their matrices [About | SuiteSparse Matrix Collection](https://sparse.tamu.edu/about)
