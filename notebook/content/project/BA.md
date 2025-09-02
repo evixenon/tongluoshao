@@ -1152,13 +1152,13 @@ move_markers(next_bucket_ - 1)
 - 三个数组存储 data(非零元素), indices(列索引), indptr(偏移)
     - 通过这三个数组和 shape 可以反推原数组
 
-**data**
+**data/value**
 存储所有非零元素值，按行优先顺序排列。
 
-**indices**
+**indices/col_idx**
 存储每个非零元素对应的列索引（从0开始）。
 
-**indptr**
+**indptr/row_ptr**
 划分行范围. 存储每行的起始位置在data中的偏移。长度为行数+1，最后一项为总非零元素数。
 
 又名: 使用压缩稀疏行（CSR）格式，存储非零元素的值（`values`）、列索引（`col_indices`）和行指针（`row_ptr`）。

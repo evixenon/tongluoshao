@@ -190,11 +190,32 @@ In real multi-core processors, shared cache contention from other threads sign
 #### 4 intro
 
 This chapter will detail the experimental design of this study. 
+#### 4.1 Experimental Procedure
 
-#### 4.1 Tools and Experimental Platform
+#### 4.2 Tools and Experimental Platform
+
+#### OpenMP
+
+OpenMP is the de facto standard API for developing shared-memory parallel applications in C, C++, and Fortran.
+
+#### Sparse Matrix-Vector multiplication
+This study investigated the cache behavior while simulating a Sparse Matrix-Vector multiplication program. Sparse Matrix-Vector multiplication (SpMV), denoted operation of multiplying a sparse matrix and a vector. Wilkinson stated his definition of sparse matrix in [Wilkinson 12]:
+
+> The matrix may be sparse, either with the nonzero elements concentrated
+on a narrow band centered on the diagonal or alternatively they may be
+distributed in a less systematic manner.
+
+Sparse Matrix-Vector multiplication is a fundamental kernel routine in numerical linear algebra and computational mathematics, usually expressed in the format `y = A * x`. In this operation, `A` represents a sparse matrix, while `x` and `y` are dense vectors. 
 
 
-#### 4.2 Experimental Procedure
+The principal challenge and design focus of efficient SpMV implementations stem from the matrix's sparsity. SpMV algorithms strategically avoid unnecessary arithmetic on zero operands. Specifically, they ensure that each element of the matrix is accessed only once during computation. However, the irregular and data-dependent access pattern to the vector `x` often results in poor cache utilization, presenting a significant performance bottleneck.
+Consequently, the performance of spMV is typically not governed by floating-point operation throughput but is predominantly constrained by memory bandwidth limitations. This necessitates specialized storage formats (e.g., Compressed Sparse Row - CSR, Compressed Sparse Column - CSC) that encapsulate only the non-zero values and their coordinates, thereby reducing memory footprint and access overhead.
+#### SpMV Workload
+
+The SuiteSparse Matrix Collection from the University of Florida[] is a widely recognized repository of sparse matrices derived from a wide spectrum of domains. It serves as a standard benchmark in evaluating the performance of sparse matrix algorithms. In this study, the dataset was used as the workload for SpMV. 
+
+The matrices within the collection span a broad range of application domains, including both geometric (such as 2D/3D models) and non-geometric problems. Furthermore, the dataset includes matrices of varying scales, ranging from small to medium and large dimensions, making it suitable for computational experiments. By providing a diverse set of realistically occurring matrices, the collection supports robust and reproducible experimental comparisons.
+
 
 
 
@@ -327,7 +348,7 @@ void handle_clines_shared(int tid, Addr a0, Addr a1, Addr a2)
 
 #### 5.5.2 OpenMP
 
-OpenMP is the de facto standard API for developing shared-memory parallel applications in C, C++, and Fortran. The OpenMP parallel programming framework is integrated into this cache simulator through the inclusion of the `omp.h` header file, which provides access to OpenMP's thread management functions.
+The OpenMP parallel programming framework is integrated into this cache simulator through the inclusion of the `omp.h` header file, which provides access to OpenMP's thread management functions.
 
 The implementation employs several key OpenMP constructs: `#pragma omp parallel` creates parallel regions where each thread simulates independent cache behavior using private cache instances. The `#pragma omp for schedule(static)` directive distributes matrix rows evenly among threads, mimicking typical SpMV parallelization strategies. Synchronization is achieved through `#pragma omp barrier` to coordinate timing measurements and `#pragma omp single` to ensure single-threaded execution of critical sections like time recording. Thread-safe cache access is managed through `#pragma omp critical` sections when writing simulation results to CSV files. 
 
