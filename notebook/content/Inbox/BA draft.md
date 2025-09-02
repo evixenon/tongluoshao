@@ -399,17 +399,33 @@ As introduced in Section 5.2, the original bucket system assigns each bucket a 
 
 To adapt this system to a set-associative cache, specifically, to track and quantify conflict misses under set-associative mappings, the `min_dist` values must be replaced with the number of ways at each cache level. For instance, consider an L1 cache with 4-way associativity, an L2 cache with 4-way associativity, and an L3 cache with 8-way associativity. In this case, the corresponding `min_dist` values for the buckets would be 0, 4, 8, and ∞. The L1 and L2 caches share the same number of ways, however, duplicate buckets are unnecessary.
 
-#### 5.6.3 Set Selection
+#### 5.6.3 Cache Access Handling in Sets
 
-The cache set allocation is determined through modulo operation, where the memory address is divided by the number of cache sets to determine which specific cache set should handle the access. For each cache level, the set index is calculated as:
+The allocation of a memory address to a specific cache set is determined through a modulo operation, where the address is divided by the number of cache sets. The resulting remainder identifies the set responsible for handling the access. For each cache level, the set index is computed as follows:
 
-The address-to-set mapping is implemented through a simple modulo operation that distributes memory accesses across the available cache sets. For each cache level, the set index is calculated as:
+$$ set\ index = address\ \mod\ number\ of\ sets\ in\ cache$$
 
-$$ set\ number = addr\ \%\ number\ of\ sets\ in\ cache$$
+Listing demonstrated the code used in the project, assuming private L1 and a shared L2 cache. In the base program, each location `handle_cline()` is invoked to process a cache access, `handle_cline_in_set()` is invoked for set-specific handling.
+
+```cpp
+void handle_cline_in_set(int tid, Addr addr, 
+    std::vector<PrivateCache> &l1c, std::vector<SharedCache> &l2c)
+{
+    int l1_set_index = addr % L1_NSETS;
+    int l2_set_index = addr % L2_NSETS;
+    int l3_set_index = addr % L3_NSETS;
+    
+    l1c[l1_set_index].handle_cline(addr);
+    l2c[l2_set_index].handle_cline_shared(tid, addr);
+}
+
+```
+
+#### 5.6.4 Parallel handling
 
 
 
 
-#### 并行问题, 可能解释 shared 错误的
+
 #### 结果是怎么统计的
 
