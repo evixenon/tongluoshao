@@ -1443,6 +1443,10 @@ Caches (sum of all):
   L3:                     16 MiB (1 instance)
   ```
 
+- 使用 `lscpu` 命令。输出中的 `CPU(s):` 表示逻辑核心数，`Core(s) per socket:` 表示每个CPU插槽的物理核心数，`Thread(s) per core:` 通常为2（表示启用了超线程，每个核心有2个线程）。
+    
+- 公式：`逻辑CPU数 = Socket数 × 每Socket物理核心数 × 每核心线程数`
+
 |                      |               |                                                                                         |          |
 | -------------------- | ------------- | --------------------------------------------------------------------------------------- | -------- |
 | AMD Ryzen 9 6900HS « | 3.3 - 4.9 GHz | 8 / 16 ![cores](https://www.notebookcheck.net/fileadmin/templates/images/cpu_cores.svg) | 16 MB L3 |
@@ -1512,7 +1516,7 @@ Zaoui kkt_power Optimization Problem
 #### machine
 coop1
 46 bits physical??
-![[attachments/Pasted image 20250902230403.png]]![[attachments/Pasted image 20250902230719.png]]![[attachments/Pasted image 20250902230813.png]]
+![[attachments/Pasted image 20250902230403.png]]![[attachments/Pasted image 20250902230719.png]]![[attachments/Pasted image 20250903180351.png]]![[attachments/Pasted image 20250902230813.png]]
 ![[attachments/Pasted image 20250902231926.png]]
 ???
 ![[attachments/Pasted image 20250902234044.png]]
