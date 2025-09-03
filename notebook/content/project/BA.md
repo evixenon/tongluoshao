@@ -1457,7 +1457,7 @@ cache line size: 64 B
 ## draft
 
 
-### BG 
+#### BG 
 
 ![[attachments/Pasted image 20250722132931.png]]
 
@@ -1509,8 +1509,23 @@ Zaoui kkt_power Optimization Problem
 
 18种
 
+#### machine
+coop1
+46 bits physical??
+![[attachments/Pasted image 20250902230403.png]]![[attachments/Pasted image 20250902230719.png]]![[attachments/Pasted image 20250902230813.png]]
+![[attachments/Pasted image 20250902231926.png]]
+???
+![[attachments/Pasted image 20250902234044.png]]
 
+rome1
+![[attachments/Pasted image 20250903085113.png]]
+![[attachments/Pasted image 20250903085236.png]]
+![[attachments/Pasted image 20250903085734.png]]
 
+gh2
+![[attachments/Pasted image 20250903085543.png]]
+![[attachments/Pasted image 20250903085558.png]]
+![[attachments/Pasted image 20250903085609.png]]
 
 
 
