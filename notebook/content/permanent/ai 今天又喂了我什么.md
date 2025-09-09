@@ -1432,3 +1432,134 @@ ag - deepseek-v3 >
 - **缺点**：偶尔可能淘汰错误（比如最近访问过的块被选中），但概率较低。
 
 这种设计在CPU缓存中非常普遍，因为要在速度、面积和效率之间取得平衡。
+
+#### 终端输入处理
+在Python中处理终端输入时，推荐使用 `readline` 模块或第三方库 `prompt_toolkit`：
+
+**方案一：使用readline模块**
+```python
+import readline
+
+def init_terminal():
+    # 启用历史记录和基本行编辑功能
+    readline.parse_and_bind("tab: complete")
+    readline.set_history_length(1000)
+
+# 示例使用
+init_terminal()
+user_input = input("> ")  # 现在支持跨行退格编辑
+```
+
+**方案二：使用prompt_toolkit（推荐）**
+```bash
+pip install prompt_toolkit
+```
+
+```python
+from prompt_toolkit import PromptSession
+from prompt_toolkit.key_binding import KeyBindings
+
+# 创建会话（自动处理多行编辑）
+session = PromptSession()
+
+# 示例1：基本使用
+user_input = session.prompt("> ")
+
+# 示例2：带自定义键绑定
+bindings = KeyBindings()
+@bindings.add('c-d')
+def _(event):
+    event.app.exit()
+
+user_input = session.prompt("> ", key_bindings=bindings)
+```
+
+**方案三：手动处理终端设置**
+```python
+import sys
+import tty
+import termios
+
+def raw_input(prompt=""):
+    print(prompt, end='', flush=True)
+    fd = sys.stdin.fileno()
+    old_settings = termios.tcgetattr(fd)
+    try:
+        tty.setraw(fd)
+        chars = []
+        while True:
+            ch = sys.stdin.read(1)
+            if ch == '\r' or ch == '\n':  # Enter
+                break
+            elif ord(ch) == 127:  # Backspace
+                if chars:
+                    chars.pop()
+                    sys.stdout.write('\b \b')  # 退格、空格、再退格
+            else:
+                chars.append(ch)
+                sys.stdout.write(ch)
+            sys.stdout.flush()
+        return ''.join(chars)
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+        print()  # 换行
+
+# 使用
+user_input = raw_input("> ")
+```
+
+**推荐直接使用 `prompt_toolkit`**，它已经完美处理了：
+- 多行输入的回退删除
+- 终端兼容性问题  
+- 历史记录管理
+- 自动补全等功能
+
+简单安装即可解决你的跨行退格问题。
+
+#### bfrb
+
+针对您描述的咬指甲、撕嘴唇皮和抠头等BFRB（聚焦于身体的重复性行为）症状，以下是非药物干预的具体建议，分为认知行为策略和日常习惯调整两方面：
+
+---
+
+一、认知行为干预（核心方法）
+1. **习惯逆转训练（HRT）**  
+   - **意识训练**：记录行为触发场景（如焦虑、无聊时），用手机便签或笔记本即时记录每次行为发生的时间、诱因和情绪状态。  
+   - **对抗反应**：当出现冲动时，立即用替代行为占据双手，例如：  
+     - 捏压力球或指尖陀螺  
+     - 双手握拳持续10秒  
+     - 快速涂鸦或书写  
+   - **社会支持**：请亲友发现行为时用温和提醒（如轻拍肩膀），而非批评。
+
+2. **接纳与承诺疗法（ACT）技巧**  
+   - 承认冲动但不付诸行动，默念“这是一个冲动，它会自然消退”，观察身体感受而不评判。  
+   - 用“5-4-3-2-1” grounding技巧（说出5个看到的物体、4种听到的声音等）转移注意力。
+
+---
+
+二、物理与环境调整
+1. **物理屏障**  
+   - 佩戴指套/手套、贴甲片（避免直接接触指甲和皮肤）。  
+   - 嘴唇涂抹浓稠无味的凡士林或润唇膏（增加撕皮难度）。  
+   - 修剪短指甲并打磨光滑（减少抠抓的物理条件）。
+
+2. **环境提示**  
+   - 在常出现行为的位置（如书桌、卫生间镜子）贴视觉提醒标语：“手放松”或“呼吸10秒”。  
+   - 保持手部忙碌：桌面放置解压玩具、编织手工或握力器。
+
+---
+
+三、情绪与压力管理
+1. **每日5分钟正念呼吸**：专注气流进出鼻腔，当思绪飘走时温和拉回注意力。  
+2. **运动释放**：每日20分钟有氧运动（如快走、跳绳）降低整体焦虑水平。  
+3. **触发场景预案**：例如开会时提前手握温水杯，看电视时抱枕遮挡手部。
+
+---
+
+四、持续追踪与奖励
+- 用“习惯追踪APP”（如HabitBull）记录无行为天数，设定小奖励（如7天无行为后看一场电影）。  
+- 若症状严重影响生活（如皮肤感染、社交回避），建议寻求认知行为治疗师（CBT专业方向）指导。
+
+---
+
+**关键原则**：初期可能反复，勿自我苛责。通过持续练习将冲动与行为“解绑”，逐步重建健康习惯。
