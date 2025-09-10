@@ -1532,13 +1532,21 @@ gh2
 ![[attachments/Pasted image 20250903085609.png]]
 gh200
 
+#### real_spmv
+
+threads=1 curlcurl1
+![[attachments/Pasted image 20250910200543.png|L|300]]
+![[attachments/Pasted image 20250910200647.png|L|300]]
+
+![[attachments/Pasted image 20250910203353.png|L|300]]
 
 
 
+threads=1, lhr71
+![[attachments/Pasted image 20250910204242.png|L|300]]
+![[attachments/Pasted image 20250910204302.png|L|300]]
 
-
-
-
+![[attachments/Pasted image 20250910210547.png|L|300]]
 
 
 
