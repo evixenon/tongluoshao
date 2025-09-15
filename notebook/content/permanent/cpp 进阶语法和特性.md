@@ -279,3 +279,5 @@ Bucket::Counts Cache::on_block_seen(StackIterator &it) {
 - 一些简单的工具函数可能直接定义在头文件中
 
 这些例外都是为了满足特定的编译需求或提高性能。
+
+#### malloc free
