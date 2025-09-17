@@ -1503,7 +1503,6 @@ ND nd3k 2D/3D Problem
 Nemeth nemeth21 Subsequent Theoretical/Quantum Chemistry Problem
 Oberwolfach boneS01 Model Reduction Problem
 PARSEC Ga10As10H30 Theoretical/Quantum Chemistry Problem
-Schenk_IBMNA c-73 Optimization Problem Sequence
 Simon venkat01 Computational Fluid Dynamics Problem Sequence
 TSOPF TSOPF_FS_b300 Power Network Problem
 VanVelzen Zd_Jac2 Chemical Process Simulation Problem
