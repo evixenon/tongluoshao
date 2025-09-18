@@ -3,6 +3,26 @@ title: "BA draft"
 date: "2025-08-23"
 tags:
 ---
+#### 1.1 Motivation
+The memory wall, a phenomenon widely known as the performance gap between processor clock speed and memory access latency, has created bottlenecks that limit the computational efficiency over the past decades. As essential hardware components in modern computer systems, effective cache designs can reduce average memory access time by storing frequently accessed data. Consequently, the ability to accurately predict cache behavior has become increasingly important for both hardware designers and software developers seeking to optimize performance.
+
+Some modern microprocessor architectures integrate hardware performance counters that track cache hit and miss rates directly. While valuable and convenient for hardware behavior monitoring, these solutions are platform-specific. To develop more generalized and accessible cache behavior prediction tools, there is a growing need for accurate software-based cache simulation methodologies, for example, trace-driven simulations.
+
+Reuse distance analysis, which is also called stack distance analysis, has been extensively accepted as an theoretically grounded method for cache modeling. This technique is implemented in cache performance prediction and program locality modeling. However, conventional reuse distance analysis incorporates simplifying assumptions deviated from real-world hardware implementations such as cache associativity, replacement policy details and hardware-optimizations, which lead to  predictive gaps. These discrepancies between theoretical models and practical environments motivates the central research problems in this work.
+
+#### 1.2 Research Questions
+
+This thesis aims to improve the accuracy of cache behavior prediction by adjusting an existing reuse distance algorithm to support set-associative cache systems, using Sparse Matrix-Vector Multiplication(SpMV) as as case study.
+
+The work is guided by the following primary research questions:
+
+1. What is the accuracy gap between origin prediction algorithm and measured hardware performance in SpMV?
+2. How does incorporating cache associativity and set conflicts into the reuse distance affect its prediction accuracy?
+3. To what extent can the two approaches accurately predict the cache behavior of the SpMV application and under what circumstances would these prediction methods be ineffective?
+
+#### 1.3 related work
+
+
 
 #### 2 intro
 This paper focuses entirely on the cache system of modern computers. To better understand the paper, this chapter introduces basic cache knowledge, emphasizing content relevant to this research and briefly introducing related technologies not used.
@@ -13,7 +33,7 @@ This paper focuses entirely on the cache system of modern computers. To better u
 - 大概是怎么工作的
 - 总结
 
-Modern computer architectures are built based on the famous von Neumann structure, where the Central Processing Unit(CPU) is the core component to execute instructions and manipulate data. As the CPU clock speeds have increased exponentially over years, an instruction cycle is able to execute within 1 nanosecond. However, the main memory(DRAM) access latency has failed to keep pace with the execution speed. If data are retrieved from DRAM during each instruction cycle, the processor will waste tens to hundreds of nanoseconds waiting for the data to arrive.
+Modern computer architectures are built based on the famous von Neumann structure, where the Central Processing Unit(CPU) is the core component to execute instructions and manipulate data. As the CPU clock speeds have increased exponentially over years, an instruction cycle is able to execute within 1 nanosecond. However, the main memory access latency has failed to keep pace with the execution speed. If data are retrieved from DRAM during each instruction cycle, the processor will waste tens to hundreds of nanoseconds waiting for the data to arrive.
 
 This imbalance is mitigated by cache. Cache is a small amount of storage integrated into CPU, hierarchically positioned between CPU registers and memory{cite: Cache memory}. Instead of directly accessing data from the memory, the processor will firstly check if it is already existed in cache. It takes less time to fetch a word from the cache than from the memory. Based on the principle of data locality{Cite: Denning}, the cache retains hot data that is more likely to be used next and discards the data that is less likely to be used, thus saving the retrieving time in an instruction cycle. In practical cache behavior, whether data is retained or not is determined by the chosen replacement algorithm.
 
@@ -119,7 +139,7 @@ In contrast, the *write-back* policy mitigates write latency by deferring the 
 The choice of write policy is often coupled with a decision on *write allocation*. On a write miss, a *write-allocate* policy will load the missed block into the cache from memory and then perform the write operation on the cached copy. This policy is typically used with write-back caches. Conversely, a *no-write-allocate* policy bypasses the cache and writes directly to lower-level memory, making it more suitable for write-through caches. Modern systems predominantly employ a write-back policy with write allocation to optimize for the common case of localized write patterns.
 
 
-#### 3 intro
+#### 3 Cache behavior prediction
 As established in Section 2.1, the growing performance gap between processor and memory speeds has made the memory subsystem a critical bottleneck in modern computing systems. Caches serve as a fundamental technique to mitigate this gap by storing frequently accessed data close to the processor. Consequently, improving cache utilization efficiency is directly linked to enhancing overall system performance. To achieve this, a deeper understanding of cache access patterns is essential. This necessity motivates the field of cache behavior prediction, which aims to anticipate future data accesses and manage cache resources more intelligently.
 
 This chapter explores methods for predicting cache behavior to inform and optimize replacement decisions. Section 3.1 begins by reviewing and summarizing the replacement operations within a cache system upon a miss, building upon the foundational knowledge from the previous chapter. Section 3.2 introduces reuse distance, a critical metric for predicting cache behavior, and discusses the specific extensions with set-associativity to this metric proposed in our study. Following this, Section 3.3 surveys existing cache simulation approaches commonly employed in prior research to evaluate replacement policies and predictive models. Finally, Section 3.4 analyzes the potential sources of error between predictions and actual outcomes, providing a discussion on the limitations and realism of our approach.
