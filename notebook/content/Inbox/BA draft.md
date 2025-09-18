@@ -24,6 +24,18 @@ The work is guided by the following primary research questions:
 
 
 
+{Recently, Ding, et al. [2, 14], have proposed techniques
+to predict the reuse distance of memory references across
+all program inputs using a few profiling runs. They use
+curve fitting to predict reuse distance (the number of dis-
+tinct memory locations accessed between two references to
+the same memory location) as a function of a program’s
+data size. By quantifying reuse as a function of data size,
+the information obtained via a few profiled runs allow the
+prediction of reuse to be quite accurate over varied data
+sizes. Ding, et al., have used reuse-distance predictions to
+accurately predict whole program miss rates [14].}
+
 #### 2 intro
 This paper focuses entirely on the cache system of modern computers. To better understand the paper, this chapter introduces basic cache knowledge, emphasizing content relevant to this research and briefly introducing related technologies not used.
 
