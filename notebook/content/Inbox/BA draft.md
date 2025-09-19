@@ -12,7 +12,7 @@ Reuse distance analysis, which is also called stack distance analysis, has been 
 
 #### 1.2 Research Questions
 
-This thesis aims to improve the accuracy of cache behavior prediction by adjusting an existing reuse distance algorithm to support set-associative cache systems, using Sparse Matrix-Vector Multiplication(SpMV) as as case study.
+This thesis aims to explore the effectiveness of cache behavior prediction by adjusting an existing reuse distance algorithm to support set-associative cache systems, using Sparse Matrix-Vector Multiplication(SpMV) as as case study.
 
 The work is guided by the following primary research questions:
 
@@ -329,7 +329,7 @@ Addr cline(uint64_t idx)
     return static_cast<Addr>(idx >> first_bit_set);
 }
 ```
-
+''
 Listing 5.2 demonstrates the code principles of `cline()` function. In the actual program, constant expression grammar is employed to prevent redundant computations. The template parameter T represents the data type of values within the matrix, while CLSIZE denotes the cache line size. The function returns a virtual line address, which can be utilized for subsequent cache access simulation.
 
 #### 5.4 LRU Replacement Policy
