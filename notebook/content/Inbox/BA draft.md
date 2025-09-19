@@ -22,6 +22,15 @@ The work is guided by the following primary research questions:
 
 #### 1.3 related work
 
+Matt 提出了 Reuse, B&H 则将 Reuse 作为 cache behavior 的 metric
+
+被广泛应用于各种缓存研究, 开始举例
+
+然后一些论文 已经提出即使用 fully 也能比较有效地预测
+
+gap: 关联度, 测试集
+
+而本研究
 
 
 {Recently, Ding, et al. [2, 14], have proposed techniques
@@ -223,7 +232,6 @@ In real multi-core processors, shared cache contention from other threads sign
 #### 4 Methodology
 
 This chapter will detail the experimental design of this study. 
-#### 4.1 Experimental Platform and Tools
 
 #### Testing Environment
 The experiments are conducted in the Bavarian Energy Architecture & Software Testbed(BEAST) environment at Leibniz Supercomputing Centre(LRZ). Beast 实验环境中提供了多种 state-of-the-art hardware architectures, 可以在 OpenMP 接口及其目标卸载功能的帮助下处理 GPU 编程和代码重定位. 在本次研究中, 基于其中四种不同的 cpu model 执行测试.
