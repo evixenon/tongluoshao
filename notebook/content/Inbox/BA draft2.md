@@ -28,3 +28,103 @@ where y_i​ denotes the number of cache misses predicted by the simulator for
 
 #### 4.2 Matrices Selection
 
+
+The SuiteSparse Matrix Collection from the University of Florida[] is a widely recognized repository of sparse matrices derived from a wide spectrum of domains. It serves as a standard benchmark in evaluating the performance of sparse matrix algorithms. SpMV 程序也是许多标准测试集中的常见部分, 属于典型的 loop-oriented 程序. 这个算法同时也是一种真实研究环境中无处不在的内核，例如在物理模拟和图算法中
+
+According to Davis and Hu’s 2011 study, matrices within the dataset can be classified into 27 distinct application domains[]. In this work, 40 matrices were selected from the collection, encompassing 18 of these categories as indicated by the “kind” tag in the data source. During the selection process, a wide variety of matrix sources were incorporated  (also referred to as the group attribute), with the nonzeros scaling from 1 million to 50 millions, the number of rows ranging from 9000 to 20 millions. Table 4.1 lists the details for the selected matrices.
+
+---
+
+The SuiteSparse Matrix Collection from the University of Florida[] is a widely recognized repository of sparse matrices derived from a wide spectrum of scientific and engineering applications. It serves as a standard benchmark for evaluating the performance of sparse matrix algorithms. The Sparse Matrix-Vector Multiplication (SpMV) kernel is also a common component in many standard benchmark suites and is representative of loop-oriented, memory-bound computations. As a ubiquitous kernel in practical research environments, SpMV plays a critical role in domains such as physical simulations and graph algorithms.
+
+According to Davis and Hu’s 2011 study, the matrices in the dataset can be classified into 27 distinct application domains[]. In this work, 40 matrices were selected from the collection, covering 18 of these categories, as indicated by the “kind” attribute in the metadata. The selection aimed to incorporate a diverse set of matrix sources (also referred to as the “group” attribute), with the number of nonzeros ranging from 1 million to 50 million, and the number of rows varying between 9,000 and 20 million. Table 4.1 provides detailed information on the selected matrices.
+
+```latex
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{siunitx} % 用于格式化数字和单位
+
+\begin{document}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm}S[table-format=2.2]S[table-format=5.1]>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{5cm}}
+\caption{Matrices} \\
+\toprule
+\textbf{Name} & {\textbf{Nonzeros}} & {\textbf{Rows}} & \textbf{Group} & \textbf{Kind} \\
+& {\textbf{(m)}} & {\textbf{(k)}} & & \\
+\midrule
+\endfirsthead
+
+\caption[]{Matrixces(cont.)} \\
+\toprule
+\textbf{Name} & {\textbf{Nonzeros}} & {\textbf{Rows}} & \textbf{Group} & \textbf{Kind} \\
+& {\textbf{(m)}} & {\textbf{(k)}} & & \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+AS365 & 22.74 & 3799.3 & DIMACS10 & Undirected Graph \\
+Ga10As10H30 & 6.12 & 113.1 & PARSEC & Theoretical/Quantum Chemistry Problem \\
+GAP-road & 57.71 & 23947.3 & GAP & Directed Weighted Graph \\
+G3\_circuit & 7.66 & 1585.5 & AMD & Circuit Simulation Problem \\
+Goodwin\_054 & 1.03 & 32.5 & Goodwin & Computational Fluid Dynamics \\
+ML\_Laplace & 27.69 & 377.0 & Janna & Structural Problem \\
+TSOPF\_FS\_b300 & 4.40 & 29.2 & TSOPF & Power Network Problem \\
+Zd\_Jac2 & 1.64 & 22.8 & VanVelzen & Chemical Process Simulation Problem \\
+atmosmodd & 8.81 & 1270.4 & Bourchtein & Computational Fluid Dynamics Problem \\
+bcsstk30 & 2.04 & 28.9 & HB & Structural Problem \\
+bcsstk35 & 1.45 & 30.2 & Boeing & Structural Problem \\
+boneS01 & 6.72 & 127.2 & Oberwolfach & Model Reduction Problem \\
+circuit5M\_dc & 19.19 & 3523.3 & Freescale & Circuit Simulation Problem \\
+CurlCurl\_1 & 2.47 & 226.5 & Bodendiek & Model Reduction Problem \\
+debr & 4.19 & 1048.6 & AG-Monien & Undirected Graph Sequence \\
+denormal & 1.16 & 89.4 & Castrillon & Counter Example Problem \\
+dielFilterV2real & 48.54 & 1157.5 & Dziekonski & Electromagnetics Problem \\
+eu-2005 & 19.24 & 862.7 & LAW & Directed Graph \\
+gupta1 & 2.16 & 31.8 & Gupta & Optimization Problem \\
+human\_gene1 & 24.67 & 22.3 & Belcastro & Undirected Weighted Graph \\
+ins2 & 2.75 & 309.4 & Andrianov & Optimization Problem \\
+kkt\_power & 14.61 & 2063.5 & Zaoui & Optimization Problem \\
+lhr71 & 1.53 & 70.3 & Mallya & Chemical Process Simulation Problem \\
+mario002 & 2.10 & 389.9 & GHS\_indef & Duplicate 2D/3D Problem \\
+mawi\_201512012345 & 38.04 & 18571.2 & MAWI & Undirected Weighted Graph \\
+mycielskian14 & 3.70 & 12.3 & Mycielski & Undirected Graph \\
+nd3k & 3.28 & 9.0 & ND & 2D/3D Problem \\
+nemeth21 & 1.17 & 9.5 & Nemeth & Subsequent Theoretical/Quantum Chemistry Problem \\
+nv1 & 2.45 & 75.5 & VLSI & Semiconductor Device Problem \\
+pcrystk03 & 1.75 & 24.7 & Boeing & Duplicate Materials Problem \\
+pdb1HYS & 4.34 & 36.4 & Williams & Weighted Undirected Graph \\
+pkustk03 & 3.13 & 63.3 & Chen & Structural Problem \\
+pre2 & 5.96 & 659.0 & ATandT & Frequency Domain Circuit Simulation Problem \\
+qa8fk & 1.66 & 66.1 & Cunningham & Acoustics Problem \\
+rgg\_n\_2\_19\_s0 & 6.54 & 524.3 & DIMACS10 & Undirected Random Graph \\
+t2em & 4.59 & 921.6 & CEMW & Electromagnetics Problem \\
+thermomech\_dK & 2.85 & 204.3 & Botonakis & Thermal Problem \\
+venkat01 & 1.72 & 62.4 & Simon & Computational Fluid Dynamics Problem Sequence \\
+wave & 2.12 & 156.3 & AG-Monien & 2D/3D Problem \\
+wikipedia-20051105 & 19.75 & 1635.0 & Gleich & Directed Graph \\
+\bottomrule
+\end{longtable}
+
+\end{document}
+```
+
+#### 4.3 Measuring Method
+
+在收集 Ground Truth 时, 使用了一个 CSR 格式的 SpMV 模拟程序. 读取测试矩阵后, 分配一个虚拟向量, 并使用这个虚拟向量与测试矩阵执行 SpMV 算法. 在缓存分配时不会用 likwid 记录 cache misses, 记录开始于 SpMV 的运算之前.
+
+ Cache simulator 则没有进行真正的 SpMV 运算, 而是通过模拟 SpMV 对内存的访问, 为运算中涉及的变量分配了虚拟的内存地址, 并在每次访问这个虚拟的内存地址, 模拟缓存栈的行为和统计 cache misses 计数.
+
+在处理器真实执行程序时, 常常会通过例如 hardware prefetching 的手段减少 Cold misses 的发生. 本论文中的 simulator 无法模拟这种优化, 出于这个考虑, simulator 执行了 11 次 SpMV 模拟, 并只统计后10次的结果. 相对应地, SpMV 程序也会重复执行 11 次运算并放弃第一次的结果.
+
+但这样的处理同时也带来一个问题: 在真实的 SpMV 运行环境中, 不可避免地会有其他程序同时在执行, 因此, 即使执行了第一次运算的预热, 也会有其他程序读取并替换缓存中的部分内容; 而在缓存模拟器中, 只有 SpMV 模拟在运行, 因此, 缓存会完完全全地保留预热后的状态, 也就是, 缓存栈中的所有块都是与 SpMV 模拟相关的内容. A64FX 是 state of the art 的 HPC 机器, 拥有总共 32 MiB 的 shared L2 caches, 当矩阵的大小不足以占满缓存空间时, 这个问题被放大得更严重了. 
+
+在计算 simulator 的预测准确率时, 考虑矩阵的 working set size 和 当前环境的 active shared cache lines. Working Set Size(wss) 是指, 当使用此矩阵进行模拟器, 有多少个 unique 的虚拟地址被使用了. wss 可以通过统计模拟程序结束后的 stack 状态获得. active shared cache lines 则是在当前运行环境下, 有多少 cache lines 被启用. 计算公式为: 
+$active\ shared\ cache\ lines = active\ shared\ memories * shared / memory\ size / cache\ line\ size$
+例如, A64FX 的 cache line size 为 256 Bytes, 当前在 24 线程下运行, 则 L2 缓存的 active shared cache lines 为 8 MiB * 2 / 256 Bytes = 65536. 如果 wss 小于 active shared cache lines, 或者两者的差距不够大, 那么这次测量的结果将被视为无效的.
+
+---
+
