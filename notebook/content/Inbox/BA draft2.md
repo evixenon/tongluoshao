@@ -20,11 +20,11 @@ The experiments were conducted within the Bavarian Energy Architecture & Softwar
 
 The A64FX represents a state-of-the-art ARM-based architecture designed by Fujitsu for high-performance computing (HPC). It has a 48-core processor, where each core possesses a private 64 KiB 4-way set-associative L1 data cache. Every group of 12 cores shares an 8 MiB L2 cache. The experimental procedure began with single-threaded executions. For each matrix, cache miss predictions were collected from both the baseline simulator and the extended simulator. These results were compared against the ground truth measurements obtained via Likwid. The same procedure was subsequently repeated in multi-threaded configurations using 12, 24, 36, and 48 threads, in order to evaluate prediction accuracy under increasing parallelism and assess the impact of shared cache behavior and potential coherence overheads.
 
-The accuracy of the baseline and extended simulators was quantified using a modified version of the Mean Absolute Error (MAE) metric, defined as:
+The accuracy of the baseline and extended simulators was quantified using the Mean Percentage Error (MPE) metric, defined as:
 
-$$\frac{1}{n}\sum^n_{i=0}(y_i - \hat{y}_i)/y_i$$
+$$\frac{100}{n}\sum^n_{i=1}\frac{y_i - \hat{y}_i}{y_i}$$
 
-where y_i​ denotes the number of cache misses predicted by the simulator for the i-th matrix, and \hat{y}^i​ represents the corresponding ground truth value measured by hardware counters. This formulation is not taking absolute values to preserve the direction of the error (over- or under-prediction), which offers valuable insight into systematic biases within the models. Furthermore, normalizing the error by the ground truth value enables a relative and scale-independent comparison across matrices of vastly different sizes. Finally, all experimental data was aggregated and processed using a combination of shell scripting and Python scripts, which facilitated consistent numerical analysis and generated the visualizations presented in the Results section.
+where y_i​ denotes the number of cache misses predicted by the simulator for the i-th matrix, and \hat{y}^i​ represents the corresponding ground truth value measured by hardware counters. MPE is not taking absolute values to preserve the direction of the error (over- or under-prediction), which offers valuable insight into systematic biases within the models. Furthermore, normalizing the error by the ground truth value enables a relative and scale-independent comparison across matrices of vastly different sizes. Finally, all experimental data was aggregated and processed using a combination of shell scripting and Python scripts, which facilitated consistent numerical analysis and generated the visualizations presented in the Results section.
 
 #### 4.2 Matrices Selection
 
@@ -142,6 +142,9 @@ $active\ shared\ cache\ lines = active\ shared\ memories * shared / memory\ size
 
 For example, on the A64FX with a cache line size of 256 bytes running with 24 threads, the number of active shared cache lines in L2 would be:
 
-8 MiB×2/256 bytes=655368 MiB×2/256 bytes=65536
+8 MiB×2/256 bytes=65536
 
 If the working set size is smaller than the number of active shared cache lines, or if the difference between them is not substantial, the measurement for that configuration is considered invalid and excluded from accuracy analysis.
+
+#### 6.1 Baseline results
+
