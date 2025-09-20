@@ -24,9 +24,7 @@ The accuracy of the baseline and extended simulators was quantified using a modi
 
 $$\frac{1}{n}\sum^n_{i=0}(y_i - \hat{y}_i)/y_i$$
 
-where yi​ denotes the number of cache misses predicted by the simulator for the ii-th matrix, and y^iy^​i​ represents the corresponding ground truth value measured by hardware counters. This formulation deliberately avoids taking absolute values to preserve the direction of the error (over- or under-prediction), which offers valuable insight into systematic biases within the models. Furthermore, normalizing the error by the ground truth value enables a relative and scale-invariant comparison across matrices of vastly different sizes.
-
-Finally, all experimental data was aggregated and processed using a combination of shell scripting and Python scripts. This automated workflow facilitated consistent numerical analysis and generated the visualizations presented in the Results section.
+where y_i​ denotes the number of cache misses predicted by the simulator for the i-th matrix, and \hat{y}^i​ represents the corresponding ground truth value measured by hardware counters. This formulation is not taking absolute values to preserve the direction of the error (over- or under-prediction), which offers valuable insight into systematic biases within the models. Furthermore, normalizing the error by the ground truth value enables a relative and scale-independent comparison across matrices of vastly different sizes. Finally, all experimental data was aggregated and processed using a combination of shell scripting and Python scripts, which facilitated consistent numerical analysis and generated the visualizations presented in the Results section.
 
 #### 4.2 Matrices Selection
 
