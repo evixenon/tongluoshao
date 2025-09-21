@@ -150,10 +150,20 @@ If the working set size is smaller than the number of active shared cache lines,
 
 #### 6.1.1 Differences from gound truth
 
-Figure 展示了使用 simulator 程序测量得到的结果与 likwid tools 测量结果的差距. 
+Figure 展示了使用 simulator 程序测量得到的结果与 likwid tools 测量结果的差距. 图中每一个矩阵的 difference 百分比由 (likwid result - simulator result)/likwid result * 100 获得, 没有使用绝对值, 保留了 over/under-prediction 的方向, 因此一个 negative 的 value 表示 simulator 预测到了比 likwid tools 更多的 cache misses. 矩阵是按照 Working set size 降序排列的, 同一张 figure 中, 越上面的 矩阵拥有越大的 WSS. 左边的 figure 中的矩阵的 WSS 大于 160K, 而右边则小于. 如同图例中的说明, 红色的 bar 表示baseline simulator 的测量结果, 而蓝色的 bar 则是本论文中经过 extended 的 simulator 结果.
 
-图中每一个矩阵的 difference 百分比由
+#### 6.1.2 Interpretation
 
-#### 6.2 Extended simulator prediction results
+首先注意到,  L2 caches 中出现了非常多的 outliers. L2 数据异常的原因在 section 4.3 中已有解释, 是由于L2的缓存空间大于矩阵的总大小. 因此会在稍后的小节中确认数据的有效性再行比较.
+
+对 L1 cache 的预测, 总体来说, extended simulator 得到了与 原本的 simulator 相近的结果. 两者对大部分矩阵的预测, 与 gound truth 的 error 集中在 2.5% 到 10% 之间, 最高的误差在 18% 左右. 矩阵的大小与预测的准确率并没有表现出相关性, 与之相比, 矩阵的个体差异对预测准确率的影响更大. 例如, GAP-road, mycielskian14, nv1 这几个矩阵在不同的线程下, L1 预测结果都出现了相似的模式. 更具体地举例来说, nv1 在各个线程下, 原 simulator 测试得到的 error 总是在 17.5% 附近, extended simulator 的测试结果则维持在 12.5% 左右.
+
+将 conflict misses 融合入程序中后, 预测程序对 L1 cache 的预测表现并不总是比原程序好. 在两个版本的 simulator 200 次对比中,  只有其中的 128 次(64%), extended 后的程序表现得更优. Table 展示了 Mean and standard deviation of the absolute percentage error for predicting L1 cache misses using before and after extending the algorithm. 总体而言, 拓展后的程序对 L1 cache 的预测误差减小了大约 0.6%,  在 1, 12, 24, 36, 48 线程中, 分别比原来优化了10.59%, 10.71%, 9.15%, 9.62%, 9.68%, 平均的优化率为 9.95%.
+
+#### 6.1.3 
 
 对比 baseline simulator 和 extended simulator 的结果会发现, 后者有时候测量出了比前者更少的 cache misses. 直觉上来说, 原本的程序只能测量 capacity misses 在 integrating conflict misses 之后, 测量得到的 total cache misses 应该只能增加. 但实际上, 这种现象是可能发生的.
+
+#### 6.2
+
+#### 6.3
