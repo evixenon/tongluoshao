@@ -146,5 +146,8 @@ For example, on the A64FX with a cache line size of 256 bytes running with 24 th
 
 If the working set size is smaller than the number of active shared cache lines, or if the difference between them is not substantial, the measurement for that configuration is considered invalid and excluded from accuracy analysis.
 
-#### 6.1 Baseline results
+#### 6.1 Baseline simulator prediction results
 
+#### 6.2 Extended simulator prediction results
+
+对比 baseline simulator 和 extended simulator 的结果会发现, 后者有时候测量出了比前者更少的 cache misses. 直觉上来说, 原本的程序只能测量 capacity misses 在 integrating conflict misses 之后, 测量得到的 total cache misses 应该只能增加. 但实际上, 这种现象是可能发生的.
