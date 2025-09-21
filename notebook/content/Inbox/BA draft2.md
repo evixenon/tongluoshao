@@ -162,7 +162,11 @@ Figure 展示了使用 simulator 程序测量得到的结果与 likwid tools 测
 
 #### 6.1.3 
 
-对比 baseline simulator 和 extended simulator 的结果会发现, 后者有时候测量出了比前者更少的 cache misses. 直觉上来说, 原本的程序只能测量 capacity misses 在 integrating conflict misses 之后, 测量得到的 total cache misses 应该只能增加. 但实际上, 这种现象是可能发生的.
+对比 baseline simulator 和 extended simulator 的结果会发现, 后者有时候测量出了比前者更少的 cache misses. 直觉上来说, 原本的程序只能测量 capacity misses, 在 integrating conflict misses 之后, 测量得到的 total cache misses 应该只能增加. 但实际上, 根据论文中的 simulator 的实现方式, 这种现象是可能发生的. 
+
+这里使用一个简化的例子来解释这种现象: 考虑一个 2-way associatity, 拥有 4 cache sets, 总共的 capacity 为8 的 cache, 按顺序访问地址 0, 4, 1, 5, 2, 6, 3, 7. 此时再访问地址 9, 13, 则现在 stack 的状态如 figure a 所示. 访问 9 和 13 各造成了一次 capacity miss 和 conflict miss, 并将 capacity LRU stack 中的 地址 0, 4 出队. 然而, 在 cache set 0 自身的 LRU stack 中, 还保留着地址 0 和 4. 此时再次访问 地址 0 和 4, 就只会造成 capacity miss, 而没有 conflict miss(如 figure b). 这种现象也是可以重复的, In the most extreme case, capacity misses can be **twice** as high as conflict misses.
+
+
 
 #### 6.2
 
