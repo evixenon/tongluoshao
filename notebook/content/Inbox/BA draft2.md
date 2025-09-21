@@ -146,7 +146,13 @@ For example, on the A64FX with a cache line size of 256 bytes running with 24 th
 
 If the working set size is smaller than the number of active shared cache lines, or if the difference between them is not substantial, the measurement for that configuration is considered invalid and excluded from accuracy analysis.
 
-#### 6.1 Baseline simulator prediction results
+#### 6.1 Prediction results
+
+#### 6.1.1 Differences from gound truth
+
+Figure 展示了使用 simulator 程序测量得到的结果与 likwid tools 测量结果的差距. 
+
+图中每一个矩阵的 difference 百分比由
 
 #### 6.2 Extended simulator prediction results
 
