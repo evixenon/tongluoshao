@@ -20,11 +20,11 @@ The experiments were conducted within the Bavarian Energy Architecture & Softwar
 
 The A64FX represents a state-of-the-art ARM-based architecture designed by Fujitsu for high-performance computing (HPC). It has a 48-core processor, where each core possesses a private 64 KiB 4-way set-associative L1 data cache. Every group of 12 cores shares an 8 MiB L2 cache. The experimental procedure began with single-threaded executions. For each matrix, cache miss predictions were collected from both the baseline simulator and the extended simulator. These results were compared against the ground truth measurements obtained via Likwid. The same procedure was subsequently repeated in multi-threaded configurations using 12, 24, 36, and 48 threads, in order to evaluate prediction accuracy under increasing parallelism and assess the impact of shared cache behavior and potential coherence overheads.
 
-The accuracy of the baseline and extended simulators was quantified using the Mean Percentage Error (MPE) metric, defined as:
+The accuracy of the baseline and extended simulators was quantified using the Mean Absolute Percentage Error (MAPE) metric, defined as:
 
-$$\frac{100}{n}\sum^n_{i=1}\frac{y_i - \hat{y}_i}{y_i}$$
+$$\frac{100}{n}\sum^n_{i=1}|\frac{y_i - \hat{y}_i}{y_i}|$$
 
-where y_i​ denotes the number of cache misses predicted by the simulator for the i-th matrix, and \hat{y}^i​ represents the corresponding ground truth value measured by hardware counters. MPE is not taking absolute values to preserve the direction of the error (over- or under-prediction), which offers valuable insight into systematic biases within the models. Furthermore, normalizing the error by the ground truth value enables a relative and scale-independent comparison across matrices of vastly different sizes. Finally, all experimental data was aggregated and processed using a combination of shell scripting and Python scripts, which facilitated consistent numerical analysis and generated the visualizations presented in the Results section.
+where y_i​ denotes the number of cache misses predicted by the simulator for the i-th matrix, and \hat{y}^i​ represents the corresponding ground truth value measured by hardware counters. MAPE is taking absolute values and discarding the direction of the error (over- or under-prediction), which offers valuable insight into systematic biases within the models, thus Mean Percentage Error(MPE) was applied in some phases of analysis. Furthermore, normalizing the error by the ground truth value enables a relative and scale-independent comparison across matrices of vastly different sizes. Finally, all experimental data was aggregated and processed using a combination of shell scripting and Python scripts, which facilitated consistent numerical analysis and generated the visualizations presented in the Results section.
 
 #### 4.2 Matrices Selection
 
