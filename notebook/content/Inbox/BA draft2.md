@@ -154,7 +154,7 @@ Figure 展示了使用 simulator 程序测量得到的结果与 likwid tools 测
 
 #### 6.1.2 Interpretation
 
-首先注意到,  L2 caches 中出现了非常多的 outliers. L2 数据异常的原因在 section 4.3 中已有解释, 是由于L2的缓存空间大于矩阵的总大小. 因此会在稍后的小节中确认数据的有效性再行比较.
+首先注意到,  L2 caches 的预测结果中出现了相当多的接近 100% 的 error. L2 数据异常的原因在 section 4.3 中已有解释, 是由于L2的缓存空间超过了矩阵的总大小. 因此会在稍后的小节中确认数据的有效性再行比较.
 
 对 L1 cache 的预测, 总体来说, extended simulator 得到了与 原本的 simulator 相近的结果. 两者对大部分矩阵的预测, 与 gound truth 的 error 集中在 2.5% 到 10% 之间, 最高的误差在 18% 左右. 矩阵的大小与预测的准确率并没有表现出相关性, 与之相比, 矩阵的个体差异对预测准确率的影响更大. 例如, GAP-road, mycielskian14, nv1 这几个矩阵在不同的线程下, L1 预测结果都出现了相似的模式. 更具体地举例来说, nv1 在各个线程下, 原 simulator 测试得到的 error 总是在 17.5% 附近, extended simulator 的测试结果则维持在 12.5% 左右.
 
@@ -169,5 +169,7 @@ Figure 展示了使用 simulator 程序测量得到的结果与 likwid tools 测
 
 
 #### 6.2
+
+过小的 wss 会导致
 
 #### 6.3
