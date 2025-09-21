@@ -146,13 +146,13 @@ For example, on the A64FX with a cache line size of 256 bytes running with 24 th
 
 If the working set size is smaller than the number of active shared cache lines, or if the difference between them is not substantial, the measurement for that configuration is considered invalid and excluded from accuracy analysis.
 
-#### 6.1 Prediction results
+#### 6.1 Raw Prediction results
 
 #### 6.1.1 Differences from gound truth
 
 Figure 展示了使用 simulator 程序测量得到的结果与 likwid tools 测量结果的差距. 图中每一个矩阵的 difference 百分比由 (likwid result - simulator result)/likwid result * 100 获得, 没有使用绝对值, 保留了 over/under-prediction 的方向, 因此一个 negative 的 value 表示 simulator 预测到了比 likwid tools 更多的 cache misses. 矩阵是按照 Working set size 降序排列的, 同一张 figure 中, 越上面的 矩阵拥有越大的 WSS. 左边的 figure 中的矩阵的 WSS 大于 160K, 而右边则小于. 如同图例中的说明, 红色的 bar 表示baseline simulator 的测量结果, 而蓝色的 bar 则是本论文中经过 extended 的 simulator 结果.
 
-#### 6.1.2 Interpretation
+#### 6.1.2 Interpretation and Evaluation
 
 首先注意到,  L2 caches 的预测结果中出现了相当多的接近 100% 的 error. L2 数据异常的原因在 section 4.3 中已有解释, 是由于L2的缓存空间超过了矩阵的总大小. 因此会在稍后的小节中确认数据的有效性再行比较.
 
@@ -164,12 +164,25 @@ Figure 展示了使用 simulator 程序测量得到的结果与 likwid tools 测
 
 对比 baseline simulator 和 extended simulator 的结果会发现, 后者有时候测量出了比前者更少的 cache misses. 直觉上来说, 原本的程序只能测量 capacity misses, 在 integrating conflict misses 之后, 测量得到的 total cache misses 应该只能增加. 但实际上, 根据论文中的 simulator 的实现方式, 这种现象是可能发生的. 
 
-这里使用一个简化的例子来解释这种现象: 考虑一个 2-way associatity, 拥有 4 cache sets, 总共的 capacity 为8 的 cache, 按顺序访问地址 0, 4, 1, 5, 2, 6, 3, 7. 此时再访问地址 9, 13, 则现在 stack 的状态如 figure a 所示. 访问 9 和 13 各造成了一次 capacity miss 和 conflict miss, 并将 capacity LRU stack 中的 地址 0, 4 出队. 然而, 在 cache set 0 自身的 LRU stack 中, 还保留着地址 0 和 4. 此时再次访问 地址 0 和 4, 就只会造成 capacity miss, 而没有 conflict miss(如 figure b). 这种现象也是可以重复的, In the most extreme case, capacity misses can be **twice** as high as conflict misses.
+这里使用一个简化的例子来解释这种现象: 考虑一个 2-way associatity, 拥有 4 cache sets, 总共的 capacity 为8 的 cache, 按顺序访问地址 0, 4, 1, 5, 2, 6, 3, 7. 此时再访问地址 9, 13, 则现在 stack 的状态如 figure a 所示. 访问 9 和 13 各造成了一次 capacity miss 和 conflict miss, 并将 capacity LRU stack 中的 地址 0, 4 出队. 然而, 在 cache set 0 自身的 LRU stack 中, 还保留着地址 0 和 4. 此时再次访问 地址 0 和 4, 就只会造成 capacity miss, 而没有 conflict miss(如 figure b). 这种现象也是可以重复的, in the most extreme case, capacity misses can be **twice** as high as conflict misses.
 
+#### 6.2 Impact of Matrix Working Set Size
 
+我们已经知道 wss 小于 active cache lines 会导致预测失效, 本小节的实验结果探究了到底应该选择 wss 为多大的 矩阵才可以视为没有受到 4.3 中描述的问题的影响. Figure 展示了在仅考虑 wss 大于 x 倍 active cache lines的矩阵时, 在各线程下预测 L2 cache misses 的平均 MAPE. 即使是最小的矩阵, 其 wss 也远大于 L1 private cache 的容量, 因此只需要考虑对 L2 的预测设置 threshold. 从图中可以看到, 当这个系数 在1.0 到 1.8 之间时, both MAPE 的 mean 值 和 standard deviation 快速下降. 而当 x > 2 时, y 轴的数值趋于平稳. 这个结果表明, 至少在本实验中, 仅使用 wss 大于 2 倍 active cache lines 的矩阵所得到的结果是较为可靠的.
+#### 6.3 L2 Prediction Results after Setting Threshold
 
-#### 6.2
+#### 6.3.1 Differences from gound truth
 
-过小的 wss 会导致
+根据 6.2 的结果, 缩小了矩阵范围再对 L2 预测误差进行展示(见 Figure). 与  6.1.1 中的结果不同, 此处的 difference 加上了绝对值, 以便于分析 extended cache simulator 的优化程度. 
 
-#### 6.3
+#### 6.3.2 Interpretation and Evaluation
+
+相比于 L1 cache 的预测结果, L2 cache 的结果与 ground truth 的误差普遍更小. 同时, 最大误差超过25%, 这是在 L1 cache 中没有的, 考虑到 L2 是共享缓存, 预测存在更多干扰, 这个结果也是解释得通的.与L1 相同的是, L2 结果也没有表现出 预测准确率与 matrix size的相关性. 在 L2 result 中同样有与其他矩阵结果差异较大的 outliner, 比如矩阵 wikipedia-20051105, 在部分线程下测得了远超其他矩阵的误差.
+
+在两个版本的 simulator 200 次对比中,  只有其中的 128 次(64%), extended 后的程序表现得更优. Table 展示了 Mean and standard deviation of the absolute percentage error for predicting L2 cache misses using before and after extending the algorithm. 拓展后的程序对 L2 cache 的预测误差优化幅度非常小,  在 1, 12, 24, 36, 48 线程中, 分别比原来优化了-0.02%, 1.31%, 1.60%, 1.76%, 1.06%, 平均的优化率为 1.14%.
+
+#### 6.4 Limitation
+
+#### 6.4.1 Accuracy Gap in this study
+
+#### 6.4.2 Methodological Limitations
