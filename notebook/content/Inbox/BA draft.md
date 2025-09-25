@@ -149,7 +149,8 @@ A fourth category emerges in modern multi-core processors: coherence misses. Thi
 #### 2.4 Cache Addressing
 The cache is divided into slots of the same size, called cache lines or cache block. Correspondingly, data is transferred in fixed-size chunks, each chunk fits into a cache line. The size of a cache line (e.g., 64 bytes) determines the amount of data fetched from memory.
 
-The address of a cache line can be divided into three fields: tag, index and offset.
+The block address can be divided into three fields: tag, index and offset. The offset is the address of the desired data within the block, the index is used to select
+the set according to associativity and the tag field is compared against another tag for a determining a hit or not.
 
 
 
