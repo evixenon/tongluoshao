@@ -388,3 +388,6 @@ As established in Section 2.1, the growing performance gap between processor and
 \hfill\break
 This chapter explores methods for predicting cache behavior to inform and optimize replacement decisions. Section 3.1 begins by reviewing and summarizing the replacement operations within a cache system upon a miss, building upon the foundational knowledge from the previous chapter. Section 3.2 introduces reuse distance, a critical metric for predicting cache behavior, and discusses the specific extensions with set-associativity to this metric proposed in our study. Following this, Section 3.3 surveys existing cache simulation approaches commonly employed in prior research to evaluate replacement policies and predictive models. Finally, Section 3.4 analyzes the potential sources of error between predictions and actual outcomes, providing a discussion on the limitations and realism of our approach.
 
+##### not related work
+\hfill\break
+To ensure rigorous validation, hardware-derived cache miss data were collected using Likwid tools\cite{treibig2011likwid} on the Fujitsu A64FX platform, providing reliable ground truth measurements. The evaluation employed a diverse set of matrices from the SuiteSparse collection\cite{mellor1991synchronization}, enabling comprehensive assessment under realistic and varied workload conditions.

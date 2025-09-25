@@ -1551,3 +1551,55 @@ threads=1, lhr71
 ![[attachments/Pasted image 20250918151852.png]]
 
 ![[attachments/Pasted image 20250918152050.png]]
+
+
+##### related
+
+您导师的反馈非常关键，这直接指出了您的文献综述需要加强与该领域最相关应用（SpMV）的结合。您需要证明您不仅了解通用的缓存理论，更深入了解这些理论在稀疏计算这一特定、且非常重要的场景中的应用。
+
+以下是一些关于SpMV中数据局部性和缓存行为的重要研究工作，您可以将它们整合到您的“Related Work”部分。我提供了几个整合思路和段落范例。
+
+关键相关论文推荐
+
+这些论文从不同角度处理SpMV的缓存性能问题，与您的工作直接相关：
+
+1.  **White & Sadayappan (1997): *On Improving the Performance of Sparse Matrix-Vector Multiplication***
+    *   **核心贡献**：这是一篇早期的基础性工作，明确讨论了稀疏矩阵的非零元分布对缓存性能的影响。他们提出了基于矩阵图划分的方法来重组数据，以提高局部性。
+    *   **与您工作的联系**：这为“优化SpMV缓存行为”这一问题奠定了基调，说明这是一个历史悠久且重要的问题。您可以将其作为该研究方向的起点。
+
+2.  **Buluç et al. (2011): *Reducing Communication in Sparse Matrix-Vector Multiplication***
+    *   **核心贡献**：虽然这篇论文的重点是减少并行计算中的通信，但其基础是通过矩阵重排序（如图划分中的广度优先搜索BFS）来改善数据的局部性。更好的局部性不仅减少通信，也直接改善缓存利用率。
+    *   **与您工作的联系**：这表明缓存优化与更广泛的性能目标（如通信避免）是紧密相连的。
+
+3.  **Pichel et al. (2006): *Improving Locality in the Sparse Matrix-Vector Product Using Graph Partitioning***
+    *   **核心贡献**：直接使用图划分算法（如METIS）对矩阵的行/列进行重新排序，使得被连续访问的数据在内存中也更靠近，从而提高缓存命中率。
+    *   **与您工作的联系**：这是“**基于数据布局/重排序**”优化SpMV缓存行为的经典范例，与您通过“**建模预测**”缓存行为的方法形成对比和补充。在文献综述中区分不同方法论非常重要。
+
+4.  **Kowarschik & Weiß (2003): *An Overview of Cache Optimization Techniques and Cache-Aware Numerical Algorithms***
+    *   **核心贡献**：虽然不专门针对SpMV，但其对缓存优化技术（如循环分块`tiling`）的综述非常有名。文中也讨论了将这些技术应用于稀疏矩阵计算的挑战与尝试。
+    *   **与您工作的联系**：您可以将您的工作置于“缓存感知`Cache-Aware`”（通过模型预测来理解行为）和“缓存优化`Cache-Oblivious`”（设计具有良好局部性的通用算法）这一更广阔的学术背景中。
+
+整合到“Related Work”的段落范例
+
+您可以在现有段落的基础上，新增一个段落来专门讨论SpMV相关的缓存研究。以下是一个范例：
+
+---
+
+\section{Related Work}
+
+... [您原有的第一段关于重用距离的理论基础] ...
+
+While some researchers have argued that reuse distance can be adapted to set-associative caches, most existing work has been limited to low associativity (e.g., $\leq$ 4 ways) or has not systematically quantified the impact of associativity on prediction accuracy \cite{marin2004cross, beyls2005generating}. Kim et al. \cite{kim1991implementing} proposed a stack simulation method tailored for highly associative memories, which inspired Breiter et al. \cite{breiter2023modelling} to develop a lightweight reuse distance-based approach for estimating cache behavior in Sparse Matrix-Vector Multiplication (SpMV).
+
+**Beyond reuse distance analysis, a significant body of research has directly addressed the challenge of poor data locality in SpMV, a kernel known for its irregular memory access patterns. Early work by White and Sadayappan \cite{white1997improving} highlighted the impact of matrix structure on performance and proposed graph-based reordering to improve locality. This inspired a line of research focused on cache-aware data layout transformations, such as the graph partitioning techniques used by Pichel et al. \cite{pichel2006improving} to cluster non-zero elements for better cache utilization. In contrast to these optimization-focused approaches, which aim to *improve* locality, our work and that of Breiter et al. \cite{breiter2023modelling} focus on *modeling and predicting* the inherent cache behavior of a given SpMV computation. The simulator used in this study extends these modeling contributions by incorporating support for set-associative cache modeling with higher associativity and explicitly evaluating its effect on prediction error.**
+
+---
+
+整合要点说明：
+
+1.  **承上启下**：用“Beyond reuse distance analysis...”开头，将话题从通用理论转移到具体应用（SpMV）。
+2.  **点明问题**：明确指出SpMV存在“不规则内存访问”和“数据局部性差”的问题，说明相关研究的必要性。
+3.  **分类介绍**：将相关研究分为“**基于数据重排序的优化方法**”（如White, Pichel）和“**基于行为建模预测的方法**”（如Breiter， 以及您的工作）。这种分类显示了您对领域有清晰的认识。
+4.  **突出您的工作**：在最后一句，将您的工作与Breiter的工作归为“建模预测”一类，并再次强调您的独特贡献（支持更高关联度、量化其影响），从而清晰地定位了您研究的创新点。
+
+通过这样的补充，您的“Related Work”部分会显得更加丰满、有深度，并且直接回应了导师的宝贵意见。
