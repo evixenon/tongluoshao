@@ -391,3 +391,9 @@ This chapter explores methods for predicting cache behavior to inform and optimi
 ##### not related work
 \hfill\break
 To ensure rigorous validation, hardware-derived cache miss data were collected using Likwid tools\cite{treibig2011likwid} on the Fujitsu A64FX platform, providing reliable ground truth measurements. The evaluation employed a diverse set of matrices from the SuiteSparse collection\cite{mellor1991synchronization}, enabling comprehensive assessment under realistic and varied workload conditions.
+
+
+##### do we really
+
+\hfill\break
+In this study, a trace-driven, application-level simulator was employed to specifically evaluate the cache performance of sparse matrix-vector multiplication. Further implementation details will be elaborated in Chapter 5.
