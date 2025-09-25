@@ -63,6 +63,8 @@ This chapter explains the basic principles of cache memory, which are essential 
 Finally, **Section 2.6** explains the two primary write strategies, write-through and write-back, which manage how data updates are handled between the cache and the main memory.
 
 Together, the concepts in this chapter provide the necessary foundation for understanding cache behavior, which supports the development of the cache model discussed in the following chapters.
+
+To understand how a cache locates data, it is essential to define its fundamental building blocks.
 #### 2.1 Role of Caches in Modern Computer Architecture
 
 - 为什么需要 cache
@@ -143,6 +145,11 @@ Capacity misses arise when a program's working set exceeds the cache size. These
 Conflict misses occur due to limitations in set-associative caches. When hash collision happens and the secific cache set is full, a memory block will be evicted although other cache set maintain vacuum. Increasing the cache associativicy reduces conflict misses, however, introduces circuit complexity and memory space redundance.
 
 A fourth category emerges in modern multi-core processors: coherence misses. This type of misses stems from cache consistency protocols such as MESI, where one core invalidates another's cached copy during shared data modification. Coherence misses manifest exclusively in shared-memory concurrency scenarios.
+
+#### 2.4 Cache Addressing
+The cache is divided into slots of the same size, called cache lines. Correspondingly, data is transferred in fixed-size chunks called memory blocks, each block fits into a cache line.
+
+
 
 #### 2.4 Cache associativity
 
