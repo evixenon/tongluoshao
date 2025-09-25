@@ -48,6 +48,21 @@ accurately predict whole program miss rates [14].}
 #### 2 intro
 This paper focuses entirely on the cache system of modern computers. To better understand the paper, this chapter introduces basic cache knowledge, emphasizing content relevant to this research and briefly introducing related technologies not used.
 
+This chapter explains the basic principles of cache memory, which are essential for understanding the research presented in this thesis.
+
+**Section 2.1** describes the role of caches in modern computer architecture. It explains how caches act as a high-speed temporary storage between the CPU and main memory to reduce the performance gap between the CPU's fast speed and the main memory's slower speed.
+
+**Section 2.2** introduces the memory hierarchy model. It explains the different levels of cache (L1, L2, L3) and how they work together, including the key concepts of inclusion and coherence.
+
+**Section 2.3** categorizes the different types of cache misses using the established 3C model (Compulsory, Capacity, Conflict) and adds a fourth type (Coherence) for multi-core systems. This helps in understanding why cache misses happen.
+
+**Section 2.4** discusses cache associativity, which defines where data can be placed in the cache. It compares the three main mapping methods: direct-mapped, set-associative, and fully-associative caches.
+
+**Section 2.5** reviews common cache replacement policies. These policies, such as LRU (Least Recently Used), decide which data to remove when the cache is full and new data needs to be loaded.
+
+Finally, **Section 2.6** explains the two primary write strategies, write-through and write-back, which manage how data updates are handled between the cache and the main memory.
+
+Together, the concepts in this chapter provide the necessary foundation for understanding cache behavior, which supports the development of the cache model discussed in the following chapters.
 #### 2.1 Role of Caches in Modern Computer Architecture
 
 - 为什么需要 cache
