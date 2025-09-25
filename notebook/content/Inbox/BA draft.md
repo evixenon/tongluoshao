@@ -147,7 +147,9 @@ Conflict misses occur due to limitations in set-associative caches. When hash co
 A fourth category emerges in modern multi-core processors: coherence misses. This type of misses stems from cache consistency protocols such as MESI, where one core invalidates another's cached copy during shared data modification. Coherence misses manifest exclusively in shared-memory concurrency scenarios.
 
 #### 2.4 Cache Addressing
-The cache is divided into slots of the same size, called cache lines. Correspondingly, data is transferred in fixed-size chunks called memory blocks, each block fits into a cache line.
+The cache is divided into slots of the same size, called cache lines or cache block. Correspondingly, data is transferred in fixed-size chunks, each chunk fits into a cache line. The size of a cache line (e.g., 64 bytes) determines the amount of data fetched from memory.
+
+The address of a cache line can be divided into three fields: tag, index and offset.
 
 
 
