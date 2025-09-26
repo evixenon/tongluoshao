@@ -45,6 +45,12 @@ prediction of reuse to be quite accurate over varied data
 sizes. Ding, et al., have used reuse-distance predictions to
 accurately predict whole program miss rates [14].}
 
+#### 1.4 structure of this thesis
+This thesis is organized into seven chapters.
+
+To provide the necessary background, Chapter \ref{2} introduces essential cache concepts, focusing on mechanisms that shape performance and highlighting background techniques for broader context. Chapter \ref{3} presents the background of cache behavior prediction, emphasizing reuse distance as a metric and sparse matrix-vector multiplication as workload for this work. 
+
+Chapter \ref{4} describes the methodological design, covering the experimental setup, matrix selection, and strategies for generating reliable ground truth and simulation data. Chapter \ref{5} details the implementation of the cache simulator, from a baseline model to extended features, emphasizing design choices that enable accurate and efficient evaluation. Chapter \ref{6} analyzes the experimental results, comparing simulated and measured outcomes, interpreting prediction gaps, and discussing the validity and limitations of the findings. Finally, Chapter \ref{7} concludes the thesis by summarizing the contributions, reflecting on their implications, and suggesting directions for future work.
 #### 2 intro
 This paper focuses entirely on the cache system of modern computers. To better understand the paper, this chapter introduces basic cache knowledge, emphasizing content relevant to this research and briefly introducing related technologies not used.
 
