@@ -52,7 +52,7 @@ This chapter explains the basic principles of cache memory, which are essential 
 
 **Section 2.1** describes the role of caches in modern computer architecture. It explains how caches act as a high-speed temporary storage between the CPU and main memory to reduce the performance gap between the CPU's fast speed and the main memory's slower speed.
 
-**Section 2.2** introduces the memory hierarchy model. It explains the different levels of cache (L1, L2, L3) and how they work together, including the key concepts of inclusion and coherence.
+**Section 2.2** introduces the memory hierarchy model. It explains the different levels of cache (L1, L2) and how they work together, including the key concepts of inclusion and coherence.
 
 **Section 2.3** categorizes the different types of cache misses using the established 3C model (Compulsory, Capacity, Conflict) and adds a fourth type (Coherence) for multi-core systems. This helps in understanding why cache misses happen.
 
