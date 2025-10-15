@@ -9,10 +9,25 @@ tags:
 背景: 造成 accuracy gap 的假设们 -> 我们的重点是 conflict
 
 背景: 什么是 conflict miss
+- 3C, cold miss and capacity miss
+- associativity
+- conflict miss example
 
+Research questions and work
 
-- 3C, 
+Testing environment and workload
 
+Program design
+- extended algorithm(main idea)
+- ground truth colletor
+
+L1 result
+
+L2 result - problem
+
+wss
+
+L2 result
 
 ---
 
