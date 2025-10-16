@@ -107,12 +107,26 @@ Although fully associative cache seems much more simple and easy to understand, 
 Methods
 
 My main work in this thesis is to adjust an existing algorithm, which simulates the cache access pattern in a
-Sparse Matrix-Vector Multiplication(SpMV) program.
+Sparse Matrix-Vector Multiplication(SpMV) program. 
 
 The original algorithm measures the amount of capacity misses under a fully associative cache assumption.
 While The algorithm after adjustment, which i call it extended algorithm later, will measure the number of conflict misses under a set-associative cache simulation.
 
+The experiments are carried out on the fujitsu A64FX,  it has a 48 cores in total. Each core has
+a private 64 4-way set-associative L1 cache. Every group of 12 cores shares an L2 cache, which is 16-way associative.
 
+The experiments are done with 1/12/24/36/48 threads
 
-Then i will explore how accurate can these two solutions be, and how far are they from the fact. And to achieve this i also need to collect some ground truth, that is some data of cache behavior in the reality.
+--
+In my thesis, my first goal is to extend an existing algorithm that simulates the cache access pattern of a SpMV program.  
+SpMV means Sparse Matrix–Vector Multiplication, it is a widely used computational kernel in scientific and engineering applications, and it is often used to study memory and cache behavior.
+
+The original algorithm measures the number of capacity misses under a fully associative cache assumption.  
+In my extended version, I modify it to simulate a set-associative cache, so it can also measure conflict misses.
+
+I ran the experiments on a Fujitsu A64FX processor. There are two levels of caches.
+Each core has a private L1 cache, with 4-way associativity.  
+Every group of 12 cores shares an L2 cache, which is 16-way associative.
+
+The processor has 48 cores in total, so I ran the experiments with 1, 12, 24, 36, and 48 threads to study the effect of parallelism,
 
