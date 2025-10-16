@@ -82,3 +82,37 @@ There are also other factors, like **replacement policies** (LRU vs. pseudo-LRU)
 
 All these simplifications can lead to an **accuracy gap** between predicted results in a cache simulation and actual cache behavior.  
 In my work, I mainly focus on understanding how the **fully associative versus set-associative assumption** affects the accuracy of cache behavior prediction.
+
+---
+
+a conflict miss occurs only in set-associative cache, it is a little bit more complicate.  
+  
+well let's first pay attention to the images, on the left side there is a fully associative cache with the capacity 8.  
+  
+In a fully associative cache, a data block can go to any free place of the cache.  
+
+On the right side there is a two-way set-associative cache. in this kind of cache, free places are divided into different sets. In each set there are two free places and this is what 2 way means. which set a data block should be placed in is calculated by address modulo by number of sets. for example, 6 modulo 4 is 2, so block 6 goes to set 2 .
+
+If we now want to access a new block 10 in both cache, 10 can go to any free places in the fully associative cache, but it can only go to set 2 on the right side, because 10 module 4 is also 2.
+
+Then one of the data in set 2 should be replaced, even if there are other blank spaces in the cache. This might lead to a conflict miss in the future.
+
+In short, conflict misses are misses caused by conflicts within a set.
+
+Although fully associative cache seems much more simple and easy to understand, it is very expensive, and most real hardware employ set-associative for common caches.
+
+
+---
+
+Methods
+
+My main work in this thesis is to adjust an existing algorithm, which simulates the cache access pattern in a
+Sparse Matrix-Vector Multiplication(SpMV) program.
+
+The original algorithm measures the amount of capacity misses under a fully associative cache assumption.
+While The algorithm after adjustment, which i call it extended algorithm later, will measure the number of conflict misses under a set-associative cache simulation.
+
+
+
+Then i will explore how accurate can these two solutions be, and how far are they from the fact. And to achieve this i also need to collect some ground truth, that is some data of cache behavior in the reality.
+
