@@ -130,3 +130,25 @@ Every group of 12 cores shares an L2 cache, which is 16-way associative.
 
 The processor has 48 cores in total, so I ran the experiments with 1, 12, 24, 36, and 48 threads to study the effect of parallelism,
 
+---
+In the original version of the algorithm, there is a class called “private cache”, which simulates a fully associative cache.
+Inside this class, two member variables — “stack” and “refmap” — work together to maintain an LRU stack, so that the cache can keep track of the most recently used data.
+Another variable, called “bucket”, is used for statistical purposes — it records how many cache misses occur during the simulation.
+
+my extension is to make this structure support a set-associative cache.
+The main idea is to create a vector which stores all the sets within the same level of cache.
+Each set itself is a private cache object, and each of them maintains its own LRU stack.
+
+Correspondingly, the way we do the cache miss statistics are also adjusted.
+
+(Correspondingly, the way we collect cache-miss statistics also needs to be adjusted, because now we count misses across multiple sets instead of a single global cache.)
+
+---
+To evaluate the prediction accuracy of both algorithms, we need to know the real number of cache misses.
+
+The machine we used supports hardware performance counters
+So, we can use the LIKWID performance tool to directly record low-level events such as cache misses during execution.
+The data collected by hardware counters is highly reliable, so it can be treated as ground truth.
+
+I wrote a simple test program that runs the real SpMV computation, measure cache misses that occur during the operation.
+The results from this program are then compared with the results predicted by our simulation algorithms.
