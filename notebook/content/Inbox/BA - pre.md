@@ -104,7 +104,7 @@ Although fully associative cache seems much more simple and easy to understand, 
 
 ---
 
-Methods
+experiment
 
 My main work in this thesis is to adjust an existing algorithm, which simulates the cache access pattern in a
 Sparse Matrix-Vector Multiplication(SpMV) program. 
@@ -152,3 +152,28 @@ The data collected by hardware counters is highly reliable, so it can be treated
 
 I wrote a simple test program that runs the real SpMV computation, measure cache misses that occur during the operation.
 The results from this program are then compared with the results predicted by our simulation algorithms.
+
+---
+
+In order to know how close the prediction results are to the real data, I calculated the Mean Absolute Percentage Error, or MAPE, for both the original and the extended algorithm.
+
+As shown in the tables, the extended algorithm produces prediction results that are closer to the ground truth, which means a smaller MAPE value.
+We can also see that the standard deviation becomes more stable, indicating more consistent predictions across different thread counts.
+
+For the L1 cache, on average, the extended algorithm achieved an optimization rate of about 9.95% compared to the original one.
+For the L2 cache, the improvement is smaller — around 1.14% — but it still shows a slight gain in accuracy.
+
+---
+
+conclusion
+
+Overall, the extended algorithm achieved more accurate predictions than the original version.
+This shows that simplifying a set-associative cache into a fully associative model can indeed reduce prediction accuracy, because it ignores conflict misses that occur in realistic cache architectures.
+
+While the extended algorithm achieved a notable improvement in the L1 cache — about 9.95% on average — the gain in the L2 cache was much smaller, only around 1.14%.
+
+The main difference between L1 and L2 is that L1 caches are private and have low associativity, making them more sensitive to conflict misses, whereas L2 caches are shared and have high associativity, where other factors like multi-core interference dominate.
+
+This indicates that the proposed approach is more effective for low-associativity, private caches, but less effective for complex, shared caches with many interacting factors.
+
+There are also some limitations in this study — for example, the matrix size was was limited. In the future, the framework could be extended with more realistic cache policies like pseudo-LRU, and tested on larger datasets and more architectures to improve its accuracy and generality.  
