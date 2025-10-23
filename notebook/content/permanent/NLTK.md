@@ -17,9 +17,9 @@ nltk.help.upenn_tagset('DT')
 nltk.help.brown_tagset('DT')
 ```
 
-- [ ] 大类:预处理
-- [ ] 根据两个任务拆分 syntax analyse
-- [ ]  parser 的简要说明
+-  大类:预处理
+-  根据两个任务拆分 syntax analyse
+-   parser 的简要说明
 
 ## Syntax Analyse with formal Grammar
 根据输入的语法规则, 分析给定句子的结构
