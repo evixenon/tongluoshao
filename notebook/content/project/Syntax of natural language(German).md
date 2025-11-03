@@ -1347,7 +1347,7 @@ q1 predict, q2 scan, q2 completion...
     - X2 -> D E
 
 #### F1 Metrics
-[[permanent/F1 Metrics]]
+[[knowledge/数理化生与自然科学/数学, 统计学/F1 Metrics]]
 
 ### Annotation PCFG
 

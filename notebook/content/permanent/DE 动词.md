@@ -69,7 +69,7 @@ hatten gemacht
     - 形式：werden + 动词第二分词 + haben
 
 #### 6、不规则动词表见Wortschatz
-[[permanent/Unregelmäßige Verben|Unregelmäßige Verben]]
+[[knowledge/语言/Deu/Unregelmäßige Verben|Unregelmäßige Verben]]
 
 ## 二、反身动词
 

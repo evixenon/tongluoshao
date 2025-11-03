@@ -9,4 +9,4 @@ tags:
 
 [[permanent/小鹤音形和 Obsidian vim 的适性|小鹤音形和 Obsidian vim 的适性]]
 
-[[permanent/Ob发布到Hugo的尝试|Ob发布到Hugo的尝试]]
+[[experience/Ob发布到Hugo的尝试|Ob发布到Hugo的尝试]]

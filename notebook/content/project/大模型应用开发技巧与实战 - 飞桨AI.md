@@ -215,7 +215,7 @@ Prompt 构造:(推荐顺序)
 
 构造时:
 - 明确给出任务, 最好是任务名字
-- 给出少量的参考案例(想想[[project/断墨寻径 - Yjango|断墨寻径 - Yjango]])
+- 给出少量的参考案例(想想[[knowledge/LearningScience/断墨寻径 - Yjango|断墨寻径 - Yjango]])
 
 调整:
 - 直接对话(你忘记了xxx, 请用xx格式)
