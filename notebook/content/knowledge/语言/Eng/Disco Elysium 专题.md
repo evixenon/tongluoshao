@@ -45,3 +45,6 @@ i'm insinuating that i'm vagely sympathetic
 
 People give up information in more innocuous questions, which you can later use in the more sinister ones, not vice versa.
 
+![[attachments/Pasted image 20251121160313.png]]
+
+![[attachments/Pasted image 20251121160735.png]]
