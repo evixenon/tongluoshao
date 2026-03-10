@@ -212,6 +212,15 @@ deq.pop_front(); // 删除第一个
 - 不支持 at() 或 下标访问
 - 可以 it++,  不能 it+5
 
+```cpp
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+```
 #### list 构造
 ```cpp
 list<int> lst;
