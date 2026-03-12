@@ -279,14 +279,4 @@ bazel run
 #### VS Code 插件
 拓展名: **Bazel**
 
-这个插件依赖buildifier
-```
-1.下载 Buildtools 代码库：git clone
-https://github.com/bazelbuild/buildtools.git
-2.进⼊ Buildtools ⽬录：cd buildtools
-3.构建 Buildtools：bazel build //buildifier //buildozer
-//unused_deps
-4.安装 Buildtools 到 指定位置。
-sudo cp bazel-bin/buildifier/buildifier_/buildifier
-/usr/local/bin/
-```
+这个插件依赖[buildifier](https://github.com/bazelbuild/buildtools.git)
