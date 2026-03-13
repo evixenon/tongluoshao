@@ -9,10 +9,12 @@ date: "2023-06-16"
 ## 学习
 
 - [[permanent/C++STL|C++STL]]
-- [[permanent/cpp错题本|cpp错题本]]
-- [[permanent/cpp 进阶语法和特性|cpp 进阶语法和特性]]
+- [[permanent/C++ 错题本|C++ 错题本]]
+- [[permanent/C++ 进阶|C++ 进阶]]
+- [[permanent/C++ 算法常用数据结构|C++ 算法常用数据结构]]
+- [[permanent/C++ Best Practices|C++ Best Practices]]
 ## 课程
 
 - [[project/侯捷 - C++ 面向对象程序设计|侯捷 - C++ 面向对象程序设计]]
-
-- [[project/侯捷 - C++ 2.0]]
+- [[project/侯捷 - C++ 2.0|侯捷 - C++ 2.0]]
+- [[project/光城 - C++轻量工业级线程池|光城 - C++轻量工业级线程池]]

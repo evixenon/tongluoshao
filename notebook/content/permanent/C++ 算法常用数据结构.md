@@ -48,3 +48,34 @@ ans.size(); // 长度
 sort(ans.begin(), ans.end()); // 排序
 ans.push_back({x, nums[j], nums[k]}); // 往数组里添加
 ```
+
+
+#### 链表
+
+```cpp
+// ctor
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+```
+
+
+```cpp
+// 记得箭头
+node = node->next;
+
+// 哨兵
+ListNode dummy(0, head);
+auto slow = &dummy; // auto = ListNode*
+return dummy.next;
+
+// 删除节点时的内存管理
+auto node = fast;
+fast = fast->next;
+delete node;
+
+```

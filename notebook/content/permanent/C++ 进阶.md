@@ -1,52 +1,20 @@
 ---
-title: "cpp 进阶语法和特性"
-date: "2025-06-03"
+title: C++ 进阶语法和特性
+date: 2025-06-03
 tags:
 ---
-## 标准库
-#### cstdint
-- 解决 c/cpp 原生 int 在不同平台上位宽不一致的问题
+## const & constexpr
 
-| 类型         | 位宽     | 取值范围               | 用途               |
-| ---------- | ------ | ------------------ | ---------------- |
-| `int8_t`   | 8-bit  | -128 ~ 127         | 字节数据处理           |
-| `uint8_t`  | 8-bit  | 0 ~ 255            | 原始二进制数据          |
-| `int16_t`  | 16-bit | -32,768 ~ 32,767   | 短整数、Unicode 基本平面 |
-| `uint16_t` | 16-bit | 0 ~ 65,535         | UTF-16 编码        |
-| `int32_t`  | 32-bit | -2.14e9 ~ 2.14e9   | 常规整数、文件偏移量       |
-| `uint32_t` | 32-bit | 0 ~ 4.29e9         | IP 地址、哈希值        |
-| `int64_t`  | 64-bit | -9.22e18 ~ 9.22e18 | 大文件尺寸、时间戳        |
-| `uint64_t` | 64-bit | 0 ~ 1.84e19        | 内存地址（64位系统）      |
-
-| 类型          | 描述           | 典型位宽      |
-| ----------- | ------------ | --------- |
-| `intptr_t`  | 可存储指针的有符号整数  | 32/64-bit |
-| `uintptr_t` | 可存储指针的无符号整数  | 32/64-bit |
-| `size_t`    | 对象大小/数组索引的类型 | 平台相关      |
-| `ptrdiff_t` | 指针差值的类型      | 平台相关      |
-
-配合 cinttypes 安全打印 int
-
-#### cinttypes
+#### const & pointer
+- `*` 在 const 左: 常量指针
+- `*` 在 const 右: 指针常量
 
 ```cpp
-#include <cinttypes>  // 额外包含
-
-uint64_t value = 0x123456789ABCDEF;
-printf("Value = %" PRIu64 "\n", value); 
-// 输出：Value = 81985529216486895
-
-int32_t num;
-scanf("%" SCNd32, &num);  // 安全输入32位整数
+const char * a; //指向const对象的指针或者说指向常量的指针。
+char const * a; //同上
+char * const a; //指向类型对象的const指针。或者说常指针、const指针。
+const char * const a; //指向const对象的const指针。
 ```
-
-| 宏        | 含义               | 示例格式符          |
-| -------- | ---------------- | -------------- |
-| `PRIu64` | 打印 uint64_t      | `%lu` 或 `%llu` |
-| `PRId32` | 打印 int32_t       | `%d`           |
-| `PRIx16` | 打印 uint16_t 十六进制 | `%x`           |
-| `SCNu8`  | 输入 uint8_t       | `%hhu`         |
-## 语法
 
 #### constexpr
 
@@ -107,7 +75,10 @@ constexpr 必须是编译时常量, 必须保证编译时已知
  合法（运行时常量）
  constexpr int b = runtime_val; //
  错误！必须是编译时常量
- ```
+```
+
+
+## undefined
 
 #### casting
 - reinterpret_cast: 不相关的指针/引用转换（如 int* → double*)
@@ -198,86 +169,3 @@ int n = (int) obj;   // c style operator int()
 - 右值引用：用`&&`声明，只能绑定到右值（C++11引入，用于实现移动语义）。
 
 ![[attachments/Pasted image 20250703192626.png]]
-## Best Practices 
-
-#### .h 和 .cpp
-
-我来解释一下 C++ 中头文件(.h)和源文件(.cpp)的内容分配原则：
-
-1. 头文件(.h)通常包含：
-- 类/函数的声明（declarations）
-- 模板定义（因为模板需要在编译时可见）
-- 内联函数（inline functions）
-- 常量定义
-- 类型定义（typedefs, using declarations）
-- 宏定义
-- 其他头文件的包含
-
-2. 源文件(.cpp)通常包含：
-- 类/函数的具体实现（implementations）
-- 非内联函数的定义
-- 静态变量/常量的定义
-- 具体的业务逻辑
-
-让我们通过 `cache.h` 和 `cache.cpp` 的例子来说明：
-
-在 `cache.h` 中：
-```cpp
-class Cache {
-    void handle_cline(Addr addr);  // 函数声明
-    Bucket::Counts on_block_seen(StackIterator &it);  // 函数声明
-    // ... 其他声明
-};
-```
-
-在 `cache.cpp` 中：
-```cpp
-Bucket::Counts Cache::on_block_seen(StackIterator &it) {
-    // 函数的具体实现
-    if (it == stack_.begin()) {
-        return {0u};
-    }
-    // ... 实现细节
-}
-```
-
-这样分配的原因：
-
-1. 编译效率：
-   - 头文件会被多个源文件包含
-   - 将实现放在 .cpp 文件中可以避免重复编译
-   - 修改实现时只需要重新编译对应的 .cpp 文件
-
-2. 封装性：
-   - 头文件作为公共接口
-   - 实现细节隐藏在 .cpp 文件中
-   - 用户只需要知道接口，不需要关心具体实现
-
-3. 链接效率：
-   - 将实现放在 .cpp 文件中可以生成目标文件
-   - 链接时只需要链接目标文件
-   - 避免代码重复
-
-4. 模板和内联函数的特殊处理：
-   - 模板需要在编译时可见，所以定义在头文件中
-   - 内联函数也需要在编译时可见，所以也定义在头文件中
-
-5. 避免多重定义：
-   - 将实现放在 .cpp 文件中可以避免链接时的多重定义错误
-   - 头文件中只包含声明，不会导致多重定义
-
-这种分离方式的好处：
-1. 提高编译速度
-2. 更好的代码组织
-3. 更好的封装性
-4. 更容易维护
-5. 更好的代码重用性
-
-需要注意的是，现代 C++ 中也有一些例外情况，比如：
-- 模板类/函数通常需要将实现也放在头文件中
-- 内联函数通常也放在头文件中
-- 一些简单的工具函数可能直接定义在头文件中
-
-这些例外都是为了满足特定的编译需求或提高性能。
-
-#### malloc free

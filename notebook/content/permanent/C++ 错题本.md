@@ -1,6 +1,6 @@
 ---
-title: "cpp错题本"
-date: "2025-05-23"
+title: C++ 错题本
+date: 2025-05-23
 tags:
 ---
 ## static
