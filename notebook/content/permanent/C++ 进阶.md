@@ -5,15 +5,117 @@ tags:
 ---
 ## const & constexpr
 
+#### const
+
+- 被 const 修饰的变量或对象, 值不能修改.
+- 在声明时必须初始化
+
+`const` 定义的变量只有类型为整数或枚举，且以常量表达式初始化时才能作为**常量表达式**。其他情况下它只是一个 **`const` 限定的变量**，不要将与常量混淆。
+#### const & define
+- `#define` 是文本替换
+- `#define` 在预处理阶段展开, `const` 在编译
+- [define 没有类型?未必](https://github.com/Light-City/CPlusPlusThings/issues/5)
+
+#### const & 位域
+
+- 非 const 变量默认为extern, 但 const 变量不是
+- 要使 const 变量能够在其他文件中访问，必须在文件中显式地指定它为extern
+
 #### const & pointer
-- `*` 在 const 左: 常量指针
-- `*` 在 const 右: 指针常量
+- `*` 在 const 左: 常量指针, 指向的内容是 const
+- `*` 在 const 右: 指针常量, 指针是 const
 
 ```cpp
 const char * a; //指向const对象的指针或者说指向常量的指针。
 char const * a; //同上
 char * const a; //指向类型对象的const指针。或者说常指针、const指针。
 const char * const a; //指向const对象的const指针。
+```
+
+**常量指针**, 指向常量的指针. 其内容是一个常量的地址. 指针地址/指向的常量可以修改, 常量的值不能被修改
+```cpp
+const int *ptr; // 可以, const定义的是int类型，也就是ptr所指向的对象类型，而不是ptr本身，所以ptr可以不用赋初始值
+int val = 10;
+ptr = &val; // 可以, 修改了指向的常量. 哪怕 val 不是 const. 
+*ptr = 10; // 不行, 此时不能通过 *ptr 去修改 val 的值
+val = 5; // 但 val 本身可以修改
+```
+
+除此之外，也不能使用 `void*` 指针保存const对象的地址，必须使用const `void*` 类型的指针保存const对象的地址
+```cpp
+const int p = 10;
+const void * vp = &p;
+// void *vp = &p; //error
+```
+
+**指针常量/常指针**, 必须初始化, 且指针的值不能修改
+```cpp
+// 指针常量, 常指针
+int val = 10;
+int * const ptr = &val; // 必须初始化
+
+const int cval = 20;
+const int * const cptr = &cval;
+
+const int * const cptr2 = &val; //可以, const 可兼容非 const
+// int * const ptr2 = &cval; //error
+
+*ptr = 11;
+std::cout << *ptr; //11
+```
+
+#### const & function
+
+修饰返回值, 见[[#const & pointer]]
+```cpp
+const int func1();
+const int * func2();
+int * const func3(); 
+```
+
+修饰函数参数
+```cpp
+// 无意义的修饰, 形参本就不可变
+void func(const int var); // 传递过来的参数不可变
+void func(int *const var); // 指针本身不可变
+```
+
+```cpp
+// 指针指向的内容不可变
+void StringCopy(char *dst, const char *src);
+
+// 修饰引用, 增加效率且防止修改
+void func(const A &a)
+```
+
+#### const & class
+- 在一个类中，**任何不会修改数据成员的函数**都应该声明为const类型(常成员函数)
+- const对象只能访问const成员函数,而非const对象可以访问任意的成员函数,包括const成员函数
+
+```cpp
+class Apple
+{
+private:
+    int people[100];
+public:
+    Apple(int i); 
+    const int apple_number;
+};
+```
+
+ 类中的const成员变量必须进行初始化
+```cpp
+// 通过初始化列表
+Apple::Apple(int i):apple_number(i) { }
+
+// 或者结合 static 初始化
+static const int apple_number； // 类内
+const int Apple::apple_number=10; // 类外初始化
+
+// c++11 可以声明时直接初始化(但纯 static 是不行的)
+static const int apple_number=10;
+// 或者
+const int apple_number=10;
 ```
 
 #### constexpr

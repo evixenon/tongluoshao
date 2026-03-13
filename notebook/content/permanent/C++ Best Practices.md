@@ -86,3 +86,7 @@ Bucket::Counts Cache::on_block_seen(StackIterator &it) {
 这些例外都是为了满足特定的编译需求或提高性能。
 
 #### malloc free
+
+## undefined
+
+在一个类中，任何不会修改数据成员的函数都应该声明为const类型
