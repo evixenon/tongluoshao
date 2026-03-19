@@ -116,11 +116,12 @@ int main() {
 1. **编译器要求**：需支持 C++20（GCC 10+、Clang 11+、MSVC 2022+）；
 2. **编译命令**（GCC/Clang）：
     
-    bash
     
-    运行
-    
-    ```
-    g++ -std=c++20 jthread_demo.cpp -o jthread_demo -pthread
-    ./jthread_demo
-    ```
+```bash
+g++ -std=c++20 jthread_demo.cpp -o jthread_demo -pthread
+./jthread_demo
+```
+
+`jthread` 析构时会检查是否可 join，若未 join 则自动 join（避免 `std::thread` 析构时的崩溃风险）。
+
+原生支持 `stop_token`/`stop_source`, `std::thread` 需手动实现停止标志（如 `std::atomic<bool>`）
