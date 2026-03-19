@@ -353,6 +353,11 @@ auto dfs = [&](this auto&& dfs, int a) {...};
 ```cpp
 std::mutex mtx;
 {
+    // 作用域内自动加锁
     std::lock_guard<std::mutex> lock(mtx);
 }
+// 作用域外, 锁被析构, 自动解锁
 ```
+
+
+
