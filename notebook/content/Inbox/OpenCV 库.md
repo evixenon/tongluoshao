@@ -93,7 +93,7 @@ OpenCV 封装了视觉开发常用的几何 / 数据类型，是函数参数的�
 - `contours`：`std::vector<std::vector<cv::Point>>`，存储所有轮廓的点集；
 - `hierarchy`：`std::vector<cv::Vec4i>`，存储轮廓的层级关系（父子 / 相邻）；
 - 轮廓逼近：`cv::approxPolyDP`（将复杂轮廓简化为多边形，如矩形 / 圆形）；
-- 轮廓属性：面积（`contourArea`）、周长（`arcLength`）、外接矩形（`boundingRect`）、最小外接圆（`minEnclosingCircle`）。
+- 轮廓属性：面积（`contourArea`）、周长（`arcLength`）、外接矩形（`boundingRect`/`minAreaRect`(RotatedRect)）、最小外接圆（`minEnclosingCircle`）。
 #### 目标检测
 - **滑动窗口 + 模板匹配**：`cv::matchTemplate`（简单场景，如固定模板的目标查找）；
 - **霍夫变换**：
