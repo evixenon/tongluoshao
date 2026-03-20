@@ -89,4 +89,8 @@ Bucket::Counts Cache::on_block_seen(StackIterator &it) {
 
 ## undefined
 
+#todo 
+
 在一个类中，任何不会修改数据成员的函数都应该声明为const类型
+
+{best} make_shared 代替 new shared
