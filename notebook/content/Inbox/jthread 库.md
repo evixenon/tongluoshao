@@ -11,7 +11,7 @@ cpp
 
 运行
 
-```
+```cpp
 #include <iostream>
 #include <thread>   // std::jthread、std::stop_token、std::stop_source
 #include <chrono>   // 时间相关函数
