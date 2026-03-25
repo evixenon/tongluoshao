@@ -94,3 +94,5 @@ Bucket::Counts Cache::on_block_seen(StackIterator &it) {
 在一个类中，任何不会修改数据成员的函数都应该声明为const类型
 
 {best} make_shared 代替 new shared
+
+编写许多小的成员函数去访问各个类的成员变量是一种优秀的 C++ 编码风格

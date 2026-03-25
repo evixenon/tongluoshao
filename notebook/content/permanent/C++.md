@@ -8,7 +8,7 @@ date: "2023-06-16"
 
 ## 学习
 
-- [[permanent/C++STL|C++STL]]
+- [[permanent/C++ STL|C++ STL]]
 - [[permanent/C++ 错题本|C++ 错题本]]
 - [[permanent/C++ 进阶|C++ 进阶]]
 - [[permanent/C++ 算法常用数据结构|C++ 算法常用数据结构]]
