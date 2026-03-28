@@ -5,10 +5,10 @@ date: "2023-06-16"
 
 ## 磨刀
 - [VScode环境配置官方文档](https://code.visualstudio.com/docs/languages/cpp)
-
+- [[permanent/C++ 编译|C++ 编译]]
 ## 学习
 
-- [[permanent/C++STL|C++STL]]
+- [[permanent/C++ STL|C++ STL]]
 - [[permanent/C++ 错题本|C++ 错题本]]
 - [[permanent/C++ 进阶|C++ 进阶]]
 - [[permanent/C++ 算法常用数据结构|C++ 算法常用数据结构]]
