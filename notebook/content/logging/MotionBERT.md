@@ -143,7 +143,24 @@ python ./tools/preprocess_amass.py
 
 ### AlphaPose
 
+```bash
+conda create -n alphapose python=3.8 -y 
+conda activate alphapose
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 cpuonly -c pytorch -y
 
+pip install -r requirements.txt 
+python setup.py develop
+
+
+#  下载模型（自动下载）
+mkdir detector\yolo\data
+curl -o detector/yolo/data/yolov3-spp.weights https://pjreddie.com/media/files/yolov3-spp.weights
+
+mkdir pretrained_models
+curl -o pretrained_models/fast_res50_256x192.pth https://download.openmmlab.com/mmpose/alphapose/fast_res50_256x192.pth
+```
+
+全部运行完 = **AlphaPose 安装成功**。
 
 ### pretrain
 
