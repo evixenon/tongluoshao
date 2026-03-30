@@ -170,7 +170,7 @@ curl -o pretrained_models/fast_res50_256x192.pth https://download.openmmlab.com/
 
 AlphaPose -> json ->MotionBert
 
-[Windows Install]([AlphaPose/docs/win_install.md at master · MVIG-SJTU/AlphaPose](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/win_install.md))
+[Windows Install]([AlphaPose/docs/win_install.md at master · MVIG-SJTU/AlphaPose](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/win_install.md)) 跟这里下载 dll
 
 下载[Model]([AlphaPose/docs/MODEL_ZOO.md at master · MVIG-SJTU/AlphaPose](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/MODEL_ZOO.md)) -> `AlphaPose\pretrained_models`
 
