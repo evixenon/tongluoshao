@@ -81,6 +81,7 @@ pip install chumpy --no-build-isolation
 ```
 
 matplotlib 也出问题, 缺少 C++ 编译环境. 安装[开发工具](https://visualstudio.microsoft.com/visual-cpp-build-tools/), 只勾选 `Desktop development with C++（桌面 C++ 开发工具）`
+打断 -> trae
 
 
 继续装环境
