@@ -91,7 +91,7 @@ pip install -r .\requirements.txt
 
 ### Trae 装环境
 
-跳过前面的一段, 直接来到 requirements 之后的阶段
+跳过前面的一段, 直接来到 requirements 之后的阶段, 然后同样 BodyModel 不兼容
 
 ### 数据准备
 
