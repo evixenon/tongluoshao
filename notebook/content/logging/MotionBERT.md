@@ -140,3 +140,8 @@ python ./tools/preprocess_amass.py
 然后执行 `python ./tools/convert_h36m.py`, 会生成一个文件夹
 #### PoseTrack
 从[网站]([2D Body Keypoint Datasets — MMPose 1.3.2 documentation](https://mmpose.readthedocs.io/en/latest/dataset_zoo/2d_body_keypoint.html#posetrack18))下载并解压到 `MotionBERT\data\motion2d`, 直接可用
+
+### pretrain
+
+[MotionBERT 源码复现-CSDN博客](https://blog.csdn.net/KangXi_TangYuan/article/details/134194719)
+
