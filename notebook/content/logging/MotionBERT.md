@@ -88,6 +88,11 @@ matplotlib 也出问题, 缺少 C++ 编译环境. 安装[开发工具](https://v
 ```
 pip install -r .\requirements.txt
 ```
+
+### Trae 装环境
+
+跳过前面的一段, 直接来到 requirements 之后的阶段
+
 ### 数据准备
 
 #### AMASS
@@ -112,7 +117,7 @@ python ./tools/compress_amass.py
 pip 直接安装的包版本不兼容, 要去 [Github]([nghorbani/human_body_prior: VPoser: Variational Human Pose Prior](https://github.com/nghorbani/human_body_prior)) 下载安装
 
 ```bash
-pip install git+https://github.com/nghorbani/human_body_prior.gi
+pip install git+https://github.com/nghorbani/human_body_prior.git
 ```
 
 报错2: 从[这里]([Pose2Mesh_RELEASE/data/Human36M/J_regressor_h36m_correct.npy at master · hongsukchoi/Pose2Mesh_RELEASE](https://github.com/hongsukchoi/Pose2Mesh_RELEASE/blob/master/data/Human36M/J_regressor_h36m_correct.npy))能下载到另一个缺少的文件 `J_regressor_h36m_correct.npy`, 放进 `data/AMASS/`
