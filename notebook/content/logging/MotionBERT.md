@@ -35,7 +35,9 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 激活 conda 后安装 requirements
 ```bash
-conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
+# conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
+# cpu 版本
+conda install pytorch torchvision torchaudio cpuonly -c pytorch -y 
 # 临时换源
 pip install -r .\requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
@@ -51,6 +53,18 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 conda env export > environment.yml
 ```
 
+### 环境重装
+发现官方给的 python3.7 和现在的 human_body_prior 不兼容, 然后又重启了
+
+```bash
+conda deactivate
+
+# -y 无须确认
+conda remove -n motionbert --all -y
+
+# anaconda = 100 + 个常用预装库的大礼包
+conda create -n motionbert python=3.10 anaconda
+```
 ### 数据准备
 
 #### AMASS
@@ -64,15 +78,18 @@ conda env export > environment.yml
 win 上 用 7zip 解两层压
 
 `compress_amass.py` 执行结束后会在 AMASS 文件夹生成 .pkl 和 .csv 文件
+
 ```bash
 python ./tools/compress_amass.py
 ```
 
 `preprocess_amass.py` 会报错
 
-报错1: 先装个缺少的包
+报错1: 先装个缺少的包 `human_body_prior`
+pip 直接安装的包版本不兼容, 要去 [Github]([nghorbani/human_body_prior: VPoser: Variational Human Pose Prior](https://github.com/nghorbani/human_body_prior)) 下载安装
+
 ```bash
-pip install human_body_prior
+pip install git+https://github.com/nghorbani/human_body_prior.gi
 ```
 
 报错2: 从[这里]([Pose2Mesh_RELEASE/data/Human36M/J_regressor_h36m_correct.npy at master · hongsukchoi/Pose2Mesh_RELEASE](https://github.com/hongsukchoi/Pose2Mesh_RELEASE/blob/master/data/Human36M/J_regressor_h36m_correct.npy))能下载到另一个缺少的文件 `J_regressor_h36m_correct.npy`, 放进 `data/AMASS/`
@@ -80,6 +97,15 @@ pip install human_body_prior
 ```
 python ./tools/preprocess_amass.py
 ```
+
+报错3: 下[模型]([MANO](https://mano.is.tue.mpg.de/download.php))
+
+![[attachments/Pasted image 20260330135921.png]]
+
+报错4: 下[模型]([SMPL](https://smpl.is.tue.mpg.de/index.html))
+
+![[attachments/Pasted image 20260330141902.png]]
+
 #### Human 3.6M
 [下载](https://1drv.ms/u/s!AvAdh0LSjEOlgU7BuUZcyafu8kzc?e=vobkjZ)并解压到 `data/motion3d`
 
