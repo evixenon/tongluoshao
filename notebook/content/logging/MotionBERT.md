@@ -141,7 +141,20 @@ python ./tools/preprocess_amass.py
 #### PoseTrack
 从[网站]([2D Body Keypoint Datasets — MMPose 1.3.2 documentation](https://mmpose.readthedocs.io/en/latest/dataset_zoo/2d_body_keypoint.html#posetrack18))下载并解压到 `MotionBERT\data\motion2d`, 直接可用
 
+### AlphaPose
+
+
+
 ### pretrain
 
 [MotionBERT 源码复现-CSDN博客](https://blog.csdn.net/KangXi_TangYuan/article/details/134194719)
 
+### inference
+
+AlphaPose -> json ->MotionBert
+
+- AlphaPose **Video**: Run AlphaPose for a video and save the rendered video with:
+
+```shell
+python scripts/demo_inference.py --cfg ${cfg_file} --checkpoint ${trained_model} --video ${path to video} --outdir examples/res --save_video
+```
