@@ -64,6 +64,28 @@ conda remove -n motionbert --all -y
 
 # anaconda = 100 + 个常用预装库的大礼包
 conda create -n motionbert python=3.10 anaconda
+
+activate
+
+# cpu 版本 pytorch
+conda install pytorch torchvision torchaudio cpuonly -c pytorch -y 
+```
+
+ 开始装 requirements
+ 
+```bash
+# 然后 chumpy 太老了强制 import pip 出了问题:
+python -m ensurepip --upgrade
+python -m pip install setuptools
+pip install chumpy --no-build-isolation
+```
+
+matplotlib 也出问题, 缺少 C++ 编译环境. 安装[开发工具](https://visualstudio.microsoft.com/visual-cpp-build-tools/), 只勾选 `Desktop development with C++（桌面 C++ 开发工具）`
+
+
+继续装环境
+```
+pip install -r .\requirements.txt
 ```
 ### 数据准备
 
