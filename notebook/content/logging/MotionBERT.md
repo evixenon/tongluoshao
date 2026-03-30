@@ -175,3 +175,18 @@ AlphaPose -> json ->MotionBert
 ```shell
 python scripts/demo_inference.py --cfg ${cfg_file} --checkpoint ${trained_model} --video ${path to video} --outdir examples/res --save_video
 ```
+
+下载[Model]([AlphaPose/docs/MODEL_ZOO.md at master · MVIG-SJTU/AlphaPose](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/MODEL_ZOO.md)) -> `AlphaPose\pretrained_models`
+
+[weights](https://pjreddie.com/media/files/yolov3-spp.weights) -> `AlphaPose\detector\yolo\data\`
+
+
+```bash
+python scripts/demo_inference.py ^
+--cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml ^
+--checkpoint pretrained_models/halpe26_fast_res50_256x192.pth ^
+--video venc2_train_1.mp4 ^
+--save_video ^
+--format open ^
+--outdir result
+```
