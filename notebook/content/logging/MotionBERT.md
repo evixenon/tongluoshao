@@ -93,6 +93,15 @@ pip install -r .\requirements.txt
 
 跳过前面的一段, 直接来到 requirements 之后的阶段, 然后同样 BodyModel 不兼容
 
+### 环境 F16
+
+```bash
+conda create -n motionbert python=3.7 anaconda
+conda activate motionbert
+# Please install PyTorch according to your CUDA version.
+conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
+pip install -r requirements.txt
+```
 ### 数据准备
 
 #### AMASS
@@ -144,7 +153,8 @@ python ./tools/preprocess_amass.py
 ### AlphaPose
 
 ```bash
-conda install pytorch torchvision torchaudio cpuonly -c pytorc
+# cpu 版本
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
 
 # no nvidia
 # ext_modules=get_ext_modules(),
