@@ -103,12 +103,16 @@ nvidia-smi 查看 cuda 版本
 conda create -n motionbert python=3.7 anaconda
 conda activate motionbert
 # Please install PyTorch according to your CUDA version. 
-# cuda v=13.0 但是没有这个版本的 pytorch, 用最新稳定版 12.1
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+# cuda v=13.0 但是没有这个版本的 
+conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
 
-一路下来除了下载断连没有什么问题
+一路下来除了下载断连没有什么问题, pytorch 太新也会崩, 所以又降了豆包推荐的版本
+
+```
+conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit=11.1 -c pytorch -c conda-forge
+```
 ### 数据准备
 
 #### AMASS
