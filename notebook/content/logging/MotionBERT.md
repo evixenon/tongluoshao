@@ -201,7 +201,7 @@ AlphaPose -> json ->MotionBert
 [Windows Install]([AlphaPose/docs/win_install.md at master · MVIG-SJTU/AlphaPose](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/win_install.md)) 跟这里下载 dll
 
 ```bash
-python infer_wild.py  --vid_path .\venc2_train_1.mp4  --json_path .\alphapose-results.json  --out_path .\result
+python infer_wild.py  --vid_path ./test_demo/venc2_train_1.mp4  --json_path ./test_demo/alphapose-results.json  --out_path ./test_demo
 ```
 
 ### pose3d
