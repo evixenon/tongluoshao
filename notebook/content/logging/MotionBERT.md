@@ -158,7 +158,7 @@ python ./tools/preprocess_amass.py
 从[网站]([2D Body Keypoint Datasets — MMPose 1.3.2 documentation](https://mmpose.readthedocs.io/en/latest/dataset_zoo/2d_body_keypoint.html#posetrack18))下载并解压到 `MotionBERT\data\motion2d`, 直接可用
 
 ### AlphaPose
-
+跑通版本 torch 11.3.1 cuda 11.6
 ```bash
 # cpu 版本
 conda install pytorch torchvision torchaudio cpuonly -c pytorch
