@@ -94,14 +94,16 @@ pip install -r .\requirements.txt
 跳过前面的一段, 直接来到 requirements 之后的阶段, 然后同样 BodyModel 不兼容
 
 ### 环境 FX16
+[MotionBert论文解读及详细复现教程 - http://www.tpcf.cn/](http://www.tpcf.cn/news/1844.shtml)
 
 nvidia-smi 查看 cuda 版本
 
 ```bash
 conda create -n motionbert python=3.7 anaconda
 conda activate motionbert
-# Please install PyTorch according to your CUDA version. cuda v=13,0
-conda install pytorch torchvision torchaudio pytorch-cuda=13.0 -c pytorch -c nvidia
+# Please install PyTorch according to your CUDA version. 
+# cuda v=13.0 但是没有这个版本的 pytorch, 用最新稳定版 12.1
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
 ### 数据准备
