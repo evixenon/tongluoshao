@@ -144,6 +144,11 @@ python ./tools/preprocess_amass.py
 ### AlphaPose
 
 ```bash
+conda install pytorch torchvision torchaudio cpuonly -c pytorc
+
+# no nvidia
+# ext_modules=get_ext_modules(),
+
 #  下载模型（自动下载）
 mkdir detector\yolo\data
 curl -o detector/yolo/data/yolov3-spp.weights https://pjreddie.com/media/files/yolov3-spp.weights
