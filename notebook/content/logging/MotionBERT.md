@@ -96,6 +96,7 @@ pip install -r .\requirements.txt
 ### 环境 FX16
 [MotionBert论文解读及详细复现教程 - http://www.tpcf.cn/](http://www.tpcf.cn/news/1844.shtml)
 
+#### 配置 MotionBert
 nvidia-smi 查看 cuda 版本
 
 ```bash
@@ -106,6 +107,8 @@ conda activate motionbert
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
+
+一路下来除了下载断连没有什么问题
 ### 数据准备
 
 #### AMASS
@@ -193,3 +196,14 @@ AlphaPose -> json ->MotionBert
 
 [Windows Install]([AlphaPose/docs/win_install.md at master · MVIG-SJTU/AlphaPose](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/win_install.md)) 跟这里下载 dll
 
+
+### pose3d
+ft
+```
+python train.py --config configs/pose3d/MB_ft_h36m.yaml  --pretrained checkpoint/pretrain/MB_release  --checkpoint checkpoint/pose3d/FT_MB_release_MB_ft_h36m
+```
+
+evaluate
+```
+python train.py  --config configs/pose3d/MB_train_h36m.yaml  --evaluate checkpoint/pose3d/MB_train_h36m/best_epoch.bin         
+```
