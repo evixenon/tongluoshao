@@ -108,18 +108,24 @@ cd AlphaPose
 # 4. install dependencies
 export PATH=/usr/local/cuda/bin/:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
+export PYTHONPATH=$PWD:$PYTHONPATH
 sudo apt-get install libyaml-dev
-pip install cython==0.27.3 ninja easydict halpecocotools munkres natsort opencv-python pyyaml scipy tensorboardx  terminaltables timm==0.1.20 tqdm visdom jinja2 typeguard pycocotools
+pip install cython==0.27.3 ninja easydict halpecocotools munkres natsort opencv-python pyyaml scipy tensorboardx  terminaltables timm==0.1.20 tqdm visdom jinja2 typeguard pycocotools cython_bbox
+python setup.py build develop
 ```
 
-```bash
-python setup.py build develop# 6. Install PyTorch3D (Optional, only for visualization)
+```
+# 6. Install PyTorch3D (Optional, only for visualization)
 conda install -c fvcore -c iopath -c conda-forge fvcore iopath
 conda install -c bottler nvidiacub
 pip install pytorch3d
 ```
 
 下载`yolov3-spp.weights`到`AlphaPose/detector/yolo/data`
+
+#### WSL CUDA 配置
+
+
 #### 配置 MotionBert
 nvidia-smi 查看 cuda 版本
 
@@ -204,7 +210,7 @@ curl -o detector/yolo/data/yolov3-spp.weights https://pjreddie.com/media/files/y
 
 ```bash
 python scripts/demo_inference.py \
---cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml \
+--cfg configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml \
 --checkpoint pretrained_models/halpe26_fast_res50_256x192.pth \
 --video venc2_train_1.mp4 \
 --save_video \
@@ -212,6 +218,19 @@ python scripts/demo_inference.py \
 --outdir result
 ```
 
+run for a video
+```bash
+python scripts/demo_inference.py --cfg configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/halpe26_fast_res50_256x192.pth --video examples/test_video/venc2_train_1.mp4 --outdir examples/test_video
+```
+
+```
+./scripts/inference.sh configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/halpe26_fast_res50_256x192.pth examples/test_video/venc2_train_1.mp4 examples/test_video
+./scripts/inference.sh ${CONFIG} ${CHECKPOINT} ${VIDEO_NAME} # ${OUTPUT_DIR}
+```
+
+```bash
+python scripts/demo_inference.py --cfg configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/halpe26_fast_res50_256x192.pth --video examples/demo/test_video/venc2_train_1.mp4.mp4 --save_video
+```
 ### pretrain
 
 [MotionBERT 源码复现-CSDN博客](https://blog.csdn.net/KangXi_TangYuan/article/details/134194719)
