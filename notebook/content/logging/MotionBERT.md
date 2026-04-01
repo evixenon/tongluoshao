@@ -42,10 +42,6 @@ conda install pytorch torchvision torchaudio cpuonly -c pytorch -y
 pip install -r .\requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-永久换源设置:(在虚拟环境用的话就只在虚拟环境生效)
-```bash
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-```
 
 导出成清单文件（给别人打包用）
 
@@ -89,9 +85,22 @@ matplotlib 也出问题, 缺少 C++ 编译环境. 安装[开发工具](https://v
 pip install -r .\requirements.txt
 ```
 
-### Trae 装环境
+### 环境其他
 
-跳过前面的一段, 直接来到 requirements 之后的阶段, 然后同样 BodyModel 不兼容
+永久换源设置:(在虚拟环境用的话就只在虚拟环境生效)
+```bash
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+conda 加源
+```bash
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ 
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r/ 
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2/ 
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/ 
+conda config --set show_channel_urls yes
+```
+
 
 ### 环境 FX16
 [MotionBert论文解读及详细复现教程 - http://www.tpcf.cn/](http://www.tpcf.cn/news/1844.shtml)
@@ -123,6 +132,10 @@ pip install pytorch3d
 
 下载`yolov3-spp.weights`到`AlphaPose/detector/yolo/data`
 
+---
+```
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+```
 #### WSL CUDA 配置
 [CUDA Toolkit 13.2 Downloads | NVIDIA Developer - https://developer.nvidia.com/](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local)
 
