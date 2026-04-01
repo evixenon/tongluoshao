@@ -106,21 +106,12 @@ conda config --set show_channel_urls yes
 [MotionBert论文解读及详细复现教程 - http://www.tpcf.cn/](http://www.tpcf.cn/news/1844.shtml)
 
 #### 配置 AlphaPose
+
 ```bash
-conda create -n alphapose python=3.7 -y
-conda activate alphapose
-# 2. Install specific pytorch version
+# 无报错
 conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
-# 3. Get AlphaPose
-git clone https://github.com/MVIG-SJTU/AlphaPose.git
-cd AlphaPose
-# 4. install dependencies
-export PATH=/usr/local/cuda/bin/:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
-export PYTHONPATH=$PWD:$PYTHONPATH
-sudo apt-get install libyaml-dev
-pip install cython==0.27.3 ninja easydict halpecocotools munkres natsort opencv-python pyyaml scipy tensorboardx  terminaltables timm==0.1.20 tqdm visdom jinja2 typeguard pycocotools cython_bbox
-python setup.py build develop
+
+pip install cython ninja easydict halpecocotools munkres natsort opencv-python pyyaml scipy tensorboardx  terminaltables timm==0.1.20 tqdm visdom jinja2 typeguard pycocotools
 ```
 
 ```
@@ -130,18 +121,9 @@ conda install -c bottler nvidiacub
 pip install pytorch3d
 ```
 
-下载`yolov3-spp.weights`到`AlphaPose/detector/yolo/data`
+[下载](https://drive.google.com/open?id=1D47msNOOiJKvPOXlnpyzdKA3k6E97NTC)`yolov3-spp.weights`到`AlphaPose/detector/yolo/data`
 
----
-```bash
-# 无报错
-conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
-
-pip install cython ninja easydict halpecocotools munkres natsort opencv-python pyyaml scipy tensorboardx  terminaltables timm==0.1.20 tqdm visdom jinja2 typeguard pycocotools
-```
-#### WSL CUDA 配置
-[CUDA Toolkit 13.2 Downloads | NVIDIA Developer - https://developer.nvidia.com/](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local)
-
+[下载](https://drive.google.com/file/d/1S-ROA28de-1zvLv-hVfPFJ5tFBYOSITb/view?usp=sharing)`halpe26_fast_res50_256x192.pth` 到 `pretrained_models`
 
 #### 配置 MotionBert
 nvidia-smi 查看 cuda 版本
@@ -259,7 +241,7 @@ AlphaPose -> json ->MotionBert
 [Windows Install]([AlphaPose/docs/win_install.md at master · MVIG-SJTU/AlphaPose](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/win_install.md)) 跟这里下载 dll
 
 ```bash
-python infer_wild.py  --vid_path ./test_demo/venc2_train_1.mp4  --json_path ./test_demo/alphapose-results.json  --out_path ./test_demo
+python infer_wild.py  --vid_path ./test_demo2/test.mp4  --json_path ./test_demo/alphapose-results.json  --out_path ./test_demo2
 ```
 
 ### pose3d
