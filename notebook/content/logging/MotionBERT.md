@@ -219,7 +219,7 @@ python scripts/demo_inference.py \
 
 run for a video
 ```bash
-python scripts/demo_inference.py --cfg configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/halpe26_fast_res50_256x192.pth --video examples/test_video/test.mp4 --outdir examples/test_video
+python scripts/demo_inference_stats.py --cfg configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/halpe26_fast_res50_256x192.pth --video examples/test_video/test.mp4 --outdir examples/test_video
 ```
 
 ```
