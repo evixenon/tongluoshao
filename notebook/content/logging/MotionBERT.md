@@ -124,6 +124,7 @@ pip install pytorch3d
 下载`yolov3-spp.weights`到`AlphaPose/detector/yolo/data`
 
 #### WSL CUDA 配置
+[CUDA Toolkit 13.2 Downloads | NVIDIA Developer - https://developer.nvidia.com/](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local)
 
 
 #### 配置 MotionBert
