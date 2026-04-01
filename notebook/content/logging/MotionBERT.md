@@ -133,8 +133,11 @@ pip install pytorch3d
 下载`yolov3-spp.weights`到`AlphaPose/detector/yolo/data`
 
 ---
-```
+```bash
+# 无报错
 conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+
+pip install cython ninja easydict halpecocotools munkres natsort opencv-python pyyaml scipy tensorboardx  terminaltables timm==0.1.20 tqdm visdom jinja2 typeguard pycocotools
 ```
 #### WSL CUDA 配置
 [CUDA Toolkit 13.2 Downloads | NVIDIA Developer - https://developer.nvidia.com/](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local)
@@ -234,11 +237,11 @@ python scripts/demo_inference.py \
 
 run for a video
 ```bash
-python scripts/demo_inference.py --cfg configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/halpe26_fast_res50_256x192.pth --video examples/test_video/venc2_train_1.mp4 --outdir examples/test_video
+python scripts/demo_inference.py --cfg configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/halpe26_fast_res50_256x192.pth --video examples/test_video/test.mp4 --outdir examples/test_video
 ```
 
 ```
-./scripts/inference.sh configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/halpe26_fast_res50_256x192.pth examples/test_video/venc2_train_1.mp4 examples/test_video
+./scripts/inference.sh configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/halpe26_fast_res50_256x192.pth examples/test_video/test.mp4 examples/test_video
 ./scripts/inference.sh ${CONFIG} ${CHECKPOINT} ${VIDEO_NAME} # ${OUTPUT_DIR}
 ```
 
