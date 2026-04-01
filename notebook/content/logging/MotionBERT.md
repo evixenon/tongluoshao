@@ -254,3 +254,21 @@ evaluate
 ```
 python train.py  --config configs/pose3d/MB_train_h36m.yaml  --evaluate checkpoint/pose3d/MB_train_h36m/best_epoch.bin         
 ```
+
+### 测试记录
+
+alphapose 
+python scripts/demo_inference_stats.py 
+--cfg configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml 
+--checkpoint pretrained_models/halpe26_fast_res50_256x192.pth 
+--video examples/test_video/test.mp4 
+--outdir examples/test_video
+
+📊 Average Time per frame (ALL STEPS)
+DET      :   7.45 ms
+READ     :   7.45 ms
+INFERENCE:  26.47 ms
+POST     :  20.69 ms
+SAVE     :   0.03 ms
+TOTAL    :  54.67 ms
+FPS      : 18.29
