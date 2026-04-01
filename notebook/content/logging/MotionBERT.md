@@ -272,3 +272,117 @@ POST     :  20.69 ms
 SAVE     :   0.03 ms
 TOTAL    :  54.67 ms
 FPS      : 18.29
+
+### 训练
+
+MotionBERT 采用 **两阶段训练**：**大规模统一预训练 (Pretrain)** + **下游任务微调 (Finetune)**，核心是用 **DSTformer (双流时空 Transformer)** 从含噪 2D 姿态中学习通用 3D 运动表征motionbert.github.io。
+
+#### 一、核心思想：从 2D 恢复 3D 的预训练任务
+
+**Pretext Task (前置任务)**：
+- 输入：**损坏的 2D 骨架序列**（从 3D 真值投影而来，加随机 Mask、噪声、缺失帧，模拟真实检测误差）
+- 输出：**预测完整 3D 姿态序列**
+- 目标：强迫模型理解人体运动的**几何、运动学、时序规律**，学到通用表征motionbert.github.io
+
+#### 二、训练阶段详解
+
+##### 1. 第一阶段：统一预训练 (Unified Pretraining)
+
+**目标**：在海量异构数据上预训练 Motion Encoder (DSTformer)motionbert.github.io。
+
+**(1) 数据准备（关键：.pkl 文件）**
+- **数据源**：AMASS、Human3.6M (H36M)、3DPW、PoseTrack 等
+- **格式**：预处理为 `.pkl` 文件，内含：
+    - `keypoints_2d`：2D 关键点 (x, y, conf)
+    - `keypoints_3d`：3D 真值 (x, y, z)
+    - `imgname`, `bbox`, `camera` 等
+- **路径**：`data/motion3d/MB3D_f243s81/xxx.pkl`
+
+**(2) 数据增强（模拟真实噪声）**
+- **关节 Mask**：随机掩盖部分关节
+- **帧 Mask**：随机丢掉连续几帧
+- **高斯噪声**：给 2D 坐标加噪
+- **根相对化 (Root-Relative)**：以骨盆为原点归一化
+
+**(3) 模型架构：DSTformer**
+- **双流设计**：
+    - **Spatial Stream**：建模单帧人体关节空间关系
+    - **Temporal Stream**：建模多帧时序依赖
+- **多头自注意力 (MHSA)**：捕捉长距离依赖
+- **输入**：(Batch, Frames, Joints, 3) → (x, y, confidence)
+- **输出**：(Batch, Frames, Joints, 3) → 3D 坐标 (x, y, z)
+
+**(4) 损失函数 (多约束复合)**
+- **MPJPE (L_3d_pos)**：3D 关节位置误差（主损失）
+- **Velocity Loss (L_vel)**：关节速度误差（时序平滑）
+- **Scale Loss (L_scale)**：全局尺度误差
+- **Limb / Angle Loss**：肢体长度、角度约束（人体先验）
+
+**(5) 预训练命令 (Linux)**
+
+```bash
+# 进入项目根目录
+cd MotionBERT
+
+# 启动预训练 (configs/pretrain/MB_pretrain.yaml)
+python train.py \
+  --config configs/pretrain/MB_pretrain.yaml \
+  --checkpoint checkpoint/pretrain/MB_pretrain
+```
+
+- **参数**：batch 64、epoch 90、lr 5e-4
+- **输出**：`checkpoint/pretrain/MB_pretrain/best_epoch.bin`
+
+##### 2. 第二阶段：下游任务微调 (Finetune)
+
+**三大任务**：3D 姿态估计、人体网格恢复、动作识别motionbert.github.io。
+
+**(1) 3D 姿态估计 (H36M/3DPW)**
+
+
+```bash
+# 从预训练权重微调 (Finetune)
+python train.py \
+  --config configs/pose3d/MB_ft_h36m.yaml \
+  --pretrained checkpoint/pretrain/MB_release \
+  --checkpoint checkpoint/pose3d/FT_MB_release
+```
+
+- **仅新增**：1-2 层线性回归头 (Regressor Head)motionbert.github.io
+- **冻结 / 微调**：Encoder 微调，Head 随机初始化
+
+**(2) 人体网格 (SMPL Mesh)**
+
+
+```bash
+python train_mesh.py \
+  --config configs/mesh/MB_ft_h36m.yaml \
+  --pretrained checkpoint/pretrain/MB_release \
+  --checkpoint checkpoint/mesh/FT_MB_release
+```
+
+- **依赖**：`SMPL_NEUTRAL.pkl`（人体模板）
+
+#### 三、训练完整流程（Linux 命令行）
+
+```bash
+# 0. 环境（你之前的问题）
+conda activate motionbert
+pip install -r requirements.txt
+pip install -e .  # 解决 detector 找不到
+
+# 1. 数据预处理（生成.pkl）
+# 运行官方脚本，把原始数据集转成 MotionBERT 格式 .pkl
+
+# 2. 预训练 (2-3 天, 8xA100)
+python train.py --config configs/pretrain/MB_pretrain.yaml -c checkpoint/pretrain/MB_pretrain
+
+# 3. 下游微调 (3D 姿态示例)
+python train.py \
+  --config configs/pose3d/MB_ft_h36m.yaml \
+  --pretrained checkpoint/pretrain/MB_release \
+  -c checkpoint/pose3d/ft_h36m
+
+# 4. 评估
+python train.py --config configs/pose3d/MB_ft_h36m.yaml --evaluate checkpoint/pose3d/ft_h36m/best_epoch.bin
+```
