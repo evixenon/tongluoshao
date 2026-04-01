@@ -96,6 +96,30 @@ pip install -r .\requirements.txt
 ### 环境 FX16
 [MotionBert论文解读及详细复现教程 - http://www.tpcf.cn/](http://www.tpcf.cn/news/1844.shtml)
 
+#### 配置 AlphaPose
+```bash
+conda create -n alphapose python=3.7 -y
+conda activate alphapose
+# 2. Install specific pytorch version
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+# 3. Get AlphaPose
+git clone https://github.com/MVIG-SJTU/AlphaPose.git
+cd AlphaPose
+# 4. install dependencies
+export PATH=/usr/local/cuda/bin/:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
+sudo apt-get install libyaml-dev
+pip install cython==0.27.3 ninja easydict halpecocotools munkres natsort opencv-python pyyaml scipy tensorboardx  terminaltables timm==0.1.20 tqdm visdom jinja2 typeguard pycocotools
+```
+
+```bash
+python setup.py build develop# 6. Install PyTorch3D (Optional, only for visualization)
+conda install -c fvcore -c iopath -c conda-forge fvcore iopath
+conda install -c bottler nvidiacub
+pip install pytorch3d
+```
+
+下载`yolov3-spp.weights`到`AlphaPose/detector/yolo/data`
 #### 配置 MotionBert
 nvidia-smi 查看 cuda 版本
 
@@ -108,11 +132,9 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvi
 pip install -r requirements.txt
 ```
 
-一路下来除了下载断连没有什么问题, pytorch 太新也会崩, 所以又降了豆包推荐的版本
+有下载断连问题
+pytorch 太新也会崩, 所以又降了版本
 
-```
-conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit=11.1 -c pytorch -c conda-forge
-```
 ### 数据准备
 
 #### AMASS
