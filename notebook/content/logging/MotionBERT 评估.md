@@ -70,5 +70,5 @@ python infer_wild.py  --vid_path ./test_demo/test.mp4  --json_path ./test_demo/a
 #### 针对 3D 姿态估计的下游任务微调
 [MotionBERT 官方 pose3d 指南](https://github.com/Walter0807/MotionBERT/blob/main/docs/pose3d.md)
 
-对于 3D 姿态估计, 官方其实是直接复用 pretrain 的脚本(`train.py`). 也就是说, 实际上不需要额外的 finetuning.
+对于 3D 姿态估计, 官方其实是直接复用 pretrain 的脚本(`train.py`). 也就是说, 实际上不需要额外的 finetuning, 和预训练共用一套代码.
 
