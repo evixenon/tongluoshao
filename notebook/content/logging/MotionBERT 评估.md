@@ -27,8 +27,10 @@ MotionBERT 通过设计 DSTformer 双流时空 Transformer, 从时间(单关节�
 - 通过 AlphaPose 模型得到的 Halpe 26 关节点数据, 格式为 JSON
 - 原视频, 但不参与模型推理, 只提取视频元信息用于坐标还原和可视化
 
+![[attachments/Pasted image 20260402173841.png]]
+
 输出: 
-- .npy 数据
+- .npy 数据, 存储坐标 (NumPy 专用的二进制数据文件格式，专门用来存储数组（矩阵）数据)
 - (可选)可视化 3D 骨骼 17 关节点渲染视频
 
 ```shell
