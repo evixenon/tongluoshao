@@ -335,10 +335,7 @@ python train.py \
 
 ##### 2. 第二阶段：下游任务微调 (Finetune)
 
-**三大任务**：3D 姿态估计、人体网格恢复、动作识别motionbert.github.io。
-
 **(1) 3D 姿态估计 (H36M/3DPW)**
-
 
 ```bash
 # 从预训练权重微调 (Finetune)
@@ -351,38 +348,15 @@ python train.py \
 - **仅新增**：1-2 层线性回归头 (Regressor Head)motionbert.github.io
 - **冻结 / 微调**：Encoder 微调，Head 随机初始化
 
-**(2) 人体网格 (SMPL Mesh)**
 
+模型:
+- 目的: 从有损的 2d 坐标数据预测 3d 坐标
+- 有监督, 先跑 30 epoch 纯 3d, 再加入 2d 跑 60 epoch
+- 3D 数据用于基础训练, 让模型理解人体结构和运动规律; 2D 数据用于多样化数据场景(比如3D数据集大多是室内素材)
 
-```bash
-python train_mesh.py \
-  --config configs/mesh/MB_ft_h36m.yaml \
-  --pretrained checkpoint/pretrain/MB_release \
-  --checkpoint checkpoint/mesh/FT_MB_release
-```
+训练输入 .pkl 数据(切割好的 motion 片段)包括:
+- 3D 监督数据: 时间 * 关节数 * (x, y, z)
+- 2D 点数据: 时间 * 关节数 * (x, y, 置信度)
+    - 2D 非必需, 可以用 3D 直接投影, 设置置信度为 1
 
-- **依赖**：`SMPL_NEUTRAL.pkl`（人体模板）
-
-#### 三、训练完整流程（Linux 命令行）
-
-```bash
-# 0. 环境（你之前的问题）
-conda activate motionbert
-pip install -r requirements.txt
-pip install -e .  # 解决 detector 找不到
-
-# 1. 数据预处理（生成.pkl）
-# 运行官方脚本，把原始数据集转成 MotionBERT 格式 .pkl
-
-# 2. 预训练 (2-3 天, 8xA100)
-python train.py --config configs/pretrain/MB_pretrain.yaml -c checkpoint/pretrain/MB_pretrain
-
-# 3. 下游微调 (3D 姿态示例)
-python train.py \
-  --config configs/pose3d/MB_ft_h36m.yaml \
-  --pretrained checkpoint/pretrain/MB_release \
-  -c checkpoint/pose3d/ft_h36m
-
-# 4. 评估
-python train.py --config configs/pose3d/MB_ft_h36m.yaml --evaluate checkpoint/pose3d/ft_h36m/best_epoch.bin
-```
+骨段拓扑(角损失, 翻转..)需要重新定义
