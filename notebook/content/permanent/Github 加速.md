@@ -28,9 +28,3 @@ ipconfig /flushdns
 185.199.108.153 assets-cdn.github.com
 
 151.101.1.194  github.global.ssl.fastly.net
-
-### ob push 10054
-```bash
-# 全局关闭 SSL 验证（不推荐长期使用，有安全风险） 
-git config --global http.sslVerify false
-```
