@@ -5,7 +5,6 @@ tags:
 ---
 主要的需要功能在于 3D Pose Estimation
 
-- [ ] 准备 AMASS 数据
 - [x] 准备 human3.6m 数据 ✅ 2026-03-30
 - [x] 准备 instaVariety 数据 ✅ 2026-03-30
 
