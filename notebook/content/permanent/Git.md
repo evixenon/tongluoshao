@@ -161,7 +161,8 @@ c5f4f3d Revert "3rd change"
 git config -–global user.name ‘xxxxx’
 git config –-global user.email ‘xxx@xx.xxx’
 ssh-keygen -t rsa -C ‘上面的邮箱’
- ```
+ssh-copy-id root@192.168.88.167
+```
  
 代码参数含义：
 - -t 指定密钥类型，默认是 rsa ，可以省略。
