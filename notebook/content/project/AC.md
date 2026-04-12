@@ -17,6 +17,17 @@ npm run dev
 
 ## React
 
+## SQLite
+1. 打开 DBeaver → Database → New Database Connection。
+2. 选 SQLite。
+3. Path 选上面的 `app.db`（浏览到 `backend\data\app.db`）。
+4. 点 Test Connection → Finish。
+
+- 右键连接 → SQL Editor → New SQL Script，例如：
+```sql
+INSERT INTO ingredient_types (name_zh, name_en) VALUES ('蔬菜', 'Vegetables');
+```
+
 ## SqlAlchemy
 
 与 FastAPI 常常配合的 SQL 库
