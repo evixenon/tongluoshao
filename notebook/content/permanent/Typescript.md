@@ -4,6 +4,8 @@ date: 2024-06-20
 tags:
 ---
 
+#### vsc lc
+
 vsc 写 leetcode, debug 报错, 
 - npm i typescript
 - npm i ts-node
@@ -12,7 +14,7 @@ vsc 写 leetcode, debug 报错,
 然后 f5 可以 debug 了(用js调), 但会有一些什么 es2015 之后的 compiler version 之类的问题
 - 如果使用了 es6 的功能, tsconfig 里 target 必须是 es6
 
-一个能用的 `tsconfig.json` (在运行文件相同目录)
+一个能用的vscode `tsconfig.json` (在运行文件相同目录)
 
 ```json
 {

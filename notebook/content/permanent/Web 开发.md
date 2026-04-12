@@ -4,7 +4,9 @@ date: "2023-06-16"
 tags:
 ---
 
-[[permanent/js调用mermaid|js调用mermaid]]
+[[permanent/React]]
+
+[js调用 mermaid](https://mermaid-js.github.io/mermaid/#/n00b-gettingStarted)
 
 [[project/Java电商 - 慕课网|Java电商 - 慕课网]]
 
