@@ -57,3 +57,33 @@ class Recipe(Base):
 
 - 做了什么：Pydantic 模型 `RecipeRead`，用于 API 出参校验与文档；`from_attributes=True` 表示可以从 ORM 对象转。
 - 为什么：API 返回结构稳定，且和数据库字段解耦（以后可加计算字段而不改表）。
+
+## api
+
+#### Swagger 调用 api
+`backend` 目录启动：
+
+uvicorn app.main:app --reload --port 8000
+
+然后访问 Swagger：  
+`http://127.0.0.1:8000/docs`
+
+
+1. 找到 `POST /api/recipes`
+2. 点 Try it out
+3. 填 JSON，最小可用示例：
+
+{
+"name_zh": "金汤面",
+"name_en": "Golden Broth Noodles",
+"instructions": "Boil water, add noodles, finish with broth.",
+"notes": "Quick weekday meal."
+}
+
+4. 点 Execute
+
+成功会返回 `201`，响应里会带：
+
+- `id`
+- `created_at`
+- 以及默认值（如 `difficulty=1`, `recommend=0`, `abv=0`, `made_count=0`）
