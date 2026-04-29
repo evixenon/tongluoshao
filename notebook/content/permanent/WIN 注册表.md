@@ -29,7 +29,7 @@ tags:
 HKEY_CLASSES_ROOT\*
 // 文件夹右键
 HKEY_CLASSES_ROOT\Directory
-// 桌面右键
+// 文件夹背景右键
 HKEY_CLASSES_ROOT\Directory\Background
 ```
 
