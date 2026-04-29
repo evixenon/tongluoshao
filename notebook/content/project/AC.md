@@ -8,7 +8,7 @@ tags:
 - 后端: FastAPI + SQLite + 小图 WebP + Docker（API + Caddy）
 - 离线：仅已浏览——打开过的列表/详情 API 响应 + 对应小图进缓存，未打开过的离线不可用。
 
-uvicorn app.main:app --reload --port 8000
+uvicorn app.main:app --reload --port 18000
 
 npm run dev
 
