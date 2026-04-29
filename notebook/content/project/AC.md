@@ -73,17 +73,3 @@ uvicorn app.main:app --reload --port 8000
 2. 点 Try it out
 3. 填 JSON，最小可用示例：
 
-{
-"name_zh": "金汤面",
-"name_en": "Golden Broth Noodles",
-"instructions": "Boil water, add noodles, finish with broth.",
-"notes": "Quick weekday meal."
-}
-
-4. 点 Execute
-
-成功会返回 `201`，响应里会带：
-
-- `id`
-- `created_at`
-- 以及默认值（如 `difficulty=1`, `recommend=0`, `abv=0`, `made_count=0`）
