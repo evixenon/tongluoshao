@@ -18,7 +18,7 @@ tmux attach -t name
 ```
 Session
 C+b d dettach
-C+b s 列出所有会话
+C+b s 列出所有会话 可切换
 C+b $ 重命名当前会话
 tmux kill-session -t 会话名 关闭会话
 tmux kill-server 关闭所有会话
@@ -30,7 +30,8 @@ C+b n 切换到下一个窗口
 C+b <number> 切换到指定编号的窗口 
 C+b w 从列表中选择窗口
 C+b , 窗口重命名
-C+b & 关闭窗口
+C+b & 关闭当前窗口
+C+b . 指定窗口编号
 
 Pane
 C+b % 垂直划分 pane
