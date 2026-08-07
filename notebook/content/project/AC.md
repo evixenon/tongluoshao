@@ -17,6 +17,8 @@ npm run dev
 
 ## React
 
+useState: 给一块可变的内存, 当内容变化时重新渲染
+
 ## SQLite
 1. 打开 DBeaver → Database → New Database Connection。
 2. 选 SQLite。
